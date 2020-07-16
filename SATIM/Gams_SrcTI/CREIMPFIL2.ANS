@@ -1,0 +1,72 @@
+*
+* $BATINCLUDE CREIMPFIL2.ANS %1 %2 %3 %4 %5
+*
+* %1 = full filename associated with input GAMS TIMES DD
+* %2 = file stem associated with files created in ANS_WRK directory
+* %3 = YES/NO, according to whether import into BASE/non-BASE scenario
+* %4 = YES/NO, according to whether we want TS Data put out Sparsely/Densely
+* %5 = no. of significant digits for numeric data
+*
+* Carry out part 2 of the processing of %1 to create the ANSWER %2.IMP file.
+*
+*****************************************************************************
+
+*$ONLISTING
+
+* Display TIMES Process, Commodity, User-Constraint Sets prior to processing.
+$INCLUDE DISPTISETS.ANS
+
+* Declare ANSWER-related SETs and PARAMETERs used in CREIMPFIL2.ANS.
+$INCLUDE DECIMPFIL2.ANS
+
+* Specify attributes for ANSWER %2.IMP file to be created.
+FILE OUTSCEN / %2.IMP /;
+* SIGDIGITS = %5 specifies significant digits of precision.
+SIGDIGITS = %5;
+OUTSCEN.PC=6; OUTSCEN.NR=2; OUTSCEN.ND=SIGDIGITS-1; OUTSCEN.NW=SIGDIGITS+6; OUTSCEN.PW=2048; OUTSCEN.NZ=1E-20;
+PUT OUTSCEN;
+
+* Create *** SCENARIO *** section of IMP file.
+$BATINCLUDE CRESCENSEC.ANS '%1'
+
+* Create *** REGIONS *** section of IMP file.
+$INCLUDE CREREGNSEC.ANS
+
+* Create *** ITEMS *** section for _GLOBAL region.
+$INCLUDE CREITEMGBL.ANS
+
+* Create *** TS DATA *** section for _GLOBAL region.
+$INCLUDE CRETS_GBL.ANS
+
+* Create *** TID DATA *** section for _GLOBAL region.
+$INCLUDE CRETID_GBL.ANS
+
+LOOP (REG,
+*  Build some sets to restrict to PRC and COM and UC_N that apply for region REG.
+$  INCLUDE BLDREGSETS.ANS
+*  Ensure that PRC_MAP specifies 'IRE' for PRC with associated TOP_IRE instances. 
+$  INCLUDE PRC_MAPIRE.ANS
+*  Determine ANSWER sub-groups for each Component (Commodity, Process, User Constraint).
+$  INCLUDE SGROUPSNEW.ANS
+*  Provide defaults for SET PRC_CAPUNT, PARAMETER PRC_CAPACT if not specified.
+$  INCLUDE CAPUNT.ANS
+*  Create the *** ITEMS *** section of the ANSWER .IMP file for region REG.
+$  INCLUDE CREITEMREG.ANS
+*  Put out the *** TS DATA *** and *** TID DATA *** sections of the ANSWER .IMP file.
+$  INCLUDE ALLDATMR.ANS
+*  Put out external region *** ITEMS ***, *** TS DATA ***, *** TID DATA *** that ANSWER needs so TOP_IRE will import OK.
+$  INCLUDE EXTREGIRE.ANS
+*  Clear internal SETs that have been created for this REG, so ready for next REG in LOOP.
+$  INCLUDE CLEAR_SETS.ANS
+);
+
+* Create *** TS TRADE *** section of .IMP file.
+$INCLUDE CRETSTRADE.ANS
+
+* Create *** TID TRADE *** section of .IMP file.
+$INCLUDE CRETIDTRADE.ANS
+
+* Close the .IMP file.
+PUTCLOSE OUTSCEN;
+
+*$OFFLISTING

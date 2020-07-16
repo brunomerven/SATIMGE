@@ -1,0 +1,18 @@
+*
+* CRETSTRADE.ANS
+*
+* Create *** TS TRADE *** section of .IMP file.
+*
+***********************************************
+*
+PUT /,"*** TS TRADE ***", "_GLOBAL"; 
+  LOOP (ALL_REG,
+       PUT ALL_REG.TL;
+  );
+$BATINCLUDE putTSTrade.ans "IRE_BND" "REG" "OTHERYR" "COM" ",TS" ",ALL_REG" ",IE" ",BD" "" "IRE_BND" "REG" ",ALL_REG" "" ",COM" ",TS" "" ",IE" ",BD" "TEMPSET6"
+** note use of REG2 and COM2
+$BATINCLUDE putTSTrade.ans "IRE_FLO" "REG" "OTHERYR" "PRC" ",COM" ",REG2" ",COM2" ",TS" "" "IRE_FLO" "REG" ",REG2" ",PRC" ",COM" ",TS" "" "" ",COM2" "TEMPSET6"
+** note use of ALL_REG
+$BATINCLUDE putTSTrade.ans "IRE_PRICE" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",ALL_REG" ",IE" ",CUR" "IRE_PRICE" "REG" ",ALL_REG" ",PRC" ",COM" ",TS" "" ",IE" "" "TEMPSET7"
+
+PUT /;

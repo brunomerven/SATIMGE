@@ -1,0 +1,89 @@
+* EXTREGIRE.ANS
+
+* Put out external region *** ITEMS *** section containing PRC and COM that ANSWER needs so TOP_IRE will import OK,
+* along with empty *** TS DATA *** section, and with *** TID DATA *** section that contains parameter PRC_CAPACT.
+
+LOOP(ALL_REG$((NOT REG(ALL_REG)) AND 
+    (SUM((COM,COM2,PRC), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR SUM((COM,COM2,PRC), TOP_IRE(REG,COM,ALL_REG,COM2,PRC)))),
+  
+  PUT /, "*** ITEMS ***", ALL_REG.TL;
+
+
+*** PROCESSES - these are component T in ANSWER.
+
+* Deal with those PRC in region REG for which PRC_DESC(REG,PRC) is specified.
+
+* So far as PRCs are concerned, it is essential that we put out PRC for ALL_REG that EXPORT to REG,
+* since tblParamData thinks PRC is a Region1 thing for TOP_IRE, hence needs PRC for ALL_REG that export to REG.
+* It is not so clear that any aspect of ANSWER-TIMES requires that we put out PRC for ALL_REG that IMPORT from REG,
+* though what's after the OR achieves this, in which case unasterisk the equivalent line below for parameter PRC_CAPACT.
+  LOOP(PRC_DESC(REG,PRC)$(SUM((COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR SUM((COM,COM2), TOP_IRE(REG,COM,ALL_REG,COM2,PRC))),
+*  LOOP(PRC_DESC(REG,PRC)$(SUM((COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC))),
+*    Put out 'Item:', Component, Item, Description taken from SET PRC_DESC.
+     PUT / "Item:","T",PRC.TL,PRC_DESC.TE(PRC_DESC);
+*    Put out 'Sets:', followed by individual Sets.
+$    BATINCLUDE putSets.ANS 'T' PRC
+*    Put out 'Units:', followed by Process Activity and Capacity Units.
+$    BATINCLUDE putPRCUnit.ANS PRC
+*    Put out 'Comment:', null comment, 'End Comment:'.
+$    BATINCLUDE putComment.ANS
+     PUT /;
+  );
+
+* Deal with those PRC in region REG for which PRC_DESC(REG,PRC) is NOT specified.
+  LOOP(PRC$(NOT PRC_DESC(REG,PRC) AND (SUM((COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR SUM((COM,COM2), TOP_IRE(REG,COM,ALL_REG,COM2,PRC)))),
+*  LOOP(PRC$(NOT PRC_DESC(REG,PRC) AND (SUM((COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)))),
+*    Put out 'Item:', Component, Item, Description taken from SET PRC.
+     PUT / "Item:","T",PRC.TL,PRC.TE(PRC);
+*    Put out 'Sets:', followed by individual Sets.
+$    BATINCLUDE putSets.ANS 'T' PRC
+*    Put out 'Units:', followed by Process Activity and Capacity Units.
+$    BATINCLUDE putPRCUnit.ANS PRC
+*    Put out 'Comment:', null comment, 'End Comment:'.
+$    BATINCLUDE putComment.ANS
+     PUT /;
+  );
+
+
+*** COMMODITIES - these are component E in ANSWER.
+
+* Deal with those COM in region REG for which COM_DESC(REG,COM) is specified.
+
+* So far as COMs are concerned, it is essential that we put out COM for ALL_REG that EXPORT to REG,
+* and also for ALL_REG that IMPORT from REG.
+  LOOP(COM_DESC(REG,COM)$(SUM((COM2,PRC), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR SUM((COM2,PRC), TOP_IRE(REG,COM2,ALL_REG,COM,PRC))),
+*   Put out 'Item:', Component, Item, Description taken from SET COM_DESC.
+    PUT / "Item:","E",COM.TL,COM_DESC.TE(COM_DESC);
+*   Put out 'Sets:', followed by individual Sets.
+$   BATINCLUDE putSets.ANS 'E' COM
+*   Put out 'Units:', followed by Commodity Units.
+$   BATINCLUDE putCOMUnit.ANS COM
+*   Put out 'Comment:', null comment, 'End Comment:'.
+$   BATINCLUDE putComment.ANS
+    PUT /;
+  );
+
+* Deal with those COM in region REG for which COM_DESC(REG,COM) is NOT specified.
+  LOOP(COM$(NOT COM_DESC(REG,COM) AND (SUM((COM2,PRC), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR SUM((COM2,PRC), TOP_IRE(REG,COM2,ALL_REG,COM,PRC)))),
+*   Put out 'Item:', Component, Item, Description taken from SET COM.
+    PUT / "Item:","E",COM.TL,COM.TE(COM);
+*   Put out 'Sets:', followed by individual Sets.
+$   BATINCLUDE putSets.ANS 'E' COM
+*   Put out 'Units:', followed by Commodity Units.
+$   BATINCLUDE putCOMUnit.ANS COM
+*   Put out 'Comment:', null comment, 'End Comment:'.
+$   BATINCLUDE putComment.ANS
+    PUT /;
+  );
+  
+  PUT /, "*** TS DATA ***", ALL_REG.TL;
+  PUT /;
+  PUT /, "*** TID DATA ***", ALL_REG.TL;
+  LOOP(PRC$(SUM((COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR SUM((COM,COM2), TOP_IRE(REG,COM,ALL_REG,COM2,PRC))),
+*  LOOP(PRC$(SUM((COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC))),
+*   Put out parameter PRC_CAPACT
+    PUT / "PRC_CAPACT",PRC.TL,"-","-","-","-","-",PRC_CAPACT(REG,PRC);
+  );
+  PUT /;
+);
+

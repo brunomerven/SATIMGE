@@ -1,0 +1,39 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+/;
+SET UC_N_UCRT /
+/;
+SET PRC /
+  'ERHYDGIE-I'               'Grand Inga (East)                                 '
+  'ESTSUTL'                  'Utility Scale Storage - 4hrs                      '
+/;
+SET PRC_PRE /
+  'REGION1'   .'ESTSUTL'
+/;
+SET PRC_ELE /
+  'REGION1'   .'ERHYDGIE-I'
+/;
+SET PRC_STG /
+  'REGION1'   .'ESTSUTL'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'ERHYDGIE-I'
+  'REGION1'   .'ESTSUTL'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ERHYDGIE-I'.'PJ'
+  'REGION1'.'ESTSUTL'.'PJ'
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ERHYDGIE-I'              .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE ANCAPPKCNT
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ESTSUTL'                 .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;

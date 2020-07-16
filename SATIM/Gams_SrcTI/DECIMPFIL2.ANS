@@ -1,0 +1,58 @@
+*
+* DECIMPFIL2.ANS
+*
+* Declare ANSWER-related SETs and PARAMETERs used in CREIMPFIL2.ANS.
+*
+********************************************************************
+
+* For ease of experimentation & maintenance,
+* generate SUBSETS.ANS and FLAG.ANS from tblGroups (via special VB program)
+SET SUBSETS /
+$INCLUDE SUBSETS.ANS
+/;
+
+PARAMETER FLAG(*,*,SUBSETS);
+PARAMETER FLAGS(*,*);
+
+SET UC_N_NPRC;
+SET UC_N_PRC;
+SET COM_GRPANS(*);
+SET COM_GRPEXC(*) / 'DEM', 'ENV', 'FIN', 'MAT', 'NRG' /;
+SET GRP_NOTPRC;
+SET CGPRC;
+SET PRC_CGPRC;
+
+* Lines taken from FIX-TS_MAP.ANS to avoid problems with LOOP(REG, in CREIMPFIL2.ANS.
+SCALAR COUNTTS2;
+
+* Lines taken from CAPUNT.ANS to avoid problems with LOOP(REG, in CREIMPFIL2.ANS.
+SET PRIMACT_CG(REG,PRC,CG);
+PARAMETER COUNT_CG(REG,PRC);
+SET PRIMCAP_CG(REG,PRC,CG);
+
+SET UCN_COM(*);
+
+SET AREG_PRC(PRC) / EMPTY/;
+SET BAD_PRC(PRC) / EMPTY/;
+SET AREG_COM(*) / EMPTY/;
+SET AREG_COMGP(COM_GRP) / EMPTY/;
+SET AREG_UCN(*) / EMPTY/;
+
+*DEC2006* introduce SET COMACT 
+*(So we can avoid putting out special COM 'ACT' introduced into INITMTY.MOD)
+SET COMACT / 'ACT' /;
+
+SCALAR SIGDIGITS;
+
+SET IPWR / 1*31 /;
+
+* Introduce the following sets to speed up putTS.ans.
+SET TEMPSET1(*);
+SET TEMPSET2(*,*);
+SET TEMPSET3(*,*,*);
+SET TEMPSET4(*,*,*,*);
+SET TEMPSET5(*,*,*,*,*);
+SET TEMPSET6(*,*,*,*,*,*);
+SET TEMPSET7(*,*,*,*,*,*,*);
+
+

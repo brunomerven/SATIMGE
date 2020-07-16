@@ -1,0 +1,1409 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/07/16	8:27:46 AM
+Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWR	Power sector shortened ts - constrained	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	FLAB-M	Factor-Labour-Mid	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	FLAB-P	Factor-Labour-Primary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	FLAB-S	Factor-Labour-Secondary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	FLAB-T	Factor-Labour-Tertiary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-M	Power - Factor-Labour-Mid	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-P	Power - Factor-Labour-Primary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-S	Power - Factor-Labour-Secondary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-T	Power - Factor-Labour-Tertiary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEARNO	Coal for ARNOT Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLECAMD	Coal for CAMDEN Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEDUVH	Coal for DUVHA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEGROO	Coal for GROOTVLEI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEHEND	Coal for HENDRINA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEKEND	Coal for KENDAL Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEKOMA	Coal for KOMATI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEKRIE	Coal for KRIEL Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEKUSI	Coal for KUSILE Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLELETH	Coal for LETHABO Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEMAJU	Coal for MAJUBA DRY Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEMATI	Coal for MATIMBA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEMATL	Coal for MATLA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEMEDU	Coal for MEDUPI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLETUTU	Coal for TUTUKA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRCLEWATE	Coal for Generic Waterberg Coal Plant Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	ZDUMETRANS	Dummy Commodity for ETRANSDUM	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	EP_FLAB-M	Power - Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ERBIG-N	Landfill gas	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERBIO-N	Biomass municipal waste	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-E	Hydro Existing South Africa	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYDGIW-I	Grand Inga	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-I	Hydro Existing Region	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-N	Micro hydro	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPCF-N	Solar PV Fixed	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPCT-N	Solar PV tracking	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRC-N	Solar PV rooftop commercial	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRI-N	Solar PV rooftop Industry	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRR-N	Solar PV rooftop residential	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLTC09-N	Solar Central Receiver 09 hrs storage	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERWNDH-N	Wind	PJ,GW	PRC,ELE,DAYNITE	
+	T	ESTSUTL	Utility Scale Storage - 4hrs	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ETCLDFB-N	Fluidised Bed Combustion Coal	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEKELB-E	KELVIN B	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEPFSI-E	Sasol Infrachem Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEPFSS-E	Sasol SSF Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEWATE-N	Generic Waterberg Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETGASENSI-N	Sasol Infrachem Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGASENSS-N	Sasol SSF Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETGICEN-N	Gas Engines - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICGT-N	Open Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETNUC-E	Nuclear Existing	PJ,GW	PRC,ELE,SEASON	
+	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,SEASON	
+	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETRANS	Transmission	PJ,GW	PRC,PRE,DAYNITE	
+	T	ETRANSDUM	dummy tech tracking investment costs	PJ,GW	PRC,ELE,DAYNITE	
+	T	MIN_FLAB-M	Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-P	Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-S	Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-T	Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MINCSARNOVRS	Coal Supply for Arnot-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSCAMDVRS	Coal Supply for Camden-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHS32	Coal Supply for Duvha-South 32	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHVRS	Coal Supply for Duvha-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSGROOVRS	Coal Supply for Grootvlei-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSHENDVRS	Coal Supply for Hendrina-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKENDS32	Coal Supply for Kendal-South 32	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKENDVRS	Coal Supply for Kendal-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKOMAVRS	Coal Supply for Komati-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKRIESER	Coal Supply for Kriel-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKRIEVRS	Coal Supply for Kriel-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKUSINLG	Coal Supply for Kusile-New Largo	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKUSIVRS	Coal Supply for Kusile-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSLETHSER	Coal Supply for Lethabo-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMAJUVRS	Coal Supply for Majuba-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATIEXX	Coal Supply for Matimba-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATLEXX	Coal Supply for Matla-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATLVRS	Coal Supply for Matla-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMEDUEXX	Coal Supply for Medupi-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSTUTUSER	Coal Supply for Tutuka-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSTUTUVRS	Coal Supply for Tutuka-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSWATEVRS	Coal Supply for New Plants in Waterberg	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
+
+TS DATA	REGION1
+	ACT_BND	MINCSDUVHVRS	-	-	-	ANNUAL	UP	3	2.16112	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCSKENDVRS	-	-	-	ANNUAL	UP	3	73.79064	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCSKRIESER	-	-	-	ANNUAL	UP	3	95.75862	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCSKUSINLG	-	-	-	ANNUAL	UP	3	156	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCSMATLVRS	-	-	-	ANNUAL	UP	3	70.08778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCSTUTUVRS	-	-	-	ANNUAL	UP	3	110.23595	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXELC	-	-	-	ANNUAL	FX	3	54.126	null	null	null	null	57.195	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	EPTSTO-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERBIG-N	-	-	-	-	-	0	62.2613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERBIO-N	-	-	-	-	-	0	115.143296383203	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERHYD-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERHYD-I	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERHYD-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERSOLPCF-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERSOLPCT-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERSOLTC09-N	-	-	-	-	-	0	0.893276155028724	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERWNDH-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLDFB-N	-	-	-	-	-	0	174.546160692613	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEARNO-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLECAMD-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEDUVH-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEGROO-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEHEND-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKELB-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKEND-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKOMA-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKRIE-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKUSI-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLELETH-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMAJD-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMAJW-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMATI-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMATL-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMEDU-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEPFSI-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEPFSS-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLETUTU-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEWATE-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGASENSI-N	-	-	-	-	-	0	70.5688162472692	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGASENSS-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICCC-N	-	-	-	-	-	0	22.0639210292095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICEN-N	-	-	-	-	-	0	70.5688162472692	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICGT-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETNUC-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETNUC-N	-	-	-	-	-	0	37.2942794724492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETODSGT-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETODSGT-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSARNOVRS	-	-	-	-	-	0	21.239630932003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSCAMDVRS	-	-	-	-	-	0	26.4631419226233	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSDUVHS32	-	-	-	-	-	0	16.4150707093582	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSDUVHVRS	-	-	-	-	-	0	14.7923068081025	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSGROOVRS	-	-	-	-	-	0	24.3993402705163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSHENDVRS	-	-	-	-	-	0	23.5202603953474	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKENDS32	-	-	-	-	-	0	17.5607287449393	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKENDVRS	-	-	-	-	-	0	19.0183519703361	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKOMAVRS	-	-	-	-	-	0	28.42919873049	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKRIESER	-	-	-	-	-	0	25.3350971368838	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKRIEVRS	-	-	-	-	-	0	20.0276160661464	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKUSINLG	-	-	-	-	-	0	16.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSKUSIVRS	-	-	-	-	-	0	25.8443571629876	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSLETHSER	-	-	-	-	-	0	11.8202652962011	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSMAJUVRS	-	-	-	-	-	0	18.9536443061502	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSMATIEXX	-	-	-	-	-	0	14.3232024285081	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSMATLEXX	-	-	-	-	-	0	26.2007790588127	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSMATLVRS	-	-	-	-	-	0	22.4267996351216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSMEDUEXX	-	-	-	-	-	0	17.5332201974559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSTUTUSER	-	-	-	-	-	0	28.5275066023729	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINCSTUTUVRS	-	-	-	-	-	0	25.1237113245111	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	PEXELC	-	-	-	-	-	0	-44.5907	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERBIG-N	-	ACTGRP	-	ANNUAL	-	0	0.45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERBIO-N	-	ACTGRP	-	ANNUAL	-	0	0.45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERHYD-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERHYDGIW-I	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERHYD-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERSOLPCF-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERSOLPCT-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERSOLPRC-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERSOLPRI-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERSOLPRR-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERSOLTC09-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ERWNDH-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLDFB-N	-	ACTGRP	-	ANNUAL	-	0	0.334	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEARNO-E	-	ACTGRP	-	ANNUAL	-	0	0.31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLECAMD-E	-	ACTGRP	-	ANNUAL	-	0	0.280502776278433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEDUVH-E	-	ACTGRP	-	ANNUAL	-	0	0.330582357979307	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEGROO-E	-	ACTGRP	-	ANNUAL	-	0	0.259568424657444	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEHEND-E	-	ACTGRP	-	ANNUAL	-	0	0.268877334434978	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEKELB-E	-	ACTGRP	-	ANNUAL	-	0	0.249	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEKEND-E	-	ACTGRP	-	ANNUAL	-	0	0.324537142211526	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEKOMA-E	-	ACTGRP	-	ANNUAL	-	0	0.242020406649767	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEKRIE-E	-	ACTGRP	-	ANNUAL	-	0	0.312926467163624	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEKUSI-N	-	ACTGRP	-	ANNUAL	-	0	0.371	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLELETH-E	-	ACTGRP	-	ANNUAL	-	0	0.34	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEMAJD-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEMAJW-E	-	ACTGRP	-	ANNUAL	-	0	0.31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEMATI-E	-	ACTGRP	-	ANNUAL	-	0	0.340002587496788	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEMATL-E	-	ACTGRP	-	ANNUAL	-	0	0.331603826508444	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEMEDU-N	-	ACTGRP	-	ANNUAL	-	0	0.371	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEPFSI-E	-	ACTGRP	-	ANNUAL	-	0	0.254290355084695	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEPFSS-E	-	ACTGRP	-	ANNUAL	-	0	0.254290355084695	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLETUTU-E	-	ACTGRP	-	ANNUAL	-	0	0.310907963728799	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETCLEWATE-N	-	ACTGRP	-	ANNUAL	-	0	0.438	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETGASENSI-N	-	ACTGRP	-	ANNUAL	-	0	0.45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETGASENSS-N	-	ACTGRP	-	ANNUAL	-	0	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETGICCC-N	-	ACTGRP	-	ANNUAL	-	0	0.487	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETGICEN-N	-	ACTGRP	-	ANNUAL	-	0	0.45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETGICGT-N	-	ACTGRP	-	ANNUAL	-	0	0.313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETNUC-E	-	ACTGRP	-	ANNUAL	-	0	0.320015218501502	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETNUC-N	-	ACTGRP	-	ANNUAL	-	0	0.348	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETODSGT-E	-	ACTGRP	-	ANNUAL	-	0	0.322710245912152	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETODSGT-N	-	ACTGRP	-	ANNUAL	-	0	0.313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETRANS	-	ACTGRP	-	ANNUAL	-	0	0.961	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ETRANSDUM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XAGRELC	-	ACTGRP	-	ANNUAL	-	0	0.87	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XCOMELC	-	ACTGRP	-	ANNUAL	-	0	0.877	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFBELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIMIELC	-	ACTGRP	-	ANNUAL	-	0	0.95	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINDELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINFELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XRESELC	-	ACTGRP	-	ANNUAL	-	0	0.803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRAELC	-	ACTGRP	-	ANNUAL	-	0	0.952	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XUPSELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	EPTSTO-N	-	-	-	-	UP	3	1.32	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ERHYDGIW-I	-	-	-	-	UP	3	2.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ETCLEKUSI-N	-	-	-	-	UP	3	4.332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ETCLEMEDU-N	-	-	-	-	UP	3	4.332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ETGASENSI-N	-	-	-	-	UP	3	0.172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ETGASENSS-N	-	-	-	-	UP	3	0.249	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ETODSGT-N	-	-	-	-	UP	3	1.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PKRSV	-	ELCC	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRCH4S	PWRCLD	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRCMOX	PWRCLD	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRCO2S	PWRCLD	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRN2OS	PWRCLD	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRNMVS	PWRCLD	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRNOXS	PWRCLD	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLDFB-N	PWRSOXS	PWRCLD	-	ANNUAL	-	0	0.043834	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRCH4S	PWRCLEARNO	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRCMOX	PWRCLEARNO	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRCO2S	PWRCLEARNO	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRN2OS	PWRCLEARNO	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRNMVS	PWRCLEARNO	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRNOXS	PWRCLEARNO	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEARNO-E	PWRSOXS	PWRCLEARNO	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRCH4S	PWRCLECAMD	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRCMOX	PWRCLECAMD	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRCO2S	PWRCLECAMD	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRN2OS	PWRCLECAMD	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRNMVS	PWRCLECAMD	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRNOXS	PWRCLECAMD	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLECAMD-E	PWRSOXS	PWRCLECAMD	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRCH4S	PWRCLEDUVH	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRCMOX	PWRCLEDUVH	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRCO2S	PWRCLEDUVH	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRN2OS	PWRCLEDUVH	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRNMVS	PWRCLEDUVH	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRNOXS	PWRCLEDUVH	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEDUVH-E	PWRSOXS	PWRCLEDUVH	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRCH4S	PWRCLEGROO	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRCMOX	PWRCLEGROO	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRCO2S	PWRCLEGROO	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRN2OS	PWRCLEGROO	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRNMVS	PWRCLEGROO	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRNOXS	PWRCLEGROO	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEGROO-E	PWRSOXS	PWRCLEGROO	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRCH4S	PWRCLEHEND	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRCMOX	PWRCLEHEND	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRCO2S	PWRCLEHEND	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRN2OS	PWRCLEHEND	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRNMVS	PWRCLEHEND	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRNOXS	PWRCLEHEND	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEHEND-E	PWRSOXS	PWRCLEHEND	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKELB-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRCH4S	PWRCLEKEND	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRCMOX	PWRCLEKEND	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRCO2S	PWRCLEKEND	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRN2OS	PWRCLEKEND	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRNMVS	PWRCLEKEND	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRNOXS	PWRCLEKEND	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKEND-E	PWRSOXS	PWRCLEKEND	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRCH4S	PWRCLEKOMA	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRCMOX	PWRCLEKOMA	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRCO2S	PWRCLEKOMA	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRN2OS	PWRCLEKOMA	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRNMVS	PWRCLEKOMA	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRNOXS	PWRCLEKOMA	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKOMA-E	PWRSOXS	PWRCLEKOMA	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRCH4S	PWRCLEKRIE	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRCMOX	PWRCLEKRIE	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRCO2S	PWRCLEKRIE	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRN2OS	PWRCLEKRIE	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRNMVS	PWRCLEKRIE	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRNOXS	PWRCLEKRIE	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKRIE-E	PWRSOXS	PWRCLEKRIE	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRCH4S	PWRCLEKUSI	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRCMOX	PWRCLEKUSI	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRCO2S	PWRCLEKUSI	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRN2OS	PWRCLEKUSI	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRNMVS	PWRCLEKUSI	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRNOXS	PWRCLEKUSI	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEKUSI-N	PWRSOXS	PWRCLEKUSI	-	ANNUAL	-	0	0.043834	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRCH4S	PWRCLELETH	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRCMOX	PWRCLELETH	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRCO2S	PWRCLELETH	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRN2OS	PWRCLELETH	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRNMVS	PWRCLELETH	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRNOXS	PWRCLELETH	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRSOXS	PWRCLELETH	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRCH4S	PWRCLEMAJU	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRCMOX	PWRCLEMAJU	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRCO2S	PWRCLEMAJU	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRN2OS	PWRCLEMAJU	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRNMVS	PWRCLEMAJU	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRNOXS	PWRCLEMAJU	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRSOXS	PWRCLEMAJU	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRCH4S	PWRCLEMAJU	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRCMOX	PWRCLEMAJU	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRCO2S	PWRCLEMAJU	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRN2OS	PWRCLEMAJU	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRNMVS	PWRCLEMAJU	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRNOXS	PWRCLEMAJU	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRSOXS	PWRCLEMAJU	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRCH4S	PWRCLEMATI	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRCMOX	PWRCLEMATI	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRCO2S	PWRCLEMATI	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRN2OS	PWRCLEMATI	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRNMVS	PWRCLEMATI	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRNOXS	PWRCLEMATI	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRSOXS	PWRCLEMATI	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRCH4S	PWRCLEMATL	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRCMOX	PWRCLEMATL	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRCO2S	PWRCLEMATL	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRN2OS	PWRCLEMATL	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRNMVS	PWRCLEMATL	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRNOXS	PWRCLEMATL	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATL-E	PWRSOXS	PWRCLEMATL	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRCH4S	PWRCLEMEDU	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRCMOX	PWRCLEMEDU	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRCO2S	PWRCLEMEDU	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRN2OS	PWRCLEMEDU	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRNMVS	PWRCLEMEDU	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRNOXS	PWRCLEMEDU	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRSOXS	PWRCLEMEDU	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEPFSI-E	PWRENV	ICPELC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEPFSS-E	PWRENV	UPSELC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRCH4S	PWRCLETUTU	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRCMOX	PWRCLETUTU	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRCO2S	PWRCLETUTU	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRN2OS	PWRCLETUTU	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRNMVS	PWRCLETUTU	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRNOXS	PWRCLETUTU	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLETUTU-E	PWRSOXS	PWRCLETUTU	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRCH4S	PWRCLEWATE	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRCMOX	PWRCLEWATE	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRCO2S	PWRCLEWATE	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRN2OS	PWRCLEWATE	-	ANNUAL	-	0	0.0015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRNMVS	PWRCLEWATE	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRNOXS	PWRCLEWATE	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEWATE-N	PWRSOXS	PWRCLEWATE	-	ANNUAL	-	0	0.043834	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGASENSI-N	PWRENV	ICPELC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGASENSS-N	PWRENV	UPSELC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETNUC-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETNUC-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSARNOVRS	CH4SF	PWRCLEARNO	-	ANNUAL	-	0	1.45711500974659E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSARNOVRS	CO2SF	PWRCLEARNO	-	ANNUAL	-	0	4.00584795321637E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSCAMDVRS	CH4SF	PWRCLECAMD	-	ANNUAL	-	0	1.60321715817694E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSCAMDVRS	CO2SF	PWRCLECAMD	-	ANNUAL	-	0	4.40750670241287E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHS32	CH4SF	PWRCLEDUVH	-	ANNUAL	-	0	1.43888354186718E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHS32	CO2SF	PWRCLEDUVH	-	ANNUAL	-	0	3.95572666025024E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHVRS	CH4SF	PWRCLEDUVH	-	ANNUAL	-	0	1.43888354186718E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHVRS	CO2SF	PWRCLEDUVH	-	ANNUAL	-	0	3.95572666025024E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSGROOVRS	CH4SF	PWRCLEGROO	-	ANNUAL	-	0	1.45286686103013E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSGROOVRS	CO2SF	PWRCLEGROO	-	ANNUAL	-	0	3.99416909620991E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSHENDVRS	CH4SF	PWRCLEHEND	-	ANNUAL	-	0	1.44864341085271E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSHENDVRS	CO2SF	PWRCLEHEND	-	ANNUAL	-	0	3.98255813953488E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDS32	CH4SF	PWRCLEKEND	-	ANNUAL	-	0	1.61796536796537E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDS32	CO2SF	PWRCLEKEND	-	ANNUAL	-	0	4.44805194805195E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDVRS	CH4SF	PWRCLEKEND	-	ANNUAL	-	0	1.61796536796537E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDVRS	CO2SF	PWRCLEKEND	-	ANNUAL	-	0	4.44805194805195E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKOMAVRS	CH4SF	PWRCLEKOMA	-	ANNUAL	-	0	1.51930894308943E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKOMAVRS	CO2SF	PWRCLEKOMA	-	ANNUAL	-	0	4.17682926829268E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIESER	CH4SF	PWRCLEKRIE	-	ANNUAL	-	0	1.42788920725883E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIESER	CO2SF	PWRCLEKRIE	-	ANNUAL	-	0	3.92550143266476E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIEVRS	CH4SF	PWRCLEKRIE	-	ANNUAL	-	0	1.42788920725883E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIEVRS	CO2SF	PWRCLEKRIE	-	ANNUAL	-	0	3.92550143266476E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSINLG	CH4SF	PWRCLEKUSI	-	ANNUAL	-	0	1.53333333333333E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSINLG	CO2SF	PWRCLEKUSI	-	ANNUAL	-	0	4.21538461538461E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSIVRS	CH4SF	PWRCLEKUSI	-	ANNUAL	-	0	1.70564746149458E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSIVRS	CO2SF	PWRCLEKUSI	-	ANNUAL	-	0	4.68910439247005E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSLETHSER	CH4SF	PWRCLELETH	-	ANNUAL	-	0	1.94155844155844E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSLETHSER	CO2SF	PWRCLELETH	-	ANNUAL	-	0	5.33766233766234E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMAJUVRS	CH4SF	PWRCLEMAJU	-	ANNUAL	-	0	1.60580021482277E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMAJUVRS	CO2SF	PWRCLEMAJU	-	ANNUAL	-	0	4.41460794844253E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATIEXX	CH4SF	PWRCLEMATI	-	ANNUAL	-	0	1.59978598180845E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATIEXX	CO2SF	PWRCLEMATI	-	ANNUAL	-	0	4.39807383627608E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLEXX	CH4SF	PWRCLEMATL	-	ANNUAL	-	0	1.50933871781928E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLEXX	CO2SF	PWRCLEMATL	-	ANNUAL	-	0	4.14941948510853E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLVRS	CH4SF	PWRCLEMATL	-	ANNUAL	-	0	1.50933871781928E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLVRS	CO2SF	PWRCLEMATL	-	ANNUAL	-	0	4.14941948510853E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMEDUEXX	CH4SF	PWRCLEMEDU	-	ANNUAL	-	0	1.59978598180845E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMEDUEXX	CO2SF	PWRCLEMEDU	-	ANNUAL	-	0	4.39807383627608E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUSER	CH4SF	PWRCLETUTU	-	ANNUAL	-	0	1.46928746928747E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUSER	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03931203931204E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUVRS	CH4SF	PWRCLETUTU	-	ANNUAL	-	0	1.46928746928747E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUVRS	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03931203931204E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B2	UP	0	0.55921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B2	UP	0	0.29684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B3	UP	0	0.63511	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B2	UP	0	0.62631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B2	UP	0	0.33246	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B3	UP	0	0.71133	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B2	UP	0	0.237472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B2	UP	0	0.237472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B2	UP	0	0.237472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B1	UP	0	0.01872	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B2	UP	0	0.75648	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B3	UP	0	0.73099	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B2	UP	0	0.31045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B3	UP	0	0.92279	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B4	UP	0	0.85089	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B5	UP	0	0.26989	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S1D1B1	UP	0	0.38579742506728	null	null	null	null	null	null	null	0.41309	null	null	null	null	null	null	null	null	null	0.43954	null	null	null	null	null	null	null	null	null	0.46009	null	0.47476	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S1D1B2	UP	0	0.285206101197606	null	null	null	null	null	null	null	0.30538	null	null	null	null	null	null	null	null	null	0.32493	null	null	null	null	null	null	null	null	null	0.34013	null	0.35097	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S1D1B3	UP	0	0.416946931281717	null	null	null	null	null	null	null	0.44644	null	null	null	null	null	null	null	null	null	0.47503	null	null	null	null	null	null	null	null	null	0.49724	null	0.51309	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B1	UP	0	0.409412608656582	null	null	null	null	null	null	null	0.43838	null	null	null	null	null	null	null	null	null	0.46644	null	null	null	null	null	null	null	null	null	0.48826	null	0.50382	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B2	UP	0	0.35570788059098	null	null	null	null	null	null	null	0.38088	null	null	null	null	null	null	null	null	null	0.40526	null	null	null	null	null	null	null	null	null	0.42422	null	0.43774	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B3	UP	0	0.298078429332817	null	null	null	null	null	null	null	0.31917	null	null	null	null	null	null	null	null	null	0.3396	null	null	null	null	null	null	null	null	null	0.35549	null	0.36682	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B4	UP	0	0.370423205261872	null	null	null	null	null	null	null	0.39663	null	null	null	null	null	null	null	null	null	0.42203	null	null	null	null	null	null	null	null	null	0.44177	null	0.45585	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B5	UP	0	0.400207175183033	null	null	null	null	null	null	null	0.42852	null	null	null	null	null	null	null	null	null	0.45596	null	null	null	null	null	null	null	null	null	0.47729	null	0.4925	null	null	
+	NCAP_AFA	ERBIG-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERBIO-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERHYD-E	-	-	-	-	LO	0	null	null	null	null	null	0.120017080372163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERHYD-E	-	-	-	-	UP	0	null	null	null	null	null	0.120017080372163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERHYDGIW-I	-	-	-	-	UP	0	0.78	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERHYD-I	-	-	-	-	LO	0	null	null	null	null	null	0.689869634703196	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERHYD-I	-	-	-	-	UP	0	null	null	null	null	null	0.689869634703196	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ERHYD-N	-	-	-	-	UP	0	0.120017080372163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ESTSUTL	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLDFB-N	-	-	-	-	LO	0	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLDFB-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEARNO-E	-	-	-	-	LO	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEARNO-E	-	-	-	-	UP	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.552820775844768	null	null	null	null	0.655	null	null	null	null	0.5458	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLECAMD-E	-	-	-	-	LO	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLECAMD-E	-	-	-	-	UP	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.565467684353015	null	null	null	null	0.6	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	LO	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	UP	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.573943593361587	null	null	null	null	0.6112	null	null	null	null	0.6021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEGROO-E	-	-	-	-	LO	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.38	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEGROO-E	-	-	-	-	UP	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.384034260909434	null	null	null	null	0.384034260909434	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEHEND-E	-	-	-	-	LO	0	0.580836424400455	null	null	null	null	0.555837090361152	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEHEND-E	-	-	-	-	UP	0	0.580836424400455	null	null	null	null	0.555837090361152	null	null	0.580849759427404	null	null	null	null	0.6093	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKELB-E	-	-	-	-	LO	0	null	null	null	null	null	0.324789764079148	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKELB-E	-	-	-	-	UP	0	null	null	null	null	null	0.324789764079148	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKEND-E	-	-	-	-	LO	0	0.77882756016933	null	null	null	null	0.739202828682354	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKEND-E	-	-	-	-	UP	0	0.77882756016933	null	null	null	null	0.739202828682354	null	null	0.77246695597306	null	null	null	null	0.7414	null	null	null	null	0.7294	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	LO	0	0.592294737024401	null	null	null	null	0.339234108858707	null	null	0.35	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	UP	0	0.592294737024401	null	null	null	null	0.339234108858707	null	null	0.354499643757349	null	null	null	null	0.354499643757349	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	LO	0	0.663730233117039	null	null	null	null	0.514283032190896	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	UP	0	0.663730233117039	null	null	null	null	0.514283032190896	null	null	0.537425768639486	null	null	null	null	0.6444	null	null	null	null	0.6415	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKUSI-N	-	-	-	-	LO	0	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKUSI-N	-	-	-	-	UP	0	null	null	null	null	null	0.552183949424329	null	null	0.560453505383933	null	null	null	null	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLELETH-E	-	-	-	-	LO	0	0.721257324801528	null	null	null	null	0.616290732855275	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLELETH-E	-	-	-	-	UP	0	0.721257324801528	null	null	null	null	0.616290732855275	null	null	0.644023815833762	null	null	null	null	0.7488	null	null	null	null	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJD-E	-	-	-	-	LO	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJD-E	-	-	-	-	UP	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.730131989156944	null	null	null	null	0.77	null	null	null	null	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJW-E	-	-	-	-	LO	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJW-E	-	-	-	-	UP	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.730131989156944	null	null	null	null	0.77	null	null	null	null	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATI-E	-	-	-	-	LO	0	0.826438325228001	null	null	null	null	0.809413815976089	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATI-E	-	-	-	-	UP	0	0.826438325228001	null	null	null	null	0.809413815976089	null	null	0.826438325228001	null	null	null	null	0.7837	null	null	null	null	0.7941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATL-E	-	-	-	-	LO	0	0.725950962874727	null	null	null	null	0.646971277090255	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATL-E	-	-	-	-	UP	0	0.725950962874727	null	null	null	null	0.646971277090255	null	null	0.676084984559316	null	null	null	null	0.7053	null	null	null	null	0.6976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMEDU-N	-	-	-	-	LO	0	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMEDU-N	-	-	-	-	UP	0	null	null	null	null	null	0.53631914390807	null	null	0.560453505383933	null	null	null	null	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEPFSI-E	-	-	-	-	LO	0	null	null	null	null	null	0.578380796946347	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEPFSI-E	-	-	-	-	UP	0	null	null	null	null	null	0.578380796946347	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEPFSS-E	-	-	-	-	LO	0	null	null	null	null	null	0.69050174086758	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEPFSS-E	-	-	-	-	UP	0	null	null	null	null	null	0.69050174086758	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLETUTU-E	-	-	-	-	LO	0	0.627904909651485	null	null	null	null	0.538110097053583	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLETUTU-E	-	-	-	-	UP	0	0.627904909651485	null	null	null	null	0.538110097053583	null	null	0.562325051420994	null	null	null	null	0.6115	null	null	null	null	0.5808	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEWATE-N	-	-	-	-	LO	0	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEWATE-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGASENSI-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGASENSS-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICCC-N	-	-	-	-	LO	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICCC-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICEN-N	-	-	-	-	LO	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICEN-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICGT-N	-	-	-	-	LO	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICGT-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETNUC-E	-	-	-	-	LO	0	null	null	null	null	null	0.926018804929543	null	null	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETNUC-E	-	-	-	-	UP	0	null	null	null	null	null	0.926018804929543	null	null	0.8416	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETNUC-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-E	-	-	-	-	LO	0	null	null	null	null	null	0.9588	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-E	-	-	-	-	UP	0	null	null	null	null	null	0.9588	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-N	-	-	-	-	LO	0	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFC	EPTSTO-E	-	ACTGRP	-	DAYNITE	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFC	EPTSTO-N	-	ACTGRP	-	DAYNITE	-	0	0.657	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFC	ESTSUTL	-	ACTGRP	-	DAYNITE	-	0	0.166	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	EPTSTO-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	EPTSTO-N	-	-	-	-	FX	0	null	null	null	0	0.99	0.33	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERHYD-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERHYD-I	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERHYD-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	0.0045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPCF-N	-	-	-	-	FX	0	0	null	null	0.96	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPCT-N	-	-	-	-	FX	0	0	null	null	0.005	0.509	0	0	0	0.114	0.3	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPRC-N	-	-	-	-	FX	0	null	null	null	0.1232	0.0768	0.1072	0.16	0.24	0.245	0.28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPRI-N	-	-	-	-	FX	0	null	null	null	0.0154	0.0096	0.0134	0.02	0.03	0.07	0.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPRR-N	-	-	-	-	FX	0	null	null	null	0.0154	0.0096	0.0134	0.02	0.03	0.035	0.04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLTC09-N	-	-	-	-	FX	0	0	null	null	0	0.2	0.1	0.1	0.1	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERWNDH-N	-	-	-	-	FX	0	0	null	null	1.075	0.385	0.62	0	0	0.244	0.3	0.818	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEARNO-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLECAMD-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEDUVH-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEGROO-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEHEND-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKELB-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKEND-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKOMA-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKRIE-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKUSI-N	-	-	-	-	FX	0	null	null	null	null	0	0.722	0	0	1.444	0.722	0.722	0.722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKUSI-N	-	-	-	-	UP	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLELETH-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEMAJD-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEMAJW-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEMATI-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEMATL-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEMEDU-N	-	-	-	-	FX	0	0	null	null	0.722	0.722	0	0.722	0.722	0.722	0.722	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEMEDU-N	-	-	-	-	UP	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEPFSI-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEPFSS-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLETUTU-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETGASENSI-N	-	-	-	-	FX	0	0.172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETGASENSS-N	-	-	-	-	FX	0	0.249	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETNUC-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETODSGT-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETODSGT-N	-	-	-	-	FX	0	null	null	null	0.335	0.67	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	EPTSTO-E	-	-	-	-	-	0	4229.44109525596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	EPTSTO-N	-	-	-	-	-	0	22451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERBIG-N	-	-	-	-	-	0	18911.4431554524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERBIO-N	-	-	-	-	-	0	18911.4431554524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERHYD-E	-	-	-	-	-	0	4291.68815972787	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERHYDGIW-I	-	-	-	-	-	0	51227.1074878751	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERHYD-I	-	-	-	-	-	0	4291.68815972787	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERHYD-N	-	-	-	-	-	0	11515.6695525528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERSOLPCF-N	-	-	-	-	-	0	26049.680465	null	null	14267.25	null	12569.9587345254	null	null	8900.35	null	null	null	null	8354.65	null	null	null	null	7848.9	null	null	null	null	null	null	null	null	null	6972.55	null	6159.95	null	null	
+	NCAP_COST	ERSOLPCT-N	-	-	-	-	-	0	30646.6829	null	null	16785	null	14788.1867465005	null	null	10471	null	null	null	null	9829	null	null	null	null	9234	null	null	null	null	null	null	null	null	null	8203	null	7247	null	null	
+	NCAP_COST	ERSOLPRC-N	-	-	-	-	-	0	30217.6293394	null	null	16550.01	null	14581.1521320495	null	null	10324.406	null	null	null	null	9691.394	null	null	null	null	9104.724	null	null	null	null	null	null	null	null	null	8088.158	null	7145.542	null	null	
+	NCAP_COST	ERSOLPRI-N	-	-	-	-	-	0	30217.6293394	null	null	16550.01	null	14581.1521320495	null	null	10324.406	null	null	null	null	9691.394	null	null	null	null	9104.724	null	null	null	null	null	null	null	null	null	8088.158	null	7145.542	null	null	
+	NCAP_COST	ERSOLPRR-N	-	-	-	-	-	0	45586.94081375	null	null	24967.6875	null	21997.4277854195	null	null	15575.6125	null	null	null	null	14620.6375	null	null	null	null	13735.575	null	null	null	null	null	null	null	null	null	12201.9625	null	10779.9125	null	null	
+	NCAP_COST	ERSOLTC09-N	-	-	-	-	-	0	null	null	null	null	null	57809.3771959677	null	null	52630.5355636711	null	null	null	null	43999.1328431769	null	null	null	null	35367.7301226827	null	null	null	null	null	null	null	null	null	35367.7301226827	null	35367.7301226827	null	null	
+	NCAP_COST	ERWNDH-N	-	-	-	-	-	0	19786.1982	null	null	19208	null	15312.5398495024	null	null	12500	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	11859	null	null	
+	NCAP_COST	ESTSUTL	-	-	-	-	-	0	null	null	null	null	null	27165.0638401165	null	null	20309.8105	null	null	null	null	14178.547	null	null	null	null	9963.3033	null	null	null	null	null	null	null	null	null	9196.8953	null	9196.8953	null	null	
+	NCAP_COST	ETCLDFB-N	-	-	-	-	-	0	46960	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEARNO-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLECAMD-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEDUVH-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEGROO-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEHEND-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKELB-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKEND-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKOMA-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKRIE-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKUSI-N	-	-	-	-	-	0	36529.0567969073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLELETH-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMAJD-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMAJW-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMATI-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMATL-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMEDU-N	-	-	-	-	-	0	36529.0567969073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEPFSI-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEPFSS-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLETUTU-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEWATE-N	-	-	-	-	-	0	39334.6115381503	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETGASENSI-N	-	-	-	-	-	0	14143.5986730318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETGASENSS-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETGICCC-N	-	-	-	-	-	0	9954.7587992556	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETGICEN-N	-	-	-	-	-	0	14143.5986730318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETGICGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETNUC-E	-	-	-	-	-	0	13710.7516841831	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETNUC-N	-	-	-	-	-	0	68550.4185775548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETODSGT-E	-	-	-	-	-	0	1548.37745535289	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETODSGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETRANS	-	-	-	-	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETRANSDUM	-	-	-	-	-	0	3924.33136358704	null	null	null	null	9706.0655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XAGRELC	-	-	-	-	-	0	22934.3282724095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XCOMELC	-	-	-	-	-	0	11467.1641733523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XICPELC	-	-	-	-	-	0	5450.85368096325	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIFAELC	-	-	-	-	-	0	5450.85368096325	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIFBELC	-	-	-	-	-	0	8757.50254884828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIISELC	-	-	-	-	-	0	5450.85368096325	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIMIELC	-	-	-	-	-	0	5450.85368096326	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINFELC	-	-	-	-	-	0	5450.85368096325	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINMELC	-	-	-	-	-	0	5450.85368096326	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIOTELC	-	-	-	-	-	0	8757.50254884828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIPPELC	-	-	-	-	-	0	8757.50254884828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XRESELC	-	-	-	-	-	0	22934.3282724095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRAELC	-	-	-	-	-	0	11467.1641733523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XUPSELC	-	-	-	-	-	0	5733.58208667616	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	EPTSTO-E	-	-	-	-	-	0	3.62228380579257	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	EPTSTO-N	-	-	-	-	-	0	183.096141869432	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERBIG-N	-	-	-	-	-	0	1594.49793672627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERBIO-N	-	-	-	-	-	0	1594.49793672627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERHYD-E	-	-	-	-	-	0	33.4898267577412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERHYD-I	-	-	-	-	-	0	33.4898267577412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERSOLPCF-N	-	-	-	-	-	0	269.769398818675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERSOLPCT-N	-	-	-	-	-	0	285.848369609192	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERSOLPRC-N	-	-	-	-	-	0	312.932502629663	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERSOLPRI-N	-	-	-	-	-	0	312.932502629663	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERSOLPRR-N	-	-	-	-	-	0	472.096447932681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERWNDH-N	-	-	-	-	-	0	611.000890039647	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ESTSUTL	-	-	-	-	-	0	622.613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLDFB-N	-	-	-	-	-	0	568	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEARNO-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLECAMD-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEDUVH-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEGROO-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEHEND-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKELB-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKEND-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKOMA-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKRIE-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKUSI-N	-	-	-	-	-	0	845	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLELETH-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMAJD-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMAJW-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMATI-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMATL-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMEDU-N	-	-	-	-	-	0	845	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEPFSI-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEPFSS-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLETUTU-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEWATE-N	-	-	-	-	-	0	932.580305849988	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETGASENSI-N	-	-	-	-	-	0	425.199449793673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETGASENSS-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETGICCC-N	-	-	-	-	-	0	167.042640990371	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETGICEN-N	-	-	-	-	-	0	425.199449793673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETGICGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETNUC-E	-	-	-	-	-	0	324.137630750902	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETNUC-N	-	-	-	-	-	0	976.79747552391	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETODSGT-E	-	-	-	-	-	0	53.8398098535397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETODSGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETRANS	-	-	-	-	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETRANSDUM	-	-	-	-	-	0	204.62606607892	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XAGRELC	-	-	-	-	-	0	1195.86266748282	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XCOMELC	-	-	-	-	-	0	597.931335678394	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XICPELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XIFAELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XIFBELC	-	-	-	-	-	0	456.641687262857	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XIISELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XIMIELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XINDELC	-	-	-	-	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XINFELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XINMELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XIOTELC	-	-	-	-	-	0	456.641687262857	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XIPPELC	-	-	-	-	-	0	456.641687262857	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XRESELC	-	-	-	-	-	0	1195.86266748282	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XTRAELC	-	-	-	-	-	0	597.931335678394	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	XUPSELC	-	-	-	-	-	0	298.965667839197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	EPTSTO-N	-	-	-	-	-	0	-6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERBIG-N	-	-	-	-	-	0	-3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERBIO-N	-	-	-	-	-	0	-3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERHYDGIW-I	-	-	-	-	-	0	-5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERHYD-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERSOLPCF-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERSOLPCT-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERSOLPRC-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERSOLPRI-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERSOLPRR-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERSOLTC09-N	-	-	-	-	-	0	-3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ERWNDH-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ESTSUTL	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETCLDFB-N	-	-	-	-	-	0	-4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETCLEKUSI-N	-	-	-	-	-	0	-6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETCLEMEDU-N	-	-	-	-	-	0	-6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETCLEWATE-N	-	-	-	-	-	0	-4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETGASENSI-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETGASENSS-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETGICCC-N	-	-	-	-	-	0	-3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETGICEN-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETGICGT-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETNUC-N	-	-	-	-	-	0	-9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETODSGT-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	EPTSTO-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	EPTSTO-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERBIG-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERBIO-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERHYD-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERHYDGIW-I	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERHYD-I	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERHYD-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ERSOLTC09-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ESTSUTL	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLDFB-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEARNO-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLECAMD-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEDUVH-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEGROO-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEHEND-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEKELB-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEKEND-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEKOMA-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEKRIE-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEKUSI-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLELETH-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEMAJD-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEMAJW-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEMATI-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEMATL-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEMEDU-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEPFSI-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEPFSS-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLETUTU-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETCLEWATE-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETGICCC-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETGICEN-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETGICGT-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETNUC-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETNUC-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETODSGT-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_PKCNT	ETODSGT-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	EPTSTO-E	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	EPTSTO-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERBIG-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERBIO-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERHYD-E	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERHYDGIW-I	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERHYD-I	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERHYD-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERSOLPCF-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERSOLPCT-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERSOLPRC-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERSOLPRI-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERSOLPRR-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERSOLTC09-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ERWNDH-N	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ESTSUTL	-	-	-	-	-	0	15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLDFB-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEARNO-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLECAMD-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEDUVH-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEGROO-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEHEND-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEKELB-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEKEND-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEKOMA-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEKRIE-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEKUSI-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLELETH-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEMAJD-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEMAJW-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEMATI-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEMATL-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEMEDU-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEPFSI-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEPFSS-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLETUTU-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETCLEWATE-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETGASENSI-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETGASENSS-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETGICCC-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETGICEN-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETGICGT-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETNUC-E	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETNUC-N	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETODSGT-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETODSGT-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	EPTSTO-E	-	-	-	-	-	0	1.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.58	null	null	
+	PRC_RESID	ERHYD-E	-	-	-	-	-	0	0.665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ERHYD-I	-	-	-	-	-	0	1.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.5	null	null	
+	PRC_RESID	ETCLEARNO-E	-	-	-	-	-	0	2.232	null	null	null	null	2.232	null	2.232	2.232	1.86	1.86	1.86	1.86	1.86	1.116	0.744	0.744	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLECAMD-E	-	-	-	-	-	0	1.45	null	null	null	null	1.481	null	1.481	1.481	1.481	1.481	1.481	1.481	1.11075	0.7405	0.37025	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEDUVH-E	-	-	-	-	-	0	3.45	null	null	null	null	2.875	null	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	1.91666666666667	1.4375	0.479166666666666	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEGROO-E	-	-	-	-	-	0	1.09	null	null	null	null	1.12	null	0.57	0.57	0.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEHEND-E	-	-	-	-	-	0	1.865	null	null	null	null	1.638	null	1.293	1.293	1.10828571428571	0.738857142857143	0.369428571428572	0.369428571428572	0.184714285714286	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEKELB-E	-	-	-	-	-	0	0.6	null	null	null	null	0.6	null	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ETCLEKEND-E	-	-	-	-	-	0	3.84	null	null	null	null	3.84	null	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.2	3.2	0	0	0	0	
+	PRC_RESID	ETCLEKOMA-E	-	-	-	-	-	0	0.791	null	null	null	null	0.904	null	0.41	0.205	0.1025	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEKRIE-E	-	-	-	-	-	0	2.85	null	null	null	null	2.85	null	2.85	2.85	2.85	2.85	2.85	2.85	2.85	2.375	1.9	1.425	0.475	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLELETH-E	-	-	-	-	-	0	3.558	null	null	null	null	3.558	null	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	2.965	1.779	1.186	1.186	0.593	0	0	0	0	
+	PRC_RESID	ETCLEMAJD-E	-	-	-	-	-	0	1.833	null	null	null	null	1.833	null	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	0	0	0	
+	PRC_RESID	ETCLEMAJW-E	-	-	-	-	-	0	2.01	null	null	null	null	2.01	null	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	0.67	0	0	
+	PRC_RESID	ETCLEMATI-E	-	-	-	-	-	0	3.69	null	null	null	null	3.69	null	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	2.46	1.845	1.23	0	0	0	0	
+	PRC_RESID	ETCLEMATL-E	-	-	-	-	-	0	3.45	null	null	null	null	3.45	null	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	2.875	1.725	1.15	0.575	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEPFSI-E	-	-	-	-	-	0	0.128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.128	null	null	
+	PRC_RESID	ETCLEPFSS-E	-	-	-	-	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.6	null	null	
+	PRC_RESID	ETCLETUTU-E	-	-	-	-	-	0	3.51	null	null	null	null	3.51	null	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	2.925	2.34	1.17	1.17	0.585	0.585	0	0	0	0	
+	PRC_RESID	ETNUC-E	-	-	-	-	-	0	1.86	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.86	0	null	null	null	
+	PRC_RESID	ETODSGT-E	-	-	-	-	-	0	2.46	null	null	null	null	null	null	null	null	null	null	null	null	null	2.46	2.1	null	null	null	null	null	null	null	null	null	null	null	2.1	0	null	null	null	null	
+	PRC_RESID	ETRANS	-	-	-	-	-	0	34.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ETRANSDUM	-	-	-	-	-	0	34.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XAGRELC	-	-	-	-	-	0	0.912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XCOMELC	-	-	-	-	-	0	6.0609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XICPELC	-	-	-	-	-	0	1.2667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIFBELC	-	-	-	-	-	0	0.5433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIISELC	-	-	-	-	-	0	3.5015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIMIELC	-	-	-	-	-	0	4.1948	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINDELC	-	-	-	-	-	0	15.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINFELC	-	-	-	-	-	0	2.8782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINMELC	-	-	-	-	-	0	0.8427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIOTELC	-	-	-	-	-	0	0.904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIPPELC	-	-	-	-	-	0	1.3541	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XRESELC	-	-	-	-	-	0	10.6821	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XTRAELC	-	-	-	-	-	0	9.9385	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XUPSELC	-	-	-	-	-	0	0.7735	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	STG_EFF	EPTSTO-E	-	-	-	-	-	0	0.73	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	STG_EFF	EPTSTO-N	-	-	-	-	-	0	0.78	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	STG_EFF	ESTSUTL	-	-	-	-	-	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	COM_PEAK	-	ELCC	-	-	-	-	1	
+	NCAP_START	ERHYDGIW-I	-	-	-	-	-	2030	
+	NCAP_START	ETCLEWATE-N	-	-	-	-	-	2026	
+	NCAP_START	ETNUC-N	-	-	-	-	-	2030	
+	NCAP_START	MINCSKUSINLG	-	-	-	-	-	2022	
+	PRC_ACTUNT	EPTSTO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	EPTSTO-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERBIG-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERBIO-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYDGIW-I	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-I	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCF-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRC-N	-	COMELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRI-N	-	INDELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRR-N	-	RESELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLTC09-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERWNDH-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ESTSUTL	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLDFB-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEARNO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLECAMD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEDUVH-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEGROO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEHEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKELB-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKOMA-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKRIE-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKUSI-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLELETH-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMAJD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMAJW-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMATI-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMATL-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMEDU-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEPFSI-E	-	ICPELC	-	-	-	1	
+	PRC_ACTUNT	ETCLEPFSS-E	-	UPSELC	-	-	-	1	
+	PRC_ACTUNT	ETCLETUTU-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEWATE-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGASENSI-N	-	ICPELC	-	-	-	1	
+	PRC_ACTUNT	ETGASENSS-N	-	UPSELC	-	-	-	1	
+	PRC_ACTUNT	ETGICCC-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICEN-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICGT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETNUC-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETNUC-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETODSGT-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETODSGT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETRANS	-	ELC	-	-	-	1	
+	PRC_ACTUNT	ETRANSDUM	-	ZDUMETRANS	-	-	-	1	
+	PRC_ACTUNT	MINCSARNOVRS	-	PWRCLEARNO	-	-	-	1	
+	PRC_ACTUNT	MINCSCAMDVRS	-	PWRCLECAMD	-	-	-	1	
+	PRC_ACTUNT	MINCSDUVHS32	-	PWRCLEDUVH	-	-	-	1	
+	PRC_ACTUNT	MINCSDUVHVRS	-	PWRCLEDUVH	-	-	-	1	
+	PRC_ACTUNT	MINCSGROOVRS	-	PWRCLEGROO	-	-	-	1	
+	PRC_ACTUNT	MINCSHENDVRS	-	PWRCLEHEND	-	-	-	1	
+	PRC_ACTUNT	MINCSKENDS32	-	PWRCLEKEND	-	-	-	1	
+	PRC_ACTUNT	MINCSKENDVRS	-	PWRCLEKEND	-	-	-	1	
+	PRC_ACTUNT	MINCSKOMAVRS	-	PWRCLEKOMA	-	-	-	1	
+	PRC_ACTUNT	MINCSKRIESER	-	PWRCLEKRIE	-	-	-	1	
+	PRC_ACTUNT	MINCSKRIEVRS	-	PWRCLEKRIE	-	-	-	1	
+	PRC_ACTUNT	MINCSKUSINLG	-	PWRCLEKUSI	-	-	-	1	
+	PRC_ACTUNT	MINCSKUSIVRS	-	PWRCLEKUSI	-	-	-	1	
+	PRC_ACTUNT	MINCSLETHSER	-	PWRCLELETH	-	-	-	1	
+	PRC_ACTUNT	MINCSMAJUVRS	-	PWRCLEMAJU	-	-	-	1	
+	PRC_ACTUNT	MINCSMATIEXX	-	PWRCLEMATI	-	-	-	1	
+	PRC_ACTUNT	MINCSMATLEXX	-	PWRCLEMATL	-	-	-	1	
+	PRC_ACTUNT	MINCSMATLVRS	-	PWRCLEMATL	-	-	-	1	
+	PRC_ACTUNT	MINCSMEDUEXX	-	PWRCLEMEDU	-	-	-	1	
+	PRC_ACTUNT	MINCSTUTUSER	-	PWRCLETUTU	-	-	-	1	
+	PRC_ACTUNT	MINCSTUTUVRS	-	PWRCLETUTU	-	-	-	1	
+	PRC_ACTUNT	PEXELC	-	ZDUMETRANS	-	-	-	1	
+	PRC_ACTUNT	XAGRELC	-	AGRELC	-	-	-	1	
+	PRC_ACTUNT	XCOMELC	-	COMELC	-	-	-	1	
+	PRC_ACTUNT	XICPELC	-	ICPELC	-	-	-	1	
+	PRC_ACTUNT	XIFAELC	-	IFAELC	-	-	-	1	
+	PRC_ACTUNT	XIFBELC	-	IFBELC	-	-	-	1	
+	PRC_ACTUNT	XIISELC	-	IISELC	-	-	-	1	
+	PRC_ACTUNT	XIMIELC	-	IMIELC	-	-	-	1	
+	PRC_ACTUNT	XINDELC	-	INDELC	-	-	-	1	
+	PRC_ACTUNT	XINFELC	-	INFELC	-	-	-	1	
+	PRC_ACTUNT	XINMELC	-	INMELC	-	-	-	1	
+	PRC_ACTUNT	XIOTELC	-	IOTELC	-	-	-	1	
+	PRC_ACTUNT	XIPPELC	-	IPPELC	-	-	-	1	
+	PRC_ACTUNT	XRESELC	-	RESELC	-	-	-	1	
+	PRC_ACTUNT	XTRAELC	-	TRAELC	-	-	-	1	
+	PRC_ACTUNT	XUPSELC	-	UPSELC	-	-	-	1	
+	PRC_CAPACT	EPTSTO-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	EPTSTO-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERBIG-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERBIO-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERHYD-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERHYDGIW-I	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERHYD-I	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERHYD-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERSOLPCF-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERSOLPCT-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERSOLPRC-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERSOLPRI-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERSOLPRR-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERSOLTC09-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ERWNDH-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ESTSUTL	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLDFB-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEARNO-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLECAMD-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEDUVH-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEGROO-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEHEND-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEKELB-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEKEND-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEKOMA-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEKRIE-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEKUSI-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLELETH-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEMAJD-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEMAJW-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEMATI-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEMATL-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEMEDU-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEPFSI-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEPFSS-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLETUTU-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETCLEWATE-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETGASENSI-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETGASENSS-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETGICCC-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETGICEN-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETGICGT-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETNUC-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETNUC-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETODSGT-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETODSGT-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETRANS	-	-	-	-	-	31.536	
+	PRC_CAPACT	ETRANSDUM	-	-	-	-	-	31.536	
+	PRC_CAPACT	XAGRELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XCOMELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XICPELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIFAELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIFBELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIISELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIMIELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XINDELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XINFELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XINMELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIOTELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIPPELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XRESELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XTRAELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XUPSELC	-	-	-	-	-	31.536	
+	PRC_VINT	ERWNDH-N	-	-	-	-	-	1	
+	TOP-IN	EPTSTO-E	ELCC	-	-	-	-	1	
+	TOP-IN	EPTSTO-N	ELCC	-	-	-	-	1	
+	TOP-IN	ERBIG-N	PWRBIG	-	-	-	-	1	
+	TOP-IN	ERBIO-N	PWRBIO	-	-	-	-	1	
+	TOP-IN	ERHYD-E	PWRHYD	-	-	-	-	1	
+	TOP-IN	ERHYD-N	PWRHYD	-	-	-	-	1	
+	TOP-IN	ERSOLPCF-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPCT-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRC-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRI-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRR-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLTC09-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERWNDH-N	PWRWND	-	-	-	-	1	
+	TOP-IN	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-IN	ETCLDFB-N	PWRCLD	-	-	-	-	1	
+	TOP-IN	ETCLEARNO-E	PWRCLEARNO	-	-	-	-	1	
+	TOP-IN	ETCLECAMD-E	PWRCLECAMD	-	-	-	-	1	
+	TOP-IN	ETCLEDUVH-E	PWRCLEDUVH	-	-	-	-	1	
+	TOP-IN	ETCLEGROO-E	PWRCLEGROO	-	-	-	-	1	
+	TOP-IN	ETCLEHEND-E	PWRCLEHEND	-	-	-	-	1	
+	TOP-IN	ETCLEKELB-E	PWRCLE	-	-	-	-	1	
+	TOP-IN	ETCLEKEND-E	PWRCLEKEND	-	-	-	-	1	
+	TOP-IN	ETCLEKOMA-E	PWRCLEKOMA	-	-	-	-	1	
+	TOP-IN	ETCLEKRIE-E	PWRCLEKRIE	-	-	-	-	1	
+	TOP-IN	ETCLEKUSI-N	PWRCLEKUSI	-	-	-	-	1	
+	TOP-IN	ETCLELETH-E	PWRCLELETH	-	-	-	-	1	
+	TOP-IN	ETCLEMAJD-E	PWRCLEMAJU	-	-	-	-	1	
+	TOP-IN	ETCLEMAJW-E	PWRCLEMAJU	-	-	-	-	1	
+	TOP-IN	ETCLEMATI-E	PWRCLEMATI	-	-	-	-	1	
+	TOP-IN	ETCLEMATL-E	PWRCLEMATL	-	-	-	-	1	
+	TOP-IN	ETCLEMEDU-N	PWRCLEMEDU	-	-	-	-	1	
+	TOP-IN	ETCLEPFSI-E	INDCLE	-	-	-	-	1	
+	TOP-IN	ETCLEPFSS-E	UPSCLE	-	-	-	-	1	
+	TOP-IN	ETCLETUTU-E	PWRCLETUTU	-	-	-	-	1	
+	TOP-IN	ETCLEWATE-N	PWRCLEWATE	-	-	-	-	1	
+	TOP-IN	ETGASENSI-N	PWRGAS	-	-	-	-	1	
+	TOP-IN	ETGASENSS-N	PWRGAS	-	-	-	-	1	
+	TOP-IN	ETGICCC-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICEN-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICGT-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETNUC-E	PWRNUC	-	-	-	-	1	
+	TOP-IN	ETNUC-N	PWRNUC	-	-	-	-	1	
+	TOP-IN	ETODSGT-E	PWRODS	-	-	-	-	1	
+	TOP-IN	ETODSGT-N	PWRODS	-	-	-	-	1	
+	TOP-IN	ETRANS	ELCC	-	-	-	-	1	
+	TOP-IN	XAGRELC	ELC	-	-	-	-	1	
+	TOP-IN	XCOMELC	ELC	-	-	-	-	1	
+	TOP-IN	XICPELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIFAELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIFBELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIISELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIMIELC	INDELC	-	-	-	-	1	
+	TOP-IN	XINDELC	ELC	-	-	-	-	1	
+	TOP-IN	XINFELC	INDELC	-	-	-	-	1	
+	TOP-IN	XINMELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIOTELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIPPELC	INDELC	-	-	-	-	1	
+	TOP-IN	XRESELC	ELC	-	-	-	-	1	
+	TOP-IN	XTRAELC	ELC	-	-	-	-	1	
+	TOP-IN	XUPSELC	ELC	-	-	-	-	1	
+	TOP-OUT	EPTSTO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	EPTSTO-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERBIG-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERBIO-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYDGIW-I	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-I	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCF-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRC-N	COMELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRI-N	INDELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRR-N	RESELC	-	-	-	-	1	
+	TOP-OUT	ERSOLTC09-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERWNDH-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKELB-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKELB-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEPFSI-E	ICPELC	-	-	-	-	1	
+	TOP-OUT	ETCLEPFSI-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEPFSS-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEPFSS-E	UPSELC	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETGASENSI-N	ICPELC	-	-	-	-	1	
+	TOP-OUT	ETGASENSI-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGASENSS-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGASENSS-N	UPSELC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETNUC-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETNUC-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETNUC-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETNUC-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETODSGT-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETODSGT-E	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETRANS	ELC	-	-	-	-	1	
+	TOP-OUT	ETRANSDUM	ZDUMETRANS	-	-	-	-	1	
+	TOP-OUT	MINCSARNOVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSARNOVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSARNOVRS	PWRCLEARNO	-	-	-	-	1	
+	TOP-OUT	MINCSCAMDVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSCAMDVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSCAMDVRS	PWRCLECAMD	-	-	-	-	1	
+	TOP-OUT	MINCSDUVHS32	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSDUVHS32	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSDUVHS32	PWRCLEDUVH	-	-	-	-	1	
+	TOP-OUT	MINCSDUVHVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSDUVHVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSDUVHVRS	PWRCLEDUVH	-	-	-	-	1	
+	TOP-OUT	MINCSGROOVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSGROOVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSGROOVRS	PWRCLEGROO	-	-	-	-	1	
+	TOP-OUT	MINCSHENDVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSHENDVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSHENDVRS	PWRCLEHEND	-	-	-	-	1	
+	TOP-OUT	MINCSKENDS32	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKENDS32	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKENDS32	PWRCLEKEND	-	-	-	-	1	
+	TOP-OUT	MINCSKENDVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKENDVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKENDVRS	PWRCLEKEND	-	-	-	-	1	
+	TOP-OUT	MINCSKOMAVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKOMAVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKOMAVRS	PWRCLEKOMA	-	-	-	-	1	
+	TOP-OUT	MINCSKRIESER	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKRIESER	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKRIESER	PWRCLEKRIE	-	-	-	-	1	
+	TOP-OUT	MINCSKRIEVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKRIEVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKRIEVRS	PWRCLEKRIE	-	-	-	-	1	
+	TOP-OUT	MINCSKUSINLG	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKUSINLG	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKUSINLG	PWRCLEKUSI	-	-	-	-	1	
+	TOP-OUT	MINCSKUSIVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSKUSIVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSKUSIVRS	PWRCLEKUSI	-	-	-	-	1	
+	TOP-OUT	MINCSLETHSER	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSLETHSER	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSLETHSER	PWRCLELETH	-	-	-	-	1	
+	TOP-OUT	MINCSMAJUVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSMAJUVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSMAJUVRS	PWRCLEMAJU	-	-	-	-	1	
+	TOP-OUT	MINCSMATIEXX	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSMATIEXX	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSMATIEXX	PWRCLEMATI	-	-	-	-	1	
+	TOP-OUT	MINCSMATLEXX	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSMATLEXX	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSMATLEXX	PWRCLEMATL	-	-	-	-	1	
+	TOP-OUT	MINCSMATLVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSMATLVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSMATLVRS	PWRCLEMATL	-	-	-	-	1	
+	TOP-OUT	MINCSMEDUEXX	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSMEDUEXX	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSMEDUEXX	PWRCLEMEDU	-	-	-	-	1	
+	TOP-OUT	MINCSTUTUSER	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSTUTUSER	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSTUTUSER	PWRCLETUTU	-	-	-	-	1	
+	TOP-OUT	MINCSTUTUVRS	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCSTUTUVRS	CO2SF	-	-	-	-	1	
+	TOP-OUT	MINCSTUTUVRS	PWRCLETUTU	-	-	-	-	1	
+	TOP-OUT	XAGRELC	AGRELC	-	-	-	-	1	
+	TOP-OUT	XCOMELC	COMELC	-	-	-	-	1	
+	TOP-OUT	XICPELC	ICPELC	-	-	-	-	1	
+	TOP-OUT	XIFAELC	IFAELC	-	-	-	-	1	
+	TOP-OUT	XIFBELC	IFBELC	-	-	-	-	1	
+	TOP-OUT	XIISELC	IISELC	-	-	-	-	1	
+	TOP-OUT	XIMIELC	IMIELC	-	-	-	-	1	
+	TOP-OUT	XINDELC	INDELC	-	-	-	-	1	
+	TOP-OUT	XINFELC	INFELC	-	-	-	-	1	
+	TOP-OUT	XINMELC	INMELC	-	-	-	-	1	
+	TOP-OUT	XIOTELC	IOTELC	-	-	-	-	1	
+	TOP-OUT	XIPPELC	IPPELC	-	-	-	-	1	
+	TOP-OUT	XRESELC	RESELC	-	-	-	-	1	
+	TOP-OUT	XTRAELC	TRAELC	-	-	-	-	1	
+	TOP-OUT	XUPSELC	UPSELC	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

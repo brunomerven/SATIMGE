@@ -1,0 +1,28 @@
+* MAXITEMLEN.ANS %1 %2 %3
+
+* %1 = integer to append to OUTFILE to give file reference
+* %2 = MAXITEMLEN
+* %3 = file-type to be given to file created, e.g. ANS or TXT
+
+* Determine max. Item length of Items in SETs COM_GRP, PRC, UC_N
+
+SET MAINSETS(*);
+MAINSETS(COM_GRP) = YES;
+MAINSETS(PRC) = YES;
+MAINSETS(UC_N) = YES;
+
+SCALAR MAXITEMLEN;
+MAXITEMLEN=0;
+LOOP(MAINSETS,
+  IF(CARD(MAINSETS.TL) > MAXITEMLEN, MAXITEMLEN = CARD(MAINSETS.TL));
+);
+*display MAXITEMLEN;
+*
+* Create file %2.%3 that contains members of TIMES SET.
+* Create as a single line, eg. SET DATAYEAR / 2000,2001,...,2050 /;
+
+FILE OUTFILE%1 / %2.%3 /;
+OUTFILE%1.ND=0;
+PUT OUTFILE%1;
+PUT "MAXITEMLEN=",MAXITEMLEN:0,";"
+PUTCLOSE OUTFILE%1;

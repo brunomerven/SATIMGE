@@ -1,0 +1,25 @@
+*
+* CRETID_GBL.ANS
+*
+* Create *** TID DATA *** section for _GLOBAL region.
+*
+*****************************************************
+*
+PUT /,"*** TID DATA ***", "_GLOBAL";
+
+* G_DYEAR parameter. 
+$BATINCLUDE putGblTID.ans "G_DYEAR" "" "" "" "" "" "" "" "" "G_DYEAR" "" "" "" "" "" "" ""
+
+* Determine _GLOBAL region TS_ORD_* parameters.
+$BATINCLUDE bldTS_ORD.ANS
+
+* Put out _GLOBAL region TS_ORD_* parameters, used in ANSWER-TIMES to control Global TimeSlice order.
+$BATINCLUDE putGblTID.ans "TSORD_SEAS" "TS" "" "" "" "" "" "" "" "TS_ORD_SEASON" "" "" "" "" "TS" "" "LOOP"
+$BATINCLUDE putGblTID.ans "TSORD_WEEK" "TS" "" "" "" "" "" "" "" "TS_ORD_WEEKLY" "" "" "" "" "TS" "" "LOOP"
+$BATINCLUDE putGblTID.ans "TSORD_DYNT" "TS" "" "" "" "" "" "" "" "TS_ORD_DAYNITE" "" "" "" "" "TS" "" "LOOP"
+
+* UC_RHS parameter.
+$BATINCLUDE putGblTID.ans "UC_RHS" "UC_N" ",LIM" "" "" "" "" "" "" "UC__RHS" "UC_N" "" "" "" "" ",LIM" "LOOP"
+
+PUT /;
+

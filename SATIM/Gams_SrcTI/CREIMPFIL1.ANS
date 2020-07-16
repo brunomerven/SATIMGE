@@ -1,0 +1,45 @@
+*
+* $BATINCLUDE CREIMPFIL1.ANS %1 %2 %3 %4 %5
+*
+* %1 = full filename associated with input GAMS TIMES DD
+* %2 = file stem associated with files created in ANS_WRK directory
+* %3 = YES/NO, according to whether import into BASE/non-BASE scenario
+* %4 = YES/NO, according to whether we want TS Data put out Sparsely/Densely
+* %5 = no. of significant digits for numeric data
+*
+* Carry out part 1 of the processing of %1 to create the ANSWER %2.IMP file.
+*
+*****************************************************************************
+
+*$ONLISTING
+
+* Note that RUNOPTIONS('BASCENARIO') = %3 setting is not currently used.
+* Of course RUNOPTIONS('SPARSEDATA') = %4 setting is used.
+SET RUNOPTIONS(*);
+RUNOPTIONS('BASCENARIO') = %3;
+RUNOPTIONS('SPARSEDATA') = %4;
+
+* Special use of INTEXT_ONLY and PREP_ANS .
+$SETGLOBAL INTEXT_ONLY 'YES'
+$SETGLOBAL PREP_ANS %4
+
+SET OTHERYR(ALLYEAR);
+SET ANSOTHYR(J,ALLYEAR);
+IF(RUNOPTIONS('SPARSEDATA'),
+*  Create SET OTHERYR() based on SET DATAYEAR for Sparse TS Data.
+$  BATINCLUDE CREOTHERYR.ANS DATAYEAR
+ELSE
+*  Create SET OTHERYR() based on SET MILESTONYR for Dense TS Data.
+$  BATINCLUDE CREOTHERYR.ANS MILESTONYR
+);
+
+* Conversions for VDA_* parameters provided by Antti Lehtila.
+$INCLUDE VDA2ANSTI.ANS
+
+* Do the rest.
+$ BATINCLUDE maindrv.mod mod
+
+* Carry out part 2 of the processing of %1 to create the ANSWER %2.IMP file.
+$BATINCLUDE CREIMPFIL2.ANS '%1' '%2' '%3' '%4' '%5'
+
+*$OFFLISTING

@@ -1,0 +1,17 @@
+*
+* DISPTISETS.ANS
+*
+* Display TIMES Process, Commodity, User-Constraint Sets prior to processing.
+*
+*****************************************************************************
+
+*option RP:0:0:1; display RP;
+*option RP_IRE:0:0:1; display RP_IRE;
+*option RPC:0:0:1; display RPC;
+*option RPC_IRE:0:0:1; display RPC_IRE;
+*option UC_N:0:0:1; display UC_N;
+*set ucn_com(reg,*);
+*loop(com$uc_n(com),
+*  ucn_com(reg,com) = yes$com_desc(reg,com);
+*);
+*option ucn_com:0:0:1; display ucn_com;

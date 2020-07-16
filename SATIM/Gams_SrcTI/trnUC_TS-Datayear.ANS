@@ -1,0 +1,22 @@
+*$ONLISTING
+* trnUC_TS-Datayear.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = GAMS parameter name put out in ANSWER-generated DD
+* %11 - %17 = ANSWER arguments
+* %18       = name of TEMPSET used to speed up processing (NOT USED)
+
+* for moment assume '%2' is 'REG', and '%4' is 'DATAYEAR'
+$IF '%13' == 'GLO' $GOTO GLO_LAB
+%1(%2%3,%4%5%6%7%8%9)$%10(%11%12%13%14%15%16%17,DATAYEAR)
+  = %10(%11%12%13%14%15%16%17,DATAYEAR);
+$GOTO SKIPGLO
+$LABEL GLO_LAB
+* assumes all 'global' TS parameters are defined only over REG,DATAYEAR
+%1(%2%3,%4%5%6%7%8%9)$%10(%2,DATAYEAR)
+  = %10(%2,DATAYEAR);
+$LABEL SKIPGLO
+*OPTION %1:6:0:1; display %1;
+$IF '%19' == '' OPTION KILL = %10;
+*$OFFLISTING

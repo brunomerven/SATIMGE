@@ -1,0 +1,101 @@
+*******************************************************************************
+*                                                                             *
+*  ANS2GAMS_STC.ANS:                                                          *
+*                                                                             *
+*  Transform ANSWER-generated Sets, Parameters for TIMES Stochastic Component *
+*  to equivalent Sets, Parameters in ETSAP TIMES code.                        *
+*                                                                             *
+*******************************************************************************
+
+$OFFLISTING
+
+** Introduce the following sets to speed up processing
+SET TEMPSET1(*);
+SET TEMPSET2(*,*);
+SET TEMPSET3(*,*,*);
+SET TEMPSET4(*,*,*,*);
+SET TEMPSET5(*,*,*,*,*);
+SET TEMPSET6(*,*,*,*,*,*);
+SET TEMPSET7(*,*,*,*,*,*,*);
+SET TEMPSET8(*,*,*,*,*,*,*,*);
+
+SET CUR / 'CUR' /;
+
+* Time-Series data
+
+DATAYEAR('0') = YES;
+
+$BATINCLUDE transTSstc.ans "S_CAP_BND" "REG" ",DATAYEAR" ",PRC" ",BD" ",J" ",WW" "" "" "AS_CAP_BND" "REG" ",PRC" "" "" "" ",BD" ",J" ",WW" "TEMPSET5"
+$BATINCLUDE transTSstc.ans "S_COM_FR" "REG" ",DATAYEAR" ",COM" ",TS" ",J" ",WW" "" "" "AS_COM_FR" "REG" "" ",COM" "" "" ",TS" ",J" ",WW" "TEMPSET5"
+$IF DEFINED AS_COM_FR option S_COM_FR:0:0:1; display S_COM_FR;
+$BATINCLUDE transTSstc.ans "S_COM_PROJ" "REG" ",DATAYEAR" ",COM" ",J" ",WW" "" "" "" "AS_COM_PROJ" "REG" "" ",COM" "" "" "" ",J" ",WW" "TEMPSET4"
+
+*  S_COM_TAX added 15 March 2018
+$BATINCLUDE transTSstc.ans "S_COM_TAX" "REG" ",DATAYEAR" ",COM" ",TS" ",ANET" ",CUR" ",J" ",WW" "AS_COM_TAXNET" "REG" "" ",COM" "" "" ",TS" ",J" ",WW" "TEMPSET5"
+*option S_COM_TAX:3:0:1; display S_COM_TAX;
+$BATINCLUDE transTSstc.ans "S_COM_TAX" "REG" ",DATAYEAR" ",COM" ",TS" ",APRD" ",CUR" ",J" ",WW" "AS_COM_TAXPRD" "REG" "" ",COM" "" "" ",TS" ",J" ",WW" "TEMPSET5"
+option S_COM_TAX:3:0:1; display S_COM_TAX;
+
+
+$BATINCLUDE transTSstc.ans "S_DAM_COST" "REG" ",DATAYEAR" ",COM" ",CUR" ",J" ",WW" "" "" "AS_DAM_COST" "REG" "" ",COM" "" "" "" ",J" ",WW" "TEMPSET4"
+*  S_FLO_FUNC added 28 April 2013
+$BATINCLUDE transTSstc.ans "S_FLO_FUNC" "REG" ",DATAYEAR" ",PRC" ",CG" ",CG2" "" ",J" ",WW" "AS_FLO_FUNC" "REG" ",PRC" "" ",CG" ",CG2" "" ",J" ",WW" "TEMPSET6"
+$IF DEFINED AS_FLO_FUNC option S_FLO_FUNC:0:0:1; display S_FLO_FUNC;
+$BATINCLUDE transTSstc.ans "S_NCAP_AFS" "REG" ",DATAYEAR" ",PRC" ",TS" ",J" ",WW" "" "" "AS_NCAP_AFS" "REG" ",PRC" "" "" "" ",TS" ",J" ",WW" "TEMPSET5"
+$IF DEFINED AS_NCAP_AFS option S_NCAP_AFS:0:0:1; display S_NCAP_AFS;
+* note that S_CM_MAXCO2C is a parameter with no REG - does transTSstc.ans work?
+$BATINCLUDE transTSstc.ans "S_CM_MAXCO2C" "DATAYEAR" ",J" ",WW" "" "" "" "" "" "AS_CM_MAXCO2C" "" "" "" "" "" "" "J" ",WW" "TEMPSET2"
+*option S_CM_MAXCO2C:0:0:1; display S_CM_MAXCO2C;
+
+* Ensure we avoid compilation error for Stochastic run with no Stochastic Climate Parameters
+$IF NOT '%CLI%' == 'YES' $GOTO NOSTOCCLI1
+* note that S_CM_MAXC is a parameter with no REG, defined over SET CM_VAR - does transTSstc.ans work?
+$BATINCLUDE transTSstc.ans "S_CM_MAXC" "DATAYEAR" ",CM_VAR" ",J" ",WW" "" "" "" "" "AS_CM_MAXC" "" "CM_VAR" "" "" "" "" ",J" ",WW" "TEMPSET3"
+*option S_CM_MAXC:0:0:1; display S_CM_MAXC;
+$LABEL NOSTOCCLI1
+
+* note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TSstc.ans "S_UC_RHSRT"  "REG" ",UC_N" "DATAYEAR" ",BD" ",J" ",WW" "" "" "AS_UC_RHSRT"  "REG" ",UC_N" "" "" "" ",BD" ",J" ",WW" TEMPSET5 "NOKILL"
+$BATINCLUDE trnUC_TSstc.ans "S_UC_RHSRT"  "REG" ",UC_N" "DATAYEAR" ",'N'" ",J" ",WW" "" "" "AS_UC_RHSRT"  "REG" ",UC_N" "" "" "" ",'NB'" ",J" ",WW" TEMPSET5
+*option S_UC_RHSRT:0:0:1; display S_UC_RHSRT;
+* note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TSstc.ans "S_UC_RHSRTS"  "REG" ",UC_N" "DATAYEAR" ",TS" ",BD" ",J" ",WW" "" "AS_UC_RHSRTS"  "REG" ",UC_N" "" "" ",TS" ",BD" ",J" ",WW" TEMPSET6 "NOKILL"
+$BATINCLUDE trnUC_TSstc.ans "S_UC_RHSRTS"  "REG" ",UC_N" "DATAYEAR" ",TS" ",'N'" ",J" ",WW" "" "AS_UC_RHSRTS"  "REG" ",UC_N" "" "" ",TS" ",'NB'" ",J" ",WW" TEMPSET6
+*option S_UC_RHSRTS:0:0:1; display S_UC_RHSRTS;
+* note that S_UC_RHST is a parameter with no REG
+$BATINCLUDE trnUC_TSnoreg-stc.ans "S_UC_RHST"  "UC_N" "DATAYEAR" ",BD" ",J" ",WW" "" "" "" "AS_UC_RHST"  "UC_N" "" "" "" "" ",BD" ",J" ",WW" TEMPSET4 "NOKILL"
+$BATINCLUDE trnUC_TSnoreg-stc.ans "S_UC_RHST"  "UC_N" "DATAYEAR" ",'N'" ",J" ",WW" "" "" "" "AS_UC_RHST"  "UC_N" "" "" "" "" ",'NB'" ",J" ",WW" TEMPSET4
+*option S_UC_RHST:0:0:1; display S_UC_RHST;
+* note that S_UC_RHSTS is a parameter with no REG
+$BATINCLUDE trnUC_TSnoreg-stc.ans "S_UC_RHSTS"  "UC_N" "DATAYEAR" ",TS" ",BD" ",J" ",WW" "" "" "AS_UC_RHSTS"  "UC_N" "" "" "" ",TS" ",BD" ",J" ",WW" TEMPSET5 "NOKILL"
+$BATINCLUDE trnUC_TSnoreg-stc.ans "S_UC_RHSTS"  "UC_N" "DATAYEAR" ",TS" ",'N'" ",J" ",WW" "" "" "AS_UC_RHSTS"  "UC_N" "" "" "" ",TS" ",'NB'" ",J" ",WW" TEMPSET5
+*option S_UC_RHSTS:0:0:1; display S_UC_RHSTS;
+
+DATAYEAR('0') = NO;
+
+* Time-Independent Data
+
+$BATINCLUDE transTIDstc.ans "S_COM_CUMNET" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",BD" ",J" ",WW" "" "AS_COM_CUMNET" "REG" "" ",COM" ",BOHYEAR" ",EOHYEAR" ",BD" ",J" ",WW" "TEMPSET7"
+$BATINCLUDE transTIDstc.ans "S_COM_CUMPRD" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",BD" ",J" ",WW" "" "AS_COM_CUMPRD" "REG" "" ",COM" ",BOHYEAR" ",EOHYEAR" ",BD" ",J" ",WW" "TEMPSET7"
+$BATINCLUDE transTIDstc.ans "S_FLO_CUM" "REG" ",PRC" ",COM" ",BOHYEAR" ",EOHYEAR" ",BD" ",J" ",WW" "AS_FLO_CUM" "REG" ",PRC" ",COM" ",BOHYEAR" ",EOHYEAR" ",BD" ",J" ",WW" "TEMPSET8"
+* note that S_UC_RHS is a parameter with no REG
+$BATINCLUDE transTIDstc.ans "S_UC_RHS"  "UC_N" ",BD" ",J" ",WW" "" "" "" "" "AS_UC_RHS" "" "UC_N" "" "" "" ",BD" ",J" ",WW" "TEMPSET4" "NOKILL"
+$BATINCLUDE transTIDstc.ans "S_UC_RHS"  "UC_N" ",'N'" ",J" ",WW" "" "" "" "" "AS_UC_RHS" "" "UC_N" "" "" "" ",'NB'" ",J" ",WW" "TEMPSET4"
+*option S_UC_RHS:0:0:1; display S_UC_RHS;
+$BATINCLUDE transTIDstc.ans "S_UC_RHSR" "REG" ",UC_N" ",BD" ",J" ",WW" "" "" "" "AS_UC_RHSR" "REG" ",UC_N" "" "" "" ",BD" ",J" ",WW" "TEMPSET5" "NOKILL"
+$BATINCLUDE transTIDstc.ans "S_UC_RHSR" "REG" ",UC_N" ",'N'" ",J" ",WW" "" "" "" "AS_UC_RHSR" "REG" ",UC_N" "" "" "" ",'NB'" ",J" ",WW" "TEMPSET5"
+*option S_UC_RHSR:0:0:1; display S_UC_RHSR;
+$BATINCLUDE transTIDstc.ans "S_UCOBJ"  "UC_N" ",WW" "" "" "" "" "" "" "AS_UCOBJ" "" "UC_N" "" "" "" "" ",WW" "" "TEMPSET2"
+SW_LAMBDA = ASW_LAMBDA;
+SW_PROB(WW) = ASW_PROB(WW);
+$BATINCLUDE transTIDstc.ans "SW_SPROB" "J" ",WW" "" "" "" "" "" "" "ASW_SPROB" "" "" "" "" "" "" "J" ",WW" "TEMPSET2"
+SW_START(J) = ASW_START(J);
+$BATINCLUDE transTIDstc.ans "SW_SUBS" "J" ",WW" "" "" "" "" "" "" "ASW_SUBS" "" "" "" "" "" "" "J" ",WW" "TEMPSET2"
+
+* Ensure we avoid compilation error for Stochastic run with no Stochastic Climate Parameters
+$IF NOT '%CLI%' == 'YES' $GOTO NOSTOCCLI2
+* note that S_CM_CONST is a parameter with no REG, defined over ANSWER-generated SET CM_CONST_I
+$BATINCLUDE transTIDstc.ans "S_CM_CONST"  "CM_CONST_I" ",J" ",WW" "" "" "" "" "" "AS_CM_CONST" "" "" "CM_CONST_I" "" "" "" ",J" ",WW" "TEMPSET3"
+*option S_CM_CONST:0:0:1; display S_CM_CONST;
+$LABEL NOSTOCCLI2
+

@@ -1,0 +1,31 @@
+*
+* bldTS_ORD.ANS
+*
+* Build PARAMETERs TSORD_SEAS, TSORD_WEEK, TSORD_DYNT that will be mapped
+* to TID parameters TS_ORD_SEASON, TS_ORD_WEEKLY, TS_ORD_DAYNITE
+* used in ANSWER-TIMES to control Global TimeSlice order.
+*
+**************************************************************************
+*
+PARAMETER TSORD_SEAS(ALL_TS) / EMPTY 0 /;
+PARAMETER TSORD_WEEK(ALL_TS) / EMPTY 0 /;
+PARAMETER TSORD_DYNT(ALL_TS) / EMPTY 0 /;
+SCALAR CNT_SEAS /0/;
+SCALAR CNT_WEEK /0/;
+SCALAR CNT_DYNT /0/;
+
+loop(ALL_TS,
+  IF(TS_SEASON(ALL_TS),
+    CNT_SEAS = CNT_SEAS+1;
+    TSORD_SEAS(ALL_TS) = CNT_SEAS;
+  ELSEIF TS_WEEKLY(ALL_TS),
+    CNT_WEEK = CNT_WEEK+1;
+    TSORD_SEAS(ALL_TS) = CNT_WEEK;
+  ELSEIF TS_DAYNITE(ALL_TS),
+    CNT_DYNT = CNT_DYNT+1;
+    TSORD_DYNT(ALL_TS) = CNT_DYNT;
+  );
+);
+*display TSORD_SEAS;
+*display TSORD_WEEK;
+*display TSORD_DYNT;

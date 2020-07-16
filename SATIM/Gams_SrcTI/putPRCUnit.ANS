@@ -1,0 +1,16 @@
+* BATINCLUDE putPRCUnit.ANS %1
+*
+* %1 = Process Set for which Process Activity and Capacity Units are put out.
+*
+* Put out 'Units:', followed by PRC_ACTUNT and PRC_CAPUNT for the member of Process SET %1.
+* "Units:" is always put out, but PRC_ACTUNT and/or PRC_CAPUNT may be missing.
+* (It might be useful to change the code and have a special indicator for missing Unit(s).)
+*
+  PUT / "Units:";
+  LOOP((REG2,CG,UNITS_ACT)$(SAMEAS(REG,REG2) AND PRC_ACTUNT(REG2,PRC,CG,UNITS_ACT)),
+    PUT "TACT=", UNITS_ACT.TL;
+  );
+  LOOP((REG2,CG,UNITS_CAP)$(SAMEAS(REG,REG2) AND PRC_CAPUNT(REG2,PRC,CG,UNITS_CAP)),
+    PUT "TCAP=", UNITS_CAP.TL;
+  );
+

@@ -1,0 +1,19 @@
+* BATINCLUDE putGblUC_N.ANS
+
+* Put out User Constraint Items for _GLOBAL region - component C in ANSWER.
+*
+* For now we do NOT attempt to allow for UC_N whose Description is provided
+* by placing UC_N also in SET COM for which COM_DESC(REG,COM) is specified,
+* but are content to take any Description that may be provided in SET UC_N.
+
+LOOP(UC_N$GBLREG_UCN(UC_N),
+* Put out 'Item:', Component, Item, Description taken from SET UC_N.
+  PUT / "Item:","C",UC_N.TL,UC_N.TE(UC_N);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'C' UC_N
+* Put out just 'Units:' sub-header, since User Constraint Items have no Units.
+$ BATINCLUDE putNoUnits.ANS
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);

@@ -1,0 +1,1059 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/07/08	5:10:06 PM
+Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_COM_AF	Seasonal and Diurnal constraints on COM appliances	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	T	CECELCCEN-E	Commercial - Cooling - Electricity - Central - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CECELCCEN-N	Commercial - Cooling - Electricity - Central - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CECELCCHIL-E	Commercial - Cooling - Electricity - Chiller - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CECELCHP-E	Commercial - Cooling - Electricity - Heat Pump - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CECELCHP-N	Commercial - Cooling - Electricity - Heat Pump - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CECELCROOM-E	Commercial - Cooling - Electricity - Room - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEGELCHAL-E	Commercial - Public Lights - Electricity - HAL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEGELCHPM-E	Commercial - Public Lights - Electricity - HPM - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEGELCHPS-E	Commercial - Public Lights - Electricity - HPS - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEGELCINC-E	Commercial - Public Lights - Electricity - INC - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEGELCLED-N	Commercial - Public Lights - Electricity - LED - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEGELCMHL-E	Commercial - Public Lights - Electricity - MHL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEHCOA-E	Commercial - Space Heating - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEHELC-E	Commercial - Space Heating - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEHELC-N	Commercial - Space Heating - Electricity - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEHGAS-E	Commercial - Space Heating - Gas - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEHGAS-N	Commercial - Space Heating - Gas - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEKCOA-E	Commercial - Cooking - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEKELC-E	Commercial - Cooking - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEKOLP-E	Commercial - Cooking - Oil LPG - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CELELCCFL-E	Commercial - Lighting - Electricity - CFL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CELELCFLU-E	Commercial - Lighting - Electricity - FLU - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CELELCHAL-E	Commercial - Lighting - Electricity - HAL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CELELCHID-E	Commercial - Lighting - Electricity - HID - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CELELCINC-E	Commercial - Lighting - Electricity - INC - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CELELCLED-N	Commercial - Lighting - Electricity - LED - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOCOA-E	Commercial - Other - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOELC-E	Commercial - Other - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOGAS-E	Commercial - Other - Gas - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOODS-E	Commercial - Other - Oil Diesel - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOOGS-E	Commercial - Other - Oil Gasoline - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOOHF-E	Commercial - Other - Oil HFO - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEOOKE-E	Commercial - Other - Oil Paraffin - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CERELC-E	Commercial - Refrigeration - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CERELC-N	Commercial - Refrigeration - Electricity - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CETELC-E	Commercial - Public Water - Electricity -  - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWCOA-E	Commercial - Water Heating - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWELC-E	Commercial - Water Heating - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWELCHP-N	Commercial - Water Heating - Electricity - HP - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWELC-N	Commercial - Water Heating - Electricity - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWGAS-E	Commercial - Water Heating - Gas - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWOKE-E	Commercial - Water Heating - Oil Paraffin - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CEWOLP-E	Commercial - Water Heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNCELCCEN-E	Commercial - Cooling - Electricity - Central - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNCELCCEN-N	Commercial - Cooling - Electricity - Central - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNCELCCHIL-E	Commercial - Cooling - Electricity - Chiller - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNCELCHP-E	Commercial - Cooling - Electricity - Heat Pump - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNCELCHP-N	Commercial - Cooling - Electricity - Heat Pump - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNCELCROOM-E	Commercial - Cooling - Electricity - Room - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNGELCHAL-E	Commercial - Public Lights - Electricity - HAL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNGELCHPM-E	Commercial - Public Lights - Electricity - HPM - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNGELCHPS-E	Commercial - Public Lights - Electricity - HPS - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNGELCINC-E	Commercial - Public Lights - Electricity - INC - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNGELCLED-N	Commercial - Public Lights - Electricity - LED - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNGELCMHL-E	Commercial - Public Lights - Electricity - MHL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNHCOA-E	Commercial - Space Heating - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNHELC-E	Commercial - Space Heating - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNHELC-N	Commercial - Space Heating - Electricity - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNHGAS-E	Commercial - Space Heating - Gas - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNHGAS-N	Commercial - Space Heating - Gas - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNKCOA-E	Commercial - Cooking - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNKELC-E	Commercial - Cooking - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNKOLP-E	Commercial - Cooking - Oil LPG - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNLELCCFL-E	Commercial - Lighting - Electricity - CFL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNLELCFLU-E	Commercial - Lighting - Electricity - FLU - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNLELCHAL-E	Commercial - Lighting - Electricity - HAL - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNLELCHID-E	Commercial - Lighting - Electricity - HID - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNLELCINC-E	Commercial - Lighting - Electricity - INC - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNLELCLED-N	Commercial - Lighting - Electricity - LED - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOCOA-E	Commercial - Other - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOELC-E	Commercial - Other - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOGAS-E	Commercial - Other - Gas - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOODS-E	Commercial - Other - Oil Diesel - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOOGS-E	Commercial - Other - Oil Gasoline - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOOHF-E	Commercial - Other - Oil HFO - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNOOKE-E	Commercial - Other - Oil Paraffin - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNRELC-E	Commercial - Refrigeration - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNRELC-N	Commercial - Refrigeration - Electricity - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNTELC-E	Commercial - Public Water - Electricity -  - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWCOA-E	Commercial - Water Heating - Coal - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWELC-E	Commercial - Water Heating - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWELCHP-N	Commercial - Water Heating - Electricity - HP - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWELC-N	Commercial - Water Heating - Electricity - New	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWGAS-E	Commercial - Water Heating - Gas - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWOKE-E	Commercial - Water Heating - Oil Paraffin - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	CNWOLP-E	Commercial - Water Heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+
+TS DATA	REGION1
+	NCAP_AF	CECELCCEN-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCEN-N	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCCHIL-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCHP-N	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CECELCROOM-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHAL-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPM-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCHPS-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCINC-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCLED-N	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEGELCMHL-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHCOA-E	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-E	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHELC-N	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-E	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEHGAS-N	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S1D1B1	FX	0	0.448971044264208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S1D1B2	FX	0	0.833797646836633	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S1D1B3	FX	0	0.743499780793528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S2D1B1	FX	0	0.492398377249357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S2D1B2	FX	0	0.65020485218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S2D1B4	FX	0	0.897493573264782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKCOA-E	-	-	-	S2D1B5	FX	0	0.48614235218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S1D1B1	FX	0	0.448971044264208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S1D1B2	FX	0	0.833797646836633	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S1D1B3	FX	0	0.743499780793528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S2D1B1	FX	0	0.492398377249357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S2D1B2	FX	0	0.65020485218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S2D1B4	FX	0	0.897493573264782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKELC-E	-	-	-	S2D1B5	FX	0	0.48614235218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S1D1B1	FX	0	0.448971044264208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S1D1B2	FX	0	0.833797646836633	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S1D1B3	FX	0	0.743499780793528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S2D1B1	FX	0	0.492398377249357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S2D1B2	FX	0	0.65020485218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S2D1B4	FX	0	0.897493573264782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEKOLP-E	-	-	-	S2D1B5	FX	0	0.48614235218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCCFL-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCFLU-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHAL-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCHID-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCINC-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CELELCLED-N	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOCOA-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOELC-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOGAS-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOODS-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOGS-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOHF-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEOOKE-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S1D1B1	FX	0	0.656056529158586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S1D1B2	FX	0	0.638557817088997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S1D1B3	FX	0	0.822719191725054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S2D1B1	FX	0	0.708795078888054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S2D1B2	FX	0	0.516012396694215	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S2D1B3	FX	0	0.747102071482237	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-E	-	-	-	S2D1B5	FX	0	0.637866265965439	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S1D1B1	FX	0	0.656056529158586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S1D1B2	FX	0	0.638557817088997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S1D1B3	FX	0	0.822719191725054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S2D1B1	FX	0	0.708795078888054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S2D1B2	FX	0	0.516012396694215	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S2D1B3	FX	0	0.747102071482237	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CERELC-N	-	-	-	S2D1B5	FX	0	0.637866265965439	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CETELC-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWCOA-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELCHP-N	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWELC-N	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWGAS-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOKE-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CEWOLP-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCEN-N	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCCHIL-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCHP-N	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S1D1B1	FX	0	0.613961755424509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S1D1B2	FX	0	0.967988020926406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S1D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S2D1B1	FX	0	0.515159596875909	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S2D1B2	FX	0	0.539675440635866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S2D1B3	FX	0	0.929454007996563	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S2D1B4	FX	0	0.917437353150412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNCELCROOM-E	-	-	-	S2D1B5	FX	0	0.597205953992567	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHAL-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPM-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCHPS-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCINC-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCLED-N	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S1D1B1	FX	0	0.914929913612566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S1D1B2	FX	0	0.265122087713115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S1D1B3	FX	0	0.431542320518339	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S2D1B2	FX	0	0.725046133199128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S2D1B3	FX	0	8.94704467930437E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S2D1B4	FX	0	0.338049171466383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNGELCMHL-E	-	-	-	S2D1B5	FX	0	0.85466644299055	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHCOA-E	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-E	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHELC-N	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-E	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S1D1B1	FX	0	0.271146759375865	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S1D1B2	FX	0	0.427497548102976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S1D1B3	FX	0	0.441655166442784	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S2D1B1	FX	0	0.554278542418773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S2D1B2	FX	0	0.580536439530686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S2D1B4	FX	0	0.987138989169675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNHGAS-N	-	-	-	S2D1B5	FX	0	0.642627481949459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S1D1B1	FX	0	0.448971044264208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S1D1B2	FX	0	0.833797646836633	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S1D1B3	FX	0	0.743499780793528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S2D1B1	FX	0	0.492398377249357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S2D1B2	FX	0	0.65020485218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S2D1B4	FX	0	0.897493573264782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKCOA-E	-	-	-	S2D1B5	FX	0	0.48614235218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S1D1B1	FX	0	0.448971044264208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S1D1B2	FX	0	0.833797646836633	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S1D1B3	FX	0	0.743499780793528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S2D1B1	FX	0	0.492398377249357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S2D1B2	FX	0	0.65020485218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S2D1B4	FX	0	0.897493573264782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKELC-E	-	-	-	S2D1B5	FX	0	0.48614235218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S1D1B1	FX	0	0.448971044264208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S1D1B2	FX	0	0.833797646836633	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S1D1B3	FX	0	0.743499780793528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S2D1B1	FX	0	0.492398377249357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S2D1B2	FX	0	0.65020485218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S2D1B4	FX	0	0.897493573264782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNKOLP-E	-	-	-	S2D1B5	FX	0	0.48614235218509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCCFL-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCFLU-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHAL-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCHID-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCINC-E	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S1D1B1	FX	0	0.387827728094102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S1D1B2	FX	0	0.614572522353275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S1D1B3	FX	0	0.689449534454566	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S2D1B1	FX	0	0.411930855270591	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S2D1B3	FX	0	0.426231095759962	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S2D1B4	FX	0	0.654690618762475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNLELCLED-N	-	-	-	S2D1B5	FX	0	0.791548977516665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOCOA-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOELC-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOGAS-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOODS-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOGS-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOHF-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S1D1B1	FX	0	0.357807805516559	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S1D1B2	FX	0	0.873260098413459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S1D1B3	FX	0	0.607303713042131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S2D1B1	FX	0	0.416300726832223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S2D1B2	FX	0	0.747406874621442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S2D1B3	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S2D1B4	FX	0	0.773950131233596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNOOKE-E	-	-	-	S2D1B5	FX	0	0.286190187764991	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S1D1B1	FX	0	0.656056529158586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S1D1B2	FX	0	0.638557817088997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S1D1B3	FX	0	0.822719191725054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S2D1B1	FX	0	0.708795078888054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S2D1B2	FX	0	0.516012396694215	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S2D1B3	FX	0	0.747102071482237	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-E	-	-	-	S2D1B5	FX	0	0.637866265965439	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S1D1B1	FX	0	0.656056529158586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S1D1B2	FX	0	0.638557817088997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S1D1B3	FX	0	0.822719191725054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S2D1B1	FX	0	0.708795078888054	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S2D1B2	FX	0	0.516012396694215	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S2D1B3	FX	0	0.747102071482237	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNRELC-N	-	-	-	S2D1B5	FX	0	0.637866265965439	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNTELC-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWCOA-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELCHP-N	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWELC-N	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWGAS-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOKE-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S1D1B1	FX	0	0.898534676540612	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S1D1B2	FX	0	0.875203974262329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S1D1B3	FX	0	0.822723650446498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S2D1B1	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S2D1B2	FX	0	0.930219830338411	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S2D1B3	FX	0	0.898294262519383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S2D1B4	FX	0	0.930159019733042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	CNWOLP-E	-	-	-	S2D1B5	FX	0	0.762929854966706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	CECELCCEN-E	-	CEC	-	-	-	1	
+	PRC_ACTUNT	CECELCCEN-N	-	CEC	-	-	-	1	
+	PRC_ACTUNT	CECELCCHIL-E	-	CEC	-	-	-	1	
+	PRC_ACTUNT	CECELCHP-E	-	CEC	-	-	-	1	
+	PRC_ACTUNT	CECELCHP-N	-	CEC	-	-	-	1	
+	PRC_ACTUNT	CECELCROOM-E	-	CEC	-	-	-	1	
+	PRC_ACTUNT	CEGELCHAL-E	-	CEG	-	-	-	1	
+	PRC_ACTUNT	CEGELCHPM-E	-	CEG	-	-	-	1	
+	PRC_ACTUNT	CEGELCHPS-E	-	CEG	-	-	-	1	
+	PRC_ACTUNT	CEGELCINC-E	-	CEG	-	-	-	1	
+	PRC_ACTUNT	CEGELCLED-N	-	CEG	-	-	-	1	
+	PRC_ACTUNT	CEGELCMHL-E	-	CEG	-	-	-	1	
+	PRC_ACTUNT	CEHCOA-E	-	CEH	-	-	-	1	
+	PRC_ACTUNT	CEHELC-E	-	CEH	-	-	-	1	
+	PRC_ACTUNT	CEHELC-N	-	CEH	-	-	-	1	
+	PRC_ACTUNT	CEHGAS-E	-	CEH	-	-	-	1	
+	PRC_ACTUNT	CEHGAS-N	-	CEH	-	-	-	1	
+	PRC_ACTUNT	CEKCOA-E	-	CEK	-	-	-	1	
+	PRC_ACTUNT	CEKELC-E	-	CEK	-	-	-	1	
+	PRC_ACTUNT	CEKOLP-E	-	CEK	-	-	-	1	
+	PRC_ACTUNT	CELELCCFL-E	-	CEL	-	-	-	1	
+	PRC_ACTUNT	CELELCFLU-E	-	CEL	-	-	-	1	
+	PRC_ACTUNT	CELELCHAL-E	-	CEL	-	-	-	1	
+	PRC_ACTUNT	CELELCHID-E	-	CEL	-	-	-	1	
+	PRC_ACTUNT	CELELCINC-E	-	CEL	-	-	-	1	
+	PRC_ACTUNT	CELELCLED-N	-	CEL	-	-	-	1	
+	PRC_ACTUNT	CEOCOA-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CEOELC-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CEOGAS-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CEOODS-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CEOOGS-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CEOOHF-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CEOOKE-E	-	CEO	-	-	-	1	
+	PRC_ACTUNT	CERELC-E	-	CER	-	-	-	1	
+	PRC_ACTUNT	CERELC-N	-	CER	-	-	-	1	
+	PRC_ACTUNT	CETELC-E	-	CET	-	-	-	1	
+	PRC_ACTUNT	CEWCOA-E	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CEWELC-E	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CEWELCHP-N	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CEWELC-N	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CEWGAS-E	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CEWOKE-E	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CEWOLP-E	-	CEW	-	-	-	1	
+	PRC_ACTUNT	CNCELCCEN-E	-	CNC	-	-	-	1	
+	PRC_ACTUNT	CNCELCCEN-N	-	CNC	-	-	-	1	
+	PRC_ACTUNT	CNCELCCHIL-E	-	CNC	-	-	-	1	
+	PRC_ACTUNT	CNCELCHP-E	-	CNC	-	-	-	1	
+	PRC_ACTUNT	CNCELCHP-N	-	CNC	-	-	-	1	
+	PRC_ACTUNT	CNCELCROOM-E	-	CNC	-	-	-	1	
+	PRC_ACTUNT	CNGELCHAL-E	-	CNG	-	-	-	1	
+	PRC_ACTUNT	CNGELCHPM-E	-	CNG	-	-	-	1	
+	PRC_ACTUNT	CNGELCHPS-E	-	CNG	-	-	-	1	
+	PRC_ACTUNT	CNGELCINC-E	-	CNG	-	-	-	1	
+	PRC_ACTUNT	CNGELCLED-N	-	CNG	-	-	-	1	
+	PRC_ACTUNT	CNGELCMHL-E	-	CNG	-	-	-	1	
+	PRC_ACTUNT	CNHCOA-E	-	CNH	-	-	-	1	
+	PRC_ACTUNT	CNHELC-E	-	CNH	-	-	-	1	
+	PRC_ACTUNT	CNHELC-N	-	CNH	-	-	-	1	
+	PRC_ACTUNT	CNHGAS-E	-	CNH	-	-	-	1	
+	PRC_ACTUNT	CNHGAS-N	-	CNH	-	-	-	1	
+	PRC_ACTUNT	CNKCOA-E	-	CNK	-	-	-	1	
+	PRC_ACTUNT	CNKELC-E	-	CNK	-	-	-	1	
+	PRC_ACTUNT	CNKOLP-E	-	CNK	-	-	-	1	
+	PRC_ACTUNT	CNLELCCFL-E	-	CNL	-	-	-	1	
+	PRC_ACTUNT	CNLELCFLU-E	-	CNL	-	-	-	1	
+	PRC_ACTUNT	CNLELCHAL-E	-	CNL	-	-	-	1	
+	PRC_ACTUNT	CNLELCHID-E	-	CNL	-	-	-	1	
+	PRC_ACTUNT	CNLELCINC-E	-	CNL	-	-	-	1	
+	PRC_ACTUNT	CNLELCLED-N	-	CNL	-	-	-	1	
+	PRC_ACTUNT	CNOCOA-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNOELC-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNOGAS-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNOODS-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNOOGS-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNOOHF-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNOOKE-E	-	CNO	-	-	-	1	
+	PRC_ACTUNT	CNRELC-E	-	CNR	-	-	-	1	
+	PRC_ACTUNT	CNRELC-N	-	CNR	-	-	-	1	
+	PRC_ACTUNT	CNTELC-E	-	CNT	-	-	-	1	
+	PRC_ACTUNT	CNWCOA-E	-	CNW	-	-	-	1	
+	PRC_ACTUNT	CNWELC-E	-	CNW	-	-	-	1	
+	PRC_ACTUNT	CNWELCHP-N	-	CNW	-	-	-	1	
+	PRC_ACTUNT	CNWELC-N	-	CNW	-	-	-	1	
+	PRC_ACTUNT	CNWGAS-E	-	CNW	-	-	-	1	
+	PRC_ACTUNT	CNWOKE-E	-	CNW	-	-	-	1	
+	PRC_ACTUNT	CNWOLP-E	-	CNW	-	-	-	1	
+	TOP-IN	CECELCCEN-E	COMELC	-	-	-	-	1	
+	TOP-IN	CECELCCEN-N	COMELC	-	-	-	-	1	
+	TOP-IN	CECELCCHIL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CECELCHP-E	COMELC	-	-	-	-	1	
+	TOP-IN	CECELCHP-N	COMELC	-	-	-	-	1	
+	TOP-IN	CECELCROOM-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEGELCHAL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEGELCHPM-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEGELCHPS-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEGELCINC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEGELCLED-N	COMELC	-	-	-	-	1	
+	TOP-IN	CEGELCMHL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEHCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CEHELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEHELC-N	COMELC	-	-	-	-	1	
+	TOP-IN	CEHGAS-E	COMGAS	-	-	-	-	1	
+	TOP-IN	CEHGAS-N	COMGAS	-	-	-	-	1	
+	TOP-IN	CEKCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CEKELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEKOLP-E	COMOLP	-	-	-	-	1	
+	TOP-IN	CELELCCFL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CELELCFLU-E	COMELC	-	-	-	-	1	
+	TOP-IN	CELELCHAL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CELELCHID-E	COMELC	-	-	-	-	1	
+	TOP-IN	CELELCINC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CELELCLED-N	COMELC	-	-	-	-	1	
+	TOP-IN	CEOCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CEOELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEOGAS-E	COMGAS	-	-	-	-	1	
+	TOP-IN	CEOODS-E	COMODS	-	-	-	-	1	
+	TOP-IN	CEOOGS-E	COMOGS	-	-	-	-	1	
+	TOP-IN	CEOOHF-E	COMOHF	-	-	-	-	1	
+	TOP-IN	CEOOKE-E	COMOKE	-	-	-	-	1	
+	TOP-IN	CERELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CERELC-N	COMELC	-	-	-	-	1	
+	TOP-IN	CETELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEWCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CEWELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CEWELCHP-N	COMELC	-	-	-	-	1	
+	TOP-IN	CEWELC-N	COMELC	-	-	-	-	1	
+	TOP-IN	CEWGAS-E	COMGAS	-	-	-	-	1	
+	TOP-IN	CEWOKE-E	COMOKE	-	-	-	-	1	
+	TOP-IN	CEWOLP-E	COMOLP	-	-	-	-	1	
+	TOP-IN	CNCELCCEN-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNCELCCEN-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNCELCCHIL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNCELCHP-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNCELCHP-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNCELCROOM-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNGELCHAL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNGELCHPM-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNGELCHPS-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNGELCINC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNGELCLED-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNGELCMHL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNHCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CNHELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNHELC-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNHGAS-E	COMGAS	-	-	-	-	1	
+	TOP-IN	CNHGAS-N	COMGAS	-	-	-	-	1	
+	TOP-IN	CNKCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CNKELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNKOLP-E	COMOLP	-	-	-	-	1	
+	TOP-IN	CNLELCCFL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNLELCFLU-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNLELCHAL-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNLELCHID-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNLELCINC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNLELCLED-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNOCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CNOELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNOGAS-E	COMGAS	-	-	-	-	1	
+	TOP-IN	CNOODS-E	COMODS	-	-	-	-	1	
+	TOP-IN	CNOOGS-E	COMOGS	-	-	-	-	1	
+	TOP-IN	CNOOHF-E	COMOHF	-	-	-	-	1	
+	TOP-IN	CNOOKE-E	COMOKE	-	-	-	-	1	
+	TOP-IN	CNRELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNRELC-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNTELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNWCOA-E	COMCOA	-	-	-	-	1	
+	TOP-IN	CNWELC-E	COMELC	-	-	-	-	1	
+	TOP-IN	CNWELCHP-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNWELC-N	COMELC	-	-	-	-	1	
+	TOP-IN	CNWGAS-E	COMGAS	-	-	-	-	1	
+	TOP-IN	CNWOKE-E	COMOKE	-	-	-	-	1	
+	TOP-IN	CNWOLP-E	COMOLP	-	-	-	-	1	
+	TOP-OUT	CECELCCEN-E	CEC	-	-	-	-	1	
+	TOP-OUT	CECELCCEN-N	CEC	-	-	-	-	1	
+	TOP-OUT	CECELCCHIL-E	CEC	-	-	-	-	1	
+	TOP-OUT	CECELCHP-E	CEC	-	-	-	-	1	
+	TOP-OUT	CECELCHP-N	CEC	-	-	-	-	1	
+	TOP-OUT	CECELCROOM-E	CEC	-	-	-	-	1	
+	TOP-OUT	CEGELCHAL-E	CEG	-	-	-	-	1	
+	TOP-OUT	CEGELCHPM-E	CEG	-	-	-	-	1	
+	TOP-OUT	CEGELCHPS-E	CEG	-	-	-	-	1	
+	TOP-OUT	CEGELCINC-E	CEG	-	-	-	-	1	
+	TOP-OUT	CEGELCLED-N	CEG	-	-	-	-	1	
+	TOP-OUT	CEGELCMHL-E	CEG	-	-	-	-	1	
+	TOP-OUT	CEHCOA-E	CEH	-	-	-	-	1	
+	TOP-OUT	CEHELC-E	CEH	-	-	-	-	1	
+	TOP-OUT	CEHELC-N	CEH	-	-	-	-	1	
+	TOP-OUT	CEHGAS-E	CEH	-	-	-	-	1	
+	TOP-OUT	CEHGAS-N	CEH	-	-	-	-	1	
+	TOP-OUT	CEKCOA-E	CEK	-	-	-	-	1	
+	TOP-OUT	CEKELC-E	CEK	-	-	-	-	1	
+	TOP-OUT	CEKOLP-E	CEK	-	-	-	-	1	
+	TOP-OUT	CELELCCFL-E	CEL	-	-	-	-	1	
+	TOP-OUT	CELELCFLU-E	CEL	-	-	-	-	1	
+	TOP-OUT	CELELCHAL-E	CEL	-	-	-	-	1	
+	TOP-OUT	CELELCHID-E	CEL	-	-	-	-	1	
+	TOP-OUT	CELELCINC-E	CEL	-	-	-	-	1	
+	TOP-OUT	CELELCLED-N	CEL	-	-	-	-	1	
+	TOP-OUT	CEOCOA-E	CEO	-	-	-	-	1	
+	TOP-OUT	CEOELC-E	CEO	-	-	-	-	1	
+	TOP-OUT	CEOGAS-E	CEO	-	-	-	-	1	
+	TOP-OUT	CEOODS-E	CEO	-	-	-	-	1	
+	TOP-OUT	CEOOGS-E	CEO	-	-	-	-	1	
+	TOP-OUT	CEOOHF-E	CEO	-	-	-	-	1	
+	TOP-OUT	CEOOKE-E	CEO	-	-	-	-	1	
+	TOP-OUT	CERELC-E	CER	-	-	-	-	1	
+	TOP-OUT	CERELC-N	CER	-	-	-	-	1	
+	TOP-OUT	CETELC-E	CET	-	-	-	-	1	
+	TOP-OUT	CEWCOA-E	CEW	-	-	-	-	1	
+	TOP-OUT	CEWELC-E	CEW	-	-	-	-	1	
+	TOP-OUT	CEWELCHP-N	CEW	-	-	-	-	1	
+	TOP-OUT	CEWELC-N	CEW	-	-	-	-	1	
+	TOP-OUT	CEWGAS-E	CEW	-	-	-	-	1	
+	TOP-OUT	CEWOKE-E	CEW	-	-	-	-	1	
+	TOP-OUT	CEWOLP-E	CEW	-	-	-	-	1	
+	TOP-OUT	CNCELCCEN-E	CNC	-	-	-	-	1	
+	TOP-OUT	CNCELCCEN-N	CNC	-	-	-	-	1	
+	TOP-OUT	CNCELCCHIL-E	CNC	-	-	-	-	1	
+	TOP-OUT	CNCELCHP-E	CNC	-	-	-	-	1	
+	TOP-OUT	CNCELCHP-N	CNC	-	-	-	-	1	
+	TOP-OUT	CNCELCROOM-E	CNC	-	-	-	-	1	
+	TOP-OUT	CNGELCHAL-E	CNG	-	-	-	-	1	
+	TOP-OUT	CNGELCHPM-E	CNG	-	-	-	-	1	
+	TOP-OUT	CNGELCHPS-E	CNG	-	-	-	-	1	
+	TOP-OUT	CNGELCINC-E	CNG	-	-	-	-	1	
+	TOP-OUT	CNGELCLED-N	CNG	-	-	-	-	1	
+	TOP-OUT	CNGELCMHL-E	CNG	-	-	-	-	1	
+	TOP-OUT	CNHCOA-E	CNH	-	-	-	-	1	
+	TOP-OUT	CNHELC-E	CNH	-	-	-	-	1	
+	TOP-OUT	CNHELC-N	CNH	-	-	-	-	1	
+	TOP-OUT	CNHGAS-E	CNH	-	-	-	-	1	
+	TOP-OUT	CNHGAS-N	CNH	-	-	-	-	1	
+	TOP-OUT	CNKCOA-E	CNK	-	-	-	-	1	
+	TOP-OUT	CNKELC-E	CNK	-	-	-	-	1	
+	TOP-OUT	CNKOLP-E	CNK	-	-	-	-	1	
+	TOP-OUT	CNLELCCFL-E	CNL	-	-	-	-	1	
+	TOP-OUT	CNLELCFLU-E	CNL	-	-	-	-	1	
+	TOP-OUT	CNLELCHAL-E	CNL	-	-	-	-	1	
+	TOP-OUT	CNLELCHID-E	CNL	-	-	-	-	1	
+	TOP-OUT	CNLELCINC-E	CNL	-	-	-	-	1	
+	TOP-OUT	CNLELCLED-N	CNL	-	-	-	-	1	
+	TOP-OUT	CNOCOA-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNOELC-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNOGAS-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNOODS-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNOOGS-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNOOHF-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNOOKE-E	CNO	-	-	-	-	1	
+	TOP-OUT	CNRELC-E	CNR	-	-	-	-	1	
+	TOP-OUT	CNRELC-N	CNR	-	-	-	-	1	
+	TOP-OUT	CNTELC-E	CNT	-	-	-	-	1	
+	TOP-OUT	CNWCOA-E	CNW	-	-	-	-	1	
+	TOP-OUT	CNWELC-E	CNW	-	-	-	-	1	
+	TOP-OUT	CNWELCHP-N	CNW	-	-	-	-	1	
+	TOP-OUT	CNWELC-N	CNW	-	-	-	-	1	
+	TOP-OUT	CNWGAS-E	CNW	-	-	-	-	1	
+	TOP-OUT	CNWOKE-E	CNW	-	-	-	-	1	
+	TOP-OUT	CNWOLP-E	CNW	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

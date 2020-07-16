@@ -1,0 +1,41 @@
+*$ONLISTING
+* putTSTrade.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = ANSWER parameter name
+* %11 - %18 = ANSWER arguments
+* %19       = name of TEMPSET used to speed up processing
+
+* Put out TS Trade parameter.
+
+* Note that '%3' = 'OTHERYR' is assumed and hard-coded below.
+
+OPTION CLEAR = %19;
+LOOP(OTHERYR,
+  %19(%2,%4%5%6%7%8%9)$%1(%2,OTHERYR,%4%5%6%7%8%9) = YES;
+);
+LOOP((%2,%4%5%6%7%8%9)$%19(%2,%4%5%6%7%8%9),
+PUT / "%10",%11.TL %12.TL;
+$IF NOT '%13' == ''  PUT %13.TL;
+$IF     '%13' == ''  PUT "-";
+$IF NOT '%14' == ''  PUT %14.TL;
+$IF     '%14' == ''  PUT "-";
+$IF NOT '%15' == ''  PUT %15.TL;
+$IF     '%15' == ''  PUT "-";
+$IF NOT '%16' == ''  PUT %16.TL;
+$IF     '%16' == ''  PUT "-";
+$IF NOT '%17' == ''  PUT %17.TL;
+$IF     '%17' == ''  PUT "-";
+$IF NOT '%18' == ''  PUT %18.TL;
+$IF     '%18' == ''  PUT "-";
+
+LOOP(ANSOTHYR(J,OTHERYR),
+  IF(%1(%2,OTHERYR,%4%5%6%7%8%9),
+    PUT (1*%1(%2,OTHERYR,%4%5%6%7%8%9));
+  ELSE
+    PUT "null";
+  );
+);
+);
+*$OFFLISTING

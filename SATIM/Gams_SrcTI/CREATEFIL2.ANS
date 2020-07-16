@@ -1,0 +1,22 @@
+* $BATINCLUDE CREATEFIL2.ANS %1
+*
+* %1 = integer to append to OUTFILE to give file reference
+* %2 = one-dimensional TIMES SET (DATAYEAR/MILESTONYR/ALL_TS)
+* %3 = file-type to be given to file created, e.g. ANS or TXT
+*
+* Create file %2.%3 that contains members of TIMES SET.
+* Create as a single line, eg. SET DATAYEAR / 2000,2001,...,2050 /;
+
+FILE OUTFILE%1 / %2.%3 /;
+OUTFILE%1.PW = 32767;
+PUT OUTFILE%1;
+PUT "SET %2 /";
+LOOP(%2,
+  IF(ORD(%2) EQ 1,
+    PUT " "%2.TL:0;
+  ELSE
+    PUT ","%2.TL:0;
+  );
+);
+PUT " /;"
+PUTCLOSE OUTFILE%1;

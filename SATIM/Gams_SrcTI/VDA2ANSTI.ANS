@@ -1,0 +1,27 @@
+*
+*  VDA2ANSTI.ANS
+*
+*  Convert VDA_* and related parameters to standard TIMES parameters.
+*  Conversions provided in Aug 2007 by Antti Lehtila.
+*
+*****************************************************************************
+*
+* Convert ANNUAL VDA_FLOP into PRC_ACTFLO
+PRC_ACTFLO(R,LL,P,C) $= VDA_FLOP(R,LL,P,C,'ANNUAL');
+
+* Convert VDA_CEH into NCAP_CEH
+NCAP_CEH(R,LL,P) $= VDA_CEH(R,LL,P);
+
+* Convert NCAP_AFAC
+NCAP_AFC(R,LL,P,CG,'ANNUAL') $= NCAP_AFAC(R,LL,P,CG);
+
+* Finally, convert VDA_EMCB into FLO_EMIS
+* Make sure work sets are empty
+OPTION CLEAR=UNCD7,CLEAR=CG_GRP;
+* Collect all existing FLO_EMIS tuples
+UNCD7(R,LL--ORD(LL),P,COM,C,S--ORD(S),'')$FLO_EMIS(R,LL,P,COM,C,S) = YES;
+LOOP(UNCD7(R,LL,P,COM,C,S,''),CG_GRP(R,P,COM,C) = YES);
+* Convert VDA_EMCB into new FLO_EMIS
+FLO_EMIS(R,LL,P,COM,C,'ANNUAL')$(TOP(R,P,COM,'IN')$(NOT CG_GRP(R,P,COM,C))) $= VDA_EMCB(R,LL,COM,C);
+OPTION CLEAR=CG_GRP, CLEAR=VDA_CEH, CLEAR=VDA_FLOP, CLEAR=NCAP_AFAC, CLEAR=VDA_EMCB;
+

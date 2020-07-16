@@ -1,0 +1,38 @@
+*
+* CREITEMGBL.ANS
+*
+* Create *** ITEMS *** section for _GLOBAL region.
+* (For now, this comprises just the _GLOBAL region TimeSlice Items.)
+*
+********************************************************************
+
+*display ALL_TS;
+
+* Determine ANSWER Time Slice sub-groups from TS_GROUP.
+TS_ANNUAL(ALL_TS) = SUM(REG, TS_GROUP(REG,'ANNUAL',ALL_TS));
+TS_SEASON(ALL_TS) = SUM(REG, TS_GROUP(REG,'SEASON',ALL_TS));
+TS_WEEKLY(ALL_TS) = SUM(REG, TS_GROUP(REG,'WEEKLY',ALL_TS));
+TS_DAYNITE(ALL_TS) = SUM(REG, TS_GROUP(REG,'DAYNITE',ALL_TS));
+*display TS_ANNUAL;
+*display TS_SEASON;
+*display TS_WEEKLY;
+*display TS_DAYNITE;
+
+* The following lines are taken from FLAG.ANS
+flag('W',ALL_TS,'ALL_TS') = 1 ;
+flag('W',TS_ANNUAL,'TS_ANNUAL') = 2 ;
+flag('W',TS_SEASON,'TS_SEASON') = 4 ;
+flag('W',TS_WEEKLY,'TS_WEEKLY') = 8 ;
+flag('W',TS_DAYNITE,'TS_DAYNITE') = 16 ;
+
+* Wasted a lot of time not having ; terminating the following line!
+PUT / "*** ITEMS ***","_GLOBAL";
+
+* Put out _GLOBAL region TimeSlice Items.
+$BATINCLUDE putTS_ITEM.ANS
+
+* Determine the _GLOBAL region User Constraint Items.
+$BATINCLUDE bldGblUC_N.ANS
+
+* Put out _GLOBAL region User Constraint Items.
+$BATINCLUDE putGblUC_N.ANS

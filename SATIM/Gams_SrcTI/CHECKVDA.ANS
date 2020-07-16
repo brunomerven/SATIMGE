@@ -1,0 +1,11 @@
+*option VDA_FLOP:0:0:1; display VDA_FLOP;
+*option PRC_ACTFLO:0:0:1; display PRC_ACTFLO;
+
+*option VDA_CEH:0:0:1; display VDA_CEH;
+*option NCAP_CEH:0:0:1; display NCAP_CEH;
+
+*option NCAP_AFAC:0:0:1; display NCAP_AFAC;
+*option NCAP_AFC:0:0:1; display NCAP_AFC;
+
+*option VDA_EMCB:0:0:1; display VDA_EMCB;
+*option FLO_EMIS:0:0:1; display FLO_EMIS;

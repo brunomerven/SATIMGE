@@ -1,0 +1,9 @@
+*==================================================================*
+* MOD_EXT.EXT EXTENSION EQUATIONS                                  *
+* called from MAINDRV.MOD                                          *
+*==================================================================*
+  %EQ%_CLITOT
+  %EQ%_CLICONC
+  %EQ%_CLITEMP
+  %EQ%_CLIBEOH
+  %EQ%_CLIMAX

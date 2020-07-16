@@ -1,0 +1,240 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/07/08	2:06:34 PM
+Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_AGR	Agriculture shortened ts	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	AH	Agriculture - Heating	PJ	COM,DEM,DAYNITE,RES	
+	E	AI	Agriculture - Irrigation	PJ	COM,DEM,DAYNITE,RES	
+	E	AO	Agriculture - Other	PJ	COM,DEM,DAYNITE,RES	
+	E	AP	Agriculture - Processing	PJ	COM,DEM,DAYNITE,RES	
+	E	AT	Agriculture - Traction	PJ	COM,DEM,ANNUAL,RES	
+	T	AHCOA-E	Agriculture - Heating-Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	AHELC-E	Agriculture - Heating - Electricity - Room - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	AHOHF-E	Agriculture - Heating - Oil HFO- Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	AHOKE-E	Agriculture - Heating - Oil Paraffin- Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	AHOLP-E	Agriculture - Heating - Oil LPG- Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	AIELC-E	Agriculture - Irrigation - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	AIODS-E	Agriculture - Irrigation - Oil Diesel - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	AIOGS-E	Agriculture - Irrigation - Oil Gasoline - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	AOELC-E	Agriculture - Other - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	APELC-E	Agriculture - Processing - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ATELC-E	Agriculture - Traction - Electricity - Existing	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ATODS-E	Agriculture - Traction - Oil Diesel - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ATOGS-E	Agriculture - Traction - Oil Gasoline - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	XAGRCOA	Agriculatural Coal	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XAGRODS	Agriculatural Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGROGS	Agriculatural Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGROHF	Agriculatural Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGROKE	Agriculatural Oil Paraffin	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGROLP	Agriculatural Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_EFF	AHCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	0.65	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AHOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.7	null	null	null	null	0.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AHOKE-E	-	ACTGRP	-	ANNUAL	-	0	0.7	null	null	null	null	0.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AHOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AIELC-E	-	ACTGRP	-	ANNUAL	-	0	0.95	null	null	null	null	0.95	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AIODS-E	-	ACTGRP	-	ANNUAL	-	0	0.35	null	null	null	null	0.35	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AIOGS-E	-	ACTGRP	-	ANNUAL	-	0	0.25	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	AOELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	APELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	ATELC-E	-	ACTGRP	-	ANNUAL	-	0	0.95	null	null	null	null	0.95	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	ACT_EFF	ATODS-E	-	ACTGRP	-	ANNUAL	-	0	0.35	null	null	null	null	null	null	null	0.358506051904934	null	null	null	null	0.363594313410787	null	null	null	null	0.36798899359631	null	null	null	null	0.372253462652886	null	null	null	null	0.376138664061011	0.382034924722628	0.389039225638668	null	0.389039225638668	1
+	ACT_EFF	ATOGS-E	-	ACTGRP	-	ANNUAL	-	0	0.25	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	COM_FR	-	AH	-	-	S1D1B1	-	0	0.26507	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S1D1B2	-	0	0.32397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S1D1B3	-	0	0.11781	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S2D1B1	-	0	0.09772	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S2D1B2	-	0	0.04886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S2D1B3	-	0	0.0855	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S2D1B4	-	0	0.03664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AH	-	-	S2D1B5	-	0	0.02443	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S1D1B1	-	0	0.26507	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S1D1B2	-	0	0.32397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S1D1B3	-	0	0.11781	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S2D1B1	-	0	0.09772	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S2D1B2	-	0	0.04886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S2D1B3	-	0	0.0855	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S2D1B4	-	0	0.03664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AI	-	-	S2D1B5	-	0	0.02443	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S1D1B1	-	0	0.26507	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S1D1B2	-	0	0.32397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S1D1B3	-	0	0.11781	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S2D1B1	-	0	0.09772	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S2D1B2	-	0	0.04886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S2D1B3	-	0	0.0855	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S2D1B4	-	0	0.03664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AO	-	-	S2D1B5	-	0	0.02443	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S1D1B1	-	0	0.26507	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S1D1B2	-	0	0.32397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S1D1B3	-	0	0.11781	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S2D1B1	-	0	0.09772	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S2D1B2	-	0	0.04886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S2D1B3	-	0	0.0855	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S2D1B4	-	0	0.03664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AP	-	-	S2D1B5	-	0	0.02443	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S1D1B1	-	0	0.26507	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S1D1B2	-	0	0.32397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S1D1B3	-	0	0.11781	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S2D1B1	-	0	0.09772	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S2D1B2	-	0	0.04886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S2D1B3	-	0	0.0855	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S2D1B4	-	0	0.03664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	AT	-	-	S2D1B5	-	0	0.02443	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AH	-	-	-	-	0	2.50439701663798	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AI	-	-	-	-	0	4.88519193152177	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AO	-	-	-	-	0	8.43105859215693	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AP	-	-	-	-	0	3.83496832013908	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AT	-	-	-	-	0	9.52271406411337	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_MARK	AHCOA-E	AH	-	-	-	LO	3	0.208854665025186	null	null	0.232029836025174	null	0.255205007025163	null	null	null	null	null	null	null	null	null	null	null	null	5.22136662562965E-02	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AHCOA-E	AH	-	-	-	UP	3	0.208854665025186	null	null	0.708854665025186	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.708854665025186	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AHELC-E	AH	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AHELC-E	AH	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AHOHF-E	AH	-	-	-	LO	3	0	null	null	0.167582066675182	null	0.335164133350364	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AHOHF-E	AH	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AHOKE-E	AH	-	-	-	LO	3	0.791145334974814	null	null	0.597514167040351	null	0.403882999105888	null	null	null	null	null	null	null	null	null	null	null	null	0.197786333743703	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AHOKE-E	AH	-	-	-	UP	3	0.791145334974814	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AHOLP-E	AH	-	-	-	LO	3	0	null	null	2.87393025929237E-03	null	5.74786051858475E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AHOLP-E	AH	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AIELC-E	AI	-	-	-	LO	3	0.947821100917431	null	null	0.884735036827973	null	0.821648972738515	null	null	null	null	null	null	null	null	null	null	null	null	0.236955275229358	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AIELC-E	AI	-	-	-	UP	3	0.947821100917431	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AIODS-E	AI	-	-	-	LO	3	5.21788990825688E-02	null	null	0.115264963172027	null	0.178351027261485	null	null	null	null	null	null	null	null	null	null	null	null	1.30447247706422E-02	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AIODS-E	AI	-	-	-	UP	3	5.21788990825688E-02	null	null	0.552178899082569	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.552178899082569	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AIOGS-E	AI	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AIOGS-E	AI	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AOELC-E	AO	-	-	-	LO	3	1	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AOELC-E	AO	-	-	-	UP	3	1	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	APELC-E	AP	-	-	-	LO	3	1	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	APELC-E	AP	-	-	-	UP	3	1	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	ATELC-E	AT	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	ATELC-E	AT	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	ATODS-E	AT	-	-	-	LO	3	1	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	ATODS-E	AT	-	-	-	UP	3	1	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	ATOGS-E	AT	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	ATOGS-E	AT	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	NCAP_AFA	AHCOA-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AHELC-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AHOHF-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AHOKE-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AHOLP-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AIELC-E	-	-	-	-	UP	3	0.8087	null	null	null	null	0.8087	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AIODS-E	-	-	-	-	UP	3	0.8087	null	null	null	null	0.8087	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AIOGS-E	-	-	-	-	UP	3	0.8087	null	null	null	null	0.8087	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	AOELC-E	-	-	-	-	UP	3	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	APELC-E	-	-	-	-	UP	3	0.7476	null	null	null	null	0.7476	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	ATELC-E	-	-	-	-	UP	3	0.7766	null	null	null	null	0.7766	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	ATODS-E	-	-	-	-	UP	3	0.7766	null	null	null	null	0.7766	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_AFA	ATOGS-E	-	-	-	-	UP	3	0.7766	null	null	null	null	0.7766	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	AHCOA-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AHELC-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AHOHF-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AHOKE-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AHOLP-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AIELC-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AIODS-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AIOGS-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	AOELC-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	APELC-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	ATELC-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	ATODS-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_BND	ATOGS-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	AHCOA-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AHELC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AHOHF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AHOKE-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AHOLP-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AIELC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AIODS-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AIOGS-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	AOELC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	APELC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	ATELC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	ATODS-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_TLIFE	ATOGS-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	PRC_RESID	AHCOA-E	-	-	-	-	-	0	0.958254217304553	null	null	null	null	2.37926174496644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AHELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AHOHF-E	-	-	-	-	-	0	0	null	null	null	null	3.36507890440776	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AHOKE-E	-	-	-	-	-	0	3.62988470307338	null	null	null	null	4.05502267368039	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AHOLP-E	-	-	-	-	-	0	0	null	null	null	null	6.18311264284419E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AIELC-E	-	-	-	-	-	0	5.78285009852257	null	null	null	null	7.00824166876821	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AIODS-E	-	-	-	-	-	0	0.318354119156415	null	null	null	null	0.560457657117778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AIOGS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AOELC-E	-	-	-	-	-	0	8.5153691780785	null	null	null	null	10.3197842036405	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	APELC-E	-	-	-	-	-	0	5.18100321474113	null	null	null	null	6.27886284391972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	ATELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	ATODS-E	-	-	-	-	-	0	12.3846783476107	null	null	null	null	21.8030406807737	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	ATOGS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+
+TID DATA	REGION1
+	PRC_ACTUNT	AHCOA-E	-	AH	-	-	-	1	
+	PRC_ACTUNT	AHELC-E	-	AH	-	-	-	1	
+	PRC_ACTUNT	AHOHF-E	-	AH	-	-	-	1	
+	PRC_ACTUNT	AHOKE-E	-	AH	-	-	-	1	
+	PRC_ACTUNT	AHOLP-E	-	AH	-	-	-	1	
+	PRC_ACTUNT	AIELC-E	-	AI	-	-	-	1	
+	PRC_ACTUNT	AIODS-E	-	AI	-	-	-	1	
+	PRC_ACTUNT	AIOGS-E	-	AI	-	-	-	1	
+	PRC_ACTUNT	AOELC-E	-	AO	-	-	-	1	
+	PRC_ACTUNT	APELC-E	-	AP	-	-	-	1	
+	PRC_ACTUNT	ATELC-E	-	AT	-	-	-	1	
+	PRC_ACTUNT	ATODS-E	-	AT	-	-	-	1	
+	PRC_ACTUNT	ATOGS-E	-	AT	-	-	-	1	
+	PRC_CAPACT	AHCOA-E	-	-	-	-	-	1	
+	PRC_CAPACT	AHELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	AHOHF-E	-	-	-	-	-	1	
+	PRC_CAPACT	AHOKE-E	-	-	-	-	-	1	
+	PRC_CAPACT	AHOLP-E	-	-	-	-	-	1	
+	PRC_CAPACT	AIELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	AIODS-E	-	-	-	-	-	1	
+	PRC_CAPACT	AIOGS-E	-	-	-	-	-	1	
+	PRC_CAPACT	AOELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	APELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ATELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ATODS-E	-	-	-	-	-	1	
+	PRC_CAPACT	ATOGS-E	-	-	-	-	-	1	
+	TOP-IN	AHCOA-E	AGRCOA	-	-	-	-	1	
+	TOP-IN	AHELC-E	AGRELC	-	-	-	-	1	
+	TOP-IN	AHOHF-E	AGROHF	-	-	-	-	1	
+	TOP-IN	AHOKE-E	AGROKE	-	-	-	-	1	
+	TOP-IN	AHOLP-E	AGROLP	-	-	-	-	1	
+	TOP-IN	AIELC-E	AGRELC	-	-	-	-	1	
+	TOP-IN	AIODS-E	AGRODS	-	-	-	-	1	
+	TOP-IN	AIOGS-E	AGROGS	-	-	-	-	1	
+	TOP-IN	AOELC-E	AGRELC	-	-	-	-	1	
+	TOP-IN	APELC-E	AGRELC	-	-	-	-	1	
+	TOP-IN	ATELC-E	AGRELC	-	-	-	-	1	
+	TOP-IN	ATODS-E	AGRODS	-	-	-	-	1	
+	TOP-IN	ATOGS-E	AGROGS	-	-	-	-	1	
+	TOP-OUT	AHCOA-E	AH	-	-	-	-	1	
+	TOP-OUT	AHELC-E	AH	-	-	-	-	1	
+	TOP-OUT	AHOHF-E	AH	-	-	-	-	1	
+	TOP-OUT	AHOKE-E	AH	-	-	-	-	1	
+	TOP-OUT	AHOLP-E	AH	-	-	-	-	1	
+	TOP-OUT	AIELC-E	AI	-	-	-	-	1	
+	TOP-OUT	AIODS-E	AI	-	-	-	-	1	
+	TOP-OUT	AIOGS-E	AI	-	-	-	-	1	
+	TOP-OUT	AOELC-E	AO	-	-	-	-	1	
+	TOP-OUT	APELC-E	AP	-	-	-	-	1	
+	TOP-OUT	ATELC-E	AT	-	-	-	-	1	
+	TOP-OUT	ATODS-E	AT	-	-	-	-	1	
+	TOP-OUT	ATOGS-E	AT	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

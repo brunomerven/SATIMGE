@@ -1,0 +1,19 @@
+*$ONLISTING
+* transTSstc.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = GAMS parameter name put out in ANSWER-generated DD
+* %11 - %18 = ANSWER arguments
+* %19       = name of TEMPSET used to speed up processing
+
+$IF NOT DEFINED %10 $GOTO NODEF
+OPTION CLEAR = %19;
+*OPTION %10:6:0:1; display %10;
+LOOP(DATAYEAR,
+  %1(%2%3%4%5%6%7%8%9) $= %10(%11%12%13%14%15%16%17%18,DATAYEAR);
+);
+*OPTION %1:6:0:1; display %1;
+OPTION KILL = %10;
+$LABEL NODEF
+*$OFFLISTING

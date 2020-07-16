@@ -1,0 +1,507 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'BBE'                      'Sugarbeet crop                                    '
+  'BCA'                      'Canola grain crop                                 '
+  'BIB2'                     'Biomass bagasse onsite                            '
+  'BSC'                      'Sugar cane crop                                   '
+  'BSR'                      'Grain Sorghum                                     '
+  'BSY'                      'Soya Beans                                        '
+  'INDSHT1'                  'Industrial process steam: Grade1                  '
+  'LNDAGR'                   'Agricultural land (hectares)                      '
+  'LNDAGRBBE'                'Agricultural land  for SUGARBEETcultivattion      '
+  'LNDAGRBCA'                'Agricultural land  for CANOLA cultivattion        '
+  'LNDAGRBSC'                'Agricultural land  for SUGAR CANE bioethanol culti'
+  'LNDAGRBSR'                'Agricultural land  for SORGHUM cultivattion       '
+  'LNDAGRBSY'                'Agricultural land  for SOY cultivattion           '
+  'MTH'                      'Methanol                                          '
+  'TAXOGS'                   'Fuel tax:petrol                                   '
+  'TRABGS'                   'Transport blended gasoline                        '
+  'TRABGS-G'                 'Transport Blended E-Gasoline  set                 '
+/;
+SET UC_N /
+  'UCACT-BID-LO'             'Biodiesel min blend in diesel consumption         '
+  'UCACT-BID-UP'             'Biodiesel max blend in diesel consumption         '
+  'UCACT-BIE-LO'             'Bioethanol min blend in gasoline consumption      '
+  'UCACT-BIE-UP'             'Bioethanol max blend in gasoline consumption      '
+/;
+SET UC_N_UCRT /
+  'REGION1'   .'UCACT-BID-LO'
+  'REGION1'   .'UCACT-BID-UP'
+  'REGION1'   .'UCACT-BIE-LO'
+  'REGION1'   .'UCACT-BIE-UP'
+/;
+SET COM /
+  'BBE'                      'Sugarbeet crop                                    '
+  'BCA'                      'Canola grain crop                                 '
+  'BIB2'                     'Biomass bagasse onsite                            '
+  'BSC'                      'Sugar cane crop                                   '
+  'BSR'                      'Grain Sorghum                                     '
+  'BSY'                      'Soya Beans                                        '
+  'INDSHT1'                  'Industrial process steam: Grade1                  '
+  'LNDAGR'                   'Agricultural land (hectares)                      '
+  'LNDAGRBBE'                'Agricultural land  for SUGARBEETcultivattion      '
+  'LNDAGRBCA'                'Agricultural land  for CANOLA cultivattion        '
+  'LNDAGRBSC'                'Agricultural land  for SUGAR CANE bioethanol culti'
+  'LNDAGRBSR'                'Agricultural land  for SORGHUM cultivattion       '
+  'LNDAGRBSY'                'Agricultural land  for SOY cultivattion           '
+  'MTH'                      'Methanol                                          '
+  'TAXOGS'                   'Fuel tax:petrol                                   '
+  'TRABGS'                   'Transport blended gasoline                        '
+/;
+SET COM_NRG /
+  'REGION1'   .'BBE'
+  'REGION1'   .'BCA'
+  'REGION1'   .'BIB2'
+  'REGION1'   .'BSC'
+  'REGION1'   .'BSR'
+  'REGION1'   .'BSY'
+  'REGION1'   .'INDSHT1'
+  'REGION1'   .'MTH'
+  'REGION1'   .'TRABGS'
+/;
+SET COM_ENV /
+  'REGION1'   .'LNDAGR'
+  'REGION1'   .'LNDAGRBBE'
+  'REGION1'   .'LNDAGRBCA'
+  'REGION1'   .'LNDAGRBSC'
+  'REGION1'   .'LNDAGRBSR'
+  'REGION1'   .'LNDAGRBSY'
+/;
+SET COM_FIN /
+  'REGION1'   .'TAXOGS'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'BBE'
+  'REGION1'   .'BCA'
+  'REGION1'   .'BIB2'
+  'REGION1'   .'BSC'
+  'REGION1'   .'BSR'
+  'REGION1'   .'BSY'
+  'REGION1'   .'INDSHT1'
+  'REGION1'   .'LNDAGR'
+  'REGION1'   .'LNDAGRBBE'
+  'REGION1'   .'LNDAGRBCA'
+  'REGION1'   .'LNDAGRBSC'
+  'REGION1'   .'LNDAGRBSR'
+  'REGION1'   .'LNDAGRBSY'
+  'REGION1'   .'MTH'
+  'REGION1'   .'TRABGS'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'BBE'
+  'REGION1'   .'BCA'
+  'REGION1'   .'BIB2'
+  'REGION1'   .'BSC'
+  'REGION1'   .'BSR'
+  'REGION1'   .'BSY'
+  'REGION1'   .'MTH'
+  'REGION1'   .'TRABGS'
+/;
+SET COM_NRGHTH /
+  'REGION1'   .'INDSHT1'
+/;
+SET COM_ENVOTH /
+  'REGION1'   .'LNDAGR'
+  'REGION1'   .'LNDAGRBBE'
+  'REGION1'   .'LNDAGRBCA'
+  'REGION1'   .'LNDAGRBSC'
+  'REGION1'   .'LNDAGRBSR'
+  'REGION1'   .'LNDAGRBSY'
+/;
+SET PRC /
+  'MINAGR-N'                 'establishment of agricultural land                '
+  'MINBBE'                   'Extraction of Sugarbeet (Farming)                 '
+  'MINBCA'                   'Extraction of Canola grains (Farming)             '
+  'MINBSC'                   'Extraction of Sugar Cane(Farming)                 '
+  'MINBSR'                   'Extraction of Sorghum (Farming)                   '
+  'MINBSY'                   'Extraction of soybeans (Farming)                  '
+  'MINMTH'                   'Local production of methanol                      '
+  'UBBEBIE-N'                'Biofuel Refinery SugarBeet Bioethanol new         '
+  'UBCABID-N'                'Biofuel Refinery Canola Biodiesel new             '
+  'UBSCBIE-N'                'Biofuel Refinery Sugar Cane Bioethanol new        '
+  'UBSRBIE-N'                'Biofuel Refinery Sorghum Bioethanol new           '
+  'UBSYBID-N'                'Biofuel Refinery Soybean Biodiesel new            '
+  'UINDSCOA1-N'              'Coal boiler: industrial steam: Class1             '
+  'UINDSGAS1-N'              'Gas boiler: industrial steam: Class1              '
+  'XAGRBIO'                  'Agricultural land for BIO-energy crops            '
+  'XTRABGS'                  'Distribution of blended transport gasoline        '
+  'XTRABID'                  'Biodiesel into Diesel system                      '
+  'XTRABIE'                  'Bioethanol into Petrol system                     '
+/;
+SET PRC_XTRACT /
+  'REGION1'   .'MINBBE'
+  'REGION1'   .'MINBSC'
+  'REGION1'   .'MINBSR'
+  'REGION1'   .'MINBSY'
+/;
+SET PRC_PRE /
+  'REGION1'   .'MINBBE'
+  'REGION1'   .'MINBCA'
+  'REGION1'   .'MINBSC'
+  'REGION1'   .'MINBSR'
+  'REGION1'   .'MINBSY'
+  'REGION1'   .'MINMTH'
+  'REGION1'   .'UBBEBIE-N'
+  'REGION1'   .'UBCABID-N'
+  'REGION1'   .'UBSCBIE-N'
+  'REGION1'   .'UBSRBIE-N'
+  'REGION1'   .'UBSYBID-N'
+  'REGION1'   .'UINDSCOA1-N'
+  'REGION1'   .'UINDSGAS1-N'
+  'REGION1'   .'XTRABGS'
+  'REGION1'   .'XTRABID'
+  'REGION1'   .'XTRABIE'
+/;
+SET PRC_REF /
+  'REGION1'   .'UBBEBIE-N'
+  'REGION1'   .'UBSCBIE-N'
+  'REGION1'   .'UBSYBID-N'
+/;
+SET PRC_MISC /
+  'REGION1'   .'MINAGR-N'
+  'REGION1'   .'XAGRBIO'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'MINAGR-N'
+  'REGION1'   .'MINBBE'
+  'REGION1'   .'MINBCA'
+  'REGION1'   .'MINBSC'
+  'REGION1'   .'MINBSR'
+  'REGION1'   .'MINBSY'
+  'REGION1'   .'MINMTH'
+  'REGION1'   .'UBBEBIE-N'
+  'REGION1'   .'UBCABID-N'
+  'REGION1'   .'UBSCBIE-N'
+  'REGION1'   .'UBSRBIE-N'
+  'REGION1'   .'UBSYBID-N'
+  'REGION1'   .'UINDSCOA1-N'
+  'REGION1'   .'UINDSGAS1-N'
+  'REGION1'   .'XAGRBIO'
+  'REGION1'   .'XTRABGS'
+  'REGION1'   .'XTRABID'
+  'REGION1'   .'XTRABIE'
+/;
+SET PRC_IRE /
+  'REGION1'   .'MINBCA'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'BBE'.'PJ'
+  'REGION1'.'BCA'.'PJ'
+  'REGION1'.'BIB2'.'PJ'
+  'REGION1'.'BSC'.'PJ'
+  'REGION1'.'BSR'.'PJ'
+  'REGION1'.'BSY'.'PJ'
+  'REGION1'.'INDSHT1'.'PJ'
+  'REGION1'.'LNDAGR'.'Mha'
+  'REGION1'.'LNDAGRBBE'.'Mha'
+  'REGION1'.'LNDAGRBCA'.'Mha'
+  'REGION1'.'LNDAGRBSC'.'Mha'
+  'REGION1'.'LNDAGRBSR'.'Mha'
+  'REGION1'.'LNDAGRBSY'.'Mha'
+  'REGION1'.'MTH'.'PJ'
+  'REGION1'.'TAXOGS'.'2000$USm'
+  'REGION1'.'TRABGS'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'MINAGR-N'.'Mha'
+  'REGION1'.'MINBBE'.'PJ'
+  'REGION1'.'MINBCA'.'PJ'
+  'REGION1'.'MINBSC'.'PJ'
+  'REGION1'.'MINBSR'.'PJ'
+  'REGION1'.'MINBSY'.'PJ'
+  'REGION1'.'MINMTH'.'PJ'
+  'REGION1'.'UBBEBIE-N'.'PJ'
+  'REGION1'.'UBCABID-N'.'PJ'
+  'REGION1'.'UBSCBIE-N'.'PJ'
+  'REGION1'.'UBSRBIE-N'.'PJ'
+  'REGION1'.'UBSYBID-N'.'PJ'
+  'REGION1'.'UINDSCOA1-N'.'PJ'
+  'REGION1'.'UINDSGAS1-N'.'PJ'
+  'REGION1'.'XAGRBIO'.'Mha'
+  'REGION1'.'XTRABGS'.'PJ'
+  'REGION1'.'XTRABID'.'PJ'
+  'REGION1'.'XTRABIE'.'PJ'
+/;
+PARAMETER ACOM_GMAP /
+  'REGION1'                 .'BIE'                     .'TRABGS-G'                   1
+  'REGION1'                 .'OGS'                     .'TRABGS-G'                   1
+/;
+PARAMETER ANCAP_START /
+  'REGION1'                 .'UBBEBIE-N'                  2017
+  'REGION1'                 .'UBCABID-N'                  2017
+  'REGION1'                 .'UBSCBIE-N'                  2017
+  'REGION1'                 .'UBSRBIE-N'                  2017
+  'REGION1'                 .'UBSYBID-N'                  2017
+  'REGION1'                 .'XTRABGS'                    2020
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'MINAGR-N'                .'LNDAGR'                     1
+  'REGION1'                 .'MINBBE'                  .'BBE'                        1
+  'REGION1'                 .'MINBCA'                  .'BCA'                        1
+  'REGION1'                 .'MINBSC'                  .'BSC'                        1
+  'REGION1'                 .'MINBSR'                  .'BSR'                        1
+  'REGION1'                 .'MINBSY'                  .'BSY'                        1
+  'REGION1'                 .'MINMTH'                  .'MTH'                        1
+  'REGION1'                 .'UBBEBIE-N'               .'BIE'                        1
+  'REGION1'                 .'UBCABID-N'               .'BID'                        1
+  'REGION1'                 .'UBSCBIE-N'               .'BIE'                        1
+  'REGION1'                 .'UBSRBIE-N'               .'BIE'                        1
+  'REGION1'                 .'UBSYBID-N'               .'BID'                        1
+  'REGION1'                 .'UINDSCOA1-N'             .'INDSHT1'                    1
+  'REGION1'                 .'UINDSGAS1-N'             .'INDSHT1'                    1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGR'                     1
+  'REGION1'                 .'XTRABGS'                 .'TRABGS'                     1
+  'REGION1'                 .'XTRABID'                 .'TRAODS'                     1
+  'REGION1'                 .'XTRABIE'                 .'TRAOGS'                     1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'MINAGR-N'                   1
+  'REGION1'                 .'MINBBE'                     1
+  'REGION1'                 .'MINBCA'                     1
+  'REGION1'                 .'MINBSC'                     1
+  'REGION1'                 .'MINBSR'                     1
+  'REGION1'                 .'MINBSY'                     1
+  'REGION1'                 .'MINMTH'                     1
+  'REGION1'                 .'UBBEBIE-N'                  1
+  'REGION1'                 .'UBCABID-N'                  1
+  'REGION1'                 .'UBSCBIE-N'                  1
+  'REGION1'                 .'UBSRBIE-N'                  1
+  'REGION1'                 .'UBSYBID-N'                  1
+  'REGION1'                 .'UINDSCOA1-N'                1
+  'REGION1'                 .'UINDSGAS1-N'                1
+  'REGION1'                 .'XAGRBIO'                    1
+  'REGION1'                 .'XTRABGS'                    1
+  'REGION1'                 .'XTRABID'                    1
+  'REGION1'                 .'XTRABIE'                    1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'MINBBE'                  .'LNDAGRBBE'                  1
+  'REGION1'                 .'MINBBE'                  .'ODS'                        1
+  'REGION1'                 .'MINBCA'                  .'LNDAGRBCA'                  1
+  'REGION1'                 .'MINBCA'                  .'ODS'                        1
+  'REGION1'                 .'MINBSC'                  .'LNDAGRBSC'                  1
+  'REGION1'                 .'MINBSC'                  .'ODS'                        1
+  'REGION1'                 .'MINBSR'                  .'LNDAGRBSR'                  1
+  'REGION1'                 .'MINBSR'                  .'ODS'                        1
+  'REGION1'                 .'MINBSY'                  .'LNDAGRBSY'                  1
+  'REGION1'                 .'MINBSY'                  .'ODS'                        1
+  'REGION1'                 .'UBBEBIE-N'               .'BBE'                        1
+  'REGION1'                 .'UBBEBIE-N'               .'INDSHT1'                    1
+  'REGION1'                 .'UBBEBIE-N'               .'UPSELC'                     1
+  'REGION1'                 .'UBCABID-N'               .'BCA'                        1
+  'REGION1'                 .'UBCABID-N'               .'INDSHT1'                    1
+  'REGION1'                 .'UBCABID-N'               .'MTH'                        1
+  'REGION1'                 .'UBCABID-N'               .'UPSELC'                     1
+  'REGION1'                 .'UBSCBIE-N'               .'BIB2'                       1
+  'REGION1'                 .'UBSCBIE-N'               .'BSC'                        1
+  'REGION1'                 .'UBSRBIE-N'               .'BSR'                        1
+  'REGION1'                 .'UBSRBIE-N'               .'INDSHT1'                    1
+  'REGION1'                 .'UBSRBIE-N'               .'UPSELC'                     1
+  'REGION1'                 .'UBSYBID-N'               .'BSY'                        1
+  'REGION1'                 .'UBSYBID-N'               .'INDSHT1'                    1
+  'REGION1'                 .'UBSYBID-N'               .'MTH'                        1
+  'REGION1'                 .'UBSYBID-N'               .'UPSELC'                     1
+  'REGION1'                 .'UINDSCOA1-N'             .'COA'                        1
+  'REGION1'                 .'UINDSGAS1-N'             .'GAS'                        1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGR'                     1
+  'REGION1'                 .'XTRABGS'                 .'BIE'                        1
+  'REGION1'                 .'XTRABGS'                 .'OGS'                        1
+  'REGION1'                 .'XTRABID'                 .'BID'                        1
+  'REGION1'                 .'XTRABIE'                 .'BIE'                        1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'MINAGR-N'                .'LNDAGR'                     1
+  'REGION1'                 .'MINBBE'                  .'BBE'                        1
+  'REGION1'                 .'MINBCA'                  .'BCA'                        1
+  'REGION1'                 .'MINBSC'                  .'BIB2'                       1
+  'REGION1'                 .'MINBSC'                  .'BSC'                        1
+  'REGION1'                 .'MINBSR'                  .'BSR'                        1
+  'REGION1'                 .'MINBSY'                  .'BSY'                        1
+  'REGION1'                 .'MINMTH'                  .'MTH'                        1
+  'REGION1'                 .'UBBEBIE-N'               .'BIE'                        1
+  'REGION1'                 .'UBCABID-N'               .'BID'                        1
+  'REGION1'                 .'UBSCBIE-N'               .'BIE'                        1
+  'REGION1'                 .'UBSRBIE-N'               .'BIE'                        1
+  'REGION1'                 .'UBSYBID-N'               .'BID'                        1
+  'REGION1'                 .'UINDSCOA1-N'             .'INDSHT1'                    1
+  'REGION1'                 .'UINDSGAS1-N'             .'INDSHT1'                    1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGRBBE'                  1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGRBCA'                  1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGRBSC'                  1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGRBSR'                  1
+  'REGION1'                 .'XAGRBIO'                 .'LNDAGRBSY'                  1
+  'REGION1'                 .'XTRABGS'                 .'TRABGS'                     1
+  'REGION1'                 .'XTRABGS'                 .'TRACH4S'                    1
+  'REGION1'                 .'XTRABGS'                 .'TRACMOX'                    1
+  'REGION1'                 .'XTRABGS'                 .'TRACO2S'                    1
+  'REGION1'                 .'XTRABGS'                 .'TRAN2OS'                    1
+  'REGION1'                 .'XTRABGS'                 .'TRANMVS'                    1
+  'REGION1'                 .'XTRABGS'                 .'TRANOXS'                    1
+  'REGION1'                 .'XTRABGS'                 .'TRASOXS'                    1
+  'REGION1'                 .'XTRABID'                 .'TRAODS'                     1
+  'REGION1'                 .'XTRABIE'                 .'TRAOGS'                     1
+  'REGION1'                 .'ZZBKNRG'                 .'BSC'                        1
+/;
+PARAMETER AUC_R_EACH /
+  'REGION1'                 .'UCACT-BID-LO'               1
+  'REGION1'                 .'UCACT-BID-UP'               1
+  'REGION1'                 .'UCACT-BIE-LO'               1
+  'REGION1'                 .'UCACT-BIE-UP'               1
+/;
+       TABLE AACT_BND
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'IMPBID'                  .'ANNUAL'                  .'UP'                         5    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IMPBIE'                  .'ANNUAL'                  .'UP'                         5    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'MINMTH'                  .'ANNUAL'                  .'UP'                               2.814                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+;
+       TABLE AACT_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'MINAGR-N'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'MINMTH'                           216.0059                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+;
+       TABLE AACT_EFF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UINDSCOA1-N'             .'INDSHT1'                 .'ANNUAL'                           .64                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UINDSGAS1-N'             .'INDSHT1'                 .'ANNUAL'                           .7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'XAGRBIO'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'XTRABID'                 .'ACTGRP'                  .'ANNUAL'                           .99                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'XTRABIE'                 .'ACTGRP'                  .'ANNUAL'                           .99                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+;
+       TABLE ACAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UBBEBIE-N'               .'UP'                         3     4.2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+;
+       TABLE AFLO_EFF
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'MINBSC'                  .'LNDAGRBSC'               .'BSC'                     .'ANNUAL'                           .014                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBSC'                  .'ODS'                     .'BSC'                     .'ANNUAL'                           .1033                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBBEBIE-N'               .'BBE'                     .'BIE'                     .'ANNUAL'                           .3926                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBBEBIE-N'               .'INDSHT1'                 .'BIE'                     .'ANNUAL'                           .0755                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBBEBIE-N'               .'UPSELC'                  .'BIE'                     .'ANNUAL'                           .0152                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBCABID-N'               .'BCA'                     .'BID'                     .'ANNUAL'                           .0704                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBCABID-N'               .'INDSHT1'                 .'BID'                     .'ANNUAL'                           .0924                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBCABID-N'               .'MTH'                     .'BID'                     .'ANNUAL'                           .0495                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBCABID-N'               .'UPSELC'                  .'BID'                     .'ANNUAL'                           .0186                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSCBIE-N'               .'BIB2'                    .'BIE'                     .'ANNUAL'                           .61                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSCBIE-N'               .'BSC'                     .'BIE'                     .'ANNUAL'                           .55                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSRBIE-N'               .'BSR'                     .'BIE'                     .'ANNUAL'                           .3926                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSRBIE-N'               .'INDSHT1'                 .'BIE'                     .'ANNUAL'                           .2969                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSRBIE-N'               .'UPSELC'                  .'BIE'                     .'ANNUAL'                           .0154                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSYBID-N'               .'BSY'                     .'BID'                     .'ANNUAL'                           .1642                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSYBID-N'               .'INDSHT1'                 .'BID'                     .'ANNUAL'                           .2182                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSYBID-N'               .'MTH'                     .'BID'                     .'ANNUAL'                           .0495                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSYBID-N'               .'UPSELC'                  .'BID'                     .'ANNUAL'                           .056                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+;
+       TABLE AFLO_EMIS
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XTRABGS'                 .'TRACH4S'                 .'OGS'                     .'ANNUAL'                           .003                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'XTRABGS'                 .'TRACMOX'                 .'OGS'                     .'ANNUAL'                           8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'XTRABGS'                 .'TRACO2S'                 .'OGS'                     .'ANNUAL'                           69.3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'XTRABGS'                 .'TRAN2OS'                 .'OGS'                     .'ANNUAL'                           .0006                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'XTRABGS'                 .'TRANMVS'                 .'OGS'                     .'ANNUAL'                           1.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'XTRABGS'                 .'TRANOXS'                 .'OGS'                     .'ANNUAL'                           .6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'XTRABGS'                 .'TRASOXS'                 .'OGS'                     .'ANNUAL'                           .0467                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+;
+       TABLE AFLO_FUNC
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XTRABGS'                 .'TRABGS-G'                .'TRABGS'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE AFLO_SHAR
+                                                                                                                                                                      0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XTRABGS'                 .'BIE'                     .'TRABGS-G'                .'ANNUAL'                  .'FX'                         5     .85                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+;
+       TABLE ANCAP_AFA
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UBBEBIE-N'               .'UP'                               .868                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UBCABID-N'               .'UP'                               .89                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSCBIE-N'               .'UP'                               .959                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UBSRBIE-N'               .'UP'                               .96                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSYBID-N'               .'UP'                               .98                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'MINAGR-N'                .'UP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UBBEBIE-N'               .'LO'                                                                                                                                              EPS              4.2                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBCABID-N'               .'LO'                                                                                                                                              EPS              14.8                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UBSCBIE-N'               .'LO'                                                                                                                                              EPS              2.2                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSRBIE-N'               .'LO'                                                                                                                                              EPS              3.7                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSYBID-N'               .'LO'                                                                                                                                              EPS              9.5                                                                                                                                                                                                                                                                                                                                                                                             
+;
+       TABLE ANCAP_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'MINAGR-N'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'UBBEBIE-N'                        403.6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBCABID-N'                        283.8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSCBIE-N'                        801.4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSRBIE-N'                        405.7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'UBSYBID-N'                        242.8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'XTRABGS'                          25.4636                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'XTRABID'                          25.8279                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'XTRABIE'                          25.4636                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+;
+       TABLE ANCAP_FOM
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'MINBBE'                           2744                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBCA'                           2340                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBSC'                           300                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'MINBSR'                           2207                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBSY'                           4223                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UBBEBIE-N'                        8.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBCABID-N'                        5.7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSCBIE-N'                        16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UBSRBIE-N'                        8.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'UBSYBID-N'                        4.9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+;
+       TABLE ANCAP_ILED
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UBBEBIE-N'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UBCABID-N'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UBSCBIE-N'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UBSRBIE-N'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UBSYBID-N'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ANCAPTLIFE
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UBBEBIE-N'                        50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UBCABID-N'                        50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UBSCBIE-N'                        50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UBSRBIE-N'                        50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UBSYBID-N'                        50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'XTRABGS'                          60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'XTRABID'                          60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'XTRABIE'                          60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE APRCACTFLO
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'MINBBE'                  .'LNDAGRBBE'                        .011                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBBE'                  .'ODS'                              .0441                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'MINBCA'                  .'LNDAGRBCA'                        .5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'MINBCA'                  .'ODS'                              4.3021                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'MINBSR'                  .'LNDAGRBSR'                        .386                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBSR'                  .'ODS'                              1.8178                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'MINBSY'                  .'LNDAGRBSY'                        .333                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'MINBSY'                  .'ODS'                              1.1694                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+;
+       TABLE AUC_ACT
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCACT-BID-LO'            .'LHS'                     .'XTRABID'                 .'ANNUAL'                     5                                                                                                                                     1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UCACT-BID-LO'            .'LHS'                     .'XTRAODS'                 .'ANNUAL'                     5                                                                                                                                    -.054                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UCACT-BID-UP'            .'LHS'                     .'XTRABID'                 .'ANNUAL'                     5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UCACT-BID-UP'            .'LHS'                     .'XTRAODS'                 .'ANNUAL'                     5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UCACT-BIE-LO'            .'LHS'                     .'XTRABIE'                 .'ANNUAL'                     5                                                                                                                                     1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UCACT-BIE-LO'            .'LHS'                     .'XTRAOGS'                 .'ANNUAL'                     5                                                                                                                                    -.022                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UCACT-BIE-UP'            .'LHS'                     .'XTRABIE'                 .'ANNUAL'                     5                                                                                                                                     1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UCACT-BIE-UP'            .'LHS'                     .'XTRAOGS'                 .'ANNUAL'                     5                                                                                                                                    -.137                                                                                                                                                                                                                                                                                                                                                                                            
+;
+       TABLE AUC_RHSRT
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCACT-BID-LO'            .'LO'                         5                                                                                                                                    EPS                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UCACT-BID-UP'            .'NB'                         5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UCACT-BIE-LO'            .'LO'                         5                                                                                                                                    EPS                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UCACT-BIE-UP'            .'UP'                         5                                                                                                                                    EPS                                                                                                                                                                                                                                                                                                                                                                                              
+;

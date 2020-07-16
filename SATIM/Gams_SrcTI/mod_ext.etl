@@ -1,0 +1,17 @@
+*==================================================================*
+* MOD_EQUA.ETL Endogenous Technological learning equations         *
+* called from MOD_EQUA.MOD                                         *
+*==================================================================*
+  %EQ%_CUINV
+  %EQ%_CC
+  %EQ%_DEL
+  %EQ%_COS
+  %EQ%_LA1
+  %EQ%_LA2
+  %EQ%_EXPE1
+  %EQ%_EXPE2
+  %EQ%_IC1
+  %EQ%_IC2
+* cluster
+  %EQ%_CLU
+  %EQ%_MRCLU

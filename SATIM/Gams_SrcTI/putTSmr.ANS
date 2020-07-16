@@ -1,0 +1,90 @@
+*$ONLISTING
+* putTSmr.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = ANSWER parameter name
+* %11 - %16 = ANSWER arguments
+* %17       = name of TEMPSET used to speed up processing
+
+* Put out standard TS parameter (not Trade and not for _GLOBAL region).
+
+* Note that '%3' = 'OTHERYR' is assumed and hard-coded below.
+
+OPTION CLEAR = %17;
+LOOP(OTHERYR,
+  %17(%2,%4%5%6%7%8%9)$%1(%2,OTHERYR,%4%5%6%7%8%9) = YES;
+);
+LOOP((%4%5%6%7%8%9)$%17(%2,%4%5%6%7%8%9),
+$IF '%4' == 'PRC' IF(AREG_PRC(PRC),
+$IF '%4' == 'COM' IF(AREG_COM(COM),
+PUT / "%10";
+*$IF '%11' == 'UC_N' $GOTO UC_N_LAB
+$IF NOT '%11' == ''  PUT %11.TL;
+$IF     '%11' == ''  PUT "-";
+*$GOTO SKIPUC_N
+*$LABEL UC_N_LAB
+*IF(NOT PRC(UC_N),
+*  PUT UC_N.TL;
+*ELSE
+*  LOOP(UCUCN$UC_N_UCUCN(UC_N,UCUCN),
+*     PUT UCUCN.TL;
+*  );
+*);
+*$LABEL SKIPUC_N
+$IF NOT '%12' == ''  PUT %12.TL;
+$IF     '%12' == ''  PUT "-";
+$IF '%13' == ',CG' $GOTO CG_LAB
+$IF '%13' == ',UC_GRP' $GOTO UC_GRP_LAB
+$IF NOT '%13' == ''  PUT %13.TL;
+$IF     '%13' == ''  PUT "-";
+$GOTO SKIPCG
+$LABEL CG_LAB
+IF (SAMEAS(CG,'ACT'),
+  PUT 'ACTGRP';
+ELSE
+  PUT CG.TL;
+);
+$GOTO SKIPCG
+$LABEL UC_GRP_LAB
+LOOP(UGR$UC_GRP_UGR(UC_GRP,UGR),
+   PUT UGR.TL;
+);
+$LABEL SKIPCG
+$IF '%14' == ',CG2' $GOTO CG_LAB2
+$IF NOT '%14' == ''  PUT %14.TL;
+$IF     '%14' == ''  PUT "-";
+$GOTO SKIPCG2
+$LABEL CG_LAB2
+IF (SAMEAS(CG2,'ACT'),
+  PUT 'ACTGRP';
+ELSE
+  PUT CG2.TL;
+);
+$LABEL SKIPCG2
+$IF '%15' == ',TSLVL' $GOTO TSLVL_LAB15
+$IF NOT '%15' == ''  PUT %15.TL;
+$IF     '%15' == ''  PUT "-";
+$GOTO SKIPTSLVL
+$LABEL TSLVL_LAB15
+* map 'ANNUAL' TSLVL to 'ANNUAL-TSL' needed by ANSWER-TIMES
+IF(SAMEAS(TSLVL,'ANNUAL'),
+  PUT 'ANNUAL-TSL';
+ELSE
+  PUT TSLVL.TL;
+);
+$LABEL SKIPTSLVL
+$IF NOT '%16' == ''  PUT %16.TL;
+$IF     '%16' == ''  PUT "-";
+
+LOOP(ANSOTHYR(J,OTHERYR),
+  IF(%1(%2,OTHERYR,%4%5%6%7%8%9),
+    PUT (1*%1(%2,OTHERYR,%4%5%6%7%8%9));
+  ELSE
+    PUT "null";
+  );
+);
+);
+$IF '%4' == 'PRC' );
+$IF '%4' == 'COM' );
+*$OFFLISTING

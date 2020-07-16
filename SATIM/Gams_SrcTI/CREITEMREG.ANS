@@ -1,0 +1,159 @@
+* CREITEMREG.ANS
+
+* Create the *** ITEMS *** section of the ANSWER .IMP file for region REG.
+
+* The code below takes into account the following possibilities:
+*   A member of UC_N also appearing as a member of COM_GRP and of COM,
+*   so that SET COM_DESC can be used to associate a Description with it.
+
+* The code below does NOT attempt to take into account such possibilities as:
+*   A member of UC_N having the same name as a member of PRC.
+
+
+* Assign appropriate values to FLAG() corresponding to the Set Memberships of 
+* UC_N, COM_GRP, COM, PRC and TimeSlice members in region REG. 
+
+$INCLUDE FLAG.ANS
+
+* Put out the *** ITEMS *** header.
+PUT OUTSCEN / "*** ITEMS ***", REG.TL;
+
+
+*** TIMESLICES - these are component W in ANSWER.
+
+* Put out TimeSlice Items in region REG.
+* (For now, assume TimeSlices in region REG are same as _GLOBAL region TimeSlices.)
+
+$BATINCLUDE putTS_Item.ANS
+
+
+*** PROCESSES - these are component T in ANSWER.
+
+* Deal with those PRC in region REG for which PRC_DESC(REG,PRC) is specified.
+
+LOOP(PRC_DESC(REG,PRC)$AREG_PRC(PRC),
+* Put out 'Item:', Component, Item, Description taken from SET PRC_DESC.
+  PUT / "Item:","T",PRC.TL,PRC_DESC.TE(PRC_DESC);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'T' PRC
+* Put out 'Units:', followed by Process Activity and Capacity Units.
+$ BATINCLUDE putPRCUnit.ANS PRC
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+* Deal with those PRC in region REG for which PRC_DESC(REG,PRC) is NOT specified.
+
+LOOP(PRC$(AREG_PRC(PRC) AND NOT PRC_DESC(REG,PRC)),
+* Put out 'Item:', Component, Item, Description taken from SET PRC.
+  PUT / "Item:","T",PRC.TL,PRC.TE(PRC);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'T' PRC
+* Put out 'Units:', followed by Process Activity and Capacity Units.
+$ BATINCLUDE putPRCUnit.ANS PRC
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+
+*** 'TRUE' COMMODITY GROUPS - these are component D in ANSWER.
+
+* Deal with 'true' COM_GRP Items in region REG.
+* (But exclude DEM, ENV, FIN, MAT, NRG from being put out.)
+
+*SET COM_GRPEXC(*) / 'DEM', 'ENV', 'FIN', 'MAT', 'NRG' /;
+
+LOOP(COM_GRP$(AREG_COMGP(COM_GRP) AND NOT AREG_COM(COM_GRP) AND NOT COM_GRPEXC(COM_GRP)),
+* Put out 'Item:', Component, Item, Description taken from SET COM_GRP.
+  PUT / "Item:","D",COM_GRP.TL,COM_GRP.TE(COM_GRP);
+* Need to assign FLAG for COM_GRPTRU, since not a TIMES set in the input DD.
+  FLAG('D',COM_GRP,'COM_GRPTRU') = 2;
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSETS.ANS 'D' COM_GRP
+* Put out just 'Units:' sub-header, since TIMES is agnostic about have COM_GRP Items having Units.
+$ BATINCLUDE putNoUnits.ANS
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+
+*** COMMODITIES - these are component E in ANSWER.
+
+* Deal with those COM in region REG for which COM_DESC(REG,COM) is specified.
+
+LOOP(COM_DESC(REG,COM)$(AREG_COM(COM) AND NOT COMACT(COM)),
+* Put out 'Item:', Component, Item, Description taken from SET COM_DESC.
+  PUT / "Item:","E",COM.TL,COM_DESC.TE(COM_DESC);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'E' COM
+* Put out 'Units:', followed by Commodity Units.
+$ BATINCLUDE putCOMUnit.ANS COM
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+* Deal with those COM in region REG for which COM_DESC(REG,COM) is NOT specified.
+
+LOOP(COM$(AREG_COM(COM) AND NOT COMACT(COM) AND NOT COM_DESC(REG,COM)),
+* Put out 'Item:', Component, Item, Description taken from SET COM.
+  PUT / "Item:","E",COM.TL,COM.TE(COM);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSETS.ANS 'E' COM
+* Put out 'Units:', followed by Commodity Units.
+$ BATINCLUDE putCOMUnit.ANS COM
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+
+*** USER CONSTRAINTS - these are component C in ANSWER.
+
+* Deal with those UC_N in region REG, also in SET COM and for which COM_DESC(REG,COM) is specified.
+* Below we need to have COM rather than UC_N since COM_DESC is declared over (REG,COM).
+* (But the code works including for Sets because of  
+
+LOOP(COM_DESC(REG,COM)$AREG_UCN(COM),
+* Put out 'Item:', Component, Item, Description taken from SET COM_DESC.
+  PUT / "Item:","C",COM.TL,COM_DESC.TE(COM_DESC);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'C' COM
+* Put out just 'Units:' sub-header, since Constraint Items have no Units.
+$ BATINCLUDE putNoUnits.ANS
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+* Deal with those UC_N in region REG, NOT also in SET COM and for which COM_DESC() is NOT specified.
+* The latter dealt with via the NOT UCN_COM(UC_N) condition.
+
+LOOP(UC_N$(AREG_UCN(UC_N) AND NOT UCN_COM(UC_N)),
+* Put out 'Item:', Component, Item, Description taken from SET UC_N.
+  PUT / "Item:","C",UC_N.TL,UC_N.TE(UC_N);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'C' UC_N
+* Put out just 'Units:' sub-header, since Constraint Items have no Units.
+$ BATINCLUDE putNoUnits.ANS
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);
+
+* NOV2008 - Use SET UCN_MARKET as part of handling parameter PRC_MARK.
+* Deal with members of SET UCN_MARKET in region REG.
+LOOP(UCN_MARKET,
+* Put out 'Item:', Component, Item, Description for now same as Item Name.
+  PUT / "Item:","C",UCN_MARKET.TL,UCN_MARKET.TL;
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'C' UCN_MARKET
+* Put out just 'Units:' sub-header, since Constraint Items have no Units.
+$ BATINCLUDE putNoUnits.ANS
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);

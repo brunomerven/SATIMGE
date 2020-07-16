@@ -1,0 +1,78 @@
+* allTIDtimes.ans
+
+ALIAS (ALLYEAR,ALLYEAR2);
+ALIAS (TS,TS2);
+
+$BATINCLUDE putTIDtimes.ans "COM_BQTY" "REG" ",COM" ",TS" 
+$BATINCLUDE putTIDtimes.ans "COM_CUMNET" "REG" ",ALLYEAR" ",ALLYEAR2" ",COM" ",BD" 
+$BATINCLUDE putTIDtimes.ans "COM_CUMPRD" "REG" ",ALLYEAR" ",ALLYEAR2" ",COM" ",BD" 
+$BATINCLUDE putTIDtimes.ans "COM_STEP" "REG" ",COM" ",BD" 
+$BATINCLUDE putTIDtimes.ans "G_YRFR" "REG" ",TS" 
+$BATINCLUDE putTIDtimes.ans "NCAP_PASTI" "REG" ",PASTYEAR" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "NCAP_PASTY" "REG" ",PASTYEAR" ",PRC" 
+*$BATINCLUDE putTIDtimes.ans "NCAP_TLIFE" "REG" ",PASTYEAR" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "PRC_CAPACT" "REG" ",PRC" 
+
+$IF NOT %ETL% == "YES" $GOTO NOETL
+*Note that TEG is handled differently since in TIMES-GAMS code, not defined over REG.
+*FIX*$BATINCLUDE putTIDtimes.ans "TEG" ",PRC"
+$BATINCLUDE putTIDtimes.ans "CCAP0" "REG" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "CCAPM" "REG" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "PRAT" "REG" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "SC0" "REG" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "SEG" "REG" ",PRC" 
+$LABEL NOETL
+
+** now put out multi-dimensional sets as TID parameters
+$BATINCLUDE putTIDtimes.ans "COM_GMAP" "REG" ",CG" ",COM" 
+$BATINCLUDE putTIDtimes.ans "COM_LIM" "REG" ",COM" ",BD" 
+$BATINCLUDE putTIDtimes.ans "COM_OFF" "REG" ",COM" ",BOHYEAR" ",EOHYEAR" 
+$BATINCLUDE putTIDtimes.ans "COM_PEAK" "REG" ",CG" 
+$BATINCLUDE putTIDtimes.ans "COM_PKTS" "REG" ",CG" ",TS" 
+$BATINCLUDE putTIDtimes.ans "COM_TS" "REG" ",COM" ",TS" 
+$BATINCLUDE putTIDtimes.ans "PRC_ACTUNT" "REG" ",PRC" ",CG" ",UNITS_ACT" 
+$BATINCLUDE putTIDtimes.ans "PRC_AOFF" "REG" ",PRC" ",BOHYEAR" ",EOHYEAR" 
+$BATINCLUDE putTIDtimes.ans "PRC_CG" "REG" ",PRC" ",CG" 
+$BATINCLUDE putTIDtimes.ans "PRC_FOFF" "REG" ",PRC" ",COM" ",TS" ",BOHYEAR" ",EOHYEAR" 
+$BATINCLUDE putTIDtimes.ans "PRC_NOFF" "REG" ",PRC" ",BOHYEAR" ",EOHYEAR" 
+$BATINCLUDE putTIDtimes.ans "PRC_PKAF" "REG" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "PRC_PKNO" "REG" ",PRC" 
+$BATINCLUDE putTIDtimes.ans "PRC_NSTTS" "REG" ",PRC" ",TS" 
+$BATINCLUDE putTIDtimes.ans "PRC_SPG" "REG" ",PRC" ",CG" 
+$BATINCLUDE putTIDtimes.ans "PRC_STGIPS" "REG" ",PRC" ",COM" 
+$BATINCLUDE putTIDtimes.ans "PRC_STGTSS" "REG" ",PRC" ",COM" 
+$BATINCLUDE putTIDtimes.ans "PRC_TS" "REG" ",PRC" ",TS" 
+$BATINCLUDE putTIDtimes.ans "PRC_VINT" "REG" ",PRC" 
+** note use of IN, OUT and TOP-IN, TOP-OUT
+$BATINCLUDE putTIDtimes.ans "TOP" "REG" ",PRC" ",COM" ",IO" 
+$BATINCLUDE putTIDtimes.ans "TS_MAP" "REG" ",TS2" ",TS" 
+
+** now put out multi-dimensional UC_ sets which are TID parameters in ANSWER
+$BATINCLUDE putTIDtimes.ans "UC_ATTR" "REG" ",UC_N" ",SIDE" ",UC_GRPTYPE" ",UC_NAME" 
+*n* $BATINCLUDE putTIDtimes.ans "UC_DYN" "REG" "UC_N" ",UC_NUMBER" 
+*n* $BATINCLUDE putTIDtimes.ans "UC_GMAP" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" 
+*n* $BATINCLUDE putTIDtimes.ans "UC_GMAP_C" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" ",COM" 
+*n* $BATINCLUDE putTIDtimes.ans "UC_GMAP_P" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" ",PRC" 
+*n* in following line, order of "ALL_REG" and ",UC_N" reversed from previously
+*AUG2007 - it is UC_R_EACH(ALL_REG,UC_N), but we're in a loop over REG, so change ALL_REG to REG
+*          really means we need to also handle any UC_R_EACH for external ALL_REG
+*$BATINCLUDE putTIDtimes.ans "UC_R_EACH" "ALL_REG" ",UC_N" 
+$BATINCLUDE putTIDtimes.ans "UC_R_EACH" "REG" ",UC_N" 
+*n* in following line, order of "ALL_REG" and ",UC_N" reversed from previously 
+*AUG2007 - it is UC_R_SUM(ALL_REG,UC_N), but we're in a loop over REG, so change ALL_REG to REG
+*          really means we need to also handle any UC_R_SUM for external ALL_REG
+*$BATINCLUDE putTIDtimes.ans "UC_R_SUM" "ALL_REG" ",UC_N" 
+$BATINCLUDE putTIDtimes.ans "UC_R_SUM" "REG" ",UC_N" 
+** even though no REG as first argument, putTID.ans works 
+*n* $BATINCLUDE putTIDtimes.ans "UC_REG" ",UC_N" ",UC_NUMBER" 
+*n* with new approach to User Constraints, UC_T_SUCC becomes a TS parameter, and with different arguments
+*n* $BATINCLUDE putTIDtimes.ans "UC_T_SUCC" "REG" ",UC_N" ",UC_GRP" ",SIDE" 
+*n* $BATINCLUDE putTIDtimes.ans "UC_TS" "REG" ",UC_N" ",UC_NUMBER" 
+$BATINCLUDE putTIDtimes.ans "UC_TS_EACH" "REG" ",UC_N" ",TS" 
+$BATINCLUDE putTIDtimes.ans "UC_TS_SUM" "REG" ",UC_N" ",TS" 
+
+* Trade TID parameters
+$BATINCLUDE putTIDtimes.ans "IRE_CCVT" "ALL_REG" ",COM" ",ALL_REG2" ",COM2" 
+$BATINCLUDE putTIDtimes.ans "IRE_TSCVT" "ALL_REG" ",TS" ",ALL_REG2" ",TS2" 
+$BATINCLUDE putTIDtimes.ans "TOP_IRE" "ALL_REG" ",COM" ",ALL_REG2" ",COM2" ",PRC" 
+

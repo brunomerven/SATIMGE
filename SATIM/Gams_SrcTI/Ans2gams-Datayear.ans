@@ -1,0 +1,690 @@
+* ANS2GAMS-DATAYEAR.ANS - same as ANS2GAMS.ANS but:
+*   replace all MILESTONYR by DATAYEAR
+*   replace all transTS.ans by transTS-Datayear.ans
+*   replace all transTSreg2.ans by transTSreg2-Datayear.ans
+*   replace all trnGblTS.ans by trnGblTS-Datayear.ans
+*   replace all trnUC_TS.ans by trnUC_TS-Datayear.ans
+*   replace all trnUC_TS2.ans by trnUC_TS2-Datayear.ans
+*   replace all trnUC_TS3n.ans by trnUC_TS3n-Datayear.ans
+*   replace all trnUC_TSnoreg.ans by trnUC_TSnoreg-Datayear.ans
+
+$OFFLISTING
+
+** Introduce the following sets to speed up processing
+SET TEMPSET1(*);
+SET TEMPSET2(*,*);
+SET TEMPSET3(*,*,*);
+SET TEMPSET4(*,*,*,*);
+SET TEMPSET5(*,*,*,*,*);
+SET TEMPSET6(*,*,*,*,*,*);
+SET TEMPSET7(*,*,*,*,*,*,*);
+
+SET CUR / 'CUR' /;
+
+$INCLUDE ti_sets.ans
+
+* time-series data
+
+DATAYEAR('0') = YES;
+
+$BATINCLUDE transTS-Datayear.ans "ACT_BND" "REG" ",DATAYEAR" ",PRC" ",TS" ",BD" "" "" "" "AACT_BND" "REG" ",PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "ACT_COST" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "AACT_COST" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*display ACT_COST;
+
+*JUN2007
+$BATINCLUDE transTS-Datayear.ans "ACT_EFF" "REG" ",DATAYEAR" ",PRC" ",CG" ",TS" "" "" "" "AACT_EFF" "REG" ",PRC" "" ",CG" "" ",TS" "" "TEMPSET4"
+
+*AUG2013* Add ACT_FLO parameter to ANSWER
+$BATINCLUDE transTS-Datayear.ans "ACT_FLO" "REG" ",DATAYEAR" ",PRC" ",CG" ",TS" "" "" "" "AACT_FLO" "REG" ",PRC" "" ",CG" "" ",TS" "" "TEMPSET4"
+option ACT_FLO:0:0:1; display ACT_FLO;
+
+*OCT2014* Add ACT_UPS parameter to ANSWER
+$BATINCLUDE transTS-Datayear.ans "ACT_UPS" "REG" ",DATAYEAR" ",PRC" ",TS" ",BD" "" "" "" "AACT_UPS" "REG" ",PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+option ACT_UPS:0:0:1; display ACT_UPS;
+
+$BATINCLUDE transTS-Datayear.ans "CAP_BND" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "ACAP_BND" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_AGG" "REG" ",DATAYEAR" ",COM" ",COM2" "" "" "" "" "ACOM_AGG" "REG" "" ",COM" "" ",COM2" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_BNDNET" "REG" ",DATAYEAR" ",COM" ",TS" ",BD" "" "" "" "ACOMBNDNET" "REG" "" ",COM" "" "" ",TS" ",BD" "TEMPSET4" "NOKILL"
+$BATINCLUDE transTS-Datayear.ans "COM_BNDNET" "REG" ",DATAYEAR" ",COM" ",TS" ",'N'" "" "" "" "ACOMBNDNET" "REG" "" ",COM" "" "" ",TS" ",'NB'" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "COM_BNDPRD" "REG" ",DATAYEAR" ",COM" ",TS" ",BD" "" "" "" "ACOMBNDPRD" "REG" "" ",COM" "" "" ",TS" ",BD" "TEMPSET4" "NOKILL"
+$BATINCLUDE transTS-Datayear.ans "COM_BNDPRD" "REG" ",DATAYEAR" ",COM" ",TS" ",'N'" "" "" "" "ACOMBNDPRD" "REG" "" ",COM" "" "" ",TS" ",'NB'" "TEMPSET4"
+*2004* COM_BPRICE has become a TS
+$BATINCLUDE transTS-Datayear.ans "COM_BPRICE" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMBPRICE" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+
+*JUN2007 - v236 INITMTY.MOD no longer contains COM_COST parameter! so asterisk out both COM_COST lines!
+** note use of IN and ACOMCOSTIN
+* $BATINCLUDE transTS-Datayear.ans "COM_COST" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" ",IN" "" "" "ACOMCOSTIN" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+** note use of OUT and ACOMCOSTOU
+* $BATINCLUDE transTS-Datayear.ans "COM_COST" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" ",OUT" "" "" "ACOMCOSTOU" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+
+$BATINCLUDE transTS-Datayear.ans "COM_CSTNET" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMCSTNET" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_CSTPRD" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMCSTPRD" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+
+* 21MAR2017 - allow 'N' LIM Type for COM_ELAST
+$BATINCLUDE transTS-Datayear.ans "COM_ELAST" "REG" ",DATAYEAR" ",COM" ",TS" ",BD" "" "" "" "ACOM_ELAST" "REG" "" ",COM" "" "" ",TS" ",BD" "TEMPSET4 "NOKILL" 
+$BATINCLUDE transTS-Datayear.ans "COM_ELAST" "REG" ",DATAYEAR" ",COM" ",TS" ",'N'" "" "" "" "ACOM_ELAST" "REG" "" ",COM" "" "" ",TS" ",'NB'" "TEMPSET4" 
+option COM_ELAST:0:0:1; display COM_ELAST;
+
+$BATINCLUDE transTS-Datayear.ans "COM_ELASTX" "REG" ",DATAYEAR" ",COM" ",BD" "" "" "" "" "ACOMELASTX" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3"
+*display COM_ELASTX;
+$BATINCLUDE transTS-Datayear.ans "COM_FR" "REG" ",DATAYEAR" ",COM" ",TS" "" "" "" "" "ACOM_FR" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_IE" "REG" ",DATAYEAR" ",COM" ",TS" "" "" "" "" "ACOM_IE" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_PKFLX" "REG" ",DATAYEAR" ",COM" ",TS" "" "" "" "" "ACOM_PKFLX" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_PKRSV" "REG" ",DATAYEAR" ",COM" "" "" "" "" "" "ACOM_PKRSV" "REG" "" ",COM" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "COM_PROJ" "REG" ",DATAYEAR" ",COM" "" "" "" "" "" "ACOM_PROJ" "REG" "" ",COM" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "COM_SUBNET" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMSUBNET" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_SUBPRD" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMSUBPRD" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_TAXNET" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMTAXNET" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_TAXPRD" "REG" ",DATAYEAR" ",COM" ",TS" ",CUR" "" "" "" "ACOMTAXPRD" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "COM_VOC" "REG" ",DATAYEAR" ",COM" ",BD" "" "" "" "" "ACOM_VOC" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3"
+* 21JUN2010 - remove phantom entries for ADAM_COST, ADAM_ELAST and use $IF DEFINED in ANS2GAMS.ANS
+$IF DEFINED ADAM_COST $BATINCLUDE transTS-Datayear.ans "DAM_COST" "REG" ",DATAYEAR" ",COM" ",CUR" "" "" "" "" "ADAM_COST" "REG" "" ",COM" "" "" "" "" "TEMPSET2"
+*display DAM_COST;
+* 16MAR2010 - 3 new DAMAGE parameters: DAM_TQTY, DAM_TVOC, DAM_COEF 
+$BATINCLUDE transTS-Datayear.ans "DAM_TQTY" "REG" ",DATAYEAR" ",COM" "" "" "" "" "" "ADAM_TQTY" "REG" "" ",COM" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "DAM_TVOC" "REG" ",DATAYEAR" ",COM" ",BD" "" "" "" "" "ADAM_TVOC" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "DAM_COEF" "REG" ",DATAYEAR" ",COM" ",TS" "" "" "" "" "ADAM_COEF" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+
+$BATINCLUDE transTS-Datayear.ans "FLO_BND" "REG" ",DATAYEAR" ",PRC" ",CG" ",TS" ",BD" "" "" "AFLO_BND" "REG" ",PRC" "" ",CG" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "FLO_COST" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",CUR" "" "" "AFLO_COST" "REG" ",PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "FLO_DELIV" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",CUR" "" "" "AFLO_DELIV" "REG" ",PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+
+*JUN2007 - note that in FLO_EMIS the order is CG,COM while in AFLO_EMIS the order is COM, CG 
+*AUG2007 - note that FLO_EMIS may have 'ACTGRP' in the CG position, this is fine so long as $SET PGPRIM "'ACTGRP'" is in GEN file.
+* 30MARCH2011 - add FLO_EFF as alias for FLO_EMIS
+$BATINCLUDE transTS-Datayear.ans "FLO_EFF" "REG" ",DATAYEAR" ",PRC" ",CG" ",COM" ",TS" "" "" "AFLO_EFF" "REG" ",PRC" ",COM" ",CG" "" ",TS" "" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "FLO_EMIS" "REG" ",DATAYEAR" ",PRC" ",CG" ",COM" ",TS" "" "" "AFLO_EMIS" "REG" ",PRC" ",COM" ",CG" "" ",TS" "" "TEMPSET5"
+
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "FLO_FEQ" "REG" ",DATAYEAR" ",PRC" ",COM" "" "" "" "" "AFLO_FEQ" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "FLO_FR" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",BD" "" "" "AFLO_FR" "REG" ",PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "FLO_MARK" "REG" ",DATAYEAR" ",PRC" ",COM" ",BD" "" "" "" "AFLO_MARK" "REG" ",PRC" ",COM" "" "" "" ",BD" "TEMPSET4"
+** note use of CG2
+$BATINCLUDE transTS-Datayear.ans "FLO_FUNC" "REG" ",DATAYEAR" ",PRC" ",CG" ",CG2" ",TS" "" "" "AFLO_FUNC" "REG" ",PRC" "" ",CG" ",CG2" ",TS" "" "TEMPSET5"
+** note use of CG2
+$BATINCLUDE transTS-Datayear.ans "FLO_FUNCX" "REG" ",DATAYEAR" ",PRC" ",CG" ",CG2" "" "" "" "AFLO_FUNCX" "REG" ",PRC" "" ",CG" ",CG2" "" "" "TEMPSET4"
+*2004* new parameters FLO_MRKCON, FLO_MRKPRD
+$BATINCLUDE transTS-Datayear.ans "FLO_MRKCON" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",BD" "" "" "AFLOMRKCON" "REG" ",PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "FLO_MRKPRD" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",BD" "" "" "AFLOMRKPRD" "REG" ",PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "FLO_PKCOI" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" "" "" "" "AFLO_PKCOI" "REG" ",PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "FLO_SHAR" "REG" ",DATAYEAR" ",PRC" ",COM" ",CG" ",TS" ",BD" "" "AFLO_SHAR" "REG" ",PRC" ",COM" ",CG" "" ",TS" ",BD" "TEMPSET6"
+$BATINCLUDE transTS-Datayear.ans "FLO_SUB" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",CUR" "" "" "AFLO_SUB" "REG" ",PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+** note use of CG2
+$BATINCLUDE transTS-Datayear.ans "FLO_SUM" "REG" ",DATAYEAR" ",PRC" ",CG" ",COM" ",CG2" ",TS" "" "AFLO_SUM" "REG" ",PRC" ",COM" ",CG" ",CG2" ",TS" "" "TEMPSET6"
+$BATINCLUDE transTS-Datayear.ans "FLO_TAX" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",CUR" "" "" "AFLO_TAX" "REG" ",PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "G_CHNGMONY" "REG" ",DATAYEAR" ",CUR" "" "" "" "" "" "AGCHNGMONY" "REG" "" "" "" "" "" "" "TEMPSET1"
+$BATINCLUDE transTS-Datayear.ans "G_DRATE" "REG" ",DATAYEAR" ",CUR" "" "" "" "" "" "AG_DRATE" "REG" "" "" "" "" "" "" "TEMPSET1"
+
+*NOV2006* new treatment for AIRE_BND with ALL_REG now in Region2 position rather than Item4 position
+* $BATINCLUDE transTS-Datayear.ans "IRE_BND" "REG" ",DATAYEAR" ",COM" ",TS" ",ALL_REG" ",IE" ",BD" "" "AIRE_BND" "REG" "" ",COM" ",TS" ",ALL_REG" ",IE" ",BD" "TEMPSET6"
+$BATINCLUDE transTSreg2-Datayear.ans "IRE_BND" "REG" ",DATAYEAR" ",COM" ",TS" ",ALL_REG" ",IE" ",BD" "" "AIRE_BND" "REG" ",ALL_REG" "" ",COM" ",TS" "" ",IE" ",BD" "TEMPSET6"
+
+** note use of REG2 and COM2
+*NOV2006* new treatment for AIRE_FLO with REG2 now in Region2 position rather than Item4 position
+* $BATINCLUDE transTS-Datayear.ans "IRE_FLO" "REG" ",DATAYEAR" ",PRC" ",COM" ",REG2" ",COM2" ",TS" "" "AIRE_FLO" "REG" ",PRC" ",COM" ",TS" ",REG2" "" ",COM2" "TEMPSET6"
+$BATINCLUDE transTSreg2-Datayear.ans "IRE_FLO" "REG" ",DATAYEAR" ",PRC" ",COM" ",REG2" ",COM2" ",TS" "" "AIRE_FLO" "REG" ",REG2" ",PRC" ",COM" ",TS" "" "" ",COM2" "TEMPSET6"
+
+
+** note use of IN, OUT and IRE_FLOSUM-IN, IRE_FLOSUMOUT, also use of COM2
+$BATINCLUDE transTS-Datayear.ans "IRE_FLOSUM" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",IMPEXP" ",COM2" ",IN" "AIREFLOIN" "REG" ",PRC" ",COM" ",TS" "" ",IMPEXP" ",COM2" "TEMPSET6"
+$BATINCLUDE transTS-Datayear.ans "IRE_FLOSUM" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",IMPEXP" ",COM2" ",OUT" "AIREFLOOUT" "REG" ",PRC" ",COM" ",TS" "" ",IMPEXP" ",COM2" "TEMPSET6"
+
+** note use of ALL_REG
+*NOV2006* new treatment for AIRE_PRICE with ALL_REG now in Region2 position rather than Item4 position
+* $BATINCLUDE transTS-Datayear.ans "IRE_PRICE" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",ALL_REG" ",IE" ",CUR" "AIRE_PRICE" "REG" ",PRC" ",COM" ",TS" ",ALL_REG" ",IE" "" "TEMPSET6"
+$BATINCLUDE transTSreg2-Datayear.ans "IRE_PRICE" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",ALL_REG" ",IE" ",CUR" "AIRE_PRICE" "REG" ",ALL_REG" ",PRC" ",COM" ",TS" "" ",IE" "" "TEMPSET6"
+
+
+$BATINCLUDE transTS-Datayear.ans "IRE_XBND" "REG" ",DATAYEAR" ",COM" ",TS" ",IE" ",BD" "" "" "AIRE_XBND" "REG" "" ",COM" ",TS" "" ",IE" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "NCAP_AF" "REG" ",DATAYEAR" ",PRC" ",TS" ",BD" "" "" "" "ANCAP_AF" "REG" ",PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "NCAP_AFA" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "ANCAP_AFA" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3"
+
+*JUN2007 - note that this involves TSLVL, where 'ANNUAL-TSL' from ANSWER needs to be mapped to 'ANNUAL'
+*          so first we handle mapping 'ANNUAL-TSL' to 'ANNUAL', and then deal with the rest
+NCAP_AFC(REG,DATAYEAR,PRC,CG,'ANNUAL')$ANCAP_AFC(REG,PRC,CG,'ANNUAL-TSL',DATAYEAR) = ANCAP_AFC(REG,PRC,CG,'ANNUAL-TSL',DATAYEAR);
+$IF NOT DEFINED STL ALIAS(TSLVL,STL);
+$BATINCLUDE transTS-Datayear.ans "NCAP_AFC" "REG" ",DATAYEAR" ",PRC" ",CG" ",STL" "" "" "" "ANCAP_AFC" "REG" ",PRC" "" ",CG" "" ",STL" "" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "NCAP_AFC" "REG" ",DATAYEAR" ",PRC" ",CG" ",STL" "" "" "" "ANCAP_AFCS" "REG" ",PRC" "" ",CG" "" ",STL" "" "TEMPSET4"
+*option NCAP_AFC:0:0:1; display NCAP_AFC;
+
+$BATINCLUDE transTS-Datayear.ans "NCAP_AFM" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_AFM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_AFS" "REG" ",DATAYEAR" ",PRC" ",TS" ",BD" "" "" "" "ANCAP_AFS" "REG" ",PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE transTS-Datayear.ans "NCAP_AFX" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_AFX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_BND" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "ANCAP_BND" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTS-Datayear.ans "NCAP_BND" "REG" ",DATAYEAR" ",PRC" ",'N'" "" "" "" "" "ANCAP_BND" "REG" ",PRC" "" "" "" "" ",'NB'" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "NCAP_BPME" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_BPME" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$IF DECLARED NCAP_CDME
+$BATINCLUDE transTS-Datayear.ans "NCAP_CDME" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_CDME" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+*JUN2007
+$BATINCLUDE transTS-Datayear.ans "NCAP_CEH" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_CEH" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+* MAY2019 - Allow user to specify 'NB' (= 'N') as well as LO/FX/UP for NCAP_CHPR
+$BATINCLUDE transTS-Datayear.ans "NCAP_CHPR" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "ANCAP_CHPR" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTS-Datayear.ans "NCAP_CHPR" "REG" ",DATAYEAR" ",PRC" ",'N'" "" "" "" "" "ANCAP_CHPR" "REG" ",PRC" "" "" "" "" ",'NB'" "TEMPSET3"
+*option NCAP_CHPR:0:0:1; display NCAP_CHPR;
+
+* 16MAR2010 - NCAP_CLAG(REG,ALLYEAR,PRC,COM,IO) - note IO argument
+** note use of IN and ANCAP_CLAGIN
+$BATINCLUDE transTS-Datayear.ans "NCAP_CLAG" "REG" ",DATAYEAR" ",PRC" ",COM" ",IN" "" "" "" "ANCAP_CLAGIN" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+** note use of OUT and ANCAP_CLAGOUT
+$BATINCLUDE transTS-Datayear.ans "NCAP_CLAG" "REG" ",DATAYEAR" ",PRC" ",COM" ",OUT" "" "" "" "ANCAP_CLAGOUT" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+*
+$BATINCLUDE transTS-Datayear.ans "NCAP_CLED" "REG" ",DATAYEAR" ",PRC" ",COM" "" "" "" "" "ANCAP_CLED" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+** note use of IN and ANCAPCOMIN
+$BATINCLUDE transTS-Datayear.ans "NCAP_COM" "REG" ",DATAYEAR" ",PRC" ",COM" ",IN" "" "" "" "ANCAPCOMIN" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+** note use of OUT and ANCAPCOMOU
+$BATINCLUDE transTS-Datayear.ans "NCAP_COM" "REG" ",DATAYEAR" ",PRC" ",COM" ",OUT" "" "" "" "ANCAPCOMOU" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "NCAP_COST" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAP_COST" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+*  NCAP_CPX added 15 March 2018
+$BATINCLUDE transTS-Datayear.ans "NCAP_CPX" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_CPX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+option NCAP_CPX:0:0:1; display NCAP_CPX;
+
+$BATINCLUDE transTS-Datayear.ans "NCAP_DCOST" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAPDCOST" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_DELIF" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPDELIF" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_DLAG" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_DLAG" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_DLAGC" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAPDLAGC" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_DLIFE" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPDLIFE" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_DRATE" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPDRATE" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "NCAP_EFF" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_EFF" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "NCAP_EFFM" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_EFFM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "NCAP_EFFX" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_EFFX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_ELIFE" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPELIFE" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+*JUL2016* Add NCAP_FDR parameter to ANSWER
+$BATINCLUDE transTS-Datayear.ans "NCAP_FDR" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_FDR" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+option NCAP_FDR:0:0:1; display NCAP_FDR;
+
+$BATINCLUDE transTS-Datayear.ans "NCAP_FOM" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAP_FOM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FOMM" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_FOMM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FOMX" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_FOMX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FSUB" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAP_FSUB" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FSUBM" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPFSUBM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FSUBX" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPFSUBX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FTAX" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAP_FTAX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FTAXM" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPFTAXM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_FTAXX" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPFTAXX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_ICOM" "REG" ",DATAYEAR" ",PRC" ",COM" "" "" "" "" "ANCAP_ICOM" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "NCAP_ILED" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_ILED" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+* 21MAR2017 - asterisked out the line below following correspondence with Uwe Remme and Antti Lehtila
+*NCAP_ILED(REG,DATAYEAR,PRC)$(NCAP_ILED(REG,DATAYEAR,PRC) EQ EPS) = 0;
+  
+$BATINCLUDE transTS-Datayear.ans "NCAP_ISUB" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAP_ISUB" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_ITAX" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "ANCAP_ITAX" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "NCAP_LCOST" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPLCOST" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "NCAP_LFOM" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_LFOM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_OCOM" "REG" ",DATAYEAR" ",PRC" ",COM" "" "" "" "" "ANCAP_OCOM" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "NCAP_PKCNT" "REG" ",DATAYEAR" ",PRC" ",TS" "" "" "" "" "ANCAPPKCNT" "REG" ",PRC" "" "" "" ",TS" "" "TEMPSET3"
+*OCT2007 $BATINCLUDE transTS-Datayear.ans "NCAP_SALV" "REG" ",DATAYEAR" ",PRC" ",COM" ",CUR" "" "" "" "ANCAP_SALV" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "NCAP_TLIFE" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPTLIFE" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "NCAP_VALU" "REG" ",DATAYEAR" ",PRC" ",COM" ",CUR" "" "" "" "ANCAP_VALU" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "PRC_ACTFLO" "REG" ",DATAYEAR" ",PRC" ",CG" "" "" "" "" "APRCACTFLO" "REG" ",PRC" "" ",CG" "" "" "" "TEMPSET3"
+
+* Reactance for powerflow equations (experimental in TIMES GAMS code version 3.3.8)
+$BATINCLUDE transTS-Datayear.ans "PRC_REACT" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "APRC_REACT" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$IF DEFINED APRC_REACT option PRC_REACT:0:0:1; display PRC_REACT;
+
+* 23AUG2016 - GR_* TS parameters needed for TIMES Grid Modeling Features
+$BATINCLUDE transTS-Datayear.ans "GR_DEMFR" "REG" ",DATAYEAR" ",COM" ",TS" "" "" "" "" "AGR_DEMFR" "REG" ",COM" "" "" "" ",TS" "" "TEMPSET3"
+option GR_DEMFR:0:0:1; display GR_DEMFR;
+
+$BATINCLUDE transTS-Datayear.ans "GR_ENDFR" "REG" ",DATAYEAR" ",COM" ",COM2" "" "" "" "" "AGR_ENDFR" "REG" ",COM" "" ",COM2" "" "" "" "TEMPSET3"
+option GR_ENDFR:0:0:1; display GR_ENDFR;
+
+* Avoid the need to put out SET GENTYPE to the ANSWER-generated DD file by using SET ITEM
+$BATINCLUDE transTS-Datayear.ans "GR_GENFR" "REG" ",DATAYEAR" ",COM" ",ITEM" "" "" "" "" "AGR_GENFR" "REG" ",COM" "" "" "" ",ITEM" "" "TEMPSET3"
+option GR_GENFR:0:0:1; display GR_GENFR;
+
+$BATINCLUDE transTS-Datayear.ans "GR_XBND" "REG" ",DATAYEAR" "" "" "" "" "" "" "AGR_XBND" "REG" "" "" "" "" "" "" "TEMPSET1"
+option GR_XBND:0:0:1; display GR_XBND;
+
+
+*JUN2007
+$BATINCLUDE transTS-Datayear.ans "PRC_RESID" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "APRC_RESID" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+$BATINCLUDE transTS-Datayear.ans "STGIN_BND" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",BD" "" "" "ASTGIN_BND" "REG" ",PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "STGOUT_BND" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" ",BD" "" "" "ASTGOUTBND" "REG" ",PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE transTS-Datayear.ans "STG_CHRG" "REG" ",DATAYEAR" ",PRC" ",TS" "" "" "" "" "ASTG_CHRG" "REG" ",PRC" "" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTS-Datayear.ans "STG_EFF" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ASTG_EFF" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTS-Datayear.ans "STG_LOSS" "REG" ",DATAYEAR" ",PRC" ",TS" "" "" "" "" "ASTG_LOSS" "REG" ",PRC" "" "" "" ",TS" "" "TEMPSET3"
+
+
+* special code to create set COM_UNIT
+COM_UNIT(REG,COM,UNITS_COM)$ACOM_UNIT(REG,COM,UNITS_COM) = YES;
+*option COM_UNIT:0:0:1; display COM_UNIT;
+
+* special code to create set PRC_ACTUNT
+PRC_ACTUNT(REG,PRC,CG,UNITS_ACT)$(PRCTACTUNT(REG,PRC,UNITS_ACT) AND APRCACTUNT(REG,PRC,CG)) = YES;
+*option PRC_ACTUNT:0:0:1; display PRC_ACTUNT;
+
+* create TS globals B, E which do NOT depend on REG
+*OCT2007 $BATINCLUDE trnGblTS-Datayear.ans "B"  "DATAYEAR" "" "" "" "" "" "" "" "AB"
+*OCT2007 $BATINCLUDE trnGblTS-Datayear.ans "E"  "DATAYEAR" "" "" "" "" "" "" "" "AE"
+
+* special code to create TS global MULTI from AMULTI put out by ANSWER in terms of SET ANSJ / S001*S100 /;
+MULTI(J,DATAYEAR) $= SUM(ANSJ$ANSJ_J(ANSJ,J), AMULTI(ANSJ,DATAYEAR));
+*option MULTI:0:0:1; display MULTI;
+
+* create multi-dimensional UC_ sets which are TS parameters in ANSWER
+** note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_T_EACH" "REG" ",UC_N" "DATAYEAR" "" "" "" "" "" "AUC_T_EACH" "REG" ",UC_N" "" "" "" "" "" TEMPSET2 
+** note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_T_SUM" "REG" ",UC_N" "DATAYEAR" "" "" "" "" "" "AUC_T_SUM" "REG" ",UC_N" "" "" "" "" "" TEMPSET2 
+*n* with new approach to User Constraints, UC_T_SUCC becomes a TS parameter
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_T_SUCC" "REG" ",UC_N" "DATAYEAR" "" "" "" "" "" "AUC_T_SUCC" "REG" ",UC_N" "" "" "" "" "" TEMPSET2
+
+* create UC_ TS parameters
+** note that "DATAYEAR" occurs in 5th argument position, not second
+*2004* UC_ACT has one less ALLYEAR in its dimensions
+$BATINCLUDE trnUC_TS3n-Datayear.ans "UC_ACT"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",PRC" ",TS" "" "" "AUC_ACT"  "REG" ",UC_N" ",SIDE" ",PRC" "" ",TS" "" TEMPSET5
+** note that "DATAYEAR" occurs in 4th argument position, not second
+$BATINCLUDE trnUC_TS2-Datayear.ans "UC_CAP"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",PRC" "" "" "" "AUC_CAP"  "REG" ",UC_N" ",SIDE" ",PRC" "" "" "" TEMPSET4
+
+** note that "DATAYEAR" occurs in 4th argument position, not second
+$BATINCLUDE trnUC_TS2-Datayear.ans "UC_COMCON"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",COM" ",TS" "" "" "AUC_COMCON"  "REG" ",UC_N" ",SIDE" "" ",COM" ",TS" "" TEMPSET5
+
+*JUN2007 - added UC_COMNET
+$BATINCLUDE trnUC_TS2-Datayear.ans "UC_COMNET"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",COM" ",TS" "" "" "AUC_COMNET"  "REG" ",UC_N" ",SIDE" "" ",COM" ",TS" "" TEMPSET5
+
+** note that "DATAYEAR" occurs in 4th argument position, not second
+$BATINCLUDE trnUC_TS2-Datayear.ans "UC_COMPRD"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",COM" ",TS" "" "" "AUC_COMPRD"  "REG" ",UC_N" ",SIDE" "" ",COM" ",TS" "" TEMPSET5
+** note that "DATAYEAR" occurs in 5th argument position, not second
+*2004* UC_FLO has one less ALLYEAR in its dimensions
+$BATINCLUDE trnUC_TS3n-Datayear.ans "UC_FLO"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",PRC" ",COM" ",TS" "" "AUC_FLO"  "REG" ",UC_N" ",SIDE" ",PRC" ",COM" ",TS" "" TEMPSET6
+
+*NOV2006* Added UC_IRE, previously missing
+$BATINCLUDE trnUC_TS3n-Datayear.ans "UC_IRE"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",PRC" ",COM" ",TS" ",IE" "AUC_IRE"  "REG" ",UC_N" ",SIDE" ",PRC" ",COM" ",TS" ",IE" TEMPSET7
+
+$BATINCLUDE transTS-Datayear.ans "PRC_MARK" "REG" ",DATAYEAR" ",PRC" ",UCN_MARKET" ",COM" ",BD" "" "" "AUC_MARKET"  "REG" ",UCN_MARKET" ",PRC" ",COM" "" "" ",BD" TEMPSET5
+*option PRC_MARK:0:0:1; display PRC_MARK;
+
+$BATINCLUDE transTS-Datayear.ans "REG_BNDCST" "REG" ",DATAYEAR" ",COSTAGG" ",CUR" ",BD" "" "" "" "AREGBNDCST"  "REG" "" "" "" ",COSTAGG" "" ",BD" TEMPSET3
+*option REG_BNDCST:0:0:1; display REG_BNDCST;
+
+** note that "DATAYEAR" occurs in 4th argument position, not second
+$BATINCLUDE trnUC_TS2-Datayear.ans "UC_NCAP"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",PRC" "" "" "" "AUC_NCAP"  "REG" ",UC_N" ",SIDE" ",PRC" "" "" "" TEMPSET4
+** note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_RHSRT"  "REG" ",UC_N" "DATAYEAR" ",BD" "" "" "" "" "AUC_RHSRT"  "REG" ",UC_N" "" "" "" "" ",BD" TEMPSET3 "NOKILL"
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_RHSRT"  "REG" ",UC_N" "DATAYEAR" ",'N'" "" "" "" "" "AUC_RHSRT"  "REG" ",UC_N" "" "" "" "" ",'NB'" TEMPSET3
+*option UC_RHSRT:0:0:1; display UC_RHSRT;
+** note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_RHSRTS"  "REG" ",UC_N" "DATAYEAR" ",TS" ",BD" "" "" "" "AUC_RHSRTS"  "REG" ",UC_N" "" "" "" ",TS" ",BD" TEMPSET4 "NOKILL"
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_RHSRTS"  "REG" ",UC_N" "DATAYEAR" ",TS" ",'N'" "" "" "" "AUC_RHSRTS"  "REG" ",UC_N" "" "" "" ",TS" ",'NB'" TEMPSET4
+*option UC_RHSRTS:0:0:1; display UC_RHSRTS;
+*NOV2006* AUC_RHST is a parameter with no REG
+$BATINCLUDE trnUC_TSnoreg-Datayear.ans "UC_RHST"  "UC_N" "DATAYEAR" ",BD" "" "" "" "" "" "AUC_RHST"  "UC_N" "" "" "" "" "" ",BD" TEMPSET2 "NOKILL"
+$BATINCLUDE trnUC_TSnoreg-Datayear.ans "UC_RHST"  "UC_N" "DATAYEAR" ",'N'" "" "" "" "" "" "AUC_RHST"  "UC_N" "" "" "" "" "" ",'NB'" TEMPSET2
+*option UC_RHST:0:0:1; display UC_RHST;
+*NOV2006* AUC_RHSTS is a parameter with no REG
+$BATINCLUDE trnUC_TSnoreg-Datayear.ans "UC_RHSTS"  "UC_N" "DATAYEAR" ",TS" ",BD" "" "" "" "" "AUC_RHSTS"  "UC_N" "" "" "" "" ",TS" ",BD" TEMPSET3 "NOKILL"
+$BATINCLUDE trnUC_TSnoreg-Datayear.ans "UC_RHSTS"  "UC_N" "DATAYEAR" ",TS" ",'N'" "" "" "" "" "AUC_RHSTS"  "UC_N" "" "" "" "" ",TS" ",'NB'" TEMPSET3
+*option UC_RHSTS:0:0:1; display UC_RHSTS;
+** note that "DATAYEAR" occurs in 3rd argument position, not second
+$BATINCLUDE trnUC_TS-Datayear.ans "UC_TIME" "UC_N" ",REG" "DATAYEAR" "" "" "" "" "" "AUC_TIME" "REG" ",UC_N" "" "" "" "" "" TEMPSET2 
+*option UC_TIME:0:0:1; display UC_TIME;
+
+* handle VDA_EMCB and VDA_FLOP if present
+$BATINCLUDE transTS-Datayear.ans "VDA_EMCB" "REG" ",DATAYEAR" ",COM" ",COM2" "" "" "" "" "AVDA_EMCB" "REG" "" ",COM" "" ",COM2" "" "" "TEMPSET3"
+*option VDA_EMCB:0:0:1; display VDA_EMCB;
+$BATINCLUDE transTS-Datayear.ans "VDA_FLOP" "REG" ",DATAYEAR" ",PRC" ",CG" ",TS" "" "" "" "AVDA_FLOP" "REG" ",PRC" "" ",CG" "" ",TS" "" "TEMPSET4"
+*option VDA_FLOP:0:0:1; display VDA_FLOP;
+
+DATAYEAR('0') = NO;
+
+* time-independent data
+
+$BATINCLUDE transTID.ans "ACT_CUM" "REG" ",PRC" ",BOHYEAR" ",EOHYEAR" ",BD" "" "" "" "AACT_CUM" "REG" ",PRC" "" "" ",BOHYEAR" ",EOHYEAR" ",BD" "TEMPSET5" "NOKILL"
+$BATINCLUDE transTID.ans "ACT_CUM" "REG" ",PRC" ",BOHYEAR" ",EOHYEAR" ",'N'" "" "" "" "AACT_CUM" "REG" ",PRC" "" "" ",BOHYEAR" ",EOHYEAR" ",'NB'" "TEMPSET5"
+*option ACT_CUM:0:0:1; display ACT_CUM;
+
+*2004* COM_BPRICE has become a TS
+*2004* $BATINCLUDE transTID.ans "COM_BPRICE" "REG" ",COM" ",TS" ",CUR" "" "" "" "" "ACOMBPRICE" "REG" "" ",COM" "" "" ",TS" ""
+*OCT2007 $BATINCLUDE transTID.ans "COM_BQTY" "REG" ",COM" ",TS" "" "" "" "" "" "ACOM_BQTY" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+
+* advised November 2005 by Antti Lehtila that COM_CUMNET and COM_CUMPRD should have BOTH year indexes between BOT and EOT,
+* hence these need to become TID data parameters in ANSWER-TIMES 
+* 30MAR2010 - BOHYEAR, EOHYEAR introduced to replace ALLYEAR, ALLYEAR2
+*$BATINCLUDE transTID.ans "COM_CUMNET" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",BD" "" "" "" "ACOMCUMNET" "REG" ",BOHYEAR" ",COM" "" "" ",EOHYEAR" ",BD" "TEMPSET5" "NOKILL"
+*$BATINCLUDE transTID.ans "COM_CUMNET" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",'N'" "" "" "" "ACOMCUMNET" "REG" ",BOHYEAR" ",COM" "" "" ",EOHYEAR" ",'NB'" "TEMPSET5"
+*$BATINCLUDE transTID.ans "COM_CUMPRD" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",BD" "" "" "" "ACOMCUMPRD" "REG" ",BOHYEAR" ",COM" "" "" ",EOHYEAR" ",BD" "TEMPSET5" "NOKILL"
+*$BATINCLUDE transTID.ans "COM_CUMPRD" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",'N'" "" "" "" "ACOMCUMPRD" "REG" ",BOHYEAR" ",COM" "" "" ",EOHYEAR" ",'NB'" "TEMPSET5"
+* 18FEB2014 - new order for COM_CUMNET and COM_CUMPRD indexes in ANSWER, so BOHYEAR index immediately precedes EOHYEAR index
+$BATINCLUDE transTID.ans "COM_CUMNET" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",BD" "" "" "" "ACOMCUMNET" "REG" "" ",COM" "" ",BOHYEAR" ",EOHYEAR" ",BD" "TEMPSET5" "NOKILL"
+$BATINCLUDE transTID.ans "COM_CUMNET" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",'N'" "" "" "" "ACOMCUMNET" "REG" "" ",COM" "" ",BOHYEAR" ",EOHYEAR" ",'NB'" "TEMPSET5"
+option COM_CUMNET:0:0:1; display COM_CUMNET;
+$BATINCLUDE transTID.ans "COM_CUMPRD" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",BD" "" "" "" "ACOMCUMPRD" "REG" "" ",COM" "" ",BOHYEAR" ",EOHYEAR" ",BD" "TEMPSET5" "NOKILL"
+$BATINCLUDE transTID.ans "COM_CUMPRD" "REG" ",BOHYEAR" ",EOHYEAR" ",COM" ",'N'" "" "" "" "ACOMCUMPRD" "REG" "" ",COM" "" ",BOHYEAR" ",EOHYEAR" ",'NB'" "TEMPSET5"
+option COM_CUMPRD:0:0:1; display COM_CUMPRD;
+
+$BATINCLUDE transTID.ans "COM_STEP" "REG" ",COM" ",BD" "" "" "" "" "" "ACOM_STEP" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE transTID.ans "DAM_BQTY" "REG" ",COM" "" "" "" "" "" "" "ADAM_BQTY" "REG" "" ",COM" "" "" "" "" "TEMPSET2"
+*display DAM_BQTY;
+* 21JUN2010 - remove phantom entries for ADAM_COST, ADAM_ELAST and use $IF DEFINED in ANS2GAMS.ANS
+$IF DEFINED ADAM_ELAST $BATINCLUDE transTID.ans "DAM_ELAST" "REG" ",COM" ",BD" "" "" "" "" "" "ADAM_ELAST" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$IF DEFINED ADAM_ELAST $BATINCLUDE transTID.ans "DAM_ELAST" "REG" ",COM" ",'N'" "" "" "" "" "" "ADAM_ELAST" "REG" "" ",COM" "" "" "" ",'NB'" "TEMPSET3"
+*option DAM_ELAST:0:0:1; display DAM_ELAST;
+$BATINCLUDE transTID.ans "DAM_STEP" "REG" ",COM" ",BD" "" "" "" "" "" "ADAM_STEP" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTID.ans "DAM_STEP" "REG" ",COM" ",'N'" "" "" "" "" "" "ADAM_STEP" "REG" "" ",COM" "" "" "" ",'NB'" "TEMPSET3"
+*option DAM_STEP:0:0:1; display DAM_STEP;
+$BATINCLUDE transTID.ans "DAM_VOC" "REG" ",COM" ",BD" "" "" "" "" "" "ADAM_VOC" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTID.ans "DAM_VOC" "REG" ",COM" ",'N'" "" "" "" "" "" "ADAM_VOC" "REG" "" ",COM" "" "" "" ",'NB'" "TEMPSET3"
+*option DAM_VOC:0:0:1; display DAM_VOC;
+
+$BATINCLUDE transTID.ans "FLO_CUM" "REG" ",PRC" ",COM" ",BOHYEAR" ",EOHYEAR" ",BD" "" "" "AFLO_CUM" "REG" ",PRC" ",COM" "" ",BOHYEAR" ",EOHYEAR" ",BD" "TEMPSET6" "NOKILL"
+$BATINCLUDE transTID.ans "FLO_CUM" "REG" ",PRC" ",COM" ",BOHYEAR" ",EOHYEAR" ",'N'" "" "" "AFLO_CUM" "REG" ",PRC" ",COM" "" ",BOHYEAR" ",EOHYEAR" ",'NB'" "TEMPSET6"
+*option FLO_CUM:0:0:1; display FLO_CUM;
+
+* special code to create parameter G_OBJSHAR
+*OCT2007 G_OBJSHAR(REG)$AG_OBJSHAR(REG) = AG_OBJSHAR(REG);
+$BATINCLUDE transTID.ans "G_YRFR" "REG" ",TS" "" "" "" "" "" "" "AG_YRFR" "REG" "" "" "" "" ",TS" "" "TEMPSET2"
+
+** note use of COM2 
+*NOV2006* new treatment for AIRE_CCVT with ALL_REG now in Region2 position rather than Item4 position
+* $BATINCLUDE transTID.ans "IRE_CCVT" "REG" ",COM" ",ALL_REG" ",COM2" "" "" "" "" "AIRE_CCVT" "REG" "" ",COM" "" ",ALL_REG" "" ",COM2" "TEMPSET4"
+$BATINCLUDE transTIDreg2.ans "IRE_CCVT" "REG" ",COM" ",ALL_REG" ",COM2" "" "" "" "" "AIRE_CCVT" "REG" ",ALL_REG" "" ",COM" "" "" "" ",COM2" "TEMPSET4"
+
+** note use of TS2
+*NOV2006* new treatment for AIRE_TSCVT with ALL_REG now in Region2 position rather than Item4 position
+* $BATINCLUDE transTID.ans "IRE_TSCVT" "REG" ",TS" ",ALL_REG" ",TS2" "" "" "" "" "AIRE_TSCVT" "REG" "" "" ",TS" ",ALL_REG" ",TS2" "" "TEMPSET4"
+$BATINCLUDE transTIDreg2.ans "IRE_TSCVT" "REG" ",TS" ",ALL_REG" ",TS2" "" "" "" "" "AIRE_TSCVT" "REG" ",ALL_REG" "" "" ",TS" "" ",TS2" "" "TEMPSET4"
+
+** NCAP_PASTI is defined over PASTYEAR rather than DATAYEAR, so comes out as a TID in ANSWER
+$BATINCLUDE transTID.ans "NCAP_PASTI" "REG" ",PASTYEAR" ",PRC" "" "" "" "" "" "ANCAPPASTI" "REG" ",PRC" "" "" "" "" ",PASTYEAR" "TEMPSET3"
+** NCAP_PASTY is defined over PASTYEAR rather than DATAYEAR, so comes out as a TID in ANSWER
+$BATINCLUDE transTID.ans "NCAP_PASTY" "REG" ",PASTYEAR" ",PRC" "" "" "" "" "" "ANCAPPASTY" "REG" ",PRC" "" "" "" "" ",PASTYEAR" "TEMPSET3"
+
+*AUG2013* Add NCAP_START parameter to ANSWER
+$BATINCLUDE transTID.ans "NCAP_START" "REG" ",PRC" "" "" "" "" "" "" "ANCAP_START" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+option NCAP_START:0:0:1; display NCAP_START;
+
+* note that with addition of OPTION KILL = ..., ANCAPTLIFP is used, not ANCAPTLIFE
+$BATINCLUDE transTID.ans "NCAP_TLIFE" "REG" ",PASTYEAR" ",PRC" "" "" "" "" "" "ANCAPTLIFP" "REG" ",PRC" "" "" "" "" ",PASTYEAR" "TEMPSET3"
+*display NCAP_TLIFE;
+$BATINCLUDE transTID.ans "PRC_CAPACT" "REG" ",PRC" "" "" "" "" "" "" "APRCCAPACT" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*SEP2007 - PRC_NUTS is an internal parameter
+* $BATINCLUDE transTID.ans "PRC_NUTS" "REG" ",PRC" "" "" "" "" "" "" "APRC_NUTS" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+$BATINCLUDE transTID.ans "REG_CUMCST" "REG" ",ALLYEAR" ",ALLYEAR2" ",COSTAGG" ",CUR" ",BD" "" "" "AREGCUMCST" "REG" ",ALLYEAR" "" "" ",COSTAGG" ",ALLYEAR2" ",BD" "TEMPSET5"
+*option REG_CUMCST:0:0:1; display REG_CUMCST;
+
+* 23AUG2016 - GR_* TID parameters needed for TIMES Grid Modeling Features
+option GR_GENLEV:0:0:1; display GR_GENLEV;
+option GR_GENMAP:0:0:1; display GR_GENMAP;
+
+
+*Additions for ETL
+*Note that TEG is handled differently since in TIMES-GAMS code it is a SET, and not defined over REG.
+$IF NOT '%ETL%' == 'YES' $GOTO NOETL
+$  BATINCLUDE transTID.ans "TEG" "PRC" "" "" "" "" "" "" "" "ATEG" "PRC" "" "" "" "" "" "" "TEMPSET1"
+$  BATINCLUDE transTID.ans "CCAP0" "REG" ",PRC" "" "" "" "" "" "" "ACCAP0" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$  BATINCLUDE transTID.ans "CCAPM" "REG" ",PRC" "" "" "" "" "" "" "ACCAPM" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$  BATINCLUDE transTID.ans "PRAT" "REG" ",PRC" "" "" "" "" "" "" "APRAT" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$  BATINCLUDE transTID.ans "SC0" "REG" ",PRC" "" "" "" "" "" "" "ASC0" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$  BATINCLUDE transTID.ans "SEG" "REG" ",PRC" "" "" "" "" "" "" "ASEG" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$LABEL NOETL
+
+
+** now transform TID parameters to TIMES multi-dimensional sets
+$BATINCLUDE transTID.ans "COM_GMAP" "REG" ",CG" ",COM" "" "" "" "" "" "ACOM_GMAP" "REG" "" ",COM" ",CG" "" "" "" "TEMPSET3"
+** not sure how we go with BD here, rather than LIM
+$BATINCLUDE transTID.ans "COM_LIM" "REG" ",COM" ",BD" "" "" "" "" "" "ACOM_LIM" "REG" "" ",COM" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTID.ans "COM_LIM" "REG" ",COM" ",'N'" "" "" "" "" "" "ACOM_LIM" "REG" "" ",COM" "" "" "" ",'NB'" "TEMPSET3"
+*option COM_LIM:0:0:1; display COM_LIM;
+
+$BATINCLUDE transTID.ans "COM_OFF" "REG" ",COM" ",BOHYEAR" ",EOHYEAR" "" "" "" "" "ACOM_OFF" "REG" "" ",COM" "" "" ",BOHYEAR" ",EOHYEAR" "TEMPSET4"
+* 29MAR2006 - Uwe advised COM_PEAK argument is (REG,COM_GROUP) not (REG,COM)
+* $BATINCLUDE transTID.ans "COM_PEAK" "REG" ",COM" "" "" "" "" "" "" "ACOM_PEAK" "REG" "" ",COM" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTID.ans "COM_PEAK" "REG" ",CG" "" "" "" "" "" "" "ACOM_PEAK" "REG" "" "" ",CG" "" "" "" "TEMPSET2"
+* 29MAR2006 - Uwe advised COM_PKTS argument is (REG,COM_GROUP,TS) not (REG,COM,TS)
+* $BATINCLUDE transTID.ans "COM_PKTS" "REG" ",COM" ",TS" "" "" "" "" "" "ACOM_PKTS" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "COM_PKTS" "REG" ",CG" ",TS" "" "" "" "" "" "ACOM_PKTS" "REG" "" "" ",CG" "" ",TS" "" "TEMPSET3"
+*OCT2007 $BATINCLUDE transTID.ans "COM_TS" "REG" ",COM" ",TS" "" "" "" "" "" "ACOM_TS" "REG" "" ",COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "PRC_AOFF" "REG" ",PRC" ",BOHYEAR" ",EOHYEAR" "" "" "" "" "APRC_AOFF" "REG" ",PRC" "" "" "" ",BOHYEAR" ",EOHYEAR" "TEMPSET4"
+*OCT2007 $BATINCLUDE transTID.ans "PRC_CG" "REG" ",PRC" ",CG" "" "" "" "" "" "APRC_CG" "REG" ",PRC" "" ",CG" "" "" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "PRC_FOFF" "REG" ",PRC" ",COM" ",TS" ",BOHYEAR" ",EOHYEAR" "" "" "APRC_FOFF" "REG" ",PRC" ",COM" ",TS" "" ",BOHYEAR" ",EOHYEAR" "TEMPSET6"
+$BATINCLUDE transTID.ans "PRC_NOFF" "REG" ",PRC" ",BOHYEAR" ",EOHYEAR" "" "" "" "" "APRC_NOFF" "REG" ",PRC" "" "" "" ",BOHYEAR" ",EOHYEAR" "TEMPSET4"
+$BATINCLUDE transTID.ans "PRC_NSTTS" "REG" ",PRC" ",TS" "" "" "" "" "" "APRC_NSTTS" "REG" ",PRC" "" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "PRC_PKAF" "REG" ",PRC" "" "" "" "" "" "" "APRC_PKAF" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTID.ans "PRC_PKNO" "REG" ",PRC" "" "" "" "" "" "" "APRC_PKNO" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE transTID.ans "PRC_SPG" "REG" ",PRC" ",CG" "" "" "" "" "" "APRC_SPG" "REG" ",PRC" "" ",CG" "" "" "" "TEMPSET3"
+*OCT2007 $BATINCLUDE transTID.ans "PRC_STGIPS" "REG" ",PRC" ",COM" "" "" "" "" "" "APRCSTGIPS" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+*OCT2007 $BATINCLUDE transTID.ans "PRC_STGTSS" "REG" ",PRC" ",COM" "" "" "" "" "" "APRCSTGTSS" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+*OCT2007 $BATINCLUDE transTID.ans "PRC_TS" "REG" ",PRC" ",TS" "" "" "" "" "" "APRC_TS" "REG" ",PRC" "" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "PRC_VINT" "REG" ",PRC" "" "" "" "" "" "" "APRC_VINT" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+
+* special code to create TID global SHAPE from ASHAPE(ANSJ,ANSAGE) put out by ANSWER where SET ANSJ / S001*S100 /, SET ANSAGE / A001*A200 /
+SHAPE(J,AGE) $= SUM((ANSJ,ANSAGE)$(ANSJ_J(ANSJ,J)*ANSAGE_AGE(ANSAGE,AGE)), ASHAPE(ANSJ,ANSAGE));
+option SHAPE:0:0:1; display SHAPE;
+
+** note use of IN, OUT and TOP-IN, TOP-OUT
+$BATINCLUDE transTID.ans "TOP" "REG" ",PRC" ",COM" ",IN" "" "" "" "" "ATOP_IN" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "TOP" "REG" ",PRC" ",COM" ",OUT" "" "" "" "" "ATOP_OUT" "REG" ",PRC" ",COM" "" "" "" "" "TEMPSET3"
+** note that REG in second position should give us TOP_IRE-OUTs, and we must have COM2 in all positions
+* $BATINCLUDE transTID.ans "TOP_IRE" "ALL_REG" ",COM2" ",REG" ",COM2" ",PRC" "" "" "" "ATOPIREOUT" "REG" ",PRC" ",COM2" "" "" "" ",ALL_REG" "TEMPSET4"
+* MAR2006 - move ALL_REG to Item4 position, and extra COM argument in Item6 position for ATOPIREIN, ATOPIREOUT
+*           Note that in transforming ATOPIREOUT to TOP_IRE, order of COM2 and COM is reversed.
+*NOV2006* new treatment for ATOPIREOUT with ALL_REG now in Region2 position rather than Item4 position
+* $BATINCLUDE transTID.ans "TOP_IRE" "ALL_REG" ",COM" ",REG" ",COM2" ",PRC" "" "" "" "ATOPIREOUT" "REG" ",PRC" ",COM2" "" ",ALL_REG" "" ",COM" "TEMPSET5"
+*SEP2007* we no longer use ATOPIREOUT
+* $BATINCLUDE transTIDreg2.ans "TOP_IRE" "ALL_REG" ",COM" ",REG" ",COM2" ",PRC" "" "" "" "ATOPIREOUT" "REG" ",ALL_REG" ",PRC" ",COM2" "" "" "" ",COM" "TEMPSET5"
+
+** note that REG in first position should give us TOP_IRE-INs, and we must have COM2 in all positions
+* $BATINCLUDE transTID.ans "TOP_IRE" "REG" ",COM2" ",ALL_REG" ",COM2" ",PRC" "" "" "" "ATOPIREIN" "REG" ",PRC" ",COM2" "" "" "" ",ALL_REG" "TEMPSET4"
+* MAR2006 - move ALL_REG to Item4 position, and extra COM argument in Item6 position for ATOPIREIN, ATOPIREOUT
+*           Note that in transforming ATOPIREIN to TOP_IRE, order of COM and COM2 is maintained.
+*NOV2006* new treatment for ATOPIREIN with ALL_REG now in Region2 position rather than Item4 position
+* $BATINCLUDE transTID.ans "TOP_IRE" "REG" ",COM" ",ALL_REG" ",COM2" ",PRC" "" "" "" "ATOPIREIN" "REG" ",PRC" ",COM" "" ",ALL_REG" "" ",COM2" "TEMPSET5"
+*SEP2007* we no longer use ATOPIREIN
+* $BATINCLUDE transTIDreg2.ans "TOP_IRE" "REG" ",COM" ",ALL_REG" ",COM2" ",PRC" "" "" "" "ATOPIREIN" "REG" ",ALL_REG" ",PRC" ",COM" "" "" "" ",COM2" "TEMPSET5"
+
+*22NOV2006* replace TOP_IRE-IN, TOP_IRE-OUT in ANSWER-TIMES by TOP_IRE (put out as ATOP_IRE)
+* NOTE: ALL_REG is needed in both positions, so ALL_REG and ALL_REG2 used
+$BATINCLUDE transTIDreg2.ans "TOP_IRE" "ALL_REG" ",COM" ",ALL_REG2" ",COM2" ",PRC" "" "" "" "ATOP_IRE" "ALL_REG" ",ALL_REG2" ",PRC" ",COM" "" "" "" ",COM2" "TEMPSET5"
+
+** note use of TS2
+* JUN2007 - in ANSWER-TIMES replace TS_MAP by TS_PARENT (so ATS_PARENT is put out with TS arguments in reverse order)
+* $BATINCLUDE transTID.ans "TS_MAP" "REG" ",TS" ",TS2" "" "" "" "" "" "ATS_MAP" "REG" "" "" "" "" ",TS" ",TS2" "TEMPSET3"
+$BATINCLUDE transTID.ans "TS_MAP" "REG" ",TS" ",TS2" "" "" "" "" "" "ATS_PARENT" "REG" "" "" "" "" ",TS2" ",TS" "TEMPSET3"
+
+* transform TID UC_ parameters to TIMES multi-dimensional sets
+$BATINCLUDE transTID.ans "UC_ATTR" "REG" ",UC_N" ",SIDE" ",UC_GRPTYPE" ",UC_NAME" "" "" "" "AUC_ATTR" "REG" ",UC_N" ",SIDE" ",UC_GRPTYPE" ",UC_NAME" "" "" "TEMPSET5"
+*n* $BATINCLUDE transTID.ans "UC_DYN" "REG" ",UC_N" ",UC_NUMBER" "" "" "" "" "" "AUC_DYN" "REG" ",UC_N" "" "" ",UC_NUMBER" "" ""
+*n* $BATINCLUDE transTID.ans "UC_GMAP" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" "" "" "" "" "AUC_GMAP" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" "" "" ""
+*n* $BATINCLUDE transTID.ans "UC_GMAP_C" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" ",COM" "" "" "" "AUC_GMAP_C" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" ",COM" "" ""
+*n* $BATINCLUDE transTID.ans "UC_GMAP_P" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" ",PRC" "" "" "" "AUC_GMAP_P" "REG" ",UC_N" ",UC_GRPTYPE" ",UC_GRP" ",PRC" "" ""
+*n* in following line, order of "ALL_REG" and "UC_N" reversed from previously 
+$BATINCLUDE transTID.ans "UC_R_EACH" "ALL_REG" ",UC_N" "" "" "" "" "" "" "AUC_R_EACH" "ALL_REG" ",UC_N" "" "" "" "" "" "TEMPSET2"
+*n* in following line, order of "ALL_REG" and "UC_N" reversed from previously 
+$BATINCLUDE transTID.ans "UC_R_SUM" "ALL_REG" ",UC_N" "" "" "" "" "" "" "AUC_R_SUM" "ALL_REG" ",UC_N" "" "" "" "" "" "TEMPSET2"
+** even though no REG as first argument, transTID.ans works 
+*n* $BATINCLUDE transTID.ans "UC_REG" "UC_N" ",UC_NUMBER" "" "" "" "" "" "" "AUC_REG" "" "UC_N" "" "" ",UC_NUMBER" "" ""
+*n* with new approach to User Constraints, UC_T_SUCC becomes a TS parameter, and with different arguments
+*n* $BATINCLUDE transTID.ans "UC_T_SUCC" "REG" ",UC_N" ",UC_GRP" ",SIDE" "" "" "" "" "AUC_T_SUCC" "REG" ",UC_N" "" ",UC_GRP" ",SIDE" "" ""
+*n* $BATINCLUDE transTID.ans "UC_TS" "REG" ",UC_N" ",UC_NUMBER" "" "" "" "" "" "AUC_TS" "REG" ",UC_N" "" "" ",UC_NUMBER" "" ""
+$BATINCLUDE transTID.ans "UC_TS_EACH" "REG" ",UC_N" ",TS" "" "" "" "" "" "AUC_TSEACH" "REG" ",UC_N" "" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE transTID.ans "UC_TS_SUM" "REG" ",UC_N" ",TS" "" "" "" "" "" "AUC_TS_SUM" "REG" ",UC_N" "" "" "" ",TS" "" "TEMPSET3"
+*
+* 13APR2014 - new TID parameter in ANSWER to handle new TIMES set UC_TSL(r,uc_n,side,tslvl)
+*             needed to specify Dynamic User Constraint between Successive TimeSlices,
+*             along with levelized & static User Constraint variant.
+* Additional complication that this involves TSLVL, where 'ANNUAL-TSL' from ANSWER needs to be mapped to 'ANNUAL',
+* so first we handle mapping 'ANNUAL-TSL' to 'ANNUAL', and then deal with the rest.
+* (We don't expect ANSWER user will specify UC_TSL with TSLVL set to 'ANNUAL-TSL' because then no Dynamic User Constraint between Successive TimeSlices.)
+* (Raises the question as to whether in ANSWER we disallow setting of TSLVL to 'ANNUAL-TSL'.) 
+UC_TSL(REG,UC_N,SIDE,'ANNUAL')$AUC_TSL(REG,UC_N,SIDE,'ANNUAL-TSL') = AUC_TSL(REG,UC_N,SIDE,'ANNUAL-TSL');
+$BATINCLUDE transTID.ans "UC_TSL" "REG" ",UC_N" ",SIDE" ",TSLVL" "" "" "" "" "AUC_TSL" "REG" ",UC_N" ",SIDE" ",TSLVL" "" "" "" "TEMPSET4"
+option UC_TSL:0:0:1; display UC_TSL;
+*
+
+* transform TID UC_ parameters to TIMES parameters
+*NOV2006* UC_RHS is a parameter with no REG
+$BATINCLUDE transTID.ans "UC_RHS"  "UC_N" ",BD" "" "" "" "" "" "" "AUC_RHS" "" "UC_N" "" "" "" "" ",BD"  "TEMPSET2" "NOKILL"
+$BATINCLUDE transTID.ans "UC_RHS"  "UC_N" ",'N'" "" "" "" "" "" "" "AUC_RHS" "" "UC_N" "" "" "" "" ",'NB'"  "TEMPSET2"
+*option UC_RHS:0:0:1; display UC_RHS;
+$BATINCLUDE transTID.ans "UC_RHSR" "REG" ",UC_N" ",BD" "" "" "" "" "" "AUC_RHSR" "REG" ",UC_N" "" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTID.ans "UC_RHSR" "REG" ",UC_N" ",'N'" "" "" "" "" "" "AUC_RHSR" "REG" ",UC_N" "" "" "" "" ",'NB'" "TEMPSET3"
+*option UC_RHSR:0:0:1; display UC_RHSR;
+
+$BATINCLUDE transTID.ans "UC_CUMACT" "UC_N" ",REG" ",PRC" ",BOHYEAR" ",EOHYEAR" "" "" "" "AUC_CUMACT" "REG" ",UC_N" "" ",PRC" "" ",BOHYEAR" ",EOHYEAR" "TEMPSET5"
+*option UC_CUMACT:0:0:1; display UC_CUMACT;
+* 2 separate NET and PRD parameters are used in ANSWER-TIMES for UC_CUMCOM
+$BATINCLUDE transTID.ans "UC_CUMCOM" "UC_N" ",REG" ",ANET" ",COM" ",BOHYEAR" ",EOHYEAR" "" "" "AUC_CUMCOMNET" "REG" ",UC_N" "" "" ",COM" ",BOHYEAR" ",EOHYEAR" "TEMPSET5"
+$BATINCLUDE transTID.ans "UC_CUMCOM" "UC_N" ",REG" ",APRD" ",COM" ",BOHYEAR" ",EOHYEAR" "" "" "AUC_CUMCOMPRD" "REG" ",UC_N" "" "" ",COM" ",BOHYEAR" ",EOHYEAR" "TEMPSET5"
+*option UC_CUMCOM:0:0:1; display UC_CUMCOM;
+$BATINCLUDE transTID.ans "UC_CUMFLO" "UC_N" ",REG" ",PRC" ",COM" ",BOHYEAR" ",EOHYEAR" "" "" "AUC_CUMFLO" "REG" ",UC_N" "" ",PRC" ",COM" ",BOHYEAR" ",EOHYEAR" "TEMPSET6"
+*option UC_CUMFLO:0:0:1; display UC_CUMFLO;
+
+* 5DEC2010 - Handle UC_DYNBND
+UC_DYNBND(UC_N,BD)$AUC_DYNBND(UC_N,BD) = YES;
+option UC_DYNBND:0:0:1; display UC_DYNBND;
+
+*============================================================================*
+
+*Additions for Discrete Capacity Investment
+
+$IF NOT '%DSC%' == 'YES' $GOTO NODSC
+
+*  Ensure APRC_DSCNCAP(REG,PRC) of 0, set to EPS by ANSWER in DD file, are reset to 0.
+   APRC_DSCNCAP(REG,PRC)$(APRC_DSCNCAP(REG,PRC) NE 1) = 0;
+$  BATINCLUDE transTID.ans "PRC_DSCNCAP"  "REG" ",PRC" "" "" "" "" "" "" "APRC_DSCNCAP" "REG" ",PRC" "" "" "" "" ""  "TEMPSET2"
+*   option PRC_DSCNCAP:0:0:1; display PRC_DSCNCAP;
+*   option ANCAP_DISC:0:0:1; display ANCAP_DISC;
+*   option ANCAP_SEMI:0:0:1; display ANCAP_SEMI;
+
+   DATAYEAR('0') = YES;
+* special code to create TS parameter NCAP_DISC using SET ANSUNIT put out by ANSWER where SET ANSUNIT / U001*U100 /;
+   NCAP_DISC(REG,DATAYEAR,PRC,UNIT) $= SUM(ANSU_UNIT(ANSUNIT,UNIT), ANCAP_DISC(REG,PRC,ANSUNIT,DATAYEAR));
+$  BATINCLUDE transTS-Datayear.ans "NCAP_SEMI" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAP_SEMI" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+   DATAYEAR('0') = NO;
+*   option NCAP_DISC:0:0:1; display NCAP_DISC;
+   option NCAP_SEMI:0:0:1; display NCAP_SEMI;
+
+$LABEL NODSC
+
+*============================================================================*
+
+*Additions for Climate
+
+$IF NOT '%CLI%' == 'YES' $GOTO NOCLIMATE
+$    INCLUDE ANS2GAMS_CLI.ANS
+$LABEL NOCLIMATE
+
+*============================================================================*
+
+*Additions for Stochastics
+
+$IF NOT '%STAGES%' == 'YES' $GOTO NOSTOCH
+$    INCLUDE ANS2GAMS_STC.ANS
+$LABEL NOSTOCH
+
+*============================================================================*
+
+*Additions for MACRO
+
+$IF '%MACRO%' == 'N' $GOTO NOMACRO
+$    INCLUDE ANS2GAMS_MACRO.ANS
+$LABEL NOMACRO
+
+*============================================================================*
+
+*Additions for Discrete Capacity Retirement
+
+$IF '%RETIRE%' == 'NO' $GOTO NORETIRE
+* 27AUG2011 - remove phantom entry for APRC_RCAP and use $IF DEFINED in ANS2GAMS.ANS
+$IF NOT DEFINED APRC_RCAP $GOTO NORETIRE
+
+*  Ensure APRC_RCAP(REG,PRC) of 0, set to EPS by ANSWER in DD file, are reset to 0.
+   APRC_RCAP(REG,PRC)$(APRC_RCAP(REG,PRC) NE 1) = 0;
+$  BATINCLUDE transTID.ans "PRC_RCAP"  "REG" ",PRC" "" "" "" "" "" "" "APRC_RCAP" "REG" ",PRC" "" "" "" "" ""  "TEMPSET2"
+   option PRC_RCAP:0:0:1; display PRC_RCAP;
+
+*  RCAP_BLKp (ARCAP_BLKP) is defined as a TID parameter in ANSWER, analogous to NCAP_TLIFEp
+$  BATINCLUDE transTID.ans "RCAP_BLK" "REG" ",ALLYEAR" ",PRC" "" "" "" "" "" "ARCAP_BLKP" "REG" ",PRC" "" "" "" "" ",ALLYEAR" "TEMPSET3"
+   option RCAP_BLK:0:0:1; display RCAP_BLK;
+
+   DATAYEAR('0') = YES;
+$  BATINCLUDE transTS-Datayear.ans "NCAP_OLIFE" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ANCAPOLIFE" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+*  RCAP_BLK (ARCAP_BLK) is defined as a TS parameter in ANSWER, analogous to NCAP_TLIFE
+$  BATINCLUDE transTS-Datayear.ans "RCAP_BLK" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ARCAP_BLK" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+$  BATINCLUDE transTS-Datayear.ans "RCAP_BND" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "ARCAP_BND" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$  BATINCLUDE transTS-Datayear.ans "RCAP_BND" "REG" ",DATAYEAR" ",PRC" ",'N'" "" "" "" "" "ARCAP_BND" "REG" ",PRC" "" "" "" "" ",'NB'" "TEMPSET3"
+   DATAYEAR('0') = NO;
+   option NCAP_OLIFE:0:0:1; display NCAP_OLIFE;
+   option RCAP_BLK:0:0:1; display RCAP_BLK;
+   option RCAP_BND:0:0:1; display RCAP_BND;
+
+$LABEL NORETIRE
+
+*============================================================================*
+
+* 22MAR2016 Additions for Dispatching Feature
+
+*Note that handling ACT_CSTUP is a bit tricky because:
+*  It involves TSLVL, where 'ANNUAL-TSL' from ANSWER needs to be mapped to 'ANNUAL', and it also involves CUR.
+*First we handle mapping 'ANNUAL-TSL' to 'ANNUAL', and then deal with the rest
+ACT_CSTUP(REG,DATAYEAR,PRC,'ANNUAL',CUR)$AACT_CSTUP(REG,PRC,'ANNUAL-TSL',DATAYEAR) = AACT_CSTUP(REG,PRC,'ANNUAL-TSL',DATAYEAR);
+$BATINCLUDE transTS-Datayear.ans "ACT_CSTUP" "REG" ",DATAYEAR" ",PRC" ",TSLVL" ",CUR" "" "" "" "AACT_CSTUP" "REG" ",PRC" "" "" "" ",TSLVL" "" "TEMPSET3"
+
+*Note that ACT_CSTPL also involves CUR.
+$BATINCLUDE transTS-Datayear.ans "ACT_CSTPL" "REG" ",DATAYEAR" ",PRC" ",CUR" "" "" "" "" "AACT_CSTPL" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+
+$BATINCLUDE transTS-Datayear.ans "ACT_LOSPL" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "AACT_LOSPL" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3"
+
+* special treatment needed for ACT_TIME to turn 'NB' into 'N'
+$BATINCLUDE transTS-Datayear.ans "ACT_TIME" "REG" ",DATAYEAR" ",PRC" ",BD" "" "" "" "" "AACT_TIME" "REG" ",PRC" "" "" "" "" ",BD" "TEMPSET3" "NOKILL"
+$BATINCLUDE transTS-Datayear.ans "ACT_TIME" "REG" ",DATAYEAR" ",PRC" ",'N'" "" "" "" "" "AACT_TIME" "REG" ",PRC" "" "" "" "" ",'NB'" "TEMPSET3"
+
+option ACT_CSTUP:0:0:1; display ACT_CSTUP;
+option ACT_CSTPL:0:0:1; display ACT_CSTPL;
+option ACT_LOSPL:0:0:1; display ACT_LOSPL;
+option ACT_TIME:0:0:1; display ACT_TIME;
+
+* 08APR2016 new attribute ACT_MINLD
+$BATINCLUDE transTS-Datayear.ans "ACT_MINLD" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "AACT_MINLD" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+option ACT_MINLD:0:0:1; display ACT_MINLD;
+
+* 30JUL2016 new attributes ACT_CSTSD, ACT_CSTRMP, ACT_MAXNON, ACT_SDTIME, ACT_LOSSD
+
+*Note that ACT_CSTSD also involves CUR.
+$BATINCLUDE transTS-Datayear.ans "ACT_CSTSD" "REG" ",DATAYEAR" ",PRC"  ",UPT" ",BD" ",CUR" "" "" "AACT_CSTSD" "REG" ",PRC" ",UPT" ",BD" "" "" "" "TEMPSET4"
+option ACT_CSTSD:0:0:1; display ACT_CSTSD;
+
+*Note that ACT_CSTRMP also involves CUR.
+$BATINCLUDE transTS-Datayear.ans "ACT_CSTRMP" "REG" ",DATAYEAR" ",PRC" ",BD" ",CUR" "" "" "" "AACT_CSTRMP" "REG" ",PRC" ",BD" "" "" "" "" "TEMPSET3"
+option ACT_CSTRMP:0:0:1; display ACT_CSTRMP;
+
+$BATINCLUDE transTS-Datayear.ans "ACT_MAXNON" "REG" ",DATAYEAR" ",PRC"  ",UPT" "" "" "" "" "AACT_MAXNON" "REG" ",PRC" ",UPT" "" "" "" "" "TEMPSET3"
+option ACT_MAXNON:0:0:1; display ACT_MAXNON;
+
+$BATINCLUDE transTS-Datayear.ans "ACT_SDTIME" "REG" ",DATAYEAR" ",PRC"  ",UPT" ",BD" "" "" "" "AACT_SDTIME" "REG" ",PRC" ",UPT" ",BD" "" "" "" "TEMPSET4"
+option ACT_SDTIME:0:0:1; display ACT_SDTIME;
+
+$BATINCLUDE transTS-Datayear.ans "ACT_LOSSD" "REG" ",DATAYEAR" ",PRC"  ",UPT" ",BD" "" "" "" "AACT_LOSSD" "REG" ",PRC" ",UPT" ",BD" "" "" "" "TEMPSET4"
+option ACT_LOSSD:0:0:1; display ACT_LOSSD;
+
+*============================================================================*
+
+* 21MAR2017 - New Attribute PRC_REFIT
+
+$  BATINCLUDE transTID.ans "PRC_REFIT" "REG" ",PRC" ",P" "" "" "" "" "" "APRC_REFIT" "REG" ",PRC" ",P" "" "" "" "" "TEMPSET3"
+option PRC_REFIT:0:0:1; display PRC_REFIT;
+
+* 22MAR2017 - Additional changes suggested by Antti Lehtila
+PRC_MAP(REG,'REFIT',P)$SUM(PRC$PRC_REFIT(REG,PRC,P),1) = YES;
+option PRC_MAP:0:0:1; display PRC_MAP;
+
+*============================================================================*
+
+* 17APR2019 - New TID Attribute TS_CYCLE, new TS Attribute STG_SIFT
+
+$BATINCLUDE transTID.ans "TS_CYCLE" "REG" ",TS" "" "" "" "" "" "" "ATS_CYCLE" "REG" "" "" "" "" ",TS" "" "TEMPSET2"
+option TS_CYCLE:0:0:1; display TS_CYCLE;
+
+ DATAYEAR('0') = YES;
+$BATINCLUDE transTS-Datayear.ans "STG_SIFT" "REG" ",DATAYEAR" ",PRC" ",COM" ",TS" "" "" "" "ASTG_SIFT" "REG" ",PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+ DATAYEAR('0') = NO;
+option STG_SIFT:0:0:1; display STG_SIFT;
+
+*============================================================================*

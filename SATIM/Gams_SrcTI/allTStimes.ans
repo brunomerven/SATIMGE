@@ -1,0 +1,110 @@
+* allTStimes.ans
+
+ALIAS (ALLYEAR,ALLYEAR2);
+ALIAS (TS,TS2);
+ALIAS (REG,REG2);
+ALIAS (ALL_REG,ALL_REG2);
+ALIAS (CG,CG2);
+
+SET TEMPSET2(*,*);
+SET TEMPSET3(*,*,*);
+SET TEMPSET4(*,*,*,*);
+SET TEMPSET5(*,*,*,*,*);
+SET TEMPSET6(*,*,*,*,*,*);
+SET TEMPSET7(*,*,*,*,*,*,*);
+
+$BATINCLUDE putTStimes.ans "ACT_BND" "REG" ",MILESTONYR" ",PRC" ",TS" ",BD" "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "ACT_COST" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "CAP_BND" "REG" ",MILESTONYR" ",PRC" ",BD"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "COM_AGG" "REG" ",MILESTONYR" ",COM" ",COM2"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "COM_BNDNET" "REG" ",MILESTONYR" ",COM" ",TS" ",BD"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_BNDPRD" "REG" ",MILESTONYR" ",COM" ",TS" ",BD"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_BPRICE" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_CSTNET" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_CSTPRD" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_ELAST" "REG" ",MILESTONYR" ",COM" ",TS" ",BD"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_FR" "REG" ",MILESTONYR" ",COM" ",TS"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "COM_IE" "REG" ",MILESTONYR" ",COM" ",TS"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "COM_PKFLX" "REG" ",MILESTONYR" ",COM" ",TS"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "COM_PKRSV" "REG" ",MILESTONYR" ",COM"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "COM_PROJ" "REG" ",MILESTONYR" ",COM"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "COM_SUBNET" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_SUBPRD" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_TAXNET" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_TAXPRD" "REG" ",MILESTONYR" ",COM" ",TS" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "COM_VOC" "REG" ",MILESTONYR" ",COM" ",BD"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "FLO_COST" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",CUR"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_DELIV" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",CUR"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_EMIS" "REG" ",MILESTONYR" ",PRC" ",CG" ",COM" ",TS"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_FEQ" "REG" ",MILESTONYR" ",PRC" ",COM"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "FLO_FR" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",BD"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_MARK" "REG" ",MILESTONYR" ",PRC" ",COM" ",BD"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "FLO_MRKCON" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",BD"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_MRKPRD" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",BD"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_SUB" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",CUR"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_TAX" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",CUR"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_FUNC" "REG" ",MILESTONYR" ",PRC" ",CG" ",CG2" ",TS"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "FLO_PKCOI" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "FLO_SHAR" "REG" ",MILESTONYR" ",PRC" ",COM" ",CG" ",TS" ",BD"  "" TEMPSET6
+$BATINCLUDE putTStimes.ans "FLO_SUM"  "REG" ",MILESTONYR" ",PRC" ",CG" ",COM" ",CG2" ",TS"  "" TEMPSET6
+$BATINCLUDE putTStimes.ans "G_CHNGMONY" "REG" ",MILESTONYR" ",CUR"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "G_DRATE" "REG" ",MILESTONYR" ",CUR"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "IRE_FLOSUM" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",IMPEXP" ",COM2" ",IO"  TEMPSET7
+$BATINCLUDE putTStimes.ans "IRE_XBND" "REG" ",MILESTONYR" ",COM" ",TS" ",IE" ",BD"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "NCAP_AF" "REG" ",MILESTONYR" ",PRC" ",TS" ",BD"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "NCAP_AFA" "REG" ",MILESTONYR" ",PRC" ",BD"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_AFC" "REG" ",MILESTONYR" ",PRC" ",CG" ",TSLVL"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "NCAP_AFM" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_AFS" "REG" ",MILESTONYR" ",PRC" ",TS" ",BD"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "NCAP_AFX" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_BND" "REG" ",MILESTONYR" ",PRC" ",BD"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_BPME" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_CEFF" "REG" ",MILESTONYR" ",PRC" ",CG" ",CG2"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "NCAP_CEH" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_CHPR" "REG" ",MILESTONYR" ",PRC" ",BD"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_CLED" "REG" ",MILESTONYR" ",PRC" ",COM"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_COM" "REG" ",MILESTONYR" ",PRC" ",COM" ",IO"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "NCAP_COST" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_DCOST" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_DELIF" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_DLAG" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_DLAGC" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_DLIFE" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_DRATE" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_EFF" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_EFFM" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_EFFX" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_ELIFE" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_FOM" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_FOMM" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_FOMX" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_FSUB" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_FSUBM" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_FSUBX" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_FTAX" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_FTAXM" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_FTAXX" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_ICOM" "REG" ",MILESTONYR" ",PRC" ",COM"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_ILED" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_ISUB" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_ITAX" "REG" ",MILESTONYR" ",PRC" ",CUR"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_LCOST" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_LFOM" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_OCOM" "REG" ",MILESTONYR" ",PRC" ",COM"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_PKCNT" "REG" ",MILESTONYR" ",PRC" ",TS"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "NCAP_SALV" "REG" ",MILESTONYR" ",PRC" ",COM" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "NCAP_TLIFE" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "NCAP_VALU" "REG" ",MILESTONYR" ",PRC" ",COM" ",CUR"  "" "" "" TEMPSET4
+$BATINCLUDE putTStimes.ans "PRC_ACTFLO" "REG" ",MILESTONYR" ",PRC" ",CG"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "STGIN_BND" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",BD"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "STGOUT_BND" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",BD"  "" "" TEMPSET5
+$BATINCLUDE putTStimes.ans "STG_CHRG" "REG" ",MILESTONYR" ",PRC" ",TS"  "" "" "" "" TEMPSET3
+$BATINCLUDE putTStimes.ans "STG_EFF" "REG" ",MILESTONYR" ",PRC"  "" "" "" "" "" TEMPSET2
+$BATINCLUDE putTStimes.ans "STG_LOSS" "REG" ",MILESTONYR" ",PRC" ",TS"  "" "" "" "" TEMPSET3
+
+* Trade TS parameters
+$BATINCLUDE putTStimes.ans "IRE_BND" "REG" ",MILESTONYR" ",COM" ",TS" ",ALL_REG" ",IE" ",BD" "" "TEMPSET6"
+$BATINCLUDE putTStimes.ans "IRE_FLO" "REG" ",MILESTONYR" ",PRC" ",COM" ",REG2" ",COM2" ",TS" "" "TEMPSET6"
+$BATINCLUDE putTStimes.ans "IRE_PRICE" "REG" ",MILESTONYR" ",PRC" ",COM" ",TS" ",ALL_REG" ",IE" ",CUR" "TEMPSET7"
+
+

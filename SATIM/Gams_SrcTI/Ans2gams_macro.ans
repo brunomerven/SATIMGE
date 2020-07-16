@@ -1,0 +1,54 @@
+*******************************************************************************
+*                                                                             *
+*  ANS2GAMS_MACRO.ANS:                                                        *
+*                                                                             *
+*  Transform ANSWER-generated Sets, Parameters for TIMES MACRO Extension      *
+*  to equivalent Sets, Parameters in ETSAP TIMES code.                        *
+*                                                                             *
+*******************************************************************************
+
+$OFFLISTING
+
+** Introduce the following sets to speed up processing
+SET TEMPSET1(*);
+SET TEMPSET2(*,*);
+SET CUR / 'CUR' /;
+
+* Time-Series data
+
+DATAYEAR('0') = YES;
+
+*TM_DDF(R,ALLYEAR,C)
+$BATINCLUDE transTS-Datayear.ans "TM_DDF" "REG" ",DATAYEAR" ",COM" "" "" "" "" "" "ATM_DDF" "REG" ",COM" "" "" "" "" "" "TEMPSET2"
+option TM_DDF:0:0:1; display TM_DDF;
+
+*TM_EXPBND(R,ALLYEAR,P)
+$IF NOT '%MACRO%' == 'YES' $GOTO NO_TM_EXPBND
+$BATINCLUDE transTS-Datayear.ans "TM_EXPBND" "REG" ",DATAYEAR" ",PRC" "" "" "" "" "" "ATM_EXPBND" "REG" ",PRC" "" "" "" "" "" "TEMPSET2"
+option TM_EXPBND:0:0:1; display TM_EXPBND;
+$LABEL NO_TM_EXPBND
+
+*TM_EXPF(R,ALLYEAR)
+$IF NOT '%MACRO%' == 'YES' $GOTO NO_TM_EXPF
+$BATINCLUDE transTS-Datayear.ans "TM_EXPF" "REG" ",DATAYEAR" "" "" "" "" "" "" "ATM_EXPF" "REG" "" "" "" "" "" "" "TEMPSET1"
+option TM_EXPF:0:0:1; display TM_EXPF;
+$LABEL NO_TM_EXPF
+
+*TM_GROWV(R,ALLYEAR)
+*$BATINCLUDE transTS-Datayear.ans "TM_GROWV" "REG" ",DATAYEAR" "" "" "" "" "" "" "ATM_GROWV" "REG" "" "" "" "" "" "" "TEMPSET1"
+*option TM_GROWV:0:0:1; display TM_GROWV;
+
+*TM_GR(R,ALLYEAR)
+$BATINCLUDE transTS-Datayear.ans "TM_GR" "REG" ",DATAYEAR" "" "" "" "" "" "" "ATM_GR" "REG" "" "" "" "" "" "" "TEMPSET1"
+$IF DEFINED TM_GR option TM_GR:0:0:1; display TM_GR;
+
+* NOV2014: New Time-Series MACRO PARAMETER in TIMES v3.8.0
+*TM_HSX(R,ALLYEAR)
+$IF DECLARED TM_HSX $BATINCLUDE transTS-Datayear.ans "TM_HSX" "REG" ",DATAYEAR" "" "" "" "" "" "" "ATM_HSX" "REG" "" "" "" "" "" "" "TEMPSET1"
+$IF DEFINED TM_HSX option TM_HSX:0:0:1; display TM_HSX;
+
+DATAYEAR('0') = NO;
+
+* Time-Independent Data
+
+* ANSWER puts out all MACRO TID Data Parameters to ANSWER-generated DD with their TIMES Names, so no transformation is needed.

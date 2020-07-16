@@ -1,0 +1,28 @@
+******************************************************************************
+*                                                                            *
+*  MMINIT_MACRO.ANS:  Handling of TIMES MACRO Extension                      *
+*                                                                            *
+*  Additional sets, parameters required by ANSWER declared and initialized   *
+*                                                                            *
+******************************************************************************
+
+* GAMS Parameter Names put out in ANSWER-generated DD,
+* corresponding to Time-Series MACRO PARAMETERs in TIMES,
+
+*     PARAMETER ATM_DDF / EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER ATM_DDF(*,*,*);
+*     PARAMETER ATM_EXPBND / EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER ATM_EXPBND(*,*,*);
+     PARAMETER ATM_EXPF / EMPTY.EMPTY 0 /;
+*     PARAMETER ATM_GROWV / EMPTY.EMPTY 0 /;
+     PARAMETER ATM_GR / EMPTY.EMPTY 0 /;
+
+* NOV2014: New Time-Series MACRO PARAMETER in TIMES v3.8.0
+     PARAMETER ATM_HSX / EMPTY.EMPTY 0 /;
+
+* ANSWER puts out all MACRO TID Data Parameters to ANSWER-generated DD
+* with their TIMES Names, so no transformation is needed.
+
+* NOV2014: New TID MACRO PARAMETERs in TIMES v3.8.0
+*     PARAMETER TM_MDTL / EMPTY 0 /;
+*     PARAMETER TM_MDTQ / EMPTY 0 /;

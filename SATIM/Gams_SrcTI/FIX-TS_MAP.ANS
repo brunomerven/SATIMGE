@@ -1,0 +1,25 @@
+* FIX-TS_MAP.ANS
+
+* TIMES GAMS code internally sets TS_MAP(REG,TS,TS) = YES for all TS,
+* this is not wanted when we transform TS_MAP into TS_PARENT.
+
+TS_MAP(REG,TS,TS) = NO;
+
+* TIMES GAMS code internally sets TS_MAP(REG,'ANNUAL',TS) = YES for all TS,
+* which can result in TS_MAP(REG,'ANNUAL',TS) = YES and also TS_MAP(REG,TS2,TS) = YES
+* for TS2 <> 'ANNUAL'.  This is not wanted when we transform TS_MAP into TS_PARENT,
+* it is the TS_MAP(REG,TS2,TS) = YES for TS2 <> 'ANNUAL' that we want to keep,
+* so when we detect this situation we set TS_MAP(REG,'ANNUAL',TS) = NO.
+
+*there is a loop(REG, so declare scalar countTS2 in I_MMINIT.ANS
+*scalar countTS2;
+loop(TS,
+  countTS2 = 0;
+  loop(TS2$(NOT SAMEAS(TS2,'ANNUAL') AND TS_MAP(REG,TS2,TS)),
+    countTS2 = countTS2+1;
+  );
+  if(countTS2 > 0,
+    TS_MAP(REG,'ANNUAL',TS) = NO;
+  );
+);
+

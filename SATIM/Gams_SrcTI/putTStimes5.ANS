@@ -1,0 +1,40 @@
+* putTStimes5.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = TEMPSET used to speed processing
+
+file FIL_%1 / %1.TS /; FIL_%1.ND=6; FIL_%1.PW=510;
+put FIL_%1;
+
+* assume that MILESTONYR is in %5 position, 
+* so (%2%3%4%6%7%8%9)$... in line below (that is no %5)
+
+LOOP(MILESTONYR,
+  %10(%2%3%4%6%7%8%9)$(1*%1(%2%3%4%5%6%7%8%9)) = YES;
+);
+LOOP(%10(%2%3%4%6%7%8%9),
+
+  PUT / "%1 "
+$ IF NOT '%2' == ''  PUT " " %2.TL
+$ IF NOT '%3' == ''  PUT " " %3.TL
+$ IF NOT '%4' == ''  PUT " " %4.TL
+*$ IF NOT '%5' == ''  PUT " " %5.TL
+$ IF NOT '%6' == ''  PUT " " %6.TL
+$ IF NOT '%7' == ''  PUT " " %7.TL
+$ IF NOT '%8' == ''  PUT " " %8.TL
+$ IF NOT '%9' == ''  PUT " " %9.TL
+
+  LOOP(MILESTONYR,
+    IF(%1(%2%3%4%5%6%7%8%9),
+*     we pre-multiply by 1 on next line so that for sets, rather than "YES" we get 1 
+      PUT " " (1*%1(%2%3%4%5%6%7%8%9));
+    ELSE
+      PUT " null";
+    );
+  );
+);
+
+putclose FIL_%1;
+
+OPTION CLEAR = %10;

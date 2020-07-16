@@ -1,0 +1,15 @@
+* BATINCLUDE putTS_Item.ANS
+
+* Put out TimeSlice Items for _GLOBAL region - component W in ANSWER.
+
+LOOP(ALL_TS,
+* Put out 'Item:', Component, Item, Description taken from SET ALL_TS.
+  PUT / "Item:","W",ALL_TS.TL,ALL_TS.TE(ALL_TS);
+* Put out 'Sets:', followed by individual Sets.
+$ BATINCLUDE putSets.ANS 'W' ALL_TS
+* Put out just 'Units:' sub-header, since TimeSlice Items have no Units.
+$ BATINCLUDE putNoUnits.ANS
+* Put out 'Comment:', null comment, 'End Comment:'.
+$ BATINCLUDE putComment.ANS
+  PUT /;
+);

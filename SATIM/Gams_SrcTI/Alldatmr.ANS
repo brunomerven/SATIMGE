@@ -1,0 +1,307 @@
+* $BATINCLUDE ALLDATMR.ANS - modified for TIMES
+*
+
+$OFFLISTING
+* move next 4 lines to I_MMINIT.ANS
+*ALIAS (REG,REG2);
+*ALIAS (TS,TS2);
+*SET IN(IN_OUT) / 'IN' /;
+*SET OUT(IN_OUT) / 'OUT' /;
+
+
+PUT /,"*** TS DATA ***", REG.TL;
+
+$BATINCLUDE putTSmr.ans "ACT_BND" "REG" "OTHERYR" "PRC" ",TS" ",BD" "" "" "" "ACT_BND" "PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "ACT_COST" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "ACT_COST" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "ACT_EFF" "REG" "OTHERYR" "PRC" ",CG" ",TS" "" "" "" "ACT_EFF" "PRC" "" ",CG" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "CAP_BND" "REG" "OTHERYR" "PRC" ",BD" "" "" "" "" "CAP_BND" "PRC" "" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "COM_AGG" "REG" "OTHERYR" "COM" ",COM2" "" "" "" "" "COM_AGG" "" "COM" "" ",COM2" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "COM_BNDNET" "REG" "OTHERYR" "COM" ",TS" ",BD" "" "" "" "COM_BNDNET" "" "COM" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_BNDPRD" "REG" "OTHERYR" "COM" ",TS" ",BD" "" "" "" "COM_BNDPRD" "" "COM" "" "" ",TS" ",BD" "TEMPSET4"
+*JUN2007 - v236 INITMTY.MOD no longer contains COM_COST parameter! so asterisk out both COM_COST lines!
+** note use of IN and COM_COST-IN
+*$BATINCLUDE putTSmr.ans "COM_COST" "REG" "OTHERYR" "COM" ",TS" ",CUR" ",IN" "" "" "COM_COST-IN" "" "COM" "" "" ",TS" "" "TEMPSET5"
+** note use of OUT and COM_COST-OUT
+*$BATINCLUDE putTSmr.ans "COM_COST" "REG" "OTHERYR" "COM" ",TS" ",CUR" ",OUT" "" "" "COM_COST-OUT" "" "COM" "" "" ",TS" "" "TEMPSET5"
+*2004* COM_BPRICE has become a TS
+$BATINCLUDE putTSmr.ans "COM_BPRICE" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_BPRICE" "" "COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_CSTNET" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_CSTNET" "" "COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_CSTPRD" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_CSTPRD" "" "COM" "" "" ",TS" "" "TEMPSET4"
+
+* advised November 2005 by Antti Lehtila that COM_CUMNET and COM_CUMPRD should have BOTH year indexes between BOT and EOT,
+* hence these need to become TID data parameters in ANSWER-TIMES 
+** note that "OTHERYR" occurs in 3rd argument position, not second
+*$BATINCLUDE putTS2.ans "COM_CUMNET" "REG" ",ALLYEAR" "OTHERYR" ",COM" ",BD" "" "" "" "COM_CUMNET" "ALLYEAR" ",COM" "" "" "" ",BD" "TEMPSET4"
+** note that "OTHERYR" occurs in 3rd argument position, not second
+*$BATINCLUDE putTS2.ans "COM_CUMPRD" "REG" ",ALLYEAR" "OTHERYR" ",COM" ",BD" "" "" "" "COM_CUMPRD" "ALLYEAR" ",COM" "" "" "" ",BD" "TEMPSET4"
+
+$BATINCLUDE putTSmr.ans "COM_ELAST" "REG" "OTHERYR" "COM" ",TS" ",BD" "" "" "" "COM_ELAST" "" "COM" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_FR" "REG" "OTHERYR" "COM" ",TS" "" "" "" "" "COM_FR" "" "COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "COM_IE" "REG" "OTHERYR" "COM" ",TS" "" "" "" "" "COM_IE" "" "COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "COM_PKFLX" "REG" "OTHERYR" "COM" ",TS" "" "" "" "" "COM_PKFLX" "" "COM" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "COM_PKRSV" "REG" "OTHERYR" "COM" "" "" "" "" "" "COM_PKRSV" "" "COM" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "COM_PROJ" "REG" "OTHERYR" "COM" "" "" "" "" "" "COM_PROJ" "" "COM" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "COM_SUBNET" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_SUBNET" "" "COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_SUBPRD" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_SUBPRD" "" "COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_TAXNET" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_TAXNET" "" "COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_TAXPRD" "REG" "OTHERYR" "COM" ",TS" ",CUR" "" "" "" "COM_TAXPRD" "" "COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "COM_VOC" "REG" "OTHERYR" "COM" ",BD" "" "" "" "" "COM_VOC" "" "COM" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "FLO_BND" "REG" "OTHERYR" "PRC" ",CG" ",TS" ",BD" "" "" "FLO_BND" "PRC" "" ",CG" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_COST" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",CUR" "" "" "FLO_COST" "PRC" ",COM" "" "" ",TS" "" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_DELIV" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",CUR" "" "" "FLO_DELIV" "PRC" ",COM" "" "" ",TS" "" "TEMPSET5"
+*JUN2007 - note that in TIMES FLO_EMIS the order is CG,COM while in ANSWER FLO_EMIS the order is COM, CG
+*AUG2007 - note that FLO_EMIS may have 'ACT' in the CG position, needing to be mapped to 'ACTGRP'for ANSWER 
+*          this creates a few issues for putTSmr.ans
+$BATINCLUDE putTSmr.ans "FLO_EMIS" "REG" "OTHERYR" "PRC" ",CG" ",COM" ",TS" "" "" "FLO_EMIS" "PRC" ",COM" ",CG" "" ",TS" "" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_FEQ" "REG" "OTHERYR" "PRC" ",COM" "" "" "" "" "FLO_FEQ" "PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "FLO_FR" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",BD" "" "" "FLO_FR" "PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_MARK" "REG" "OTHERYR" "PRC" ",COM" ",BD" "" "" "" "FLO_MARK" "PRC" ",COM" "" "" "" ",BD" "TEMPSET4"
+*2004* new parameters FLO_MRKCON, FLO_MRKPRD
+$BATINCLUDE putTSmr.ans "FLO_MRKCON" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",BD" "" "" "FLO_MRKCON" "PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_MRKPRD" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",BD" "" "" "FLO_MRKPRD" "PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_SUB" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",CUR" "" "" "FLO_SUB" "PRC" ",COM" "" "" ",TS" "" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "FLO_TAX" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",CUR" "" "" "FLO_TAX" "PRC" ",COM" "" "" ",TS" "" "TEMPSET5"
+** note use of CG2
+$BATINCLUDE putTSmr.ans "FLO_FUNC" "REG" "OTHERYR" "PRC" ",CG" ",CG2" ",TS" "" "" "FLO_FUNC" "PRC" "" ",CG" ",CG2" ",TS" "" "TEMPSET5"
+** note use of CG2
+$BATINCLUDE putTSmr.ans "FLO_FUNCX" "REG" "OTHERYR" "PRC" ",CG" ",CG2" "" "" "" "FLO_FUNCX" "PRC" "" ",CG" ",CG2" "" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "FLO_PKCOI" "REG" "OTHERYR" "PRC" ",COM" ",TS" "" "" "" "FLO_PKCOI" "PRC" ",COM" "" "" ",TS" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "FLO_SHAR" "REG" "OTHERYR" "PRC" ",COM" ",CG" ",TS" ",BD" "" "FLO_SHAR" "PRC" ",COM" ",CG" "" ",TS" ",BD" "TEMPSET6"
+** note use of CG2
+$BATINCLUDE putTSmr.ans "FLO_SUM"  "REG" "OTHERYR" "PRC" ",CG" ",COM" ",CG2" ",TS" "" "FLO_SUM"  "PRC" ",COM" ",CG" ",CG2" ",TS" "" "TEMPSET6" 
+$BATINCLUDE putTSmr.ans "G_CHNGMONY" "REG" "OTHERYR" "CUR" "" "" "" "" "" "G_CHNGMONY" "" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "G_DRATE" "REG" "OTHERYR" "CUR" "" "" "" "" "" "G_DRATE" "" "" "" "" "" "" "TEMPSET2"
+** note use of IN, OUT and IRE_FLOSUM-IN, IRE_FLOSUM-OUT, also use of COM2
+$BATINCLUDE putTSmr.ans "IRE_FLOSUM" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",IMPEXP" ",COM2" ",IN" "IRE_FLOSUM-IN" "PRC" ",COM" ",TS" "" ",IMPEXP" ",COM2" "TEMPSET7"
+$BATINCLUDE putTSmr.ans "IRE_FLOSUM" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",IMPEXP" ",COM2" ",OUT" "IRE_FLOSUM-OUT" "PRC" ",COM" ",TS" "" ",IMPEXP" ",COM2" "TEMPSET7"
+$BATINCLUDE putTSmr.ans "IRE_XBND" "REG" "OTHERYR" "COM" ",TS" ",IE" ",BD" "" "" "IRE_XBND" "" "COM" ",TS" "" ",IE" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "NCAP_AF" "REG" "OTHERYR" "PRC" ",TS" ",BD" "" "" "" "NCAP_AF" "PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "NCAP_AFA" "REG" "OTHERYR" "PRC" ",BD" "" "" "" "" "NCAP_AFA" "PRC" "" "" "" "" ",BD" "TEMPSET3"
+*AUG2007 - note that NCAP_AFC involves TSLVL, where 'ANNUAL' needs to be mapped to 'ANNUAL-TSL' for ANSWER 
+*          this creates a few issues for putTSmr.ans
+$BATINCLUDE putTSmr.ans "NCAP_AFC" "REG" "OTHERYR" "PRC" ",CG" ",TSLVL" "" "" "" "NCAP_AFC" "PRC" "" ",CG" "" ",TSLVL" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "NCAP_AFM" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_AFM" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_AFS" "REG" "OTHERYR" "PRC" ",TS" ",BD" "" "" "" "NCAP_AFS" "PRC" "" "" "" ",TS" ",BD" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "NCAP_AFX" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_AFX" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_BND" "REG" "OTHERYR" "PRC" ",BD" "" "" "" "" "NCAP_BND" "PRC" "" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_BPME" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_BPME" "PRC" "" "" "" "" "" "TEMPSET2"
+** note use of CG2
+$BATINCLUDE putTSmr.ans "NCAP_CEFF" "REG" "OTHERYR" "PRC" ",CG" ",CG2" "" "" "" "NCAP_CEFF" "PRC" "" ",CG" ",CG2" "" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "NCAP_CEH" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_CEH" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_CHPR" "REG" "OTHERYR" "PRC" ",BD" "" "" "" "" "NCAP_CHPR" "PRC" "" "" "" "" ",BD" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_CLED" "REG" "OTHERYR" "PRC" ",COM" "" "" "" "" "NCAP_CLED" "PRC" ",COM" "" "" "" "" "TEMPSET3"
+** note use of IN and NCAP_COM-IN
+$BATINCLUDE putTSmr.ans "NCAP_COM" "REG" "OTHERYR" "PRC" ",COM" ",IN" "" "" "" "NCAP_COM-IN" "PRC" ",COM" "" "" "" "" "TEMPSET4"
+** note use of OUT and NCAP_COM-OUT
+$BATINCLUDE putTSmr.ans "NCAP_COM" "REG" "OTHERYR" "PRC" ",COM" ",OUT" "" "" "" "NCAP_COM-OUT" "PRC" ",COM" "" "" "" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "NCAP_COST" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_COST" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_DCOST" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_DCOST" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_DELIF" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_DELIF" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_DLAG" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_DLAG" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_DLAGC" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_DLAGC" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_DLIFE" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_DLIFE" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_DRATE" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_DRATE" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_EFF" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_EFF" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_EFFM" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_EFFM" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_EFFX" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_EFFX" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_ELIFE" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_ELIFE" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_FOM" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_FOM" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_FOMM" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_FOMM" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_FOMX" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_FOMX" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_FSUB" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_FSUB" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_FSUBM" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_FSUBM" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_FSUBX" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_FSUBX" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_FTAX" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_FTAX" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_FTAXM" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_FTAXM" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_FTAXX" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_FTAXX" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_ICOM" "REG" "OTHERYR" "PRC" ",COM" "" "" "" "" "NCAP_ICOM" "PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_ILED" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_ILED" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_ISUB" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_ISUB" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_ITAX" "REG" "OTHERYR" "PRC" ",CUR" "" "" "" "" "NCAP_ITAX" "PRC" "" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_LCOST" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_LCOST" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_LFOM" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_LFOM" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_OCOM" "REG" "OTHERYR" "PRC" ",COM" "" "" "" "" "NCAP_OCOM" "PRC" ",COM" "" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_PKCNT" "REG" "OTHERYR" "PRC" ",TS" "" "" "" "" "NCAP_PKCNT" "PRC" "" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "NCAP_SALV" "REG" "OTHERYR" "PRC" ",COM" ",CUR" "" "" "" "NCAP_SALV" "PRC" ",COM" "" "" "" "" "TEMPSET4" 
+$BATINCLUDE putTSmr.ans "NCAP_TLIFE" "REG" "OTHERYR" "PRC" "" "" "" "" "" "NCAP_TLIFE" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "NCAP_VALU" "REG" "OTHERYR" "PRC" ",COM" ",CUR" "" "" "" "NCAP_VALU" "PRC" ",COM" "" "" "" "" "TEMPSET4"
+$BATINCLUDE putTSmr.ans "PRC_ACTFLO" "REG" "OTHERYR" "PRC" ",CG" "" "" "" "" "PRC_ACTFLO" "PRC" "" ",CG" "" "" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "PRC_RESID" "REG" "OTHERYR" "PRC" "" "" "" "" "" "PRC_RESID" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "STGIN_BND" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",BD" "" "" "STGIN_BND" "PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "STGOUT_BND" "REG" "OTHERYR" "PRC" ",COM" ",TS" ",BD" "" "" "STGOUT_BND" "PRC" ",COM" "" "" ",TS" ",BD" "TEMPSET5"
+$BATINCLUDE putTSmr.ans "STG_CHRG" "REG" "OTHERYR" "PRC" ",TS" "" "" "" "" "STG_CHRG" "PRC" "" "" "" ",TS" "" "TEMPSET3"
+$BATINCLUDE putTSmr.ans "STG_EFF" "REG" "OTHERYR" "PRC" "" "" "" "" "" "STG_EFF" "PRC" "" "" "" "" "" "TEMPSET2"
+$BATINCLUDE putTSmr.ans "STG_LOSS" "REG" "OTHERYR" "PRC" ",TS" "" "" "" "" "STG_LOSS" "PRC" "" "" "" ",TS" "" "TEMPSET3"
+
+* TS additions for Lumpy Investment (there are also TID additions for Lumpy Investment) - NCAP_DISC
+$IF NOT '%DSC%' == 'YES' $GOTO NOTSDSC
+*option NCAP_DISC:0:0:1; display NCAP_DISC;
+*  special code to create TS parameter ANCAP_DISC using SET ANSUNIT put out by ANSWER where SET ANSUNIT / U001*U100 /;
+   ANCAP_DISC(REG,OTHERYR,PRC,ANSUNIT) $= SUM(ANSU_UNIT(ANSUNIT,UNIT), NCAP_DISC(REG,OTHERYR,PRC,UNIT));
+*option ANCAP_DISC:0:0:1; display ANCAP_DISC;
+$  BATINCLUDE putTSmr.ans "ANCAP_DISC" "REG" "OTHERYR" "PRC" ",ANSUNIT" "" "" "" "" "NCAP_DISC" "PRC" "" "" "" "" ",ANSUNIT" "TEMPSET3"
+$LABEL NOTSDSC
+
+** now put out multi-dimensional UC_ sets which are TS parameters in ANSWER
+** note that "OTHERYR" occurs in 3rd argument position, not second
+** note that "OTHERYR" occurs in 3rd argument position, not second
+$BATINCLUDE putUC_TSmr.ans "UC_T_EACH" "REG" "UC_N" "OTHERYR" "" "" "" "" "" "UC_T_EACH" "UC_N" "" "" "" "" "" TEMPSET2 
+** note that "OTHERYR" occurs in 3rd argument position, not second
+$BATINCLUDE putUC_TSmr.ans "UC_T_SUM" "REG" "UC_N" "OTHERYR" "" "" "" "" "" "UC_T_SUM" "UC_N" "" "" "" "" "" TEMPSET2 
+** note that "OTHERYR" occurs in 3rd argument position, not second
+*n* with new approach to User Constraints, UC_T_SUCC becomes a TS parameter
+$BATINCLUDE putUC_TSmr.ans "UC_T_SUCC" "REG" "UC_N" "OTHERYR" "" "" "" "" "" "UC_T_SUCC" "UC_N" "" "" "" "" "" TEMPSET2 
+
+** now put out UC_ TS parameters
+** note that "OTHERYR" occurs in 5th argument position, not second
+*2004* UC_ACT has one less ALLYEAR in its dimensions
+$BATINCLUDE putUC_TS2mr.ans "UC_ACT"  "UC_N" ",SIDE" ",REG" "OTHERYR" ",PRC" ",TS" "" "" "UC_ACT"  "UC_N" ",SIDE" ",PRC" "" ",TS" "" TEMPSET5
+** note that "OTHERYR" occurs in 4th argument position, not second
+$BATINCLUDE putUC_TS2mr.ans "UC_CAP"  "UC_N" ",SIDE" ",REG" "OTHERYR" ",PRC" "" "" "" "UC_CAP"  "UC_N" ",SIDE" ",PRC" "" "" "" TEMPSET4
+** note that "OTHERYR" occurs in 4th argument position, not second
+$BATINCLUDE putUC_TS2mr.ans "UC_COMCON"  "UC_N" ",SIDE" ",REG" "OTHERYR" ",COM" ",TS" "" "" "UC_COMCON"  "UC_N" ",SIDE" "" ",COM" ",TS" "" TEMPSET5
+** note that "OTHERYR" occurs in 4th argument position, not second
+$BATINCLUDE putUC_TS2mr.ans "UC_COMPRD"  "UC_N" ",SIDE" ",REG" "OTHERYR" ",COM" ",TS" "" "" "UC_COMPRD"  "UC_N" ",SIDE" "" ",COM" ",TS" "" TEMPSET5
+** note that "OTHERYR" occurs in 5th argument position, not second
+*2004* UC_FLO has one less ALLYEAR in its dimensions
+$BATINCLUDE putUC_TS2mr.ans "UC_FLO"  "UC_N" ",SIDE" ",REG" "OTHERYR" ",PRC" ",COM" ",TS" "" "UC_FLO"  "UC_N" ",SIDE" ",PRC" ",COM" ",TS" "" TEMPSET6
+** note that "OTHERYR" occurs in 4th argument position, not second
+$BATINCLUDE putUC_TS2mr.ans "UC_NCAP"  "UC_N" ",SIDE" ",REG" "OTHERYR" ",PRC" "" "" "" "UC_NCAP"  "UC_N" ",SIDE" ",PRC" "" "" "" TEMPSET4
+** note that "OTHERYR" occurs in 3rd argument position, not second
+$BATINCLUDE putUC_TSmr.ans "UC_RHSRT"  "REG" "UC_N" "OTHERYR" ",BD" "" "" "" "" "UC__RHSRT"  "UC_N" "" "" "" "" ",BD" TEMPSET3
+** note that "OTHERYR" occurs in 3rd argument position, not second
+$BATINCLUDE putUC_TSmr.ans "UC_RHSRTS"  "REG" "UC_N" "OTHERYR" ",TS" ",BD" "" "" "" "UC__RHSRTS"  "UC_N" "" "" "" ",TS" ",BD" TEMPSET4
+** (no REG) $BATINCLUDE putTSmr.ans "UC_RHST"  "UC_N" "OTHERYR" ",BD" "" "" "" "" "" "UC__RHST"  "UC_N" "" "" "" "" ",BD" TEMPSET2
+** (no REG) $BATINCLUDE putTSmr.ans "UC_RHSTS"  "UC_N" "OTHERYR" ",TS" ",BD" "" "" "" "" "UC__RHSTS"  "UC_N" "" "" "" ",TS" ",BD" TEMPSET3
+
+* NOV2008 - use parameter UC_MARK as part of handling parameter PRC_MARK
+$BATINCLUDE putTSmr.ans "PRC_MARK"  "REG" "OTHERYR" "PRC" ",UCN_MARKET" ",COM" ",BD" "" "" "UC_MARK"  "UCN_MARKET" "" ",PRC" ",COM" "" ",BD" TEMPSET5
+
+PUT /
+PUT /,"*** TID DATA ***", REG.TL;
+
+*2004* COM_BPRICE has become a TS
+*2004* $BATINCLUDE putTIDmr.ans "COM_BPRICE" "REG" "COM" ",TS" ",CUR" "" "" "" "" "COM_BPRICE" "" "COM" "" "" ",TS" ""
+$BATINCLUDE putTIDmr.ans "COM_BQTY" "REG" "COM" ",TS" "" "" "" "" "" "COM_BQTY" "" "COM" "" "" ",TS" ""
+
+* advised November 2005 by Antti Lehtila that COM_CUMNET and COM_CUMPRD should have BOTH year indexes between BOT and EOT,
+* hence these need to become TID data parameters in ANSWER-TIMES 
+*$BATINCLUDE putTIDmr.ans "COM_CUMNET" "REG" "ALLYEAR" ",ALLYEAR2" ",COM" ",BD" "" "" "" "COM_CUMNET" "ALLYEAR" ",COM" "" "" ",ALLYEAR2" ",BD"
+*$BATINCLUDE putTIDmr.ans "COM_CUMPRD" "REG" "ALLYEAR" ",ALLYEAR2" ",COM" ",BD" "" "" "" "COM_CUMPRD" "ALLYEAR" ",COM" "" "" ",ALLYEAR2" ",BD"
+* changes made 2012-11-05 for TIMES-MACRO
+$BATINCLUDE putTIDmr.ans "COM_CUMNET" "REG" "BOHYEAR" ",EOHYEAR" ",COM" ",BD" "" "" "" "COM_CUMNET" "BOHYEAR" ",COM" "" "" ",EOHYEAR" ",BD"
+$BATINCLUDE putTIDmr.ans "COM_CUMPRD" "REG" "BOHYEAR" ",EOHYEAR" ",COM" ",BD" "" "" "" "COM_CUMPRD" "BOHYEAR" ",COM" "" "" ",EOHYEAR" ",BD"
+
+$BATINCLUDE putTIDmr.ans "COM_STEP" "REG" "COM" ",BD" "" "" "" "" "" "COM_STEP" "" "COM" "" "" "" ",BD"
+$BATINCLUDE putTIDmr.ans "G_YRFR" "REG" "TS" "" "" "" "" "" "" "G_YRFR" "" "" "" "" ",TS" ""
+** NCAP_PASTI is defined over PASTYEAR rather than OTHERYR, so comes out as a TID in ANSWER
+$BATINCLUDE putTIDmr.ans "NCAP_PASTI" "REG" "PASTYEAR" ",PRC" "" "" "" "" "" "NCAP_PASTI" "PRC" "" "" "" "" ",PASTYEAR"
+** NCAP_PASTY is defined over PASTYEAR rather than OTHERYR, so comes out as a TID in ANSWER
+$BATINCLUDE putTIDmr.ans "NCAP_PASTY" "REG" "PASTYEAR" ",PRC" "" "" "" "" "" "NCAP_PASTY" "PRC" "" "" "" "" ",PASTYEAR"
+$BATINCLUDE putTIDmr.ans "NCAP_TLIFE" "REG" "PASTYEAR" ",PRC" "" "" "" "" "" "NCAP_TLIFEp" "PRC" "" "" "" "" ",PASTYEAR"
+$BATINCLUDE putTIDmr.ans "PRC_CAPACT" "REG" "PRC" "" "" "" "" "" "" "PRC_CAPACT" "PRC" "" "" "" "" "" 
+*SEP2007 - PRC_NUTS is an internal parameter
+*$BATINCLUDE putTIDmr.ans "PRC_NUTS" "REG" "PRC" "" "" "" "" "" "" "PRC_NUTS" "PRC" "" "" "" "" ""
+
+* TID additions for ETL (there are no TS additions for ETL)
+$IF NOT '%ETL%' == 'YES' $GOTO NOETL
+*  NOV2008 - special treatment of TEG which in TIMES is not defined over REG (!), is needed in putTIDmr.ans.
+$  BATINCLUDE putTIDmr.ans "TEG" "PRC" "" "" "" "" "" "" "" "ETL-TEG" "PRC" "" "" "" "" ""
+$  BATINCLUDE putTIDmr.ans "CCAP0" "REG" "PRC" "" "" "" "" "" "" "ETL-CCAP0" "PRC" "" "" "" "" "" 
+$  BATINCLUDE putTIDmr.ans "CCAPM" "REG" "PRC" "" "" "" "" "" "" "ETL-CCAPM" "PRC" "" "" "" "" "" 
+$  BATINCLUDE putTIDmr.ans "PRAT" "REG" "PRC" "" "" "" "" "" "" "ETL-PRAT" "PRC" "" "" "" "" "" 
+$  BATINCLUDE putTIDmr.ans "SC0" "REG" "PRC" "" "" "" "" "" "" "ETL-SC0" "PRC" "" "" "" "" "" 
+$  BATINCLUDE putTIDmr.ans "SEG" "REG" "PRC" "" "" "" "" "" "" "ETL-SEG" "PRC" "" "" "" "" "" 
+$LABEL NOETL
+
+* TID additions for Lumpy Investment (there are also TS additions for Lumpy Investment)
+$IF NOT '%DSC%' == 'YES' $GOTO NOTIDDSC
+$  BATINCLUDE putTIDmr.ans "PRC_DSCNCAP" "REG" "PRC" "" "" "" "" "" "" "PRC_DSCNCAP" "PRC" "" "" "" "" "" 
+$LABEL NOTIDDSC
+
+** now put out multi-dimensional sets as TID parameters
+$BATINCLUDE putTIDmr.ans "COM_GMAP" "REG" "CG" ",COM" "" "" "" "" "" "COM_GMAP" "" "COM" ",CG" "" "" ""
+$BATINCLUDE putTIDmr.ans "COM_LIM" "REG" "COM" ",BD" "" "" "" "" "" "COM_LIM" "" ",COM" "" "" "" ",BD"
+$BATINCLUDE putTIDmr.ans "COM_OFF" "REG" "COM" ",BOHYEAR" ",EOHYEAR" "" "" "" "" "COM_OFF" "" "COM" "" "" ",BOHYEAR" ",EOHYEAR"
+* 29MAR2006 - Uwe advised COM_PEAK argument is (REG,COM_GROUP) not (REG,COM)
+*$BATINCLUDE putTIDmr.ans "COM_PEAK" "REG" "COM" "" "" "" "" "" "" "COM_PEAK" "" "COM" "" "" "" ""
+$BATINCLUDE putTIDmr.ans "COM_PEAK" "REG" "CG" "" "" "" "" "" "" "COM_PEAK" "" "CG" "" "" "" ""
+* 29MAR2006 - Uwe advised COM_PKTS argument is (REG,COM_GROUP,TS) not (REG,COM,TS)
+*$BATINCLUDE putTIDmr.ans "COM_PKTS" "REG" "COM" ",TS" "" "" "" "" "" "COM_PKTS" "" "COM" "" "" ",TS" ""
+$BATINCLUDE putTIDmr.ans "COM_PKTS" "REG" "CG" ",TS" "" "" "" "" "" "COM_PKTS" "" "" "CG" "" ",TS" ""
+$BATINCLUDE putTIDmr.ans "COM_TS" "REG" "COM" ",TS" "" "" "" "" "" "COM_TS" "" "COM" "" "" ",TS" ""
+$BATINCLUDE putTIDmr.ans "PRC_ACTUNT" "REG" "PRC" ",CG" ",UNITS_ACT" "" "" "" "" "PRC_ACTUNT" "PRC" "" ",CG" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_AOFF" "REG" "PRC" ",BOHYEAR" ",EOHYEAR" "" "" "" "" "PRC_AOFF" "PRC" "" "" "" ",BOHYEAR" ",EOHYEAR"
+$BATINCLUDE putTIDmr.ans "PRC_CG" "REG" "PRC" ",CG" "" "" "" "" "" "PRC_CG" "PRC" "" ",CG" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_FOFF" "REG" "PRC" ",COM" ",TS" ",BOHYEAR" ",EOHYEAR" "" "" "PRC_FOFF" "PRC" ",COM" ",TS" "" ",BOHYEAR" ",EOHYEAR"
+$BATINCLUDE putTIDmr.ans "PRC_NOFF" "REG" "PRC" ",BOHYEAR" ",EOHYEAR" "" "" "" "" "PRC_NOFF" "PRC" "" "" "" ",BOHYEAR" ",EOHYEAR"
+$BATINCLUDE putTIDmr.ans "PRC_PKAF" "REG" "PRC" "" "" "" "" "" "" "PRC_PKAF" "PRC" "" "" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_PKNO" "REG" "PRC" "" "" "" "" "" "" "PRC_PKNO" "PRC" "" "" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_NSTTS" "REG" "PRC" ",TS" "" "" "" "" "" "PRC_NSTTS" "PRC" "" "" "" ",TS" ""
+$BATINCLUDE putTIDmr.ans "PRC_SPG" "REG" "PRC" ",CG" "" "" "" "" "" "PRC_SPG" "PRC" "" ",CG" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_STGIPS" "REG" "PRC" ",COM" "" "" "" "" "" "PRC_STGIPS" "PRC" ",COM" "" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_STGTSS" "REG" "PRC" ",COM" "" "" "" "" "" "PRC_STGTSS" "PRC" ",COM" "" "" "" ""
+$BATINCLUDE putTIDmr.ans "PRC_TS" "REG" "PRC" ",TS" "" "" "" "" "" "PRC_TS" "PRC" "" "" "" ",TS" ""
+$BATINCLUDE putTIDmr.ans "PRC_VINT" "REG" "PRC" "" "" "" "" "" "" "PRC_VINT" "PRC" "" "" "" "" ""
+** note use of IN, OUT and TOP-IN, TOP-OUT
+$BATINCLUDE putTIDmr.ans "TOP" "REG" "PRC" ",COM" ",IN" "" "" "" "" "TOP-IN" "PRC" ",COM" "" "" "" ""
+$BATINCLUDE putTIDmr.ans "TOP" "REG" "PRC" ",COM" ",OUT" "" "" "" "" "TOP-OUT" "PRC" ",COM" "" "" "" ""
+** note that REG in second position should give us TOP_IRE-OUTs, and we must have same COM in both positions
+*$BATINCLUDE putTIDmr.ans "TOP_IRE" "ALL_REG" ",COM" ",REG" ",COM2" ",PRC" "" "" "" "TOP_IRE-OUT" "PRC" ",COM2" "" "" "" ",ALL_REG"
+* MAR2006 - move ALL_REG to Item4 position, and extra COM argument in Item6 position for ATOPIREIN, ATOPIREOUT
+*           Note that in transforming TOP_IRE to ATOPIREOUT, order of COM and COM2 is reversed.
+*$BATINCLUDE putTIDmr.ans "TOP_IRE" "ALL_REG" ",COM" ",REG" ",COM2" ",PRC" "" "" "" "TOP_IRE-OUT" "PRC" ",COM2" "" ",ALL_REG" "" ",COM"
+** note that REG in first position should give us TOP_IRE-INs, and we must have same COM in both positions
+*$BATINCLUDE putTIDmr.ans "TOP_IRE" "REG" "COM" ",ALL_REG" ",COM2" ",PRC" "" "" "" "TOP_IRE-IN" "PRC" ",COM2" "" "" "" ",ALL_REG"
+* MAR2006 - move ALL_REG to Item4 position, and extra COM argument in Item6 position for ATOPIREIN, ATOPIREOUT
+*           Note that in transforming TOP_IRE to ATOPIREIN, order of COM and COM2 is maintained.
+*$BATINCLUDE putTIDmr.ans "TOP_IRE" "REG" "COM" ",ALL_REG" ",COM2" ",PRC" "" "" "" "TOP_IRE-IN" "PRC" ",COM" "" ",ALL_REG" "" ",COM2"
+
+* AUG07 - in ANSWER-TIMES replace TS_MAP by TS_PARENT
+* SEP07   Need special intervention, since TIMES GAMS code internally sets TS_MAP(REG,TS,TS)=YES, 
+*         and internally sets TS_MAP(REG,'ANNUAL',TS)=YES for all TS, even where there is another TS2 with TS_MAP(REG,TS2,TS)=YES.
+*         So use FIX-TS_MAP.ANS to set unwanted TS_MAP(REG,TS,TS)=NO, and unwanted TS_MAP(REG,'ANNUAL',TS)=NO.
+*option TS_MAP:0:0:1; display TS_MAP; 
+$BATINCLUDE FIX-TS_MAP.ANS
+*option TS_MAP:0:0:1; display TS_MAP;
+** note use of TS2, and the order
+$BATINCLUDE putTIDmr.ans "TS_MAP" "REG" "TS2" ",TS" "" "" "" "" "" "TS_PARENT" "" "" "" "" ",TS" ",TS2"
+
+** now put out multi-dimensional UC_ sets which are TID parameters in ANSWER
+$BATINCLUDE putTIDmr.ans "UC_ATTR" "REG" "UC_N" ",SIDE" ",UC_GRPTYPE" ",UC_NAME" "" "" "" "UC_ATTR" "UC_N" ",SIDE" ",UC_GRPTYPE" ",UC_NAME" "" "" 
+*n* $BATINCLUDE putTIDmr.ans "UC_DYN" "REG" "UC_N" ",UC_NUMBER" "" "" "" "" "" "UC_DYN" "UC_N" "" "" ",UC_NUMBER" "" "" 
+*n* $BATINCLUDE putTIDmr.ans "UC_GMAP" "REG" "UC_N" ",UC_GRPTYPE" ",UC_GRP" "" "" "" "" "UC_GMAP" "UC_N" ",UC_GRPTYPE" ",UC_GRP" "" "" "" 
+*n* $BATINCLUDE putTIDmr.ans "UC_GMAP_C" "REG" "UC_N" ",UC_GRPTYPE" ",UC_GRP" ",COM" "" "" "" "UC_GMAP_C" "UC_N" ",UC_GRPTYPE" ",UC_GRP" ",COM" "" "" 
+*n* $BATINCLUDE putTIDmr.ans "UC_GMAP_P" "REG" "UC_N" ",UC_GRPTYPE" ",UC_GRP" ",PRC" "" "" "" "UC_GMAP_P" "UC_N" ",UC_GRPTYPE" ",UC_GRP" ",PRC" "" "" 
+*n* in following line, order of "ALL_REG" and "UC_N" reversed from previously
+*AUG2007 - it is UC_R_EACH(ALL_REG,UC_N), but we're in a loop over REG, so change ALL_REG to REG
+*          really means we need to also handle any UC_R_EACH for external ALL_REG
+*$BATINCLUDE putTIDmr.ans "UC_R_EACH" "ALL_REG" "UC_N" "" "" "" "" "" "" "UC_R_EACH" "UC_N" "" "" "" "" "" 
+$BATINCLUDE putTIDmr.ans "UC_R_EACH" "REG" "UC_N" "" "" "" "" "" "" "UC_R_EACH" "UC_N" "" "" "" "" "" 
+*n* in following line, order of "ALL_REG" and "UC_N" reversed from previously 
+*AUG2007 - it is UC_R_SUM(ALL_REG,UC_N), but we're in a loop over REG, so change ALL_REG to REG
+*          really means we need to also handle any UC_R_SUM for external ALL_REG
+*$BATINCLUDE putTIDmr.ans "UC_R_SUM" "ALL_REG" ",UC_N" "" "" "" "" "" "" "UC_R_SUM" "UC_N" "" "" "" "" "" 
+$BATINCLUDE putTIDmr.ans "UC_R_SUM" "REG" "UC_N" "" "" "" "" "" "" "UC_R_SUM" "UC_N" "" "" "" "" "" 
+** even though no REG as first argument, putTID.ans works 
+*n* $BATINCLUDE putTIDmr.ans "UC_REG" "UC_N" ",UC_NUMBER" "" "" "" "" "" "" "UC_REG" "UC_N" "" "" ",UC_NUMBER" "" "" 
+*n* with new approach to User Constraints, UC_T_SUCC becomes a TS parameter, and with different arguments
+*n* $BATINCLUDE putTIDmr.ans "UC_T_SUCC" "REG" "UC_N" ",UC_GRP" ",SIDE" "" "" "" "" "UC_T_SUCC" "UC_N" "" ",UC_GRP" ",SIDE" "" "" 
+*n* $BATINCLUDE putTIDmr.ans "UC_TS" "REG" "UC_N" ",UC_NUMBER" "" "" "" "" "" "UC_TS" "UC_N" "" "" ",UC_NUMBER" "" "" 
+$BATINCLUDE putTIDmr.ans "UC_TS_EACH" "REG" "UC_N" ",TS" "" "" "" "" "" "UC_TS_EACH" "UC_N" "" "" "" ",TS" "" 
+$BATINCLUDE putTIDmr.ans "UC_TS_SUM" "REG" "UC_N" ",TS" "" "" "" "" "" "UC_TS_SUM" "UC_N" "" "" "" ",TS" "" 
+
+
+** now put out UC_ TID parameters
+** (no REG) $BATINCLUDE putTIDmr.ans "UC_RHS"  "UC_N" ",BD" "" "" "" "" "" "" "UC__RHS"  "UC_N" "" "" "" "" ",BD" 
+$BATINCLUDE putTIDmr.ans "UC_RHSR"  "REG" "UC_N" ",BD" "" "" "" "" "" "UC__RHSR"  "UC_N" "" "" "" "" ",BD" 
+* UC_RHSRS no longer needed
+* $BATINCLUDE putTIDmr.ans "UC_RHSRS"  "REG" "UC_N" ",TS" ",BD" "" "" "" "" "UC__RHSRS"  "UC_N" "" "" "" ",TS" ",BD" 
+* UC_RHSS no longer needed
+** (no REG) $BATINCLUDE putTIDmr.ans "UC_RHSS"  "UC_N" ",TS" ",BD" "" "" "" "" "" "UC__RHSS"  "UC_N" "" "" "" ",TS" ",BD" 
+
+*);
+
+PUT /;
+
+OPTION CLEAR = AREG_PRC;

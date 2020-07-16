@@ -1,0 +1,13 @@
+* BATINCLUDE putCOMUnit.ANS %1
+*
+* %1 = Commodity Set for which Commodity Unit is put out.
+*
+* Put out 'Units:', followed by COM_UNIT for the member of Commodity SET %1.
+* "Units:" is always put out, but COM_UNIT may be missing.
+* (It might be useful to change the code and have a special indicator for missing Unit.)
+*
+  PUT / "Units:";
+  LOOP((REG2,UNITS_COM)$(SAMEAS(REG,REG2) AND COM_UNIT(REG2,COM,UNITS_COM)),
+    PUT "COMM=", UNITS_COM.TL;
+  ); 
+

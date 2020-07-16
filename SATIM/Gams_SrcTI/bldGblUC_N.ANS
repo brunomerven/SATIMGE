@@ -1,0 +1,64 @@
+* BATINCLUDE bldGblUC_N.ANS
+
+* Determine the _GLOBAL region User Constraint Items from UC_RHSxx.
+* Heavy overlap with code in SGROUPSNEW.ANS, 
+* but here we are not inside LOOP(REG, so some aspects of the code change.
+*
+**************************************************************************
+
+SET GBLREG_UCN(*);
+
+* UC_RHS does not have a dynamic variant.
+UC_N_UC(UC_N) = YES$SUM(BD$UC_RHS(UC_N,BD), 1);
+*option UC_N_UC:0:0:1; display UC_N_UC;
+
+* UC_RHST has dynamic and period variants according to UC_T_SUCC/UC_T_EACH.
+LOOP (UC_N,
+  IF (SUM((ALLYEAR,BD)$UC_RHST(UC_N,ALLYEAR,BD), 1),
+    IF (SUM((REG,ALLYEAR)$UC_T_SUCC(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCSU(UC_N) = YES;
+*  Note that only UC_T_EACH applies to UC_N_UCT, and that UC_R_EACH does not apply.
+    ELSEIF SUM((REG,ALLYEAR)$UC_T_EACH(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCT(UC_N) = YES;
+    );
+  );
+);
+*option UC_N_UCSU:0:0:1; display UC_N_UCSU;
+*option UC_N_UCT:0:0:1; display UC_N_UCT;
+
+* UC_RHSTS has dynamic and period variants according to UC_T_SUCC/UC_T_EACH.
+LOOP (UC_N,
+  IF (SUM((ALLYEAR,TS,BD)$UC_RHSTS(UC_N,ALLYEAR,TS,BD), 1),
+    IF (SUM((REG,ALLYEAR)$UC_T_SUCC(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCSUS(UC_N) = YES;
+*  Note that only UC_T_EACH applies to UC_N_UCTS, and that UC_R_EACH does not apply.
+    ELSEIF SUM((REG,ALLYEAR)$UC_T_EACH(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCTS(UC_N) = YES;
+    );
+  );
+);
+*option UC_N_UCSUS:0:0:1; display UC_N_UCSUS;
+*option UC_N_UCTS:0:0:1; display UC_N_UCTS;
+
+* Define the members of SET GBLREG_UCN.
+GBLREG_UCN(UC_N_UC) = YES;
+GBLREG_UCN(UC_N_UCSU) = YES;
+GBLREG_UCN(UC_N_UCT) = YES;
+GBLREG_UCN(UC_N_UCSUS) = YES;
+GBLREG_UCN(UC_N_UCTS) = YES;
+
+* The following lines are taken from FLAG.ANS.
+* (Only the lines for UC_N, UC_N_UC, UC_N_UCSU, UC_N_UCT, UC_N_UCSUS, UC_N_UCTS are needed.)
+FLAG('C',UC_N,'UC_N') = 1 ;
+FLAG('C',UC_N_UC,'UC_N_UC') = 2 ;
+FLAG('C',UC_N_UCR,'UC_N_UCR') = 4 ;
+FLAG('C',UC_N_UCT,'UC_N_UCT') = 8 ;
+* FLAG('C',UC_N_UCS,'UC_N_UCS') = 16 ;  no longer needed
+FLAG('C',UC_N_UCRT,'UC_N_UCRT') = 32 ;
+* FLAG('C',UC_N_UCRS,'UC_N_UCRS') = 64 ;  no longer needed
+FLAG('C',UC_N_UCTS,'UC_N_UCTS') = 128 ;
+FLAG('C',UC_N_UCRTS,'UC_N_UCRTS') = 256 ;
+FLAG('C',UC_N_UCSU,'UC_N_UCSU') = 512 ;
+FLAG('C',UC_N_UCSUS,'UC_N_UCSUS') = 1024 ;
+FLAG('C',UC_N_UCRSU,'UC_N_UCRSU') = 2048 ;
+FLAG('C',UCN_UCRSUS,'UCN_UCRSUS') = 4096 ;

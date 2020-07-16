@@ -1,0 +1,29 @@
+*
+* $BATINCLUDE CRESCENSEC.ANS %1
+*
+* %1 = full filename associated with input GAMS TIMES DD
+*
+* Create *** SCENARIO *** section of IMP file.
+*
+********************************************************
+*
+* For first record, don't want leading blank line.
+PUT "*** SCENARIO ***","_GLOBAL";
+  LOOP (ALL_REG,
+    PUT ALL_REG.TL;
+  );
+PUT / "Creation Date:", SYSTEM.DATE, SYSTEM.TIME
+PUT / "Created By:", "Processing GAMS TIMES Data Dictionary %1"
+PUT / "ANSWER Version:", "6.4.xx"
+PUT / "Scenario:";
+  LOOP (SCENCASE$(ORD(SCENCASE) EQ 1),
+    PUT OUTSCEN SCENCASE.TL, SCENCASE.TE(SCENCASE)
+  );
+* Note that what we need here is ANSOTHYR()
+PUT / "Time Periods:";
+  LOOP (ANSOTHYR(J,OTHERYR),
+    PUT OUTSCEN OTHERYR.TL;
+  );
+PUT / "Comment:" 
+PUT / "End Comment:" 
+PUT /;

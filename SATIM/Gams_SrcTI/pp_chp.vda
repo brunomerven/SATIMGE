@@ -1,0 +1,51 @@
+*=============================================================================*
+* pp_chp.vda - CHP preprocessing for VEDA
+*=============================================================================*
+* [AL]: CHP modeling for VEDA is based on using ACT_EFF and PRC_ACTFLO
+*-----------------------------------------------------------------------------
+  SET CHP_ELC(REG,PRC,COM) / EMPTY.EMPTY.EMPTY /;
+
+* Identify CHP processes using NCAP_CHPR but no NCAP_CEFF:
+  LOOP((R,V,P,BD)$NCAP_CHPR(R,V,P,BD), TRACKP(R,P) = YES;);
+  TRACKP(R,P)$(NOT PRC_MAP(R,'CHP',P)) = NO;
+  LOOP((R,V,P,CG1,CG2)$NCAP_CEFF(R,V,P,CG1,CG2),TRACKP(R,P) = NO;);
+* Get the ELC outputs, and ensure that there is one:
+  CHP_ELC(RPC_PG(TRACKP(R,P),C))$NRG_TMAP(R,'ELC',C) = YES;
+  OPTION CLEAR=TRACKP; LOOP(CHP_ELC(R,P,C),TRACKP(R,P)=YES;);
+
+*-----------------------------------------------------------------------------
+* Back-pressure point should correspond to the maximum HEAT/POWER ratio
+  NCAP_BPME(RTP(R,V,P))$TRACKP(R,P) = MAX(NCAP_CHPR(R,V,P,'LO'),NCAP_CHPR(R,V,P,'FX'),NCAP_CHPR(R,V,P,'UP'));
+* If slope is different from 1, we should always have a maximum heat share:
+  NCAP_CHPR(RTP(R,V,P),'FX')$((ABS(VDA_CEH(R,V,P)-1) GT .01)
+                             $(TRACKP(R,P)*(NOT NCAP_CHPR(R,V,P,'UP')))) = NCAP_BPME(R,V,P);
+  NCAP_CHPR(RTP(R,V,P),'LO')$NCAP_CHPR(R,V,P,'FX') = 0;
+
+*-----------------------------------------------------------------------------
+* For CHP without VDA_CEH: Both PRC_ACTFOs are the same
+  VDA_CEH(R,V,P)$((VDA_CEH(R,V,P) EQ EPS)$TRACKP(R,P)) = 0;
+  PRC_ACTFLO(RTP(R,V,P),C)$((RPC_PG(R,P,C)*(NOT VDA_CEH(R,V,P)))$TRACKP(R,P)) = 1+NCAP_BPME(R,V,P);
+* Calculate Actflo for pg and elc
+  PRC_ACTFLO(RTP(R,V,P),C)$(((VDA_CEH(R,V,P) LT 1)*VDA_CEH(R,V,P)*RPC_PG(R,P,C))$TRACKP(R,P)) = 
+     1 + (1/VDA_CEH(R,V,P)-1)$(NOT CHP_ELC(R,P,C));
+  PRC_ACTFLO(RTP(R,V,P),C)$(((VDA_CEH(R,V,P) GE 1)*VDA_CEH(R,V,P)*RPC_PG(R,P,C))$TRACKP(R,P)) = 
+     (1+(1/VDA_CEH(R,V,P)-1)/(1+1/NCAP_BPME(R,V,P))) * (1+(VDA_CEH(R,V,P)-1)$(NOT CHP_ELC(R,P,C)));
+
+*-----------------------------------------------------------------------------
+* EQ_OUTSHR controls: Set all of them for the electricity flow
+  LOOP((RP_PG(TRACKP(R,P),CG),CHP_ELC(R,P,C)),
+   FLO_SHAR(RTP(R,V,P),C,CG,S,'LO')$(PRC_TS(R,P,S) * NCAP_CHPR(R,V,P,'UP')) =
+           1 / (1+NCAP_CHPR(R,V,P,'UP'));
+   FLO_SHAR(RTP(R,V,P),C,CG,S,'FX')$(PRC_TS(R,P,S) * NCAP_CHPR(R,V,P,'FX')) =
+           1 / (1+NCAP_CHPR(R,V,P,'FX'));
+   FLO_SHAR(RTP(R,V,P),C,CG,S,'UP')$(PRC_TS(R,P,S) * NCAP_CHPR(R,V,P,'LO')) =
+           1 / (1+NCAP_CHPR(R,V,P,'LO'));
+  );
+*-----------------------------------------------------------------------------
+  LOOP(V,TRACKP(R,P)$(VDA_CEH(R,V,P)+NCAP_CHPR(R,V,P,'FX')+NCAP_CHPR(R,V,P,'LO') GT 0) = NO);
+  PUTGRP = 0;
+  LOOP(TRACKP(R,P),
+$    BATINCLUDE pp_qaput.mod PUTOUT PUTGRP 01 'CHP process with zero CEH but only upper bound on CHPR.'
+     PUT QLOG ' WARNING       - Unusual CHP operation: R=',%RL%,' P=',P.TL;
+  );
+  OPTION CLEAR=TRACKP;

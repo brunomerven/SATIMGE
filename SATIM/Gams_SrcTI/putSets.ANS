@@ -1,0 +1,15 @@
+* BATINCLUDE putSets.ANS %1 %2
+*
+* %1 = Component (so C=Constraint or D=CommGroup or E=Commodity or T=Process)
+* %2 = Set corresponding to this Component (usually for which GroupFlag = 1)
+*
+* Put out 'Sets:', followed by individual Sets that member of SET %2 belongs to.
+* e.g. For %1=E and %2=COM, we get individual Commodity Sets that member of SET COM belongs to.
+*
+  PUT / "Sets:";
+  LOOP(IPWR,
+    LOOP(SUBSETS$(FLAG('%1',%2,SUBSETS) EQ POWER(2,ORD(IPWR)-1)),
+       PUT SUBSETS.TL:0;
+    );
+  );
+

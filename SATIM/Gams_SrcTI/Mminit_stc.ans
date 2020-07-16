@@ -1,0 +1,59 @@
+******************************************************************************
+*                                                                            *
+*  MMINIT_STC.ANS:  Handling of TIMES Stochastics                            *
+*                                                                            *
+*  Additional sets, parameters required by ANSWER declared and initialized   *
+*                                                                            *
+******************************************************************************
+
+* GAMS Set Names put out in ANSWER-generated DD for Stochastic Component
+
+* Maybe SET ANS_SOW1 doesn't need to be put out?
+*     SET ANS_SOW1 / EMPTY /;
+
+* ANS_SOW2 contains members within {ST1*ST9}
+*     SET ANS_SOW2 / EMPTY /;
+
+* ANS_SOW3 contains members within {W01*W64}
+*     SET ANS_SOW3 / EMPTY /;
+
+* ANS_SOW4 contains members within {ST1.W01*ST9.W64}
+*     SET ANS_SOW4 / EMPTY /;
+
+* GAMS Parameter Names put out in ANSWER-generated DD
+* corresponding to Stochastic PARAMETERs in TIMES,
+* but excluding TIMES Climate Stochastic PARAMETERs. 
+     PARAMETER AS_CAP_BND / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_COM_CUMNET / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_COM_CUMPRD / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_COM_FR(*,*,*,*,*,*);
+     PARAMETER AS_COM_PROJ / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+
+*  S_COM_TAX added 15 March 2018
+     PARAMETER AS_COM_TAXNET / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_COM_TAXPRD / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+
+     PARAMETER AS_DAM_COST / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_FLO_CUM / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+*  S_FLO_FUNC added 28 April 2013
+     PARAMETER AS_FLO_FUNC(*,*,*,*,*,*,*);
+     PARAMETER AS_NCAP_AFS(*,*,*,*,*,*);
+     PARAMETER AS_UC_RHS / EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_UC_RHSR / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_UC_RHSRT / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_UC_RHSRTS / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_UC_RHST / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_UC_RHSTS / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_UCOBJ / EMPTY.EMPTY 0 /;
+     PARAMETER ASW_LAMBDA / 0 /;
+     PARAMETER ASW_PROB / EMPTY 0 /;
+     PARAMETER ASW_SPROB / EMPTY.EMPTY 0 /;
+     PARAMETER ASW_START / EMPTY 0 /;
+     PARAMETER ASW_SUBS / EMPTY.EMPTY 0 /;
+
+* GAMS Parameter Names put out in ANSWER-generated DD
+* corresponding to TIMES Climate Stochastic PARAMETERs. 
+     PARAMETER AS_CM_MAXCO2C / EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_CM_MAXC / EMPTY.EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER AS_CM_CONST / EMPTY.EMPTY.EMPTY 0 /;
+

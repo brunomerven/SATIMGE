@@ -1,0 +1,81 @@
+* ==========================================================================
+* GAMS/Cplex Directives File
+* ==========================================================================
+*---------------------------------------------------------------------------*
+* presolve reduce
+* "0" no presolve
+* "1" presolve (default)
+*---------------------------------------------------------------------------*
+*PRESOLVE   1
+
+*---------------------------------------------------------------------------*
+* scale
+* The scale option influences the scaling of the problem matrix. (default = 0)
+* -1 No scaling
+*  0 Standard scaling - An equilibrium scaling method is implemented which is
+*    generally very effective.
+*  1 Modified, more aggressive scaling method that can produce improvements on
+*    some problems. This scaling should be used if the problem is observed to
+*    have difficulty staying feasible during the solution process.
+*---------------------------------------------------------------------------*
+*SCALE 1
+                                                                      
+*---------------------------------------------------------------------------*
+*iterationlim 400000
+*---------------------------------------------------------------------------*
+
+*---------------------------------------------------------------------------*
+* activate RERUNning with Primal Simplex if presolve detects INF
+*---------------------------------------------------------------------------*
+RERUN YES
+* infeas finder
+  iis yes
+
+*---------------------------------------------------------------------------*
+* Select Solution algorithm
+*     - default is dual simplex
+*   1 - activate primal simplex
+*   4 - activate barrier interior point
+*---------------------------------------------------------------------------*
+*  lpmethod 1
+*  lpmethod 4
+*---------------------------------------------------------------------------*
+* Select Barrier Crossover Algorithm
+*   -1 - No crossover (for testing)
+*    0 - Automatic
+*    1 - Primal
+*    2 - Dual
+*---------------------------------------------------------------------------*
+*  barcrossalg -1
+*---------------------------------------------------------------------------*
+* dump probem
+*---------------------------------------------------------------------------*
+* put it out column-wise in MPS format
+*WRITEMPS test.mps
+* row-wise representation
+*WRITELP
+*---------------------------------------------------------------------------*
+* MIP solve criteria to optimal (default is GAMS OptCA/OptCR)
+*---------------------------------------------------------------------------*
+*  epagap 0
+  epgap  0
+*  epgap .000001
+*---------------------------------------------------------------------------*
+* Have MIP LP solve done using Barrier
+*---------------------------------------------------------------------------*
+  startalg 4
+*---------------------------------------------------------------------------*
+* Reduce memory use (when running out of memory during solve)
+*---------------------------------------------------------------------------*
+*  memoryemphasis 1
+
+*---------------------------------------------------------------------------*
+* Request extra passes at reducing model size (when having memory issues)
+*---------------------------------------------------------------------------*
+*  aggind 4
+
+*---------------------------------------------------------------------------*
+* Invoke parallel Barrier/MIP processing = n-1 CPUs, though even 2 for DUO, and run deterministic
+*---------------------------------------------------------------------------*
+  threads -1
+  parallelmode 1

@@ -1,0 +1,32 @@
+*
+* $BATINCLUDE CREOTHERYR %1
+*
+* %1 = DATAYEAR or MILESTONYR
+*
+* Create SET OTHERYR that contains '0', followed by members of SET %1,
+* used to control TS looping when TS data is put out to the IMP file.
+*
+* Adopt approach suggested by Antti Lehtila to ensure correct ordering. 
+*
+*****************************************************************************
+*
+OTHERYR(%1) = YES;
+OTHERYR('0') = NO;
+
+* Declare a SET for the ordering of OTHERYR+'0'
+* What's below requires OTHERYR('0') = NO; as set above.
+* Clever use of 2-dimensional set ANSOTHYR to ensure '0' precedes DATAYEAR or
+* MILESTONYR members of SET OTHERYR. 
+*SET ANSOTHYR(J,ALLYEAR) 'Ordering of OTHERYR augmented with 0';
+ANSOTHYR('1','0') = YES;
+LOOP(SAMEAS(J,'1'), 
+  Z = 0;
+  LOOP(OTHERYR,
+    Z=Z+1;
+    ANSOTHYR(J+Z,OTHERYR) = YES;
+  );
+);
+*OPTION ANSOTHYR:5:0:1;
+*DISPLAY ANSOTHYR;
+* Now we define '0' to be in SET OTHERYR.
+OTHERYR('0') = YES;

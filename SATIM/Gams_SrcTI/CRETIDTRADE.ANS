@@ -1,0 +1,20 @@
+*
+* CRETIDTRADE.ANS
+*
+* Create *** TID TRADE *** section of .IMP file.
+*
+************************************************
+*
+
+PUT /,"*** TID TRADE ***", "_GLOBAL"; 
+   LOOP (ALL_REG,
+     PUT ALL_REG.TL;
+   );
+* Note use of COM2 
+$BATINCLUDE putTIDTrade.ans "IRE_CCVT" "ALL_REG" ",COM" ",ALL_REG2" ",COM2" "" "" "" "" "IRE_CCVT" "ALL_REG" ",ALL_REG2" "" ",COM" "" "" "" ",COM2"
+** note use of TS2
+$BATINCLUDE putTIDTrade.ans "IRE_TSCVT" "ALL_REG" ",TS" ",ALL_REG2" ",TS2" "" "" "" "" "IRE_TSCVT" "ALL_REG" ",ALL_REG2" "" "" ",TS" "" ",TS2" ""
+$BATINCLUDE putTIDTrade.ans "TOP_IRE" "ALL_REG" ",COM" ",ALL_REG2" ",COM2" ",PRC" "" "" "" "TOP_IRE" "ALL_REG" ",ALL_REG2" ",PRC" ",COM" "" "" "" ",COM2"
+
+PUT /;
+

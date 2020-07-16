@@ -1,0 +1,7 @@
+* BATINCLUDE putComment.ANS
+*
+* Put out 'Comment:', null comment, 'End Comment:'.
+*
+  PUT / "Comment:";
+  PUT / "End Comment:";
+

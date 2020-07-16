@@ -1,0 +1,88 @@
+*$ONLISTING
+* putTIDmr.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = ANSWER parameter name
+* %11 - %16 = ANSWER arguments
+
+* Put out standard TID parameter (not Trade and not for _GLOBAL region).
+* Special treatment of TEG which in TIMES is not defined over REG (!), is needed.
+$IF NOT %1 == 'TEG' LOOP((%3%4%5%6%7%8%9)$%1(%2,%3%4%5%6%7%8%9),
+$IF %1     == 'TEG' LOOP((%2%3%4%5%6%7%8%9)$%1(%2%3%4%5%6%7%8%9),
+$IF '%1' == 'TOP' IF(NOT PRC_MAP(REG,'IRE',%3),
+$IF '%3' == 'PRC' IF(AREG_PRC(PRC),
+$IF '%3' == 'COM' IF(AREG_COM(COM),
+$IF '%3' == 'UC_N' IF(AREG_UCN(UC_N),
+PUT / "%10";
+*$IF '%11' == 'UC_N' $GOTO UC_N_LAB
+$IF NOT '%11' == ''  PUT %11.TL;
+$IF     '%11' == ''  PUT "-";
+*$GOTO SKIPUC_N
+*$LABEL UC_N_LAB
+*IF(NOT PRC(UC_N),
+*  PUT UC_N.TL;
+*ELSE
+*  LOOP(UCUCN$UC_N_UCUCN(UC_N,UCUCN),
+*     PUT UCUCN.TL
+*  );
+*);
+*$LABEL SKIPUC_N
+$IF NOT '%12' == ''  PUT %12.TL;
+$IF     '%12' == ''  PUT "-";
+$IF '%13' == ',CG' $GOTO CG_LAB
+$IF '%13' == ',UC_GRP' $GOTO UC_GRP_LAB
+$IF NOT '%13' == ''  PUT %13.TL;
+$IF     '%13' == ''  PUT "-";
+$GOTO SKIPCG
+$LABEL CG_LAB
+IF (SAMEAS(CG,'ACT'),
+  PUT 'ACTGRP';
+ELSE
+  PUT CG.TL;
+);
+$GOTO SKIPCG
+$LABEL UC_GRP_LAB
+LOOP(UGR$UC_GRP_UGR(UC_GRP,UGR),
+   PUT UGR.TL;
+);
+$LABEL SKIPCG
+$IF '%14' == ',CG2' $GOTO CG_LAB2
+$IF NOT '%14' == ''  PUT %14.TL;
+$IF     '%14' == ''  PUT "-";
+$GOTO SKIPCG2
+$LABEL CG_LAB2
+IF (SAMEAS(CG2,'ACT'),
+  PUT 'ACTGRP';
+ELSE
+  PUT CG2.TL;
+);
+$LABEL SKIPCG2
+$IF NOT '%15' == ''  PUT %15.TL;
+$IF     '%15' == ''  PUT "-";
+$IF NOT '%16' == ''  PUT %16.TL;
+$IF     '%16' == ''  PUT "-";
+
+$IF %1 == 'TEG' $GOTO TEG_LAB
+IF(1*%1(%2,%3%4%5%6%7%8%9),
+* we pre-multiply by 1 on next line so that for sets, rather than "YES" we get 1 
+  PUT (1*%1(%2,%3%4%5%6%7%8%9));
+ELSE
+  PUT "null";
+);
+$GOTO SKIP_TEG
+$LABEL TEG_LAB
+IF(1*%1(%2%3%4%5%6%7%8%9),
+* we pre-multiply by 1 on next line so that for sets, rather than "YES" we get 1 
+  PUT (1*%1(%2%3%4%5%6%7%8%9));
+ELSE
+  PUT "null";
+);
+$LABEL SKIP_TEG
+);
+$IF '%1' == 'TOP' );
+$IF '%3' == 'PRC' );
+$IF '%3' == 'COM' );
+$IF '%3' == 'UC_N' );
+*$OFFLISTING
+

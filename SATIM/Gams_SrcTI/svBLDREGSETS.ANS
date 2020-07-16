@@ -1,0 +1,40 @@
+* BLDREGSETS.ANS
+
+* Build SET AREG_PRC that indicates PRC for region REG.
+OPTION CLEAR = AREG_PRC;
+AREG_PRC(PRC)$RP(REG,PRC) = YES;
+*option AREG_PRC:0:0:1; display AREG_PRC;
+
+* Build SET AREG_COM that indicates COM for region REG.
+OPTION CLEAR = AREG_COM;
+*AREG_COM(COM) = YES$(SUM(PRC$AREG_PRC(PRC), RPC(REG,PRC,COM)));
+AREG_COM(COM)$RC(REG,COM) = YES;
+*option AREG_COM:0:0:1; display AREG_COM;
+
+* Build SET AREG_COMGP that indicates COM_GRP for region REG.
+OPTION CLEAR = AREG_COMGP;
+* Antti advised not to qualify this with AREG_COM(COM).
+AREG_COMGP(COM_GRP)$SUM(COM_GMAP(REG,COM_GRP,COM), YES) = YES;
+*option AREG_COMGP:0:0:1; display AREG_COMGP;
+
+* Build SET AREG_UCN that indicates UC_N for region REG.
+OPTION CLEAR = AREG_UCN;
+AREG_UCN(UC_N)$(UC_R_EACH(REG,UC_N) OR UC_R_SUM(REG,UC_N)) = YES;
+*option AREG_UCN:0:0:1; display AREG_UCN;
+
+* NOV2008 - Build SET UCN_MARKET as part of handling parameter PRC_MARK.
+*SET ITEMNOTREG(*);
+ITEMNOTREG(ITEM) = YES;
+ITEMNOTREG(REG) = NO;
+*option PRC_MARK:0:0:1; display PRC_MARK;
+OPTION CLEAR = UCN_MARKET;
+UCN_MARKET(ITEMNOTREG)$SUM((ALLYEAR,PRC,C,BD)$(NOT SAMEAS(PRC,ITEMNOTREG)), YES$PRC_MARK(REG,ALLYEAR,PRC,ITEMNOTREG,C,BD)) = YES;
+*option UCN_MARKET:0:0:1; display UCN_MARKET;
+
+* Identify those COM that aren't COM at all, 
+* but are UC_N where COM_DESC is used to provide a Description.
+OPTION CLEAR = UCN_COM;
+LOOP(COM$UC_N(COM),
+  UCN_COM(COM)$COM_DESC(REG,COM) = YES;
+);
+*option UCN_COM:0:0:1; display UCN_COM;

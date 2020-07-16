@@ -1,0 +1,42 @@
+******************************************************************************
+*                                                                            *
+*  MMINIT_CLI.ANS:  Handling of TIMES Climate Extension                      *
+*                                                                            *
+*  Additional sets, parameters required by ANSWER declared and initialized   *
+*                                                                            *
+******************************************************************************
+
+* GAMS Set Names put out in ANSWER-generated DD for Climate Extension
+
+* SET CM_CONST_I contains the members over which PARAMETER CM_CONST(*) is defined.
+SET CM_CONST_I / 
+  'BEOHMOD'        
+  'CO2-PREIND'
+  'CS'
+  'EXT-EOH'
+  'GAMMA'
+  'LAMBDA'
+  'PHI-AT-UP'
+  'PHI-CH4'
+  'PHI-LO-UP'
+  'PHI-N2O'
+  'PHI-UP-AT'
+  'PHI-UP-LO'
+  'SIGMA1'
+  'SIGMA2'
+  'SIGMA3'
+/;
+
+* Note that TIMES GAMS code contains SET CM_HISTS, to which CM_VAR is aliased,
+* so no need to put out SET CM_VAR in ANSWER. 
+
+* GAMS Parameter Names put out in ANSWER-generated DD
+* corresponding to Climate PARAMETERs in TIMES,
+* but excluding TIMES Climate Stochastic PARAMETERs, 
+* which are declared in MMINIT_STC.ANS
+     PARAMETER ACM_CONST / EMPTY 0 /;
+     PARAMETER ACM_EXOFORC / EMPTY 0 /;
+     PARAMETER ACM_HISTORY / EMPTY.EMPTY 0 /;
+     PARAMETER ACM_LINFOR / EMPTY.EMPTY.EMPTY 0 /;
+     PARAMETER ACM_MAXC / EMPTY.EMPTY 0 /;
+     PARAMETER AUC_CLI / EMPTY.EMPTY.EMPTY.EMPTY.EMPTY 0 /;

@@ -1,0 +1,58 @@
+*
+* $BATINCLUDE MAINPROC.ANS %1 %2 %3 %4 %5
+*
+* %1 = full filename associated with input GAMS TIMES DD
+* %2 = file stem associated with files created in ANS_WRK directory
+* %3 = YES/NO, according to whether import into BASE/non-BASE scenario
+* %4 = YES/NO, according to whether we want TS Data put out Sparsely/Densely
+* %5 = no. of significant digits for numeric data
+*
+* Main control program for processing of %1 to create %2.IMP (ANSWER .IMP file)
+*
+*****************************************************************************
+
+$OFFLISTING
+
+* Note that for now, we should not have $SET SHELL 'ANSWER' in effect.
+*$SET SHELL 'ANSWER';
+
+*$SETGLOBAL BOTIME 1970
+$SETGLOBAL CLI 'NO' 
+*$SETGLOBAL ETL 'YES'
+*$SETGLOBAL DSC 'YES'
+$SETGLOBAL STAGES 'NO'
+$SETGLOBAL VDA 'YES' 
+$SETGLOBAL XTQA 'YES'
+$SETGLOBAL SOLVEDA 'NO'
+
+$ONMULTI
+$PHANTOM EMPTY
+option profile=1;
+
+* The times-slices MUST come first to ensure ordering OK.
+$INCLUDE ALL_TS.ANS
+
+* Perform fixed declarations
+$BATINCLUDE initsys.mod
+
+* Declare the (system/user) empties
+$BATINCLUDE initmty.mod
+$BATINCLUDE initmty.ier
+
+* Declare additional sets, parameters required by ANSWER Import TIMES GAMS DD,
+$INCLUDE I_MMINIT.ANS
+
+SET SCENCASE / BASE  'BASE scenario created by Import TIMES GAMS DD' /;
+
+* Specify input GAMS TIMES DD.
+$INCLUDE %1
+;
+
+* Specify G_DYEAR.
+$INCLUDE G_DYEAR.ANS
+
+* Specify SET MILESTONYR to be used for Import. 
+$INCLUDE MILESTONYR.TXT
+
+* Carry out the processing to create the ANSWER .IMP file.
+$BATINCLUDE CREIMPFIL1.ANS '%1' '%2' '%3' '%4' '%5' 

@@ -1,0 +1,37 @@
+* putGblTID.ans
+
+* %1        = TIMES parameter name
+* %2 - %9   = TIMES arguments
+* %10       = ANSWER parameter name
+* %11 - %16 = ANSWER arguments
+* %17       = 'LOOP' if we need to loop
+
+* Put out _GLOBAL region TID parameter.
+
+* maybe nothing to loop over
+$IF '%17' == 'LOOP' LOOP((%2%3%4%5%6%7%8%9)$%1(%2%3%4%5%6%7%8%9),
+PUT / "%10";
+$IF NOT '%11' == ''  PUT %11.TL;
+$IF     '%11' == ''  PUT "-";
+$IF NOT '%12' == ''  PUT %12.TL;
+$IF     '%12' == ''  PUT "-";
+$IF NOT '%13' == ''  PUT %13.TL;
+$IF     '%13' == ''  PUT "-";
+$IF NOT '%14' == ''  PUT %14.TL;
+$IF     '%14' == ''  PUT "-";
+$IF NOT '%15' == ''  PUT %15.TL;
+$IF     '%15' == ''  PUT "-";
+$IF NOT '%16' == ''  PUT %16.TL;
+$IF     '%16' == ''  PUT "-";
+
+* maybe nothing to loop over
+$IF NOT '%17' == 'LOOP' $GOTO NOLOOP
+* we pre-multiply by 1 on next line so that for sets, rather than "YES" we get 1
+PUT (1*%1(%2%3%4%5%6%7%8%9));
+);
+$GOTO ENDGBLTID
+
+$LABEL NOLOOP
+PUT (1*%1);
+$LABEL ENDGBLTID
+

@@ -1,0 +1,237 @@
+* SGROUPSNEW.ANS
+
+* Determine ANSWER sub-groups for each Component (Commodity, Process, User Constraint).
+
+* ANSWER Import requires Set Memberships for each Component to satisfy ANSWER Set Memberships tree, 
+* so what's in the DD file may need to be augmented.
+
+*** COMMODITIES ***
+
+* Determine ANSWER Commodity sub-groups from COM_TMAP.
+COM_DEM(COM) = COM_TMAP(REG,'DEM',COM);
+COM_NRG(COM) = COM_TMAP(REG,'NRG',COM);
+COM_MAT(COM) = COM_TMAP(REG,'MAT',COM);
+COM_MATVOL(COM) = MAT_VOL(REG,COM);
+COM_MATWT(COM) = MAT_WT(REG,COM);
+COM_ENV(COM) = COM_TMAP(REG,'ENV',COM);
+COM_FIN(COM) = COM_TMAP(REG,'FIN',COM);
+
+* If neither COM_MATVOL nor COM_MATWT is specified for a COM_MAT,
+* then assume COM_MATVOL to keep ANSWER-TIMES happy.
+COM_MATVOL(COM)$(COM_MAT(COM) AND NOT(COM_MATVOL(COM) OR COM_MATWT(COM))) = YES;
+
+* Determine ANSWER Demand Commodity sub-groups from DEM_SMAP.
+COM_DEMAGR(COM) = DEM_SMAP(REG,'AGR',COM);
+COM_DEMCOM(COM) = DEM_SMAP(REG,'COM',COM);
+COM_DEMIND(COM) = DEM_SMAP(REG,'IND',COM);
+COM_DEMNE(COM) = DEM_SMAP(REG,'NE',COM);
+COM_DEMOTH(COM) = DEM_SMAP(REG,'OTH',COM);
+COM_DEMRES(COM) = DEM_SMAP(REG,'RES',COM);
+COM_DEMTRN(COM) = DEM_SMAP(REG,'TRN',COM);
+
+* If neither COM_DEMAGR nor COM_DEMCOM nor COM_DEMIND ... nor COM_DEMTRN is specified for a COM_DEM,
+* then assume COM_DEMAGR to keep ANSWER-TIMES happy.
+COM_DEMAGR(COM)$(COM_DEM(COM) AND NOT(COM_DEMAGR(COM) OR COM_DEMCOM(COM) OR COM_DEMIND(COM)
+                 OR COM_DEMNE(COM) OR COM_DEMOTH(COM) OR COM_DEMRES(COM) OR COM_DEMTRN(COM))) = YES;
+
+* Determine ANSWER Energy Commodity sub-groups from NRG_TMAP.
+COM_NRGCSV(COM) = NRG_TMAP(REG,'CONSRV',COM);
+COM_NRGELC(COM) = NRG_TMAP(REG,'ELC',COM);
+COM_NRGFOS(COM) = NRG_TMAP(REG,'FOSSIL',COM);
+COM_NRGHTH(COM) = NRG_TMAP(REG,'HTHEAT',COM);
+COM_NRGLIM(COM) = NRG_TMAP(REG,'LIMRENEW',COM);
+COM_NRGLTH(COM) = NRG_TMAP(REG,'LTHEAT',COM);
+COM_NRGNUC(COM) = NRG_TMAP(REG,'NUCLR',COM);
+COM_NRGSYN(COM) = NRG_TMAP(REG,'SYNTH',COM);
+COM_NRGFRE(COM) = NRG_TMAP(REG,'FRERENEW',COM);
+
+* If no NRG_TYPE is specified for COM_NRG(COM), assume 'FOSSIL'.
+COM_NRGFOS1(COM)$(COM_NRG(COM) AND (NOT SUM(NRG_TYPE, NRG_TMAP(REG,NRG_TYPE,COM)))) = YES;
+* We could do better than just displaying COM_NRGFOS1, but leave for now.
+*display COM_NRGFOS1;
+COM_NRGFOS(COM)$COM_NRGFOS1(COM) = YES;
+
+* If we encounter a COM_NRG for which both COM_NRGHTH and COM_NRGLTH are specified,
+* then give the preference to COM_NRGLTH to keep ANSWER happy.
+COM_NRGHTH(COM)$(COM_NRG(COM) AND COM_NRGLTH(COM)) = NO;
+
+* Determine ANSWER Environmental Commodity sub-groups from ENV_MAP.
+COM_ENVGHG(COM) = ENV_MAP(REG,'GHG',COM);
+COM_ENVOTH(COM) = ENV_MAP(REG,'OTHENV',COM);
+
+* If neither 'GHG' nor 'OTHENV' is specified for an 'ENV', assume 'GHG'
+COM_ENVGHG(COM)$(COM_ENV(COM) AND NOT (COM_ENVGHG(COM) OR COM_ENVOTH(COM))) = YES;
+
+* Determine ANSWER Commodity Time Slice Level sub-groups from COM_TSL
+* March 2006 - need to allow for COM's that have COM_TS but no COM_TSL !!
+LOOP(COM_TS(REG,COM,ALL_TS)$(NOT SUM(COM_TSL(REG,COM,TSLVL),1)),
+  COM_TSL(REG,COM,TSLVL)$TS_GROUP(REG,TSLVL,ALL_TS) = YES;
+);
+COM_ANNUAL(COM) = COM_TSL(REG,COM,'ANNUAL');
+COM_SEASON(COM) = COM_TSL(REG,COM,'SEASON');
+COM_WEEKLY(COM) = COM_TSL(REG,COM,'WEEKLY');
+COM_DAYNIT(COM) = COM_TSL(REG,COM,'DAYNITE');
+
+* If no Time Slice Level is specified, assume 'ANNUAL'.
+* COM_ANNUAL1(COM)$(NOT (COM_ANNUAL(COM) OR COM_SEASON(COM) OR COM_WEEKLY(COM) OR COM_DAYNIT(COM))) = YES;
+* The following line is cleaner than the line above:
+*DEC2006* - exclude special COM = 'ACT'
+COM_ANNUAL1(COM)$((NOT SUM(TSLVL, COM_TSL(REG,COM,TSLVL))) AND NOT COMACT(COM)) = YES;
+* We could do better than just displaying COM_ANNUAL1, but leave for now.
+*display COM_ANNUAL1;
+COM_ANNUAL(COM)$COM_ANNUAL1(COM) = YES;
+
+
+*** PROCESSES ***
+
+* Determine ANSWER Process sub-groups from PRC_MAP.
+* SETs appearing in treeview.
+PRC_CHP(PRC) = PRC_MAP(REG,'CHP',PRC);
+PRC_DMD(PRC) = PRC_MAP(REG,'DMD',PRC);
+PRC_ELE(PRC) = PRC_MAP(REG,'ELE',PRC);
+PRC_PRE(PRC) = PRC_MAP(REG,'PRE',PRC);
+PRC_HPL(PRC) = PRC_MAP(REG,'HPL',PRC);
+PRC_PRW(PRC) = PRC_MAP(REG,'PRW',PRC);
+PRC_PRV(PRC) = PRC_MAP(REG,'PRV',PRC);
+PRC_MISC(PRC) = PRC_MAP(REG,'MISC',PRC);
+* SETs appearing under Additional Characterization.
+PRC_XTRACT(PRC) = PRC_MAP(REG,'XTRACT',PRC);
+PRC_IRE(PRC) = PRC_MAP(REG,'IRE',PRC);
+PRC_NST(PRC) = PRC_MAP(REG,'NST',PRC);
+PRC_REF(PRC) = PRC_MAP(REG,'REF',PRC);
+PRC_RENEW(PRC) = PRC_MAP(REG,'RENEW',PRC);
+PRC_STK(PRC) = PRC_MAP(REG,'STK',PRC);
+PRC_DISTR(PRC) = PRC_MAP(REG,'DISTR',PRC);
+
+* AUG2007 - We only want PRC_STG's that are not NSTs and not STK to be in SET PRC_STG,
+*           because we are going to map PRC_STGs to 'PRC_STGTSS' in ANSWER-TIMES.
+PRC_STG(PRC) = 
+  (PRC_MAP(REG,'STG',PRC) AND (NOT PRC_MAP(REG,'NST',PRC)) AND (NOT PRC_MAP(REG,'STK',PRC)));
+
+* March 2006 - Of the above Additional Characterization SETs,
+*              only 'DISTR' is not allowable for a 'PRE'.
+* So if none of the treeview SETs is specified, and if 'DISTR' 
+* is not specified, then specify 'PRE' as the default treeview SET.
+* That way, most technologies will show up properly inside ANSWER-TIME,
+* and we trust that we can't do any damage.
+OPTION CLEAR = BAD_PRC;
+BAD_PRC(PRC) = YES$(PRC_DMD(PRC) AND PRC_ELE(PRC));
+*option BAD_PRC:0:0:1; display BAD_PRC;
+PRC_PRE(PRC)$(NOT (PRC_CHP(PRC) OR PRC_DMD(PRC) OR PRC_ELE(PRC) OR PRC_PRE(PRC) OR
+                   PRC_HPL(PRC) OR PRC_PRW(PRC) OR PRC_PRV(PRC) OR PRC_MISC(PRC) OR
+                   PRC_DISTR(PRC) )) = YES;
+OPTION CLEAR = BAD_PRC;
+BAD_PRC(PRC) = YES$(PRC_DMD(PRC) AND PRC_ELE(PRC));
+*option BAD_PRC:0:0:1; display BAD_PRC;
+
+* Determine ANSWER Extraction Process sub-groups from PRC_RMAP
+*PRC_XTRBYP(PRC) = PRC_RMAP(REG,'BYPRD',PRC);
+*PRC_XTRENH(PRC) = PRC_RMAP(REG,'ENHANCED',PRC);
+*PRC_XTRHAR(PRC) = PRC_RMAP(REG,'HARVST',PRC);
+*PRC_XTROFF(PRC) = PRC_RMAP(REG,'OFFSHR',PRC);
+*PRC_XTRONS(PRC) = PRC_RMAP(REG,'ONSHR',PRC);
+*PRC_XTRSTR(PRC) = PRC_RMAP(REG,'STRIP',PRC);
+*PRC_XTRUND(PRC) = PRC_RMAP(REG,'UNDRGRD',PRC);
+
+* Determine ANSWER Process Time Slice Level sub-groups from PRC_TSL
+* March 2006 - need to allow for PRC's that have PRC_TS but no PRC_TSL !!
+LOOP(PRC_TS(REG,PRC,ALL_TS)$(NOT SUM(PRC_TSL(REG,PRC,TSLVL),1)),
+  PRC_TSL(REG,PRC,TSLVL)$TS_GROUP(REG,TSLVL,ALL_TS) = YES;
+);
+PRC_ANNUAL(PRC) = PRC_TSL(REG,PRC,'ANNUAL');
+PRC_SEASON(PRC) = PRC_TSL(REG,PRC,'SEASON');
+PRC_WEEKLY(PRC) = PRC_TSL(REG,PRC,'WEEKLY');
+PRC_DAYNIT(PRC) = PRC_TSL(REG,PRC,'DAYNITE');
+
+* If no Time Slice Level is specified, assume 'ANNUAL'.
+* PRC_ANNUAL1(PRC)$(NOT (PRC_ANNUAL(PRC) OR PRC_SEASON(PRC) OR PRC_WEEKLY(PRC) OR PRC_DAYNIT(PRC))) = YES;
+* The following line is cleaner than the line above:
+PRC_ANNUAL1(PRC)$(NOT SUM(TSLVL, PRC_TSL(REG,PRC,TSLVL))) = YES;
+* We could do better than just displaying PRC_ANNUAL1, but leave for now.
+*display PRC_ANNUAL1;
+PRC_ANNUAL(PRC)$PRC_ANNUAL1(PRC) = YES;
+
+
+*** TIMESLICES ***
+
+* Determine ANSWER Time Slice sub-groups from TS_GROUP.
+TS_ANNUAL(ALL_TS) = TS_GROUP(REG,'ANNUAL',ALL_TS);
+TS_SEASON(ALL_TS) = TS_GROUP(REG,'SEASON',ALL_TS);
+TS_WEEKLY(ALL_TS) = TS_GROUP(REG,'WEEKLY',ALL_TS);
+TS_DAYNITE(ALL_TS) = TS_GROUP(REG,'DAYNITE',ALL_TS);
+
+
+*** USER CONSTRAINTS ***
+
+* Determine ANSWER User Constraint sub-groups from UC_RHSxx
+
+* UC_RHSR does not have a dynamic variant.
+UC_N_UCR(UC_N) = SUM(BD$UC_RHSR(REG,UC_N,BD), 1);
+*display UC_N_UCR;
+
+* UC_RHSRT has dynamic and period variants according to UC_T_SUCC/UC_T_EACH.
+LOOP (UC_N,
+  IF (SUM((ALLYEAR,BD)$UC_RHSRT(REG,UC_N,ALLYEAR,BD), 1),
+    IF (SUM(ALLYEAR$UC_T_SUCC(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCRSU(UC_N) = YES;
+*  Note that both UC_T_EACH and UC_R_EACH may apply to UC_N_UCRT.
+    ELSEIF (SUM(ALLYEAR$UC_T_EACH(REG,UC_N,ALLYEAR), 1) OR UC_R_EACH(REG,UC_N)),
+      UC_N_UCRT(UC_N) = YES;
+    );
+  );
+);
+*display UC_N_UCRSU;
+*display UC_N_UCRT;
+
+* UC_RHSRTS has dynamic and period variants according to UC_T_SUCC/UC_T_EACH.
+LOOP (UC_N,
+  IF (SUM((ALLYEAR,TS,BD)$UC_RHSRTS(REG,UC_N,ALLYEAR,TS,BD), 1),
+    IF (SUM(ALLYEAR$UC_T_SUCC(REG,UC_N,ALLYEAR), 1),
+      UCN_UCRSUS(UC_N) = YES;
+*  Note that both UC_T_EACH and UC_R_EACH may apply to UC_N_UCRTS.
+    ELSEIF (SUM(ALLYEAR$UC_T_EACH(REG,UC_N,ALLYEAR), 1) OR UC_R_EACH(REG,UC_N)),
+      UC_N_UCRTS(UC_N) = YES;
+    );
+  );
+);
+*display UCN_UCRSUS;
+*display UC_N_UCRTS;
+
+* UC_RHS does not have a dynamic variant.
+UC_N_UC(UC_N) = YES$SUM(BD$UC_RHS(UC_N,BD), 1);
+*display UC_N_UC;
+
+* UC_RHST has dynamic and period variants according to UC_T_SUCC/UC_T_EACH.
+LOOP (UC_N,
+  IF (SUM((ALLYEAR,BD)$UC_RHST(UC_N,ALLYEAR,BD), 1),
+    IF (SUM(ALLYEAR$UC_T_SUCC(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCSU(UC_N) = YES;
+*  Note that only UC_T_EACH applies to UC_N_UCT, and that UC_R_EACH does not apply.
+    ELSEIF SUM(ALLYEAR$UC_T_EACH(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCT(UC_N) = YES;
+    );
+  );
+);
+*display UC_N_UCSU;
+*display UC_N_UCT;
+
+* UC_RHSTS has dynamic and period variants according to UC_T_SUCC/UC_T_EACH.
+LOOP (UC_N,
+  IF (SUM((ALLYEAR,TS,BD)$UC_RHSTS(UC_N,ALLYEAR,TS,BD), 1),
+    IF (SUM(ALLYEAR$UC_T_SUCC(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCSUS(UC_N) = YES;
+*  Note that only UC_T_EACH applies to UC_N_UCTS, and that UC_R_EACH does not apply.
+    ELSEIF SUM(ALLYEAR$UC_T_EACH(REG,UC_N,ALLYEAR), 1),
+      UC_N_UCTS(UC_N) = YES;
+    );
+  );
+);
+*display UC_N_UCSUS;
+*display UC_N_UCTS;
+
+* If after carrying out the above we still have just UC_N, 
+* with none of the User Constraint sub-groups assigned, assume we are dealing with UC_N_UCRT.
+UC_N_UCRT(UC_N)$(NOT (UC_N_UCR(UC_N) OR UC_N_UCRT(UC_N) OR UC_N_UCRTS(UC_N) OR UC_N_UCRSU(UC_N) OR
+                   UCN_UCRSUS(UC_N) OR UC_N_UC(UC_N) OR UC_N_UCT(UC_N) OR UC_N_UCTS(UC_N) OR
+                   UC_N_UCSU(UC_N) OR UC_N_UCSUS(UC_N) )) = YES;
+

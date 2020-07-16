@@ -1,0 +1,21 @@
+** now put out multi-dimensional UC_ sets which are TS parameters in ANSWER
+** note that ",MILESTONYR" occurs in 4th argument position, not second
+$BATINCLUDE putTStimes4.ans "UC_T_EACH" "REG" ",UC_N" ",MILESTONYR" "" "" "" "" "" TEMPSET2  
+$BATINCLUDE putTStimes4.ans "UC_T_SUM" "REG" ",UC_N" ",MILESTONYR" "" "" "" "" "" TEMPSET2 
+*n* with new approach to User Constraints, UC_T_SUCC becomes a TS parameter
+$BATINCLUDE putTStimes4.ans "UC_T_SUCC" "REG" ",UC_N" ",MILESTONYR" "" "" "" "" "" TEMPSET2
+
+** now put out UC_ TS parameters
+** note that ",MILESTONYR" occurs in 5th argument position, not second
+*2004* UC_ACT has one less ALLYEAR in its dimensions
+$BATINCLUDE putTStimes5.ans "UC_ACT"  "UC_N" ",SIDE" ",REG" ",MILESTONYR" ",PRC" ",TS" "" "" TEMPSET5 
+$BATINCLUDE putTStimes5.ans "UC_CAP"  "UC_N" ",SIDE" ",REG" ",MILESTONYR" ",PRC" "" "" "" TEMPSET4 
+$BATINCLUDE putTStimes5.ans "UC_COMCON"  "UC_N" ",SIDE" ",REG" ",MILESTONYR" ",COM" ",TS" "" "" TEMPSET5 
+$BATINCLUDE putTStimes5.ans "UC_COMPRD"  "UC_N" ",SIDE" ",REG" ",MILESTONYR" ",COM" ",TS" "" "" TEMPSET5
+$BATINCLUDE putTStimes5.ans "UC_FLO"  "UC_N" ",SIDE" ",REG" ",MILESTONYR" ",PRC" ",COM" ",TS" "" TEMPSET6
+$BATINCLUDE putTStimes5.ans "UC_NCAP"  "UC_N" ",SIDE" ",REG" ",MILESTONYR" ",PRC" "" "" "" TEMPSET4
+** note that ",MILESTONYR" occurs in 4th argument position, not second
+$BATINCLUDE putTStimes4.ans "UC_RHSRT"  "REG" ",UC_N" ",MILESTONYR" ",BD" "" "" "" "" TEMPSET3 
+$BATINCLUDE putTStimes4.ans "UC_RHSRTS"  "REG" ",UC_N" ",MILESTONYR" ",TS" ",BD" "" "" "" TEMPSET4 
+** (no REG) $BATINCLUDE putTStimes.ans "UC_RHST"  "UC_N" ",MILESTONYR" ",BD" 
+** (no REG) $BATINCLUDE putTStimes.ans "UC_RHSTS"  "UC_N" ",MILESTONYR" ",TS" ",BD" 

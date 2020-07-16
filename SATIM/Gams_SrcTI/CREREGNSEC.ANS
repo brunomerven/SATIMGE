@@ -1,0 +1,23 @@
+*
+* CREREGNSEC.ANS
+*
+* Create *** REGIONS *** section of IMP file.
+*
+********************************************************
+*
+PUT / "*** REGIONS ***","_GLOBAL";
+  LOOP (ALL_REG,
+    PUT ALL_REG.TL;
+  );
+LOOP(ALL_REG,
+  PUT / "Region:", ALL_REG.TL, ALL_REG.TE(ALL_REG);
+  IF (REG(ALL_REG),
+    PUT / "Sets:", "ALL_REG", "REG";
+  ELSE
+    PUT / "Sets:", "ALL_REG", "REG_EXT";
+  );
+  PUT / "Comment:";
+  PUT / "End Comment:";
+);
+PUT /;
+

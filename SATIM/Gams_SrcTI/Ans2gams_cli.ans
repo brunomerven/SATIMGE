@@ -1,0 +1,61 @@
+*******************************************************************************
+*                                                                             *
+*  ANS2GAMS_CLI.ANS:                                                          *
+*                                                                             *
+*  Transform ANSWER-generated Sets, Parameters for TIMES Climate Extension    *
+*  to equivalent Sets, Parameters in ETSAP TIMES code.                        *
+*                                                                             *
+*******************************************************************************
+
+$OFFLISTING
+
+** Introduce the following sets to speed up processing
+SET TEMPSET1(*);
+SET TEMPSET2(*,*);
+SET TEMPSET3(*,*,*);
+SET TEMPSET4(*,*,*,*);
+SET TEMPSET5(*,*,*,*,*);
+SET TEMPSET6(*,*,*,*,*,*);
+SET TEMPSET7(*,*,*,*,*,*,*);
+SET TEMPSET8(*,*,*,*,*,*,*,*);
+
+SET CUR / 'CUR' /;
+
+* Time-Series data
+
+DATAYEAR('0') = YES;
+
+* In ANSWER-TIMES DD, we put out CM_EXOFORC rather than ACM_EXOFORC, with no need to use the line below. 
+*CM_EXOFORC(DATAYEAR) = ACM_EXOFORC(DATAYEAR);
+*option CM_EXOFORC:0:0:1; display CM_EXOFORC;
+
+*CM_LINFOR(DATAYEAR,CM_VAR,LIM) = ACM_LINFOR(CM_VAR,LIM,DATAYEAR);
+$BATINCLUDE transTS-Datayear.ans "CM_LINFOR" "DATAYEAR" ",CM_VAR" ",BD" "" "" "" "" "" "ACM_LINFOR" "CM_VAR" ",BD" "" "" "" "" "" "TEMPSET2" "NOKILL"
+$BATINCLUDE transTS-Datayear.ans "CM_LINFOR" "DATAYEAR" ",CM_VAR" ",'N'" "" "" "" "" "" "ACM_LINFOR" "CM_VAR" ",'NB'" "" "" "" "" "" "TEMPSET2"
+*option CM_LINFOR:0:0:1; display CM_LINFOR;
+
+*CM_MAXC(DATAYEAR,CM_VAR) = ACM_MAXC(CM_VAR,DATAYEAR);
+$BATINCLUDE transTS-Datayear.ans "CM_MAXC" "DATAYEAR" ",CM_VAR" "" "" "" "" "" "" "ACM_MAXC" "CM_VAR" "" "" "" "" "" "" "TEMPSET1"
+*option CM_MAXC:0:0:1; display CM_MAXC;
+
+* We still need to address Parameter UC_CLI.
+*UC_CLI(UC_N,SIDE,REG,DATAYEAR,CM_VAR) = AUC_CLI(REG,UC_N,SIDE,CM_VAR,DATAYEAR);
+** note that "DATAYEAR" occurs in 4th argument position, not second
+$BATINCLUDE trnUC_TS2-Datayear.ans "UC_CLI"  "UC_N" ",SIDE" ",REG" "DATAYEAR" ",CM_VAR" "" "" "" "AUC_CLI"  "REG" ",UC_N" ",SIDE" ",CM_VAR" "" "" "" TEMPSET4
+*option UC_CLI:0:0:1; display UC_CLI;
+
+DATAYEAR('0') = NO;
+
+* Time-Independent Data
+
+* In ANSWER-TIMES DD, we put out CM_CONST rather than ACM_CONST and do NOT use the line below, 
+* because this would wipe out pre-defined values for CM_CONST!
+*CM_CONST(CM_CONST_I) = ACM_CONST(CM_CONST_I);
+*option CM_CONST:0:0:1; display CM_CONST;
+
+* Provided we retain ALLYEAR (component N) in Item1 position, we can put out CM_HISTORY rather than ACM_HISTORY,
+* with no need to use the line below.  But if we were to change the ANSWER-TIMES argument order, we would need to put out ACM_HISTORY,
+* and on the RHS we would have ACM_HISTORY(CM_VAR,ALLYEAR).
+*CM_HISTORY(ALLYEAR,CM_VAR) = ACM_HISTORY(ALLYEAR,CM_VAR);
+*option CM_HISTORY:0:0:1; display CM_HISTORY;
+

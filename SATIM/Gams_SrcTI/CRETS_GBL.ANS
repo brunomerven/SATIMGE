@@ -1,0 +1,24 @@
+*
+* CRETS_GBL.ANS
+*
+* Create *** TS DATA *** section for _GLOBAL region.
+*
+************************************************************
+*
+PUT /,"*** TS DATA ***", "_GLOBAL"; 
+
+* MULTI parameter.
+*option MULTI:0:0:1; display MULTI;
+* special code to create TS parameter AMULTI using SET ANSJ put out by ANSWER where SET ANSJ / S001*S100 /;
+AMULTI(OTHERYR,ANSJ) $= SUM(ANSJ_J(ANSJ,J), MULTI(J,OTHERYR));
+*option AMULTI:0:0:1; display AMULTI;
+$BATINCLUDE putGblTS.ans "AMULTI" "OTHERYR" "ANSJ" "" "" "" "" "" "" "MULTI" "" "" "ANSJ" "" "" "" TEMPSET1
+
+* UC_RHST parameter.
+$BATINCLUDE putGblUCTS.ans "UC_RHST" "UC_N" "OTHERYR" ",LIM" "" "" "" "" "" "UC__RHST" "UC_N" "" "" "" "" ",LIM" TEMPSET2
+
+* UC_RHSTS parameter.
+$BATINCLUDE putGblUCTS.ans "UC_RHSTS" "UC_N" "OTHERYR" ",TS" ",LIM" "" "" "" "" "UC__RHSTS" "UC_N" "" "" "" ",TS" ",LIM" TEMPSET3
+
+PUT /;
+

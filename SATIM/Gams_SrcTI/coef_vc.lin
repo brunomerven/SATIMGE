@@ -1,0 +1,17 @@
+*=============================================================================*
+* COEF_VC.LIN do coefficient calculations for the linearized variable costs   *
+*   %1 - mod or v# for the source code to be used                             *
+*=============================================================================*
+$IF DEFINED OBJ_LINT $EXIT
+*------------------------------------------------------------------------------
+ SET TPULSEYR(T,ALLYEAR) / EMPTY.EMPTY /;
+ PARAMETER TPULSE(ALLYEAR,ALLYEAR) / EMPTY.EMPTY 0 /;
+ PARAMETER OBJ_LINT(R,T,ALLYEAR,CUR);
+*------------------------------------------------------------------------------
+* Initialize period pulse years and triangular functions
+ TPULSEYR(PERDINV(T,Y_EOH)) = YES;
+ TPULSE(TPULSEYR(T,Y_EOH)) = 1-((M(T)-YEARVAL(Y_EOH))/LEAD(T))$(NOT MIYR_1(T));
+ TPULSEYR(T,Y_EOH)$(YK(Y_EOH,T)$(YEARVAL(Y_EOH) < M(T)+LAGT(T))) = YES;
+ TPULSE(TPULSEYR(T,LL))$YK(LL,T) = 1-TPULSE(T+1,LL);
+* Calculate objective coefficients for linearized costs
+ OBJ_LINT(R,T,TT,CUR)$RDCUR(R,CUR) = SUM(PERIODYR(T,Y_EOH)$TPULSEYR(TT,Y_EOH),TPULSE(TT,Y_EOH)*OBJ_DISC(R,Y_EOH,CUR));

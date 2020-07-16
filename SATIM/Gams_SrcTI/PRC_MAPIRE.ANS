@@ -1,0 +1,8 @@
+* PRC_MAPIRE.ANS
+
+**  Ensure that PRC_MAP specifies 'IRE' for PRC with associated TOP_IRE instances 
+PRC_MAP(REG,'IRE',PRC)$(SUM((ALL_REG,COM,COM2), TOP_IRE(ALL_REG,COM,REG,COM2,PRC)) OR
+                        SUM((ALL_REG,COM,COM2), TOP_IRE(REG,COM,ALL_REG,COM2,PRC)))
+= YES;
+*display PRC_MAP;
+
