@@ -5,7 +5,7 @@
 *restart file should be set as follows: r=cge\model.
 
 *1.Set directories*-------------------------------------------------------------
-$SETGLOBAL workingfolder C:\Models\SATIMGE_04\
+$SETGLOBAL workingfolder C:\Models\SATIMGE\
 * TIMES GDX output folder
 $SETGLOBAL TIMESfolder Gams_WrkTI
 $SETGLOBAL gdxfolder %workingfolder%SATIM\%TIMESfolder%\Gamssave\

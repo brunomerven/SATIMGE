@@ -19,8 +19,6 @@ Gams_WrkTI/END_GAMS.*
 
 *.VDT
 
-*.CMD
-
 *.LOG
 
 *.put

@@ -1,0 +1,2 @@
+cd %1\SATM\%3
+CALL %1\SATM\Gams_SrcTI\ANS_RUN.CMD %1\SATM\Gams_SrcTI START %2 %1\SATM\%3 %1\SATM\%3 %2.gdx
