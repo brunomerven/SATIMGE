@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/15	12:59:44 PM
-Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+Creation Date:	2020/07/17	16:29:04
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -11,36 +11,11 @@ REGION1	South Africa	ALL_REG,REG
 
 ITEMS	_GLOBAL
 	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
-	W	S1	s1		ALL_TS,SEASON	
-	W	S1D1	s1d1		ALL_TS,WEEKLY	
-	W	S1D1B1	s1d1b1		ALL_TS,DAYNITE	
-	W	S1D1B2	s1d1b2		ALL_TS,DAYNITE	
-	W	S1D1B3	s1d1b3		ALL_TS,DAYNITE	
-	W	S2	s2		ALL_TS,SEASON	
-	W	S2D1	s2d1		ALL_TS,WEEKLY	
-	W	S2D1B1	s2d1b1		ALL_TS,DAYNITE	
-	W	S2D1B2	s2d1b2		ALL_TS,DAYNITE	
-	W	S2D1B3	s2d1b3		ALL_TS,DAYNITE	
-	W	S2D1B4	s2d1b4		ALL_TS,DAYNITE	
-	W	S2D1B5	s2d1b5		ALL_TS,DAYNITE	
-	W	S3	s3		ALL_TS,SEASON	
 
 TS DATA	_GLOBAL
 
 TID DATA	_GLOBAL
 	G_DYEAR	-	_	-	-	-	-	2018	
-	TS_ORD_DAYNITE	-	-	-	-	S1D1B1	-	1	
-	TS_ORD_DAYNITE	-	-	-	-	S1D1B2	-	2	
-	TS_ORD_DAYNITE	-	-	-	-	S1D1B3	-	3	
-	TS_ORD_DAYNITE	-	-	-	-	S2D1B1	-	4	
-	TS_ORD_DAYNITE	-	-	-	-	S2D1B2	-	5	
-	TS_ORD_DAYNITE	-	-	-	-	S2D1B3	-	6	
-	TS_ORD_DAYNITE	-	-	-	-	S2D1B4	-	7	
-	TS_ORD_DAYNITE	-	-	-	-	S2D1B5	-	8	
-	TS_ORD_SEASON	-	-	-	-	S1	-	1	
-	TS_ORD_SEASON	-	-	-	-	S2	-	2	
-	TS_ORD_WEEKLY	-	-	-	-	S1D1	-	1	
-	TS_ORD_WEEKLY	-	-	-	-	S2D1	-	3	
 
 ITEMS	REGION1
 	C	UCACT-ODS	Import constraint on diesel as a share of consumption	uconstraint	UC_N,UCRT	
@@ -392,19 +367,6 @@ ITEMS	REGION1
 	T	ZZBKELCC	Backstop for Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	ZZBKNRG	Backstop for all energy except elc	PJ,PJa	PRC,PRE,ANNUAL	
 	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
-	W	S1	s1		ALL_TS,SEASON	
-	W	S1D1	s1d1		ALL_TS,WEEKLY	
-	W	S1D1B1	s1d1b1		ALL_TS,DAYNITE	
-	W	S1D1B2	s1d1b2		ALL_TS,DAYNITE	
-	W	S1D1B3	s1d1b3		ALL_TS,DAYNITE	
-	W	S2	s2		ALL_TS,SEASON	
-	W	S2D1	s2d1		ALL_TS,WEEKLY	
-	W	S2D1B1	s2d1b1		ALL_TS,DAYNITE	
-	W	S2D1B2	s2d1b2		ALL_TS,DAYNITE	
-	W	S2D1B3	s2d1b3		ALL_TS,DAYNITE	
-	W	S2D1B4	s2d1b4		ALL_TS,DAYNITE	
-	W	S2D1B5	s2d1b5		ALL_TS,DAYNITE	
-	W	S2D2	s2d2		ALL_TS,WEEKLY	
 	X	-	Item None		X	
 
 TS DATA	REGION1
@@ -503,8 +465,8 @@ TS DATA	REGION1
 	ACT_COST	PEXOHF	-	-	-	-	-	0	-169.274137324062	null	null	-121.150895231363	null	null	null	null	-186.761994188028	null	null	null	null	null	null	null	null	null	-255.209711999306	null	null	null	null	null	null	null	null	null	null	null	-298.108000253768	null	null	
 	ACT_COST	PEXOKE	-	-	-	-	-	0	-214.668928413012	null	null	-158.169020050749	null	null	null	null	-235.2008432903	null	null	null	null	null	null	null	null	null	-315.563046994151	null	null	null	null	null	null	null	null	null	null	null	-365.928509707703	null	null	
 	ACT_COST	UCOGCLEHGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	UCTLCLEIN-E	-	-	-	-	-	0	28.3656477841298	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	UCTLCLEIN-N	-	-	-	-	-	0	28.3656477841298	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UCTLCLEIN-E	-	-	-	-	-	0	28.2874654799705	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UCTLCLEIN-N	-	-	-	-	-	0	28.2874654799705	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UELEHGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UGTLGASIN-N	-	-	-	-	-	0	18.6585561041635	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UGTLGICCO-E	-	-	-	-	-	0	47.4529924683302	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -665,10 +627,10 @@ TS DATA	REGION1
 	FLO_EMIS	MIRCRB	CH4SF	CRB	-	ANNUAL	-	0	1.13253099404086E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCOGCLEHGN	UPSCH4S	UCOGCLEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCOGCLEHGN	UPSCO2S	UCOGCLEHGN-O	-	ANNUAL	-	0	180.833333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UCTLCLEIN-E	CH4SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	0.396177059022675	null	null	1.08279903591406	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UCTLCLEIN-E	CO2SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	108.480351305803	null	null	93.9487398807791	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCTLCLEIN-E	CH4SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	0.396177059022675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCTLCLEIN-E	CO2SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	108.488760154627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCTLCLEIN-N	CH4SF	UCTLCLEIN-N-O	-	ANNUAL	-	0	0.396177059022675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UCTLCLEIN-N	CO2SF	UCTLCLEIN-N-O	-	ANNUAL	-	0	108.480351305803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCTLCLEIN-N	CO2SF	UCTLCLEIN-N-O	-	ANNUAL	-	0	108.488760154627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEHGN	UPSCH4S	UELEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEHGN	UPSCO2S	UELEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGIB-N	CH4SF	GIB	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -981,8 +943,8 @@ TS DATA	REGION1
 	FLO_EMIS	XTRAOKE	TRASOXS	TRAOKE	-	ANNUAL	-	0	0.0459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XUPSGAS	CH4SF	UPSGAS	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UCOGCLEHGN	-	UCOGCLEHGN-I	UCOGCLEHGN-O	ANNUAL	-	0	0.65	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	UCTLCLEIN-E	-	UCTLCLEIN-E-I	UCTLCLEIN-E-O	ANNUAL	-	0	0.345282262201679	null	null	0.324655926289535	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	UCTLCLEIN-N	-	UCTLCLEIN-N-I	UCTLCLEIN-N-O	ANNUAL	-	0	0.395282262201679	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	UCTLCLEIN-E	-	UCTLCLEIN-E-I	UCTLCLEIN-E-O	ANNUAL	-	0	0.322601877533291	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	UCTLCLEIN-N	-	UCTLCLEIN-N-I	UCTLCLEIN-N-O	ANNUAL	-	0	0.372601877533291	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UELEHGN	-	UELEHGN-I	UELEHGN-O	ANNUAL	-	0	0.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UGTLGASIN-N	-	UGTLGASIN-N-I	UGTLGASIN-N-O	ANNUAL	-	0	0.6865636350665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UGTLGICCO-E	-	UGTLGICCO-E-I	UGTLGICCO-E-O	ANNUAL	-	0	0.653870128634761	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1003,10 +965,10 @@ TS DATA	REGION1
 	FLO_SHAR	UCTLCLEIN-E	OKE	UCTLCLEIN-E-O	-	ANNUAL	UP	3	4.10030517276282E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-E	OLP	UCTLCLEIN-E-O	-	ANNUAL	UP	3	1.30085617414821E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-E	OTH	UCTLCLEIN-E-O	-	ANNUAL	UP	3	6.89328840723646E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-E	UPSCLE	UCTLCLEIN-E-I	-	ANNUAL	FX	3	0.742718955284542	null	null	0.700904281689091	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-E	UPSELC	UCTLCLEIN-E-I	-	ANNUAL	FX	3	5.46682599334642E-02	null	null	5.14025089333117E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-E	UPSGAS	UCTLCLEIN-E-I	-	ANNUAL	FX	3	0.030951460253282	null	null	8.62865215055028E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-E	UPSHEE	UCTLCLEIN-E-I	-	ANNUAL	FX	3	0.171661324528711	null	null	0.161406687872095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-E	UPSCLE	UCTLCLEIN-E-I	-	ANNUAL	FX	3	0.761599345241391	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-E	UPSELC	UCTLCLEIN-E-I	-	ANNUAL	FX	3	5.10772930632397E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-E	UPSGAS	UCTLCLEIN-E-I	-	ANNUAL	FX	3	2.89183670381351E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-E	UPSHEE	UCTLCLEIN-E-I	-	ANNUAL	FX	3	0.158404994657234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-N	GIM	UCTLCLEIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-N	OAG	UCTLCLEIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-N	ODS	UCTLCLEIN-N-O	-	ANNUAL	UP	3	0.73	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1014,10 +976,10 @@ TS DATA	REGION1
 	FLO_SHAR	UCTLCLEIN-N	OKE	UCTLCLEIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-N	OLP	UCTLCLEIN-N-O	-	ANNUAL	UP	3	0.035	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UCTLCLEIN-N	OTH	UCTLCLEIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-N	UPSCLE	UCTLCLEIN-N-I	-	ANNUAL	FX	3	0.742718955284542	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-N	UPSELC	UCTLCLEIN-N-I	-	ANNUAL	FX	3	5.46682599334642E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-N	UPSGAS	UCTLCLEIN-N-I	-	ANNUAL	FX	3	0.030951460253282	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UCTLCLEIN-N	UPSHEN	UCTLCLEIN-N-I	-	ANNUAL	FX	3	0.171661324528711	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-N	UPSCLE	UCTLCLEIN-N-I	-	ANNUAL	FX	3	0.761599345241391	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-N	UPSELC	UCTLCLEIN-N-I	-	ANNUAL	FX	3	5.10772930632397E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-N	UPSGAS	UCTLCLEIN-N-I	-	ANNUAL	FX	3	2.89183670381351E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UCTLCLEIN-N	UPSHEN	UCTLCLEIN-N-I	-	ANNUAL	FX	3	0.158404994657234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UELEHGN	HGN	UELEHGN-O	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UELEHGN	UPSELC	UELEHGN-I	-	ANNUAL	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGASIN-N	OAG	UGTLGASIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1084,8 +1046,8 @@ TS DATA	REGION1
 	G_DRATE	-	_	-	-	-	-	0	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	
 	NCAP_AFA	UCOGCLEHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCOGCLEHGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	LO	3	0.743179432827629	null	null	null	null	null	null	null	0.743179432827629	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	UP	3	0.782294139818557	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	LO	3	0.855992526179288	null	null	null	null	null	null	null	0.855992526179288	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	UP	3	0.901044764399251	0.901044764399251	0.901044764399251	0.901044764399251	0.901044764399251	0.901044764399251	null	0.96	0.930522382199625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCTLCLEIN-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCTLCLEIN-N	-	-	-	-	UP	3	0.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UELEHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2517,18 +2479,6 @@ TID DATA	REGION1
 	TOP-OUT	ZZBKNRG	SOL	-	-	-	-	1	
 	TOP-OUT	ZZBKNRG	WAS	-	-	-	-	1	
 	TOP-OUT	ZZBKNRG	WND	-	-	-	-	1	
-	TS_PARENT	-	-	-	-	S1	ANNUAL	1	
-	TS_PARENT	-	-	-	-	S1D1	S1	1	
-	TS_PARENT	-	-	-	-	S1D1B1	S1D1	1	
-	TS_PARENT	-	-	-	-	S1D1B2	S1D1	1	
-	TS_PARENT	-	-	-	-	S1D1B3	S1D1	1	
-	TS_PARENT	-	-	-	-	S2	ANNUAL	1	
-	TS_PARENT	-	-	-	-	S2D1	S2	1	
-	TS_PARENT	-	-	-	-	S2D1B1	S2D1	1	
-	TS_PARENT	-	-	-	-	S2D1B2	S2D1	1	
-	TS_PARENT	-	-	-	-	S2D1B3	S2D1	1	
-	TS_PARENT	-	-	-	-	S2D1B4	S2D1	1	
-	TS_PARENT	-	-	-	-	S2D1B5	S2D1	1	
 	UC_R_EACH	UCACT-ODS	-	-	-	-	-	1	
 	UC_R_EACH	UCACT-OGS	-	-	-	-	-	1	
 
