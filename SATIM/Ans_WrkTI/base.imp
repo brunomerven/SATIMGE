@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/20	12:52:11
+Creation Date:	2020/07/20	14:40:00
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -1056,8 +1056,8 @@ TS DATA	REGION1
 	G_DRATE	-	_	-	-	-	-	0	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	
 	NCAP_AFA	UCOGCLEHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCOGCLEHGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	LO	3	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	null	0.928246135792134	0.928900326389841	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	UP	3	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	null	0.937528597150055	0.948216353369548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	LO	3	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	null	0.928246135792134	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0.928900326389841	0	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	UP	3	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	null	0.937528597150055	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	0.948216353369548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCTLCLEIN-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCTLCLEIN-N	-	-	-	-	UP	3	0.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UELEHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1074,7 +1074,7 @@ TS DATA	REGION1
 	NCAP_AFA	UGASGRS-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGASIN-N	-	-	-	-	LO	3	0.879734623964986	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGASIN-N	-	-	-	-	UP	3	0.926036446278933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGTLGICCO-E	-	-	-	-	LO	3	0.879734623964986	null	null	null	null	null	null	null	0.879734623964986	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGTLGICCO-E	-	-	-	-	LO	3	0.879734623964986	null	null	null	null	null	null	null	0.879734623964986	0.879734623964986	0.879734623964986	0.879734623964986	0.879734623964986	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGICCO-E	-	-	-	-	UP	3	0.926036446278933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGICCO-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGICCO-N	-	-	-	-	UP	3	0.926036446278933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
