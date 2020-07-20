@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/17	16:29:04
+Creation Date:	2020/07/20	12:52:11
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -114,6 +114,7 @@ ITEMS	REGION1
 	E	INDBIB	Industry Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDBIW	Industry Biomass Wood	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCH4S	Industry Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCLE	Industry Coal low grade	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2S	Industry Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCOA	Industry Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -180,14 +181,14 @@ ITEMS	REGION1
 	E	RESCH4S	Residential Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	RESCMOX	Residential Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	RESCO2S	Residential Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	RESCOA	Residential Coal	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESCOA	Residential Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	RESELC	Residential Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	RESGAS	Residential Gas South Africa	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	RESN2OS	Residential Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	RESNMVS	Residential NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	RESNOXS	Residential Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	RESOKE	Residential Oil Kerosene	PJ	COM,NRG,DAYNITE,FOSSIL	
-	E	RESOLP	Residential Oil LPG	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESOLP	Residential Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	RESP10S	Residential PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	RESSOXS	Residential Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	SOL	Solar	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -205,7 +206,7 @@ ITEMS	REGION1
 	E	TRAODS	Transport Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	TRAOGS	Transport Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	TRAOHF	Transport Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	TRAOKE	Transport Oil Kerosene	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	TRAOKE	Transport Oil Kerosene	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	TRAP10S	Transport PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	TRASOXS	Transport Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	UPSBID	Supply Sector Biodiesel	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -313,6 +314,7 @@ ITEMS	REGION1
 	T	XCOMOLP	Commercial Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDBIB	Industry Biomass bagasse	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDBIW	Industry Biomass Wood	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XINDCLE	Industry Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOA	Industry Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOK	Industry Coal Coking	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDELC	Industry Electricity	PJ,GW	PRC,PRE,DAYNITE	
@@ -503,6 +505,7 @@ TS DATA	REGION1
 	ACT_EFF	XCOMOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDBIB	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDBIW	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINDCLE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDCOK	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -511,7 +514,7 @@ TS DATA	REGION1
 	ACT_EFF	XINDOGS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XINDWAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINDWAS	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRBIB	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRBIG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -526,34 +529,34 @@ TS DATA	REGION1
 	ACT_EFF	XPWRGRN	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRGRS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRHYD	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XPWRNUC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XPWRODS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XPWRSOL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XPWRWND	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XPWRNUC	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XPWRODS	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XPWRSOL	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XPWRWND	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XRESBIW	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XRESCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XRESELC	-	ACTGRP	-	ANNUAL	-	0	0.879282117132382	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XRESGAS	-	ACTGRP	-	ANNUAL	-	0	0.999	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XRESOKE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XRESOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XRESELC	-	ACTGRP	-	ANNUAL	-	0	1.15134106791321	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XRESGAS	-	ACTGRP	-	ANNUAL	-	0	1.30810089780562	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XRESOKE	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XRESOLP	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XTRAELC	-	ACTGRP	-	ANNUAL	-	0	0.881851777648553	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XTRAGAS	-	ACTGRP	-	ANNUAL	-	0	0.999	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XTRAHGN	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XTRAOAG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XTRAODS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XTRAOGS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XTRAOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XTRAOKE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRAODS	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRAOGS	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRAOHF	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRAOKE	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XUPSBID	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XUPSBIE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XUPSCLE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XUPSELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XUPSGAS	-	ACTGRP	-	ANNUAL	-	0	0.999	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XUPSGIC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XUPSHEE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XUPSHEN	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XUPSOCR	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XUPSOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XUPSHEE	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XUPSHEN	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XUPSOCR	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XUPSOHF	-	ACTGRP	-	ANNUAL	-	0	1.30941030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	ZZBKELCC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	ZZBKNRG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	AGRCH4S	-	CH4S	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -628,9 +631,9 @@ TS DATA	REGION1
 	FLO_EMIS	UCOGCLEHGN	UPSCH4S	UCOGCLEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCOGCLEHGN	UPSCO2S	UCOGCLEHGN-O	-	ANNUAL	-	0	180.833333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCTLCLEIN-E	CH4SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	0.396177059022675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UCTLCLEIN-E	CO2SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	108.488760154627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCTLCLEIN-E	CO2SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	105.041319106459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCTLCLEIN-N	CH4SF	UCTLCLEIN-N-O	-	ANNUAL	-	0	0.396177059022675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UCTLCLEIN-N	CO2SF	UCTLCLEIN-N-O	-	ANNUAL	-	0	108.488760154627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCTLCLEIN-N	CO2SF	UCTLCLEIN-N-O	-	ANNUAL	-	0	105.041319106459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEHGN	UPSCH4S	UELEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEHGN	UPSCO2S	UELEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGIB-N	CH4SF	GIB	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -651,11 +654,11 @@ TS DATA	REGION1
 	FLO_EMIS	ULGTGRLFSRU-N	CH4SF	GRL	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ULGTGRL-N	CH4SF	GRL	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UREFOCRCO-E	UPSCH4S	UREFOCRCO-E-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UREFOCRCO-E	UPSCO2S	UREFOCRCO-E-O	-	ANNUAL	-	0	2.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UREFOCRCO-E	UPSCO2S	UREFOCRCO-E-O	-	ANNUAL	-	0	4.20502318634401	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UREFOCRCO-N	UPSCH4S	UREFOCRCO-N-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UREFOCRCO-N	UPSCO2S	UREFOCRCO-N-O	-	ANNUAL	-	0	3.99477202702681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UREFOCRCO-N	UPSCO2S	UREFOCRCO-N-O	-	ANNUAL	-	0	4.20502318634401	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UREFOCRIN-E	UPSCH4S	UREFOCRIN-E-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UREFOCRIN-E	UPSCO2S	UREFOCRIN-E-O	-	ANNUAL	-	0	4.43863558558535	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UREFOCRIN-E	UPSCO2S	UREFOCRIN-E-O	-	ANNUAL	-	0	4.67224798482668	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	USMRGASHGN	CH4SF	UPSGAS	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	USMRGASHGN	UPSCH4S	USMRGASHGN-O	-	ANNUAL	-	0	1.21777777777778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	USMRGASHGN	UPSCO2S	USMRGASHGN-O	-	ANNUAL	-	0	88.5933333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -753,6 +756,13 @@ TS DATA	REGION1
 	FLO_EMIS	XCOMOLP	COMNMVS	COMOLP	-	ANNUAL	-	0	0.0237	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XCOMOLP	COMNOXS	COMOLP	-	ANNUAL	-	0	0.01246	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XCOMOLP	COMSOXS	COMOLP	-	ANNUAL	-	0	5.409	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDCH4S	INDCLE	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDCMOX	INDCLE	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDCO2S	INDCLE	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDN2OS	INDCLE	-	ANNUAL	-	0	0.0014	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDNMVS	INDCLE	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDNOXS	INDCLE	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XINDCLE	INDSOXS	INDCLE	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XINDCOA	INDCH4S	INDCOA	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XINDCOA	INDCMOX	INDCOA	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XINDCOA	INDCO2S	INDCOA	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -865,12 +875,12 @@ TS DATA	REGION1
 	FLO_EMIS	XPWRGRS	PWRNMVR	PWRGRS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGRS	PWRNOXR	PWRGRS	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRODS	PWRCH4S	PWRODS	-	ANNUAL	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRCMOX	PWRODS	-	ANNUAL	-	3	0.015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XPWRODS	PWRCMOX	PWRODS	-	ANNUAL	-	0	0.015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRODS	PWRCO2S	PWRODS	-	ANNUAL	-	0	74.0667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRODS	PWRN2OS	PWRODS	-	ANNUAL	-	0	0.0006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRNMVS	PWRODS	-	ANNUAL	-	4	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRNOXS	PWRODS	-	ANNUAL	-	2	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRSOXS	PWRODS	-	ANNUAL	-	1	0.2529	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XPWRODS	PWRNMVS	PWRODS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XPWRODS	PWRNOXS	PWRODS	-	ANNUAL	-	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XPWRODS	PWRSOXS	PWRODS	-	ANNUAL	-	0	0.2529	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XRESCOA	RESCH4S	RESCOA	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XRESCOA	RESCMOX	RESCOA	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XRESCOA	RESCO2S	RESCOA	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1046,8 +1056,8 @@ TS DATA	REGION1
 	G_DRATE	-	_	-	-	-	-	0	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	0.082	
 	NCAP_AFA	UCOGCLEHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCOGCLEHGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	LO	3	0.855992526179288	null	null	null	null	null	null	null	0.855992526179288	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	UP	3	0.901044764399251	0.901044764399251	0.901044764399251	0.901044764399251	0.901044764399251	0.901044764399251	null	0.96	0.930522382199625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	LO	3	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	0.929554516987547	null	0.928246135792134	0.928900326389841	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UCTLCLEIN-E	-	-	-	-	UP	3	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	0.958904109589041	null	0.937528597150055	0.948216353369548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCTLCLEIN-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UCTLCLEIN-N	-	-	-	-	UP	3	0.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UELEHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1072,12 +1082,12 @@ TS DATA	REGION1
 	NCAP_AFA	ULGTGRLFSRU-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ULGTGRL-N	-	-	-	-	LO	3	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ULGTGRL-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UREFOCRCO-E	-	-	-	-	LO	3	0.748416046109436	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UREFOCRCO-E	-	-	-	-	LO	3	0.731885571829412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UREFOCRCO-E	-	-	-	-	UP	3	0.787806364325722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UREFOCRCO-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UREFOCRCO-N	-	-	-	-	UP	3	0.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UREFOCRIN-E	-	-	-	-	LO	3	0.777289439426298	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UREFOCRIN-E	-	-	-	-	UP	3	0.818199409922419	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UREFOCRIN-E	-	-	-	-	LO	3	0.910958904109589	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UREFOCRIN-E	-	-	-	-	UP	3	0.958904109589041	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	USMRGASHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	USMRGASHGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	USMRGICHGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1125,6 +1135,7 @@ TS DATA	REGION1
 	NCAP_COST	XCOMOLP	-	-	-	-	-	0	32.7352577028433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDBIB	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDBIW	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINDCLE	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDCOA	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDCOK	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1132,8 +1143,8 @@ TS DATA	REGION1
 	NCAP_COST	XINDODS	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDOGS	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XINDOHF	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XINDOLP	-	-	-	-	-	0	32.7352577028433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XINDWAS	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINDOLP	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINDWAS	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XPWRBIB	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XPWRBIG	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XPWRBIO	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1148,34 +1159,34 @@ TS DATA	REGION1
 	NCAP_COST	XPWRGRN	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XPWRGRS	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XPWRHYD	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XPWRNUC	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XPWRODS	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XPWRSOL	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XPWRWND	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XPWRNUC	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XPWRODS	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XPWRSOL	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XPWRWND	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XRESBIW	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XRESCOA	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XRESELC	-	-	-	-	-	0	30869.197522392	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XRESGAS	-	-	-	-	-	0	692.677039279846	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XRESOKE	-	-	-	-	-	0	32.7352577028433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XRESOLP	-	-	-	-	-	0	58.923463865118	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XRESELC	-	-	-	-	-	0	23574.8850693413	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XRESGAS	-	-	-	-	-	0	528.99922582531	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XRESOKE	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XRESOLP	-	-	-	-	-	0	45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAELC	-	-	-	-	-	0	15434.598761196	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAGAS	-	-	-	-	-	0	346.338519639923	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAHGN	-	-	-	-	-	0	1039.01555891977	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAOAG	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XTRAODS	-	-	-	-	-	0	33.819366834856	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XTRAOGS	-	-	-	-	-	0	33.3422961784646	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XTRAOHF	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XTRAOKE	-	-	-	-	-	0	32.7352577028433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRAODS	-	-	-	-	-	0	25.8279369157971	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRAOGS	-	-	-	-	-	0	25.4635968358121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRAOHF	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRAOKE	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSBID	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSBIE	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSCLE	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSELC	-	-	-	-	-	0	7717.29938059801	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSGAS	-	-	-	-	-	0	36.4566862778866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSGIC	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XUPSHEE	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XUPSHEN	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XUPSOCR	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XUPSOHF	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XUPSHEE	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XUPSHEN	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XUPSOCR	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XUPSOHF	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ZZBKELCC	-	-	-	-	-	0	99999	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UCOGCLEHGN	-	-	-	-	-	0	27.2226403056845	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UCTLCLEIN-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1236,6 +1247,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	XCOMOLP	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XINDBIB	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XINDBIW	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINDCLE	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XINDCOA	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XINDCOK	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XINDELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1287,7 +1299,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	XUPSHEN	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XUPSOCR	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XUPSOHF	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	UCTLCLEIN-E	-	-	-	-	-	0	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	261.667515333676	0	0	0	0	
+	PRC_RESID	UCTLCLEIN-E	-	-	-	-	-	0	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	0	0	0	0	
 	PRC_RESID	UGASGRS-N	-	-	-	-	-	0	116	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	UGTLGICCO-E	-	-	-	-	-	0	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	
@@ -1309,6 +1321,7 @@ TS DATA	REGION1
 	PRC_RESID	XCOMOLP	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XINDBIB	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XINDBIW	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINDCLE	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XINDCOA	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XINDCOK	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XINDELC	-	-	-	-	-	0	15.5335873151565	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1628,6 +1641,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	XCOMOLP	-	COMOLP	-	-	-	1	
 	PRC_ACTUNT	XINDBIB	-	INDBIB	-	-	-	1	
 	PRC_ACTUNT	XINDBIW	-	INDBIW	-	-	-	1	
+	PRC_ACTUNT	XINDCLE	-	INDCLE	-	-	-	1	
 	PRC_ACTUNT	XINDCOA	-	INDCOA	-	-	-	1	
 	PRC_ACTUNT	XINDCOK	-	INDCOK	-	-	-	1	
 	PRC_ACTUNT	XINDELC	-	INDELC	-	-	-	1	
@@ -1764,6 +1778,7 @@ TID DATA	REGION1
 	PRC_CAPACT	XCOMOLP	-	-	-	-	-	1	
 	PRC_CAPACT	XINDBIB	-	-	-	-	-	1	
 	PRC_CAPACT	XINDBIW	-	-	-	-	-	1	
+	PRC_CAPACT	XINDCLE	-	-	-	-	-	1	
 	PRC_CAPACT	XINDCOA	-	-	-	-	-	1	
 	PRC_CAPACT	XINDCOK	-	-	-	-	-	1	
 	PRC_CAPACT	XINDELC	-	-	-	-	-	31.536	
@@ -1889,6 +1904,7 @@ TID DATA	REGION1
 	TOP-IN	XCOMOLP	OLP	-	-	-	-	1	
 	TOP-IN	XINDBIB	BIB	-	-	-	-	1	
 	TOP-IN	XINDBIW	BIW	-	-	-	-	1	
+	TOP-IN	XINDCLE	CLE	-	-	-	-	1	
 	TOP-IN	XINDCOA	COA	-	-	-	-	1	
 	TOP-IN	XINDCOK	COK	-	-	-	-	1	
 	TOP-IN	XINDELC	ELC	-	-	-	-	1	
@@ -2199,6 +2215,14 @@ TID DATA	REGION1
 	TOP-OUT	XCOMOLP	COMSOXS	-	-	-	-	1	
 	TOP-OUT	XINDBIB	INDBIB	-	-	-	-	1	
 	TOP-OUT	XINDBIW	INDBIW	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDCH4S	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDCLE	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDCMOX	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDCO2S	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDN2OS	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDNMVS	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDNOXS	-	-	-	-	1	
+	TOP-OUT	XINDCLE	INDSOXS	-	-	-	-	1	
 	TOP-OUT	XINDCOA	INDCH4S	-	-	-	-	1	
 	TOP-OUT	XINDCOA	INDCMOX	-	-	-	-	1	
 	TOP-OUT	XINDCOA	INDCO2S	-	-	-	-	1	
