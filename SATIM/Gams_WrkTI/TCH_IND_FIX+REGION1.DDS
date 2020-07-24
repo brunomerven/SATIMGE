@@ -1,0 +1,101 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'ICPT'                     'Industry-Chemicals-Ancillary - Gas - Existing     '
+  'INDCLE'                   'Industry-Low Grade Coal                           '
+  'IOTO'                     'Industry-Other-Other motive - Electricity         '
+/;
+SET COM /
+  'ICPT'                     'Industry-Chemicals-Ancillary - Gas - Existing     '
+  'INDCLE'                   'Industry-Low Grade Coal                           '
+  'IOTO'                     'Industry-Other-Other motive - Electricity         '
+/;
+SET COM_DEM /
+  'REGION1'   .'ICPT'
+  'REGION1'   .'IOTO'
+/;
+SET COM_NRG /
+  'REGION1'   .'INDCLE'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'ICPT'
+  'REGION1'   .'INDCLE'
+  'REGION1'   .'IOTO'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'INDCLE'
+/;
+SET COM_DEMRES /
+  'REGION1'   .'ICPT'
+  'REGION1'   .'IOTO'
+/;
+SET PRC /
+  'XINDCLE'                  'Industry Low Grade Coal                           '
+/;
+SET PRC_PRE /
+  'REGION1'   .'XINDCLE'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'XINDCLE'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'ICPT'.'PJ'
+  'REGION1'.'INDCLE'.'PJ'
+  'REGION1'.'IOTO'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'XINDCLE'.'PJ'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'XINDCLE'                 .'INDCLE'                     1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'XINDCLE'                    1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'XINDCLE'                 .'CLE'                        1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'XINDCLE'                 .'INDCH4S'                    1
+  'REGION1'                 .'XINDCLE'                 .'INDCLE'                     1
+  'REGION1'                 .'XINDCLE'                 .'INDCMOX'                    1
+  'REGION1'                 .'XINDCLE'                 .'INDCO2S'                    1
+  'REGION1'                 .'XINDCLE'                 .'INDN2OS'                    1
+  'REGION1'                 .'XINDCLE'                 .'INDNMVS'                    1
+  'REGION1'                 .'XINDCLE'                 .'INDNOXS'                    1
+  'REGION1'                 .'XINDCLE'                 .'INDSOXS'                    1
+/;
+       TABLE AACT_EFF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XINDCLE'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ACOM_PROJ
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ICPT'                             39                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE AFLO_EMIS
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XINDCLE'                 .'INDCH4S'                 .'INDCLE'                  .'ANNUAL'                           .001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'XINDCLE'                 .'INDCMOX'                 .'INDCLE'                  .'ANNUAL'                           .02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'XINDCLE'                 .'INDCO2S'                 .'INDCLE'                  .'ANNUAL'                           96.25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'XINDCLE'                 .'INDN2OS'                 .'INDCLE'                  .'ANNUAL'                           .0014                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'XINDCLE'                 .'INDNMVS'                 .'INDCLE'                  .'ANNUAL'                           .005                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'XINDCLE'                 .'INDNOXS'                 .'INDCLE'                  .'ANNUAL'                           .3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'XINDCLE'                 .'INDSOXS'                 .'INDCLE'                  .'ANNUAL'                           .6262                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+;
+       TABLE ANCAP_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XINDCLE'                          1.30941030E-04                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+;
+       TABLE ANCAPTLIFE
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XINDCLE'                          60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE APRC_RESID
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'XINDCLE'                          .00001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+;

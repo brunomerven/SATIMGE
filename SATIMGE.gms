@@ -80,6 +80,12 @@ SETS
 
   FS_L(FS)                Linked subsectors ie excl com agr ele
 
+  Sector                 SATIM sectors
+  SubSector              SATIM subsectors
+  SubSubSector           SATIM subsubsectors
+  MPRCSector(PRC,Sector) MAP for PRC to sectors
+  MPRCSubSector(PRC,Sector,SubSector)          Map for PRC to subsectors
+  MPRCSubsubSector(PRC,Sector,SubSector,SubSubSector)  Map for PRC to subsubsectors
 
 * Emissions sets
   CO2SET(COM)                    Sectoral emissions
@@ -130,8 +136,8 @@ SETS
 *FH*----------------------------------------------------------------------------
  MFHHT(FH,H,AY) reverse mapping (TIMES to CGE) for households
 
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, FlowIn, FlowOut, CO2, CH4, N2O, HFC, PFC, CO2eq, Investment,Price, GVA, Employment, pkm, tkm/
-  Emiss(Indicators) / CO2, CH4, N2O, HFC, PFC, CO2eq/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, FlowIn, FlowOut, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Employment, pkm, tkm/
+  Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
 
 
 
@@ -199,7 +205,11 @@ PARAMETERS
 
 
   EmisFactor(COM,Emiss)          Combustion Emission Factor
-  ProcessEmissions(FS,AY,RUN,Emiss) Process emissions
+  LandEmissions(PRC,Emiss,AY) Land Emissions
+  AgriEmissions(PRC,Emiss,AY) Agriculture Emissions
+  WasteEmissions(PRC,Emiss,AY) Waste Emissions
+  CoalAshCoal(AY)              Coal used to account for coal ash in waste model
+
 
 * TIMES Results Initial Aggregation
   VAR_ACT(ALLYEAR,PRC)           Activity [PJ except for demand techs where unit will be aligned to particular demand e.g. VKM for road vehicles]
@@ -298,7 +308,7 @@ PARAMETERS
 * Import sets and parameters from SetsAndMaps -------------------------------
 $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=index!a6 checkdate"
 $gdxin  SetsAndMaps\SetsMaps.gdx
-$load PRC COM DEM1 S UC_N FSATIM FS FH COALSUP MFHH MFSA MPRCFS MPRCFS2 mCOMC mCOMF
+$load PRC COM DEM1 S UC_N FSATIM FS FH COALSUP MFHH MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
 
 
 * CGE: Parameter and set declaration-------------------------------------------
@@ -314,21 +324,8 @@ $call   "gdxxrw i=EmissionFactors.xlsx o=EmisFac index=Index!a6 checkdate"
 $gdxin  EmisFac.gdx
 $load EmisFactor
 
-* chemicals sector
-MFSP('cp','XICPGAS') = yes;
-* non metallic minerals (cement, lime and glass)
-MFSP('nm','XINMGAS') = yes;
-* non ferous (aluminium, lead and zinc)
-MFSP('nf','XINFGAS') = yes;
-* iron and steel
-MFSP('is','XIISGAS') = yes;
-* ferro-alloys
-*MFSP('fa','XIFAGAS') = yes;
-* Aluminium
-*MFSP('al',
-* non-energy 2D, and product use 2F assigned to "industry other", although the emission should take place
-* in the commercial sector in SATIM, as the dominant emission out of this lot is 2F1-refrigerant-air-conditioning.
-MFSP('COM','XIOTGAS') = yes;
+* The CO2eq calc is to be done in Tableau, as coeffcients may change, and we need to be consistent with inventory and across IPCC categories
+EmisFactor(COM,'CO2eq') = 0;
 
 
 $include cge\includes\2energychecksinit.inc
@@ -412,8 +409,8 @@ $offtext
 
 * Read in demand and other indicators from energy demand workbook
 
-  execute 'gdxxrw.exe i=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx o=EnergyDemand.gdx index=index_E2G!a6';
-  execute_load "EnergyDemand.gdx" SIM_DEMX;
+*  execute 'gdxxrw.exe i=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx o=EnergyDemand.gdx index=index_E2G!a6';
+*  execute_load "EnergyDemand.gdx" SIM_DEMX;
 * Need to Add Occupancy and Freight loading per vehicle category to calculate pkm and tkm
 
 $ontext
@@ -453,13 +450,15 @@ $offtext
 $include SATIM\includes\2TIMESReport.inc
 
 $include SATIM\includes\GHGEnergyReport.inc
+
+*Get Process Emissions
+$include SATIM\includes\GHGProcessReport.inc
+
 * Run Waste Model
+$include Waste\includes\GHGWasteReport.inc
 
-* Run Land Model
-
-* Run Agriculture Model
-
-*
+* Run AFOLU Model
+$include AFOLU\includes\GHGAfoluReport.inc
 
 
 

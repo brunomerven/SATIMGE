@@ -3584,15 +3584,6 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[GDXDISP: TVFLOWOUT Par 3]
-PlaneDim=0
-RowDim=2
-Squeeze=1
-SqTrail0=0
-Order=1,3,2
-Decim=5
-PlaneRownr=-1
-
 [GDXDISP: CLEANTECH Par 3]
 PlaneDim=0
 RowDim=3
@@ -4039,7 +4030,7 @@ PlaneRownr=-1
 
 [GDXDISP: GVA_FS Par 2]
 PlaneDim=0
-RowDim=2
+RowDim=1
 Squeeze=1
 SqTrail0=0
 Order=1,2
@@ -4098,11 +4089,11 @@ Decim=7
 PlaneRownr=-1
 
 [GDXDISP: FLOW_IN_FSFuels Par 3]
-PlaneDim=0
-RowDim=2
+PlaneDim=1
+RowDim=1
 Squeeze=1
 SqTrail0=0
-Order=1,2,3
+Order=2,1,3
 Decim=1
 PlaneRownr=-1
 
@@ -4219,22 +4210,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[RP:CO2_CALCS_NDC]
-1=
-
-[GDXDISP: REPORT Par 5]
-PlaneDim=0
-RowDim=4
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,5,4
-Decim=4
-PlaneRownr=-1
-PlaneFilter1=CO2
-
-[RP:UNTITLED_1]
-1=
 
 [RP:EXPERIMENT_ONMILESTONEYEARS]
 1=gdx = experiments\experiment2
@@ -4419,32 +4394,207 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
+[GDXDISP: MFSA Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MFSP Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EmisFactor Par 2]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=17
+PlaneFilter1=IISCOA
+
+[GDXDISP: LandEmissions Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Land_GHG Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: SIM_DEMX Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:CO2_CALCS_NDC]
+1=
+
+[GDXDISP: REPORT Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=5,1,2,4,3
+Decim=0
+PlaneRownr=4
+PlaneFilter1=FlowOut
+
+[GDXDISP: TX Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
 [RP:2TIMESREPORT]
 1=
 
+[GDXDISP: TVFLOWOUT Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: REMIMP Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RDNTP Alias 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Emiss Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
 [RP:GHGENERGYREPORT]
+1=
+
+[RP:UNTITLED_1]
+1=
+
+[GDXDISP: POP Par 1]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: FLOW_IN_FHAllFuels Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:GHGWASTEREPORT]
 1=
 
 [RP:SATIMGE]
 1=r=cge\model, gdx = test
 2=
 
+[RP:GHGAFOLUREPORT]
+1=
+
 [MRUFILES]
-1=C:\Models\SATIMGE_04\SATIMGE.gms
-2=C:\Models\SATIMGE_04\SATIM\Gams_WrkTI\gamssave\RUNZERO.gdx
-3=C:\SATIMGE_03\CGE\includes\2energychecksinit.inc
-4=C:\SATIMGE_03\CalibRefSATIM.gdx
-5=C:\SATIMGE_03\CalibGHG.gdx
-6=C:\SATIMGE_03\BatchRun_LinkedModel_v02.gms
-7=C:\Models\SATIMGE_04\test.gdx
-8=C:\Models\SATIMGE_04\SATIM\includes\GHGEnergyReport.inc
-9=C:\Models\SATIMGE_04\SATIM\includes\2TIMESReport.inc
+1=C:\Models\SATIMGE\Waste\Includes\GHGWasteReport.inc
+2=C:\Models\SATIMGE\Untitled_1.gms
+3=C:\Models\SATIMGE\AFOLU\GHGAfoluReport.inc
+4=C:\Models\SATIMGE_04\SATIMGE.gms
+5=C:\Models\SATIMGE_04\SATIM\Gams_WrkTI\gamssave\RUNZERO.gdx
+6=C:\SATIMGE_03\CGE\includes\2energychecksinit.inc
+7=C:\SATIMGE_03\CalibRefSATIM.gdx
+8=C:\SATIMGE_03\CalibGHG.gdx
+9=C:\SATIMGE_03\BatchRun_LinkedModel_v02.gms
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\SATIMGE.gms
-FILE1=C:\Models\SATIMGE\SATIMGE.gms
+FILE0=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE1=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
 MAXIM=0
-TOP=9
-LEFT=68
+TOP=164
+LEFT=1178
+HEIGHT=906
+WIDTH=944
+
+[OPENWINDOW_2]
+FILE0=C:\Models\SATIMGE\test.gdx
+FILE1=C:\Models\SATIMGE\test.gdx
+MAXIM=0
+TOP=67
+LEFT=973
+HEIGHT=918
+WIDTH=950
+
+[OPENWINDOW_3]
+FILE0=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
+FILE1=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
+MAXIM=0
+TOP=5
+LEFT=946
+HEIGHT=918
+WIDTH=958
+
+[OPENWINDOW_4]
+FILE0=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
+FILE1=C:\Models\SATIMGE\LAND.gdx
+FILE2=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE3=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE4=C:\Models\SATIMGE\SATIMGE.gms
+FILE5=C:\Models\SATIMGE\SATIMGE.lst
+FILE6=C:\Models\SATIMGE\test.gdx
+FILE7=C:\Models\SATIMGE\Waste\Includes\GHGWasteReport.inc
+FILE8=C:\SATIMGE_03\CO2_Calcs_NDC.gms
+FILE9=C:\Models\SATIMGE\SATIMGE.gms
+MAXIM=0
+TOP=5
+LEFT=18
 HEIGHT=909
-WIDTH=919
+WIDTH=926
