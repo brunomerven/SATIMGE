@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/24	2:45:40 PM
+Creation Date:	2020/07/27	2:19:37 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -267,7 +267,8 @@ TS DATA	REGION1
 	ACT_EFF	XUPSELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	EPTSTO-N	-	-	-	-	UP	3	1.32	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ERHYDGIW-I	-	-	-	-	UP	3	2.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	CAP_BND	ETCLEKUSI-N	-	-	-	-	UP	3	3.61	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ERHYD-N	-	-	-	-	UP	3	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	ETCLEKUSI-N	-	-	-	-	UP	3	4.332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ETCLEMEDU-N	-	-	-	-	UP	3	4.332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ETGASENSI-N	-	-	-	-	UP	3	0.172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ETGASENSS-N	-	-	-	-	UP	3	0.249	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -428,48 +429,48 @@ TS DATA	REGION1
 	FLO_EMIS	ETNUC-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETNUC-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETODSGT-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSARNOVRS	CH4SF	PWRCLEARNO	-	ANNUAL	-	0	1.45711500974659E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSARNOVRS	CO2SF	PWRCLEARNO	-	ANNUAL	-	0	4.00584795321637E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSCAMDVRS	CH4SF	PWRCLECAMD	-	ANNUAL	-	0	1.60321715817694E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSCAMDVRS	CO2SF	PWRCLECAMD	-	ANNUAL	-	0	4.40750670241287E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSDUVHS32	CH4SF	PWRCLEDUVH	-	ANNUAL	-	0	1.43888354186718E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSDUVHS32	CO2SF	PWRCLEDUVH	-	ANNUAL	-	0	3.95572666025024E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSDUVHVRS	CH4SF	PWRCLEDUVH	-	ANNUAL	-	0	1.43888354186718E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSDUVHVRS	CO2SF	PWRCLEDUVH	-	ANNUAL	-	0	3.95572666025024E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSGROOVRS	CH4SF	PWRCLEGROO	-	ANNUAL	-	0	1.45286686103013E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSGROOVRS	CO2SF	PWRCLEGROO	-	ANNUAL	-	0	3.99416909620991E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSHENDVRS	CH4SF	PWRCLEHEND	-	ANNUAL	-	0	1.44864341085271E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSHENDVRS	CO2SF	PWRCLEHEND	-	ANNUAL	-	0	3.98255813953488E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKENDS32	CH4SF	PWRCLEKEND	-	ANNUAL	-	0	1.61796536796537E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKENDS32	CO2SF	PWRCLEKEND	-	ANNUAL	-	0	4.44805194805195E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKENDVRS	CH4SF	PWRCLEKEND	-	ANNUAL	-	0	1.61796536796537E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKENDVRS	CO2SF	PWRCLEKEND	-	ANNUAL	-	0	4.44805194805195E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKOMAVRS	CH4SF	PWRCLEKOMA	-	ANNUAL	-	0	1.51930894308943E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKOMAVRS	CO2SF	PWRCLEKOMA	-	ANNUAL	-	0	4.17682926829268E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKRIESER	CH4SF	PWRCLEKRIE	-	ANNUAL	-	0	1.42788920725883E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKRIESER	CO2SF	PWRCLEKRIE	-	ANNUAL	-	0	3.92550143266476E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKRIEVRS	CH4SF	PWRCLEKRIE	-	ANNUAL	-	0	1.42788920725883E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKRIEVRS	CO2SF	PWRCLEKRIE	-	ANNUAL	-	0	3.92550143266476E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKUSINLG	CH4SF	PWRCLEKUSI	-	ANNUAL	-	0	1.53333333333333E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKUSINLG	CO2SF	PWRCLEKUSI	-	ANNUAL	-	0	4.21538461538461E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKUSIVRS	CH4SF	PWRCLEKUSI	-	ANNUAL	-	0	1.70564746149458E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSKUSIVRS	CO2SF	PWRCLEKUSI	-	ANNUAL	-	0	4.68910439247005E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSLETHSER	CH4SF	PWRCLELETH	-	ANNUAL	-	0	1.94155844155844E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSLETHSER	CO2SF	PWRCLELETH	-	ANNUAL	-	0	5.33766233766234E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMAJUVRS	CH4SF	PWRCLEMAJU	-	ANNUAL	-	0	1.60580021482277E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMAJUVRS	CO2SF	PWRCLEMAJU	-	ANNUAL	-	0	4.41460794844253E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMATIEXX	CH4SF	PWRCLEMATI	-	ANNUAL	-	0	1.59978598180845E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMATIEXX	CO2SF	PWRCLEMATI	-	ANNUAL	-	0	4.39807383627608E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMATLEXX	CH4SF	PWRCLEMATL	-	ANNUAL	-	0	1.50933871781928E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMATLEXX	CO2SF	PWRCLEMATL	-	ANNUAL	-	0	4.14941948510853E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMATLVRS	CH4SF	PWRCLEMATL	-	ANNUAL	-	0	1.50933871781928E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMATLVRS	CO2SF	PWRCLEMATL	-	ANNUAL	-	0	4.14941948510853E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMEDUEXX	CH4SF	PWRCLEMEDU	-	ANNUAL	-	0	1.59978598180845E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSMEDUEXX	CO2SF	PWRCLEMEDU	-	ANNUAL	-	0	4.39807383627608E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSTUTUSER	CH4SF	PWRCLETUTU	-	ANNUAL	-	0	1.46928746928747E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSTUTUSER	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03931203931204E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSTUTUVRS	CH4SF	PWRCLETUTU	-	ANNUAL	-	0	1.46928746928747E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCSTUTUVRS	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03931203931204E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSARNOVRS	CH4SF	PWRCLEARNO	-	ANNUAL	-	0	0.012537677121241	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSARNOVRS	CO2SF	PWRCLEARNO	-	ANNUAL	-	0	3.99792960288136E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSCAMDVRS	CH4SF	PWRCLECAMD	-	ANNUAL	-	0	1.37948061409043E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSCAMDVRS	CO2SF	PWRCLECAMD	-	ANNUAL	-	0	4.39879439416223E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHS32	CH4SF	PWRCLEDUVH	-	ANNUAL	-	0	1.23808053189541E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHS32	CO2SF	PWRCLEDUVH	-	ANNUAL	-	0	3.94790738455849E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHVRS	CH4SF	PWRCLEDUVH	-	ANNUAL	-	0	1.23808053189541E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSDUVHVRS	CO2SF	PWRCLEDUVH	-	ANNUAL	-	0	3.94790738455849E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSGROOVRS	CH4SF	PWRCLEGROO	-	ANNUAL	-	0	1.25011241267184E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSGROOVRS	CO2SF	PWRCLEGROO	-	ANNUAL	-	0	3.98627383144439E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSHENDVRS	CH4SF	PWRCLEHEND	-	ANNUAL	-	0	1.24647836496059E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSHENDVRS	CO2SF	PWRCLEHEND	-	ANNUAL	-	0	3.97468582612042E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDS32	CH4SF	PWRCLEKEND	-	ANNUAL	-	0	1.39217064138455E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDS32	CO2SF	PWRCLEKEND	-	ANNUAL	-	0	4.43925949410852E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDVRS	CH4SF	PWRCLEKEND	-	ANNUAL	-	0	1.39217064138455E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKENDVRS	CO2SF	PWRCLEKEND	-	ANNUAL	-	0	4.43925949410852E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKOMAVRS	CH4SF	PWRCLEKOMA	-	ANNUAL	-	0	1.30728218764159E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKOMAVRS	CO2SF	PWRCLEKOMA	-	ANNUAL	-	0	4.16857293958971E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIESER	CH4SF	PWRCLEKRIE	-	ANNUAL	-	0	1.22862050872906E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIESER	CO2SF	PWRCLEKRIE	-	ANNUAL	-	0	3.9177419031101E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIEVRS	CH4SF	PWRCLEKRIE	-	ANNUAL	-	0	1.22862050872906E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKRIEVRS	CO2SF	PWRCLEKRIE	-	ANNUAL	-	0	3.9177419031101E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSINLG	CH4SF	PWRCLEKUSI	-	ANNUAL	-	0	1.31934940783521E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSINLG	CO2SF	PWRCLEKUSI	-	ANNUAL	-	0	4.20705207441669E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSIVRS	CH4SF	PWRCLEKUSI	-	ANNUAL	-	0	1.46761628367293E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSKUSIVRS	CO2SF	PWRCLEKUSI	-	ANNUAL	-	0	4.67983545072022E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSLETHSER	CH4SF	PWRCLELETH	-	ANNUAL	-	0	1.67060476966146E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSLETHSER	CO2SF	PWRCLELETH	-	ANNUAL	-	0	5.32711139293023E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMAJUVRS	CH4SF	PWRCLEMAJU	-	ANNUAL	-	0	1.38170319295309E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMAJUVRS	CO2SF	PWRCLEMAJU	-	ANNUAL	-	0	4.40588160317538E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATIEXX	CH4SF	PWRCLEMATI	-	ANNUAL	-	0	1.37652827462742E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATIEXX	CO2SF	PWRCLEMATI	-	ANNUAL	-	0	0.00438938017395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLEXX	CH4SF	PWRCLEMATL	-	ANNUAL	-	0	1.29870335450714E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLEXX	CO2SF	PWRCLEMATL	-	ANNUAL	-	0	4.14121733726025E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLVRS	CH4SF	PWRCLEMATL	-	ANNUAL	-	0	1.29870335450714E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMATLVRS	CO2SF	PWRCLEMATL	-	ANNUAL	-	0	4.14121733726025E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMEDUEXX	CH4SF	PWRCLEMEDU	-	ANNUAL	-	0	1.37652827462742E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSMEDUEXX	CO2SF	PWRCLEMEDU	-	ANNUAL	-	0	0.00438938017395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUSER	CH4SF	PWRCLETUTU	-	ANNUAL	-	0	1.26424144731138E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUSER	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03132754059585E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUVRS	CH4SF	PWRCLETUTU	-	ANNUAL	-	0	1.26424144731138E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCSTUTUVRS	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03132754059585E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B2	UP	0	0.55921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -540,7 +541,7 @@ TS DATA	REGION1
 	NCAP_AFA	ETCLEARNO-E	-	-	-	-	LO	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEARNO-E	-	-	-	-	UP	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.552820775844768	null	null	null	null	0.655	null	null	null	null	0.5458	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLECAMD-E	-	-	-	-	LO	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLECAMD-E	-	-	-	-	UP	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.565467684353015	null	null	null	null	0.6	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLECAMD-E	-	-	-	-	UP	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.565467684353015	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	LO	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	UP	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.573943593361587	null	null	null	null	0.6112	null	null	null	null	0.6021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEGROO-E	-	-	-	-	LO	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.38	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -600,6 +601,7 @@ TS DATA	REGION1
 	NCAP_BND	EPTSTO-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	EPTSTO-N	-	-	-	-	FX	0	null	null	null	0	0.99	0.33	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERBIG-N	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERBIO-N	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERHYD-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERHYD-I	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERHYD-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	0.0045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -608,8 +610,8 @@ TS DATA	REGION1
 	NCAP_BND	ERSOLPRC-N	-	-	-	-	FX	0	null	null	null	0.1232	0.0768	0.1072	0.16	0.24	0.245	0.28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERSOLPRI-N	-	-	-	-	FX	0	null	null	null	0.0154	0.0096	0.0134	0.02	0.03	0.07	0.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERSOLPRR-N	-	-	-	-	FX	0	null	null	null	0.0154	0.0096	0.0134	0.02	0.03	0.035	0.04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_BND	ERSOLTC09-N	-	-	-	-	FX	0	0	null	null	0	0.2	0.1	0.1	0.1	0	0	0	0	1	2	3	4	5	6	7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_BND	ERWNDH-N	-	-	-	-	FX	0	0	null	null	1.075	0.385	0.62	0	0	0.244	0.3	0.818	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLTC09-N	-	-	-	-	FX	0	0	null	null	0	0.2	0.1	0.1	0.1	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERWNDH-N	-	-	-	-	FX	0	0	null	null	1.075	0.385	0.62	0	0	0.244	0.3	0.818	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLEARNO-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLECAMD-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLEDUVH-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -619,7 +621,7 @@ TS DATA	REGION1
 	NCAP_BND	ETCLEKEND-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLEKOMA-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLEKRIE-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_BND	ETCLEKUSI-N	-	-	-	-	FX	0	null	null	null	null	0	0.722	0	0	1.444	0.722	0.722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETCLEKUSI-N	-	-	-	-	FX	0	null	null	null	null	0	0.722	0	0	1.444	0.722	0.722	0.722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLEKUSI-N	-	-	-	-	UP	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLELETH-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETCLEMAJD-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -912,6 +914,7 @@ TS DATA	REGION1
 TID DATA	REGION1
 	COM_PEAK	-	ELCC	-	-	-	-	1	
 	NCAP_START	ERHYDGIW-I	-	-	-	-	-	2030	
+	NCAP_START	ETCLDFB-N	-	-	-	-	-	2026	
 	NCAP_START	ETCLEWATE-N	-	-	-	-	-	2026	
 	NCAP_START	ETNUC-N	-	-	-	-	-	2030	
 	NCAP_START	MINCSKUSINLG	-	-	-	-	-	2022	

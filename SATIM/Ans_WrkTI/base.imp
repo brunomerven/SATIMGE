@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/23	2:34:43 PM
+Creation Date:	2020/07/27	11:41:56 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -432,7 +432,7 @@ TS DATA	REGION1
 	ACT_BND	MINCOA	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINGAS	-	-	-	ANNUAL	UP	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINGIB	-	-	-	ANNUAL	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	MINGIC	-	-	-	ANNUAL	UP	3	42.5341982864137	null	null	42.5341982864137	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINGIC	-	-	-	ANNUAL	UP	3	42.5341982864137	null	null	42.5341982864137	null	25.838	null	28204	28204	null	null	null	null	28204	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINGIH	-	-	-	ANNUAL	UP	3	0	null	null	0	null	null	null	null	20	null	null	null	null	null	null	null	null	null	800	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINHYD	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINOCR	-	-	-	ANNUAL	UP	3	0	null	null	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -655,17 +655,18 @@ TS DATA	REGION1
 	COM_AGG	-	UPSNMVS	-	NMVS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	UPSNOXS	-	NOXS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	UPSSOXS	-	SOXS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCLD	CH4SF	CLD	-	ANNUAL	-	0	3.37057404805754E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCLE	CH4SF	CLE	-	ANNUAL	-	0	3.37057404805754E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MINCOA	CH4SF	COA	-	ANNUAL	-	0	3.37057404805754E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCLD	CH4SF	CLD	-	ANNUAL	-	0	3.9065483548155E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCLE	CH4SF	CLE	-	ANNUAL	-	0	1.22511016441841E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCLE	CO2SF	CLE	-	ANNUAL	-	0	3.9065483548155E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCOA	CH4SF	COA	-	ANNUAL	-	0	1.07197139386611E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MINCOA	CO2SF	COA	-	ANNUAL	-	0	3.41822981046356E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINGIB	CH4SF	GIB	-	ANNUAL	-	0	0.100293220907672	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINGIB	CO2SF	GIB	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINGIC	CH4SF	GIC	-	ANNUAL	-	0	0.100293220907672	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINGIC	CO2SF	GIC	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINGIH	CH4SF	GIH	-	ANNUAL	-	0	0.200586441815344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINGIH	CO2SF	GIH	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MIRCRB	CH4RF	CRB	-	ANNUAL	-	0	3.37057404805754E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	MIRCRB	CH4SF	CRB	-	ANNUAL	-	0	1.13253099404086E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	MIRCRB	CH4RF	CRB	-	ANNUAL	-	0	3.9065483548155E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCOGCLEHGN	UPSCH4S	UCOGCLEHGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCOGCLEHGN	UPSCO2S	UCOGCLEHGN-O	-	ANNUAL	-	0	180.833333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCTLCLEIN-E	CH4SF	UCTLCLEIN-E-O	-	ANNUAL	-	0	0.397331513877142	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -680,11 +681,11 @@ TS DATA	REGION1
 	FLO_EMIS	UGASGRM-N	CH4SF	GRM	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGRS-N	CH4SF	GRS	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGTLGASIN-N	UPSCH4S	UGTLGASIN-N-O	-	ANNUAL	-	0	0.0045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UGTLGASIN-N	UPSCO2S	UGTLGASIN-N-O	-	ANNUAL	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UGTLGASIN-N	UPSCO2S	UGTLGASIN-N-O	-	ANNUAL	-	0	6.4894696089818	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGTLGICCO-E	UPSCH4S	UGTLGICCO-E-O	-	ANNUAL	-	0	0.0045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UGTLGICCO-E	UPSCO2S	UGTLGICCO-E-O	-	ANNUAL	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UGTLGICCO-E	UPSCO2S	UGTLGICCO-E-O	-	ANNUAL	-	0	6.4894696089818	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGTLGICCO-N	UPSCH4S	UGTLGICCO-N-O	-	ANNUAL	-	0	0.0045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UGTLGICCO-N	UPSCO2S	UGTLGICCO-N-O	-	ANNUAL	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UGTLGICCO-N	UPSCO2S	UGTLGICCO-N-O	-	ANNUAL	-	0	6.4894696089818	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UHETCLE-E	UPSCH4S	ACTGRP	-	ANNUAL	-	0	1.17511700421227E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UHETCLE-E	UPSCO2S	ACTGRP	-	ANNUAL	-	0	95.4280110640481	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UHETCLE-N	UPSCH4S	ACTGRP	-	ANNUAL	-	0	1.1099036704057E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -993,10 +994,10 @@ TS DATA	REGION1
 	FLO_FUNC	UCOGCLEHGN	-	UCOGCLEHGN-I	UCOGCLEHGN-O	ANNUAL	-	0	0.65	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UCTLCLEIN-E	-	UCTLCLEIN-E-I	UCTLCLEIN-E-O	ANNUAL	-	0	0.304149196119315	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UCTLCLEIN-N	-	UCTLCLEIN-N-I	UCTLCLEIN-N-O	ANNUAL	-	0	0.354149196119315	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	UELEHGN	-	UELEHGN-I	UELEHGN-O	ANNUAL	-	0	0.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	UGTLGASIN-N	-	UGTLGASIN-N-I	UGTLGASIN-N-O	ANNUAL	-	0	0.6865636350665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	UGTLGICCO-E	-	UGTLGICCO-E-I	UGTLGICCO-E-O	ANNUAL	-	0	0.653870128634761	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	UGTLGICCO-N	-	UGTLGICCO-N-I	UGTLGICCO-N-O	ANNUAL	-	0	0.6865636350665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	UELEHGN	-	UELEHGN-I	UELEHGN-O	ANNUAL	-	0	0.58	null	null	null	null	null	null	null	0.58	null	null	null	null	null	null	null	null	null	0.655	null	null	null	null	0.705	null	null	null	null	0.713000000000001	null	0.795000000000002	null	null	
+	FLO_FUNC	UGTLGASIN-N	-	UGTLGASIN-N-I	UGTLGASIN-N-O	ANNUAL	-	0	0.80809626745745	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	UGTLGICCO-E	-	UGTLGICCO-E-I	UGTLGICCO-E-O	ANNUAL	-	0	0.769615492816619	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	UGTLGICCO-N	-	UGTLGICCO-N-I	UGTLGICCO-N-O	ANNUAL	-	0	0.80809626745745	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UREFOCRCO-E	-	UREFOCRCO-E-I	UREFOCRCO-E-O	ANNUAL	-	0	0.965	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UREFOCRCO-N	-	UREFOCRCO-N-I	UREFOCRCO-N-O	ANNUAL	-	0	0.97	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UREFOCRIN-E	-	UREFOCRIN-E-I	UREFOCRIN-E-O	ANNUAL	-	0	0.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1035,26 +1036,26 @@ TS DATA	REGION1
 	FLO_SHAR	UGTLGASIN-N	OGS	UGTLGASIN-N-O	-	ANNUAL	UP	3	0.498090896335345	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGASIN-N	OKE	UGTLGASIN-N-O	-	ANNUAL	UP	3	0.122591686612885	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGASIN-N	OLP	UGTLGASIN-N-O	-	ANNUAL	UP	3	3.66961429455792E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGASIN-N	OTH	UGTLGASIN-N-O	-	ANNUAL	UP	3	5.49405001720796E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGASIN-N	UPSELC	UGTLGASIN-N-I	-	ANNUAL	FX	3	0.07065675469844	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGASIN-N	UPSOCR	UGTLGASIN-N-I	-	ANNUAL	FX	3	0.185868649060312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-E	OAG	UGTLGICCO-E-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGASIN-N	OTH	UGTLGASIN-N-O	-	ANNUAL	UP	3	5.49419529471216E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGASIN-N	UPSELC	UGTLGASIN-N-I	-	ANNUAL	FX	3	3.76836025058347E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGASIN-N	UPSOCR	UGTLGASIN-N-I	-	ANNUAL	FX	3	0.192463279498833	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-E	ODS	UGTLGICCO-E-O	-	ANNUAL	UP	3	0.06	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-E	OGS	UGTLGICCO-E-O	-	ANNUAL	UP	3	0.53	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-E	OHF	UGTLGICCO-E-O	-	ANNUAL	UP	3	0.04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-E	OKE	UGTLGICCO-E-O	-	ANNUAL	UP	3	0.11	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-E	OLP	UGTLGICCO-E-O	-	ANNUAL	UP	3	0.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-E	OTH	UGTLGICCO-E-O	-	ANNUAL	UP	3	0.18	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-E	UPSELC	UGTLGICCO-E-I	-	ANNUAL	FX	3	0.07065675469844	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-E	UPSGIC	UGTLGICCO-E-I	-	ANNUAL	FX	3	0.743474596241248	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-E	UPSOCR	UGTLGICCO-E-I	-	ANNUAL	FX	3	0.185868649060312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-E	UPSELC	UGTLGICCO-E-I	-	ANNUAL	FX	3	3.76836025058347E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-E	UPSGIC	UGTLGICCO-E-I	-	ANNUAL	FX	3	0.769853117995332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-E	UPSOCR	UGTLGICCO-E-I	-	ANNUAL	FX	3	0.192463279498833	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-N	OAG	UGTLGICCO-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-N	ODS	UGTLGICCO-N-O	-	ANNUAL	UP	3	0.287679321159069	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-N	OGS	UGTLGICCO-N-O	-	ANNUAL	UP	3	0.498090896335345	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-N	OKE	UGTLGICCO-N-O	-	ANNUAL	UP	3	0.122591686612885	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGICCO-N	OLP	UGTLGICCO-N-O	-	ANNUAL	UP	3	3.66961429455792E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-N	OTH	UGTLGICCO-N-O	-	ANNUAL	UP	3	5.49405001720796E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-N	UPSELC	UGTLGICCO-N-I	-	ANNUAL	FX	3	0.07065675469844	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	UGTLGICCO-N	UPSOCR	UGTLGICCO-N-I	-	ANNUAL	FX	3	0.185868649060312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-N	OTH	UGTLGICCO-N-O	-	ANNUAL	UP	3	5.49419529471216E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-N	UPSELC	UGTLGICCO-N-I	-	ANNUAL	FX	3	3.76836025058347E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UGTLGICCO-N	UPSOCR	UGTLGICCO-N-I	-	ANNUAL	FX	3	0.192463279498833	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UREFOCRCO-E	OAG	UREFOCRCO-E-O	-	ANNUAL	UP	3	2.85148574092407E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UREFOCRCO-E	ODS	UREFOCRCO-E-O	-	ANNUAL	UP	3	0.332161468889976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UREFOCRCO-E	OGS	UREFOCRCO-E-O	-	ANNUAL	UP	3	0.289590968667002	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1110,12 +1111,12 @@ TS DATA	REGION1
 	NCAP_AFA	UGASGRM-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGRS-N	-	-	-	-	LO	3	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGRS-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGTLGASIN-N	-	-	-	-	LO	3	0.879734623964986	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGTLGASIN-N	-	-	-	-	UP	3	0.926036446278933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGTLGICCO-E	-	-	-	-	LO	3	0.879734623964986	null	null	null	null	null	null	null	0.879734623964986	0.879734623964986	0.879734623964986	0.879734623964986	0.879734623964986	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGTLGICCO-E	-	-	-	-	UP	3	0.926036446278933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGTLGASIN-N	-	-	-	-	LO	3	0.43931915964624	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGTLGASIN-N	-	-	-	-	UP	3	0.462441220680253	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGTLGICCO-E	-	-	-	-	LO	3	0.43931915964624	null	null	null	null	null	null	null	0.43931915964624	0.43931915964624	0.43931915964624	0.43931915964624	0.43931915964624	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGTLGICCO-E	-	-	-	-	UP	3	0.462441220680253	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGICCO-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGTLGICCO-N	-	-	-	-	UP	3	0.926036446278933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGTLGICCO-N	-	-	-	-	UP	3	0.462441220680253	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ULGTGRLFSRU-N	-	-	-	-	LO	3	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ULGTGRLFSRU-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ULGTGRL-N	-	-	-	-	LO	3	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1256,7 +1257,7 @@ TS DATA	REGION1
 	NCAP_PKCNT	ZZBKELCC	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UCOGCLEHGN	-	-	-	-	-	0	40	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UCTLCLEIN-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	UELEHGN	-	-	-	-	-	0	7.6103500761035	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UELEHGN	-	-	-	-	-	0	7.6103500761035	null	null	null	null	null	null	null	7.6103500761035	null	null	null	null	null	null	null	null	null	9.51293759512938	null	null	null	null	15.8548959918823	null	null	null	null	24.9274479959411	null	30	null	null	
 	NCAP_TLIFE	UGASGIB-N	-	-	-	-	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UGASGIC-N	-	-	-	-	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UGASGIH-N	-	-	-	-	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1340,7 +1341,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	XUPSOHF	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	UCTLCLEIN-E	-	-	-	-	-	0	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	0	0	0	0	
 	PRC_RESID	UGASGRS-N	-	-	-	-	-	0	116	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	UGTLGICCO-E	-	-	-	-	-	0	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	40.7106346899225	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	UGTLGICCO-E	-	-	-	-	-	0	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	
 	PRC_RESID	UREFOCRIN-E	-	-	-	-	-	0	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	
 	PRC_RESID	XAGRCOA	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1444,7 +1445,6 @@ TID DATA	REGION1
 	COM_GMAP	-	OAG	UCTLCLEIN-E-O	-	-	-	1	
 	COM_GMAP	-	OAG	UCTLCLEIN-N-O	-	-	-	1	
 	COM_GMAP	-	OAG	UGTLGASIN-N-O	-	-	-	1	
-	COM_GMAP	-	OAG	UGTLGICCO-E-O	-	-	-	1	
 	COM_GMAP	-	OAG	UGTLGICCO-N-O	-	-	-	1	
 	COM_GMAP	-	OAG	UREFOCRCO-E-O	-	-	-	1	
 	COM_GMAP	-	OAG	UREFOCRCO-N-O	-	-	-	1	
@@ -1465,6 +1465,7 @@ TID DATA	REGION1
 	COM_GMAP	-	OGS	UREFOCRCO-E-O	-	-	-	1	
 	COM_GMAP	-	OGS	UREFOCRCO-N-O	-	-	-	1	
 	COM_GMAP	-	OGS	UREFOCRIN-E-O	-	-	-	1	
+	COM_GMAP	-	OHF	UGTLGICCO-E-O	-	-	-	1	
 	COM_GMAP	-	OHF	UREFOCRCO-E-O	-	-	-	1	
 	COM_GMAP	-	OHF	UREFOCRCO-N-O	-	-	-	1	
 	COM_GMAP	-	OHF	UREFOCRIN-E-O	-	-	-	1	
@@ -1588,12 +1589,12 @@ TID DATA	REGION1
 	NCAP_START	UGASGIB-N	-	-	-	-	-	2022	
 	NCAP_START	UGASGIC-N	-	-	-	-	-	2022	
 	NCAP_START	UGASGIH-N	-	-	-	-	-	2027	
-	NCAP_START	UGASGRM-N	-	-	-	-	-	2024	
+	NCAP_START	UGASGRM-N	-	-	-	-	-	2030	
 	NCAP_START	UGASGRS-N	-	-	-	-	-	2012	
 	NCAP_START	UGTLGASIN-N	-	-	-	-	-	2025	
 	NCAP_START	UGTLGICCO-N	-	-	-	-	-	2025	
-	NCAP_START	ULGTGRLFSRU-N	-	-	-	-	-	2020	
-	NCAP_START	ULGTGRL-N	-	-	-	-	-	2025	
+	NCAP_START	ULGTGRLFSRU-N	-	-	-	-	-	2025	
+	NCAP_START	ULGTGRL-N	-	-	-	-	-	2027	
 	NCAP_START	UREFOCRCO-N	-	-	-	-	-	2030	
 	NCAP_START	USMRGASHGN	-	-	-	-	-	2020	
 	NCAP_START	USMRGICHGN	-	-	-	-	-	2020	
@@ -2018,7 +2019,9 @@ TID DATA	REGION1
 	TOP-OUT	MINCLD	CLD	-	-	-	-	1	
 	TOP-OUT	MINCLE	CH4SF	-	-	-	-	1	
 	TOP-OUT	MINCLE	CLE	-	-	-	-	1	
+	TOP-OUT	MINCLE	CO2SF	-	-	-	-	1	
 	TOP-OUT	MINCOA	CH4SF	-	-	-	-	1	
+	TOP-OUT	MINCOA	CO2SF	-	-	-	-	1	
 	TOP-OUT	MINCOA	COA	-	-	-	-	1	
 	TOP-OUT	MINGAS	GAS	-	-	-	-	1	
 	TOP-OUT	MINGIB	CH4SF	-	-	-	-	1	
@@ -2037,7 +2040,6 @@ TID DATA	REGION1
 	TOP-OUT	MINWAT	WAT	-	-	-	-	1	
 	TOP-OUT	MINWND	WND	-	-	-	-	1	
 	TOP-OUT	MIRCRB	CH4RF	-	-	-	-	1	
-	TOP-OUT	MIRCRB	CH4SF	-	-	-	-	1	
 	TOP-OUT	MIRCRB	CRB	-	-	-	-	1	
 	TOP-OUT	MIRGRM	GRM	-	-	-	-	1	
 	TOP-OUT	MIRGRN	GRN	-	-	-	-	1	
@@ -2085,11 +2087,12 @@ TID DATA	REGION1
 	TOP-OUT	UGTLGASIN-N	OTH	-	-	-	-	1	
 	TOP-OUT	UGTLGASIN-N	UPSCH4S	-	-	-	-	1	
 	TOP-OUT	UGTLGASIN-N	UPSCO2S	-	-	-	-	1	
-	TOP-OUT	UGTLGICCO-E	OAG	-	-	-	-	1	
 	TOP-OUT	UGTLGICCO-E	ODS	-	-	-	-	1	
 	TOP-OUT	UGTLGICCO-E	OGS	-	-	-	-	1	
+	TOP-OUT	UGTLGICCO-E	OHF	-	-	-	-	1	
 	TOP-OUT	UGTLGICCO-E	OKE	-	-	-	-	1	
 	TOP-OUT	UGTLGICCO-E	OLP	-	-	-	-	1	
+	TOP-OUT	UGTLGICCO-E	OTH	-	-	-	-	2	
 	TOP-OUT	UGTLGICCO-E	UPSCH4S	-	-	-	-	1	
 	TOP-OUT	UGTLGICCO-E	UPSCO2S	-	-	-	-	1	
 	TOP-OUT	UGTLGICCO-N	OAG	-	-	-	-	1	

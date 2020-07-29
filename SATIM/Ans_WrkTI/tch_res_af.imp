@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/08	4:12:27 PM
-Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+Creation Date:	2020/07/27	11:40:47 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_RES_AF	Seasonal and Diurnal constraints on RES appliances	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -184,70 +184,6 @@ TS DATA	REGION1
 	NCAP_AF	RHEWELCSWH-E	-	-	-	S2D1B3	FX	0	0.3583	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	RHEWELCSWH-E	-	-	-	S2D1B4	FX	0	0.7981	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	RHEWELCSWH-E	-	-	-	S2D1B5	FX	0	0.8068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S1D1B1	FX	0	0.3197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S1D1B2	FX	0	0.5764	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S1D1B3	FX	0	0.8347	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S2D1B1	FX	0	0.3539	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S2D1B3	FX	0	0.3583	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S2D1B4	FX	0	0.7981	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWGASHEAT-N	-	-	-	S2D1B5	FX	0	0.8068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S1D1B1	FX	0	0.3197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S1D1B2	FX	0	0.5764	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S1D1B3	FX	0	0.8347	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S2D1B1	FX	0	0.3539	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S2D1B3	FX	0	0.3583	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S2D1B4	FX	0	0.7981	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOKESTOV-E	-	-	-	S2D1B5	FX	0	0.8068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S1D1B1	FX	0	0.3197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S1D1B2	FX	0	0.5764	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S1D1B3	FX	0	0.8347	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S2D1B1	FX	0	0.3539	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S2D1B2	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S2D1B3	FX	0	0.3583	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S2D1B4	FX	0	0.7981	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RHEWOLPSTOV-E	-	-	-	S2D1B5	FX	0	0.8068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S1D1B1	FX	0	0.8061	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S1D1B2	FX	0	0.0136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S1D1B3	FX	0	0.0187	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S2D1B1	FX	0	0.1094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S2D1B2	FX	0	0.1073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S2D1B3	FX	0	0.3236	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHBIWOPEN-E	-	-	-	S2D1B5	FX	0	0.6901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S1D1B1	FX	0	0.8061	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S1D1B2	FX	0	0.0136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S1D1B3	FX	0	0.0187	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S2D1B1	FX	0	0.1094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S2D1B2	FX	0	0.1073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S2D1B3	FX	0	0.3236	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHCOABNM-E	-	-	-	S2D1B5	FX	0	0.6901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S1D1B1	FX	0	0.8061	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S1D1B2	FX	0	0.0136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S1D1B3	FX	0	0.0187	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S2D1B1	FX	0	0.1094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S2D1B2	FX	0	0.1073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S2D1B3	FX	0	0.3236	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHELCHEATBAR-E	-	-	-	S2D1B5	FX	0	0.6901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S1D1B1	FX	0	0.8061	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S1D1B2	FX	0	0.0136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S1D1B3	FX	0	0.0187	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S2D1B1	FX	0	0.1094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S2D1B2	FX	0	0.1073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S2D1B3	FX	0	0.3236	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOKEHEAT-E	-	-	-	S2D1B5	FX	0	0.6901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S1D1B1	FX	0	0.8061	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S1D1B2	FX	0	0.0136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S1D1B3	FX	0	0.0187	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S2D1B1	FX	0	0.1094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S2D1B2	FX	0	0.1073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S2D1B3	FX	0	0.3236	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S2D1B4	FX	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	RLEHOLPHET-E	-	-	-	S2D1B5	FX	0	0.6901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	RLEKBIWBNM-E	-	-	-	S1D1B1	FX	0	0.2098	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	RLEKBIWBNM-E	-	-	-	S1D1B2	FX	0	0.7935	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	RLEKBIWBNM-E	-	-	-	S1D1B3	FX	0	0.8936	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -520,14 +456,6 @@ TID DATA	REGION1
 	PRC_ACTUNT	RHEWELCCHP-N	-	RHEWG	-	-	-	1	
 	PRC_ACTUNT	RHEWELCGEY-E	-	RHEWG	-	-	-	1	
 	PRC_ACTUNT	RHEWELCSWH-E	-	RHEWG	-	-	-	1	
-	PRC_ACTUNT	RHEWGASHEAT-N	-	RHEW	-	-	-	1	
-	PRC_ACTUNT	RHEWOKESTOV-E	-	RHEW	-	-	-	1	
-	PRC_ACTUNT	RHEWOLPSTOV-E	-	RHEW	-	-	-	1	
-	PRC_ACTUNT	RLEHBIWOPEN-E	-	RLEH	-	-	-	1	
-	PRC_ACTUNT	RLEHCOABNM-E	-	RLEH	-	-	-	1	
-	PRC_ACTUNT	RLEHELCHEATBAR-E	-	RLEH	-	-	-	1	
-	PRC_ACTUNT	RLEHOKEHEAT-E	-	RLEH	-	-	-	1	
-	PRC_ACTUNT	RLEHOLPHET-E	-	RLEH	-	-	-	1	
 	PRC_ACTUNT	RLEKBIWBNM-E	-	RLEK	-	-	-	1	
 	PRC_ACTUNT	RLEKCOABNM-E	-	RLEK	-	-	-	1	
 	PRC_ACTUNT	RLEKELCHOT-E	-	RLEK	-	-	-	1	
@@ -574,14 +502,6 @@ TID DATA	REGION1
 	TOP-IN	RHEWELCCHP-N	RESELC	-	-	-	-	1	
 	TOP-IN	RHEWELCGEY-E	RESELC	-	-	-	-	1	
 	TOP-IN	RHEWELCSWH-E	RESELC	-	-	-	-	1	
-	TOP-IN	RHEWGASHEAT-N	RESGAS	-	-	-	-	1	
-	TOP-IN	RHEWOKESTOV-E	RESOKE	-	-	-	-	1	
-	TOP-IN	RHEWOLPSTOV-E	RESOLP	-	-	-	-	1	
-	TOP-IN	RLEHBIWOPEN-E	RESBIW	-	-	-	-	1	
-	TOP-IN	RLEHCOABNM-E	RESCOA	-	-	-	-	1	
-	TOP-IN	RLEHELCHEATBAR-E	RESELC	-	-	-	-	1	
-	TOP-IN	RLEHOKEHEAT-E	RESOKE	-	-	-	-	1	
-	TOP-IN	RLEHOLPHET-E	RESOLP	-	-	-	-	1	
 	TOP-IN	RLEKBIWBNM-E	RESBIW	-	-	-	-	1	
 	TOP-IN	RLEKCOABNM-E	RESCOA	-	-	-	-	1	
 	TOP-IN	RLEKELCHOT-E	RESELC	-	-	-	-	1	
@@ -628,14 +548,6 @@ TID DATA	REGION1
 	TOP-OUT	RHEWELCCHP-N	RHEWG	-	-	-	-	1	
 	TOP-OUT	RHEWELCGEY-E	RHEWG	-	-	-	-	1	
 	TOP-OUT	RHEWELCSWH-E	RHEWG	-	-	-	-	1	
-	TOP-OUT	RHEWGASHEAT-N	RHEW	-	-	-	-	1	
-	TOP-OUT	RHEWOKESTOV-E	RHEW	-	-	-	-	1	
-	TOP-OUT	RHEWOLPSTOV-E	RHEW	-	-	-	-	1	
-	TOP-OUT	RLEHBIWOPEN-E	RLEH	-	-	-	-	1	
-	TOP-OUT	RLEHCOABNM-E	RLEH	-	-	-	-	1	
-	TOP-OUT	RLEHELCHEATBAR-E	RLEH	-	-	-	-	1	
-	TOP-OUT	RLEHOKEHEAT-E	RLEH	-	-	-	-	1	
-	TOP-OUT	RLEHOLPHET-E	RLEH	-	-	-	-	1	
 	TOP-OUT	RLEKBIWBNM-E	RLEK	-	-	-	-	1	
 	TOP-OUT	RLEKCOABNM-E	RLEK	-	-	-	-	1	
 	TOP-OUT	RLEKELCHOT-E	RLEK	-	-	-	-	1	

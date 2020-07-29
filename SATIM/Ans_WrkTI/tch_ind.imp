@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/15	10:55:12 AM
-Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+Creation Date:	2020/07/27	9:25:17 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -189,26 +189,26 @@ ITEMS	REGION1
 	E	IMIP	Industry-Mining-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	IMIR	Industry-Mining-Transport - Oil Diesel - Existing	PJ	COM,DEM,ANNUAL,RES	
 	E	IMIS	Industry-Mining-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
-	E	INDBIB	Industry - Biomass Bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIW	Industry - Biomass wood	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIB	Industry Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIW	Industry Biomass Wood	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCH4	Industry - Methane	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCKC	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCMOX	Industry - Carbon Monoxide	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2	Industry - Carbon Dioxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2SP	Industry Process Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDCOA	Industry - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCOK	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDGAS	Industry - South Africa gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOA	Industry Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOK	Industry Coal Coking	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDGAS	Industry Gas South Africa	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDN2O	Industry - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMV	Industry - NMVOCs	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOX	Industry - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry - Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOGS	Industry Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOHF	Industry Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOLP	Industry Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDPM10	Industry - PM10	KT	COM,ENV,ANNUAL,GHG	
 	E	INDSOX	Industry - Sulphur Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDWAS	Industry - Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDWAS	Industry Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INFA	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFC	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFE	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -435,44 +435,44 @@ ITEMS	REGION1
 	T	PEXHBI	Exports of green iron - hot bricketted iron	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXHGN	Exports of Hydrogen	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOXY	Exports of oxygen	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIFAGAS	Industrial FA-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIFBGAS	Industrial FB-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISBIO	Industry - Iron and Steel - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCKC	Industry - Iron and Steel - Coking Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCOA	Industry - Iron and Steel - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIISELCHY	Industry electricity to HDRI facility	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XIISGAS	Industrial IS-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOIL	Industry - Iron and Steel - Oil	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOLP	Industry - Iron and Steel - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISSSC	Industry - Iron and Steel - Steel Scrap	mt,mt/a	PRC,PRE,ANNUAL	
 	T	XIISWAS	Industry - Iron and Steel - Waste (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIMIGAS	Industrial MI-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDELP	Electricity supply	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINFGAS	Industrial NF-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMBIO	Industry - Non-metallic minerals - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCOA	Industry - Non-metallic minerals - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINMGAS	Industrial NM-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMOIL	Industry - Non-metallic minerals - Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPBIB	Industry - Pulp and Paper - Biomass Bagasse (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPCOA	Industry - Pulp and paper - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIPPGAS	Industrial PP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPODS	Industry - Pulp and paper - Oil diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOGS	Industry - Pulp and paper - Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOHF	Industry - Pulp and paper - Oil Heavy fuel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOLP	Industry - Pulp and paper - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPRECP	Generic supply - Industry - Recovered Paper	mt,mt/a	PRC,PRE,ANNUAL	
-	W	ANNUAL	Annual		ALL_TS,ANNUAL	
+	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
 
 TS DATA	REGION1
 	ACT_BND	IISBFBOF-E	-	-	-	ANNUAL	FX	-1	3.3	3.37608069164265	3.09077809798271	3.16418918918919	3.16418918918919	3.03308108108108	3.2032972972973	3.03009478105557	3.03009478105557	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -488,7 +488,7 @@ TS DATA	REGION1
 	ACT_COST	IISBFBOF-E-T1	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T2	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-N	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	IISCOREAF-E	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	IISCOREAF-E	-	-	-	-	-	0	4030.3649	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISCOREAF-E-T1	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISCOREAF-E-T2	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISCOV	-	-	-	-	-	0	61.3786081928313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -500,7 +500,7 @@ TS DATA	REGION1
 	ACT_COST	IISHDRIEAF-N	-	-	-	-	-	0	619	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISHHDRI-N	-	-	-	-	-	0	619	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISHPEMHGN	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	IISOTHEAF-E	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	IISOTHEAF-E	-	-	-	-	-	0	4030.3649	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISOTHEAF-E-T1	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISOTHEAF-E-T2	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISSCREAF-E	-	-	-	-	-	0	4352.47986417005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -719,16 +719,16 @@ TS DATA	REGION1
 	FLO_EMIS	IALPOT	CO2SP	ACTGRP	-	ANNUAL	-	0	1640.76884812174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IFAEAF	CH4S	ACTGRP	-	ANNUAL	-	0	3.59373851693981E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IFAEAF	CO2SP	ACTGRP	-	ANNUAL	-	0	2847.59431665074	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISBFBOF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2.81	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISBFBOF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	2.81	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISCOREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2.12671428571429	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISBFBOF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2810	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISBFBOF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	2810	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISCOREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2126.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISCOV	CO2SP	ACTGRP	-	ANNUAL	-	0	17.33	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISDRIEAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	1.605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISDRIEAF-NC	CO2SP	ACTGRP	-	ANNUAL	-	0	1.605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISDRIEAF-NG	CO2SP	ACTGRP	-	ANNUAL	-	0	1.605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISOTHEAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	1.54	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISSCREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	0.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISSCREAF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	0.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISDRIEAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	1605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISDRIEAF-NC	CO2SP	ACTGRP	-	ANNUAL	-	0	1605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISDRIEAF-NG	CO2SP	ACTGRP	-	ANNUAL	-	0	1605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISOTHEAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	1540	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISSCREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISSCREAF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMCEMKLD-E	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMCEMKLD-E-T1	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMCEMKLD-E-T2	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
