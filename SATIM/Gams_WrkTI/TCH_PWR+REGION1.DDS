@@ -219,7 +219,7 @@ SET PRC /
   'MINCSTUTUVRS'             'Coal Supply for Tutuka-various                    '
   'MINCSWATEVRS'             'Coal Supply for New Plants in Waterberg           '
   'PEXELC'                   'Exports of Electricity                            '
-  'XAGRELC'                  'Agriculture Electricity                           '
+  'XAGRELC'                  'Agriculatural Electricity                         '
   'XCOMELC'                  'Commercial Electricity                            '
   'XICPELC'                  'Industrial CP-Electricity                         '
   'XIFAELC'                  'Industrial FA-Electricity                         '

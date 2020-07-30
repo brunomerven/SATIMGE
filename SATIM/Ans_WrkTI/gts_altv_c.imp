@@ -1,0 +1,57 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/07/29	15:42:19
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	GTS_ALTV_C	UC: NDC PAMS-GTS Alternate Vehicles - Central scenario	miniumum of 10% of vehicle population to comprise EVs and Hybrids by 2030 reaching 40% in 2050.
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	GTS_ALTV	NDC PAMS GTS alt vehicles	uconstraint	UC_N,UCRT,UCRULE	
+	E	TAJET	Transport Other -  Aviation Jet Fuel	PJ	COM,DEM,ANNUAL,RES	
+	E	TAOAG	Transport Other - Aviation Gasoline	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV1	Transport Freight - HCV1	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV2	Transport Freight - HCV2	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV3	Transport Freight - HCV3	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV4	Transport Freight - HCV4	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV5	Transport Freight - HCV5	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV6	Transport Freight - HCV6	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV7	Transport Freight - HCV7	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV8	Transport Freight - HCV8	PJ	COM,DEM,ANNUAL,RES	
+	E	TFHCV9	Transport Freight - HCV9	PJ	COM,DEM,ANNUAL,RES	
+	E	TFLCV	Transport Freight - LCV	PJ	COM,DEM,ANNUAL,RES	
+	E	TFPIP	Transport Other - Pipeline	PJ	COM,DEM,ANNUAL,RES	
+	E	TFRCO	Transport Freight - Rail Corridor	PJ	COM,DEM,ANNUAL,RES	
+	E	TFREX	Transport Freight - Rail Export (bulk mining)	PJ	COM,DEM,ANNUAL,RES	
+	E	TFROT	Transport Freight - Rail Other	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPRCAR	Transport Passenger Car Priv.Veh.	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPRMOT	Transport Passenger Moto Priv.Veh.	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPRSUV	Transport Passenger SUV Priv.Veh.	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPUBRT	Transport Passenger BRT	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPUBUS	Transport Passenger Bus	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPUGAT	Transport Passenger Gautrain	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPUMBT	Transport Passenger Minibus	PJ	COM,DEM,ANNUAL,RES	
+	E	TPPUMER	Transport Passenger Metro Rail	PJ	COM,DEM,ANNUAL,RES	
+	E	TSHFO	Transport Other - HFO	PJ	COM,DEM,ANNUAL,RES	
+
+TS DATA	REGION1
+	UC__RHSRT	GTS_ALTV	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UCRULE_ACT	GTS_ALTV	LHS	S_TRAELC_H	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_ACT	GTS_ALTV	LHS	S_TRAPARC	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.1	null	null	null	null	null	null	null	null	null	null	null	-0.4	-0.4	-0.4	
+
+TID DATA	REGION1
+	UC_R_EACH	GTS_ALTV	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
