@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/27	9:25:17 AM
+Creation Date:	2020/07/30	11:20:21 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -189,26 +189,26 @@ ITEMS	REGION1
 	E	IMIP	Industry-Mining-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	IMIR	Industry-Mining-Transport - Oil Diesel - Existing	PJ	COM,DEM,ANNUAL,RES	
 	E	IMIS	Industry-Mining-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
-	E	INDBIB	Industry Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIW	Industry Biomass Wood	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIB	Industry - Biomass Bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIW	Industry - Biomass wood	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCH4	Industry - Methane	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCKC	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry - Carbon Monoxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2	Industry - Carbon Dioxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2SP	Industry Process Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDCOA	Industry Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCOK	Industry Coal Coking	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDGAS	Industry Gas South Africa	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOA	Industry - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOK	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDGAS	Industry - South Africa gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDN2O	Industry - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMV	Industry - NMVOCs	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOX	Industry - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry - Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOGS	Industry Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOHF	Industry Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOLP	Industry Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDPM10	Industry - PM10	KT	COM,ENV,ANNUAL,GHG	
 	E	INDSOX	Industry - Sulphur Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDWAS	Industry Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDWAS	Industry - Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INFA	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFC	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFE	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -435,44 +435,44 @@ ITEMS	REGION1
 	T	PEXHBI	Exports of green iron - hot bricketted iron	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXHGN	Exports of Hydrogen	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOXY	Exports of oxygen	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIFAGAS	Industrial FA-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIFBGAS	Industrial FB-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISBIO	Industry - Iron and Steel - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCKC	Industry - Iron and Steel - Coking Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCOA	Industry - Iron and Steel - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIISELCHY	Industry electricity to HDRI facility	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XIISGAS	Industrial IS-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOIL	Industry - Iron and Steel - Oil	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOLP	Industry - Iron and Steel - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISSSC	Industry - Iron and Steel - Steel Scrap	mt,mt/a	PRC,PRE,ANNUAL	
 	T	XIISWAS	Industry - Iron and Steel - Waste (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIMIGAS	Industrial MI-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDELP	Electricity supply	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XINFGAS	Industrial NF-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMBIO	Industry - Non-metallic minerals - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCOA	Industry - Non-metallic minerals - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XINMGAS	Industrial NM-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMOIL	Industry - Non-metallic minerals - Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPBIB	Industry - Pulp and Paper - Biomass Bagasse (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPCOA	Industry - Pulp and paper - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIPPGAS	Industrial PP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPODS	Industry - Pulp and paper - Oil diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOGS	Industry - Pulp and paper - Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOHF	Industry - Pulp and paper - Oil Heavy fuel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOLP	Industry - Pulp and paper - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPRECP	Generic supply - Industry - Recovered Paper	mt,mt/a	PRC,PRE,ANNUAL	
-	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
+	W	ANNUAL	Annual		ALL_TS,ANNUAL	
 
 TS DATA	REGION1
 	ACT_BND	IISBFBOF-E	-	-	-	ANNUAL	FX	-1	3.3	3.37608069164265	3.09077809798271	3.16418918918919	3.16418918918919	3.03308108108108	3.2032972972973	3.03009478105557	3.03009478105557	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -482,13 +482,13 @@ TS DATA	REGION1
 	ACT_BND	IISSCREAF-E	-	-	-	ANNUAL	FX	-1	0.86	0.879827089337176	0.805475504322767	1.362	1.32	1.32	1.208	1.208	1.208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPELCSTM-E	-	-	-	ANNUAL	UP	5	7.990887992	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	9.5890655904	null	null	
 	ACT_BND	IPPMCH-E	-	-	-	ANNUAL	FX	-1	null	null	null	null	null	0.31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	PEXHBI	-	-	-	ANNUAL	LO	0	0	null	null	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	1.3	1.6	1.9	2.2	2.5	2.8	3.1	3.4	3.7	4	5.5	7	null	null	
+	ACT_BND	PEXHBI	-	-	-	ANNUAL	LO	0	0	null	null	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	XIPPBIB	-	-	-	ANNUAL	UP	5	5	null	null	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	10	null	null	null	null	null	null	null	null	null	null	null	20	null	null	
 	ACT_COST	IISBFBOF-E	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T1	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T2	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-N	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	IISCOREAF-E	-	-	-	-	-	0	4030.3649	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	IISCOREAF-E	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISCOREAF-E-T1	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISCOREAF-E-T2	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISCOV	-	-	-	-	-	0	61.3786081928313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -500,7 +500,7 @@ TS DATA	REGION1
 	ACT_COST	IISHDRIEAF-N	-	-	-	-	-	0	619	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISHHDRI-N	-	-	-	-	-	0	619	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISHPEMHGN	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	IISOTHEAF-E	-	-	-	-	-	0	4030.3649	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	IISOTHEAF-E	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISOTHEAF-E-T1	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISOTHEAF-E-T2	-	-	-	-	-	0	4030.36492837407	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISSCREAF-E	-	-	-	-	-	0	4352.47986417005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -651,19 +651,18 @@ TS DATA	REGION1
 	ACT_EFF	XIPPOGS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_AGG	-	INDCF46P	-	CO2S	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IALM	-	-	-	-	0	0.72	null	null	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	
-	COM_PROJ	-	ICPA	-	-	-	-	0	0.208678736981107	null	null	null	null	0.2398875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPC	-	-	-	-	0	2.78238315974809	null	null	null	null	3.1985	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPE	-	-	-	-	0	1.69168896112684	null	null	null	null	1.944688	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPF	-	-	-	-	0	1.78072522223878	null	null	null	null	2.04704	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPH	-	-	-	-	0	0.500828968754656	null	null	null	null	0.57573	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPK	-	-	-	-	0	0.556476631949618	null	null	null	null	0.6397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPL	-	-	-	-	0	0.333885979169771	null	null	null	null	0.38382	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPO	-	-	-	-	0	4.45181305559694	null	null	null	null	5.1176	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	8.9558	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	20.990606	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	49.996	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPA	-	-	-	-	0	0.208678736981107	null	null	null	null	0.3034425	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPC	-	-	-	-	0	2.78238315974809	null	null	null	null	4.0459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPE	-	-	-	-	0	1.69168896112684	null	null	null	null	2.4599072	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPF	-	-	-	-	0	1.78072522223878	null	null	null	null	2.589376	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPH	-	-	-	-	0	0.500828968754656	null	null	null	null	0.728262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPK	-	-	-	-	0	0.556476631949618	null	null	null	null	0.80918	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPL	-	-	-	-	0	0.333885979169771	null	null	null	null	0.485508	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPO	-	-	-	-	0	4.45181305559694	null	null	null	null	6.47344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	11.32852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	15.9023684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	28.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFAM	-	-	-	-	0	4.0821	4.1754	4.8629	4.4806	4.32606122354372	4.37275410408246	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBA	-	-	-	-	0	3.19316332629067E-02	null	null	null	null	0.029904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBC	-	-	-	-	0	7.34427565046855	null	null	null	null	6.87792	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -689,12 +688,12 @@ TS DATA	REGION1
 	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	0.9080571912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFA	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFC	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	36.990036	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	11.427588	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFF	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFH	-	-	-	-	0	0.601106293893148	null	null	null	null	0.486711	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFK	-	-	-	-	0	0.667895882103497	null	null	null	null	0.54079	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFL	-	-	-	-	0	0.200368764631049	null	null	null	null	0.162237	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFO	-	-	-	-	0	3.74021693977959	null	null	null	null	3.028424	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFH	-	-	-	-	0	0.601106293893148	null	null	null	null	0.150363	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFK	-	-	-	-	0	0.667895882103497	null	null	null	null	0.16707	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFL	-	-	-	-	0	0.200368764631049	null	null	null	null	0.050121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFO	-	-	-	-	0	3.74021693977959	null	null	null	null	0.935592	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFP	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFS	-	-	-	-	0	2.487856608	null	null	null	null	0.65368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INMBRI	-	-	-	-	0	3.296	4.559	5.8221	7.0851	8.3482	9.611178437	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -721,7 +720,7 @@ TS DATA	REGION1
 	FLO_EMIS	IFAEAF	CO2SP	ACTGRP	-	ANNUAL	-	0	2847.59431665074	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISBFBOF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2810	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISBFBOF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	2810	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IISCOREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2126.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IISCOREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2126.71428571429	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISCOV	CO2SP	ACTGRP	-	ANNUAL	-	0	17.33	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISDRIEAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	1605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISDRIEAF-NC	CO2SP	ACTGRP	-	ANNUAL	-	0	1605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -792,10 +791,10 @@ TS DATA	REGION1
 	FLO_FUNC	IPPPAP-N	-	IPPPULP	IPPODS	ANNUAL	-	0	0.05	null	null	null	null	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IPPREC-E	-	IPPPULP	CG-IPPREC-E-I	ANNUAL	-	0	3.85	null	null	null	null	3.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IPPREC-N	-	IPPPULP	CG-IPPREC-N-I	ANNUAL	-	0	2.24	null	null	null	null	3.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.97853510279789	null	null	null	null	null	null	null	null	null	null	null	null	0.395367718302178	null	null	null	null	null	null	null	null	null	0.197683859151089	null	null	null	null	
-	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.988419295755444	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
-	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.14648972021103E-02	null	null	null	null	null	null	null	null	null	null	null	null	4.63228169782235E-03	null	null	null	null	null	null	null	null	null	2.31614084891117E-03	null	null	null	null	
-	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.15807042445559E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.067749178855967	null	null	null	null	null	null	null	null	null	0.257749178855967	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.970857347261556	null	null	null	null	null	null	null	null	null	null	null	null	0.392265594853154	null	null	null	null	null	null	null	null	null	0.196132797426577	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.980663987132885	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.91426527384437E-02	null	null	null	null	null	null	null	null	null	null	null	null	7.73440514684593E-03	null	null	null	null	null	null	null	null	null	3.86720257342296E-03	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.93360128671148E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.067749178855967	null	null	null	null	null	null	null	null	null	0.257749178855967	null	null	null	null	
 	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.12	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	
 	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -1288,6 +1287,7 @@ TS DATA	REGION1
 	NCAP_BND	IPPSTMCOA-E	-	-	-	-	FX	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IPPSTMCOAOIL	-	-	-	-	FX	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IPPSTMGAS-E	-	-	-	-	FX	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IPPSTMOIL-N	-	-	-	-	UP	3	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_CHPR	IPPCHPGAS01-N	-	-	-	-	FX	0	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_CHPR	IPPCHPGAS02-N	-	-	-	-	FX	0	0.78	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_CHPR	IPPCHPSTM01-N	-	-	-	-	FX	0	3.44	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1631,22 +1631,22 @@ TS DATA	REGION1
 	PRC_ACTFLO	IPPREC-E-T2	-	IPPREC	-	-	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPPREC-N	-	IPPREC	-	-	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IALPOT	-	-	-	-	-	0	948.235294117647	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPAELC-E	-	-	-	-	-	0	1.80128387553825	null	null	null	null	2.07067328441951	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPCELC-E	-	-	-	-	-	0	21.4756341443971	null	null	null	null	24.6874035196048	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPEELC-E	-	-	-	-	-	0	12.7838657985856	null	null	null	null	14.6957454847729	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPFELC-E	-	-	-	-	-	0	16.2816606220973	null	null	null	null	18.7166499039956	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPHELC-E	-	-	-	-	-	0	3.8054020876427	null	null	null	null	4.37451561431502	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPKELC-E	-	-	-	-	-	0	4.86728445683213	null	null	null	null	5.59520685734278	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPLELC-E	-	-	-	-	-	0	2.68073849192911	null	null	null	null	3.08165395423525	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPOELC-E	-	-	-	-	-	0	34.0300646353535	null	null	null	null	39.1194007032564	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPPELC-E	-	-	-	-	-	0	64.3007002913061	null	null	null	null	73.9171343677781	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPSCLE-E	-	-	-	-	-	0	175.515239515136	null	null	null	null	134.488364555649	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPSELC-E	-	-	-	-	-	0	1.37072094471287	null	null	null	null	1.57571789719323	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPAELC-E	-	-	-	-	-	0	1.80128387553825	null	null	null	null	2.61927060854553	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPCELC-E	-	-	-	-	-	0	21.4756341443971	null	null	null	null	31.2280024698981	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPEELC-E	-	-	-	-	-	0	12.7838657985856	null	null	null	null	18.5891876369682	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPFELC-E	-	-	-	-	-	0	16.2816606220973	null	null	null	null	23.6753771600988	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPHELC-E	-	-	-	-	-	0	3.8054020876427	null	null	null	null	5.5334852974698	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPKELC-E	-	-	-	-	-	0	4.86728445683213	null	null	null	null	7.07758243680574	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPLELC-E	-	-	-	-	-	0	2.68073849192911	null	null	null	null	3.89809714973906	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPOELC-E	-	-	-	-	-	0	34.0300646353535	null	null	null	null	49.4835652040972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPPELC-E	-	-	-	-	-	0	64.3007002913061	null	null	null	null	93.5004952129416	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSCLE-E	-	-	-	-	-	0	175.515239515136	null	null	null	null	101.088221948532	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSELC-E	-	-	-	-	-	0	1.37072094471287	null	null	null	null	1.99318337978868	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSGAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPTGAS-E	-	-	-	-	-	0	39.0040000305176	null	null	null	null	49.996	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPTGAS-E	-	-	-	-	-	0	39.0040000305176	null	null	null	null	28.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFAEAF	-	-	-	-	-	0	4.456	null	null	null	null	5.090963	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBAELC-E	-	-	-	-	-	0	0.27562911750459	null	null	null	null	0.258126888217523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBCELC-E	-	-	-	-	-	0	56.6862893676177	null	null	null	null	53.0867551713492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1687,12 +1687,12 @@ TS DATA	REGION1
 	PRC_RESID	IMISWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFAELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFCELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFEELC-E	-	-	-	-	-	0	345.228431465875	null	null	null	null	279.528723645432	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFEELC-E	-	-	-	-	-	0	345.228431465875	null	null	null	null	86.3567445023804	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFFELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFHELC-E	-	-	-	-	-	0	4.5673299437212	null	null	null	null	3.6981308411215	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFKELC-E	-	-	-	-	-	0	5.84182526111692	null	null	null	null	4.73007959415726	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFLELC-E	-	-	-	-	-	0	1.60874158676073	null	null	null	null	1.30258530710558	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFOELC-E	-	-	-	-	-	0	28.5905590871395	null	null	null	null	23.1495489986241	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFHELC-E	-	-	-	-	-	0	4.5673299437212	null	null	null	null	1.14248917255528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFKELC-E	-	-	-	-	-	0	5.84182526111692	null	null	null	null	1.46129624770401	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFLELC-E	-	-	-	-	-	0	1.60874158676073	null	null	null	null	0.402416700120434	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFOELC-E	-	-	-	-	-	0	28.5905590871395	null	null	null	null	7.15175049686592	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFPELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSCOA-E	-	-	-	-	-	0	4.91649062034096	null	null	null	null	1.87100538017761	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2033,7 +2033,7 @@ TID DATA	REGION1
 	NCAP_START	IISDRIEAF-NC	-	-	-	-	-	2017	
 	NCAP_START	IISDRIEAF-NG	-	-	-	-	-	2017	
 	NCAP_START	IISHDRIEAF-N	-	-	-	-	-	2012	
-	NCAP_START	IISHHDRI-N	-	-	-	-	-	2029	
+	NCAP_START	IISHHDRI-N	-	-	-	-	-	2040	
 	NCAP_START	IISHHGNSTOR-N	-	-	-	-	-	2012	
 	NCAP_START	IISHPEMHGN	-	-	-	-	-	2012	
 	NCAP_START	IISSCREAF-N	-	-	-	-	-	2017	
@@ -2042,11 +2042,13 @@ TID DATA	REGION1
 	NCAP_START	INMCEMKSP-N	-	-	-	-	-	2018	
 	NCAP_START	INMGLAADV	-	-	-	-	-	2018	
 	NCAP_START	INMLIMADV	-	-	-	-	-	2018	
+	NCAP_START	IPPCHPGAS01-N	-	-	-	-	-	2035	
+	NCAP_START	IPPCHPGAS02-N	-	-	-	-	-	2035	
 	NCAP_START	IPPSTMBIO-N	-	-	-	-	-	2018	
 	NCAP_START	IPPSTMBLQ-N	-	-	-	-	-	2018	
 	NCAP_START	IPPSTMCOA-N	-	-	-	-	-	2018	
 	NCAP_START	IPPSTMGAS-N	-	-	-	-	-	2018	
-	NCAP_START	IPPSTMOIL-N	-	-	-	-	-	2018	
+	NCAP_START	IPPSTMOIL-N	-	-	-	-	-	2060	
 	NCAP_START	PEXHBI	-	-	-	-	-	2012	
 	NCAP_START	PEXHGN	-	-	-	-	-	2012	
 	NCAP_START	PEXOXY	-	-	-	-	-	2012	
@@ -2722,7 +2724,7 @@ TID DATA	REGION1
 	TOP-IN	IPPSTMCOAOIL	IPPOHF	-	-	-	-	1	
 	TOP-IN	IPPSTMGAS-E	IPPGAS	-	-	-	-	1	
 	TOP-IN	IPPSTMGAS-N	IPPGAS	-	-	-	-	1	
-	TOP-IN	IPPSTMOIL-N	IPPOGS	-	-	-	-	1	
+	TOP-IN	IPPSTMOIL-N	IPPOGS	-	-	-	-	0	
 	TOP-IN	IPPSTMOIL-N	IPPOHF	-	-	-	-	1	
 	TOP-IN	IPPSTMOIL-N	IPPOLP	-	-	-	-	1	
 	TOP-IN	PEXHBI	IISHBI	-	-	-	-	1	
