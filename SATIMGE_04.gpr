@@ -4510,9 +4510,6 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[RP:GHGENERGYREPORT]
-1=
-
 [RP:UNTITLED_1]
 1=
 
@@ -4537,30 +4534,32 @@ PlaneRownr=-1
 [RP:GHGWASTEREPORT]
 1=
 
+[RP:GHGAFOLUREPORT]
+1=
+
+[RP:GHGENERGYREPORT]
+1=
+
 [RP:SATIMGE]
 1=r=cge\model, gdx = test
 2=
 
-[RP:GHGAFOLUREPORT]
-1=
-
 [MRUFILES]
-1=C:\Models\SATIMGE\Waste\Includes\GHGWasteReport.inc
-2=C:\Models\SATIMGE\Untitled_1.gms
-3=C:\Models\SATIMGE\AFOLU\GHGAfoluReport.inc
-4=C:\Models\SATIMGE_04\SATIMGE.gms
-5=C:\Models\SATIMGE_04\SATIM\Gams_WrkTI\gamssave\RUNZERO.gdx
-6=C:\SATIMGE_03\CGE\includes\2energychecksinit.inc
-7=C:\SATIMGE_03\CalibRefSATIM.gdx
-8=C:\SATIMGE_03\CalibGHG.gdx
-9=C:\SATIMGE_03\BatchRun_LinkedModel_v02.gms
+1=C:\Models\SATIMGE\Untitled_1.gms
+2=C:\Models\SATIMGE\AFOLU\GHGAfoluReport.inc
+3=C:\Models\SATIMGE_04\SATIMGE.gms
+4=C:\Models\SATIMGE_04\SATIM\Gams_WrkTI\gamssave\RUNZERO.gdx
+5=C:\SATIMGE_03\CGE\includes\2energychecksinit.inc
+6=C:\SATIMGE_03\CalibRefSATIM.gdx
+7=C:\SATIMGE_03\CalibGHG.gdx
+8=C:\SATIMGE_03\BatchRun_LinkedModel_v02.gms
 
 [OPENWINDOW_1]
 FILE0=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
 FILE1=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
 MAXIM=0
 TOP=164
-LEFT=1178
+LEFT=1090
 HEIGHT=906
 WIDTH=944
 
@@ -4569,7 +4568,7 @@ FILE0=C:\Models\SATIMGE\test.gdx
 FILE1=C:\Models\SATIMGE\test.gdx
 MAXIM=0
 TOP=67
-LEFT=973
+LEFT=885
 HEIGHT=918
 WIDTH=950
 
@@ -4578,7 +4577,7 @@ FILE0=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
 FILE1=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
 MAXIM=0
 TOP=5
-LEFT=946
+LEFT=858
 HEIGHT=918
 WIDTH=958
 
@@ -4592,9 +4591,9 @@ FILE5=C:\Models\SATIMGE\SATIMGE.lst
 FILE6=C:\Models\SATIMGE\test.gdx
 FILE7=C:\Models\SATIMGE\Waste\Includes\GHGWasteReport.inc
 FILE8=C:\SATIMGE_03\CO2_Calcs_NDC.gms
-FILE9=C:\Models\SATIMGE\SATIMGE.gms
+FILE9=C:\Models\SATIMGE\SATIMGE.lst
 MAXIM=0
-TOP=5
-LEFT=18
+TOP=3
+LEFT=10
 HEIGHT=909
 WIDTH=926

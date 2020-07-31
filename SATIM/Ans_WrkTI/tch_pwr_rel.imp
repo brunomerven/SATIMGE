@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/30	12:15:14 PM
+Creation Date:	2020/07/30	2:16:54 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_REL	Reliability constraint	
@@ -28,8 +28,8 @@ TS DATA	REGION1
 	UC__RHSRT	UCACT_GAS	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_ERMELC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_RMELCC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	null	15	null	null	
-	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	null	15	null	null	
+	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	22.5	15	null	null	
+	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	22.5	15	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	EPTSTO-E	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	EPTSTO-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ERBIG-N	-	-	-	3	null	null	null	null	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

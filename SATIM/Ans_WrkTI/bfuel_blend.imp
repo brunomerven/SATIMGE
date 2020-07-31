@@ -1,0 +1,37 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/07/30	15:20:18
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	BFUEL_BLEND	UC: biofuels blending ratios  - NDC GTS high scenarion	constraints relaxed  so that no minimum blend ratios are speficied. for bioethanol and biodiesel
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	UCACT-BID-LO	Biodiesel min blend in diesel consumption	uconstraint	UC_N,UCRT	
+	C	UCACT-BIE-LO	Bioethanol min blend in gasoline consumption	uconstraint	UC_N,UCRT	
+
+TS DATA	REGION1
+	UC__RHSRT	UCACT-BID-LO	-	-	-	-	LO	5	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCACT-BIE-LO	-	-	-	-	LO	5	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCACT-BID-LO	LHS	XTRABID	-	ANNUAL	-	5	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCACT-BID-LO	LHS	XTRAODS	-	ANNUAL	-	5	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCACT-BIE-LO	LHS	XTRABIE	-	ANNUAL	-	5	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCACT-BIE-LO	LHS	XTRAOGS	-	ANNUAL	-	5	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	UC_R_EACH	UCACT-BID-LO	-	-	-	-	-	1	
+	UC_R_EACH	UCACT-BIE-LO	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

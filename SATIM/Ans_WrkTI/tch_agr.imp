@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/08	2:06:34 PM
-Created By:	Export from database C:\Models\SATIMGE_04\SATIM\SATIM_NDC.mdb
+Creation Date:	2020/07/30	5:18:01 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_AGR	Agriculture shortened ts	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -97,10 +97,10 @@ TS DATA	REGION1
 	COM_FR	-	AT	-	-	S2D1B4	-	0	0.03664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_FR	-	AT	-	-	S2D1B5	-	0	0.02443	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	AH	-	-	-	-	0	2.50439701663798	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	AI	-	-	-	-	0	4.88519193152177	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AI	-	-	-	-	0	5.02030809152782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	AO	-	-	-	-	0	8.43105859215693	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	AP	-	-	-	-	0	3.83496832013908	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	AT	-	-	-	-	0	9.52271406411337	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	AT	-	-	-	-	0	14.5703903509613	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_MARK	AHCOA-E	AH	-	-	-	LO	3	0.208854665025186	null	null	0.232029836025174	null	0.255205007025163	null	null	null	null	null	null	null	null	null	null	null	null	5.22136662562965E-02	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
 	FLO_MARK	AHCOA-E	AH	-	-	-	UP	3	0.208854665025186	null	null	0.708854665025186	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.708854665025186	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
 	FLO_MARK	AHELC-E	AH	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
@@ -111,12 +111,12 @@ TS DATA	REGION1
 	FLO_MARK	AHOKE-E	AH	-	-	-	UP	3	0.791145334974814	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
 	FLO_MARK	AHOLP-E	AH	-	-	-	LO	3	0	null	null	2.87393025929237E-03	null	5.74786051858475E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
 	FLO_MARK	AHOLP-E	AH	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
-	FLO_MARK	AIELC-E	AI	-	-	-	LO	3	0.947821100917431	null	null	0.884735036827973	null	0.821648972738515	null	null	null	null	null	null	null	null	null	null	null	null	0.236955275229358	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
-	FLO_MARK	AIELC-E	AI	-	-	-	UP	3	0.947821100917431	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
-	FLO_MARK	AIODS-E	AI	-	-	-	LO	3	5.21788990825688E-02	null	null	0.115264963172027	null	0.178351027261485	null	null	null	null	null	null	null	null	null	null	null	null	1.30447247706422E-02	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
-	FLO_MARK	AIODS-E	AI	-	-	-	UP	3	5.21788990825688E-02	null	null	0.552178899082569	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.552178899082569	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AIELC-E	AI	-	-	-	LO	3	0.922311521586078	null	null	0.871980247162297	null	0.821648972738515	null	null	null	null	null	null	null	null	null	null	null	null	0.23057788039652	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AIELC-E	AI	-	-	-	UP	3	0.922311521586078	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AIODS-E	AI	-	-	-	LO	3	7.76884784139217E-02	null	null	0.128019752837703	null	0.178351027261485	null	null	null	null	null	null	null	null	null	null	null	null	1.94221196034804E-02	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
+	FLO_MARK	AIODS-E	AI	-	-	-	UP	3	7.76884784139217E-02	null	null	0.577688478413922	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.577688478413922	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
 	FLO_MARK	AIOGS-E	AI	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
-	FLO_MARK	AIOGS-E	AI	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	AIOGS-E	AI	-	-	-	UP	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	1	1
 	FLO_MARK	AOELC-E	AO	-	-	-	LO	3	1	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
 	FLO_MARK	AOELC-E	AO	-	-	-	UP	3	1	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
 	FLO_MARK	APELC-E	AP	-	-	-	LO	3	1	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
@@ -126,7 +126,7 @@ TS DATA	REGION1
 	FLO_MARK	ATODS-E	AT	-	-	-	LO	3	1	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
 	FLO_MARK	ATODS-E	AT	-	-	-	UP	3	1	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
 	FLO_MARK	ATOGS-E	AT	-	-	-	LO	3	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	0	2
-	FLO_MARK	ATOGS-E	AT	-	-	-	UP	3	0	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	1	null	1	1
+	FLO_MARK	ATOGS-E	AT	-	-	-	UP	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	1	1
 	NCAP_AFA	AHCOA-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
 	NCAP_AFA	AHELC-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
 	NCAP_AFA	AHOHF-E	-	-	-	-	UP	3	0.5513	null	null	null	null	0.5513	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
@@ -172,12 +172,12 @@ TS DATA	REGION1
 	PRC_RESID	AHOKE-E	-	-	-	-	-	0	3.62988470307338	null	null	null	null	4.05502267368039	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	AHOLP-E	-	-	-	-	-	0	0	null	null	null	null	6.18311264284419E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	AIELC-E	-	-	-	-	-	0	5.78285009852257	null	null	null	null	7.00824166876821	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
-	PRC_RESID	AIODS-E	-	-	-	-	-	0	0.318354119156415	null	null	null	null	0.560457657117778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	AIODS-E	-	-	-	-	-	0	0.487103125717688	null	null	null	null	0.560457657117778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	AIOGS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	AOELC-E	-	-	-	-	-	0	8.5153691780785	null	null	null	null	10.3197842036405	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	APELC-E	-	-	-	-	-	0	5.18100321474113	null	null	null	null	6.27886284391972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	ATELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
-	PRC_RESID	ATODS-E	-	-	-	-	-	0	12.3846783476107	null	null	null	null	21.8030406807737	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	PRC_RESID	ATODS-E	-	-	-	-	-	0	18.9493873995247	null	null	null	null	21.8030406807737	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 	PRC_RESID	ATOGS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
 
 TID DATA	REGION1

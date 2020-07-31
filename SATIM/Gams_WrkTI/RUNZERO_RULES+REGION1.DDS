@@ -1,4 +1,4 @@
-* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_COM','TCH_IND','TCH_PWR','TCH_RES','TCH_TRA','DMD_L1','TCH_COM_AF','TCH_RES_AF','SUP_BIOFUELS','TCH_PWR_REL' for region REGION1
+* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_COM','TCH_IND','TCH_PWR','TCH_RES','TCH_TRA','TCH_COM_AF','TCH_RES_AF','SUP_BIOFUELS','TCH_PWR_REL','DMD_ALL' for region REGION1
 SET UC_N /
   'RHIEW-LO'                 'HIgh income water heating HP and SWH LO           '
   'RHIEW-UP'                 'HIgh income water heating HP and SWH UB           '
