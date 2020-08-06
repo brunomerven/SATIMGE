@@ -212,7 +212,6 @@ betaca(A,C)=1;
 
 * Energy aspects
 *Initialize values of linking variables
- EAFXCAP(XC,TC,TT) = EPS;
  PAFXCAP(XC,TC,TT) = EPS;
 * EFLOW('IMP',XC,TC,TT) = QM0('CELEC','REST');
 * PFLOW('IMP',XC,TC,TT) = QM0('CPETR','REST');
@@ -223,26 +222,21 @@ betaca(A,C)=1;
 * PFLOW('IMP',XC,TC,TT) = QM0('CPETR','REST');
 * AFLOW_INFuels('APETR','CCOIL',TC,TT) = QINT0('CCOIL','APETR');
  EPRICE(TC,TT)=PQ0('CELEC');
- EINVCOST(X,TC,TT) = 0;
- INVCOST(RUN,TC,TT,PRC) = 0;
- BPINV(X,TC,TCP,PRC) = 0;
+ EINVCOST(RUN,TC) = 0;
+ INVCOST(RUN,TC,PRC) = 0;
+ BPINV(RUN,TC,TCP,PRC) = 0;
 
- ECAP(X,TC,TT) = 0;
- PCAP(X,TC,TT) = 0;
  HCAP(X,TC,TT) = 0;
 
  ICAGR(C,A,TC) = 1;
- ICAFSGR(C,FS,TC,TT) = 1;
+ ICAFSGR(C,FS,TC) = 1;
  IFAGR(F,A,TC) = 1;
- IFAFSGR(F,FS,TC,TT) = 1;
+ IFAFSGR(F,FS,TC) = 1;
 
- gammamgr(C,H,TC,TT) = 1;
+ gammamgr(C,H,TC) = 1;
 
  deltaq(cm,rw) = deltaq0(cm,rw);
  deltat(cm,rw) = deltat0(cm,rw);
-
-
-
 
 
 * budget share aspects

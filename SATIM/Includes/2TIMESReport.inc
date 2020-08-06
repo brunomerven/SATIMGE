@@ -6,7 +6,7 @@ loop(MRUNCASE(RUN,SATIMCASES),
 
  put_utilities SATIM_Scen 'gdxin' / "%GDXfolder%",SATIMCASES.TL:50;
  execute_load MILESTONYR ELE RTP B E V
- execute_load YEARVALT COM_PROJ REG_OBJ PAR_NCAPL PRC_RESID PRC_CAPACT PAR_CAPL VARACT F_IN F_OUT NCAP_ILED OB_ICOST PAR_COMBALEM CST_FIXC CST_ACTC CST_INVC VAR_CAP UC_CAP;
+ execute_load COM_PROJ REG_OBJ PAR_NCAPL PRC_RESID PRC_CAPACT PAR_CAPL VARACT F_IN F_OUT NCAP_ILED OB_ICOST PAR_COMBALEM CST_FIXC CST_ACTC CST_INVC VAR_CAP UC_CAP;
 * VAR_RCAP;
 );
 
@@ -109,7 +109,7 @@ $BATINCLUDE SATIM\Includes\interpolate.inc COM_PROJ 'REG' 'COM' ",'0','0','0','0
  COAL_FLOW(RUN,TC,'ccoal-hgh') = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC));
 
 
- EIntensity_FS(FS,C,T)$GVA_FS(FS,T) = FLOW_IN_FSFuels(FS,C,T)/GVA_FS(FS,T);
+ EIntensity_FS(FS,C,TC)$GVA_FS(FS,TC) = FLOW_IN_FSFuels(FS,C,TC)/GVA_FS(FS,TC);
 
 *bm calculating coal mining capacity based on consumption+exports)
  COALMINCAP(TC) = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC))+sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC));
@@ -165,14 +165,13 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 
 * EFLOW('NAT',XC,TC,TT) = SUM(SUPELE, TVACT(TC,SUPELE))/3.6;
 * !!EFLOW now calculated from flow through transmission. When we include distributed generation we also need to include them in the calc
- ELC_FLOW2(RUN,TC) = (TVACT(TC,'XAGRELC') + TVACT(TC,'XCOMELC') +TVACT(TC,'XINDELC') + TVACT(TC,'XRESELC') + TVACT(TC,'XTRAELC') + TVACT(TC,'XUPSELC'));
- ELC_FLOW(RUN,TC) = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'celec',TC));
+ ELC_FLOW2(RUN,TC) = (TVACT(TC,'XAGRELC') + TVACT(TC,'XCOMELC') +TVACT(TC,'XINDELC') + TVACT(TC,'XRESELC') + TVACT(TC,'XTRAELC') + TVACT(TC,'XUPSELC') + TVACT(TC,'PEXELC'));
+ ELC_FLOW(RUN,TC) = sum(FSATIMNOELEC,FLOW_IN_FSFuels(FSATIMNOELEC,'celec',TC));
 
-
-
+* recalculate intensity for energy sectors, where GVA not suitable
  EIntensity_FS('elec',C,TC) = FLOW_IN_FSFuels('elec',C,TC)/ELC_FLOW(RUN,TC);
  EIntensity_FS('hydr',C,TC)$FLOW_OUT_FSFuels('hydr','chydr',TC) = FLOW_IN_FSFuels('hydr',C,TC)/FLOW_OUT_FSFuels('hydr','chydr',TC);
-
+ EIntensity_FS('petr',C,TC) = FLOW_IN_FSFuels('petr',C,TC)/OIL_FLOW(RUN,TC);
 
 *BM+FH 201218: SETTING STARTING POINT FOR HYDROGEN
  ICAFSGR(C,FS,T)$(EIntensity_FS(FS,C,T-1) GT 0.00001) = EIntensity_FS(FS,C,T)/EIntensity_FS(FS,C,T-1);
@@ -226,8 +225,7 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  ETPRICE(TC) = (TCST_PWRCLT(RUN,TC)+TCST_PWROTH(RUN,TC)+TCST_ELE(RUN,TC))/ELC_FLOW(RUN,TC);
 
 *b add growth rates from TIMES from 2014 onward
-* ETPRICEGR(TC)$(not (TIEPG(TC)+T1(TC)+TT1(TC))) = ETPRICE(TC)/ETPRICE(TC-1)-1;
-* ETPRICEGR(TC) = 0.001;
+ ETPRICEGR(TC)$(not T1(TC)) = ETPRICE(TC)/ETPRICE(TC-1)-1;
 
 
 * Energy Model Indicators
@@ -240,9 +238,6 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  REPORT(PRC,COM,TC,RUN,'FlowOut') = TVFLOWOUT(COM,TC,PRC);
 
  REPORT(PRC,'ACTGRP',TC,RUN,'Investment') = INVCOST(RUN,TC,PRC);
-
-*SATIM_OUTPUT(PRC,'ACTGRP',TC,'GVA',RUN) = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),QVAX(A,'nat','base',TC,TT)));
- REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 
  REPORT(PRC,'ACTGRP',TC,RUN,'Employment')$UC_CAP('UCPWR_FLAB-P','LHS','REGION1','2012',PRC) = sum(SATIM_LAB, UC_CAP(SATIM_LAB,'LHS','REGION1','2012',PRC))*(-1)*TVCAP(TC,PRC);
 

@@ -22,9 +22,10 @@ SETS
   SATIMCASES                     simulations in SATIM(TIMES)
   X                              simulations in eSAGE (CGE)
   XC(X)                          active simulations
+  XNB(X)                  nonbase simulations
   MRUNCASE(RUN,SATIMCASES)       Mapping RUN to TIMES CASE
   MRUNX(RUN,X)                   Mappinf RUN to CGE sim
-
+  PamsSector                     Pams Sectors for NDC / RES, COM, TRA, WASTE, AFOLU/
 * SATIM sets
   REG                            TIMES regions    /REGION1/
   ALLYEAR                        All Years /1850*2200, 0/
@@ -58,7 +59,9 @@ PARAMETERS
   SIM_SATIM(RUN)                 whether to rerun SATIM or not
   SIM_ESAGE(RUN)                   whether to run linked model or not
 *  SIM_CO2PRICE(RUN,AY)           CO2 PRICE
-*  SIM_PAMS(RUN,PamsSector)       activated pams for each run
+  PAMS(RUN,PamsSector)       activated pams for each run
+  PAMS_RUN(PamsSector)       activated pams for run in loop
+
 *  GDP_SIMPLE(FS,AY,RUN)          GDP for shorter runs
 ;
 
@@ -66,8 +69,10 @@ PARAMETERS
 * Import sets and parameters and data from control spreadsheet-------------------------------
 $call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
 $gdxin  SATIMGE.gdx
-$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE MRUNCASE MRUNX TC TT
+$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE MRUNCASE MRUNX TC TT PAMS
 
+XNB(XC) = YES;
+XNB('BASE') = NO;
 
 
 
@@ -75,6 +80,7 @@ SETS
 * Sector groupings in SATIM
   FSATIM                  sector groupings in SATIM model
   FS(FSATIM)              TIMES economic sectors
+  FSATIMNOELEC(FSATIM)     sector groupings in SATIM excluding electricity
   FH(FSATIM)              household groupings in SATIM model
   FT(FSATIM)              passenger transport groupings in SATIM
 
@@ -198,10 +204,8 @@ PARAMETERS
 * Intermediate parameters
 
   GVA_FS(FS,AY)                  SATIM Sector GVA
+  GVA_FS_Start(FS,AY)            SATIM Sector GVA used to first iteration of linked model
   POP(AY)                        Population Projection
-
-*FH
-  PAMS(PAMSSECTOR)               Active PAMS
 
 
   EmisFactor(COM,Emiss)          Combustion Emission Factor
@@ -308,13 +312,18 @@ PARAMETERS
 * Import sets and parameters from SetsAndMaps -------------------------------
 $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=index!a6 checkdate"
 $gdxin  SetsAndMaps\SetsMaps.gdx
-$load PRC COM DEM1 S UC_N FSATIM FS FH COALSUP MFHH MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
+$loaddc PRC COM DEM1 S UC_N FSATIM FS FH COALSUP
+$load  MFHH MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
+
+FSATIMNOELEC(FSATIM) = yes;
+FSATIMNOELEC('elec') = no;
 
 
 * CGE: Parameter and set declaration-------------------------------------------
 $batinclude cge\includes\2simulation.inc
 
-
+$gdxin  SetsAndMaps\SetsMaps.gdx
+$load FHMM
 
 MY_FIL2('2050') = 0.1;
 MY_FYEAR = 2012;
@@ -349,7 +358,7 @@ Alias (MILESTONYR,MY), (P,PP);
 
 * Loop: Model solve-----------------------------------------------------------
 LOOP(RUN$INCLRUN(RUN),
-
+   PAMS_RUN(PamsSector) = PAMS(RUN,PamsSector);
 
 $ontext
 
@@ -381,9 +390,9 @@ $offtext
 *FH: Included PAMS link
 * PAMS(PAMSSECTOR) =  SIM_PAMS(RUN,PAMSSECTOR);
 
-*if(SIM_ESAGE(RUN) eq 1,
+if(SIM_ESAGE(RUN) eq 1,
 
-*$batinclude cge\includes\2simulation_loop.inc
+$batinclude cge\includes\2simulation_loop.inc
 *$batinclude cge\includes\eSAGE_Report_Short.inc
 
 * Run Waste Model
@@ -393,28 +402,24 @@ $offtext
 * Run Agriculture Model
 
 
-*ELSE
+ELSE
 
 
 
 * Read in GDP and Population from Drivers Workbook
   execute 'gdxxrw.exe i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6';
-  execute_load "drivers.gdx" GVA_FS POP;
+  execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
 * Need to add TFHPOP, YHE, MFHHT
 
   if(SIM_SATIM(RUN) eq 1,
-         execute_unload "EnergyDrivers.gdx" GVA_FS POP PAMS;
-         execute 'gdxxrw.exe i=EnergyDrivers.gdx o=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx index=index_G2E!a6';
-  );
+* Write Drivers to DMD_PROJ workbook
+         execute 'gdxxrw.exe i=drivers.gdx o=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx index=index_G2E!a6';
 
-* Read in demand and other indicators from energy demand workbook
-
-*  execute 'gdxxrw.exe i=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx o=EnergyDemand.gdx index=index_E2G!a6';
-*  execute_load "EnergyDemand.gdx" SIM_DEMX;
+* Read resulting Demand from DMD_PROJ workbook
+         execute 'gdxxrw.exe i=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx o=EnergyDemand.gdx index=index_E2G!a6';
+         execute_load "EnergyDemand.gdx" SIM_DEMX;
 * Need to Add Occupancy and Freight loading per vehicle category to calculate pkm and tkm
 
-$ontext
-  if(SIM_SATIM(RUN) eq 1,
 * Write Demand DDS File
          PUT  SIM_DEM_FILE;
          SIM_DEM_FILE.pc = 2;
@@ -427,8 +432,6 @@ $ontext
                  EFVAL = SIM_DEMX(DEM1,TC);
                  if(EFVAL,
                          PUT "REGION1.", DEM1.TL, ".", TC.TL, EFVAL /;
-*                 ELSE
-*                         PUT "REGION1.", DEM1.TL, ".", TC.TL, "EPS" /;
                  );
          );
          PUTCLOSE "/;";
@@ -440,39 +443,39 @@ $ontext
          PUTCLOSE "";
 
 
-         $include SATIM\includes\2runTIMES.inc
+$include SATIM\includes\2runTIMES.inc
   );
-$offtext
 
 
 
 * Get Energy Model Results
-$include SATIM\includes\2TIMESReport.inc
+*$include SATIM\includes\2TIMESReport.inc
+* REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 
-$include SATIM\includes\GHGEnergyReport.inc
+*$include SATIM\includes\GHGEnergyReport.inc
 
 *Get Process Emissions
-$include SATIM\includes\GHGProcessReport.inc
+*$include SATIM\includes\GHGProcessReport.inc
 
 * Run Waste Model
-$include Waste\includes\GHGWasteReport.inc
+*$include Waste\includes\GHGWasteReport.inc
 
 * Run AFOLU Model
-$include AFOLU\includes\GHGAfoluReport.inc
+*$include AFOLU\includes\GHGAfoluReport.inc
 
 
 
 
-*);
+);
 *end of If statement
 
 );
 *end RUN loop
 *-------------------------------------------------------------------------------
 
-execute_unload "REPORT.gdx" REPORT
+*execute_unload "REPORT.gdx" REPORT
 *execute 'gdxdump REPORT.gdx output=REPORT.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Activity,Capacity,NewCapacity,FlowIn,FlowOut,CO2,CH4,N2O,HFC,PFC,CO2eq,Investment,GVA,Employment" cDim=y';
-execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
+*execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
 *execute 'gdxxrw.exe i=REPORT.gdx o=.\Results\REPORT.xlsx index=index!a6';
 
 

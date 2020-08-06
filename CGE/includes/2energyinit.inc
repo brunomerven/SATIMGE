@@ -107,6 +107,8 @@ FSXEP(FS) = Yes;
 *FSXEP('elec') = No;
 *FSXEP('tran') = No;
 *FSXEP('petr') = No;
+FSXEP('fa') = No;
+FSXEP('al') = No;
 
 
 * set commodities that get set using the main ica calc approach
@@ -124,13 +126,7 @@ CXEP(C) = Yes;
 
 PARAMETER
 *Forecasts based on CGE results
- SFORE(FS,X,AY)           loaded: sectoral growth forecast for SATIM
- SFORE_X(FS,AY)           GDP by SATIM sector for sim XC
- TFHPOP_X(FH,AY)          Population by SATIM income group for sim XC
  PKMFH(FT,FH,AY)             Passenger km demand share by income group
- sumSFORE                sum of SFORE in base year
-* GDP_FSX(FS,AY)           alias to SFORE - for export to demand workbook
- POPSX(AY)                 population projection for SATIM
  HFORE(FH,X,AY)           loaded: household income forecast for SATIM
  YHE(AY)                  income of higher income group for SATIM
  PFORE(FH,X,AY)           loaded: household population forecast for SATIM
@@ -145,23 +141,16 @@ PARAMETER
  FHMOVE(FH,FHP,AY)        result: population movement between clusters
  FHPOP(FH,AY)             result: final cluster populations after reallocations
  ELECRATE(FH,AY)          loaded: household electriification rates
- TFHPOP(FH,X,AY)            result: population kept before elc split for transport
+ TFHPOP(FH,AY)            result: population kept before elc split for transport
  TFHPOPMY(FH,AY)           result: population for TIMES milestone years
-*Electricity Demand
- ELCDEM(X,AY,TT)          result: electricity demand
 *Exporting from CGE to TIMES
 
-* SIM_DEMX(COM,T)          Demand extracted from excel DMD_PRJ file
-* PKMFH(FT,FH,T)             Passenger km demand share by income group
-* Passengerkm(COM,T)        pkm for passenger transport
-* Tonkm(COM,T)                Tonkm for Freight transport
 
 
 
 
 
  EFVAL                   output: temporary storage for putting values
- COMBUILD(PRC,AY)    trnsfr: past committed build plan
  COUNT              counting parameter
 
  TCST_INVC(REG,AY,PRC) TIMES calculated annual investment costs
@@ -222,11 +211,7 @@ PARAMETER
  SGROW(FS,X,AY,TT)   Moving average growth rate used for future sectoral growth projections
  HGROW(FH,X,AY,TT)   Moving average growth rate used for future household 'income' growth projections
  PGROW(FH,X,AY,TT)   Moving average growth rate used for future population growth projections
-*Electricity forecast data (export to TIMES)
- EFORE(X,AY,TT)      CGE variable used to forecast electricity demand (e.g. GDP)
- EGROW(X,AY,TT)      Moving average growth rate used for future electricity projections
- EPROJ(A,X,AY,TT)   Electricity demand projection
- EPROJGR(A,AY)      Electricity demand projection growth used for extrapolation
+
  EELAS           / 0.6 /
 *Supply and investment data (results from TIMES)
 

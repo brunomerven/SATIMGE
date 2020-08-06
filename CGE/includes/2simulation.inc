@@ -100,11 +100,11 @@ PARAMETERS
  deltatev(c,rw,run,t)
 ;
 
- CTA_EMRR(CTA)=0;
+CTA_EMRR(CTA)=0;
 
 $call    "gdxxrw i=cge\%basedata% o=basedata index=index!a6 checkdate"
 $gdxin   basedata.gdx
-$loaddc  CLOSURES PWGR CARBONTAX RETALTAX
+$loaddc  CLOSURES PWGR CARBONTAX RETALTAX FL
 
 
 

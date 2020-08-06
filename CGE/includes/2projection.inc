@@ -92,7 +92,6 @@ LOOP(TC$(NOT T1(TC)),
 );
 
 
-$Ontext
 *BM the code below doesn't seem to be doing much that we need. Will delete this.
 LOOP(TC$(NOT T1(TC)),
 
@@ -147,7 +146,6 @@ LOOP(TC$(NOT T1(TC)),
  POPPROJ(H,XNB,TC)$(NOT POPPROJ(H,XNB,TC) AND SMISC(XNB,TC)) = POPPROJ(H,XNB,TC-1);
 
 );
-$offtext
 
 *Initialize acceleration or deceleration rates
  TFPAD(A,RD,XC,TC)    = 0;

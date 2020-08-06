@@ -1,71 +1,71 @@
 
 *Loop over simulations
-LOOP(XC$(NOT fail),
+LOOP(XC$MRUNX(RUN,XC),
 
+execute_load "dem_start.gdx" GVA_FS POP YHE TFHPOP MFHHT;
+execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
 
-    execute_load "mcdem_start.gdx" MFHHT SFORE_X TFHPOP_X SIM_DEMX PKMFH Passengerkm Tonkm;
 
 * Loop over TIMES model solve periods
   LOOP(TT$(NOT fail),
 
-*   Calculate start to next TIMES model solve period (TT+1)
-    TTC(T)  = no;
-    TTC(TT) = yes;
-    COUNT = 0;
-   LOOP(T,
-     COUNT$TTC(T) = ORD(T);
-    );
-
- TABAR(A,RD)=TA0(A,RD);
+    TABAR(A,RD)=TA0(A,RD);
 
 *Identify factors with upward-sloping supply curves
- FLS(F) = NO;
- FLS(F)$(CLOSURES(F,XC) EQ 4) = YES;
+    FLS(F) = NO;
+    FLS(F)$(CLOSURES(F,XC) EQ 4) = YES;
 
-
-* get demand data for SATIM run
-if( not TT1(TT),
-  execute 'gdxxrw.exe i=SATM\DMD_PRJ.xlsx o=mcdem2.gdx index=index_E2G!a6';
-  execute_load "mcdem2.gdx" SIM_DEMX PKMFH Passengerkm Tonkm;
-
-
-* Adjust Transport Demand
-  LOOP(TC,
-        SIM_DEMX(TPPR,TC)$(SUM(H,QHX('cprtr',H,'base',TC-1,TT-1))) = SIM_DEMX(TPPR,TC-1)*SUM(H,QHX('cprtr',H,'base',TC,TT-1))/SUM(H,QHX('cprtr',H,'base',TC-1,TT-1));
-);
-* LOOP(TC,
-
-
-);
-*if( not TT1(TT),
-
-
-* Demand DDS File
-    PUT  SIM_DEM_FILE;
-    SIM_DEM_FILE.pc = 2;
-    SIM_DEM_FILE.nd = 5;
-    SIM_DEM_FILE.ap = 0;
-
-    PUT 'PARAMETER ACOM_PROJ /' /;
-
-    LOOP((DEM1,NMY1),
-  EFVAL = SIM_DEMX(DEM1,NMY1);
-  if(EFVAL,
-    PUT "REGION1.", DEM1.TL, ".", NMY1.TL, EFVAL /;
-ELSE
-    PUT "REGION1.", DEM1.TL, ".", NMY1.TL, "EPS" /;
-  );
-);
-PUTCLOSE "/;";
-
-*$exit
 *Initialize CGE model parameters and variables
 $include cge\includes\2varinit.inc
 
-if(SIM_SATIM(RUN) eq 1,
-* Run SATIM
+
+    if(SIM_SATIM(RUN) eq 1,
+
+* Write Drivers to DMD_PROJ workbook
+         execute 'gdxxrw.exe i=drivers.gdx o=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx index=index_G2E!a6';
+* Read resulting Demand from DMD_PROJ workbook
+         execute 'gdxxrw.exe i=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx o=EnergyDemand.gdx index=index_E2G!a6';
+         execute_load "EnergyDemand.gdx" SIM_DEMX;
+* Need to Add Occupancy and Freight loading per vehicle category to calculate pkm and tkm
+
+* Adjust Transport Demand
+*  LOOP(TC$(ORD(TC) gt 6),
+*        SIM_DEMX(TPPR,TC)$(SUM(H,QHX('cprtr',H,'base',TC-1,TT-1))) = SIM_DEMX(TPPR,TC-1)*SUM(H,QHX('cprtr',H,'base',TC,TT-1))/SUM(H,QHX('cprtr',H,'base',TC-1,TT-1));
+*);
+* LOOP(TC,
+
+
+* Write Demand DDS File
+         PUT  SIM_DEM_FILE;
+         SIM_DEM_FILE.pc = 2;
+         SIM_DEM_FILE.nd = 13;
+         SIM_DEM_FILE.ap = 0;
+
+         PUT 'PARAMETER ACOM_PROJ /' /;
+
+         LOOP((DEM1,TC),
+                 EFVAL = SIM_DEMX(DEM1,TC);
+                 if(EFVAL,
+                         PUT "REGION1.", DEM1.TL, ".", TC.TL, EFVAL /;
+                 else
+                         PUT "REGION1.", DEM1.TL, ".", TC.TL, "eps" /;
+
+                 );
+         );
+         PUTCLOSE "/;";
+
+         PUT  ShowRunNumber;
+         RUNTIMES2.pc = 2;
+         RUNTIMES2.nd = 5;
+         RUNTIMES2.ap = 0;
+         PUTCLOSE "";
+
+
 $include SATIM\includes\2runTIMES.inc
-);
+  );
+* if(SIM_SATIM(RUN) eq 1,
+*$exit
+
 
 $include SATIM\includes\2TIMESReport.inc
 
@@ -172,15 +172,6 @@ $offtext
 *       CA driven by previous year gdp growth (see bottom of TC loop)
         trnsfr(INS,ACNT) = trnsfr(INS,ACNT) * (1+TRNSFRGR(INS,ACNT,XC,TC));
 
-
-*fh 291118: SANEDI-EV shocks
-  deltaq(cm,rw) = deltaq0(cm,rw);
-  deltaq('cvehi','rest') = deltaq('cvehi','rest')*(deltaqev('cvehi','rest',run,tc));
-
-  deltat(cm,rw) = deltat0(cm,rw);
-*  deltat('cvehi','rest') = deltat('cvehi','rest')*(deltatev('cvehi','rest',run,tc));
-
-
 *bm make ratio of coal outputs exogenous and control from SATIM outputs
   theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
   theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
@@ -199,26 +190,26 @@ $offtext
                          = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
 
 * calculate ica change for private passenger. This needs to be generalised to other household end-uses
-  EHIntensity(C,'aprtr',TC) = FLOW_IN_FTFuels('tppr',C,TC)/sum(TPPR,COM_PROJ('REGION1',TC,TPPR));
-
+  EHIntensity(C,'aprtr',TC) = FLOW_IN_FSFuels('tppr',C,TC)/sum(TPPR,COM_PROJ('REGION1',TC,TPPR));
 
 *BM 190320: SETTING STARTING POINT FOR ICA private transport
  ica('celec','aprtr','NAT')$(EHIntensity('celec','aprtr',TC-1) LT 0.0001 and EHIntensity('celec','aprtr',TC) GT 0.00001)
                          = EHIntensity('celec','aprtr',TC)/EHIntensity('cpetr_p','aprtr',TC)*ica('cpetr_p','aprtr','NAT');
 
-  icagr(C,'aprtr',TC)$EHIntensity(C,'aprtr',TC-1) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
+  icagr(C,'aprtr',TC)$(EHIntensity(C,'aprtr',TC-1) gt 0.0001) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
 
 
 
 
-
-
+*!!!!
+*ICAGR(C,A,TC)=1;
   ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
 
 
-  if(ORD(TC) gt 28,ica('ccoal-low','apetr','NAT') = 0);
 
-  if(ORD(TC) gt 1,ica('ccoal-low','acoal','NAT') = 0);
+*  if(ORD(TC) gt 28,ica('ccoal-low','apetr','NAT') = 0);
+
+*  if(ORD(TC) gt 1,ica('ccoal-low','acoal','NAT') = 0);
 
 
   QA.L('ahydr')$(HCAP(XC,TC,TT) gt 0.00001) = FLOW_OUT_FSFuels('hydr','chydr',TC);
@@ -286,7 +277,7 @@ $offtext
           AFX('acoal',RD)$EFX(TT,TC) = YES;
 
 
-          CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC,TT));
+          CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
           AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1)*pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
 
 *bm cap decrease to 5%
@@ -294,7 +285,7 @@ $offtext
 *          AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05;
 
 
-          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1,TT) = QE.L('ccoal-hgh','REST')*FLOW_IN_FSFuels('EXP','ccoal-hgh',TC,TT)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1,TT) ;
+          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = QE.L('ccoal-hgh','REST')*FLOW_IN_FSFuels('EXP','ccoal-hgh',TC)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) ;
 
           AFLEO('ACOAL')$(NOT T1(TC)) = YES;
 
@@ -306,14 +297,9 @@ $offtext
 
            AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
 
-
-*           QE.FX('cpetr_o','REST')$FLOW_IN_FSFuels('EXP','cpetr_o',TC-1,TT) = QE.L('cpetr_o','REST')*FLOW_IN_FSFuels('EXP','cpetr_o',TC,TT)/FLOW_IN_FSFuels('EXP','cpetr_o',TC-1,TT);
-*           QE.FX('cpetr_d','REST') = FLOW_IN_FSFuels('EXP','cpetr_d',TC,TT);
-*           QE.FX('cpetr_p','REST') = FLOW_IN_FSFuels('EXP','cpetr_p',TC,TT);
-
-           theta('apetr','cpetr_o') = FLOW_OUT_FSFuels('petr','cpetr_o',TC,TT)/sum(C,FLOW_OUT_FSFuels('petr',C,TC,TT));
-           theta('apetr','cpetr_d') = FLOW_OUT_FSFuels('petr','cpetr_d',TC,TT)/sum(C,FLOW_OUT_FSFuels('petr',C,TC,TT));
-           theta('apetr','cpetr_p') = FLOW_OUT_FSFuels('petr','cpetr_p',TC,TT)/sum(C,FLOW_OUT_FSFuels('petr',C,TC,TT));
+           theta('apetr','cpetr_o') = FLOW_OUT_FSFuels('petr','cpetr_o',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+           theta('apetr','cpetr_d') = FLOW_OUT_FSFuels('petr','cpetr_d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+           theta('apetr','cpetr_p') = FLOW_OUT_FSFuels('petr','cpetr_p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
 
 
 *bm/fh/fa .L on refineries
@@ -523,7 +509,8 @@ $offtext
                   +QINT.L('CCOIL',A)*CO2C('CCOIL')
                   +QINT.L('CNGAS',A)*CO2C('CNGAS'));
 
-        CTA_EMR(A)= CTA_EM(A)*(SIM_CO2PRICE(RUN,TC)/1000);
+        CTA_EMR(A)= CTA_EM(A);
+*(SIM_CO2PRICE(RUN,TC)/1000);
 
         CTA_EMRR(A)$(PAR.L(A,'NAT')*QAR.L(A,'NAT'))=CTA_EMR(A)/(PAR.L(A,'NAT')*QAR.L(A,'NAT'));
 

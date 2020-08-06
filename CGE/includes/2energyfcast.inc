@@ -4,20 +4,22 @@
 
 * Previous: SFORE(FS,XC,T) = SUM((A,RD)$MFSA(FS,A), PVA0(A,RD)*QVAX(A,RD,XC,T,TT));
 *
- SFORE(FS,XC,T) = SUM(A$MFSA(FS,A), QVAX(A,'nat',XC,T,TT));
-* SFORE(FS,XC,T) = SUM(A$MFSA(FS,A), QAX(A,XC,T,TT));
+ GVA_FS(FS,TC) = SUM(A$MFSA(FS,A), QVAX(A,'nat',XC,TC,TT));
+ REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
+
+* Another possible approach is to link to QA but QA has different units in different activities and doesn't add up to GDP
+* GVA_FS(FS,T) = SUM(A$MFSA(FS,A), QAX(A,XC,T,TT));
 
  HFORE(FH,XC,TC)$SUM(H$MFHH(FH,H), HPOPX(H,XC,TC,TT)) = SUM(H$MFHH(FH,H), YIX(H,XC,TC,TT)/HPOPX(H,XC,TC,TT))/CPIX(XC,TC,TT);
  PFORE(FH,XC,TC) = SUM(H$MFHH(FH,H), HPOPX(H,XC,TC,TT));
 
- sumSFORE = SUM(FS,SFORE(FS,XC,'2012'));
 *INCOME CALCULATIONS
 
 *Calculate mean (assume uniform population distribution within each group)
  FHMM(FH,'MEAN')$FHMM(FH,'MAX') = (FHMM(FH,'MAX') + FHMM(FH,'MIN'))/2;
 
 *Forecast mean incomes based on TIMES data
- FHMEAN(FH,T) = FHMM(FH,'MEAN') * HFORE(FH,XC,T);
+ FHMEAN(FH,TC) = FHMM(FH,'MEAN') * HFORE(FH,XC,TC);
 
 *POPULATION CALCULATIONS
 
@@ -44,49 +46,41 @@
  FHMOVE('HHD-ME','HHD-HE',TC)$(FHMOVE('HHD-ME','HHD-HE',TC) LT 0) = 0;
 
 *Final population numbers
- TFHPOP('HHD-LE',XC,TC) = PFORE('HHD-LE',XC,TC) *
+ TFHPOP('HHD-LE',TC) = PFORE('HHD-LE',XC,TC) *
          (1 - FHMOVE('HHD-LE','HHD-ME',TC) - FHMOVE('HHD-LE','HHD-HE',TC));
 
- TFHPOP('HHD-ME',XC,TC) = PFORE('HHD-ME',XC,TC) *
+ TFHPOP('HHD-ME',TC) = PFORE('HHD-ME',XC,TC) *
          (1 - FHMOVE('HHD-ME','HHD-HE',TC))
          + FHMOVE('HHD-LE','HHD-ME',TC)*PFORE('HHD-LE',XC,TC);
 
- TFHPOP('HHD-HE',XC,TC) = PFORE('HHD-HE',XC,TC)
+ TFHPOP('HHD-HE',TC) = PFORE('HHD-HE',XC,TC)
          + FHMOVE('HHD-LE','HHD-HE',TC)*PFORE('HHD-LE',XC,TC)
          + FHMOVE('HHD-ME','HHD-HE',TC)*PFORE('HHD-ME',XC,TC);
 
 *INCOME CALCULATIONS (CONT)
 
 loop (H,
- popval(H,XC,TC) =  (sum(FH,TFHPOP(FH,XC,TC))/10)*ORD(H)*popvalfact(H,XC,TC);
+ popval(H,XC,TC) =  (sum(FH,TFHPOP(FH,TC))/10)*ORD(H)*popvalfact(H,XC,TC);
  );
 
 *Reverse mapping
  MFHHT(FH,H,TC)=no;
- MFHHT('hhd-le',H,TC)$((popval(H,XC,TC) LE TFHPOP('hhd-le',XC,TC)))=YES;
- MFHHT('hhd-me',H,TC)$(((popval(H,XC,TC) GT TFHPOP('hhd-le',XC,TC)) and (popval(H,XC,TC) LE (TFHPOP('hhd-le',XC,TC)+TFHPOP('hhd-me',XC,TC)))))=YES;
- MFHHT('hhd-he',H,TC)$((popval(H,XC,TC) GT (TFHPOP('hhd-me',XC,TC)+TFHPOP('hhd-le',XC,TC))))=YES;
+ MFHHT('hhd-le',H,TC)$((popval(H,XC,TC) LE TFHPOP('hhd-le',TC)))=YES;
+ MFHHT('hhd-me',H,TC)$(((popval(H,XC,TC) GT TFHPOP('hhd-le',TC)) and (popval(H,XC,TC) LE (TFHPOP('hhd-le',TC)+TFHPOP('hhd-me',TC)))))=YES;
+ MFHHT('hhd-he',H,TC)$((popval(H,XC,TC) GT (TFHPOP('hhd-me',TC)+TFHPOP('hhd-le',TC))))=YES;
 
  HFORE(FH,XC,TC)$SUM(H$MFHHT(FH,H,TC), HPOPX(H,XC,TC,TT)) = SUM(H$MFHHT(FH,H,TC), YIX(H,XC,TC,TT)/HPOPX(H,XC,TC,TT))/CPIX(XC,TC,TT);
 
-
+ TFHPOP(FH,TC) = TFHPOP(FH,TC)/POP(TC);
 
 * remember to update HFORE with new mappings
 *    HFORE(FH,XC,MYPTC) = HFORE(FH,XC,'2040');
 
-    SFORERUN(FS,TC) = SFORE(FS,XC,TC);
-    POPSX(TC) = SIM_POP(RUN,MILESTONYR);
-    TFHPOP_X(FH,T) = TFHPOP(FH,XC,T);
-    TFHPOPMY(FH,MILESTONYR) = TFHPOP(FH,XC,MILESTONYR)/POPSX(MILESTONYR);
-    YHE(MILESTONYR) = HFORE('hhd-he',XC,MILESTONYR);
+    YHE(TC) = HFORE('hhd-he',XC,TC);
 
-    TRAMOD = SIM_TRAMOD(RUN);
-
-* write new demand driver values to demand workbook
-
-  if(SFORE_X('COM','2050'),
-    execute_unload "EnergyDem.gdx" POP SFORE_X GDP_FSX TRAMOD TFHPOPMY YHE MFHHT PAMS
-    execute 'gdxxrw.exe i=MCDem.gdx o=SATIM\DMD_PRJ.xlsx index=index_G2E!a6';
+* write new demand driver values to drivers gdx if CGE gets to 2050
+  if(QVAX('aagri','nat',XC,'2050',TT),
+    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT
   );
 
 

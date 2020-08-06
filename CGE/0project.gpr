@@ -1,0 +1,17 @@
+[PROJECT]
+
+[RP:2SIMULATION_LOOP]
+1=
+
+[RP:1MODEL]
+1=gdx=model s=model
+
+[OPENWINDOW_1]
+FILE0=C:\Models\SATIMGE\CGE\1model.gms
+FILE1=C:\Models\SATIMGE\CGE\1model.lst
+FILE2=C:\Models\SATIMGE\CGE\1model.lst
+MAXIM=0
+TOP=50
+LEFT=50
+HEIGHT=780
+WIDTH=1121
