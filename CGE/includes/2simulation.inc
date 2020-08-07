@@ -16,6 +16,8 @@ SETS
 *Time periods
 * T                       time periods
 * TC(T)                   active time periods
+*fh
+ TCF(T)
  TCN1(T)                 TC except base year
  T1(T)                   first year of simulation
  T2(T)                   second year of simulation
@@ -104,9 +106,7 @@ CTA_EMRR(CTA)=0;
 
 $call    "gdxxrw i=cge\%basedata% o=basedata index=index!a6 checkdate"
 $gdxin   basedata.gdx
-$loaddc  CLOSURES PWGR CARBONTAX RETALTAX FL
-
-
+$loaddc  CLOSURES PWGR CARBONTAX RETALTAX FL TCF
 
 
 alias (TC,TCP), (TT, TTP);
@@ -127,7 +127,7 @@ alias (TC,TCP), (TT, TTP);
 *CGE years (TP) when elec capital is fixed during TIMES years (T)
  EFX(T,TCP)$(TT(T) AND (ORD(T) GE ORD(TCP))) = YES;
 
-*bm Fixed capital growth sectors are now defined in 2simulation_loop.inc
+*Simulations
  ANFX(A,RD) = YES;
 
 $ontext
@@ -144,12 +144,7 @@ $offtext
 *1. Excel inputted scenario calibration
 *------------------------------------------------------------------------------
 
-
-
-
 $include cge\includes\2projection.inc
-
-* Need to export for GIT FSAVGR, Closures, TFPGR, COMPGR
 
 *----------------------------------------------------------------------
 *2. Non-excel inputted scenario calibration

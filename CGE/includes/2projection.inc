@@ -10,17 +10,25 @@ PARAMETER
 *Excel-inputted acceleration or decelaration rates
  STFPAD(A,RD,X)          sectoral TFP acceleration or decelaration rate
  SFACAD(F,X)             factor supply acceleration or decelaration rate
+*fh
+ SFACAD2(F,X)          additional factor supply acceleration or decelaration rate
  SWAD(F,X)               factor return acceleration or decelaration rate
  SFPRDAD(F,X)            factor-specific productivity acceleration or decelaration rate
  SAFXAD(A,RD,X)          acceleration or decelaration rate for sectors with fixed resources
  SMISCAD(MISCAC,X)       miscellaneous acceleration or decelaration rate
+*fh
+ SMISCAD2(MISCAC,X)      additional miscellaneous acceleration or decelaration rate
  SPOPAD(H,X)             household population acceleration or decelaration rate
  TFPAD(A,RD,X,T)         sectoral TFP acceleration or decelaration rates
  FACAD(F,X,T)            factor supply acceleration or decelaration rates
+*fh
+ FACAD2(F,X,T)           additional factor supply acceleration or decelaration rates
  WAD(F,X,T)              factor return acceleration or decelaration rates
  FPRDAD(F,X,T)           factor-specific productivity acceleration or decelaration rates
  AFXAD(A,RD,X,T)         acceleration or decelaration rates for sectors with fixed resources
  MISCAD(MISCAC,X,T)      miscellaneous acceleration or decelaration rates
+*fh
+ MISCAD2(MISCAC,X,T)     additional miscellaneous acceleration or decelaration rates
  POPAD(H,X,T)            household population acceleration or decelaration rates
 *Final simulation growth rates
  AFXGR(A,RD,X,T)         growth rate for sectors with fixed resources
@@ -41,7 +49,7 @@ PARAMETER
  DTAXGR(X,T)             direct tax rate on enterprises and households
 ;
 
-$loaddc TFPPROJ FPRDPROJ FACPROJ MISCPROJ POPPROJ STFPAD SFACAD SFPRDAD SMISCAD SPOPAD WPROJ SWAD
+$loaddc TFPPROJ FPRDPROJ FACPROJ MISCPROJ POPPROJ STFPAD SFACAD SFPRDAD SMISCAD SPOPAD WPROJ SWAD SMISCAD2 SFACAD2
 *AFXPROJ SAFXAD
 $gdxin
 
@@ -56,7 +64,6 @@ SET
 
  TPAST(T)                historical years
 ;
-
 
 *JT: AE paper (changed this code from no's to yes's)
  SAGR(X,T)   = yes;
@@ -91,8 +98,6 @@ LOOP(TC$(NOT T1(TC)),
  SPOP(X,TC)$SPOP(X,TC-1) = YES;
 );
 
-
-*BM the code below doesn't seem to be doing much that we need. Will delete this.
 LOOP(TC$(NOT T1(TC)),
 
 *Sector factor demand growth projections
@@ -150,9 +155,13 @@ LOOP(TC$(NOT T1(TC)),
 *Initialize acceleration or deceleration rates
  TFPAD(A,RD,XC,TC)    = 0;
  FACAD(F,XC,TC)       = 0;
+*
+ FACAD2(F,XC,TC)      = 0;
  WAD(F,XC,TC)         = 0;
  FPRDAD(F,XC,TC)      = 0;
  MISCAD(MISCAC,XC,TC) = 0;
+*fh
+ MISCAD2(MISCAC,XC,TC) = 0;
  POPAD(H,XC,TC)       = 0;
 
 
@@ -166,9 +175,12 @@ LOOP(TC$(NOT TPAST(TC)),
  TFPAD(A,RD,XC,TC)$STFP(XC,TC-1)     = TFPAD(A,RD,XC,TC-1) + STFPAD(A,RD,XC);
 * FACAD(F,XC,TC)$SFAC(XC,TC-1)        = FACAD(F,XC,TC-1) + SFACAD(F,XC);
  FACAD(F,XC,TC)$SFAC(XC,TC-1)        = FACAD(F,XC,TC-1) + SFACAD(F,XC);
+*fh
+ FACAD2(F,XC,TCF)$SFAC(XC,TCF-1)     = FACAD2(F,XC,TCF-1) + SFACAD2(F,XC);
  WAD(F,XC,TC)$SW(XC,TC-1)            = WAD(F,XC,TC-1) + SWAD(F,XC);
  FPRDAD(F,XC,TC)$SFPRD(XC,TC-1)      = FPRDAD(F,XC,TC-1) + SFPRDAD(F,XC);
  MISCAD(MISCAC,XC,TC)$SMISC(XC,TC-1) = MISCAD(MISCAC,XC,TC-1) + SMISCAD(MISCAC,XC);
+ MISCAD2(MISCAC,XC,TCF)$SMISC(XC,TCF-1)= MISCAD2(MISCAC,XC,TCF-1) + SMISCAD2(MISCAC,XC);
  POPAD(H,XC,TC)$SPOP(XC,TC-1)        = POPAD(H,XC,TC-1) + SPOPAD(H,XC);
 );
 
@@ -203,9 +215,9 @@ LOOP(TC$(NOT TPAST(TC)),
 * TFPPROJ(A,RD,XC,TC)    = TFPPROJ(A,RD,XC,TC)    + TFPAD(A,RD,XC,TC);
  TFPPROJ(A,RD,XC,TC)    = TFPPROJ(A,RD,XC,TC)    + TFPAD(A,RD,XC,TC)*DUMTIME(TC);
  FPRDPROJ(F,XC,TC)      = FPRDPROJ(F,XC,TC)      + FPRDAD(F,XC,TC);
- FACPROJ(F,XC,TC)       = FACPROJ(F,XC,TC)       + FACAD(F,XC,TC);
+ FACPROJ(F,XC,TC)       = FACPROJ(F,XC,TC)       + FACAD(F,XC,TC)+ FACAD2(F,XC,TC);
  WPROJ(F,XC,TC)         = WPROJ(F,XC,TC)         + WAD(F,XC,TC);
- MISCPROJ(MISCAC,XC,TC) = MISCPROJ(MISCAC,XC,TC) + MISCAD(MISCAC,XC,TC);
+ MISCPROJ(MISCAC,XC,TC) = MISCPROJ(MISCAC,XC,TC) + MISCAD(MISCAC,XC,TC)+ MISCAD2(MISCAC,XC,TC);
  POPPROJ(H,XC,TC)       = POPPROJ(H,XC,TC)       + POPAD(H,XC,TC);
 
 * Final simulation growth rates

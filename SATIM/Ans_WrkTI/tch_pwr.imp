@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/31	6:25:07 AM
+Creation Date:	2020/08/07	10:28:18 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -250,21 +250,21 @@ TS DATA	REGION1
 	ACT_EFF	ETODSGT-N	-	ACTGRP	-	ANNUAL	-	0	0.313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	ETRANS	-	ACTGRP	-	ANNUAL	-	0	0.961	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	ETRANSDUM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XAGRELC	-	ACTGRP	-	ANNUAL	-	0	0.87	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XCOMELC	-	ACTGRP	-	ANNUAL	-	0	0.877	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XIFBELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XIISELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XIMIELC	-	ACTGRP	-	ANNUAL	-	0	0.95	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XAGRELC	-	ACTGRP	-	ANNUAL	-	0	0.8819	null	null	null	null	0.87	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XCOMELC	-	ACTGRP	-	ANNUAL	-	0	0.8819	null	null	null	null	0.877	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFBELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIMIELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.95	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XINFELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XINMELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XRESELC	-	ACTGRP	-	ANNUAL	-	0	0.803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XTRAELC	-	ACTGRP	-	ANNUAL	-	0	0.952	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	XUPSELC	-	ACTGRP	-	ANNUAL	-	0	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINFELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XRESELC	-	ACTGRP	-	ANNUAL	-	0	0.87	null	null	null	null	0.803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRAELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.952	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XUPSELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	EPTSTO-N	-	-	-	-	UP	3	1.32	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ERHYDGIW-I	-	-	-	-	UP	3	2.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ERHYD-N	-	-	-	-	UP	3	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -473,13 +473,10 @@ TS DATA	REGION1
 	FLO_EMIS	MINCSTUTUVRS	CO2SF	PWRCLETUTU	-	ANNUAL	-	0	4.03132754059585E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	EPTSTO-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	EPTSTO-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERBIG-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERBIO-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERHYD-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERHYDGIW-I	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERHYDGIW-I	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERHYD-I	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERHYD-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERSOLPCF-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B2	UP	0	0.55921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -488,7 +485,6 @@ TS DATA	REGION1
 	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B3	UP	0	0.63511	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERSOLPCT-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B2	UP	0	0.62631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -497,7 +493,6 @@ TS DATA	REGION1
 	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B3	UP	0	0.71133	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERSOLPRC-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -506,7 +501,6 @@ TS DATA	REGION1
 	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERSOLPRI-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -515,7 +509,6 @@ TS DATA	REGION1
 	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERSOLPRR-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -524,7 +517,6 @@ TS DATA	REGION1
 	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERSOLTC09-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B1	UP	0	0.01872	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B2	UP	0	0.75648	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B3	UP	0	0.73099	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -533,7 +525,6 @@ TS DATA	REGION1
 	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B3	UP	0	0.92279	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B4	UP	0	0.85089	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B5	UP	0	0.26989	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ERWNDH-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ERWNDH-N	-	-	-	S1D1B1	UP	0	0.38579742506728	null	null	null	null	null	null	null	0.41309	null	null	null	null	null	null	null	null	null	0.43954	null	null	null	null	null	null	null	null	null	0.46009	null	0.47476	null	null	
 	NCAP_AF	ERWNDH-N	-	-	-	S1D1B2	UP	0	0.285206101197606	null	null	null	null	null	null	null	0.30538	null	null	null	null	null	null	null	null	null	0.32493	null	null	null	null	null	null	null	null	null	0.34013	null	0.35097	null	null	
 	NCAP_AF	ERWNDH-N	-	-	-	S1D1B3	UP	0	0.416946931281717	null	null	null	null	null	null	null	0.44644	null	null	null	null	null	null	null	null	null	0.47503	null	null	null	null	null	null	null	null	null	0.49724	null	0.51309	null	null	
@@ -564,8 +555,8 @@ TS DATA	REGION1
 	NCAP_AF	ETCLEPFSS-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	1	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLETUTU-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLEWATE-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ETGASENSI-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ETGASENSS-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGASENSI-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGASENSS-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETGICCC-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETGICEN-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETGICGT-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

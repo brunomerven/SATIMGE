@@ -71,6 +71,7 @@ $call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
 $gdxin  SATIMGE.gdx
 $load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE MRUNCASE MRUNX TC TT PAMS
 
+
 XNB(XC) = YES;
 XNB('BASE') = NO;
 
@@ -206,7 +207,7 @@ PARAMETERS
   GVA_FS(FS,AY)                  SATIM Sector GVA
   GVA_FS_Start(FS,AY)            SATIM Sector GVA used to first iteration of linked model
   POP(AY)                        Population Projection
-
+  GDP_RUN(AY)                    GDP projection for RUN
 
   EmisFactor(COM,Emiss)          Combustion Emission Factor
   LandEmissions(PRC,Emiss,AY) Land Emissions
@@ -393,6 +394,7 @@ $offtext
 if(SIM_ESAGE(RUN) eq 1,
 
 $batinclude cge\includes\2simulation_loop.inc
+REPORT(PRC,'ACTGRP',TC,RUN,'Employment') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),sum(flab,QFX(flab,A,'nat','base',TC,'2050'))));
 *$batinclude cge\includes\eSAGE_Report_Short.inc
 
 * Run Waste Model
@@ -408,7 +410,7 @@ ELSE
 
 * Read in GDP and Population from Drivers Workbook
   execute 'gdxxrw.exe i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6';
-  execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
+  execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT;
 * Need to add TFHPOP, YHE, MFHHT
 
   if(SIM_SATIM(RUN) eq 1,
@@ -444,38 +446,38 @@ ELSE
 
 
 $include SATIM\includes\2runTIMES.inc
-  );
 
+  );
+* if(SIM_SATIM(RUN) eq 1
 
 
 * Get Energy Model Results
-*$include SATIM\includes\2TIMESReport.inc
-* REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
-
-*$include SATIM\includes\GHGEnergyReport.inc
-
-*Get Process Emissions
-*$include SATIM\includes\GHGProcessReport.inc
-
-* Run Waste Model
-*$include Waste\includes\GHGWasteReport.inc
-
-* Run AFOLU Model
-*$include AFOLU\includes\GHGAfoluReport.inc
-
-
-
+$include SATIM\includes\2TIMESReport.inc
+REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 
 );
-*end of If statement
+*if(SIM_ESAGE(RUN) eq 1,
+
+GDP_RUN(TC) = SUM(FS,GVA_FS(FS,TC));
+
+$include SATIM\includes\GHGEnergyReport.inc
+
+*Get Process Emissions
+$include SATIM\includes\GHGProcessReport.inc
+
+* Run Waste Model
+$include Waste\includes\GHGWasteReport.inc
+
+* Run AFOLU Model
+$include AFOLU\includes\GHGAfoluReport.inc
 
 );
 *end RUN loop
 *-------------------------------------------------------------------------------
 
-*execute_unload "REPORT.gdx" REPORT
+execute_unload "REPORT.gdx" REPORT
 *execute 'gdxdump REPORT.gdx output=REPORT.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Activity,Capacity,NewCapacity,FlowIn,FlowOut,CO2,CH4,N2O,HFC,PFC,CO2eq,Investment,GVA,Employment" cDim=y';
-*execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
+execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
 *execute 'gdxxrw.exe i=REPORT.gdx o=.\Results\REPORT.xlsx index=index!a6';
 
 

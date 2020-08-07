@@ -1,1 +1,1 @@
-echo Run0
+echo NoPAMS-HiGr

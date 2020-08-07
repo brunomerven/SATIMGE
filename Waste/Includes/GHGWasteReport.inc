@@ -5,7 +5,7 @@
 
 * Write Drivers to Spreadsheet
 CoalAshCoal(TC) = sum(fs,FLOW_IN_FSFuels(fs,'ccoal-low',TC));
-execute_unload "CoalAshCoal.gdx" CoalAshCoal
+execute_unload "CoalAshCoal.gdx" CoalAshCoal GDP_RUN POP PAMS_RUN
 execute 'gdxxrw.exe i=CoalAshCoal.gdx o=Waste\Waste_model_Linked.xlsx index=indexG2E!a6';
 
 * Read Results from Spreadsheet
