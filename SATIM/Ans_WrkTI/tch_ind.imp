@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/30	11:20:21 AM
+Creation Date:	07 Aug 2020	13:14:05
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -661,7 +661,7 @@ TS DATA	REGION1
 	COM_PROJ	-	ICPL	-	-	-	-	0	0.333885979169771	null	null	null	null	0.485508	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPO	-	-	-	-	0	4.45181305559694	null	null	null	null	6.47344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	11.32852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	15.9023684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	16.6503684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	28.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFAM	-	-	-	-	0	4.0821	4.1754	4.8629	4.4806	4.32606122354372	4.37275410408246	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBA	-	-	-	-	0	3.19316332629067E-02	null	null	null	null	0.029904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -791,14 +791,14 @@ TS DATA	REGION1
 	FLO_FUNC	IPPPAP-N	-	IPPPULP	IPPODS	ANNUAL	-	0	0.05	null	null	null	null	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IPPREC-E	-	IPPPULP	CG-IPPREC-E-I	ANNUAL	-	0	3.85	null	null	null	null	3.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IPPREC-N	-	IPPPULP	CG-IPPREC-N-I	ANNUAL	-	0	2.24	null	null	null	null	3.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.970857347261556	null	null	null	null	null	null	null	null	null	null	null	null	0.392265594853154	null	null	null	null	null	null	null	null	null	0.196132797426577	null	null	null	null	
-	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.980663987132885	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
-	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.91426527384437E-02	null	null	null	null	null	null	null	null	null	null	null	null	7.73440514684593E-03	null	null	null	null	null	null	null	null	null	3.86720257342296E-03	null	null	null	null	
-	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.93360128671148E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.067749178855967	null	null	null	null	null	null	null	null	null	0.257749178855967	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.927242618848001	null	null	null	null	null	null	null	null	null	null	null	null	0.374643482362829	null	null	null	null	null	null	null	null	null	0.187321741181414	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.936608705907072	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.82826895289596E-02	null	null	null	null	null	null	null	null	null	null	null	null	7.38694526422611E-03	null	null	null	null	null	null	null	null	null	3.69347263211305E-03	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.84673631605653E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.067749178855967	null	null	null	null	null	null	null	null	null	0.257749178855967	null	null	null	null	
 	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.12	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	
-	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	
+	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	LO	0	0	null	null	null	null	4.44746916230394E-02	null	null	null	null	null	null	null	null	null	null	null	null	1.79695723729452E-02	null	null	null	null	null	null	null	null	null	8.98478618647261E-03	null	null	null	null	
+	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0.044923930932363	null	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	
 	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	
 	FLO_MARK	ICPSWAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -1053,16 +1053,16 @@ TS DATA	REGION1
 	NCAP_AFA	IFBSOHF-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IFBSOLP-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IFBSWAS-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IISBFBOF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IISBFBOF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISBFBOF-E	-	-	-	-	UP	5	0.85	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISBFBOF-E-T1	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISBFBOF-E-T2	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISBFBOF-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IISCOREAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IISCOREAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISCOREAF-E	-	-	-	-	UP	5	0.975806451612903	null	null	null	null	0.99830343032444	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISCOREAF-E-T1	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISCOREAF-E-T2	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IISDRIEAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IISDRIEAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISDRIEAF-E	-	-	-	-	UP	5	0.85	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISDRIEAF-E-T1	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISDRIEAF-E-T2	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1070,11 +1070,11 @@ TS DATA	REGION1
 	NCAP_AFA	IISDRIEAF-NG	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISHDRIEAF-N	-	-	-	-	UP	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISHPEMHGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IISOTHEAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IISOTHEAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISOTHEAF-E	-	-	-	-	UP	5	0.85	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISOTHEAF-E-T1	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISOTHEAF-E-T2	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IISSCREAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IISSCREAF-E	-	-	-	-	LO	5	0	null	null	null	null	0	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISSCREAF-E	-	-	-	-	UP	5	0.85	null	null	1	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISSCREAF-E-T1	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IISSCREAF-E-T2	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1643,7 +1643,7 @@ TS DATA	REGION1
 	PRC_RESID	ICPSCLE-E	-	-	-	-	-	0	175.515239515136	null	null	null	null	101.088221948532	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSELC-E	-	-	-	-	-	0	1.37072094471287	null	null	null	null	1.99318337978868	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSGAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPSOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSOHF-E	-	-	-	-	-	0	0	null	null	null	null	4.84864199131393	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPTGAS-E	-	-	-	-	-	0	39.0040000305176	null	null	null	null	28.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2033,7 +2033,7 @@ TID DATA	REGION1
 	NCAP_START	IISDRIEAF-NC	-	-	-	-	-	2017	
 	NCAP_START	IISDRIEAF-NG	-	-	-	-	-	2017	
 	NCAP_START	IISHDRIEAF-N	-	-	-	-	-	2012	
-	NCAP_START	IISHHDRI-N	-	-	-	-	-	2040	
+	NCAP_START	IISHHDRI-N	-	-	-	-	-	2031	
 	NCAP_START	IISHHGNSTOR-N	-	-	-	-	-	2012	
 	NCAP_START	IISHPEMHGN	-	-	-	-	-	2012	
 	NCAP_START	IISSCREAF-N	-	-	-	-	-	2017	

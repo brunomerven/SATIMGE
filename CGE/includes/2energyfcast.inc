@@ -79,8 +79,8 @@ loop (H,
     YHE(TC) = HFORE('hhd-he',XC,TC);
 
 * write new demand driver values to drivers gdx if CGE gets to 2050
-  if(QVAX('aagri','nat',XC,'2050',TT),
-    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT
-  );
+*  if(QVAX('aagri','nat',XC,'2050',TT),
+    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT;
+*  );
 
 

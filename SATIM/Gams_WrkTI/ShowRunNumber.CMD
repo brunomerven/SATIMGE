@@ -1,1 +1,1 @@
-echo NoPAMS-HiGr
+echo CPAMS
