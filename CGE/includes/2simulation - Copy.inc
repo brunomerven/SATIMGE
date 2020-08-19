@@ -11,17 +11,18 @@ SCALAR
 
 SETS
 *Simulations
-* X                       simulations
-* XC(X)                   active simulations
+ X                       simulations
+ XC(X)                   active simulations
+ XNB(X)                  nonbase simulations
 *Time periods
 * T                       time periods
-* TC(T)                   active time periods
+ TC(T)                   active time periods
  TCN1(T)                 TC except base year
  T1(T)                   first year of simulation
  T2(T)                   second year of simulation
  TN(T)                   final year
 *Times model sets
-* TT(T)                   TIMES model years
+ TT(T)                   TIMES model years
  TTC(T)                  current TIMES model year
  TT1(T)                  TIMES model base year
  TTN(T)                  TIMES model final years (beyond CGE years)
@@ -30,6 +31,7 @@ SETS
 
 
 *Model management sets
+ XBASINIT(X,T)           simulations with variables initialized at base and yr level
  MISCAC                  miscellaneous simulation data elements  / QG, GTRH, HREM, FSAV, GSAV, PWE, PWM, MPS, DTAX /
 *Sector-specific closures
  FL(A)                   sector-specific (fixed) land demand
@@ -52,10 +54,16 @@ SETS
                           atequ,        afurn,        aoman,        acons,        atrps,
                           altrp-p,      altrp-f,      awtrp,        aatrp      /
 
-  energy(c)       energy commodities     / ccoal-low, ccoal-hgh, ccoil, cngas, cpetr_p, cpetr_d, cpetr_o, celec, chydr /
+ TECHTYPE                SATIM->eSAGE Tech Types
+                         / ctl, gtl, oil, hyd, spv, sth, wnd, cds, clw, gas, nuc, die /
+
+
 ;
 
 PARAMETERS
+ XNUM                    number of simulations
+ TNUM                    number of active years (used for reporting)
+ TTGAP(T)                TIMES time period gap
 *Macroeconomic and factor market closures
  CLOSURES(AC,X)          closure selection from Excel
  NUMERAIRE(X)            numeraire
@@ -80,7 +88,8 @@ PARAMETERS
  RETALTAX(X,T)           carbon tax by foreign countries on RSA exports (Rands per ton of CO2 equivalent)
  CLEANTECH(C,X,T)        carbon content adjustment factor
  EINVEST(X,T)            electricity sector build plan investment cost (billions of Rands)
- PWGR(C,RUN,T)           world price trajectories
+ ECAPACITY(X,RD,T)       electricity sector capacity stream (relative to base year)
+ PWGR(C,RUN,T)             world price ratios from Paltsev
 *
  XIMPHYD(X)              import hydro on-off
 
@@ -100,14 +109,15 @@ PARAMETERS
  deltatev(c,rw,run,t)
 ;
 
-CTA_EMRR(CTA)=0;
+ CTA_EMRR(CTA)=0;
 
 $call    "gdxxrw i=cge\%basedata% o=basedata index=index!a6 checkdate"
 $gdxin   basedata.gdx
-$loaddc  CLOSURES PWGR CARBONTAX RETALTAX FL
-
-
-
+$load    X T TDIR TIMESDIR
+$loaddc  XC TC TT TTN FL AFX CLOSURES PWGR CARBONTAX RETALTAX
+*CLEANTECH EINVEST ECAPACITY
+*fh 291118: SANEDI-EV shocks
+$loaddc deltaqev deltatev
 
 alias (TC,TCP), (TT, TTP);
 
@@ -115,6 +125,7 @@ alias (TC,TCP), (TT, TTP);
  T1(TC)$(ORD(TC) EQ SMIN(TCP, ORD(TCP))) = YES;
  T2(TC)$(ORD(TC) EQ 2)                   = YES;
  TN(TC)$(ORD(TC) EQ SMAX(TCP, ORD(TCP))) = YES;
+ TNUM = SUM(T$TN(T), ORD(T)) - SUM(T$T1(T), ORD(T));
 
 *Times model time periods
  TT1(TT)$(ORD(TT) EQ 1) = YES;
@@ -123,12 +134,21 @@ alias (TC,TCP), (TT, TTP);
 
 *Count gap between solve years
 * TGAP(T)$(TC(T) AND NOT T1(T)) = ORD(T) - SMAX(TCP$TC(TCP), ORD(TCP)$(ORD(T) GT ORD(TCP)));
+ TTGAP(T)$(TT(T) AND NOT T1(T)) = ORD(T) - SMAX(TCP$TT(TCP), ORD(TCP)$(ORD(T) GT ORD(TCP)));
 
 *CGE years (TP) when elec capital is fixed during TIMES years (T)
  EFX(T,TCP)$(TT(T) AND (ORD(T) GE ORD(TCP))) = YES;
 
-*bm Fixed capital growth sectors are now defined in 2simulation_loop.inc
- ANFX(A,RD) = YES;
+*Simulations
+ XC('INIT') = NO;
+
+ XNUM = MAX(CARD(XC)-1,1) ;
+ XNB(XC) = YES;
+ XNB('BASE') = NO;
+ XBASINIT(XC,TC) = NO;
+
+*Fixed capital growth sectors
+ ANFX(A,RD)$(NOT AFX(A,RD)) = YES;
 
 $ontext
  Set
@@ -144,17 +164,22 @@ $offtext
 *1. Excel inputted scenario calibration
 *------------------------------------------------------------------------------
 
-
-
-
 $include cge\includes\2projection.inc
-
-* Need to export for GIT FSAVGR, Closures, TFPGR, COMPGR
 
 *----------------------------------------------------------------------
 *2. Non-excel inputted scenario calibration
 *----------------------------------------------------------------------
 
+*Notes on units in CGE model
+* Coal: millions of short tons
+* Crude oil: millions of short tons
+* Petroleum: billions of liters
+* Electricity: millions of MWh
+* SAM: billions of Rands
+* Coefficient:
+*        Coal = tons CO2 per ton coal
+*        Oil  = tons CO2 per kiloliter oil
+*        Gas  = tons CO2 per kiloliter gas
 
 SETS
  CEGY(C)                 energy commodities   / ccoal-low, ccoal-hgh, ccoil, cngas, celec, cpetr_p, cpetr_d, cpetr_o /
@@ -179,6 +204,7 @@ PARAMETER
  PCAPGR(X,T,TT)       electricity sector capacity levels by energy source
 *Energy sector investment costs
  IADJSESIM(X,T)          total electricity investment cost growth
+ EAFXCAP(X,T,TT)      electricity capital from TIMES in units inconsistent with CGE
 *bm+fh 201118
  PAFXCAP(X,T,TT)      refinery capital from TIMES in units inconsistent with CGE
 ;
@@ -198,6 +224,14 @@ PARAMETER
 
 *Retaliatory tax on RSA exports based on carbon content -----
  RTCO2ESIM(XC,TC)$(NOT T1(TC)) = RETALTAX(XC,TC)/1000/EXR0;
+
+*Cleaner coal ------
+* Technology introduced over time (needs to matched to build plan)
+*fh 022019
+* CLEANTECH(C,XC,TC)$(NOT CLEANTECH(C,XC,TC)) = 1;
+* CO2CSIM(C,XC,TC)    = co2c0(C)    * CLEANTECH(C,XC,TC);
+* CO2ESIM(C,RW,XC,TC) = co2e0(C,RW) * CLEANTECH(C,XC,TC);
+* CO2MSIM(C,RW,XC,TC) = co2m0(C,RW) * CLEANTECH(C,XC,TC);
 
 *Energy intensity elasticities ------
 * Intermediates
@@ -227,15 +261,7 @@ PARAMETER
  rhova_coal(A,RD,X,T)=rhova(A,RD);
 * rhova_coal('acoal',RD,'capinten',T)=rhova('acoal',RD)*0.5;
 
-Parameter
- COVID(X,T)
- ktest(X,T);
 
- ktest(X,T)=1;
-* ktest(X,'2020')=12;
-
- COVID(X,T)=1;
- COVID(X,'2020')=0.89;
 
 *----------------------------------------------------------------------
 *3. Closures
@@ -286,6 +312,7 @@ $include cge\includes\2initialize.inc
 
 *Initialise links to TIMES model
 $include cge\includes\2energyinit.inc
+$include cge\includes\2energychecksinit.inc
 
 
 

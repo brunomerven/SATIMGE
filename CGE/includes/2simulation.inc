@@ -106,7 +106,7 @@ CTA_EMRR(CTA)=0;
 
 $call    "gdxxrw i=cge\%basedata% o=basedata index=index!a6 checkdate"
 $gdxin   basedata.gdx
-$loaddc  CLOSURES PWGR CARBONTAX RETALTAX FL TCF
+$loaddc  CLOSURES PWGR CARBONTAX RETALTAX FL TCF AFX
 
 
 alias (TC,TCP), (TT, TTP);
@@ -128,7 +128,7 @@ alias (TC,TCP), (TT, TTP);
  EFX(T,TCP)$(TT(T) AND (ORD(T) GE ORD(TCP))) = YES;
 
 *Simulations
- ANFX(A,RD) = YES;
+ ANFX(A,RD)$(NOT AFX(A,RD)) = YES;
 
 $ontext
  Set

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/04	13:44:57
+Creation Date:	2020/08/18	15:45:13
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TTRA_GTS_AVL	NDC PAMS transport GTS: low scenario	(Copy of comment for Scenario TCH_TRA follows) {/n}Vehicle cost parity in 2040{/n}
@@ -74,21 +74,21 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S012	A010	-	-	0.740818220681718	-
 	SHAPE	-	_	S012	A030	-	-	0.406569659740599	-
 	SHAPE	-	_	S012	A050	-	-	0.149568619222635	-
-	SHAPE	-	_	S013	A001	-	-	0.934780021606267	-
-	SHAPE	-	_	S013	A005	-	-	0.845823941181813	-
-	SHAPE	-	_	S013	A010	-	-	0.692502072335172	-
-	SHAPE	-	_	S013	A030	-	-	0.38005319531677	-
-	SHAPE	-	_	S013	A050	-	-	0.139813757108554	-
-	SHAPE	-	_	S014	A001	-	-	0.934780021606267	-
-	SHAPE	-	_	S014	A005	-	-	0.845823941181813	-
-	SHAPE	-	_	S014	A010	-	-	0.692502072335172	-
-	SHAPE	-	_	S014	A030	-	-	0.38005319531677	-
-	SHAPE	-	_	S014	A050	-	-	0.139813757108554	-
-	SHAPE	-	_	S015	A001	-	-	0.934780021606267	-
-	SHAPE	-	_	S015	A005	-	-	0.845823941181813	-
-	SHAPE	-	_	S015	A010	-	-	0.692502072335172	-
-	SHAPE	-	_	S015	A030	-	-	0.38005319531677	-
-	SHAPE	-	_	S015	A050	-	-	0.139813757108554	-
+	SHAPE	-	_	S013	A001	-	-	0.942128561864291	-
+	SHAPE	-	_	S013	A005	-	-	0.852473175375217	-
+	SHAPE	-	_	S013	A010	-	-	0.69794600485373	-
+	SHAPE	-	_	S013	A030	-	-	0.383040888829065	-
+	SHAPE	-	_	S013	A050	-	-	0.140912868128249	-
+	SHAPE	-	_	S014	A001	-	-	0.942128561864291	-
+	SHAPE	-	_	S014	A005	-	-	0.852473175375217	-
+	SHAPE	-	_	S014	A010	-	-	0.69794600485373	-
+	SHAPE	-	_	S014	A030	-	-	0.383040888829065	-
+	SHAPE	-	_	S014	A050	-	-	0.140912868128249	-
+	SHAPE	-	_	S015	A001	-	-	0.942128561864291	-
+	SHAPE	-	_	S015	A005	-	-	0.852473175375217	-
+	SHAPE	-	_	S015	A010	-	-	0.69794600485373	-
+	SHAPE	-	_	S015	A030	-	-	0.383040888829065	-
+	SHAPE	-	_	S015	A050	-	-	0.140912868128249	-
 	SHAPE	-	_	S016	A001	-	-	1	-
 	SHAPE	-	_	S016	A005	-	-	0.90483741803596	-
 	SHAPE	-	_	S016	A010	-	-	0.740818220681718	-
@@ -840,7 +840,7 @@ TS DATA	REGION1
 	COM_PROJ	-	TFRCO	-	-	-	-	0	22	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFREX	-	-	-	-	0	82	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFROT	-	-	-	-	0	25.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TPPRCAR	-	-	-	-	0	87.436118489607	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TPPRCAR	-	-	-	-	0	78.2853702570841	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPRMOT	-	-	-	-	0	4.78865506121103	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPRSUV	-	-	-	-	0	10.045687245472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPUBRT	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -922,15 +922,15 @@ TS DATA	REGION1
 	NCAP_AF	TPPRCARODS-E	-	-	-	ANNUAL	UP	3	0.813658184398027	null	null	null	null	0.752850793725871	null	null	0.6845892057376	null	null	null	null	null	null	null	null	null	0.486576749383267	null	null	null	null	null	null	null	null	null	0.349017062960881	null	0.247252075771124	null	null	
 	NCAP_AF	TPPRCARODSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRCARODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPRCAROGS-E	-	-	-	ANNUAL	UP	3	0.757557096743815	null	null	null	null	0.74358252041884	null	null	0.697320460217965	null	null	null	null	null	null	null	null	null	0.517286969055155	null	null	null	null	null	null	null	null	null	0.375062336562287	null	0.266458479601995	null	null	
-	NCAP_AF	TPPRCAROGSH-E	-	-	-	ANNUAL	UP	3	1.03240538067946	null	null	null	null	0.928529024376965	null	null	0.83099732585971	null	null	null	null	null	null	null	null	null	0.570790585456615	null	null	null	null	null	null	null	null	null	0.396119006828408	null	0.275814146043409	null	null	
+	NCAP_AF	TPPRCAROGS-E	-	-	-	ANNUAL	UP	3	0.6733840859945	null	null	null	null	0.6609622403723	null	null	0.619840409082635	null	null	null	null	null	null	null	null	null	0.45981063916014	null	null	null	null	null	null	null	null	null	0.333388743610922	null	0.23685198186844	null	null	
+	NCAP_AF	TPPRCAROGSH-E	-	-	-	ANNUAL	UP	3	0.91769367171507	null	null	null	null	0.825359132779525	null	null	0.73866428965308	null	null	null	null	null	null	null	null	null	0.50736940929477	null	null	null	null	null	null	null	null	null	0.352105783847473	null	0.245168129816364	null	null	
 	NCAP_AF	TPPRCAROGSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRCAROGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRMOTELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRMOTOGS-E	-	-	-	ANNUAL	UP	3	0.763444811175887	null	null	null	null	0.64795633904393	null	null	0.587007034294585	null	null	null	null	null	null	null	null	null	0.419661118077548	null	null	null	null	null	null	null	null	null	0.296489812469848	null	0.20654236110799	null	null	
 	NCAP_AF	TPPRMOTOGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVBGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPRSUVELC-E	-	-	-	ANNUAL	UP	3	1.05070463970461	null	null	null	null	0.943742758808366	null	null	0.923116346386638	null	null	null	null	null	null	null	null	null	0.618783391806142	null	null	null	null	null	null	null	null	null	0.414782911681581	null	0.278037300453194	null	null	
+	NCAP_AF	TPPRSUVELC-E	-	-	-	ANNUAL	UP	3	0.943742758808366	null	null	null	null	0.786295629963415	null	null	0.923116346386638	null	null	null	null	null	null	null	null	null	0.618783391806142	null	null	null	null	null	null	null	null	null	0.414782911681581	null	0.278037300453194	null	null	
 	NCAP_AF	TPPRSUVELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVGAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVHGNF-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	

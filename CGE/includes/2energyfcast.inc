@@ -80,7 +80,7 @@ loop (H,
 
 * write new demand driver values to drivers gdx if CGE gets to 2050
 *  if(QVAX('aagri','nat',XC,'2050',TT),
-    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT;
+    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
 *  );
 
 

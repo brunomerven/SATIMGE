@@ -13,7 +13,7 @@ BudShare0('cprtr',H,TC) = BudShareFullRebound('cprtr',H,TC)*Rebound(TC)+BudShare
 
 
 * Temporary fix for electricity by households, which is adjusted to track SATIM, until a full end-use model in eSAGE is implemented
-BudShare0('celec',H,TC)$PQX('celec','base',TC-2,TT) = BudShare0('celec',H,TC-1)*sum(FH,FLOW_IN_FSFuels(FH,'celec',TC-1))/sum(FH,FLOW_IN_FSFuels(FH,'celec',TC))*PQX('celec','base',TC-1,TT)/PQX('celec','base',TC-2,TT);
+BudShare0('celec',H,TC)$PQX('celec',XC,TC-2,TT) = BudShare0('celec',H,TC-1)*sum(FH,FLOW_IN_FSFuels(FH,'celec',TC-1))/sum(FH,FLOW_IN_FSFuels(FH,'celec',TC))*PQX('celec','base',TC-1,TT)/PQX('celec',XC,TC-2,TT);
 
 BudShareNonEnergy(H,TC) =  1-sum(CHEnergy,BudShare0(CHEnergy,H,TC));
 

@@ -74,9 +74,9 @@ CHNonEnergy(CHEnergy) = NO;
 
 *initialise rebound parameter (should be made a scenario parameter later)
 Rebound(T) = 0;
-PQX('celec','base','2012',TT) = PQ0('celec');
-YIX(H,'base','2012',TT) = YI0(H);
-QHX('cprtr',H,'base','2012',TT) = QH0('cprtr',H);
+PQX('celec',XC,'2012',TT) = PQ0('celec');
+YIX(H,XC,'2012',TT) = YI0(H);
+QHX('cprtr',H,XC,'2012',TT) = QH0('cprtr',H);
 * mapping of households
 *FH*----------------------------------------------------------------------------
  popvalfact(H,X,TC)=1;

@@ -394,7 +394,6 @@ $offtext
 if(SIM_ESAGE(RUN) eq 1,
 
 $batinclude cge\includes\2simulation_loop.inc
-REPORT(PRC,'ACTGRP',TC,RUN,'Employment') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),sum(flab,QFX(flab,A,'nat','base',TC,'2050'))));
 *$batinclude cge\includes\eSAGE_Report_Short.inc
 
 * Run Waste Model
@@ -460,6 +459,7 @@ REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 
 GDP_RUN(TC) = SUM(FS,GVA_FS(FS,TC));
 
+$ontext
 $include SATIM\includes\GHGEnergyReport.inc
 
 *Get Process Emissions
@@ -470,14 +470,17 @@ $include Waste\includes\GHGWasteReport.inc
 
 * Run AFOLU Model
 $include AFOLU\includes\GHGAfoluReport.inc
-
+$offtext
 );
 *end RUN loop
 *-------------------------------------------------------------------------------
 
 execute_unload "REPORT.gdx" REPORT
+*execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
+
+
+
 *execute 'gdxdump REPORT.gdx output=REPORT.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Activity,Capacity,NewCapacity,FlowIn,FlowOut,CO2,CH4,N2O,HFC,PFC,CO2eq,Investment,GVA,Employment" cDim=y';
-execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
 *execute 'gdxxrw.exe i=REPORT.gdx o=.\Results\REPORT.xlsx index=index!a6';
 
 

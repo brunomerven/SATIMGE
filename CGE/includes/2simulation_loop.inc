@@ -30,7 +30,7 @@ $include cge\includes\2varinit.inc
 
 * Adjust Transport Demand
 *  LOOP(TC$(ORD(TC) gt 6),
-*        SIM_DEMX(TPPR,TC)$(SUM(H,QHX('cprtr',H,'base',TC-1,TT-1))) = SIM_DEMX(TPPR,TC-1)*SUM(H,QHX('cprtr',H,'base',TC,TT-1))/SUM(H,QHX('cprtr',H,'base',TC-1,TT-1));
+*        SIM_DEMX(TPPR,TC)$(SUM(H,QHX('cprtr',H,XC,TC-1,TT-1))) = SIM_DEMX(TPPR,TC-1)*SUM(H,QHX('cprtr',H,XC,TC,TT-1))/SUM(H,QHX('cprtr',H,XC,TC-1,TT-1));
 *);
 * LOOP(TC,
 
@@ -89,6 +89,7 @@ $include SATIM\includes\2TIMESReport.inc
 * do reverse mapping for industry sectors (excludes power and petroleum)
  ICAGR(CXEP,A,TC) = SUM(FSXEP$MFSA(FSXEP,A),ICAFSGR(CXEP,FSXEP,TC));
  IFAGR(F,A,TC) = SUM(FS$MFSA(FS,A),IFAFSGR(F,FS,TC));
+*IFAGR(F,A,TC) = 1;
 
 *BM correction on power sector from freight demand for moving coal
  ICAGR('cftrp-l','aelec',TC) = ICAGR('ccoal-low','aelec',TC);
@@ -533,7 +534,7 @@ $include cge\includes\2energychecks.inc
 
   );
 *end TT loop
-
+REPORT(PRC,'ACTGRP',TC,RUN,'Employment') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),sum(flab,QFX(flab,A,'nat','base',TC,'2050'))));
 );
 *end XC loop
 
