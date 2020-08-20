@@ -242,3 +242,9 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  REPORT(PRC,'ACTGRP',TC,RUN,'Employment')$UC_CAP('UCPWR_FLAB-P','LHS','REGION1','2012',PRC) = sum(SATIM_LAB, UC_CAP(SATIM_LAB,'LHS','REGION1','2012',PRC))*(-1)*TVCAP(TC,PRC);
 
  REPORT('ETRANSDUM','ELC',TC,RUN,'Price') = ETPRICE(TC);
+
+
+* Other indicators - this could be done more elegantly
+ REPORT('hhd-le','ACTGRP',TC,RUN,'Population') = TFHPOP('hhd-le',TC)*POP(TC);
+ REPORT('hhd-me','ACTGRP',TC,RUN,'Population') = TFHPOP('hhd-me',TC)*POP(TC);
+ REPORT('hhd-he','ACTGRP',TC,RUN,'Population') = TFHPOP('hhd-he',TC)*POP(TC);

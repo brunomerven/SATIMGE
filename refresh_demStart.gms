@@ -22,7 +22,7 @@ $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=inde
 $gdxin  SetsAndMaps\SetsMaps.gdx
 $load FS FH
 
-*$call "gdxxrw i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6";
+$call "gdxxrw i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6";
 $gdxin drivers.gdx
 $load GVA_FS POP YHE TFHPOP MFHHT
 
