@@ -1099,43 +1099,45 @@ SET PRC_PRE /
   'REGION1'   .'PEXHBI'
   'REGION1'   .'PEXHGN'
   'REGION1'   .'PEXOXY'
-  'REGION1'   .'XICPELC'
   'REGION1'   .'XICPGAS'
-  'REGION1'   .'XIFAELC'
   'REGION1'   .'XIFAGAS'
-  'REGION1'   .'XIFBELC'
   'REGION1'   .'XIFBGAS'
   'REGION1'   .'XIISBIO'
   'REGION1'   .'XIISCKC'
   'REGION1'   .'XIISCOA'
-  'REGION1'   .'XIISELC'
   'REGION1'   .'XIISELCHY'
   'REGION1'   .'XIISGAS'
   'REGION1'   .'XIISOIL'
   'REGION1'   .'XIISOLP'
   'REGION1'   .'XIISSSC'
   'REGION1'   .'XIISWAS'
-  'REGION1'   .'XIMIELC'
   'REGION1'   .'XIMIGAS'
   'REGION1'   .'XINDELP'
-  'REGION1'   .'XINFELC'
   'REGION1'   .'XINFGAS'
   'REGION1'   .'XINMBIO'
   'REGION1'   .'XINMCOA'
-  'REGION1'   .'XINMELC'
   'REGION1'   .'XINMGAS'
   'REGION1'   .'XINMOIL'
-  'REGION1'   .'XIOTELC'
   'REGION1'   .'XIOTGAS'
   'REGION1'   .'XIPPBIB'
   'REGION1'   .'XIPPCOA'
-  'REGION1'   .'XIPPELC'
   'REGION1'   .'XIPPGAS'
   'REGION1'   .'XIPPODS'
   'REGION1'   .'XIPPOGS'
   'REGION1'   .'XIPPOHF'
   'REGION1'   .'XIPPOLP'
   'REGION1'   .'XIPPRECP'
+/;
+SET PRC_ELE /
+  'REGION1'   .'XICPELC'
+  'REGION1'   .'XIFAELC'
+  'REGION1'   .'XIFBELC'
+  'REGION1'   .'XIISELC'
+  'REGION1'   .'XIMIELC'
+  'REGION1'   .'XINFELC'
+  'REGION1'   .'XINMELC'
+  'REGION1'   .'XIOTELC'
+  'REGION1'   .'XIPPELC'
 /;
 SET PRC_CHP /
   'REGION1'   .'IPPCHPGAS01-N'
@@ -1955,7 +1957,7 @@ PARAMETER ANCAP_START /
   'REGION1'                 .'IISDRIEAF-NC'               2017
   'REGION1'                 .'IISDRIEAF-NG'               2017
   'REGION1'                 .'IISHDRIEAF-N'               2012
-  'REGION1'                 .'IISHHDRI-N'                 2031
+  'REGION1'                 .'IISHHDRI-N'                 2040
   'REGION1'                 .'IISHHGNSTOR-N'              2012
   'REGION1'                 .'IISHPEMHGN'                 2012
   'REGION1'                 .'IISSCREAF-N'                2017

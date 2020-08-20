@@ -1,0 +1,1166 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/08/19	8:52:33 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_RES-PAML	Residential - Low ambition PAMS	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	RHIEW-LO	HIgh income water heating HP and SWH LO	uconstraint	UC_N,UCRT,UCRULE	
+	C	RHIEW-UP	HIgh income water heating HP and SWH UB	uconstraint	UC_N,UCRT,UCRULE	
+	E	RESBIW	Residential - Biomass Wood	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESCH4	Residential - Methane	KT	COM,ENV,ANNUAL,GHG	
+	E	RESCO2	Residential - Carbon Dioxide	KT	COM,ENV,ANNUAL,GHG	
+	E	RESCOA	Residential - Coal	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESELC	Residential - Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	RESGAS	Residential - Natural gas	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESN2O	Residential - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
+	E	RESNOX	Residential - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
+	E	RESOKE	Residential - Oil Paraffin	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESOLP	Residential - Oil LPG	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESSOX	Residential - Sulphur Gases	KT	COM,ENV,ANNUAL,GHG	
+	E	RHEH	Residential - Space Heating - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RHEK	Residential - Cooking - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RHEL	Residential - Lighting - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RHEO	Residential - Other - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RHER	Residential - Refrigeration - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RHEW	Residential -water heating non geyser high income	PJ	COM,DEM,DAYNITE,RES	
+	E	RHEWG	Residential - Water Heating Geyser - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLEH	Residential - Space Heating - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLEK	Residential - Cooking - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLEL	Residential - Lighting - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLEO	Residential - Other - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLER	Residential - Refrigeration - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLEW	Residential - Water Heating - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLEWG	Residential - Water Heating Geyser - Low Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RLNL	Residential - Lighting - Low Income Electrified paraffin	PJ	COM,DEM,DAYNITE,RES	
+	E	RMEH	Residential - Space Heating - Middle Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RMEK	Residential - Cooking - Middle Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RMEL	Residential - Lighting - Middle Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RMEO	Residential - Other - Middle Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RMER	Residential - Refrigeration - Middle Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RMEW	0	PJ	COM,DEM,DAYNITE,RES	
+	E	RMEWG	Residential - Water Heating Geyser - Middle Income Electrified	PJ	COM,DEM,DAYNITE,RES	
+	E	RMNL	Residential - Lighting - Middle Income Electrified paraffin	PJ	COM,DEM,DAYNITE,RES	
+	T	RHEHBIWSTOV-E	Residential - Space Heating - High Income Electrified - Biomass Wood - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEHCOASTOV-E	Residential - Space Heating - High Income Electrified - Coal - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEHELCHEATFIN-E	Residential - Space Heating - High Income Electrified - Electricity - HEATFIN - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEHGASHEAT-N	Residential - Space Heating - High Income Electrified - Natural Gas - HEAT - N	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEHOKEHEAT-E	Residential - Space Heating - High Income Electrified - Oil Paraffin - HEAT - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEHOLPHEAT-E	Residential - Space Heating - High Income Electrified - Oil LPG - HEAT - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEKBIWSTOV-E	Residential - Cooking - High Income Electrified - Biomass Wood - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEKELCSTOV-E	Residential - Cooking - High Income Electrified - Electricity - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEKGASSTOV-E	Residential - Cooking - High Income Electrified - Natural Gas - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEKOKEPRIMUS-E	Residential - Cooking - High Income Electrified - Oil Paraffin - PRIMUS - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEKOLPSTOV-E	Residential - Cooking - High Income Electrified - Oil LPG - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHELELCINC-E	Residential - Lighting - High Income Electrified - Electricity - INC - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEOELCOTH-E	Residential - Other - High Income Electrified - Electricity - OTH - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHERELCREF-E	Residential - Refrigeration - High Income Electrified - Electricity - REF - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEWELCCHP-N	Residential - Water Heating - High Income Electrified - Electricity - HP - N	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEWELCGEY-E	Residential - Water Heating - High Income Electrified - Electricity - GEY - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEWELCSWH-E	Residential - Water Heating - High Income Electrified - Electricity - SWH - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RHEWOLPSTOV-E	Residential - Water Heating - High Income Electrified - Oil LPG - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEHBIWOPEN-E	Residential - Space Heating - Low Income Electrified - Biomass Wood - OPEN - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEHCOABNM-E	Residential - Space Heating - Low Income Electrified - Coal - BNM - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEHELCHEATBAR-E	Residential - Space Heating - Low Income Electrified - Electricity - HEATBAR - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEHOKEHEAT-E	Residential - Space Heating - Low Income Electrified - Oil Paraffin - HEAT - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEHOLPHET-E	Residential - Space Heating - Low Income Electrified - Oil LPG - HET - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEKBIWBNM-E	Residential - Cooking - Low Income Electrified - Biomass Wood - BNM - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEKCOABNM-E	Residential - Cooking - Low Income Electrified - Coal - BNM - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEKELCHOT-E	Residential - Cooking - Low Income Electrified - Electricity - HOT - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEKELCSTOV-E	Residential - Cooking - Low Income Electrified - Electricity - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEKOKEWICK-E	Residential - Cooking - Low Income Electrified - Oil Paraffin - WICK - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEKOLPRING-E	Residential - Cooking - Low Income Electrified - Oil LPG - RING - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLELELCINC-E	Residential - Lighting - Low Income Electrified - Electricity - INC - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEOELCOTH-E	Residential - Other - Low Income Electrified - Electricity - OTH - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLERELCREF-E	Residential - Refrigeration - Low Income Electrified - Electricity - REF - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEWBIWKETBI-E	Residential - Water Heating - Low Income Electrified - Biomass Wood - KETBI - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEWCOAKETCOA-E	Residential - Water Heating - Low Income Electrified - Coal - KETCOA - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEWELCKET-E	Residential - Water Heating - Low Income Electrified - Electricity - KET - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEWOKEKETWI-E	Residential - Water Heating - Low Income Electrified - Oil Paraffin - KETWI - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RLEWOLPKETLPG-E	Residential - Water Heating - Low Income Electrified - Oil LPG - KETLPG - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEHBIWSTOV-E	Residential - Space Heating - Middle Income Electrified - Biomass Wood - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEHCOASTOV-E	Residential - Space Heating - Middle Income Electrified - Coal - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEHELCHEATFIN-E	Residential - Space Heating - Middle Income Electrified - Electricity - HEATFIN - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEHGASHEAT-N	Residential - Space Heating - Middle Income Electrified - Natural Gas - HEAT - N	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEHOKEHEAT-E	Residential - Space Heating - Middle Income Electrified - Oil Paraffin - HEAT - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEHOLPHEAT-E	Residential - Space Heating - Middle Income Electrified - Oil LPG - HEAT - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEKBIWSTOV-E	Residential - Cooking - Middle Income Electrified - Biomass Wood - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEKCOABNM-E	Residential - Cooking - Middle Income Electrified - Coal - BNM - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEKELCSTOV-E	Residential - Cooking - Middle Income Electrified - Electricity - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEKGASSTOV-E	Residential - Cooking - Middle Income Electrified - Natural Gas - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEKOKEWICK-E	Residential - Cooking - Middle Income Electrified - Oil Paraffin - WICK - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEKOLPSTOV-E	Residential - Cooking - Middle Income Electrified - Oil LPG - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMELELCINC-E	Residential - Lighting - Middle Income Electrified - Electricity - INC - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEOELCOTH-E	Residential - Other - Middle Income Electrified - Electricity - OTH - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMERELCREF-E	Residential - Refrigeration - Middle Income Electrified - Electricity - REF - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWBIWKETBI-E	Residential - Water Heating - Middle Income Electrified - Biomass Wood - KETBI - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWCOASTOV-E	Residential - Water Heating - Middle Income Electrified - Coal - STOV - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWELCCHP-N	Residential - Water Heating - Middle Income Electrified - Electricity - HP - N	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWELCGEY-E	Residential - Water Heating - Middle Income Electrified - Electricity - GEY - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWELCKET-E	Residential - Water Heating - Middle Income Electrified - Electricity - Kettle - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWELCSWH-E	Residential - Water Heating - Middle Income Electrified - Electricity - SWH - Low pressure	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWGASGEY-N	Residential - Water Heating - Middle Income Electrified - Natural Gas - GEY - N	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWOKEKETPR-E	Residential - Water Heating - Middle Income Electrified - Oil Paraffin - KETPR - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	RMEWOLPKETLPG-E	Residential - Water Heating - Middle Income Electrified - Oil LPG - KETLPG - E	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHEH	Backstop - Residential - Space Heating - High Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHEK	Backstop - Residential - Cooking - High Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHEL	Backstop - Residential - Lighting - High Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHEO	Backstop - Residential - Other - High Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHER	Backstop - Residential - Refrigeration - High Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHEW	Backstop - Residential -water heating non geyser high income	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRHEWG	Backstop - Residential - Water Heating Geyser - High Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLEH	Backstop - Residential - Space Heating - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLEK	Backstop - Residential - Cooking - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLEL	Backstop - Residential - Lighting - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLEO	Backstop - Residential - Other - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLER	Backstop - Residential - Refrigeration - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLEW	Backstop - Residential - Water Heating - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLEWG	Backstop - Residential - Water Heating Geyser - Low Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRLNL	Backstop - Residential - Lighting - Low Income Electrified paraffin	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMEH	Backstop - Residential - Space Heating - Middle Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMEK	Backstop - Residential - Cooking - Middle Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMEL	Backstop - Residential - Lighting - Middle Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMEO	Backstop - Residential - Other - Middle Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMER	Backstop - Residential - Refrigeration - Middle Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMEW	Backstop - 0	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMEWG	Backstop - Residential - Water Heating Geyser - Middle Income Electrified	PJ,PJa	PRC,DMD,DAYNITE	
+	T	ZZRMNL	Backstop - Residential - Lighting - Middle Income Electrified paraffin	PJ,PJa	PRC,DMD,DAYNITE	
+
+TS DATA	REGION1
+	ACT_EFF	RHEHBIWSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.59	null	null	null	null	0.59	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	0.59	null	null	1
+	ACT_EFF	RHEHCOASTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.59	null	null	null	null	0.59	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	0.59	null	null	1
+	ACT_EFF	RHEHELCHEATFIN-E	-	ACTGRP	-	ANNUAL	-	0	0.9725	null	null	null	null	0.9725	null	null	1.079475	null	null	null	null	null	null	null	null	null	1.293425	null	null	null	null	null	null	null	null	null	1.293425	null	1.293425	null	null	1
+	ACT_EFF	RHEHGASHEAT-N	-	ACTGRP	-	ANNUAL	-	0	0.96	null	null	null	null	0.96	null	null	0.96	null	null	null	null	null	null	null	null	null	0.96	null	null	null	null	null	null	null	null	null	0.96	null	0.96	null	null	1
+	ACT_EFF	RHEHOKEHEAT-E	-	ACTGRP	-	ANNUAL	-	0	0.73	null	null	null	null	0.73	null	null	0.73	null	null	null	null	null	null	null	null	null	0.73	null	null	null	null	null	null	null	null	null	0.73	null	0.73	null	null	1
+	ACT_EFF	RHEHOLPHEAT-E	-	ACTGRP	-	ANNUAL	-	0	0.79	null	null	null	null	0.79	null	null	0.79	null	null	null	null	null	null	null	null	null	0.79	null	null	null	null	null	null	null	null	null	0.79	null	0.79	null	null	1
+	ACT_EFF	RHEKBIWSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.25	null	null	null	null	0.25	null	null	0.2775	null	null	null	null	null	null	null	null	null	0.3325	null	null	null	null	null	null	null	null	null	0.3325	null	0.3325	null	null	1
+	ACT_EFF	RHEKELCSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	0.65	null	null	0.7215	null	null	null	null	null	null	null	null	null	0.8645	null	null	null	null	null	null	null	null	null	0.8645	null	0.8645	null	null	1
+	ACT_EFF	RHEKGASSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	0.9	null	null	0.999	null	null	null	null	null	null	null	null	null	1.197	null	null	null	null	null	null	null	null	null	1.197	null	1.197	null	null	1
+	ACT_EFF	RHEKOKEPRIMUS-E	-	ACTGRP	-	ANNUAL	-	0	0.44	null	null	null	null	0.44	null	null	0.4884	null	null	null	null	null	null	null	null	null	0.5852	null	null	null	null	null	null	null	null	null	0.5852	null	0.5852	null	null	1
+	ACT_EFF	RHEKOLPSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.606	null	null	null	null	0.606	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	0.606	null	null	1
+	ACT_EFF	RHELELCINC-E	-	ACTGRP	-	ANNUAL	-	0	1.78	null	null	null	null	6.175	null	null	6.37	null	null	null	null	null	null	null	null	null	7.84	null	null	null	null	null	null	null	null	null	8.33	null	8.82	null	null	1
+	ACT_EFF	RHEOELCOTH-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	0.8	null	null	0.888	null	null	null	null	null	null	null	null	null	1.064	null	null	null	null	null	null	null	null	null	1.064	null	1.064	null	null	1
+	ACT_EFF	RHERELCREF-E	-	ACTGRP	-	ANNUAL	-	0	0.642	null	null	null	null	0.642	null	null	0.71262	null	null	null	null	null	null	null	null	null	0.85386	null	null	null	null	null	null	null	null	null	0.85386	null	0.85386	null	null	1
+	ACT_EFF	RHEWELCCHP-N	-	ACTGRP	-	ANNUAL	-	0	2.26	null	null	null	null	2.26	null	null	2.5086	null	null	null	null	null	null	null	null	null	3.0058	null	null	null	null	null	null	null	null	null	3.0058	null	3.0058	null	null	1
+	ACT_EFF	RHEWELCGEY-E	-	ACTGRP	-	ANNUAL	-	0	0.73	null	null	null	null	0.73	null	null	0.8103	null	null	null	null	null	null	null	null	null	0.9709	null	null	null	null	null	null	null	null	null	0.9709	null	0.9709	null	null	1
+	ACT_EFF	RHEWELCSWH-E	-	ACTGRP	-	ANNUAL	-	0	2.1	null	null	null	null	2.1	null	null	2.331	null	null	null	null	null	null	null	null	null	2.793	null	null	null	null	null	null	null	null	null	2.793	null	2.793	null	null	1
+	ACT_EFF	RHEWOLPSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	0.65	null	null	0.65	null	null	null	null	null	null	null	null	null	0.65	null	null	null	null	null	null	null	null	null	0.65	null	0.65	null	null	1
+	ACT_EFF	RLEHBIWOPEN-E	-	ACTGRP	-	ANNUAL	-	0	0.59	null	null	null	null	0.59	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	0.59	null	null	1
+	ACT_EFF	RLEHCOABNM-E	-	ACTGRP	-	ANNUAL	-	0	0.59	null	null	null	null	0.59	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	0.59	null	null	1
+	ACT_EFF	RLEHELCHEATBAR-E	-	ACTGRP	-	ANNUAL	-	0	0.9475	null	null	null	null	0.9475	null	null	0.9475	null	null	null	null	null	null	null	null	null	0.9475	null	null	null	null	null	null	null	null	null	0.9475	null	0.9475	null	null	1
+	ACT_EFF	RLEHOKEHEAT-E	-	ACTGRP	-	ANNUAL	-	0	0.73	null	null	null	null	0.73	null	null	0.73	null	null	null	null	null	null	null	null	null	0.73	null	null	null	null	null	null	null	null	null	0.73	null	0.73	null	null	1
+	ACT_EFF	RLEHOLPHET-E	-	ACTGRP	-	ANNUAL	-	0	0.79	null	null	null	null	0.79	null	null	0.79	null	null	null	null	null	null	null	null	null	0.79	null	null	null	null	null	null	null	null	null	0.79	null	0.79	null	null	1
+	ACT_EFF	RLEKBIWBNM-E	-	ACTGRP	-	ANNUAL	-	0	0.074	null	null	null	null	0.074	null	null	0.08214	null	null	null	null	null	null	null	null	null	0.09842	null	null	null	null	null	null	null	null	null	0.09842	null	0.09842	null	null	1
+	ACT_EFF	RLEKCOABNM-E	-	ACTGRP	-	ANNUAL	-	0	0.11	null	null	null	null	0.11	null	null	0.1221	null	null	null	null	null	null	null	null	null	0.1463	null	null	null	null	null	null	null	null	null	0.1463	null	0.1463	null	null	1
+	ACT_EFF	RLEKELCHOT-E	-	ACTGRP	-	ANNUAL	-	0	0.799	null	null	null	null	0.799	null	null	0.88689	null	null	null	null	null	null	null	null	null	1.06267	null	null	null	null	null	null	null	null	null	1.06267	null	1.06267	null	null	1
+	ACT_EFF	RLEKELCSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	0.65	null	null	0.7215	null	null	null	null	null	null	null	null	null	0.8645	null	null	null	null	null	null	null	null	null	0.8645	null	0.8645	null	null	1
+	ACT_EFF	RLEKOKEWICK-E	-	ACTGRP	-	ANNUAL	-	0	0.44645	null	null	null	null	0.44645	null	null	0.44645	null	null	null	null	null	null	null	null	null	0.44645	null	null	null	null	null	null	null	null	null	0.44645	null	0.44645	null	null	1
+	ACT_EFF	RLEKOLPRING-E	-	ACTGRP	-	ANNUAL	-	0	0.606	null	null	null	null	0.606	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	0.606	null	null	1
+	ACT_EFF	RLELELCINC-E	-	ACTGRP	-	ANNUAL	-	0	1.78	null	null	null	null	5.44	null	null	5.88	null	null	null	null	null	null	null	null	null	7.35	null	null	null	null	null	null	null	null	null	8.33	null	8.82	null	null	1
+	ACT_EFF	RLEOELCOTH-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	0.8	null	null	0.888	null	null	null	null	null	null	null	null	null	1.064	null	null	null	null	null	null	null	null	null	1.064	null	1.064	null	null	1
+	ACT_EFF	RLERELCREF-E	-	ACTGRP	-	ANNUAL	-	0	0.4	null	null	null	null	0.4	null	null	0.444	null	null	null	null	null	null	null	null	null	0.532	null	null	null	null	null	null	null	null	null	0.532	null	0.532	null	null	1
+	ACT_EFF	RLEWBIWKETBI-E	-	ACTGRP	-	ANNUAL	-	0	0.11	null	null	null	null	0.11	null	null	0.11	null	null	null	null	null	null	null	null	null	0.11	null	null	null	null	null	null	null	null	null	0.11	null	0.11	null	null	1
+	ACT_EFF	RLEWCOAKETCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.11	null	null	null	null	0.11	null	null	0.11	null	null	null	null	null	null	null	null	null	0.11	null	null	null	null	null	null	null	null	null	0.11	null	0.11	null	null	1
+	ACT_EFF	RLEWELCKET-E	-	ACTGRP	-	ANNUAL	-	0	0.95	null	null	null	null	0.95	null	null	0.95	null	null	null	null	null	null	null	null	null	0.95	null	null	null	null	null	null	null	null	null	0.95	null	0.95	null	null	1
+	ACT_EFF	RLEWOKEKETWI-E	-	ACTGRP	-	ANNUAL	-	0	0.44129	null	null	null	null	0.44129	null	null	0.44129	null	null	null	null	null	null	null	null	null	0.44129	null	null	null	null	null	null	null	null	null	0.44129	null	0.44129	null	null	1
+	ACT_EFF	RLEWOLPKETLPG-E	-	ACTGRP	-	ANNUAL	-	0	0.606	null	null	null	null	0.606	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	0.606	null	null	1
+	ACT_EFF	RMEHBIWSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.59	null	null	null	null	0.59	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	0.59	null	null	1
+	ACT_EFF	RMEHCOASTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.59	null	null	null	null	0.59	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	null	null	null	null	null	null	null	null	0.59	null	0.59	null	null	1
+	ACT_EFF	RMEHELCHEATFIN-E	-	ACTGRP	-	ANNUAL	-	0	0.9475	null	null	null	null	0.9475	null	null	0.9475	null	null	null	null	null	null	null	null	null	0.9475	null	null	null	null	null	null	null	null	null	0.9475	null	0.9475	null	null	1
+	ACT_EFF	RMEHGASHEAT-N	-	ACTGRP	-	ANNUAL	-	0	0.96	null	null	null	null	0.96	null	null	0.96	null	null	null	null	null	null	null	null	null	0.96	null	null	null	null	null	null	null	null	null	0.96	null	0.96	null	null	1
+	ACT_EFF	RMEHOKEHEAT-E	-	ACTGRP	-	ANNUAL	-	0	0.73	null	null	null	null	0.73	null	null	0.73	null	null	null	null	null	null	null	null	null	0.73	null	null	null	null	null	null	null	null	null	0.73	null	0.73	null	null	1
+	ACT_EFF	RMEHOLPHEAT-E	-	ACTGRP	-	ANNUAL	-	0	0.79	null	null	null	null	0.79	null	null	0.79	null	null	null	null	null	null	null	null	null	0.79	null	null	null	null	null	null	null	null	null	0.79	null	0.79	null	null	1
+	ACT_EFF	RMEKBIWSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.25	null	null	null	null	0.25	null	null	0.2775	null	null	null	null	null	null	null	null	null	0.3325	null	null	null	null	null	null	null	null	null	0.3325	null	0.3325	null	null	1
+	ACT_EFF	RMEKCOABNM-E	-	ACTGRP	-	ANNUAL	-	0	0.11	null	null	null	null	0.11	null	null	0.1221	null	null	null	null	null	null	null	null	null	0.1463	null	null	null	null	null	null	null	null	null	0.1463	null	0.1463	null	null	1
+	ACT_EFF	RMEKELCSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	0.65	null	null	0.7215	null	null	null	null	null	null	null	null	null	0.8645	null	null	null	null	null	null	null	null	null	0.8645	null	0.8645	null	null	1
+	ACT_EFF	RMEKGASSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	0.9	null	null	0.9	null	null	null	null	null	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	0.9	null	0.9	null	null	1
+	ACT_EFF	RMEKOKEWICK-E	-	ACTGRP	-	ANNUAL	-	0	0.44129	null	null	null	null	0.44129	null	null	0.44129	null	null	null	null	null	null	null	null	null	0.44129	null	null	null	null	null	null	null	null	null	0.44129	null	0.44129	null	null	1
+	ACT_EFF	RMEKOLPSTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.606	null	null	null	null	0.606	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	0.606	null	null	1
+	ACT_EFF	RMELELCINC-E	-	ACTGRP	-	ANNUAL	-	0	1.78	null	null	null	null	5.685	null	null	5.88	null	null	null	null	null	null	null	null	null	7.35	null	null	null	null	null	null	null	null	null	8.33	null	8.33	null	null	1
+	ACT_EFF	RMEOELCOTH-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	0.8	null	null	0.888	null	null	null	null	null	null	null	null	null	1.064	null	null	null	null	null	null	null	null	null	1.064	null	1.064	null	null	1
+	ACT_EFF	RMERELCREF-E	-	ACTGRP	-	ANNUAL	-	0	0.642	null	null	null	null	0.642	null	null	0.71262	null	null	null	null	null	null	null	null	null	0.85386	null	null	null	null	null	null	null	null	null	0.85386	null	0.85386	null	null	1
+	ACT_EFF	RMEWBIWKETBI-E	-	ACTGRP	-	ANNUAL	-	0	0.25	null	null	null	null	0.25	null	null	0.25	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.25	null	0.25	null	null	1
+	ACT_EFF	RMEWCOASTOV-E	-	ACTGRP	-	ANNUAL	-	0	0.25	null	null	null	null	0.25	null	null	0.25	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.25	null	0.25	null	null	1
+	ACT_EFF	RMEWELCCHP-N	-	ACTGRP	-	ANNUAL	-	0	2.1	null	null	null	null	2.1	null	null	2.331	null	null	null	null	null	null	null	null	null	2.793	null	null	null	null	null	null	null	null	null	2.793	null	2.793	null	null	1
+	ACT_EFF	RMEWELCGEY-E	-	ACTGRP	-	ANNUAL	-	0	0.7	null	null	null	null	0.7	null	null	0.777	null	null	null	null	null	null	null	null	null	0.931	null	null	null	null	null	null	null	null	null	0.931	null	0.931	null	null	1
+	ACT_EFF	RMEWELCKET-E	-	ACTGRP	-	ANNUAL	-	0	0.95	null	null	null	null	0.95	null	null	0.95	null	null	null	null	null	null	null	null	null	0.95	null	null	null	null	null	null	null	null	null	0.95	null	0.95	null	null	1
+	ACT_EFF	RMEWELCSWH-E	-	ACTGRP	-	ANNUAL	-	0	2.1	null	null	null	null	2.1	null	null	2.331	null	null	null	null	null	null	null	null	null	2.793	null	null	null	null	null	null	null	null	null	2.793	null	2.793	null	null	1
+	ACT_EFF	RMEWGASGEY-N	-	ACTGRP	-	ANNUAL	-	0	0.86	null	null	null	null	0.86	null	null	0.86	null	null	null	null	null	null	null	null	null	0.86	null	null	null	null	null	null	null	null	null	0.86	null	0.86	null	null	1
+	ACT_EFF	RMEWOKEKETPR-E	-	ACTGRP	-	ANNUAL	-	0	0.57	null	null	null	null	0.57	null	null	0.57	null	null	null	null	null	null	null	null	null	0.57	null	null	null	null	null	null	null	null	null	0.57	null	0.57	null	null	1
+	ACT_EFF	RMEWOLPKETLPG-E	-	ACTGRP	-	ANNUAL	-	0	0.606	null	null	null	null	0.606	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	null	null	null	null	null	null	null	null	0.606	null	0.606	null	null	1
+	ACT_EFF	ZZRHEH	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRHEK	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRHEL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRHEO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRHER	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRHEW	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRHEWG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLEH	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLEK	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLEL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLEO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLER	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLEW	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRLEWG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMEH	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMEK	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMEL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMEO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMER	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMEW	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZRMEWG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S1D1B1	-	0	0.194	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S1D1B2	-	0	0.004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S1D1B3	-	0	0.002	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S2D1B1	-	0	0.1849	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S2D1B2	-	0	0.12815	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S2D1B3	-	0	0.20818	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S2D1B4	-	0	0.17944	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEH	-	-	S2D1B5	-	0	0.09933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S1D1B1	-	0	0.1301	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S1D1B2	-	0	0.3803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S1D1B3	-	0	0.18365	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S2D1B1	-	0	0.04014	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S2D1B2	-	0	0.04907	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S2D1B3	-	0	0.15508	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S2D1B4	-	0	0.04686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEK	-	-	S2D1B5	-	0	0.0148	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S1D1B1	-	0	0.23282	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S1D1B2	-	0	0.19959	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S1D1B3	-	0	0.26165	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S2D1B1	-	0	0.08766	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S2D1B2	-	0	0.04129	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S2D1B3	-	0	0.04218	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S2D1B4	-	0	0.09639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEL	-	-	S2D1B5	-	0	0.03842	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S1D1B1	-	0	0.07729	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S1D1B2	-	0	0.45889	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S1D1B3	-	0	0.15788	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S2D1B1	-	0	0.04336	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S2D1B2	-	0	0.089	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S2D1B3	-	0	0.08215	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S2D1B4	-	0	0.06383	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEO	-	-	S2D1B5	-	0	0.0276	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S1D1B1	-	0	0.21414	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S1D1B2	-	0	0.33324	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S1D1B3	-	0	0.14667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S2D1B1	-	0	0.08534	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S2D1B2	-	0	0.04387	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S2D1B3	-	0	0.09997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S2D1B4	-	0	0.04626	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHER	-	-	S2D1B5	-	0	0.03051	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S1D1B1	-	0	0.15903	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S1D1B2	-	0	0.35047	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S1D1B3	-	0	0.18455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S2D1B1	-	0	0.0649	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S2D1B2	-	0	0.09169	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S2D1B3	-	0	0.05749	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S2D1B4	-	0	0.05488	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RHEWG	-	-	S2D1B5	-	0	0.03699	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S1D1B1	-	0	0.67323	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S1D1B2	-	0	0.01388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S1D1B3	-	0	0.00694	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S2D1B1	-	0	0.03367	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S2D1B2	-	0	0.01652	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S2D1B3	-	0	0.08718	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S2D1B4	-	0	0.11546	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEH	-	-	S2D1B5	-	0	0.05312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S1D1B1	-	0	0.09234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S1D1B2	-	0	0.4269	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S1D1B3	-	0	0.17482	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S2D1B1	-	0	0.03759	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S2D1B2	-	0	0.08114	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S2D1B3	-	0	0.10398	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S2D1B4	-	0	0.05968	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEK	-	-	S2D1B5	-	0	0.02355	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S1D1B1	-	0	0.20554	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S1D1B2	-	0	0.2164	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S1D1B3	-	0	0.27211	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S2D1B1	-	0	0.07493	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S2D1B2	-	0	0.04607	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S2D1B3	-	0	0.04199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S2D1B4	-	0	0.10526	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEL	-	-	S2D1B5	-	0	0.0377	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S1D1B1	-	0	0.21783	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S1D1B2	-	0	0.3068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S1D1B3	-	0	0.16943	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S2D1B1	-	0	0.05614	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S2D1B2	-	0	0.08395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S2D1B3	-	0	0.07124	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S2D1B4	-	0	0.06019	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEW	-	-	S2D1B5	-	0	0.03442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S1D1B1	-	0	0.21783	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S1D1B2	-	0	0.3068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S1D1B3	-	0	0.16943	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S2D1B1	-	0	0.05614	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S2D1B2	-	0	0.08395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S2D1B3	-	0	0.07124	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S2D1B4	-	0	0.06019	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RLEWG	-	-	S2D1B5	-	0	0.03442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S1D1B1	-	0	0.67323	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S1D1B2	-	0	0.01388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S1D1B3	-	0	0.00694	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S2D1B1	-	0	0.03367	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S2D1B2	-	0	0.01652	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S2D1B3	-	0	0.08718	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S2D1B4	-	0	0.11546	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEH	-	-	S2D1B5	-	0	0.05312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S1D1B1	-	0	0.09234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S1D1B2	-	0	0.4269	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S1D1B3	-	0	0.17482	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S2D1B1	-	0	0.03759	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S2D1B2	-	0	0.08114	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S2D1B3	-	0	0.10398	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S2D1B4	-	0	0.05968	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEK	-	-	S2D1B5	-	0	0.02355	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S1D1B1	-	0	0.20554	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S1D1B2	-	0	0.2164	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S1D1B3	-	0	0.27211	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S2D1B1	-	0	0.07493	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S2D1B2	-	0	0.04607	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S2D1B3	-	0	0.04199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S2D1B4	-	0	0.10526	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEL	-	-	S2D1B5	-	0	0.0377	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S1D1B1	-	0	0.11593	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S1D1B2	-	0	0.34052	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S1D1B3	-	0	0.23759	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S2D1B1	-	0	0.05454	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S2D1B2	-	0	0.04922	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S2D1B3	-	0	0.09484	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S2D1B4	-	0	0.09434	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEO	-	-	S2D1B5	-	0	0.01302	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S1D1B1	-	0	0.21414	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S1D1B2	-	0	0.33324	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S1D1B3	-	0	0.14667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S2D1B1	-	0	0.08534	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S2D1B2	-	0	0.04387	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S2D1B3	-	0	0.09997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S2D1B4	-	0	0.04626	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMER	-	-	S2D1B5	-	0	0.03051	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S1D1B1	-	0	0.21783	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S1D1B2	-	0	0.3068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S1D1B3	-	0	0.16943	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S2D1B1	-	0	0.05614	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S2D1B2	-	0	0.08395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S2D1B3	-	0	0.07124	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S2D1B4	-	0	0.06019	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEW	-	-	S2D1B5	-	0	0.03442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S1D1B1	-	0	0.21783	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S1D1B2	-	0	0.3068	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S1D1B3	-	0	0.16943	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S2D1B1	-	0	0.05614	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S2D1B2	-	0	0.08395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S2D1B3	-	0	0.07124	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S2D1B4	-	0	0.06019	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_FR	-	RMEWG	-	-	S2D1B5	-	0	0.03442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHEH	-	-	-	-	0	7.0843020492949	null	null	null	null	8.4406329908659	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHEK	-	-	-	-	0	3.89193849668007	null	null	null	null	5.94771758738655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHEL	-	-	-	-	0	29.1551306444091	null	null	null	null	35.3991367939826	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHEO	-	-	-	-	0	11.6904229951584	null	null	null	null	14.2118233928813	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHER	-	-	-	-	0	5.22304947009077	null	null	null	null	6.34956123246822	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHEW	-	-	-	-	1	0.560439773721875	null	null	null	null	7.30492113979444	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RHEWG	-	-	-	-	0	31.7419614743366	null	null	null	null	36.5774234904478	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLEH	-	-	-	-	0	14.6766565883431	null	null	null	null	11.4131349023449	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLEK	-	-	-	-	0	10.0571397301598	null	null	null	null	12.2237909438875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLEL	-	-	-	-	0	10.6758719707972	null	null	null	null	18.895565086914	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLEO	-	-	-	-	0	1.98768800863864	null	null	null	null	2.61105918959123	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLER	-	-	-	-	0	1.43522115313492	null	null	null	null	2.53654498578278	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLEW	-	-	-	-	0	5.66633730401029	null	null	null	null	7.09749645505096	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLEWG	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RLNL	-	-	-	-	0	4.74298672782974E-02	null	null	null	null	3.86703670464542E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMEH	-	-	-	-	0	13.1626619487524	null	null	null	null	12.2475767336216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMEK	-	-	-	-	0	9.04635586355848	null	null	null	null	8.15784581789431	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMEL	-	-	-	-	0	16.048370490489	null	null	null	null	21.9154488561432	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMEO	-	-	-	-	0	5.81781655271924	null	null	null	null	8.08763776324384	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMER	-	-	-	-	0	3.25557048766767	null	null	null	null	4.29912106261154	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMEW	-	-	-	-	0	6.08528560771951	null	null	null	null	4.82494185375133	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMEWG	-	-	-	-	0	8.71888166426732	null	null	null	null	10.7892351004483	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	RMNL	-	-	-	-	0	3.34224992414628E-02	null	null	null	null	6.83142661667548E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_MARK	RLEHBIWOPEN-E	RLEH	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.524308936215422	0.523485492923318	0.522662049631213	0.521838606339108	0.521015163047003	0.520191719754899	0.518819314268057	0.517446908781216	0.516074503294375	0.514702097807534	0.513329692320692	0.512506249028587	0.511682805736483	0.510859362444378	0.510035919152273	0.509212475860168	0.507840070373327	0.506467664886486	0.505095259399645	0.503722853912803	0.502350448425962	0.498233231965438	0.491371204531232	0.491371204531232	0.491371204531232	2
+	FLO_MARK	RLEHBIWOPEN-E	RLEH	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.531448724968454	0.530618591537797	0.529788458107141	0.528958324676484	0.528128191245827	0.52729805781517	0.525914502097409	0.524530946379648	0.523147390661886	0.521763834944125	0.520380279226364	0.519550145795707	0.51872001236505	0.517889878934393	0.517059745503736	0.51622961207308	0.514846056355318	0.513462500637557	0.512078944919796	0.510695389202034	0.509311833484273	0.505161166330989	0.498243387742183	0.498243387742183	0.498243387742183	1
+	FLO_MARK	RLEHCOABNM-E	RLEH	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.187195245943323	0.186896149687964	0.186597053432605	0.186297957177246	0.185998860921887	0.185699764666528	0.185201270907596	0.184702777148664	0.184204283389732	0.183705789630801	0.183207295871869	0.18290819961651	0.182609103361151	0.182310007105792	0.182010910850432	0.181711814595073	0.181213320836142	0.18071482707721	0.180216333318278	0.179717839559346	0.179219345800414	0.177723864523619	0.17523139572896	0.17523139572896	0.17523139572896	2
+	FLO_MARK	RLEHCOABNM-E	RLEH	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.194363647029824	0.194061039784076	0.193758432538328	0.19345582529258	0.193153218046832	0.192850610801085	0.192346265391505	0.191841919981925	0.191337574572345	0.190833229162765	0.190328883753186	0.190026276507438	0.18972366926169	0.189421062015942	0.189118454770194	0.188815847524446	0.188311502114866	0.187807156705287	0.187302811295707	0.186798465886127	0.186294120476547	0.184781084247808	0.182259357199909	0.182259357199909	0.182259357199909	1
+	FLO_MARK	RLEHELCHEATBAR-E	RLEH	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	FLO_MARK	RLEHELCHEATBAR-E	RLEH	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	FLO_MARK	RLEHOKEHEAT-E	RLEH	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.015846366254305	1.58137862511993E-02	1.57812062480936E-02	1.57486262449879E-02	1.57160462418822E-02	1.56834662387765E-02	1.56291662336004E-02	1.55748662284242E-02	1.55205662232481E-02	0.015466266218072	1.54119662128958E-02	1.53793862097901E-02	1.53468062066844E-02	1.53142262035787E-02	1.52816462004731E-02	1.52490661973674E-02	1.51947661921912E-02	1.51404661870151E-02	1.50861661818389E-02	1.50318661766628E-02	1.49775661714866E-02	1.48146661559582E-02	1.45431661300775E-02	1.45431661300775E-02	1.45431661300775E-02	2
+	FLO_MARK	RLEHOKEHEAT-E	RLEH	-	-	-	UP	0	null	null	null	null	null	null	null	null	2.30293104798912E-02	2.29948353907395E-02	2.29603603015878E-02	2.29258852124362E-02	2.28914101232845E-02	2.28569350341328E-02	2.27994765522134E-02	2.27420180702939E-02	2.26845595883745E-02	0.022627101106455	2.25696426245356E-02	2.25351675353839E-02	2.25006924462323E-02	2.24662173570806E-02	2.24317422679289E-02	2.23972671787773E-02	2.23398086968578E-02	2.22823502149384E-02	2.22248917330189E-02	2.21674332510995E-02	0.02210997476918	2.19375993234217E-02	2.16503069138245E-02	2.16503069138245E-02	2.16503069138245E-02	1
+	FLO_MARK	RLEHOLPHET-E	RLEH	-	-	-	LO	0	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+	FLO_MARK	RLEHOLPHET-E	RLEH	-	-	-	UP	0	null	null	null	null	null	null	null	null	1.47932472188946E-02	1.47794860990411E-02	1.47657249791876E-02	1.47519638593341E-02	1.47382027394806E-02	1.47244416196271E-02	1.47015064198712E-02	1.46785712201153E-02	1.46556360203595E-02	1.46327008206036E-02	1.46097656208478E-02	1.45960045009943E-02	1.45822433811408E-02	1.45684822612872E-02	1.45547211414337E-02	1.45409600215802E-02	1.45180248218244E-02	1.44950896220685E-02	1.44721544223126E-02	1.44492192225568E-02	1.44262840228009E-02	1.43574784235334E-02	1.42428024247541E-02	1.42428024247541E-02	1.42428024247541E-02	1
+	FLO_MRKPRD	RHEHBIWSTOV-E	RHEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	1.53110731946832E-02	2
+	FLO_MRKPRD	RHEHBIWSTOV-E	RHEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1.64110731946832E-02	1
+	FLO_MRKPRD	RHEHCOASTOV-E	RHEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	8.03054448966667E-02	2
+	FLO_MRKPRD	RHEHCOASTOV-E	RHEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	8.14054448966667E-02	1
+	FLO_MRKPRD	RHEHELCHEATFIN-E	RHEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	0.854656499763559	2
+	FLO_MRKPRD	RHEHELCHEATFIN-E	RHEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	0.855756499763559	1
+	FLO_MRKPRD	RHEHGASHEAT-N	RHEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	2
+	FLO_MRKPRD	RHEHGASHEAT-N	RHEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	1
+	FLO_MRKPRD	RHEHOKEHEAT-E	RHEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	1.89428068679572E-03	2
+	FLO_MRKPRD	RHEHOKEHEAT-E	RHEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	2.99428068679572E-03	1
+	FLO_MRKPRD	RHEHOLPHEAT-E	RHEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	4.73327014582957E-02	2
+	FLO_MRKPRD	RHEHOLPHEAT-E	RHEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	4.84327014582957E-02	1
+	FLO_MRKPRD	RHEKBIWSTOV-E	RHEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	3.86030775111382E-02	2
+	FLO_MRKPRD	RHEKBIWSTOV-E	RHEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	3.97030775111382E-02	1
+	FLO_MRKPRD	RHEKELCSTOV-E	RHEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	0.686300073161385	2
+	FLO_MRKPRD	RHEKELCSTOV-E	RHEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	0.687400073161385	1
+	FLO_MRKPRD	RHEKGASSTOV-E	RHEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	2
+	FLO_MRKPRD	RHEKGASSTOV-E	RHEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	1
+	FLO_MRKPRD	RHEKOKEPRIMUS-E	RHEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	6.27032008778843E-03	2
+	FLO_MRKPRD	RHEKOKEPRIMUS-E	RHEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	7.37032008778843E-03	1
+	FLO_MRKPRD	RHEKOLPSTOV-E	RHEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	0.268426529239689	2
+	FLO_MRKPRD	RHEKOLPSTOV-E	RHEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	0.269526529239689	1
+	FLO_MRKPRD	RHELELCINC-E	RHEL	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RHELELCINC-E	RHEL	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RHEOELCOTH-E	RHEO	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RHEOELCOTH-E	RHEO	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RHERELCREF-E	RHER	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RHERELCREF-E	RHER	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RHEWELCCHP-N	RHEWG	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	FLO_MRKPRD	RHEWELCCHP-N	RHEWG	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	FLO_MRKPRD	RHEWELCGEY-E	RHEWG	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	FLO_MRKPRD	RHEWELCGEY-E	RHEWG	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	FLO_MRKPRD	RHEWELCSWH-E	RHEWG	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	FLO_MRKPRD	RHEWELCSWH-E	RHEWG	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1
+	FLO_MRKPRD	RHEWOLPSTOV-E	RHEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RHEWOLPSTOV-E	RHEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	1
+	FLO_MRKPRD	RLEKBIWBNM-E	RLEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.19088687363261	0.189109233726202	0.187331593819794	0.185553953913385	0.183776314006977	0.181998674100569	0.179035940923222	0.176073207745875	0.173110474568528	0.170147741391181	0.167185008213834	0.165407368307426	0.163629728401018	0.161852088494609	0.160074448588201	0.158296808681793	0.155334075504446	0.152371342327099	0.149408609149752	0.146445875972405	0.143483142795058	0.134594943263017	0.119781277376282	0.119781277376282	0.119781277376282	2
+	FLO_MRKPRD	RLEKBIWBNM-E	RLEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.197850912213987	0.196047054372176	0.194243196530366	0.192439338688555	0.190635480846744	0.188831623004933	0.185825193268582	0.182818763532231	0.17981233379588	0.176805904059529	0.173799474323177	0.171995616481367	0.170191758639556	0.168387900797745	0.166584042955934	0.164780185114124	0.161773755377772	0.158767325641421	0.15576089590507	0.152754466168719	0.149748036432368	0.140728747223314	0.125696598541558	0.125696598541558	0.125696598541558	1
+	FLO_MRKPRD	RLEKCOABNM-E	RLEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1.47679116205238E-02	1.45877057123474E-02	1.44074998041709E-02	1.42272938959944E-02	1.40470879878179E-02	1.38668820796414E-02	1.35665388993473E-02	1.32661957190531E-02	0.012965852538759	1.26655093584649E-02	1.23651661781707E-02	1.21849602699942E-02	1.20047543618178E-02	1.18245484536413E-02	1.16443425454648E-02	1.14641366372883E-02	1.11637934569942E-02	0.0108634502767	1.05631070964059E-02	1.02627639161117E-02	9.96242073581759E-03	9.06139119493517E-03	7.55967529346447E-03	7.55967529346447E-03	7.55967529346447E-03	2
+	FLO_MRKPRD	RLEKCOABNM-E	RLEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	2.18686796392176E-02	2.16774479553405E-02	2.14862162714633E-02	2.12949845875861E-02	2.11037529037089E-02	2.09125212198318E-02	2.05938017467031E-02	2.02750822735745E-02	1.99563628004459E-02	1.96376433273173E-02	1.93189238541886E-02	1.91276921703115E-02	1.89364604864343E-02	1.87452288025571E-02	1.85539971186799E-02	1.83627654348028E-02	1.80440459616741E-02	1.77253264885455E-02	1.74066070154169E-02	1.70878875422883E-02	1.67691680691596E-02	1.58130096497738E-02	1.42194122841306E-02	1.42194122841306E-02	1.42194122841306E-02	1
+	FLO_MRKPRD	RLEKELCHOT-E	RLEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.575594194317332	0.578296979603195	0.580999764889057	0.58370255017492	0.586405335460782	0.589108120746645	0.593612762889749	0.598117405032853	0.602622047175957	0.607126689319061	0.611631331462165	0.614334116748028	0.61703690203389	0.619739687319753	0.622442472605615	0.625145257891478	0.629649900034582	0.634154542177686	0.63865918432079	0.643163826463894	0.647668468606999	0.661182395036311	0.683705605751832	0.683705605751832	0.683705605751832	2
+	FLO_MRKPRD	RLEKELCHOT-E	RLEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.578742644562031	0.581450813208415	0.5841589818548	0.586867150501184	0.589575319147569	0.592283487793953	0.596797102204594	0.601310716615235	0.605824331025876	0.610337945436516	0.614851559847157	0.617559728493542	0.620267897139926	0.622976065786311	0.625684234432695	0.62839240307908	0.632906017489721	0.637419631900362	0.641933246311002	0.646446860721643	0.650960475132284	0.664501318364207	0.687069390417411	0.687069390417411	0.687069390417411	1
+	FLO_MRKPRD	RLEKELCSTOV-E	RLEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	8.28359375879026E-02	8.32289185453459E-02	8.36218995027892E-02	8.40148804602325E-02	8.44078614176758E-02	8.48008423751191E-02	8.54558106375246E-02	8.61107788999301E-02	8.67657471623356E-02	0.087420715424741	8.80756836871465E-02	8.84686646445898E-02	8.88616456020331E-02	8.92546265594764E-02	8.96476075169197E-02	0.090040588474363	9.06955567367685E-02	0.091350524999174	9.20054932615795E-02	9.26604615239849E-02	9.33154297863904E-02	9.52803345736069E-02	9.85551758856344E-02	9.85551758856344E-02	9.85551758856344E-02	2
+	FLO_MRKPRD	RLEKELCSTOV-E	RLEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	8.98359375879026E-02	9.02289185453459E-02	9.06218995027892E-02	9.10148804602325E-02	9.14078614176758E-02	9.18008423751191E-02	9.24558106375246E-02	9.31107788999301E-02	9.37657471623356E-02	0.094420715424741	9.50756836871465E-02	9.54686646445898E-02	9.58616456020331E-02	9.62546265594764E-02	9.66476075169197E-02	0.097040588474363	9.76955567367685E-02	0.098350524999174	9.90054932615795E-02	9.96604615239849E-02	0.10031542978639	0.102280334573607	0.105555175885634	0.105555175885634	0.105555175885634	1
+	FLO_MRKPRD	RLEKOKEWICK-E	RLEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	5.28026089639186E-02	5.23227717834773E-02	5.18429346030361E-02	5.13630974225948E-02	5.08832602421535E-02	5.04034230617123E-02	4.96036944276435E-02	4.88039657935747E-02	0.048004237159506	4.72045085254372E-02	4.64047798913684E-02	4.59249427109271E-02	4.54451055304859E-02	4.49652683500446E-02	4.44854311696034E-02	4.40055939891621E-02	4.32058653550933E-02	4.24061367210245E-02	4.16064080869558E-02	0.040806679452887	4.00069508188182E-02	3.76077649166119E-02	0.033609121746268	0.033609121746268	0.033609121746268	2
+	FLO_MRKPRD	RLEKOKEWICK-E	RLEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	5.98777305926491E-02	5.93840180376224E-02	5.88903054825956E-02	5.83965929275688E-02	5.79028803725421E-02	5.74091678175153E-02	5.65863135591374E-02	5.57634593007595E-02	5.49406050423815E-02	5.41177507840036E-02	5.32948965256257E-02	5.28011839705989E-02	5.23074714155721E-02	5.18137588605454E-02	5.13200463055186E-02	5.08263337504919E-02	5.00034794921139E-02	0.049180625233736	4.83577709753581E-02	4.75349167169801E-02	4.67120624586022E-02	4.42434996834684E-02	4.01292283915787E-02	4.01292283915787E-02	4.01292283915787E-02	1
+	FLO_MRKPRD	RLEKOLPRING-E	RLEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	7.13062066982546E-02	7.06585382078128E-02	7.00108697173709E-02	6.93632012269291E-02	6.87155327364872E-02	6.80678642460454E-02	6.69884167619756E-02	6.59089692779059E-02	6.48295217938361E-02	6.37500743097664E-02	6.26706268256966E-02	6.20229583352548E-02	6.13752898448129E-02	6.07276213543711E-02	6.00799528639292E-02	5.94322843734874E-02	5.83528368894176E-02	5.72733894053479E-02	5.61939419212781E-02	5.51144944372084E-02	5.40350469531387E-02	5.07967045009294E-02	4.53994670805807E-02	4.53994670805807E-02	4.53994670805807E-02	2
+	FLO_MRKPRD	RLEKOLPRING-E	RLEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	7.83669631133952E-02	7.77038231135245E-02	7.70406831136538E-02	7.63775431137832E-02	7.57144031139125E-02	7.50512631140418E-02	0.073946029780924	7.28407964478062E-02	7.17355631146884E-02	7.06303297815706E-02	6.95250964484529E-02	6.88619564485822E-02	6.81988164487115E-02	6.75356764488408E-02	6.68725364489701E-02	6.62093964490995E-02	6.51041631159817E-02	6.39989297828639E-02	6.28936964497461E-02	6.17884631166283E-02	6.06832297835105E-02	5.73675297841571E-02	5.18413631185682E-02	5.18413631185682E-02	5.18413631185682E-02	1
+	FLO_MRKPRD	RLELELCINC-E	RLEL	-	-	ANNUAL	LO	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RLELELCINC-E	RLEL	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RLEOELCOTH-E	RLEO	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RLEOELCOTH-E	RLEO	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RLERELCREF-E	RLER	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RLERELCREF-E	RLER	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RLEWBIWKETBI-E	RLEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.142569923158245	0.141551804719525	0.140533686280805	0.139515567842085	0.138497449403365	0.137479330964645	0.135782466900112	0.134085602835579	0.132388738771045	0.130691874706512	0.128995010641979	0.127976892203259	0.126958773764539	0.125940655325819	0.124922536887099	0.123904418448379	0.122207554383846	0.120510690319312	0.118813826254779	0.117116962190246	0.115420098125712	0.110329505932113	0.101845185609446	0.101845185609446	0.101845185609446	2
+	FLO_MRKPRD	RLEWBIWKETBI-E	RLEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	0.152932989106725	1
+	FLO_MRKPRD	RLEWCOAKETCOA-E	RLEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	8.61575302805916E-03	8.55355583422347E-03	8.49135864038778E-03	8.42916144655209E-03	8.3669642527164E-03	8.30476705888071E-03	8.20110506915456E-03	8.09744307942841E-03	7.99378108970225E-03	7.8901190999761E-03	7.78645711024995E-03	7.72425991641426E-03	7.66206272257857E-03	7.59986552874288E-03	7.53766833490719E-03	7.4754711410715E-03	7.37180915134534E-03	7.26814716161919E-03	7.16448517189304E-03	7.06082318216689E-03	6.95716119244074E-03	6.64617522326229E-03	6.12786527463153E-03	6.12786527463153E-03	6.12786527463153E-03	2
+	FLO_MRKPRD	RLEWCOAKETCOA-E	RLEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1.03755277725804E-02	1
+	FLO_MRKPRD	RLEWELCKET-E	RLEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.603698319505344	0.606532842878026	0.609367366250707	0.612201889623388	0.61503641299607	0.617870936368751	0.622595141989886	0.627319347611022	0.632043553232157	0.636767758853293	0.641491964474428	0.64432648784711	0.647161011219791	0.649995534592472	0.652830057965153	0.655664581337835	0.66038878695897	0.665112992580106	0.669837198201241	0.674561403822377	0.679285609443512	0.693458226306919	0.717079254412596	0.717079254412596	0.717079254412596	2
+	FLO_MRKPRD	RLEWELCKET-E	RLEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.605698319505344	0.608532842878026	0.611367366250707	0.614201889623388	0.617036412996069	0.619870936368751	0.624595141989886	0.629319347611022	0.634043553232157	0.638767758853293	0.643491964474428	0.64632648784711	0.649161011219791	0.651995534592472	0.654830057965153	0.657664581337835	0.66238878695897	0.667112992580106	0.671837198201241	0.676561403822377	0.681285609443512	0.695458226306919	0.719079254412596	0.719079254412596	0.719079254412596	1
+	FLO_MRKPRD	RLEWOKEKETWI-E	RLEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.175040789681637	0.173790953252209	0.172541116822781	0.171291280393354	0.170041443963926	0.168791607534498	0.166708546818785	0.164625486103072	0.162542425387358	0.160459364671645	0.158376303955932	0.157126467526504	0.155876631097076	0.154626794667648	0.153376958238221	0.152127121808793	0.150044061093079	0.147961000377366	0.145877939661653	0.14379487894594	0.141711818230227	0.135462636083087	0.125047332504522	0.125047332504522	0.125047332504522	2
+	FLO_MRKPRD	RLEWOKEKETWI-E	RLEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	0.187489317546488	1
+	FLO_MRKPRD	RLEWOLPKETLPG-E	RLEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	6.93538396904763E-02	6.88582044979744E-02	6.83625693054724E-02	6.78669341129705E-02	6.73712989204685E-02	6.68756637279666E-02	6.60496050737967E-02	6.52235464196267E-02	6.43974877654568E-02	6.35714291112869E-02	0.062745370457117	0.062249735264615	6.17541000721131E-02	6.12584648796111E-02	6.07628296871092E-02	6.02671944946072E-02	5.94411358404373E-02	5.86150771862674E-02	5.77890185320975E-02	5.69629598779276E-02	5.61369012237577E-02	5.36587252612479E-02	4.95284319903983E-02	4.95284319903983E-02	4.95284319903983E-02	2
+	FLO_MRKPRD	RLEWOLPKETLPG-E	RLEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	7.50145564229939E-02	1
+	FLO_MRKPRD	RMEHBIWSTOV-E	RMEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.211481835003365	0.210427149944724	0.209372464886082	0.208317779827441	0.2072630947688	0.206208409710159	0.204450601279091	0.202692792848022	0.200934984416954	0.199177175985885	0.197419367554817	0.196364682496176	0.195309997437535	0.194255312378894	0.193200627320253	0.192145942261612	0.190388133830543	0.188630325399475	0.186872516968406	0.185114708537338	0.183356900106269	0.178083474813064	0.169294432657722	0.169294432657722	0.169294432657722	2
+	FLO_MRKPRD	RMEHBIWSTOV-E	RMEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	0.227174000531134	1
+	FLO_MRKPRD	RMEHCOASTOV-E	RMEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.220093251389519	0.218996631455794	0.21790001152207	0.216803391588345	0.215706771654621	0.214610151720896	0.212782451831355	0.210954751941814	0.209127052052274	0.207299352162733	0.205471652273192	0.204375032339467	0.203278412405743	0.202181792472018	0.201085172538294	0.199988552604569	0.198160852715028	0.196333152825487	0.194505452935946	0.192677753046405	0.190850053156865	0.185366953488242	0.176228454040537	0.176228454040537	0.176228454040537	2
+	FLO_MRKPRD	RMEHCOASTOV-E	RMEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	0.23616283079304	1
+	FLO_MRKPRD	RMEHELCHEATFIN-E	RMEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.50853125042103	0.510919678157379	0.513308105893727	0.515696533630076	0.518084961366424	0.520473389102773	0.524454101996687	0.528434814890602	0.532415527784516	0.53639624067843	0.540376953572345	0.542765381308693	0.545153809045042	0.54754223678139	0.549930664517739	0.552319092254087	0.556299805148002	0.560280518041916	0.56426123093583	0.568241943829745	0.572222656723659	0.584164795405402	0.604068359874973	0.604068359874973	0.604068359874973	2
+	FLO_MRKPRD	RMEHELCHEATFIN-E	RMEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.511679700665728	0.514073511762599	0.51646732285947	0.51886113395634	0.521254945053211	0.523648756150081	0.527638441311532	0.531628126472983	0.535617811634434	0.539607496795885	0.543597181957336	0.545990993054207	0.548384804151077	0.550778615247948	0.553172426344819	0.555566237441689	0.55955592260314	0.563545607764591	0.567535292926042	0.571524978087493	0.575514663248944	0.587483718733297	0.607432144540552	0.607432144540552	0.607432144540552	1
+	FLO_MRKPRD	RMEHGASHEAT-N	RMEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+	FLO_MRKPRD	RMEHGASHEAT-N	RMEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	6.95782776903055E-03	6.9531419655895E-03	6.94845616214845E-03	6.9437703587074E-03	6.93908455526635E-03	6.9343987518253E-03	6.92658907942355E-03	6.9187794070218E-03	6.91096973462005E-03	6.9031600622183E-03	6.89535038981655E-03	6.8906645863755E-03	6.88597878293445E-03	6.8812929794934E-03	6.87660717605235E-03	6.8719213726113E-03	6.86411170020955E-03	6.8563020278078E-03	6.84849235540605E-03	6.8406826830043E-03	6.83287301060255E-03	6.8094439933973E-03	6.77039563138855E-03	6.77039563138855E-03	6.77039563138855E-03	1
+	FLO_MRKPRD	RMEHOKEHEAT-E	RMEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	3.39217224906108E-02	3.37316990397861E-02	3.35416755889614E-02	3.33516521381367E-02	0.033161628687312	3.29716052364873E-02	3.26548994851128E-02	3.23381937337383E-02	3.20214879823638E-02	3.17047822309893E-02	3.13880764796148E-02	3.11980530287901E-02	3.10080295779654E-02	3.08180061271407E-02	0.030627982676316	3.04379592254913E-02	3.01212534741168E-02	2.98045477227423E-02	2.94878419713678E-02	2.91711362199933E-02	2.88544304686188E-02	2.79043132144953E-02	2.63207844576228E-02	2.63207844576228E-02	2.63207844576228E-02	2
+	FLO_MRKPRD	RMEHOKEHEAT-E	RMEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	4.10677875845468E-02	1
+	FLO_MRKPRD	RMEHOLPHEAT-E	RMEH	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	9.09293418766275E-03	9.0481675047475E-03	9.00340082183226E-03	0.008958634138917	8.91386745600176E-03	8.86910077308651E-03	8.79448963489442E-03	8.71987849670234E-03	8.64526735851026E-03	8.57065622031817E-03	8.49604508212609E-03	8.45127839921084E-03	8.40651171629559E-03	8.36174503338034E-03	8.31697835046509E-03	8.27221166754984E-03	8.19760052935776E-03	8.12298939116568E-03	8.04837825297359E-03	7.97376711478151E-03	7.89915597658943E-03	7.67532256201318E-03	7.30226687105276E-03	7.30226687105276E-03	7.30226687105276E-03	2
+	FLO_MRKPRD	RMEHOLPHEAT-E	RMEH	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1.62447671379598E-02	1.61946485606331E-02	1.61445299833064E-02	1.60944114059797E-02	0.016044292828653	1.59941742513264E-02	1.59106432891152E-02	1.58271123269041E-02	1.57435813646929E-02	1.56600504024818E-02	1.55765194402706E-02	1.55264008629439E-02	1.54762822856172E-02	1.54261637082905E-02	1.53760451309639E-02	1.53259265536372E-02	0.015242395591426	1.51588646292149E-02	1.50753336670037E-02	1.49918027047926E-02	1.49082717425814E-02	0.014657678855948	1.42400240448922E-02	1.42400240448922E-02	1.42400240448922E-02	1
+	FLO_MRKPRD	RMEKBIWSTOV-E	RMEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.465289734433657	0.463535442938895	0.461781151444134	0.460026859949372	0.45827256845461	0.456518276959849	0.453594457801913	0.450670638643977	0.447746819486041	0.444823000328105	0.441899181170169	0.440144889675407	0.438390598180646	0.436636306685884	0.434882015191122	0.433127723696361	0.430203904538425	0.427280085380489	0.424356266222553	0.421432447064617	0.418508627906681	0.409737170432873	0.395118074643193	0.395118074643193	0.395118074643193	2
+	FLO_MRKPRD	RMEKBIWSTOV-E	RMEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.472382619172994	0.470616425982604	0.468850232792213	0.467084039601822	0.465317846411431	0.463551653221041	0.460607997903723	0.457664342586405	0.454720687269087	0.451777031951769	0.448833376634451	0.44706718344406	0.445300990253669	0.443534797063279	0.441768603872888	0.440002410682497	0.437058755365179	0.434115100047861	0.431171444730543	0.428227789413225	0.425284134095907	0.416453168143954	0.401734891557364	0.401734891557364	0.401734891557364	1
+	FLO_MRKPRD	RMEKCOABNM-E	RMEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1.59923181216521E-02	0.015913655532788	0.015834992943924	1.57563303550599E-02	1.56776677661959E-02	1.55990051773319E-02	1.54679008625585E-02	1.53367965477851E-02	1.52056922330117E-02	1.50745879182383E-02	1.49434836034649E-02	1.48648210146008E-02	1.47861584257368E-02	1.47074958368727E-02	1.46288332480087E-02	1.45501706591446E-02	1.44190663443712E-02	1.42879620295978E-02	1.41568577148244E-02	0.014025753400051	1.38946490852776E-02	1.35013361409574E-02	1.28458145670904E-02	1.28458145670904E-02	1.28458145670904E-02	2
+	FLO_MRKPRD	RMEKCOABNM-E	RMEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	2.31532404661931E-02	2.30702359156114E-02	2.29872313650297E-02	0.022904226814448	2.28212222638663E-02	2.27382177132846E-02	2.25998767956485E-02	2.24615358780123E-02	2.23231949603761E-02	0.02218485404274	2.20465131251038E-02	2.19635085745221E-02	2.18805040239404E-02	2.17974994733587E-02	0.021714494922777	2.16314903721953E-02	2.14931494545591E-02	0.021354808536923	2.12164676192868E-02	2.10781267016506E-02	2.09397857840144E-02	2.05247630311059E-02	1.98330584429251E-02	1.98330584429251E-02	1.98330584429251E-02	1
+	FLO_MRKPRD	RMEKELCSTOV-E	RMEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.442087562102021	0.444164535049374	0.446241507996727	0.448318480944081	0.450395453891434	0.452472426838787	0.455934048417709	0.459395669996631	0.462857291575553	0.466318913154475	0.469780534733397	0.47185750768075	0.473934480628104	0.476011453575457	0.47808842652281	0.480165399470163	0.483627021049085	0.487088642628008	0.490550264206929	0.494011885785852	0.497473507364774	0.50785837210154	0.52516647999615	0.52516647999615	0.52516647999615	2
+	FLO_MRKPRD	RMEKELCSTOV-E	RMEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.445236012346719	0.447318368654594	0.44940072496247	0.451483081270345	0.45356543757822	0.455647793886095	0.459118387732554	0.462588981579013	0.466059575425472	0.46953016927193	0.473000763118389	0.475083119426264	0.47716547573414	0.479247832042015	0.48133018834989	0.483412544657765	0.486883138504224	0.490353732350683	0.493824326197142	0.4972949200436	0.500765513890059	0.511177295429435	0.528530264661729	0.528530264661729	0.528530264661729	1
+	FLO_MRKPRD	RMEKGASSTOV-E	RMEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+	FLO_MRKPRD	RMEKGASSTOV-E	RMEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	6.96737852511558E-03	6.96375391679509E-03	6.9601293084746E-03	6.95650470015411E-03	6.95288009183361E-03	6.94925548351312E-03	6.94321446964564E-03	6.93717345577815E-03	6.93113244191067E-03	6.92509142804318E-03	6.9190504141757E-03	6.9154258058552E-03	6.91180119753471E-03	6.90817658921422E-03	6.90455198089373E-03	6.90092737257324E-03	6.89488635870575E-03	6.88884534483827E-03	6.88280433097078E-03	6.8767633171033E-03	6.87072230323581E-03	6.85259926163336E-03	6.82239419229593E-03	6.82239419229593E-03	6.82239419229593E-03	1
+	FLO_MRKPRD	RMEKOKEWICK-E	RMEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	4.94178174163525E-03	4.90433149344305E-03	4.86688124525085E-03	4.82943099705865E-03	4.79198074886645E-03	4.75453050067425E-03	4.69211342035392E-03	4.62969634003359E-03	4.56727925971326E-03	4.50486217939293E-03	4.4424450990726E-03	4.4049948508804E-03	4.3675446026882E-03	0.004330094354496	4.2926441063038E-03	4.2551938581116E-03	4.19277677779127E-03	4.13035969747094E-03	4.0679426171506E-03	4.00552553683027E-03	3.94310845650994E-03	3.75585721554895E-03	3.44377181394729E-03	3.44377181394729E-03	3.44377181394729E-03	2
+	FLO_MRKPRD	RMEKOKEWICK-E	RMEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1.21043774811352E-02	1.20627712039986E-02	1.20211649268619E-02	1.19795586497253E-02	1.19379523725886E-02	0.011896346095452	1.18270023002243E-02	1.17576585049965E-02	1.16883147097688E-02	0.011618970914541	1.15496271193133E-02	1.15080208421766E-02	0.01146641456504	1.14248082879033E-02	1.13832020107667E-02	1.13415957336301E-02	1.12722519384023E-02	1.12029081431746E-02	1.11335643479468E-02	1.10642205527191E-02	1.09948767574913E-02	1.07868453718081E-02	1.04401263956694E-02	1.04401263956694E-02	1.04401263956694E-02	1
+	FLO_MRKPRD	RMEKOLPSTOV-E	RMEK	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	5.48048410817832E-02	5.46000766307754E-02	5.43953121797677E-02	5.41905477287599E-02	5.39857832777521E-02	5.37810188267443E-02	5.34397447417313E-02	5.30984706567183E-02	5.27571965717053E-02	5.24159224866923E-02	5.20746484016793E-02	5.18698839506715E-02	5.16651194996637E-02	5.14603550486559E-02	5.12555905976482E-02	5.10508261466404E-02	5.07095520616274E-02	5.03682779766144E-02	5.00270038916014E-02	4.96857298065884E-02	4.93444557215754E-02	4.83206334665365E-02	4.66142630414715E-02	4.66142630414715E-02	4.66142630414715E-02	2
+	FLO_MRKPRD	RMEKOLPSTOV-E	RMEK	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.061960643158536	6.17509678271674E-02	6.15412924957989E-02	6.13316171644303E-02	6.11219418330617E-02	6.09122665016931E-02	6.05628076160787E-02	6.02133487304644E-02	5.98638898448501E-02	5.95144309592358E-02	5.91649720736214E-02	5.89552967422528E-02	5.87456214108843E-02	5.85359460795157E-02	5.83262707481471E-02	5.81165954167785E-02	5.77671365311641E-02	5.74176776455498E-02	5.70682187599355E-02	5.67187598743212E-02	5.63693009887068E-02	5.53209243318639E-02	5.35736299037923E-02	5.35736299037923E-02	5.35736299037923E-02	1
+	FLO_MRKPRD	RMELELCINC-E	RMEL	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RMELELCINC-E	RMEL	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RMEOELCOTH-E	RMEO	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RMEOELCOTH-E	RMEO	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RMERELCREF-E	RMER	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	2
+	FLO_MRKPRD	RMERELCREF-E	RMER	-	-	ANNUAL	UP	0	1	null	null	1	null	1	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	FLO_MRKPRD	RMEWBIWKETBI-E	RMEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	0.296806843143073	2
+	FLO_MRKPRD	RMEWBIWKETBI-E	RMEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	0.297906843143073	1
+	FLO_MRKPRD	RMEWCOASTOV-E	RMEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	4.92437269925164E-02	2
+	FLO_MRKPRD	RMEWCOASTOV-E	RMEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	5.03437269925164E-02	1
+	FLO_MRKPRD	RMEWELCCHP-N	RMEWG	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	2
+	FLO_MRKPRD	RMEWELCCHP-N	RMEWG	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	1
+	FLO_MRKPRD	RMEWELCGEY-E	RMEWG	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	0.931424940065756	2
+	FLO_MRKPRD	RMEWELCGEY-E	RMEWG	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	0.932524940065756	1
+	FLO_MRKPRD	RMEWELCKET-E	RMEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	0.325933416413763	2
+	FLO_MRKPRD	RMEWELCKET-E	RMEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	0.327033416413763	1
+	FLO_MRKPRD	RMEWELCSWH-E	RMEWG	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	6.83750599342436E-02	2
+	FLO_MRKPRD	RMEWELCSWH-E	RMEWG	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	6.94750599342436E-02	1
+	FLO_MRKPRD	RMEWGASGEY-N	RMEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	-0.0001	2
+	FLO_MRKPRD	RMEWGASGEY-N	RMEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	0.001	1
+	FLO_MRKPRD	RMEWOKEKETPR-E	RMEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	0.235104882003146	2
+	FLO_MRKPRD	RMEWOKEKETPR-E	RMEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	0.236204882003146	1
+	FLO_MRKPRD	RMEWOLPKETLPG-E	RMEW	-	-	ANNUAL	LO	0	null	null	null	null	null	null	null	null	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	9.24111314475015E-02	2
+	FLO_MRKPRD	RMEWOLPKETLPG-E	RMEW	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	9.35111314475015E-02	1
+	NCAP_BND	RHEHBIWSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEHCOASTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEHELCHEATFIN-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEHGASHEAT-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEHOKEHEAT-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEHOLPHEAT-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEKBIWSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEKELCSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEKGASSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEKOKEPRIMUS-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEKOLPSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHELELCINC-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEOELCOTH-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHERELCREF-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEWELCCHP-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEWELCGEY-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEWELCSWH-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RHEWOLPSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEHBIWOPEN-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEHCOABNM-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEHELCHEATBAR-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEHOKEHEAT-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEHOLPHET-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEKBIWBNM-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEKCOABNM-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEKELCHOT-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEKELCSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEKOKEWICK-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEKOLPRING-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLELELCINC-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEOELCOTH-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLERELCREF-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEWBIWKETBI-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEWCOAKETCOA-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEWELCKET-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEWOKEKETWI-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RLEWOLPKETLPG-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEHBIWSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEHCOASTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEHELCHEATFIN-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEHGASHEAT-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEHOKEHEAT-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEHOLPHEAT-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEKBIWSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEKCOABNM-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEKELCSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEKGASSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEKOKEWICK-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEKOLPSTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMELELCINC-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEOELCOTH-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMERELCREF-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWBIWKETBI-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWCOASTOV-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWELCCHP-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWELCGEY-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWELCKET-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWELCSWH-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWGASGEY-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWOKEKETPR-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_BND	RMEWOLPKETLPG-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2
+	NCAP_COST	RHEHBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEHCOASTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEHELCHEATFIN-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEHGASHEAT-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEHOKEHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEHOLPHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEKBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEKELCSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEKGASSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEKOKEPRIMUS-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEKOLPSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHELELCINC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEOELCOTH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHERELCREF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEWELCCHP-N	-	-	-	-	-	0	1700	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEWELCGEY-E	-	-	-	-	-	0	1000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEWELCSWH-E	-	-	-	-	-	0	1545.45454545455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RHEWOLPSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEHBIWOPEN-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEHCOABNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEHELCHEATBAR-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEHOKEHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEHOLPHET-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEKBIWBNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEKCOABNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEKELCHOT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEKELCSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEKOKEWICK-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEKOLPRING-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLELELCINC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEOELCOTH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLERELCREF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEWBIWKETBI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEWCOAKETCOA-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEWELCKET-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEWOKEKETWI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RLEWOLPKETLPG-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEHBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEHCOASTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEHELCHEATFIN-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEHGASHEAT-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEHOKEHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEHOLPHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEKBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEKCOABNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEKELCSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEKGASSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEKOKEWICK-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEKOLPSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMELELCINC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEOELCOTH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMERELCREF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWBIWKETBI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWCOASTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWELCCHP-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWELCGEY-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWELCKET-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWELCSWH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWGASGEY-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWOKEKETPR-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_COST	RMEWOLPKETLPG-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4
+	NCAP_FOM	RHEHBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEHCOASTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEHELCHEATFIN-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEHGASHEAT-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEHOKEHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEHOLPHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEKBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEKELCSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEKGASSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEKOKEPRIMUS-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEKOLPSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHELELCINC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEOELCOTH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHERELCREF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEWELCCHP-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEWELCGEY-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEWELCSWH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RHEWOLPSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEHBIWOPEN-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEHCOABNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEHELCHEATBAR-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEHOKEHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEHOLPHET-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEKBIWBNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEKCOABNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEKELCHOT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEKELCSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEKOKEWICK-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEKOLPRING-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLELELCINC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEOELCOTH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLERELCREF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEWBIWKETBI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEWCOAKETCOA-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEWELCKET-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEWOKEKETWI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RLEWOLPKETLPG-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEHBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEHCOASTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEHELCHEATFIN-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEHGASHEAT-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEHOKEHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEHOLPHEAT-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEKBIWSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEKCOABNM-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEKELCSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEKGASSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEKOKEWICK-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEKOLPSTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMELELCINC-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEOELCOTH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMERELCREF-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWBIWKETBI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWCOASTOV-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWELCCHP-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWELCGEY-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWELCKET-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWELCSWH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWGASGEY-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWOKEKETPR-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_FOM	RMEWOLPKETLPG-E	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5
+	NCAP_TLIFE	RHEHBIWSTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEHCOASTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEHELCHEATFIN-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEHGASHEAT-N	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEHOKEHEAT-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEHOLPHEAT-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEKBIWSTOV-E	-	-	-	-	-	0	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEKELCSTOV-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEKGASSTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEKOKEPRIMUS-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEKOLPSTOV-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHELELCINC-E	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEOELCOTH-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHERELCREF-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEWELCCHP-N	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEWELCGEY-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEWELCSWH-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RHEWOLPSTOV-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEHBIWOPEN-E	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEHCOABNM-E	-	-	-	-	-	0	2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEHELCHEATBAR-E	-	-	-	-	-	0	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEHOKEHEAT-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEHOLPHET-E	-	-	-	-	-	0	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEKBIWBNM-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEKCOABNM-E	-	-	-	-	-	0	2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEKELCHOT-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEKELCSTOV-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEKOKEWICK-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEKOLPRING-E	-	-	-	-	-	0	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLELELCINC-E	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEOELCOTH-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLERELCREF-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEWBIWKETBI-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEWCOAKETCOA-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEWELCKET-E	-	-	-	-	-	0	2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEWOKEKETWI-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RLEWOLPKETLPG-E	-	-	-	-	-	0	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEHBIWSTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEHCOASTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEHELCHEATFIN-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEHGASHEAT-N	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEHOKEHEAT-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEHOLPHEAT-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEKBIWSTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEKCOABNM-E	-	-	-	-	-	0	4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEKELCSTOV-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEKGASSTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEKOKEWICK-E	-	-	-	-	-	0	4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEKOLPSTOV-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMELELCINC-E	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEOELCOTH-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMERELCREF-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWBIWKETBI-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWCOASTOV-E	-	-	-	-	-	0	20	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWELCCHP-N	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWELCGEY-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWELCKET-E	-	-	-	-	-	0	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWELCSWH-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWGASGEY-N	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWOKEKETPR-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	NCAP_TLIFE	RMEWOLPKETLPG-E	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3
+	PRC_RESID	RHEHBIWSTOV-E	-	-	-	-	-	0	1.55210500144878	1.36908773556813	1.18607046968747	1.00305320380682	0.82003593792616	0.637018672045503	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEHCOASTOV-E	-	-	-	-	-	0	2.69446268939035	2.82028401129686	2.94610533320337	3.07192665510987	3.19774797701638	3.32356929892289	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEHELCHEATFIN-E	-	-	-	-	-	0	29.8269801335127	30.9278778492797	32.0287755650466	33.1296732808136	34.2305709965805	35.3314687123475	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEHGASHEAT-N	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEHOKEHEAT-E	-	-	-	-	-	0	0.182007300953477	0.162092609967497	0.142177918981517	0.122263227995538	0.102348537009558	8.24338460235781E-02	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEHOLPHEAT-E	-	-	-	-	-	0	0.437403000526714	0.742049750837418	1.04669650114812	1.35134325145882	1.65599000176953	1.96063675208023	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEKBIWSTOV-E	-	-	-	-	-	0	0.654386060297728	0.607018724820435	0.559651389343143	0.512284053865851	0.464916718388559	0.417549382911267	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEKELCSTOV-E	-	-	-	-	-	0	6.0848468083515	6.34892725155164	6.61300769475179	6.87708813795193	7.14116858115208	7.40524902435222	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEKGASSTOV-E	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEKOKEPRIMUS-E	-	-	-	-	-	0	0.101336733676612	9.48146671239199E-02	8.82926005712281E-02	8.17705340185363E-02	7.52484674658445E-02	6.87264009131527E-02	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEKOLPSTOV-E	-	-	-	-	-	0	0.218995963935855	0.754598171706916	1.29020037947798	1.82580258724904	2.3614047950201	2.89700700279116	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHELELCINC-E	-	-	-	-	-	0	76.6836681862418	79.9682584805992	83.2528487749566	86.5374390693141	89.8220293636715	93.1066196580289	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEOELCOTH-E	-	-	-	-	-	0	21.2940309565726	22.2125739065627	23.1311168565529	24.0496598065431	24.9682027565332	25.8867457065234	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHERELCREF-E	-	-	-	-	-	0	6.59392686540939	6.87836361894491	7.16280037248044	7.44723712601596	7.73167387955149	8.01611063308701	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEWELCCHP-N	-	-	-	-	-	0	6.81319340028217	7.10708847245107	7.40098354461997	7.69487861678886	7.98877368895776	8.28266876112666	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEWELCGEY-E	-	-	-	-	-	0	51.4526169207895	53.6720857769925	55.8915546331955	58.1110234893985	60.3304923456015	62.5499612018046	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEWELCSWH-E	-	-	-	-	-	0	1.2987636596687	1.3547873503323	1.41081104099589	1.46683473165949	1.52285842232309	1.57888211298669	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RHEWOLPSTOV-E	-	-	-	-	-	0	0.743214912767242	3.18880333860743	5.63439176444762	8.07998019028781	10.525568616128	12.9711570419682	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEHBIWOPEN-E	-	-	-	-	-	0	35.2742711699203	32.0807525033078	28.8872338366954	25.693715170083	22.5001965034705	19.3066778368581	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEHCOABNM-E	-	-	-	-	-	0	5.33522215688795	5.67117427858015	6.00712640027236	6.34307852196457	6.67903064365677	7.01498276534898	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEHELCHEATBAR-E	-	-	-	-	-	0	4.76513402766613	5.52901292516537	6.29289182266461	7.05677072016385	7.82064961766309	8.58452851516233	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEHOKEHEAT-E	-	-	-	-	-	0	0.841023301881517	0.826285293678886	0.811547285476255	0.796809277273624	0.782071269070993	0.767333260868362	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEHOLPHET-E	-	-	-	-	-	0	2.46032451661869E-02	7.66195208287453E-02	0.128635796491304	0.180652072153862	0.23266834781642	0.284684623478979	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEKBIWBNM-E	-	-	-	-	-	0	5.81249483363908	5.51114532295861	5.20979581227813	4.90844630159766	4.60709679091719	4.30574728023671	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEKCOABNM-E	-	-	-	-	-	0	0.234059982579437	0.274910756822869	0.315761531066301	0.356612305309732	0.397463079553164	0.438313853796596	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEKELCHOT-E	-	-	-	-	-	0	7.93714867629778	8.59255060660319	9.2479525369086	9.90335446721401	10.5587563975194	11.2141583278248	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEKELCSTOV-E	-	-	-	-	-	0	1.13947139209163	1.23356207633632	1.327652760581	1.42174344482569	1.51583412907037	1.60992481331506	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEKOKEWICK-E	-	-	-	-	-	0	1.47803011907697	1.41517004307188	1.35230996706679	1.2894498910617	1.22658981505662	1.16372973905153	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEKOLPRING-E	-	-	-	-	-	0	0.102232515265128	0.395796840952449	0.68936116663977	0.982925492327091	1.27648981801441	1.57005414370173	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLELELCINC-E	-	-	-	-	-	0	30.6689800942178	35.3915845849485	40.1141890756792	44.8367935664099	49.5593980571405	54.2820025478712	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEOELCOTH-E	-	-	-	-	-	0	5.11763133017158	5.43862575908641	5.75962018800123	6.08061461691605	6.40160904583087	6.72260347474569	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLERELCREF-E	-	-	-	-	-	0	2.46601572703595	2.84447752519673	3.22293932335751	3.60140112151828	3.97986291967906	4.35832471783983	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEWBIWKETBI-E	-	-	-	-	-	0	3.0021679648837	2.77229926936067	2.54243057383763	2.31256187831459	2.08269318279155	1.85282448726852	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEWCOAKETCOA-E	-	-	-	-	-	0	0.169210611639265	0.158235422345818	0.147260233052371	0.136285043758924	0.125309854465476	0.114334665172029	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEWELCKET-E	-	-	-	-	-	0	3.711886759409	4.37971026880043	5.04753377819187	5.71535728758331	6.38318079697475	7.05100430636618	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEWOKEKETWI-E	-	-	-	-	-	0	2.81362657702982	2.70574912079605	2.59787166456227	2.4899942083285	2.38211675209472	2.27423929586095	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RLEWOLPKETLPG-E	-	-	-	-	-	0	0.039082836196781	0.211787936254458	0.384493036312136	0.557198136369813	0.729903236427491	0.902608336485168	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEHBIWSTOV-E	-	-	-	-	-	0	18.3394187453266	16.4170191970522	14.4946196487779	12.5722201005035	10.6498205522291	8.72742100395475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEHCOASTOV-E	-	-	-	-	-	0	6.34468501438972	6.89060296742445	7.43652092045919	7.98243887349393	8.52835682652866	9.0742747795634	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEHELCHEATFIN-E	-	-	-	-	-	0	13.713927516892	14.7382975129593	15.7626675090266	16.7870375050939	17.8114075011612	18.8357774972285	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEHGASHEAT-N	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEHOKEHEAT-E	-	-	-	-	-	0	3.00024792261404	2.71531632127439	2.43038471993474	2.14545311859509	1.86052151725545	1.5755899159158	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEHOLPHEAT-E	-	-	-	-	-	0	7.19852896007375E-02	0.132415248064284	0.192845206527831	0.253275164991378	0.313705123454925	0.374135081918472	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEKBIWSTOV-E	-	-	-	-	-	0	10.0069879207321	9.32330628683217	8.63962465293221	7.95594301903226	7.2722613851323	6.58857975123234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEKCOABNM-E	-	-	-	-	-	0	0.178277303453123	0.201967173838568	0.225657044224013	0.249346914609459	0.273036784994904	0.29672665538035	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEKELCSTOV-E	-	-	-	-	-	0	4.5800962260327	4.81437200636502	5.04864778669734	5.28292356702966	5.51719934736199	5.75147512769431	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEKGASSTOV-E	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEKOKEWICK-E	-	-	-	-	-	0	0.20288432807577	0.190702982115936	0.178521636156102	0.166340290196268	0.154158944236434	0.141977598276599	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEKOLPSTOV-E	-	-	-	-	-	0	5.64276373489966E-02	0.199187930894222	0.341948224439448	0.484708517984674	0.6274688115299	0.770229105075126	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMELELCINC-E	-	-	-	-	-	0	46.1027592372565	49.4736747015796	52.8445901659026	56.2155056302256	59.5864210945486	62.9573365588716	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEOELCOTH-E	-	-	-	-	-	0	14.9789303623049	16.1477363409479	17.3165423195908	18.4853482982338	19.6541542768767	20.8229602555197	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMERELCREF-E	-	-	-	-	-	0	4.11004985187182	4.37353945544305	4.63702905901429	4.90051866258552	5.16400826615676	5.42749786972799	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWBIWKETBI-E	-	-	-	-	-	0	4.67800875622936	4.23469506482754	3.79138137342572	3.3480676820239	2.90475399062208	2.46144029922026	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWCOASTOV-E	-	-	-	-	-	0	0.71010363954988	0.649897555483984	0.589691471418088	0.529485387352191	0.469279303286295	0.409073219220398	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWELCCHP-N	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWELCGEY-E	-	-	-	-	-	0	13.9550785562664	14.6178228382435	15.2805671202207	15.9433114021978	16.6060556841749	17.2687999661521	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWELCKET-E	-	-	-	-	-	0	2.19920766543179	2.29994767068781	2.40068767594382	2.50142768119983	2.60216768645585	2.70290769171186	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWELCSWH-E	-	-	-	-	-	0	1.02581777408983	1.07453515403058	1.12325253397132	1.17196991391206	1.22068729385281	1.26940467379355	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWGASGEY-N	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWOKEKETPR-E	-	-	-	-	-	0	2.8295459340772	2.65361952368225	2.4776931132873	2.30176670289235	2.1258402924974	1.94991388210244	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	PRC_RESID	RMEWOLPKETLPG-E	-	-	-	-	-	0	3.89512001061182E-02	0.18454956147972	0.330147922853321	0.475746284226922	0.621344645600524	0.766943006974125	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
+	UC__RHSRT	RHIEW-LO	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	0	0	0	0	
+	UC__RHSRT	RHIEW-UP	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	0	0	0	0	
+	UCRULE_ACT	RHIEW-LO	LHS	S-RHEWG-ALL	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	-5.02422067018414E-02	null	null	null	null	-0.25336272672144	null	null	null	null	-0.400885081687316	null	null	null	null	-0.566829111896035	null	null	null	null	-0.687455695017238	-0.733501903283603	-0.754934035328111	-0.754934035328111	-0.754934035328111	
+	UCRULE_ACT	RHIEW-LO	LHS	S-RHEWG-EFF	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	
+	UCRULE_ACT	RHIEW-UP	LHS	S-RHEWG-ALL	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	-0.127960973091636	null	null	null	null	-0.255921946183273	null	null	null	null	-0.404934425946784	null	null	null	null	-0.572554658480844	null	null	null	null	-0.694399691936604	-0.740911013417781	-0.762559631644556	-0.762559631644556	-0.762559631644556	
+	UCRULE_ACT	RHIEW-UP	LHS	S-RHEWG-EFF	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	
+
+TID DATA	REGION1
+	PRC_ACTUNT	RHEHBIWSTOV-E	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	RHEHCOASTOV-E	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	RHEHELCHEATFIN-E	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	RHEHGASHEAT-N	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	RHEHOKEHEAT-E	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	RHEHOLPHEAT-E	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	RHEKBIWSTOV-E	-	RHEK	-	-	-	1	
+	PRC_ACTUNT	RHEKELCSTOV-E	-	RHEK	-	-	-	1	
+	PRC_ACTUNT	RHEKGASSTOV-E	-	RHEK	-	-	-	1	
+	PRC_ACTUNT	RHEKOKEPRIMUS-E	-	RHEK	-	-	-	1	
+	PRC_ACTUNT	RHEKOLPSTOV-E	-	RHEK	-	-	-	1	
+	PRC_ACTUNT	RHELELCINC-E	-	RHEL	-	-	-	1	
+	PRC_ACTUNT	RHEOELCOTH-E	-	RHEO	-	-	-	1	
+	PRC_ACTUNT	RHERELCREF-E	-	RHER	-	-	-	1	
+	PRC_ACTUNT	RHEWELCCHP-N	-	RHEWG	-	-	-	1	
+	PRC_ACTUNT	RHEWELCGEY-E	-	RHEWG	-	-	-	1	
+	PRC_ACTUNT	RHEWELCSWH-E	-	RHEWG	-	-	-	1	
+	PRC_ACTUNT	RHEWOLPSTOV-E	-	RHEW	-	-	-	1	
+	PRC_ACTUNT	RLEHBIWOPEN-E	-	RLEH	-	-	-	1	
+	PRC_ACTUNT	RLEHCOABNM-E	-	RLEH	-	-	-	1	
+	PRC_ACTUNT	RLEHELCHEATBAR-E	-	RLEH	-	-	-	1	
+	PRC_ACTUNT	RLEHOKEHEAT-E	-	RLEH	-	-	-	1	
+	PRC_ACTUNT	RLEHOLPHET-E	-	RLEH	-	-	-	1	
+	PRC_ACTUNT	RLEKBIWBNM-E	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	RLEKCOABNM-E	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	RLEKELCHOT-E	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	RLEKELCSTOV-E	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	RLEKOKEWICK-E	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	RLEKOLPRING-E	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	RLELELCINC-E	-	RLEL	-	-	-	1	
+	PRC_ACTUNT	RLEOELCOTH-E	-	RLEO	-	-	-	1	
+	PRC_ACTUNT	RLERELCREF-E	-	RLER	-	-	-	1	
+	PRC_ACTUNT	RLEWBIWKETBI-E	-	RLEW	-	-	-	1	
+	PRC_ACTUNT	RLEWCOAKETCOA-E	-	RLEW	-	-	-	1	
+	PRC_ACTUNT	RLEWELCKET-E	-	RLEW	-	-	-	1	
+	PRC_ACTUNT	RLEWOKEKETWI-E	-	RLEW	-	-	-	1	
+	PRC_ACTUNT	RLEWOLPKETLPG-E	-	RLEW	-	-	-	1	
+	PRC_ACTUNT	RMEHBIWSTOV-E	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	RMEHCOASTOV-E	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	RMEHELCHEATFIN-E	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	RMEHGASHEAT-N	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	RMEHOKEHEAT-E	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	RMEHOLPHEAT-E	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	RMEKBIWSTOV-E	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	RMEKCOABNM-E	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	RMEKELCSTOV-E	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	RMEKGASSTOV-E	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	RMEKOKEWICK-E	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	RMEKOLPSTOV-E	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	RMELELCINC-E	-	RMEL	-	-	-	1	
+	PRC_ACTUNT	RMEOELCOTH-E	-	RMEO	-	-	-	1	
+	PRC_ACTUNT	RMERELCREF-E	-	RMER	-	-	-	1	
+	PRC_ACTUNT	RMEWBIWKETBI-E	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	RMEWCOASTOV-E	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	RMEWELCCHP-N	-	RMEWG	-	-	-	1	
+	PRC_ACTUNT	RMEWELCGEY-E	-	RMEWG	-	-	-	1	
+	PRC_ACTUNT	RMEWELCKET-E	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	RMEWELCSWH-E	-	RMEWG	-	-	-	1	
+	PRC_ACTUNT	RMEWGASGEY-N	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	RMEWOKEKETPR-E	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	RMEWOLPKETLPG-E	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	ZZRHEH	-	RHEH	-	-	-	1	
+	PRC_ACTUNT	ZZRHEK	-	RHEK	-	-	-	1	
+	PRC_ACTUNT	ZZRHEL	-	RHEL	-	-	-	1	
+	PRC_ACTUNT	ZZRHEO	-	RHEO	-	-	-	1	
+	PRC_ACTUNT	ZZRHER	-	RHER	-	-	-	1	
+	PRC_ACTUNT	ZZRHEW	-	RHEW	-	-	-	1	
+	PRC_ACTUNT	ZZRHEWG	-	RHEWG	-	-	-	1	
+	PRC_ACTUNT	ZZRLEH	-	RLEH	-	-	-	1	
+	PRC_ACTUNT	ZZRLEK	-	RLEK	-	-	-	1	
+	PRC_ACTUNT	ZZRLEL	-	RLEL	-	-	-	1	
+	PRC_ACTUNT	ZZRLEO	-	RLEO	-	-	-	1	
+	PRC_ACTUNT	ZZRLER	-	RLER	-	-	-	1	
+	PRC_ACTUNT	ZZRLEW	-	RLEW	-	-	-	1	
+	PRC_ACTUNT	ZZRLEWG	-	RLEWG	-	-	-	1	
+	PRC_ACTUNT	ZZRLNL	-	RLNL	-	-	-	1	
+	PRC_ACTUNT	ZZRMEH	-	RMEH	-	-	-	1	
+	PRC_ACTUNT	ZZRMEK	-	RMEK	-	-	-	1	
+	PRC_ACTUNT	ZZRMEL	-	RMEL	-	-	-	1	
+	PRC_ACTUNT	ZZRMEO	-	RMEO	-	-	-	1	
+	PRC_ACTUNT	ZZRMER	-	RMER	-	-	-	1	
+	PRC_ACTUNT	ZZRMEW	-	RMEW	-	-	-	1	
+	PRC_ACTUNT	ZZRMEWG	-	RMEWG	-	-	-	1	
+	PRC_ACTUNT	ZZRMNL	-	RMNL	-	-	-	1	
+	PRC_CAPACT	RHEHBIWSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEHCOASTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEHELCHEATFIN-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEHGASHEAT-N	-	-	-	-	-	1	
+	PRC_CAPACT	RHEHOKEHEAT-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEHOLPHEAT-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEKBIWSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEKELCSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEKGASSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEKOKEPRIMUS-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEKOLPSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHELELCINC-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEOELCOTH-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHERELCREF-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEWELCCHP-N	-	-	-	-	-	1	
+	PRC_CAPACT	RHEWELCGEY-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEWELCSWH-E	-	-	-	-	-	1	
+	PRC_CAPACT	RHEWOLPSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEHBIWOPEN-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEHCOABNM-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEHELCHEATBAR-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEHOKEHEAT-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEHOLPHET-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEKBIWBNM-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEKCOABNM-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEKELCHOT-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEKELCSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEKOKEWICK-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEKOLPRING-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLELELCINC-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEOELCOTH-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLERELCREF-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEWBIWKETBI-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEWCOAKETCOA-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEWELCKET-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEWOKEKETWI-E	-	-	-	-	-	1	
+	PRC_CAPACT	RLEWOLPKETLPG-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEHBIWSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEHCOASTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEHELCHEATFIN-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEHGASHEAT-N	-	-	-	-	-	1	
+	PRC_CAPACT	RMEHOKEHEAT-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEHOLPHEAT-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEKBIWSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEKCOABNM-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEKELCSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEKGASSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEKOKEWICK-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEKOLPSTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMELELCINC-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEOELCOTH-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMERELCREF-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWBIWKETBI-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWCOASTOV-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWELCCHP-N	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWELCGEY-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWELCKET-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWELCSWH-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWGASGEY-N	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWOKEKETPR-E	-	-	-	-	-	1	
+	PRC_CAPACT	RMEWOLPKETLPG-E	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHEH	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHEK	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHEL	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHEO	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHER	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHEW	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRHEWG	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLEH	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLEK	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLEL	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLEO	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLER	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLEW	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLEWG	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRLNL	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMEH	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMEK	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMEL	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMEO	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMER	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMEW	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMEWG	-	-	-	-	-	1	
+	PRC_CAPACT	ZZRMNL	-	-	-	-	-	1	
+	TOP-IN	RHEHBIWSTOV-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RHEHCOASTOV-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RHEHELCHEATFIN-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHEHGASHEAT-N	RESGAS	-	-	-	-	1	
+	TOP-IN	RHEHOKEHEAT-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RHEHOLPHEAT-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RHEKBIWSTOV-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RHEKELCSTOV-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHEKGASSTOV-E	RESGAS	-	-	-	-	1	
+	TOP-IN	RHEKOKEPRIMUS-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RHEKOLPSTOV-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RHELELCINC-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHERELCREF-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHEWELCCHP-N	RESELC	-	-	-	-	1	
+	TOP-IN	RHEWELCGEY-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHEWELCSWH-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHEWOLPSTOV-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RLEHBIWOPEN-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RLEHCOABNM-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RLEHELCHEATBAR-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLEHOKEHEAT-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RLEHOLPHET-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RLEKBIWBNM-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RLEKCOABNM-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RLEKELCHOT-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLEKELCSTOV-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLEKOKEWICK-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RLEKOLPRING-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RLELELCINC-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLEOELCOTH-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLERELCREF-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLEWBIWKETBI-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RLEWCOAKETCOA-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RLEWELCKET-E	RESELC	-	-	-	-	1	
+	TOP-IN	RLEWOKEKETWI-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RLEWOLPKETLPG-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RMEHBIWSTOV-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RMEHCOASTOV-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RMEHELCHEATFIN-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEHGASHEAT-N	RESGAS	-	-	-	-	1	
+	TOP-IN	RMEHOKEHEAT-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RMEHOLPHEAT-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RMEKBIWSTOV-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RMEKCOABNM-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RMEKELCSTOV-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEKGASSTOV-E	RESGAS	-	-	-	-	1	
+	TOP-IN	RMEKOKEWICK-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RMEKOLPSTOV-E	RESOLP	-	-	-	-	1	
+	TOP-IN	RMELELCINC-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEOELCOTH-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMERELCREF-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEWBIWKETBI-E	RESBIW	-	-	-	-	1	
+	TOP-IN	RMEWCOASTOV-E	RESCOA	-	-	-	-	1	
+	TOP-IN	RMEWELCCHP-N	RESELC	-	-	-	-	1	
+	TOP-IN	RMEWELCGEY-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEWELCKET-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEWELCSWH-E	RESELC	-	-	-	-	1	
+	TOP-IN	RMEWGASGEY-N	RESGAS	-	-	-	-	1	
+	TOP-IN	RMEWOKEKETPR-E	RESOKE	-	-	-	-	1	
+	TOP-IN	RMEWOLPKETLPG-E	RESOLP	-	-	-	-	1	
+	TOP-IN	ZZRHEH	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRHEK	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRHEL	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRHEO	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRHER	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRHEW	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRHEWG	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLEH	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLEK	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLEL	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLEO	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLER	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLEW	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLEWG	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRLNL	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMEH	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMEK	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMEL	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMEO	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMER	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMEW	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMEWG	ZZZ	-	-	-	-	1	
+	TOP-IN	ZZRMNL	ZZZ	-	-	-	-	1	
+	TOP-OUT	RHEHBIWSTOV-E	RHEH	-	-	-	-	1	
+	TOP-OUT	RHEHCOASTOV-E	RHEH	-	-	-	-	1	
+	TOP-OUT	RHEHELCHEATFIN-E	RHEH	-	-	-	-	1	
+	TOP-OUT	RHEHGASHEAT-N	RHEH	-	-	-	-	1	
+	TOP-OUT	RHEHOKEHEAT-E	RHEH	-	-	-	-	1	
+	TOP-OUT	RHEHOLPHEAT-E	RHEH	-	-	-	-	1	
+	TOP-OUT	RHEKBIWSTOV-E	RHEK	-	-	-	-	1	
+	TOP-OUT	RHEKELCSTOV-E	RHEK	-	-	-	-	1	
+	TOP-OUT	RHEKGASSTOV-E	RHEK	-	-	-	-	1	
+	TOP-OUT	RHEKOKEPRIMUS-E	RHEK	-	-	-	-	1	
+	TOP-OUT	RHEKOLPSTOV-E	RHEK	-	-	-	-	1	
+	TOP-OUT	RHELELCINC-E	RHEL	-	-	-	-	1	
+	TOP-OUT	RHEOELCOTH-E	RHEO	-	-	-	-	1	
+	TOP-OUT	RHERELCREF-E	RHER	-	-	-	-	1	
+	TOP-OUT	RHEWELCCHP-N	RHEWG	-	-	-	-	1	
+	TOP-OUT	RHEWELCGEY-E	RHEWG	-	-	-	-	1	
+	TOP-OUT	RHEWELCSWH-E	RHEWG	-	-	-	-	1	
+	TOP-OUT	RHEWOLPSTOV-E	RHEW	-	-	-	-	1	
+	TOP-OUT	RLEHBIWOPEN-E	RLEH	-	-	-	-	1	
+	TOP-OUT	RLEHCOABNM-E	RLEH	-	-	-	-	1	
+	TOP-OUT	RLEHELCHEATBAR-E	RLEH	-	-	-	-	1	
+	TOP-OUT	RLEHOKEHEAT-E	RLEH	-	-	-	-	1	
+	TOP-OUT	RLEHOLPHET-E	RLEH	-	-	-	-	1	
+	TOP-OUT	RLEKBIWBNM-E	RLEK	-	-	-	-	1	
+	TOP-OUT	RLEKCOABNM-E	RLEK	-	-	-	-	1	
+	TOP-OUT	RLEKELCHOT-E	RLEK	-	-	-	-	1	
+	TOP-OUT	RLEKELCSTOV-E	RLEK	-	-	-	-	1	
+	TOP-OUT	RLEKOKEWICK-E	RLEK	-	-	-	-	1	
+	TOP-OUT	RLEKOLPRING-E	RLEK	-	-	-	-	1	
+	TOP-OUT	RLELELCINC-E	RLEL	-	-	-	-	1	
+	TOP-OUT	RLEOELCOTH-E	RLEO	-	-	-	-	1	
+	TOP-OUT	RLERELCREF-E	RLER	-	-	-	-	1	
+	TOP-OUT	RLEWBIWKETBI-E	RLEW	-	-	-	-	1	
+	TOP-OUT	RLEWCOAKETCOA-E	RLEW	-	-	-	-	1	
+	TOP-OUT	RLEWELCKET-E	RLEW	-	-	-	-	1	
+	TOP-OUT	RLEWOKEKETWI-E	RLEW	-	-	-	-	1	
+	TOP-OUT	RLEWOLPKETLPG-E	RLEW	-	-	-	-	1	
+	TOP-OUT	RMEHBIWSTOV-E	RMEH	-	-	-	-	1	
+	TOP-OUT	RMEHCOASTOV-E	RMEH	-	-	-	-	1	
+	TOP-OUT	RMEHELCHEATFIN-E	RMEH	-	-	-	-	1	
+	TOP-OUT	RMEHGASHEAT-N	RMEH	-	-	-	-	1	
+	TOP-OUT	RMEHOKEHEAT-E	RMEH	-	-	-	-	1	
+	TOP-OUT	RMEHOLPHEAT-E	RMEH	-	-	-	-	1	
+	TOP-OUT	RMEKBIWSTOV-E	RMEK	-	-	-	-	1	
+	TOP-OUT	RMEKCOABNM-E	RMEK	-	-	-	-	1	
+	TOP-OUT	RMEKELCSTOV-E	RMEK	-	-	-	-	1	
+	TOP-OUT	RMEKGASSTOV-E	RMEK	-	-	-	-	1	
+	TOP-OUT	RMEKOKEWICK-E	RMEK	-	-	-	-	1	
+	TOP-OUT	RMEKOLPSTOV-E	RMEK	-	-	-	-	1	
+	TOP-OUT	RMELELCINC-E	RMEL	-	-	-	-	1	
+	TOP-OUT	RMEOELCOTH-E	RMEO	-	-	-	-	1	
+	TOP-OUT	RMERELCREF-E	RMER	-	-	-	-	1	
+	TOP-OUT	RMEWBIWKETBI-E	RMEW	-	-	-	-	1	
+	TOP-OUT	RMEWCOASTOV-E	RMEW	-	-	-	-	1	
+	TOP-OUT	RMEWELCCHP-N	RMEWG	-	-	-	-	1	
+	TOP-OUT	RMEWELCGEY-E	RMEWG	-	-	-	-	1	
+	TOP-OUT	RMEWELCKET-E	RMEW	-	-	-	-	1	
+	TOP-OUT	RMEWELCSWH-E	RMEWG	-	-	-	-	1	
+	TOP-OUT	RMEWGASGEY-N	RMEW	-	-	-	-	1	
+	TOP-OUT	RMEWOKEKETPR-E	RMEW	-	-	-	-	1	
+	TOP-OUT	RMEWOLPKETLPG-E	RMEW	-	-	-	-	1	
+	TOP-OUT	ZZRHEH	RHEH	-	-	-	-	1	
+	TOP-OUT	ZZRHEK	RHEK	-	-	-	-	1	
+	TOP-OUT	ZZRHEL	RHEL	-	-	-	-	1	
+	TOP-OUT	ZZRHEO	RHEO	-	-	-	-	1	
+	TOP-OUT	ZZRHER	RHER	-	-	-	-	1	
+	TOP-OUT	ZZRHEW	RHEW	-	-	-	-	1	
+	TOP-OUT	ZZRHEWG	RHEWG	-	-	-	-	1	
+	TOP-OUT	ZZRLEH	RLEH	-	-	-	-	1	
+	TOP-OUT	ZZRLEK	RLEK	-	-	-	-	1	
+	TOP-OUT	ZZRLEL	RLEL	-	-	-	-	1	
+	TOP-OUT	ZZRLEO	RLEO	-	-	-	-	1	
+	TOP-OUT	ZZRLER	RLER	-	-	-	-	1	
+	TOP-OUT	ZZRLEW	RLEW	-	-	-	-	1	
+	TOP-OUT	ZZRLEWG	RLEWG	-	-	-	-	1	
+	TOP-OUT	ZZRLNL	RLNL	-	-	-	-	1	
+	TOP-OUT	ZZRMEH	RMEH	-	-	-	-	1	
+	TOP-OUT	ZZRMEK	RMEK	-	-	-	-	1	
+	TOP-OUT	ZZRMEL	RMEL	-	-	-	-	1	
+	TOP-OUT	ZZRMEO	RMEO	-	-	-	-	1	
+	TOP-OUT	ZZRMER	RMER	-	-	-	-	1	
+	TOP-OUT	ZZRMEW	RMEW	-	-	-	-	1	
+	TOP-OUT	ZZRMEWG	RMEWG	-	-	-	-	1	
+	TOP-OUT	ZZRMNL	RMNL	-	-	-	-	1	
+	UC_R_EACH	RHIEW-LO	-	-	-	-	-	1	
+	UC_R_EACH	RHIEW-UP	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

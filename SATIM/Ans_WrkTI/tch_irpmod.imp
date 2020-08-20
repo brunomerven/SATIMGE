@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/06	5:37:03 PM
+Creation Date:	2020/08/19	9:15:33 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IRPMOD	Modified IRP with Ramped up RE programme	
@@ -113,7 +113,7 @@ ITEMS	REGION1
 
 TS DATA	REGION1
 	NCAP_BND	ERSOLPCT-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_BND	ERSOLPCT-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	0.5	0.6	0.7	0.8	0.9	1	1	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPCT-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	0.5	0.6	0.7	0.8	0.9	1	1	1	1	1	1	1	1	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERSOLPRC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	0.315	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERSOLPRC-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	0.35	0.3	0.3	0.25	0.225	0.2	0.2	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERSOLPRI-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	0.09	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -121,7 +121,7 @@ TS DATA	REGION1
 	NCAP_BND	ERSOLPRR-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	0.045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERSOLPRR-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	0.05	0.05	0.05	0.05	0.05	0.05	0.05	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ERWNDH-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	0.818	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_BND	ERWNDH-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	0.8	0.9	1	1.2	1.4	1.6	1.6	1.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERWNDH-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	0.8	0.9	1	1.2	1.4	1.6	1.6	1.6	1.6	1.6	1.6	1.6	1.6	null	null	null	null	null	null	null	null	null	
 
 TID DATA	REGION1
 	PRC_ACTUNT	ERBIG-N	-	ELCC	-	-	-	1	

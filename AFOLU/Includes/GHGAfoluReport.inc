@@ -4,7 +4,7 @@
 *
 
 * Write Drivers to Spreadsheet
-execute_unload "DriversLAND.gdx" GVA_FS POP PAMS_RUN
+execute_unload "DriversLAND.gdx" GVA_FS POP TFHPOP PAMS_RUN
 execute 'gdxxrw.exe i=DriversLAND.gdx o=AFOLU\Land_model_Linked.xlsx index=indexG2E!a6';
 
 * Read Results from Spreadsheet

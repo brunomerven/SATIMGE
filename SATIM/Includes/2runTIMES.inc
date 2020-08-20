@@ -25,6 +25,6 @@
 
 * Run TIMES model
  execute ".\satim\%TIMESfolder%\ShowRunNumber.CMD"
-* execute ".\satim\%TIMESfolder%\RUNTIMES2.CMD"
+ execute ".\satim\%TIMESfolder%\RUNTIMES2.CMD"
  execute "echo --- Return to CGE model"
 

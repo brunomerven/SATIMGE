@@ -459,7 +459,7 @@ REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 
 GDP_RUN(TC) = SUM(FS,GVA_FS(FS,TC));
 
-$ontext
+*$ontext
 $include SATIM\includes\GHGEnergyReport.inc
 
 *Get Process Emissions
@@ -470,13 +470,13 @@ $include Waste\includes\GHGWasteReport.inc
 
 * Run AFOLU Model
 $include AFOLU\includes\GHGAfoluReport.inc
-$offtext
+*$offtext
 );
 *end RUN loop
 *-------------------------------------------------------------------------------
 
 execute_unload "REPORT.gdx" REPORT
-*execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
+execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
 
 
 
