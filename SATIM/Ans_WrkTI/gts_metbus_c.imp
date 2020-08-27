@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/29	15:43:28
+Creation Date:	2020/08/25	19:24:54
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	GTS_METBUS_C	UC:10% of Municipal bus fleet by 2030 reaching 30% by 2050 NDC central	10% of Municipal bus fleet by 2030 reaching 30% by 2050
@@ -379,9 +379,9 @@ ITEMS	REGION1
 	E	TSHFO	Transport Other - HFO	PJ	COM,DEM,ANNUAL,RES	
 
 TS DATA	REGION1
-	UC__RHSRT	GTS_METROBUS	-	-	-	-	LO	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UCRULE_ACT	GTS_METROBUS	LHS	S_TPPUBUS	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.0685	null	null	null	null	null	null	null	null	null	null	null	-0.2055	-0.2055	-0.2055	
-	UCRULE_ACT	GTS_METROBUS	LHS	S_TPPUBUSGAS	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UC__RHSRT	GTS_METROBUS	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UCRULE_ACT	GTS_METROBUS	LHS	S_TPPUBUS	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.0685	null	null	null	null	null	null	null	null	null	null	null	-0.2055	-0.2055	-0.2055	
+	UCRULE_ACT	GTS_METROBUS	LHS	S_TPPUBUSGAS	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
 
 TID DATA	REGION1
 	UC_R_EACH	GTS_METROBUS	-	-	-	-	-	1	

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/29	15:42:19
+Creation Date:	2020/08/25	19:24:13
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	GTS_ALTV_C	UC: NDC PAMS-GTS Alternate Vehicles - Central scenario	miniumum of 10% of vehicle population to comprise EVs and Hybrids by 2030 reaching 40% in 2050.
@@ -44,9 +44,9 @@ ITEMS	REGION1
 	E	TSHFO	Transport Other - HFO	PJ	COM,DEM,ANNUAL,RES	
 
 TS DATA	REGION1
-	UC__RHSRT	GTS_ALTV	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UCRULE_ACT	GTS_ALTV	LHS	S_TRAELC_H	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
-	UCRULE_ACT	GTS_ALTV	LHS	S_TRAPARC	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.1	null	null	null	null	null	null	null	null	null	null	null	-0.4	-0.4	-0.4	
+	UC__RHSRT	GTS_ALTV	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UCRULE_ACT	GTS_ALTV	LHS	S_TRAELC_H	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
+	UCRULE_ACT	GTS_ALTV	LHS	S_TRAPARC	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.1	null	null	null	null	null	null	null	null	null	null	null	-0.4	-0.4	-0.4	
 
 TID DATA	REGION1
 	UC_R_EACH	GTS_ALTV	-	-	-	-	-	1	

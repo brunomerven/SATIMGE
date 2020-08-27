@@ -1,0 +1,70 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+  'UCACT-BID-LO'             'Biodiesel min blend in diesel consumption         '
+  'UCACT-BIE-LO'             'Bioethanol min blend in gasoline consumption      '
+/;
+SET UC_N_UCRT /
+  'REGION1'   .'UCACT-BID-LO'
+  'REGION1'   .'UCACT-BIE-LO'
+/;
+SET PRC /
+  'UBBEBIE-N'                'Biofuel Refinery SugarBeet Bioethanol new         '
+  'UBCABID-N'                'Biofuel Refinery Canola Biodiesel new             '
+  'UBSCBIE-N'                'Biofuel Refinery Sugar Cane Bioethanol new        '
+  'UBSRBIE-N'                'Biofuel Refinery Sorghum Bioethanol new           '
+  'UBSYBID-N'                'Biofuel Refinery Soybean Biodiesel new            '
+/;
+SET PRC_PRE /
+  'REGION1'   .'UBBEBIE-N'
+  'REGION1'   .'UBCABID-N'
+  'REGION1'   .'UBSCBIE-N'
+  'REGION1'   .'UBSRBIE-N'
+  'REGION1'   .'UBSYBID-N'
+/;
+SET PRC_REF /
+  'REGION1'   .'UBBEBIE-N'
+  'REGION1'   .'UBSCBIE-N'
+  'REGION1'   .'UBSYBID-N'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'UBBEBIE-N'
+  'REGION1'   .'UBCABID-N'
+  'REGION1'   .'UBSCBIE-N'
+  'REGION1'   .'UBSRBIE-N'
+  'REGION1'   .'UBSYBID-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'UBBEBIE-N'.'PJ'
+  'REGION1'.'UBCABID-N'.'PJ'
+  'REGION1'.'UBSCBIE-N'.'PJ'
+  'REGION1'.'UBSRBIE-N'.'PJ'
+  'REGION1'.'UBSYBID-N'.'PJ'
+/;
+PARAMETER AUC_R_EACH /
+  'REGION1'                 .'UCACT-BID-LO'               1
+  'REGION1'                 .'UCACT-BIE-LO'               1
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UBCABID-N'               .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UBSCBIE-N'               .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UBSRBIE-N'               .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UBSYBID-N'               .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+;
+       TABLE AUC_ACT
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCACT-BID-LO'            .'LHS'                     .'XTRABID'                 .'ANNUAL'                     3     1                                                                                                                                                                                                                                                                                               1               1                                                                                                                                                                               1               1               1
+  'REGION1'                 .'UCACT-BID-LO'            .'LHS'                     .'XTRAODS'                 .'ANNUAL'                     3    EPS                                                                                                                                                                                                                                                                                             EPS             EPS                                                                                                                                                                             EPS             EPS             EPS
+  'REGION1'                 .'UCACT-BIE-LO'            .'LHS'                     .'XTRABIE'                 .'ANNUAL'                     3     1                                                                                                                                                                                                                                                                                               1               1                                                                                                                                                                               1               1               1
+  'REGION1'                 .'UCACT-BIE-LO'            .'LHS'                     .'XTRAOGS'                 .'ANNUAL'                     3    EPS                                                                                                                                                                                                                                                                                             EPS             EPS                                                                                                                                                                             EPS             EPS             EPS
+;
+       TABLE AUC_RHSRT
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCACT-BID-LO'            .'LO'                         3    EPS                                                                                                                                                                                                                                                                                             EPS             EPS                                                                                                                                                                             EPS             EPS             EPS
+  'REGION1'                 .'UCACT-BIE-LO'            .'LO'                         3    EPS                                                                                                                                                                                                                                                                                             EPS             EPS                                                                                                                                                                             EPS             EPS             EPS
+;

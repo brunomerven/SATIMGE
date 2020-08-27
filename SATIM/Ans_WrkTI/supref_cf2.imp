@@ -1,0 +1,66 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/08/25	19:26:13
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	SUPREF_CF2	Supply-Crude Oil Refineries: Clean Fuels 2 investment or retirement	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	UCACT-ODS	Import constraint on diesel as a share of consumption	uconstraint	UC_N,UCRT	
+	C	UCACT-OGS	Import constraint on gasoline as a share of consumption	uconstraint	UC_N,UCRT	
+	D	UREFOCRCO-E-G	PCG for UREFOCRCO-E (Refinery Crude Oil Coastal Existing)	PJ	COM_GRP,COM_GRPTRU	
+	D	UREFOCRIN-E-G	PCG for UREFOCRIN-E (Refinery Crude Oil Inland Existing)	PJ	COM_GRP,COM_GRPTRU	
+	T	UREFOCRCO-E	Refinery Crude Oil Coastal Existing	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UREFOCRIN-E	Refinery Crude Oil Inland Existing	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_COST	UREFOCRCO-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	UREFOCRCO-E	-	-	-	-	UP	3	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	598.2116	598.2116	598.2116	365.7092	365.7092	365.7092	0.0366	0.0366	0.0366	
+	CAP_BND	UREFOCRIN-E	-	-	-	-	UP	3	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	212.16	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	
+	NCAP_BND	UREFOCRCO-E	-	-	-	-	UP	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	189.75	189.75	0	232.5	232.5	0	365.67	365.67	0	0	0	
+	NCAP_BND	UREFOCRIN-E	-	-	-	-	UP	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	212.14	212.14	0	0	0	0	0	0	0	0	0	0	0	0	
+	NCAP_COST	UREFOCRCO-E	-	-	-	-	-	0	41.1985	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UREFOCRIN-E	-	-	-	-	-	0	41.1985	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UREFOCRCO-E	-	-	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	
+	NCAP_FOM	UREFOCRCO-N	-	-	-	-	-	0	2.8933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UREFOCRIN-E	-	-	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	1.236	
+	NCAP_ILED	UREFOCRCO-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UREFOCRIN-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UREFOCRCO-E	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UREFOCRIN-E	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	787.9615	598.2116	598.2116	598.2116	365.7092	365.7092	365.7092	0.0366	0.0366	0.0366	0.0366	0.0366	
+	PRC_RESID	UREFOCRIN-E	-	-	-	-	-	0	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	0.0212	
+	UC__RHSRT	UCACT-ODS	-	-	-	-	NB	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCACT-OGS	-	-	-	-	NB	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	COM_GMAP	-	OAG	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	OAG	UREFOCRIN-E-G	-	-	-	1	
+	COM_GMAP	-	ODS	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	ODS	UREFOCRIN-E-G	-	-	-	1	
+	COM_GMAP	-	OGS	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	OGS	UREFOCRIN-E-G	-	-	-	1	
+	COM_GMAP	-	OHF	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	OHF	UREFOCRIN-E-G	-	-	-	1	
+	COM_GMAP	-	OKE	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	OKE	UREFOCRIN-E-G	-	-	-	1	
+	COM_GMAP	-	OLP	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	OLP	UREFOCRIN-E-G	-	-	-	1	
+	COM_GMAP	-	OTH	UREFOCRCO-E-G	-	-	-	1	
+	COM_GMAP	-	OTH	UREFOCRIN-E-G	-	-	-	1	
+	NCAP_START	UREFOCRCO-N	-	-	-	-	-	2035	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

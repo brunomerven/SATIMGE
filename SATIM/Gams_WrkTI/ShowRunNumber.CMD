@@ -1,1 +1,1 @@
-echo NoPAMS-TrGr-
+echo NoPAMS

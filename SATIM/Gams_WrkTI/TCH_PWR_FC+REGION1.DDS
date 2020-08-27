@@ -1,0 +1,31 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET PRC /
+  'ETCLDFB-N'                'Fluidised Bed Combustion Coal                     '
+/;
+SET PRC_ELE /
+  'REGION1'   .'ETCLDFB-N'
+/;
+SET PRC_WEEKLY /
+  'REGION1'   .'ETCLDFB-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ETCLDFB-N'.'PJ'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'ETCLDFB-N'               .'ELCC'                       1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'ETCLDFB-N'               .'PWRCLD'                     1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'ETCLDFB-N'               .'ELCC'                       1
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ETCLDFB-N'               .'FX'                                                                                                                                                                                                                                                               .75             .75                                                                                                                                                                                                                                                                             
+;

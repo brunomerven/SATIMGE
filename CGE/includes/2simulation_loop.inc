@@ -80,6 +80,7 @@ $include SATIM\includes\2TIMESReport.inc
    );
  );
 
+ HCAP(XC,TC,TT) = Flow_out_FSFuels('hydr','chydr',TC);
 
 
 * make acoal output leontief - controlled by SATIM - see theta calcs below
@@ -254,6 +255,9 @@ $offtext
 
           AFX('APETR',RD) = NO;
           AFX('APETR',RD)$EFX(TT,TC) = YES;
+
+          AFX('ACOIL',RD)$EFX(TT,TC) = YES;
+
 *FH 71218
           AFX('APETR',RD)$(NOT EFX(TT,TC) AND QFSUPX('FCAP',XC,TC-1,TT) LT .9) = YES;
 *          AFX('APETR',RD)$(NOT EFX(TT,TC) AND QFSUPX('FSAS',XC,TC-1,TT) LT .9) = YES;
@@ -265,7 +269,6 @@ $offtext
          AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
 
-         AFX('ACOIL',RD) = NO;
 
 
 *bm 05062019          AFXGR('AELEC','NAT',XC,TC)$EFX(TT,TC) = EAFXCAP(XC,TC,TT)/EAFXCAP(XC,TC-1,TT)- 1;
@@ -364,8 +367,11 @@ $offtext
  AFX('AGOLD',RD)=YES;
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
+
+ AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1;
 *bm
  AFLEO('AGOLD') = YES;
+ AFLEO('ACOIL') = YES;
 
 * AFXGR('AGOLD','NAT',XC,TC) = 0.08;
 

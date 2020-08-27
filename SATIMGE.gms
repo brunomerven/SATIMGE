@@ -58,6 +58,10 @@ PARAMETERS
   INCLRUN(RUN)                   whether to include or not RUN in batch run
   SIM_SATIM(RUN)                 whether to rerun SATIM or not
   SIM_ESAGE(RUN)                   whether to run linked model or not
+  SIM_WASTE(RUN)                   whether to run waste model or not
+  SIM_AFOLU(RUN)                   whether to run AFOLU models or not
+
+
 *  SIM_CO2PRICE(RUN,AY)           CO2 PRICE
   PAMS(RUN,PamsSector)       activated pams for each run
   PAMS_RUN(PamsSector)       activated pams for run in loop
@@ -69,7 +73,7 @@ PARAMETERS
 * Import sets and parameters and data from control spreadsheet-------------------------------
 $call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
 $gdxin  SATIMGE.gdx
-$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE MRUNCASE MRUNX TC TT PAMS
+$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE SIM_WASTE SIM_AFOLU MRUNCASE MRUNX TC TT PAMS
 
 
 XNB(XC) = YES;
@@ -82,6 +86,7 @@ SETS
   FSATIM                  sector groupings in SATIM model
   FS(FSATIM)              TIMES economic sectors
   FSATIMNOELEC(FSATIM)     sector groupings in SATIM excluding electricity
+  FSGDP(FS)           sectors without fa and al
   FH(FSATIM)              household groupings in SATIM model
   FT(FSATIM)              passenger transport groupings in SATIM
 
@@ -143,7 +148,7 @@ SETS
 *FH*----------------------------------------------------------------------------
  MFHHT(FH,H,AY) reverse mapping (TIMES to CGE) for households
 
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, FlowIn, FlowOut, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment, pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment, pkm, tkm/
   Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
 
 
@@ -167,6 +172,7 @@ VARIABLES
 ;
 PARAMETERS
   REPORT(PRC,COM,AY,RUN,Indicators) REPORT of indicators by run and process and commodity
+  REPORT_RUN(PRC,COM,AY,Indicators) REPORT of indicators by run and process and commodity for each run
 
 * From TIMES
   F_IN(REG,AY,AY,PRC,COM,S)      Flow parameter (level of flow variable) [PJ]
@@ -306,6 +312,7 @@ PARAMETERS
  FILE ShowRunNumber /".\satim\%TIMESfolder%\ShowRunNumber.CMD"/;
  FILE SATIM_Scen;
  FILE CGE_Scen;
+ FILE Scen;
 *-------------------------------------------------------------------------------
 
 
@@ -318,6 +325,10 @@ $load  MFHH MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSe
 
 FSATIMNOELEC(FSATIM) = yes;
 FSATIMNOELEC('elec') = no;
+
+FSGDP(FS) = yes;
+FSGDP('fa') = no;
+FSGDP('al') = no;
 
 
 * CGE: Parameter and set declaration-------------------------------------------
@@ -414,6 +425,7 @@ ELSE
 
   if(SIM_SATIM(RUN) eq 1,
 * Write Drivers to DMD_PROJ workbook
+         execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
          execute 'gdxxrw.exe i=drivers.gdx o=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx index=index_G2E!a6';
 
 * Read resulting Demand from DMD_PROJ workbook
@@ -424,7 +436,7 @@ ELSE
 * Write Demand DDS File
          PUT  SIM_DEM_FILE;
          SIM_DEM_FILE.pc = 2;
-         SIM_DEM_FILE.nd = 5;
+         SIM_DEM_FILE.nd = 13;
          SIM_DEM_FILE.ap = 0;
 
          PUT 'PARAMETER ACOM_PROJ /' /;
@@ -433,6 +445,8 @@ ELSE
                  EFVAL = SIM_DEMX(DEM1,TC);
                  if(EFVAL,
                          PUT "REGION1.", DEM1.TL, ".", TC.TL, EFVAL /;
+                 else
+                         PUT "REGION1.", DEM1.TL, ".", TC.TL, "eps" /;
                  );
          );
          PUTCLOSE "/;";
@@ -457,7 +471,7 @@ REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 );
 *if(SIM_ESAGE(RUN) eq 1,
 
-GDP_RUN(TC) = SUM(FS,GVA_FS(FS,TC));
+GDP_RUN(TC) = SUM(FSGDP,GVA_FS(FSGDP,TC));
 
 *$ontext
 $include SATIM\includes\GHGEnergyReport.inc
@@ -465,18 +479,28 @@ $include SATIM\includes\GHGEnergyReport.inc
 *Get Process Emissions
 $include SATIM\includes\GHGProcessReport.inc
 
+if(SIM_WASTE(RUN) eq 1,
 * Run Waste Model
 $include Waste\includes\GHGWasteReport.inc
+);
 
+if(SIM_AFOLU(RUN) eq 1,
 * Run AFOLU Model
 $include AFOLU\includes\GHGAfoluReport.inc
 *$offtext
 );
+
+* generate report for run, which can then be combined later
+REPORT_RUN(PRC,COM,AY,Indicators) = REPORT(PRC,COM,AY,RUN,Indicators);
+put_utilities Scen 'gdxout' / RUN.TL:20;
+execute_unload REPORT_RUN
+
+);
 *end RUN loop
 *-------------------------------------------------------------------------------
 
-execute_unload "REPORT_2runs.gdx" REPORT
-*execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
+execute_unload "REPORT.gdx" REPORT
+execute 'gdxdump REPORT.gdx output=REPORT_00.csv symb=REPORT format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';
 
 
 

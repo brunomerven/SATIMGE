@@ -1,9 +1,8 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/29	15:42:31
+Creation Date:	2020/08/25	19:24:23
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
-Scenario:	GTS_ALTV_L	UC: NDC PAMS-GTS Alternate Vehicles - Low scenario	NDC PAMS-GTS Alternate Vehicles - low scenario:{/n}"10% of vehicle population to comprise Hybrids by 2030 with 10% as a minimum share to 2050.
-
+Scenario:	GTS_ALTV_L	UC: NDC PAMS-GTS Alternate Vehicles - Low scenario	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
 
 REGIONS	_GLOBAL,REGION1
@@ -45,9 +44,9 @@ ITEMS	REGION1
 	E	TSHFO	Transport Other - HFO	PJ	COM,DEM,ANNUAL,RES	
 
 TS DATA	REGION1
-	UC__RHSRT	GTS_ALTV	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UCRULE_ACT	GTS_ALTV	LHS	S_TRAELC_H	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
-	UCRULE_ACT	GTS_ALTV	LHS	S_TRAPARC	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	-0.1	
+	UC__RHSRT	GTS_ALTV	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UCRULE_ACT	GTS_ALTV	LHS	S_TRAELC_H	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
+	UCRULE_ACT	GTS_ALTV	LHS	S_TRAPARC	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.1	null	null	null	null	null	null	null	null	null	null	null	-0.1	-0.1	-0.1	
 
 TID DATA	REGION1
 	UC_R_EACH	GTS_ALTV	-	-	-	-	-	1	

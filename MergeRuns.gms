@@ -7,32 +7,34 @@ SETS
   TC(T)                   eSAGE active time periods
   PRC                            TIMES Processes
   COM                            TIMES Commodities
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, FlowIn, FlowOut, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment, pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment, pkm, tkm/
 ;
 
 Parameters
-  REPORT(PRC,COM,AY,RUN,Indicators) REPORT of indicators by run and process and commodity
+  REPORT_RUN(PRC,COM,AY,Indicators) REPORT of indicators by run and process and commodity for each run
   REPORTM(PRC,COM,AY,RUN,Indicators) Merged Report
+  INCLRUN(RUN)                   whether to include or not RUN in batch run
+
 ;
 
 FILE Scen;
 
-$gdxin SATIMGE.gdx
-$load RUN TC
+$call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
+$gdxin  SATIMGE.gdx
+$load RUN INCLRUN TC
 
 $gdxin SetsAndMaps\SetsMaps.gdx
 $loaddc PRC COM
 
-put_utilities Scen 'gdxin' / 'REPORT_7Runs.gdx';
-execute_load REPORT;
+LOOP(RUN$INCLRUN(RUN),
 
-REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT(PRC,COM,TC,RUN,Indicators);
+put_utilities Scen 'gdxin' / RUN.TL:20;
+execute_load REPORT_RUN;
 
-put_utilities Scen 'gdxin' / 'REPORT_2Runs.gdx';
-execute_load REPORT;
+REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT_RUN(PRC,COM,TC,Indicators);
 
-REPORTM(PRC,COM,TC,'NoPAMS',Indicators) = REPORT(PRC,COM,TC,'NoPAMS',Indicators);
-REPORTM(PRC,COM,TC,'NoPAMS-TrGr-FrcdCoal',Indicators) = REPORT(PRC,COM,TC,'NoPAMS-TrGr-FrcdCoal',Indicators);
+);
+*end loop
 
 execute_unload "REPORTM.gdx" REPORTM
 execute 'gdxdump REPORTM.gdx output=REPORT_00.csv symb=REPORTM format=csv header="Process,Commodity,Year,Scenario,Indicator,SATIMGE"';

@@ -1,0 +1,46 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/08/25	19:25:27
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	SUP_BIO_X	Biofuels  capacity and blending optional	Capacity and blending constraints relaxed  so that no minimum blend ratios are speficied. for bioethanol and biodiesel
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	UCACT-BID-LO	Biodiesel min blend in diesel consumption	uconstraint	UC_N,UCRT	
+	C	UCACT-BIE-LO	Bioethanol min blend in gasoline consumption	uconstraint	UC_N,UCRT	
+	T	UBBEBIE-N	Biofuel Refinery SugarBeet Bioethanol new	PJ,PJa	PRC,PRE,REF,ANNUAL	
+	T	UBCABID-N	Biofuel Refinery Canola Biodiesel new	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UBSCBIE-N	Biofuel Refinery Sugar Cane Bioethanol new	PJ,PJa	PRC,PRE,REF,ANNUAL	
+	T	UBSRBIE-N	Biofuel Refinery Sorghum Bioethanol new	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UBSYBID-N	Biofuel Refinery Soybean Biodiesel new	PJ,PJa	PRC,PRE,REF,ANNUAL	
+
+TS DATA	REGION1
+	NCAP_BND	UBCABID-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBSCBIE-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBSRBIE-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBSYBID-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCACT-BID-LO	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UC__RHSRT	UCACT-BIE-LO	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UC_ACT	UCACT-BID-LO	LHS	XTRABID	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	null	null	null	null	null	null	null	null	null	null	1	1	1	
+	UC_ACT	UCACT-BID-LO	LHS	XTRAODS	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UC_ACT	UCACT-BIE-LO	LHS	XTRABIE	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	null	null	null	null	null	null	null	null	null	null	1	1	1	
+	UC_ACT	UCACT-BIE-LO	LHS	XTRAOGS	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	0	0	0	
+
+TID DATA	REGION1
+	UC_R_EACH	UCACT-BID-LO	-	-	-	-	-	1	
+	UC_R_EACH	UCACT-BIE-LO	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

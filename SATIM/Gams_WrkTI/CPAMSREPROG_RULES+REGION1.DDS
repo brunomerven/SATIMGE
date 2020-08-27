@@ -1,4 +1,4 @@
-* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_COM','TCH_IND_PAMH','TCH_PWR','TCH_RES-PAMC','TCH_TRA','TCH_COM_AF','TCH_RES_AF','SUP_BIOFUELS','TCH_PWR_REL','GTS_ALTV_C','GTS_MBTBF_C','GTS_METBUS_C','TRARAILODSLC','TCH_IRPMOD','DMD_ALL' for region REGION1
+* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_COM','TCH_IND_PAMH','TCH_PWR','TCH_RES-PAMC','TCH_TRA','TCH_COM_AF','TCH_RES_AF','SUP_BIOFUELS','TCH_PWR_REL','GTS_ALTV_C','GTS_MBTBF_C','GTS_METBUS_C','TRARAILODSLC','TCH_PWR_MREP','DMD_ALL' for region REGION1
 SET UC_N /
   'GTS_ALTV'                 'NDC PAMS GTS alt vehicles                         '
   'GTS_MBTGAS_C'             'NDC central:  ngas vehicles                       '
