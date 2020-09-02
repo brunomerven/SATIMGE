@@ -540,23 +540,8 @@ $include cge\includes\2energychecks.inc
 
   );
 *end TT loop
-* Calculate Employment per SATIM sector
-REPORT(PRC,'ACTGRP',TC,RUN,'Employment') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),sum(flab,QFX(flab,A,'nat',XC,TC,'2050'))));
 
-*Calculate Consumption per CGE income decile (this could be done more elegantly)
-REPORT('hhd-0','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-0',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-1','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-1',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-2','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-2',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-3','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-3',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-4','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-4',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-5','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-5',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-6','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-6',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-7','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-7',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-8','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-8',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-REPORT('hhd-9','ACTGRP',TC,RUN,'Consumption') = SUM(C,QHX(C,'hhd-9',XC,TC,'2050')*PQX(C,XC,TC,'2050'));
-
-
-*Calculate Consumption per SATIM income group
+$batinclude cge\includes\eSAGE_Report.inc
 
 
 );

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/07/30	2:16:54 PM
+Creation Date:	2020/09/02	6:00:03 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_REL	Reliability constraint	
@@ -18,18 +18,100 @@ TID DATA	_GLOBAL
 ITEMS	REGION1
 	C	UCACT_BATR	Batr constraint	uconstraint	UC_N,UCRT,UCRULE	
 	C	UCACT_GAS	Gas constraint	uconstraint	UC_N,UCRT,UCRULE	
+	C	UCCAP_DUMETR	dummy technology tracking the sum of centralised generation over and above peak grid demand'	uconstraint	UC_N,UCRT	
 	C	UCCAP_ERMELC	Energy Reserve Margin on ELCC	uconstraint	UC_N,UCRT	
 	C	UCCAP_RMELCC	Capacity Reserve Margin on ELCC	uconstraint	UC_N,UCRT	
 	C	UCNCAP_GAS	Max NCAP gas	uconstraint	UC_N,UCRT	
 	C	UCNCAP_PV	Max NCAP PV	uconstraint	UC_N,UCRT	
+	C	UCPWR_FLAB-M	User Constraint Power - Factor-Labour-Mid	uconstraint	UC_N,UCRT	
+	C	UCPWR_FLAB-P	User Constraint Power - Factor-Labour-Primary	uconstraint	UC_N,UCRT	
+	C	UCPWR_FLAB-S	User Constraint Power - Factor-Labour-Secondary	uconstraint	UC_N,UCRT	
+	C	UCPWR_FLAB-T	User Constraint Power - Factor-Labour-Tertiary	uconstraint	UC_N,UCRT	
+	E	FLAB-M	Factor-Labour-Mid	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	FLAB-P	Factor-Labour-Primary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	FLAB-S	Factor-Labour-Secondary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	FLAB-T	Factor-Labour-Tertiary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-M	Power - Factor-Labour-Mid	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-P	Power - Factor-Labour-Primary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-S	Power - Factor-Labour-Secondary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWR_FLAB-T	Power - Factor-Labour-Tertiary	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	EP_FLAB-M	Power - Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	MIN_FLAB-M	Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-P	Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-S	Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-T	Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 
 TS DATA	REGION1
+	ACT_EFF	EP_FLAB-M	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	EP_FLAB-P	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	EP_FLAB-S	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	EP_FLAB-T	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	UCACT_BATR	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCACT_GAS	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UC__RHSRT	UCCAP_DUMETR	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_ERMELC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_RMELCC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	22.5	15	null	null	
 	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	22.5	15	null	null	
+	UC__RHSRT	UCPWR_FLAB-M	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCPWR_FLAB-P	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCPWR_FLAB-S	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCPWR_FLAB-T	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCPWR_FLAB-M	LHS	EP_FLAB-M	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCPWR_FLAB-P	LHS	EP_FLAB-P	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCPWR_FLAB-S	LHS	EP_FLAB-S	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_ACT	UCPWR_FLAB-T	LHS	EP_FLAB-T	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	EPTSTO-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	EPTSTO-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERBIG-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERBIO-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERHYD-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERHYDGIW-I	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERHYD-I	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERHYD-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERSOLPCF-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERSOLPCT-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERSOLPRC-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERSOLPRI-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERSOLPRR-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERSOLTC09-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ERWNDH-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ESTSUTL	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLDFB-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEARNO-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLECAMD-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEDUVH-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEGROO-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEHEND-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEKELB-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEKEND-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEKOMA-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEKRIE-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEKUSI-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLELETH-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEMAJD-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEMAJW-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEMATI-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEMATL-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEMEDU-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEPFSI-E	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEPFSS-E	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLETUTU-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLEWATE-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETGASENSI-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETGASENSS-N	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETGICCC-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETGICEN-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETGICGT-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETNUC-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETNUC-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETODSGT-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETODSGT-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETRANS	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETRANSDUM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	EPTSTO-E	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	EPTSTO-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ERBIG-N	-	-	-	3	null	null	null	null	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -82,8 +164,8 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ERBIG-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERBIO-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ERHYDGIW-I	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-I	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ERHYDGIW-I	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-I	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLPCF-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLPCT-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -92,7 +174,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLPRR-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLTC09-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERWNDH-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ESTSUTL	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ESTSUTL	-	-	-	3	null	null	null	null	null	null	null	null	0.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLDFB-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEARNO-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLECAMD-E	-	-	-	3	null	null	null	null	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -110,12 +192,12 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEMATI-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEMATL-E	-	-	-	3	null	null	null	null	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEMEDU-N	-	-	-	3	null	null	null	null	null	null	null	null	0.8	null	null	null	null	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETCLEPFSI-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETCLEPFSS-E	-	-	-	3	null	null	null	null	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETCLEPFSI-E	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETCLEPFSS-E	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLETUTU-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEWATE-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETGASENSI-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETGASENSS-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETGASENSI-N	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETGASENSS-N	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGICCC-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGICEN-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGICGT-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -123,7 +205,235 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETNUC-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETODSGT-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETODSGT-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETRANS	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	-1.30072840790843	
+	UC_CAP	UCCAP_RMELCC	LHS	ETRANS	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	
+	UC_CAP	UCPWR_FLAB-M	LHS	EPTSTO-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	EPTSTO-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERBIG-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERBIO-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERHYD-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERHYDGIW-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERHYD-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERHYD-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERSOLPCF-N	-	-	-	3	-0.02209	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERSOLPCT-N	-	-	-	3	-0.02209	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERSOLPRC-N	-	-	-	3	-0.02209	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERSOLPRI-N	-	-	-	3	-0.02209	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERSOLPRR-N	-	-	-	3	-0.02209	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERSOLTC09-N	-	-	-	3	-0.02705	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ERWNDH-N	-	-	-	3	-0.01826	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ESTSUTL	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLDFB-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEARNO-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLECAMD-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEDUVH-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEGROO-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEHEND-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEKELB-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEKEND-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEKOMA-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEKRIE-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEKUSI-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLELETH-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEMAJD-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEMAJW-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEMATI-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEMATL-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEMEDU-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLETUTU-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETCLEWATE-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETGICCC-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETGICEN-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETGICGT-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETNUC-E	-	-	-	3	-0.03788	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETNUC-N	-	-	-	3	-0.03788	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETODSGT-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETODSGT-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	ETRANSDUM	-	-	-	3	-0.01678	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XAGRELC	-	-	-	3	-0.0364	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XCOMELC	-	-	-	3	-0.03297	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XICPELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XIFAELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XIFBELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XIISELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XIMIELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XINFELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XINMELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XIOTELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XIPPELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XRESELC	-	-	-	3	-0.18363	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XTRAELC	-	-	-	3	-0.03018	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-M	LHS	XUPSELC	-	-	-	3	-0.03023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	EPTSTO-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	EPTSTO-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERBIG-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERBIO-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERHYD-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERHYDGIW-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERHYD-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERHYD-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERSOLPCF-N	-	-	-	3	-0.01941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERSOLPCT-N	-	-	-	3	-0.01941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERSOLPRC-N	-	-	-	3	-0.01941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERSOLPRI-N	-	-	-	3	-0.01941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERSOLPRR-N	-	-	-	3	-0.01941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERSOLTC09-N	-	-	-	3	-0.02377	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ERWNDH-N	-	-	-	3	-0.01605	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ESTSUTL	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLDFB-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEARNO-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLECAMD-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEDUVH-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEGROO-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEHEND-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEKELB-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEKEND-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEKOMA-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEKRIE-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEKUSI-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLELETH-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEMAJD-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEMAJW-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEMATI-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEMATL-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEMEDU-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLETUTU-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETCLEWATE-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETGICCC-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETGICEN-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETGICGT-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETNUC-E	-	-	-	3	-0.03328	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETNUC-N	-	-	-	3	-0.03328	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETODSGT-E	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETODSGT-N	-	-	-	3	-0.0172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	ETRANSDUM	-	-	-	3	-0.01474	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XAGRELC	-	-	-	3	-0.03199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XCOMELC	-	-	-	3	-0.02897	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XICPELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XIFAELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XIFBELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XIISELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XIMIELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XINFELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XINMELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XIOTELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XIPPELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XRESELC	-	-	-	3	-0.16136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XTRAELC	-	-	-	3	-0.02652	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-P	LHS	XUPSELC	-	-	-	3	-0.02656	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	EPTSTO-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	EPTSTO-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERBIG-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERBIO-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERHYD-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERHYDGIW-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERHYD-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERHYD-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERSOLPCF-N	-	-	-	3	-0.07309	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERSOLPCT-N	-	-	-	3	-0.07309	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERSOLPRC-N	-	-	-	3	-0.07309	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERSOLPRI-N	-	-	-	3	-0.07309	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERSOLPRR-N	-	-	-	3	-0.07309	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERSOLTC09-N	-	-	-	3	-0.08949	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ERWNDH-N	-	-	-	3	-0.06043	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ESTSUTL	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLDFB-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEARNO-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLECAMD-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEDUVH-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEGROO-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEHEND-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEKELB-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEKEND-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEKOMA-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEKRIE-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEKUSI-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLELETH-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEMAJD-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEMAJW-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEMATI-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEMATL-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEMEDU-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLETUTU-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETCLEWATE-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETGICCC-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETGICEN-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETGICGT-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETNUC-E	-	-	-	3	-0.12533	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETNUC-N	-	-	-	3	-0.12533	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETODSGT-E	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETODSGT-N	-	-	-	3	-0.06477	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	ETRANSDUM	-	-	-	3	-0.05551	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XAGRELC	-	-	-	3	-0.12044	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XCOMELC	-	-	-	3	-0.1091	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XICPELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XIFAELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XIFBELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XIISELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XIMIELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XINFELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XINMELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XIOTELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XIPPELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XRESELC	-	-	-	3	-0.60759	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XTRAELC	-	-	-	3	-0.09985	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-S	LHS	XUPSELC	-	-	-	3	-0.10003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	EPTSTO-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	EPTSTO-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERBIG-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERBIO-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERHYD-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERHYDGIW-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERHYD-I	-	-	-	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERHYD-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERSOLPCF-N	-	-	-	3	-0.26167	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERSOLPCT-N	-	-	-	3	-0.26167	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERSOLPRC-N	-	-	-	3	-0.26167	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERSOLPRI-N	-	-	-	3	-0.26167	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERSOLPRR-N	-	-	-	3	-0.26167	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERSOLTC09-N	-	-	-	3	-0.3204	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ERWNDH-N	-	-	-	3	-0.21634	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ESTSUTL	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLDFB-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEARNO-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLECAMD-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEDUVH-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEGROO-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEHEND-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEKELB-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEKEND-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEKOMA-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEKRIE-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEKUSI-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLELETH-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEMAJD-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEMAJW-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEMATI-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEMATL-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEMEDU-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLETUTU-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETCLEWATE-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETGICCC-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETGICEN-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETGICGT-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETNUC-E	-	-	-	3	-0.44868	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETNUC-N	-	-	-	3	-0.44868	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETODSGT-E	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETODSGT-N	-	-	-	3	-0.23189	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	ETRANSDUM	-	-	-	3	-0.19873	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XAGRELC	-	-	-	3	-0.43119	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XCOMELC	-	-	-	3	-0.39057	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XICPELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XIFAELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XIFBELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XIISELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XIMIELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XINFELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XINMELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XIOTELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XIPPELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XRESELC	-	-	-	3	-2.17522	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XTRAELC	-	-	-	3	-0.35747	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCPWR_FLAB-T	LHS	XUPSELC	-	-	-	3	-0.35812	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_NCAP	UCNCAP_GAS	LHS	ETGICCC-N	-	-	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_NCAP	UCNCAP_GAS	LHS	ETGICEN-N	-	-	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_NCAP	UCNCAP_GAS	LHS	ETGICGT-N	-	-	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -136,10 +446,43 @@ TS DATA	REGION1
 	UCRULE_CAP	UCACT_BATR	LHS	S_PWRDPKGASMIN	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
 
 TID DATA	REGION1
+	PRC_ACTUNT	EP_FLAB-M	-	PWR_FLAB-M	-	-	-	1	
+	PRC_ACTUNT	EP_FLAB-P	-	PWR_FLAB-P	-	-	-	1	
+	PRC_ACTUNT	EP_FLAB-S	-	PWR_FLAB-S	-	-	-	1	
+	PRC_ACTUNT	EP_FLAB-T	-	PWR_FLAB-T	-	-	-	1	
+	PRC_ACTUNT	MIN_FLAB-M	-	FLAB-M	-	-	-	1	
+	PRC_ACTUNT	MIN_FLAB-P	-	FLAB-P	-	-	-	1	
+	PRC_ACTUNT	MIN_FLAB-S	-	FLAB-S	-	-	-	1	
+	PRC_ACTUNT	MIN_FLAB-T	-	FLAB-T	-	-	-	1	
+	PRC_CAPACT	EP_FLAB-M	-	-	-	-	-	1	
+	PRC_CAPACT	EP_FLAB-P	-	-	-	-	-	1	
+	PRC_CAPACT	EP_FLAB-S	-	-	-	-	-	1	
+	PRC_CAPACT	EP_FLAB-T	-	-	-	-	-	1	
+	PRC_CAPACT	MIN_FLAB-M	-	-	-	-	-	1	
+	PRC_CAPACT	MIN_FLAB-P	-	-	-	-	-	1	
+	PRC_CAPACT	MIN_FLAB-S	-	-	-	-	-	1	
+	PRC_CAPACT	MIN_FLAB-T	-	-	-	-	-	1	
+	TOP-IN	EP_FLAB-M	FLAB-M	-	-	-	-	1	
+	TOP-IN	EP_FLAB-P	FLAB-P	-	-	-	-	1	
+	TOP-IN	EP_FLAB-S	FLAB-S	-	-	-	-	1	
+	TOP-IN	EP_FLAB-T	FLAB-T	-	-	-	-	1	
+	TOP-OUT	EP_FLAB-M	PWR_FLAB-M	-	-	-	-	1	
+	TOP-OUT	EP_FLAB-P	PWR_FLAB-P	-	-	-	-	1	
+	TOP-OUT	EP_FLAB-S	PWR_FLAB-S	-	-	-	-	1	
+	TOP-OUT	EP_FLAB-T	PWR_FLAB-T	-	-	-	-	1	
+	TOP-OUT	MIN_FLAB-M	FLAB-M	-	-	-	-	1	
+	TOP-OUT	MIN_FLAB-P	FLAB-P	-	-	-	-	1	
+	TOP-OUT	MIN_FLAB-S	FLAB-S	-	-	-	-	1	
+	TOP-OUT	MIN_FLAB-T	FLAB-T	-	-	-	-	1	
 	UC_R_EACH	UCACT_BATR	-	-	-	-	-	1	
 	UC_R_EACH	UCACT_GAS	-	-	-	-	-	1	
+	UC_R_EACH	UCCAP_DUMETR	-	-	-	-	-	1	
 	UC_R_EACH	UCCAP_ERMELC	-	-	-	-	-	1	
 	UC_R_EACH	UCCAP_RMELCC	-	-	-	-	-	1	
+	UC_R_EACH	UCPWR_FLAB-M	-	-	-	-	-	1	
+	UC_R_EACH	UCPWR_FLAB-P	-	-	-	-	-	1	
+	UC_R_EACH	UCPWR_FLAB-S	-	-	-	-	-	1	
+	UC_R_EACH	UCPWR_FLAB-T	-	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1
 

@@ -37,7 +37,10 @@ SETS
   NMY1(ALLYEAR)                  All milestone years except for the first year (demand)
   S                              TIMES timeslices
   PRC                            TIMES Processes
+  PRCH(PRC)                      Households groupings in eSAGE
+
   COM                            TIMES Commodities
+  TCG(COM)                       Trade commodity groups
   DEM(REG,COM)                   TIMES Demand Commodities
   DEM1(COM)                      TIMES Demand Commodities for REGION1
 
@@ -98,7 +101,7 @@ SETS
   MPRCSector(PRC,Sector) MAP for PRC to sectors
   MPRCSubSector(PRC,Sector,SubSector)          Map for PRC to subsectors
   MPRCSubsubSector(PRC,Sector,SubSector,SubSubSector)  Map for PRC to subsubsectors
-
+  PRCPower(PRC)                  Technology set used to computer elc price
 * Emissions sets
   CO2SET(COM)                    Sectoral emissions
 
@@ -134,6 +137,10 @@ SETS
   mCOMC(COM,C)            mapping SAGE and SATIM fuels
   mCOMF(COM,F)            mapping SAGE factors and SATIM factor commodities
 
+  MHPRCH(PRC,H)           mapping SAGE households to reporting households
+  MCTCG(C,TCG)            mapping SAGE trade commodities to aggregate trade commodity groups
+
+
   MFSP(FSATIM,PRC)           mapping of technologies used for each sector to track process emissions
 
 
@@ -148,7 +155,7 @@ SETS
 *FH*----------------------------------------------------------------------------
  MFHHT(FH,H,AY) reverse mapping (TIMES to CGE) for households
 
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment, pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
 
 
@@ -212,7 +219,9 @@ PARAMETERS
 
   GVA_FS(FS,AY)                  SATIM Sector GVA
   GVA_FS_Start(FS,AY)            SATIM Sector GVA used to first iteration of linked model
-  POP(AY)                        Population Projection
+  POP(AY)                        Population Projection to be read from drivers workbook
+  STFHPOP(AY)                    sum of population CGE
+  POP_GR(AY)                     Population growth to be read from drivers workbook
   GDP_RUN(AY)                    GDP projection for RUN
 
   EmisFactor(COM,Emiss)          Combustion Emission Factor
@@ -266,12 +275,8 @@ PARAMETERS
 
 * Other useful results
   PKDEM(ALLYEAR,RUN)             Peak demand on electricity grid
-  PassengerOccupancy(T,COM,RUN)  Occupancy of passenger road transport
-  Passengerkm(COM,ALLYEAR)       Pkm for passenger transport
-  PassengerkmALL(T,P,RUN)        Pkm for passenger logged for each RUN
-  FreightLoad(T,COM,RUN)         Average load per mode
-  Tonkm(COM,ALLYEAR)             Tonkm for Freight transport
-  TonkmALL(T,P,RUN)              Tonkm for Freight transport logged for each RUN
+  PassengerOccupancy(PRC)        Occupancy of passenger road transport
+  FreightLoad(PRC)               Average load per mode
 
 * Other Parameters
 * Interpolation parameters - using function developed for TIMES
@@ -320,15 +325,21 @@ PARAMETERS
 * Import sets and parameters from SetsAndMaps -------------------------------
 $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=index!a6 checkdate"
 $gdxin  SetsAndMaps\SetsMaps.gdx
-$loaddc PRC COM DEM1 S UC_N FSATIM FS FH COALSUP
-$load  MFHH MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
+$loaddc PRC COM DEM1 S UC_N FSATIM FS FH COALSUP PRCH TCG
+$load MFHH MHPRCH MCTCG MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
+$load PassengerOccupancy  FreightLoad
 
 FSATIMNOELEC(FSATIM) = yes;
 FSATIMNOELEC('elec') = no;
 
+PRCPower(PRC)$MPRCSector(PRC,'Power') = yes;
+
 FSGDP(FS) = yes;
 FSGDP('fa') = no;
 FSGDP('al') = no;
+
+execute 'gdxxrw.exe i=Drivers.xlsm o=driverspop.gdx index=index_E2G!a6';
+execute_load "driverspop.gdx" POP_GR;
 
 
 * CGE: Parameter and set declaration-------------------------------------------
@@ -405,14 +416,6 @@ $offtext
 if(SIM_ESAGE(RUN) eq 1,
 
 $batinclude cge\includes\2simulation_loop.inc
-*$batinclude cge\includes\eSAGE_Report_Short.inc
-
-* Run Waste Model
-
-* Run Land Model
-
-* Run Agriculture Model
-
 
 ELSE
 

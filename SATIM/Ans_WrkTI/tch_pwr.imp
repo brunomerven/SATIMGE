@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/26	2:58:19 PM
+Creation Date:	2020/09/02	1:25:15 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -45,8 +45,8 @@ ITEMS	REGION1
 	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
 	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
 	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
-	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
-	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
+	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
 	T	ERBIG-N	Landfill gas	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERBIO-N	Biomass municipal waste	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERHYD-E	Hydro Existing South Africa	PJ,GW	PRC,ELE,DAYNITE	
@@ -91,7 +91,7 @@ ITEMS	REGION1
 	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,SEASON	
 	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
-	T	ETRANS	Transmission	PJ,GW	PRC,PRE,DAYNITE	
+	T	ETRANS	Transmission	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETRANSDUM	dummy tech tracking investment costs	PJ,GW	PRC,ELE,DAYNITE	
 	T	MIN_FLAB-M	Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	MIN_FLAB-P	Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
@@ -119,7 +119,7 @@ ITEMS	REGION1
 	T	MINCSTUTUSER	Coal Supply for Tutuka-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSTUTUVRS	Coal Supply for Tutuka-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSWATEVRS	Coal Supply for New Plants in Waterberg	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
 	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
@@ -680,6 +680,8 @@ TS DATA	REGION1
 	NCAP_BND	ETNUC-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETODSGT-E	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETODSGT-N	-	-	-	-	FX	0	null	null	null	0.335	0.67	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETRANS	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETRANSDUM	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	EPTSTO-E	-	-	-	-	-	0	4229.44109525596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	EPTSTO-N	-	-	-	-	-	0	22451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERBIG-N	-	-	-	-	-	0	18911.4431554524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -726,8 +728,8 @@ TS DATA	REGION1
 	NCAP_COST	ETNUC-N	-	-	-	-	-	0	68550.4185775548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETODSGT-E	-	-	-	-	-	0	1548.37745535289	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETODSGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETRANS	-	-	-	-	-	0	3924.33136358704	null	null	null	null	9706.0655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETRANSDUM	-	-	-	-	-	0	0.01	null	null	null	null	2000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETRANS	-	-	-	-	-	0	3924.33136358704	null	null	9706.0655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETRANSDUM	-	-	-	-	-	0	0.01	null	null	2000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XAGRELC	-	-	-	-	-	0	22934.3282724095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XCOMELC	-	-	-	-	-	0	11467.1641733523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XICPELC	-	-	-	-	-	0	5450.85368096325	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -785,8 +787,8 @@ TS DATA	REGION1
 	NCAP_FOM	ETNUC-N	-	-	-	-	-	0	976.79747552391	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETODSGT-E	-	-	-	-	-	0	53.8398098535397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETODSGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETRANS	-	-	-	-	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETRANSDUM	-	-	-	-	-	0	204.62606607892	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETRANS	-	-	-	-	-	0	204.62606607892	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETRANSDUM	-	-	-	-	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	XAGRELC	-	-	-	-	-	0	1195.86266748282	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	XCOMELC	-	-	-	-	-	0	597.931335678394	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	XICPELC	-	-	-	-	-	0	284.223385378901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -826,6 +828,23 @@ TS DATA	REGION1
 	NCAP_ILED	ETGICGT-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	ETNUC-N	-	-	-	-	-	0	-9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	ETODSGT-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETRANS	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	ETRANSDUM	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XAGRELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XCOMELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XICPELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XIFBELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XIISELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XIMIELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XINDELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XINFELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XINMELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XIOTELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XIPPELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XRESELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XTRAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	XUPSELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_PKCNT	EPTSTO-E	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_PKCNT	EPTSTO-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_PKCNT	ERBIG-N	-	-	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -910,6 +929,23 @@ TS DATA	REGION1
 	NCAP_TLIFE	ETNUC-N	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ETODSGT-E	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ETODSGT-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETRANS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ETRANSDUM	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XAGRELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XCOMELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XICPELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIFAELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIFBELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIISELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIMIELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINDELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINFELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINMELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIOTELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIPPELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XRESELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XTRAELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XUPSELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	EPTSTO-E	-	-	-	-	-	0	1.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.58	null	null	
 	PRC_RESID	ERHYD-E	-	-	-	-	-	0	0.665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ERHYD-I	-	-	-	-	-	0	1.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.5	null	null	
@@ -932,23 +968,23 @@ TS DATA	REGION1
 	PRC_RESID	ETCLETUTU-E	-	-	-	-	-	0	3.51	null	null	null	null	3.51	null	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	2.925	2.34	1.17	1.17	0.585	0.585	0	0	0	0	
 	PRC_RESID	ETNUC-E	-	-	-	-	-	0	1.86	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.86	0	null	null	null	
 	PRC_RESID	ETODSGT-E	-	-	-	-	-	0	2.46	null	null	null	null	null	null	null	null	null	null	null	null	null	2.46	2.1	null	null	null	null	null	null	null	null	null	null	null	2.1	0	null	null	null	null	
-	PRC_RESID	ETRANS	-	-	-	-	-	0	34.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ETRANSDUM	-	-	-	-	-	0	34.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XAGRELC	-	-	-	-	-	0	0.912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XCOMELC	-	-	-	-	-	0	6.0609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XICPELC	-	-	-	-	-	0	1.2667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XIFBELC	-	-	-	-	-	0	0.5433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XIISELC	-	-	-	-	-	0	3.5015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XIMIELC	-	-	-	-	-	0	4.1948	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XINDELC	-	-	-	-	-	0	15.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XINFELC	-	-	-	-	-	0	2.8782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XINMELC	-	-	-	-	-	0	0.8427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XIOTELC	-	-	-	-	-	0	0.904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XIPPELC	-	-	-	-	-	0	1.3541	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XRESELC	-	-	-	-	-	0	10.6821	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XTRAELC	-	-	-	-	-	0	9.9385	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	XUPSELC	-	-	-	-	-	0	0.7735	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ETRANS	-	-	-	-	-	0	34.2	null	null	null	null	null	null	null	31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	15.5	null	null	
+	PRC_RESID	ETRANSDUM	-	-	-	-	-	0	13	null	null	null	null	null	null	null	13	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6.5	null	null	
+	PRC_RESID	XAGRELC	-	-	-	-	-	0	0.912	null	null	null	null	null	null	null	0.912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.456	null	null	
+	PRC_RESID	XCOMELC	-	-	-	-	-	0	6.0609	null	null	null	null	null	null	null	6.0609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3.03045	null	null	
+	PRC_RESID	XICPELC	-	-	-	-	-	0	1.2667	null	null	null	null	null	null	null	1.2667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.63335	null	null	
+	PRC_RESID	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
+	PRC_RESID	XIFBELC	-	-	-	-	-	0	0.5433	null	null	null	null	null	null	null	0.5433	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.27165	null	null	
+	PRC_RESID	XIISELC	-	-	-	-	-	0	3.5015	null	null	null	null	null	null	null	3.5015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.75075	null	null	
+	PRC_RESID	XIMIELC	-	-	-	-	-	0	4.1948	null	null	null	null	null	null	null	4.1948	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2.0974	null	null	
+	PRC_RESID	XINDELC	-	-	-	-	-	0	15.5	null	null	null	null	null	null	null	15.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	7.75	null	null	
+	PRC_RESID	XINFELC	-	-	-	-	-	0	2.8782	null	null	null	null	null	null	null	2.8782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.4391	null	null	
+	PRC_RESID	XINMELC	-	-	-	-	-	0	0.8427	null	null	null	null	null	null	null	0.8427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.42135	null	null	
+	PRC_RESID	XIOTELC	-	-	-	-	-	0	0.904	null	null	null	null	null	null	null	0.904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.452	null	null	
+	PRC_RESID	XIPPELC	-	-	-	-	-	0	1.3541	null	null	null	null	null	null	null	1.3541	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.67705	null	null	
+	PRC_RESID	XRESELC	-	-	-	-	-	0	10.6821	null	null	null	null	null	null	null	10.6821	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5.34105	null	null	
+	PRC_RESID	XTRAELC	-	-	-	-	-	0	9.9385	null	null	null	null	null	null	null	9.9385	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4.96925	null	null	
+	PRC_RESID	XUPSELC	-	-	-	-	-	0	0.7735	null	null	null	null	null	null	null	0.7735	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.38675	null	null	
 	STG_EFF	EPTSTO-E	-	-	-	-	-	0	0.73	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	EPTSTO-N	-	-	-	-	-	0	0.78	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	ESTSUTL	-	-	-	-	-	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

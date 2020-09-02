@@ -49,7 +49,7 @@ PARAMETER
  DTAXGR(X,T)             direct tax rate on enterprises and households
 ;
 
-$loaddc TFPPROJ FPRDPROJ FACPROJ MISCPROJ POPPROJ STFPAD SFACAD SFPRDAD SMISCAD SPOPAD WPROJ SWAD SMISCAD2 SFACAD2
+$loaddc TFPPROJ FPRDPROJ FACPROJ MISCPROJ STFPAD SFACAD SFPRDAD SMISCAD SPOPAD WPROJ SWAD SMISCAD2 SFACAD2
 *AFXPROJ SAFXAD
 $gdxin
 
@@ -64,6 +64,8 @@ SET
 
  TPAST(T)                historical years
 ;
+
+ POPPROJ(H,X,TC) = POP_GR(TC);
 
 *JT: AE paper (changed this code from no's to yes's)
  SAGR(X,T)   = yes;
@@ -261,7 +263,7 @@ LOOP(TC$(NOT TPAST(TC)),
 * AFXGR(A,RD,XC,TC)$AFX(A,RD) = AFXPROJ(A,RD,XC,TC)/100;
 
 *Population growth
- POPGR(H,XC,TC)          = POPPROJ(H,XC,TC)/100;
+ POPGR(H,XC,TC)          = POPPROJ(H,XC,TC);
 
 *Private savings growth
  MPSGR(XC,TC)            = MISCPROJ('MPS',XC,TC)/100;

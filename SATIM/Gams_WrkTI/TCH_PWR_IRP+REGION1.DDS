@@ -129,10 +129,7 @@ SET PRC_PRE /
   'REGION1'   .'EP_FLAB-P'
   'REGION1'   .'EP_FLAB-S'
   'REGION1'   .'EP_FLAB-T'
-  'REGION1'   .'EPTSTO-E'
-  'REGION1'   .'EPTSTO-N'
   'REGION1'   .'ESTSUTL'
-  'REGION1'   .'ETRANS'
   'REGION1'   .'MIN_FLAB-M'
   'REGION1'   .'MIN_FLAB-P'
   'REGION1'   .'MIN_FLAB-S'
@@ -159,9 +156,10 @@ SET PRC_PRE /
   'REGION1'   .'MINCSTUTUSER'
   'REGION1'   .'MINCSTUTUVRS'
   'REGION1'   .'MINCSWATEVRS'
-  'REGION1'   .'PEXELC'
 /;
 SET PRC_ELE /
+  'REGION1'   .'EPTSTO-E'
+  'REGION1'   .'EPTSTO-N'
   'REGION1'   .'ERBIG-N'
   'REGION1'   .'ERBIO-N'
   'REGION1'   .'ERHYD-E'
@@ -205,7 +203,9 @@ SET PRC_ELE /
   'REGION1'   .'ETNUC-N'
   'REGION1'   .'ETODSGT-E'
   'REGION1'   .'ETODSGT-N'
+  'REGION1'   .'ETRANS'
   'REGION1'   .'ETRANSDUM'
+  'REGION1'   .'PEXELC'
   'REGION1'   .'XAGRELC'
   'REGION1'   .'XCOMELC'
   'REGION1'   .'XICPELC'
@@ -498,7 +498,7 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'ERSOLPRC-N'              .'FX'                                                                                                                                                                                               .315            .35             .3              .3              .25             .225            .2              .2              .2                                                                                                                                                                                                                              
   'REGION1'                 .'ERSOLPRI-N'              .'FX'                                                                                                                                                                                               .09             .1              .15             .15             .2              .225            .25             .25             .25                                                                                                                                                                                                                             
   'REGION1'                 .'ERSOLPRR-N'              .'FX'                                                                                                                                                                                               .045            .05             .05             .05             .05             .05             .05             .05             .05                                                                                                                                                                                                                             
-  'REGION1'                 .'ERWNDH-N'                .'FX'                                                                                                                                                                                               .818            1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6                                                                                                                                                                                                                             
+  'REGION1'                 .'ERWNDH-N'                .'FX'                                                                                                                                                                                               .818            .8              1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             .8                                                                                                                                                                              
   'REGION1'                 .'ESTSUTL'                 .'FX'                                                                                                                                                                                               .513                                                                                                            1.575                                                                                                                                                                                                                                           
   'REGION1'                 .'ETCLDFB-N'               .'FX'                                                                                                                                                                                                                                                               .75             .75                                                                                                                                                                                                                                                                             
   'REGION1'                 .'ETGICCC-N'               .'FX'                                                                                                                                                                                                                                                                               1                                                                                                                                                                                                                                                                               

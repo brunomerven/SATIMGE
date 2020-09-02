@@ -1,1 +1,1 @@
-echo NoPAMS
+echo CPAMS

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/27	5:41:27 PM
+Creation Date:	2020/09/02	12:16:20 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_MREP	Modified IRP with More Moderate Ramped up RE programme	
@@ -20,8 +20,8 @@ ITEMS	REGION1
 	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
 	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
 	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
-	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
-	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
+	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
 	T	ERBIG-N	Landfill gas	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERBIO-N	Biomass municipal waste	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERHYD-E	Hydro Existing South Africa	PJ,GW	PRC,ELE,DAYNITE	
@@ -35,7 +35,7 @@ ITEMS	REGION1
 	T	ERSOLPRR-N	Solar PV rooftop residential	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERSOLTC09-N	Solar Central Receiver 09 hrs storage	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERWNDH-N	Wind	PJ,GW	PRC,ELE,DAYNITE	
-	T	ESTSUTL	Utility Scale Storage - 4hrs	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ESTSUTL	Utility Scale Storage - 4hrs	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
 	T	ETCLDFB-N	Fluidised Bed Combustion Coal	PJ,GW	PRC,ELE,WEEKLY	
 	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,WEEKLY	
 	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,WEEKLY	
@@ -66,7 +66,7 @@ ITEMS	REGION1
 	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,SEASON	
 	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
-	T	ETRANS	Transmission	PJ,GW	PRC,PRE,DAYNITE	
+	T	ETRANS	Transmission	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETRANSDUM	dummy tech tracking investment costs	PJ,GW	PRC,ELE,DAYNITE	
 	T	MIN_FLAB-M	Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	MIN_FLAB-P	Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
@@ -94,7 +94,7 @@ ITEMS	REGION1
 	T	MINCSTUTUSER	Coal Supply for Tutuka-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSTUTUVRS	Coal Supply for Tutuka-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSWATEVRS	Coal Supply for New Plants in Waterberg	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
 	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	

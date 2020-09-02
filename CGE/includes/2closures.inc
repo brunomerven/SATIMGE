@@ -164,7 +164,7 @@
 *Current account
   IF(ROWCLOS(XC) EQ 1,
    FBOR.FX   = FBOR.L;
-   FSAV.FX   = FSAV.L * (1+FSAVGR(XC,TC));
+   FSAV.FX   = FSAV.L * (1+FSAVGR(XC,TC)+FSAVGRSHK(XC,TC));
    EXR.LO    = -INF;
    EXR.UP    = +INF;
    );
@@ -245,10 +245,9 @@
    QF.LO(F,A,RD)$(ANFX(A,RD) AND QF0(F,A,RD)) = -INF;
    QF.UP(F,A,RD)$(ANFX(A,RD) AND QF0(F,A,RD)) = +INF;
 *  Upward-sloping curves (shift QFS0 and leave QFS flexible)
-   QFS0(F)$FLS(F) = SUM((RD,A), QF.L(F,A,RD)*COVID(XC,TC));
+   QFS0(F)$FLS(F) = SUM((RD,A), QF.L(F,A,RD)*COVID(XC,TC)*LABGRSHK(F,XC,TC));
    QFS.LO(F)$FLS(F) = -INF;
    QFS.UP(F)$FLS(F) = +INF;
-
   );
 
   LOOP(F$FACTFE(XC,F),

@@ -149,7 +149,28 @@ $include cge\includes\2projection.inc
 *----------------------------------------------------------------------
 *2. Non-excel inputted scenario calibration
 *----------------------------------------------------------------------
+*FH 270820: Foreign savings shock for high growth scenario
 
+Parameter
+ FSAVGRSHK(X,T)
+ LABGRSHK(F,X,T);
+
+ FSAVGRSHK(X,T)=0;
+ LABGRSHK(F,X,T)=0;
+
+ FSAVGRSHK('SIM1','2022')=0.5/100;
+ FSAVGRSHK('SIM1','2023')=0.5/100;
+ FSAVGRSHK('SIM1','2024')=0.5/100;
+ FSAVGRSHK('SIM1','2025')=2.5/100;
+ FSAVGRSHK('SIM1','2026')=2.5/100;
+ FSAVGRSHK('SIM1','2027')=2.5/100;
+ FSAVGRSHK('SIM1','2028')=2.5/100;
+ FSAVGRSHK('SIM1','2029')=2.5/100;
+ FSAVGRSHK('SIM1','2030')=2.5/100;
+
+ LABGRSHK(F,X,T)=1;
+* LABGRSHK('FLAB-P','SIM1',TCF)=1.002;
+* LABGRSHK('FLAB-M','SIM1',TCF)=1.002;
 
 SETS
  CEGY(C)                 energy commodities   / ccoal-low, ccoal-hgh, ccoil, cngas, celec, cpetr_p, cpetr_d, cpetr_o /
