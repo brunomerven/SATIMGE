@@ -265,3 +265,6 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * pkm and tkm
  REPORT(PRC,'ACTGRP',TC,RUN,'pkm')$PassengerOccupancy(PRC) = TVACT(TC,PRC)*PassengerOccupancy(PRC);
  REPORT(PRC,'ACTGRP',TC,RUN,'tkm')$FreightLoad(PRC) = TVACT(TC,PRC)*FreightLoad(PRC);
+
+* mtons of coal
+ REPORT(PRC,COM,TC,RUN,'FlowInMt')$CoalCV(COM) = TVFLOWIN(COM,TC,PRC)/CoalCV(COM);

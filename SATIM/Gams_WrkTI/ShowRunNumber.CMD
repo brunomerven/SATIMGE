@@ -1,1 +1,1 @@
-echo CPAMS
+echo CPAMS-LEAF-T

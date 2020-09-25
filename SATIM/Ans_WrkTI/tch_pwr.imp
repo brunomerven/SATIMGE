@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/09/02	1:25:15 PM
+Creation Date:	2020/09/22	5:25:14 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -45,8 +45,8 @@ ITEMS	REGION1
 	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
 	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
 	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
-	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
-	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,ELE,STGTSS,DAYNITE	
+	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
 	T	ERBIG-N	Landfill gas	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERBIO-N	Biomass municipal waste	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERHYD-E	Hydro Existing South Africa	PJ,GW	PRC,ELE,DAYNITE	
@@ -155,25 +155,25 @@ TS DATA	REGION1
 	ACT_COST	ERSOLTC09-N	-	-	-	-	-	0	0.893276155028724	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERWNDH-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLDFB-N	-	-	-	-	-	0	174.546160692613	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEARNO-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLECAMD-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEDUVH-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEGROO-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEHEND-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEKELB-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEKEND-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEKOMA-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEKRIE-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEARNO-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLECAMD-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEDUVH-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEGROO-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEHEND-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKELB-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKEND-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKOMA-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEKRIE-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEKUSI-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLELETH-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEMAJD-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEMAJW-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEMATI-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEMATL-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLELETH-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMAJD-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMAJW-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMATI-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEMATL-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEMEDU-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEPFSI-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEPFSS-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLETUTU-E	-	-	-	-	-	0	7.42689045066739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEPFSI-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEPFSS-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLETUTU-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEWATE-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETGASENSI-N	-	-	-	-	-	0	70.5688162472692	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETGASENSS-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -576,43 +576,43 @@ TS DATA	REGION1
 	NCAP_AFA	ETCLDFB-N	-	-	-	-	LO	0	0.79	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLDFB-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEARNO-E	-	-	-	-	LO	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEARNO-E	-	-	-	-	UP	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.552820775844768	null	null	null	null	0.655	null	null	null	null	0.5458	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEARNO-E	-	-	-	-	UP	0	0.611221430500319	null	null	null	null	0.52901509650217	null	null	0.6506	0.6244	0.6536	0.6227	0.6282	0.6548	0.6937	0.6742	0.608	0.5454	0.5458	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLECAMD-E	-	-	-	-	LO	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLECAMD-E	-	-	-	-	UP	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.565467684353015	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLECAMD-E	-	-	-	-	UP	0	0.65972201228153	null	null	null	null	0.541117401294751	null	null	0.6	0.5581	0.6124	0.6467	0.6306	0.6306	0.6306	0.6306	0.6306	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	LO	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	UP	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.573943593361587	null	null	null	null	0.6112	null	null	null	null	0.6021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEGROO-E	-	-	-	-	LO	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.38	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEGROO-E	-	-	-	-	UP	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.384034260909434	null	null	null	null	0.384034260909434	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	UP	0	0.576201575011581	null	null	null	null	0.549228319006303	null	null	0.5448	0.4967	0.6016	0.5692	0.6282	0.6112	0.6722	0.6365	0.5944	0.6091	0.6021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEGROO-E	-	-	-	-	LO	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEGROO-E	-	-	-	-	UP	0	0.575089020149973	null	null	null	null	0.367496900391803	null	null	0.8915	0.8915	0.8915	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEHEND-E	-	-	-	-	LO	0	0.580836424400455	null	null	null	null	0.555837090361152	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEHEND-E	-	-	-	-	UP	0	0.580836424400455	null	null	null	null	0.555837090361152	null	null	0.580849759427404	null	null	null	null	0.6093	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEHEND-E	-	-	-	-	UP	0	0.580836424400455	null	null	null	null	0.555837090361152	null	null	0.6093	0.5596	0.6935	0.6935	0.6935	0.6935	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKELB-E	-	-	-	-	LO	0	null	null	null	null	null	0.324789764079148	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKELB-E	-	-	-	-	UP	0	null	null	null	null	null	0.324789764079148	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKEND-E	-	-	-	-	LO	0	0.77882756016933	null	null	null	null	0.739202828682354	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEKEND-E	-	-	-	-	UP	0	0.77882756016933	null	null	null	null	0.739202828682354	null	null	0.77246695597306	null	null	null	null	0.7414	null	null	null	null	0.7294	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	LO	0	0.592294737024401	null	null	null	null	0.339234108858707	null	null	0.35	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	UP	0	0.592294737024401	null	null	null	null	0.339234108858707	null	null	0.354499643757349	null	null	null	null	0.354499643757349	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKEND-E	-	-	-	-	UP	0	0.77882756016933	null	null	null	null	0.739202828682354	null	null	0.691	0.7134	0.6547	0.7317	0.6903	0.7414	0.7536	0.6941	0.7933	0.7364	0.7294	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	LO	0	0.592294737024401	null	null	null	null	0.339234108858707	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	UP	0	0.592294737024401	null	null	null	null	0.339234108858707	null	null	0.8739	0.8739	0.8739	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	LO	0	0.663730233117039	null	null	null	null	0.514283032190896	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	UP	0	0.663730233117039	null	null	null	null	0.514283032190896	null	null	0.537425768639486	null	null	null	null	0.6444	null	null	null	null	0.6415	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	UP	0	0.663730233117039	null	null	null	null	0.514283032190896	null	null	0.541	0.6342	0.5463	0.5139	0.652	0.6444	0.6539	0.6889	0.5112	0.6054	0.6415	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKUSI-N	-	-	-	-	LO	0	null	null	null	null	null	0.218128075234951	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEKUSI-N	-	-	-	-	UP	0	null	null	null	null	null	0.552183949424329	null	null	0.560453505383933	null	null	null	null	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKUSI-N	-	-	-	-	UP	0	null	null	null	null	null	0.552183949424329	null	null	0.7564	0.7923	0.8422	0.8358	0.852	0.819	0.8599	0.8666	0.7952	0.8176	0.8106	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLELETH-E	-	-	-	-	LO	0	0.721257324801528	null	null	null	null	0.616290732855275	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLELETH-E	-	-	-	-	UP	0	0.721257324801528	null	null	null	null	0.616290732855275	null	null	0.644023815833762	null	null	null	null	0.7488	null	null	null	null	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLELETH-E	-	-	-	-	UP	0	0.721257324801528	null	null	null	null	0.616290732855275	null	null	0.7398	0.7238	0.7561	0.71	0.7041	0.7488	0.6847	0.6791	0.6882	0.7406	0.7336	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEMAJD-E	-	-	-	-	LO	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEMAJD-E	-	-	-	-	UP	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.730131989156944	null	null	null	null	0.77	null	null	null	null	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJD-E	-	-	-	-	UP	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.7305	0.7462	0.7532	0.7262	0.745	0.7704	0.7013	0.7218	0.7193	0.7163	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEMAJW-E	-	-	-	-	LO	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEMAJW-E	-	-	-	-	UP	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.730131989156944	null	null	null	null	0.77	null	null	null	null	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJW-E	-	-	-	-	UP	0	0.736134548137692	null	null	null	null	0.698690898714779	null	null	0.7305	0.7462	0.7532	0.7262	0.745	0.7704	0.7013	0.7218	0.7193	0.7163	0.7093	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEMATI-E	-	-	-	-	LO	0	0.826438325228001	null	null	null	null	0.809413815976089	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEMATI-E	-	-	-	-	UP	0	0.826438325228001	null	null	null	null	0.809413815976089	null	null	0.826438325228001	null	null	null	null	0.7837	null	null	null	null	0.7941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATI-E	-	-	-	-	UP	0	0.826438325228001	null	null	null	null	0.809413815976089	null	null	0.8275	0.8014	0.8164	0.8112	0.812	0.7837	0.7935	0.7879	0.7645	0.8011	0.7941	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEMATL-E	-	-	-	-	LO	0	0.725950962874727	null	null	null	null	0.646971277090255	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEMATL-E	-	-	-	-	UP	0	0.725950962874727	null	null	null	null	0.646971277090255	null	null	0.676084984559316	null	null	null	null	0.7053	null	null	null	null	0.6976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEMEDU-N	-	-	-	-	LO	0	0.4	null	null	null	null	0.79	null	null	0.55	null	null	null	null	null	null	null	null	null	0.41	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEMEDU-N	-	-	-	-	UP	0	0.4	null	null	null	null	0.8	null	null	0.560453505383933	null	null	null	null	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATL-E	-	-	-	-	UP	0	0.725950962874727	null	null	null	null	0.646971277090255	null	null	0.673	0.6876	0.7074	0.7097	0.6949	0.7053	0.6966	0.691	0.7596	0.7037	0.6967	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMEDU-N	-	-	-	-	LO	0	0.4	null	null	null	null	0.79	null	null	0.55	null	null	null	null	null	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMEDU-N	-	-	-	-	UP	0	0.4	null	null	null	null	0.8	null	null	0.7564	0.7923	0.8422	0.8358	0.852	0.819	0.8599	0.8666	0.7952	0.8176	0.8106	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEPFSI-E	-	-	-	-	LO	0	null	null	null	null	null	0.55688169145976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEPFSI-E	-	-	-	-	UP	0	null	null	null	null	null	0.55688169145976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEPFSS-E	-	-	-	-	LO	0	null	null	null	null	null	0.731822433902317	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEPFSS-E	-	-	-	-	UP	0	null	null	null	null	null	0.731822433902317	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLETUTU-E	-	-	-	-	LO	0	0.627904909651485	null	null	null	null	0.538110097053583	null	null	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLETUTU-E	-	-	-	-	UP	0	0.627904909651485	null	null	null	null	0.538110097053583	null	null	0.562325051420994	null	null	null	null	0.6115	null	null	null	null	0.5808	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLETUTU-E	-	-	-	-	UP	0	0.627904909651485	null	null	null	null	0.538110097053583	null	null	0.5606	0.5686	0.5405	0.5915	0.5492	0.6115	0.5784	0.5737	0.6255	0.5878	0.5803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEWATE-N	-	-	-	-	LO	0	0.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEWATE-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGASENSI-N	-	-	-	-	LO	0	null	null	null	null	null	0.518349185257665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -625,10 +625,10 @@ TS DATA	REGION1
 	NCAP_AFA	ETGICEN-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICGT-N	-	-	-	-	LO	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICGT-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETNUC-E	-	-	-	-	LO	0	null	null	null	null	null	0.926018804929543	null	null	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETNUC-E	-	-	-	-	UP	0	null	null	null	null	null	0.926018804929543	null	null	0.8416	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETNUC-E	-	-	-	-	LO	0	null	null	null	null	null	0.926018804929543	null	null	0.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETNUC-E	-	-	-	-	UP	0	null	null	null	null	null	0.926018804929543	null	null	0.8416	0.8296	0.7032	0.9008	0.8646	0.7493	0.9004	0.895	0.9211	0.845	0.8454	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETNUC-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETODSGT-E	-	-	-	-	LO	0	null	null	null	null	null	1.79356646991127E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-E	-	-	-	-	LO	0	null	null	null	null	null	1.83840563165906E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETODSGT-E	-	-	-	-	UP	0	null	null	null	null	null	0.9588	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETODSGT-N	-	-	-	-	LO	0	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETODSGT-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -682,13 +682,13 @@ TS DATA	REGION1
 	NCAP_BND	ETODSGT-N	-	-	-	-	FX	0	null	null	null	0.335	0.67	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETRANS	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ETRANSDUM	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	EPTSTO-E	-	-	-	-	-	0	4229.44109525596	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	EPTSTO-E	-	-	-	-	-	0	4230.69717171542	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	EPTSTO-N	-	-	-	-	-	0	22451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERBIG-N	-	-	-	-	-	0	18911.4431554524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERBIO-N	-	-	-	-	-	0	18911.4431554524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ERHYD-E	-	-	-	-	-	0	4291.68815972787	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERHYD-E	-	-	-	-	-	0	4292.96272257137	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERHYDGIW-I	-	-	-	-	-	0	51227.1074878751	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ERHYD-I	-	-	-	-	-	0	4291.68815972787	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ERHYD-I	-	-	-	-	-	0	4292.96272257137	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERHYD-N	-	-	-	-	-	0	11515.6695525528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERSOLPCF-N	-	-	-	-	-	0	26049.680465	null	null	14267.25	null	12569.9587345254	null	null	8900.35	null	null	null	null	8354.65	null	null	null	null	7848.9	null	null	null	null	null	null	null	null	null	6972.55	null	6159.95	null	null	
 	NCAP_COST	ERSOLPCT-N	-	-	-	-	-	0	30646.6829	null	null	16785	null	14788.1867465005	null	null	10471	null	null	null	null	9829	null	null	null	null	9234	null	null	null	null	null	null	null	null	null	8203	null	7247	null	null	
@@ -699,34 +699,34 @@ TS DATA	REGION1
 	NCAP_COST	ERWNDH-N	-	-	-	-	-	0	19786.1982	null	null	19208	null	15312.5398495024	null	null	12500	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	11859	null	null	
 	NCAP_COST	ESTSUTL	-	-	-	-	-	0	null	null	null	null	null	27165.0638401165	null	null	20309.8105	null	null	null	null	14178.547	null	null	null	null	9963.3033	null	null	null	null	null	null	null	null	null	9196.8953	null	9196.8953	null	null	
 	NCAP_COST	ETCLDFB-N	-	-	-	-	-	0	46960	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEARNO-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLECAMD-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEDUVH-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEGROO-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEHEND-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEKELB-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEKEND-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEKOMA-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEKRIE-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEARNO-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLECAMD-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEDUVH-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEGROO-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEHEND-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKELB-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKEND-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKOMA-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEKRIE-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETCLEKUSI-N	-	-	-	-	-	0	36529.0567969073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLELETH-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEMAJD-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEMAJW-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEMATI-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEMATL-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLELETH-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMAJD-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMAJW-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMATI-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEMATL-E	-	-	-	-	-	0	7331.12301315829	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETCLEMEDU-N	-	-	-	-	-	0	36529.0567969073	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEPFSI-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLEPFSS-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETCLETUTU-E	-	-	-	-	-	0	7328.9464331138	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEPFSI-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLEPFSS-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETCLETUTU-E	-	-	-	-	-	0	7331.12301315828	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETCLEWATE-N	-	-	-	-	-	0	39334.6115381503	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGASENSI-N	-	-	-	-	-	0	14143.5986730318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGASENSS-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGICCC-N	-	-	-	-	-	0	9954.7587992556	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGICEN-N	-	-	-	-	-	0	14143.5986730318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGICGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETNUC-E	-	-	-	-	-	0	13710.7516841831	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETNUC-E	-	-	-	-	-	0	13714.8235584672	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETNUC-N	-	-	-	-	-	0	68550.4185775548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETODSGT-E	-	-	-	-	-	0	1548.37745535289	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETODSGT-E	-	-	-	-	-	0	1548.83729872894	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETODSGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETRANS	-	-	-	-	-	0	3924.33136358704	null	null	9706.0655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETRANSDUM	-	-	-	-	-	0	0.01	null	null	2000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -744,12 +744,12 @@ TS DATA	REGION1
 	NCAP_COST	XRESELC	-	-	-	-	-	0	22934.3282724095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAELC	-	-	-	-	-	0	11467.1641733523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XUPSELC	-	-	-	-	-	0	5733.58208667616	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	EPTSTO-E	-	-	-	-	-	0	3.62228380579257	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	EPTSTO-E	-	-	-	-	-	0	3.62293016269686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	EPTSTO-N	-	-	-	-	-	0	183.096141869432	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ERBIG-N	-	-	-	-	-	0	1594.49793672627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ERBIO-N	-	-	-	-	-	0	1594.49793672627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ERHYD-E	-	-	-	-	-	0	33.4898267577412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ERHYD-I	-	-	-	-	-	0	33.4898267577412	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERHYD-E	-	-	-	-	-	0	33.4958026508267	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ERHYD-I	-	-	-	-	-	0	33.4958026508267	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ERSOLPCF-N	-	-	-	-	-	0	269.769398818675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ERSOLPCT-N	-	-	-	-	-	0	285.848369609192	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ERSOLPRC-N	-	-	-	-	-	0	312.932502629663	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -758,34 +758,34 @@ TS DATA	REGION1
 	NCAP_FOM	ERWNDH-N	-	-	-	-	-	0	611.000890039647	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ESTSUTL	-	-	-	-	-	0	622.613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLDFB-N	-	-	-	-	-	0	568	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEARNO-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLECAMD-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEDUVH-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEGROO-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEHEND-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEKELB-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEKEND-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEKOMA-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEKRIE-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEARNO-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLECAMD-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEDUVH-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEGROO-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEHEND-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKELB-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKEND-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKOMA-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEKRIE-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLEKUSI-N	-	-	-	-	-	0	845	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLELETH-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEMAJD-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEMAJW-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEMATI-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEMATL-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLELETH-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMAJD-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMAJW-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMATI-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEMATL-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLEMEDU-N	-	-	-	-	-	0	845	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEPFSI-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLEPFSS-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLETUTU-E	-	-	-	-	-	0	309.487342355381	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEPFSI-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLEPFSS-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLETUTU-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLEWATE-N	-	-	-	-	-	0	932.580305849988	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGASENSI-N	-	-	-	-	-	0	425.199449793673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGASENSS-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGICCC-N	-	-	-	-	-	0	167.042640990371	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGICEN-N	-	-	-	-	-	0	425.199449793673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGICGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETNUC-E	-	-	-	-	-	0	324.137630750902	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETNUC-E	-	-	-	-	-	0	324.195469563875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETNUC-N	-	-	-	-	-	0	976.79747552391	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETODSGT-E	-	-	-	-	-	0	53.8398098535397	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETODSGT-E	-	-	-	-	-	0	53.8494169784064	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETODSGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETRANS	-	-	-	-	-	0	204.62606607892	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETRANSDUM	-	-	-	-	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -946,8 +946,8 @@ TS DATA	REGION1
 	NCAP_TLIFE	XRESELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XTRAELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XUPSELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	EPTSTO-E	-	-	-	-	-	0	1.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.58	null	null	
-	PRC_RESID	ERHYD-E	-	-	-	-	-	0	0.665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	EPTSTO-E	-	-	-	-	-	0	1.58	null	null	null	null	1.58	null	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	1.58	null	null	
+	PRC_RESID	ERHYD-E	-	-	-	-	-	0	0.665	null	null	null	null	0.665	null	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	null	null	
 	PRC_RESID	ERHYD-I	-	-	-	-	-	0	1.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.5	null	null	
 	PRC_RESID	ETCLEARNO-E	-	-	-	-	-	0	2.232	null	null	null	null	2.232	null	2.232	2.232	1.86	1.86	1.86	1.86	1.86	1.116	0.744	0.744	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	PRC_RESID	ETCLECAMD-E	-	-	-	-	-	0	1.45	null	null	null	null	1.481	null	1.481	1.481	1.481	1.481	1.481	1.481	1.11075	0.7405	0.37025	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
@@ -966,8 +966,8 @@ TS DATA	REGION1
 	PRC_RESID	ETCLEPFSI-E	-	-	-	-	-	0	0.128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.128	null	null	
 	PRC_RESID	ETCLEPFSS-E	-	-	-	-	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ETCLETUTU-E	-	-	-	-	-	0	3.51	null	null	null	null	3.51	null	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	2.925	2.34	1.17	1.17	0.585	0.585	0	0	0	0	
-	PRC_RESID	ETNUC-E	-	-	-	-	-	0	1.86	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.86	0	null	null	null	
-	PRC_RESID	ETODSGT-E	-	-	-	-	-	0	2.46	null	null	null	null	null	null	null	null	null	null	null	null	null	2.46	2.1	null	null	null	null	null	null	null	null	null	null	null	2.1	0	null	null	null	null	
+	PRC_RESID	ETNUC-E	-	-	-	-	-	0	1.86	null	null	null	null	1.86	null	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	1.86	0	null	null	null	
+	PRC_RESID	ETODSGT-E	-	-	-	-	-	0	2.4	null	null	null	null	2.4	null	2.4	2.4	2.4	2.4	2.4	2.4	2.4	2.4	2.1	2.1	2.1	2.1	2.1	2.1	2.1	2.1	2.1	2.1	2.1	2.1	2.1	0	null	null	null	null	
 	PRC_RESID	ETRANS	-	-	-	-	-	0	34.2	null	null	null	null	null	null	null	31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	15.5	null	null	
 	PRC_RESID	ETRANSDUM	-	-	-	-	-	0	13	null	null	null	null	null	null	null	13	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6.5	null	null	
 	PRC_RESID	XAGRELC	-	-	-	-	-	0	0.912	null	null	null	null	null	null	null	0.912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.456	null	null	

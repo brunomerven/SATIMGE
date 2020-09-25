@@ -155,7 +155,7 @@ SETS
 *FH*----------------------------------------------------------------------------
  MFHHT(FH,H,AY) reverse mapping (TIMES to CGE) for households
 
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
 
 
@@ -230,6 +230,8 @@ PARAMETERS
   WasteEmissions(PRC,Emiss,AY) Waste Emissions
   CoalAshCoal(AY)              Coal used to account for coal ash in waste model
 
+
+  CoalCV(COM)                    Coal CV in GJ
 
 * TIMES Results Initial Aggregation
   VAR_ACT(ALLYEAR,PRC)           Activity [PJ except for demand techs where unit will be aligned to particular demand e.g. VKM for road vehicles]
@@ -327,7 +329,7 @@ $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=inde
 $gdxin  SetsAndMaps\SetsMaps.gdx
 $loaddc PRC COM DEM1 S UC_N FSATIM FS FH COALSUP PRCH TCG
 $load MFHH MHPRCH MCTCG MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
-$load PassengerOccupancy  FreightLoad
+$load PassengerOccupancy  FreightLoad CoalCV
 
 FSATIMNOELEC(FSATIM) = yes;
 FSATIMNOELEC('elec') = no;
