@@ -97,6 +97,9 @@ $BATINCLUDE SATIM\Includes\interpolate.inc COM_PROJ 'REG' 'COM' ",'0','0','0','0
 *Correction made for Pulp and paper own gen, this may have to be done to more sectors as own gen becomes more prevalent
  FLOW_IN_FSFuels('pp','celec',TC) = FLOW_IN_FSFuels('pp','celec',TC) - FLOW_OUT_FSFuels('pp','celec',TC);
 
+*Correction made for power sector gas. New energy balance implies all gas consumed in chemical sector. Old EB had some gas going to power.
+* Sasol autoproducers are no longer included in power.
+ FLOW_IN_FSFuels('elec','cngas',TC) = max(FLOW_IN_FSFuels('elec','cngas',TC),3);
 
 
 *UCONV_C_T2C(C);
