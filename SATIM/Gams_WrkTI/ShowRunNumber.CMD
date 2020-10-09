@@ -1,1 +1,1 @@
-echo CPAMS-LEAF-T
+echo NoPAMS-CAP10

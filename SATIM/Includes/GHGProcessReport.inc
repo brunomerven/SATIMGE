@@ -28,7 +28,16 @@ REPORT('I2C6','ACTGRP',TC,RUN,'CO2') = 46.32*GVA_FS('nf',TC)/GVA_FS('nf','2017')
 REPORT('I2D1','ACTGRP',TC,RUN,'CO2') = 272.94*sum(fs,GVA_FS(fs,TC))/sum(fs,GVA_FS(fs,'2017'));
 REPORT('I2D2','ACTGRP',TC,RUN,'CO2') = 2.7*sum(fs,GVA_FS(fs,TC))/sum(fs,GVA_FS(fs,'2017'));
 
-REPORT('I2F1','ACTGRP',TC,RUN,'CO2eq') = 3963.46*GVA_FS('COM',TC)/GVA_FS('COM','2017');
+*REPORT('I2F1','ACTGRP',TC,RUN,'CO2eq') = 3963.46*GVA_FS('COM',TC)/GVA_FS('COM','2017');
+
+REPORT('I2F1','ACTGRP',TC,RUN,'CO2eq') = 3963.46;
+Loop(TC,
+  if(ORD(TC) gt 14,
+      REPORT('I2F1','ACTGRP',TC,RUN,'CO2eq') = REPORT('I2F1','ACTGRP',TC-1,RUN,'CO2eq') - 3963.46/25;
+  )
+);
+
+
 REPORT('I2F2','ACTGRP',TC,RUN,'CO2eq') = 2.104*sum(fs,GVA_FS(fs,TC))/sum(fs,GVA_FS(fs,'2017'));
 REPORT('I2F3','ACTGRP',TC,RUN,'CO2eq') = 51.09*sum(fs,GVA_FS(fs,TC))/sum(fs,GVA_FS(fs,'2017'));
 REPORT('I2F4','ACTGRP',TC,RUN,'CO2eq') = 18.2*sum(fs,GVA_FS(fs,TC))/sum(fs,GVA_FS(fs,'2017'));

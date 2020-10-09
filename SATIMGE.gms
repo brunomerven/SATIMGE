@@ -63,6 +63,7 @@ PARAMETERS
   SIM_ESAGE(RUN)                   whether to run linked model or not
   SIM_WASTE(RUN)                   whether to run waste model or not
   SIM_AFOLU(RUN)                   whether to run AFOLU models or not
+  SIM_CO2CUMUL(RUN)              Cumulative CO2 Constraint
 
 
 *  SIM_CO2PRICE(RUN,AY)           CO2 PRICE
@@ -76,7 +77,7 @@ PARAMETERS
 * Import sets and parameters and data from control spreadsheet-------------------------------
 $call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
 $gdxin  SATIMGE.gdx
-$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE SIM_WASTE SIM_AFOLU MRUNCASE MRUNX TC TT PAMS
+$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE SIM_WASTE SIM_AFOLU MRUNCASE MRUNX TC TT PAMS SIM_CO2CUMUL
 
 
 XNB(XC) = YES;
@@ -208,12 +209,6 @@ PARAMETERS
 
 * Data from Demand Model (spreadsheet-based at this stage)
   SIM_DEMX(COM,AY)               Demand extracted from excel
-
-* Fuel Price Combined Data
-  SIM_FUELP(PRC,RUN,AY)          Combined Fuel Price data
-
-  SIM_TRAMOD(RUN)                Transport mode scenario - currently just set to 0 or 1 with the intention of making this a scaling factor later
-  SIM_CO2CUMUL(RUN)              Cumulative CO2 Constraint
 
 * Intermediate parameters
 
@@ -387,18 +382,6 @@ LOOP(RUN$INCLRUN(RUN),
 
 $ontext
 
- PUT  SIM_OTHPAR_FILE;
- SIM_OTHPAR_FILE.pc = 2;
- SIM_OTHPAR_FILE.nd = 5;
- SIM_OTHPAR_FILE.ap = 0;
-
- PUT 'PARAMETER ACOMCUMNET /' /;
-  EFVAL = SIM_CO2CUMUL(RUN)*1000000;
-  if(EFVAL,
-    PUT "REGION1.CO2EQS.2020.2050.'UP'  ", EFVAL /;
-  );
-
- PUT "/;"/;
 
  PUT 'PARAMETER ACOMCSTNET /' /;
 Loop(MY,
@@ -412,9 +395,6 @@ Loop(MY,
 PUTCLOSE "/;";
 $offtext
 
-*FH: Included PAMS link
-* PAMS(PAMSSECTOR) =  SIM_PAMS(RUN,PAMSSECTOR);
-
 if(SIM_ESAGE(RUN) eq 1,
 
 $batinclude cge\includes\2simulation_loop.inc
@@ -426,7 +406,7 @@ ELSE
 * Read in GDP and Population from Drivers Workbook
   execute 'gdxxrw.exe i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6';
   execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT;
-* Need to add TFHPOP, YHE, MFHHT
+
 
   if(SIM_SATIM(RUN) eq 1,
 * Write Drivers to DMD_PROJ workbook
@@ -436,7 +416,7 @@ ELSE
 * Read resulting Demand from DMD_PROJ workbook
          execute 'gdxxrw.exe i=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx o=EnergyDemand.gdx index=index_E2G!a6';
          execute_load "EnergyDemand.gdx" SIM_DEMX;
-* Need to Add Occupancy and Freight loading per vehicle category to calculate pkm and tkm
+
 
 * Write Demand DDS File
          PUT  SIM_DEM_FILE;
@@ -454,6 +434,16 @@ ELSE
                          PUT "REGION1.", DEM1.TL, ".", TC.TL, "eps" /;
                  );
          );
+
+         PUT "/;"/;
+
+*Write Cumulative CO2 CAP bound
+         PUT 'PARAMETER ACOMCUMNET /' /;
+         EFVAL = SIM_CO2CUMUL(RUN)*1000000;
+         if(EFVAL,
+                 PUT "REGION1.CO2EQSB.2020.2050.'UP'  ", EFVAL /;
+         );
+
          PUTCLOSE "/;";
 
          PUT  ShowRunNumber;

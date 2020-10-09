@@ -1,0 +1,120 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/10/07	10:02:29 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_SUP_LOP	Low Oil Price Scenario	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+
+TS DATA	REGION1
+	ACT_BND	IMPBID	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPBIE	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPCOK	-	-	-	ANNUAL	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPGRL	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPGWL	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPNUC	-	-	-	ANNUAL	UP	0	170.374545454545	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPOAG	-	-	-	ANNUAL	UP	0	1.39432153520548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPOCR	-	-	-	ANNUAL	UP	0	941.226224853516	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPODS	-	-	-	ANNUAL	UP	0	140.06492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPOGS	-	-	-	ANNUAL	UP	0	63.33196	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPOHF	-	-	-	ANNUAL	UP	0	4.20639691789474	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPOKE	-	-	-	ANNUAL	UP	0	9.3231960462963	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IMPOLP	-	-	-	ANNUAL	UP	0	0.66	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINBIB	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINBIG	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINBIO	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINBIW	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCLD	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCLE	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINCOA	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINGAS	-	-	-	ANNUAL	UP	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINGIB	-	-	-	ANNUAL	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINGIC	-	-	-	ANNUAL	UP	3	42.5341982864137	null	null	42.5341982864137	null	25.838	null	null	null	null	null	null	25.838	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINGIH	-	-	-	ANNUAL	UP	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINHYD	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINOCR	-	-	-	ANNUAL	UP	3	0	null	null	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINSOL	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINWAS	-	-	-	ANNUAL	UP	3	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINWND	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRCRB	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRGRM	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRGRN	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	140	null	null	116	null	null	null	null	156	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXCOA	-	-	-	ANNUAL	UP	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXCOK	-	-	-	ANNUAL	FX	0	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXCOK	-	-	-	ANNUAL	UP	3	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXELC	-	-	-	ANNUAL	FX	0	54.126	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXELC	-	-	-	ANNUAL	UP	3	54.126	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOAG	-	-	-	ANNUAL	FX	0	0.225642811643836	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOAG	-	-	-	ANNUAL	UP	3	0.225642811643836	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOCR	-	-	-	ANNUAL	FX	0	20.83803412968	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOCR	-	-	-	ANNUAL	UP	3	20.83803412968	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXODS	-	-	-	ANNUAL	FX	0	28.7365925227586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXODS	-	-	-	ANNUAL	UP	3	28.7365925227586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOGS	-	-	-	ANNUAL	FX	0	3.54884586567568	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOGS	-	-	-	ANNUAL	UP	3	3.54884586567568	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOHF	-	-	-	ANNUAL	FX	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOHF	-	-	-	ANNUAL	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOKE	-	-	-	ANNUAL	FX	0	5.02735604617284	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOKE	-	-	-	ANNUAL	UP	3	5.02735604617284	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	IMPBID	-	-	-	-	-	0	225.055570692505	null	null	159.684860313411	null	null	null	null	189.123320286756	null	null	null	null	null	null	null	null	null	189.123320286756	null	null	null	null	null	null	null	null	null	null	null	189.123320286756	null	null	
+	ACT_COST	IMPBIE	-	-	-	-	-	0	235.985194605339	null	null	173.133993998715	null	null	null	null	199.847611393623	null	null	null	null	null	null	null	null	null	199.847611393623	null	null	null	null	null	null	null	null	null	null	null	199.847611393623	null	null	
+	ACT_COST	IMPCOK	-	-	-	-	-	0	114.267872888059	null	null	68.7520340045473	null	null	null	null	80.8847458877027	null	null	null	null	null	null	null	null	null	80.8847458877027	null	null	null	null	null	null	null	null	null	null	null	80.8847458877027	null	null	
+	ACT_COST	IMPGRL	-	-	-	-	-	0	122.738979647401	null	null	89.475456744981	null	null	null	null	104.253343208734	null	null	null	null	null	null	null	null	null	104.253343208734	null	null	null	null	null	null	null	null	null	null	null	104.253343208734	null	null	
+	ACT_COST	IMPGWL	-	-	-	-	-	0	128.473079764449	null	null	95.2095568620288	null	null	null	null	109.987443325782	null	null	null	null	null	null	null	null	null	109.987443325782	null	null	null	null	null	null	null	null	null	null	null	109.987443325782	null	null	
+	ACT_COST	IMPNUC	-	-	-	-	-	0	8.51116700273927	null	null	8.51116700273927	null	null	null	null	8.51116700273927	null	null	null	null	null	null	null	null	null	8.51116700273927	null	null	null	null	null	null	null	null	null	null	null	8.51116700273927	null	null	
+	ACT_COST	IMPOAG	-	-	-	-	-	0	224.747804386037	null	null	164.889518094014	null	null	null	null	190.331058470117	null	null	null	null	null	null	null	null	null	190.331058470117	null	null	null	null	null	null	null	null	null	null	null	190.331058470117	null	null	
+	ACT_COST	IMPOCR	-	-	-	-	-	0	178.183302446381	null	null	127.527258138277	null	null	null	null	150.032068397972	null	null	null	null	null	null	null	null	null	150.032068397972	null	null	null	null	null	null	null	null	null	null	null	150.032068397972	null	null	
+	ACT_COST	IMPODS	-	-	-	-	-	0	214.338638754767	null	null	152.080819346106	null	null	null	null	180.117447892149	null	null	null	null	null	null	null	null	null	180.117447892149	null	null	null	null	null	null	null	null	null	null	null	180.117447892149	null	null	
+	ACT_COST	IMPOGS	-	-	-	-	-	0	224.747804386037	null	null	164.889518094014	null	null	null	null	190.331058470117	null	null	null	null	null	null	null	null	null	190.331058470117	null	null	null	null	null	null	null	null	null	null	null	190.331058470117	null	null	
+	ACT_COST	IMPOHF	-	-	-	-	-	0	178.183302446381	null	null	127.527258138277	null	null	null	null	150.032068397972	null	null	null	null	null	null	null	null	null	150.032068397972	null	null	null	null	null	null	null	null	null	null	null	150.032068397972	null	null	
+	ACT_COST	IMPOKE	-	-	-	-	-	0	225.967293066328	null	null	166.493705316578	null	null	null	null	192.915859396173	null	null	null	null	null	null	null	null	null	192.915859396173	null	null	null	null	null	null	null	null	null	null	null	192.915859396173	null	null	
+	ACT_COST	IMPOLP	-	-	-	-	-	0	412.838956061477	null	null	361.375641444058	null	null	null	null	384.239095284941	null	null	null	null	null	null	null	null	null	384.239095284941	null	null	null	null	null	null	null	null	null	null	null	384.239095284941	null	null	
+	ACT_COST	MINBIB	-	-	-	-	-	0	25.5335010082178	null	null	25.5335010082178	null	null	null	null	25.5335010082178	null	null	null	null	null	null	null	null	null	25.5335010082178	null	null	null	null	null	null	null	null	null	null	null	25.5335010082178	null	null	
+	ACT_COST	MINBIG	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINBIO	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINBIW	-	-	-	-	-	0	25.5335010082178	null	null	25.5335010082178	null	null	null	null	25.5335010082178	null	null	null	null	null	null	null	null	null	25.5335010082178	null	null	null	null	null	null	null	null	null	null	null	25.5335010082178	null	null	
+	ACT_COST	MINCLD	-	-	-	-	-	0	7.91350684103142	null	null	4.76135310545951	null	null	null	null	5.60159188877589	null	null	null	null	null	null	null	null	null	5.60159188877589	null	null	null	null	null	null	null	null	null	null	null	5.60159188877589	null	null	
+	ACT_COST	MINCLE	-	-	-	-	-	0	15.8270136820628	null	null	9.52270621091902	null	null	null	null	11.2031837775518	null	null	null	null	null	null	null	null	null	11.2031837775518	null	null	null	null	null	null	null	null	null	null	null	11.2031837775518	null	null	
+	ACT_COST	MINCOA	-	-	-	-	-	0	57.1339364440293	null	null	34.3760170022736	null	null	null	null	40.4423729438513	null	null	null	null	null	null	null	null	null	40.4423729438513	null	null	null	null	null	null	null	null	null	null	null	40.4423729438513	null	null	
+	ACT_COST	MINGAS	-	-	-	-	-	0	96.5748293486099	null	null	69.1194013294612	null	null	null	null	69.1194013294612	null	null	null	null	null	null	null	null	null	69.1194013294612	null	null	null	null	null	null	null	null	null	null	null	69.1194013294612	null	null	
+	ACT_COST	MINGIB	-	-	-	-	-	0	106.789854439481	null	null	76.4303789786972	null	null	null	null	89.9180929161143	null	null	null	null	null	null	null	null	null	89.9180929161143	null	null	null	null	null	null	null	null	null	null	null	89.9180929161143	null	null	
+	ACT_COST	MINGIC	-	-	-	-	-	0	106.789854439481	null	null	127.029504746671	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	
+	ACT_COST	MINGIH	-	-	-	-	-	0	102.852341295425	null	null	73.6122683687201	null	null	null	null	73.6122683687201	null	null	null	null	null	null	null	null	null	73.6122683687201	null	null	null	null	null	null	null	null	null	null	null	73.6122683687201	null	null	
+	ACT_COST	MINHYD	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINOCR	-	-	-	-	-	0	160.364972201743	null	null	114.774532324449	null	null	null	null	135.028861558175	null	null	null	null	null	null	null	null	null	135.028861558175	null	null	null	null	null	null	null	null	null	null	null	135.028861558175	null	null	
+	ACT_COST	MINSOL	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINWAS	-	-	-	-	-	0	0	null	null	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
+	ACT_COST	MINWND	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MIRCRB	-	-	-	-	-	0	15.8270136820628	null	null	9.52270621091902	null	null	null	null	11.2031837775518	null	null	null	null	null	null	null	null	null	11.2031837775518	null	null	null	null	null	null	null	null	null	null	null	11.2031837775518	null	null	
+	ACT_COST	MIRGRM	-	-	-	-	-	0	106.789854439481	null	null	127.029504746671	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	
+	ACT_COST	MIRGRN	-	-	-	-	-	0	106.789854439481	null	null	127.029504746671	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	
+	ACT_COST	MIRGRS	-	-	-	-	-	0	106.789854439481	null	null	127.029504746671	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	null	null	null	null	null	null	null	null	null	127.029504746671	null	null	
+	ACT_COST	PEXCOA	-	-	-	-	-	3	-54.2772396218278	null	null	-32.6572161521599	null	null	null	null	-38.4202542966588	null	null	null	null	null	null	null	null	null	-38.4202542966588	null	null	null	null	null	null	null	null	null	null	null	-38.4202542966588	null	null	
+	ACT_COST	PEXCOK	-	-	-	-	-	0	-108.554479243656	null	null	-65.3144323043199	null	null	null	null	-76.8405085933175	null	null	null	null	null	null	null	null	null	-76.8405085933175	null	null	null	null	null	null	null	null	null	null	null	-76.8405085933175	null	null	
+	ACT_COST	PEXELC	-	-	-	-	-	3	-44.5907294114406	null	null	-44.5907294114406	null	null	null	null	-44.5907294114406	null	null	null	null	null	null	null	null	null	-44.5907294114406	null	null	null	null	null	null	null	null	null	null	null	-44.5907294114406	null	null	
+	ACT_COST	PEXOAG	-	-	-	-	-	0	-213.510414166735	null	null	-156.645042189314	null	null	null	null	-180.814505546612	null	null	null	null	null	null	null	null	null	-180.814505546612	null	null	null	null	null	null	null	null	null	null	null	-180.814505546612	null	null	
+	ACT_COST	PEXOCR	-	-	-	-	-	0	-169.274137324062	null	null	-121.150895231363	null	null	null	null	-142.530464978074	null	null	null	null	null	null	null	null	null	-142.530464978074	null	null	null	null	null	null	null	null	null	null	null	-142.530464978074	null	null	
+	ACT_COST	PEXODS	-	-	-	-	-	0	-203.621706817028	null	null	-144.4767783788	null	null	null	null	-171.111575497542	null	null	null	null	null	null	null	null	null	-171.111575497542	null	null	null	null	null	null	null	null	null	null	null	-171.111575497542	null	null	
+	ACT_COST	PEXOGS	-	-	-	-	-	0	-213.510414166735	null	null	-156.645042189314	null	null	null	null	-180.814505546612	null	null	null	null	null	null	null	null	null	-180.814505546612	null	null	null	null	null	null	null	null	null	null	null	-180.814505546612	null	null	
+	ACT_COST	PEXOHF	-	-	-	-	-	0	-169.274137324062	null	null	-121.150895231363	null	null	null	null	-142.530464978074	null	null	null	null	null	null	null	null	null	-142.530464978074	null	null	null	null	null	null	null	null	null	null	null	-142.530464978074	null	null	
+	ACT_COST	PEXOKE	-	-	-	-	-	0	-214.668928413012	null	null	-158.169020050749	null	null	null	null	-183.270066426364	null	null	null	null	null	null	null	null	null	-183.270066426364	null	null	null	null	null	null	null	null	null	null	null	-183.270066426364	null	null	
+
+TID DATA	REGION1
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
