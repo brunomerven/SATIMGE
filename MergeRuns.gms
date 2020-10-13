@@ -33,11 +33,6 @@ LOOP(RUN$INCLRUN(RUN),
 put_utilities Scen 'gdxin' / RUN.TL:20;
 execute_load REPORT_RUN;
 
-*tmp
-* mtons of coal
-REPORT_RUN(PRC,COM,TC,'FlowInMt')$CoalCV(COM) = REPORT_RUN(PRC,COM,TC,'FlowIn')/CoalCV(COM);
-
-
 REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT_RUN(PRC,COM,TC,Indicators);
 
 

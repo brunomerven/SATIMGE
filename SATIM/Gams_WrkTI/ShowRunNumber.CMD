@@ -1,1 +1,1 @@
-echo NoPAMS-CAP10
+echo CPAMS-TrGr

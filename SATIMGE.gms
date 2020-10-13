@@ -36,10 +36,24 @@ SETS
 
   NMY1(ALLYEAR)                  All milestone years except for the first year (demand)
   S                              TIMES timeslices
+  TS_MAP(REG,S,S)                Timeslice hierarchy tree: node+below
+  TS_SEASON(S)                   seasonal timeslices
+  TS_DAYNITE(S)                  day-night(block) timeslices
+  TS_WEEKLY(S)                   day-type timeslices
+  TS_HOURLY                      Hours in a day /1*24/
+  TS_MAP2(TS_WEEKLY,TS_DAYNITE,TS_HOURLY)  maps day-types and blocks to 24 hour sequence
   PRC                            TIMES Processes
+  PRC_ANNUAL(REG,PRC)            Annual Processes
+  PRC_SEASON(REG,PRC)            Seasonal Processes
+  PRC_WEEKLY(REG,PRC)            Weekly Processes
+  PRC_DAYNIT(REG,PRC)           Daynite Processes
+
+
   PRCH(PRC)                      Households groupings in eSAGE
 
   COM                            TIMES Commodities
+  COM_NRGELC(REG,COM)            Elc Commodities
+  COM_NRGELCR(COM)               Elc Commodities
   TCG(COM)                       Trade commodity groups
   DEM(REG,COM)                   TIMES Demand Commodities
   DEM1(COM)                      TIMES Demand Commodities for REGION1
@@ -158,7 +172,7 @@ SETS
 
   Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
-
+  IndicatorsH SATIM Sub-annual indicators /FlowIn, FlowOut, Demand/
 
 
 * Other
@@ -182,6 +196,9 @@ PARAMETERS
   REPORT(PRC,COM,AY,RUN,Indicators) REPORT of indicators by run and process and commodity
   REPORT_RUN(PRC,COM,AY,Indicators) REPORT of indicators by run and process and commodity for each run
 
+  REPORTH(PRC,COM,AY,TS_WEEKLY,TS_HOURLY,RUN,IndicatorsH) REPORT of indicators by daytype and each hour- run and process and commodity
+  REPORTH_RUN(PRC,COM,AY,TS_WEEKLY,TS_HOURLY,IndicatorsH) REPORT of indicators by daytype and each hour- run and process and commodity
+
 * From TIMES
   F_IN(REG,AY,AY,PRC,COM,S)      Flow parameter (level of flow variable) [PJ]
   F_OUT(REG,AY,AY,PRC,COM,S)     Flow parameter (level of flow variable)[PJ]
@@ -203,6 +220,8 @@ PARAMETERS
   COM_PROJ(REG,AY,COM)           TIMES Demand baseline projection
 
   UC_CAP(UC_N,SIDE,REG,AY,PRC)   TIMES multiplier of capacity variables
+
+  G_YRFR(REG,S)                  TIMES seasonal fraction of the year
 
   OB_ICOST(REG,PRC,XXX,AY)       Interpolated investment cost from TIMES run
   OBICOST(REG,AY,PRC)            TIMES investment cost restructured for interpolation
@@ -303,8 +322,31 @@ PARAMETERS
   GasShareFinal(ALLYEAR,RUN)
   FossilShareFinal(ALLYEAR,RUN)
   ERPRICE(AY,RUN)                regulated electricity price
+
+
+* SubAnnual Analysis parameters
+  TS_Duration(TS_DAYNITE)                  duration in hours of each daynite timeslice
+  P_IN_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)       power flow-ins (hourly)
+  P_OUT_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)      power outflows (hourly)
+  P_DEM_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)      Demand profiles (hourly)
+  P_IN(PRC,COM,AY,TS_DAYNITE)              power flow-ins
+  P_OUT(PRC,COM,AY,TS_DAYNITE)             power outflows
+  P_DEM(PRC,COM,AY,TS_DAYNITE)             Demand profiles
+  E_IN(PRC,COM,AY,TS_DAYNITE)              power flow-ins
+  E_OUT(PRC,COM,AY,TS_DAYNITE)             power outflows
+  E_DEM(PRC,COM,AY,TS_DAYNITE)             Demand profiles
+
+  VALHOURLY(TS_HOURLY)                    value of TS_HOURLY
+  TS_REF(TS_DAYNITE)                      Hourly Reference point
 ;
+LOOP(TS_HOURLY,
+VALHOURLY(TS_HOURLY) = ORD(TS_HOURLY);
+);
+
+
 *-------------------------------------------------------------------------------
+
+
 
 * File declarations------------------------------------------------------------
 *INCLUDE NOTES!!!What are these files for?
@@ -322,7 +364,7 @@ PARAMETERS
 * Import sets and parameters from SetsAndMaps -------------------------------
 $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=index!a6 checkdate"
 $gdxin  SetsAndMaps\SetsMaps.gdx
-$loaddc PRC COM DEM1 S UC_N FSATIM FS FH COALSUP PRCH TCG
+$loaddc PRC COM S TS_DAYNITE TS_WEEKLY TS_SEASON DEM1 UC_N FSATIM FS FH COALSUP PRCH TCG
 $load MFHH MHPRCH MCTCG MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
 $load PassengerOccupancy  FreightLoad CoalCV
 
@@ -373,6 +415,9 @@ Alias (MILESTONYR,MY), (P,PP);
  Scalars
  EFVAL                 temporary values stored here
  TRAMOD                transport mode parameter
+ TS_TMP1               temporary values in sub-annual results calc
+ TS_TMP2               temporary values in sub-annual results calc
+
 ;
 *-------------------------------------------------------------------------------
 
@@ -463,8 +508,13 @@ $include SATIM\includes\2runTIMES.inc
 $include SATIM\includes\2TIMESReport.inc
 REPORT(PRC,'ACTGRP',TC,RUN,'GVA') = SUM(FS$MPRCFS2(PRC,FS),GVA_FS(FS,TC));
 
+
 );
 *if(SIM_ESAGE(RUN) eq 1,
+
+* Sub-annual results
+$include SATIM\includes\2TIMESSubAnnualReport.inc
+
 
 GDP_RUN(TC) = SUM(FSGDP,GVA_FS(FSGDP,TC));
 

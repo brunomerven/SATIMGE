@@ -29,11 +29,14 @@ REPORT(PRCH,'ACTGRP',TC,RUN,'Population') = sum(H$MHPRCH(PRCH,H),HPOPX(H,XC,TC,'
 
 
 *Calculate Real Trade Balance
-REPORT('OtherEconIndicators',TCG,TC,RUN,'Imports') = sum(C$MCTCG(C,TCG),PM0(C,'rest')*QMX(C,'rest',XC,TC,'2050'));
+*REPORT('OtherEconIndicators',TCG,TC,RUN,'Imports') = sum(C$MCTCG(C,TCG),PM0(C,'rest')*QMX(C,'rest',XC,TC,'2050'));
+REPORT('OtherEconIndicators',TCG,TC,RUN,'Imports') = sum(C$MCTCG(C,TCG),PWM0(C,'rest')*QMX(C,'rest',XC,TC,'2050'));
 
-REPORT('OtherEconIndicators',TCG,TC,RUN,'Exports') = sum(C$MCTCG(C,TCG),PE0(C,'rest')*QEX(C,'rest',XC,TC,'2050'));
+*REPORT('OtherEconIndicators',TCG,TC,RUN,'Exports') = sum(C$MCTCG(C,TCG),PE0(C,'rest')*QEX(C,'rest',XC,TC,'2050'));
+REPORT('OtherEconIndicators',TCG,TC,RUN,'Exports') = sum(C$MCTCG(C,TCG),PWE0(C,'rest')*QEX(C,'rest',XC,TC,'2050'));
 
-REPORT('OtherEconIndicators','ACTGRP',TC,RUN,'TradeDeficit') = sum(C,PM0(C,'rest')*QMX(C,'rest',XC,TC,'2050')-PE0(C,'rest')*QEX(C,'rest',XC,TC,'2050'));
+*REPORT('OtherEconIndicators','ACTGRP',TC,RUN,'TradeDeficit') = sum(C,PM0(C,'rest')*QMX(C,'rest',XC,TC,'2050')-PE0(C,'rest')*QEX(C,'rest',XC,TC,'2050'));
+REPORT('OtherEconIndicators','ACTGRP',TC,RUN,'TradeDeficit') = sum(C,PWM0(C,'rest')*QMX(C,'rest',XC,TC,'2050')-PWE0(C,'rest')*QEX(C,'rest',XC,TC,'2050'));
 
 *The Palma ratio is defined as the ratio of the richest 10% of the population's
 *share of gross national income divided by the poorest 40%'s share. It is

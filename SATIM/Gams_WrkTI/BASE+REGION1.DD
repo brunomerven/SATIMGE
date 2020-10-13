@@ -1069,7 +1069,7 @@ SET PRC /
   'USMRGICHGN'               'Production Plant Hydrogen - Large SMR - Coastal   '
   'UTRNGIMGAS'               'Conversion Methane Rich Gas Natural Gas for use in'
   'XAGRCOA'                  'Agriculture Coal                                  '
-  'XAGRELC'                  'Agriculture Electricity                           '
+  'XAGRELC'                  'Agriculatural Electricity                         '
   'XAGRODS'                  'Agriculture Oil Diesel                            '
   'XAGROGS'                  'Agriculture Oil Gasoline                          '
   'XAGROHF'                  'Agriculture Oil HFO                               '
@@ -1177,7 +1177,6 @@ SET PRC_PRE /
   'REGION1'   .'MNZZZ'
   'REGION1'   .'PEXCOA'
   'REGION1'   .'PEXCOK'
-  'REGION1'   .'PEXELC'
   'REGION1'   .'PEXOAG'
   'REGION1'   .'PEXOCR'
   'REGION1'   .'PEXODS'
@@ -1207,14 +1206,12 @@ SET PRC_PRE /
   'REGION1'   .'USMRGICHGN'
   'REGION1'   .'UTRNGIMGAS'
   'REGION1'   .'XAGRCOA'
-  'REGION1'   .'XAGRELC'
   'REGION1'   .'XAGRODS'
   'REGION1'   .'XAGROGS'
   'REGION1'   .'XAGROHF'
   'REGION1'   .'XAGROKE'
   'REGION1'   .'XAGROLP'
   'REGION1'   .'XCOMCOA'
-  'REGION1'   .'XCOMELC'
   'REGION1'   .'XCOMGAS'
   'REGION1'   .'XCOMODS'
   'REGION1'   .'XCOMOGS'
@@ -1226,7 +1223,6 @@ SET PRC_PRE /
   'REGION1'   .'XINDCLE'
   'REGION1'   .'XINDCOA'
   'REGION1'   .'XINDCOK'
-  'REGION1'   .'XINDELC'
   'REGION1'   .'XINDGAS'
   'REGION1'   .'XINDODS'
   'REGION1'   .'XINDOGS'
@@ -1253,11 +1249,9 @@ SET PRC_PRE /
   'REGION1'   .'XPWRWND'
   'REGION1'   .'XRESBIW'
   'REGION1'   .'XRESCOA'
-  'REGION1'   .'XRESELC'
   'REGION1'   .'XRESGAS'
   'REGION1'   .'XRESOKE'
   'REGION1'   .'XRESOLP'
-  'REGION1'   .'XTRAELC'
   'REGION1'   .'XTRAGAS'
   'REGION1'   .'XTRAHGN'
   'REGION1'   .'XTRAOAG'
@@ -1268,7 +1262,6 @@ SET PRC_PRE /
   'REGION1'   .'XUPSBID'
   'REGION1'   .'XUPSBIE'
   'REGION1'   .'XUPSCLE'
-  'REGION1'   .'XUPSELC'
   'REGION1'   .'XUPSGAS'
   'REGION1'   .'XUPSGIC'
   'REGION1'   .'XUPSHEE'
@@ -1280,6 +1273,15 @@ SET PRC_PRE /
 /;
 SET PRC_PRV /
   'REGION1'   .'MINWAT'
+/;
+SET PRC_ELE /
+  'REGION1'   .'PEXELC'
+  'REGION1'   .'XAGRELC'
+  'REGION1'   .'XCOMELC'
+  'REGION1'   .'XINDELC'
+  'REGION1'   .'XRESELC'
+  'REGION1'   .'XTRAELC'
+  'REGION1'   .'XUPSELC'
 /;
 SET PRC_ANNUAL /
   'REGION1'   .'IMPBID'
@@ -2112,7 +2114,7 @@ PARAMETER ANCAP_START /
   'REGION1'                 .'UGTLGICCO-N'                2025
   'REGION1'                 .'ULGTGRLFSRU-N'              2025
   'REGION1'                 .'ULGTGRL-N'                  2027
-  'REGION1'                 .'UREFOCRCO-N'                2030
+  'REGION1'                 .'UREFOCRCO-N'                2028
   'REGION1'                 .'USMRGASHGN'                 2028
   'REGION1'                 .'USMRGICHGN'                 2028
 /;
@@ -3847,7 +3849,7 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'UGTLGICCO-N'             .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
   'REGION1'                 .'UHETCLE-N'               .'UP'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UREFOCRCO-E'             .'UP'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-  'REGION1'                 .'UREFOCRCO-N'             .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UREFOCRCO-N'             .'LO'                                                                                                                                                                                                                                                                                               665                                                                                                                                                                                                                                                             
   'REGION1'                 .'UREFOCRIN-E'             .'UP'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'USMRGASHGN'              .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
   'REGION1'                 .'USMRGICHGN'              .'UP'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
