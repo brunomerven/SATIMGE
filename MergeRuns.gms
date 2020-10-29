@@ -8,6 +8,10 @@ SETS
   PRC                            TIMES Processes
   COM                            TIMES Commodities
   Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
+  Sector
+  SubSector
+
+  MPRCSubSector(PRC,Sector,SubSector)          Map for PRC to subsectors
 ;
 
 Parameters
@@ -25,7 +29,7 @@ $load RUN INCLRUN TC
 
 $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=index!a6 checkdate"
 $gdxin SetsAndMaps\SetsMaps.gdx
-$loaddc PRC COM
+$load PRC COM Sector SubSector MPRCSubSector
 $load CoalCV
 
 LOOP(RUN$INCLRUN(RUN),
@@ -38,6 +42,14 @@ REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT_RUN(PRC,COM,TC,Indicators);
 
 
 );
+
+*tmp fixes until model is rerun These fixes have been made in the model.
+REPORTM(PRC,'IISCOA',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
+REPORTM(PRC,'IISCKC',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
+REPORTM('PEXCOA','COA',TC,RUN,'FlowInMt') = 75;
+
+
+
 *end loop
 
 execute_unload "REPORTM.gdx" REPORTM

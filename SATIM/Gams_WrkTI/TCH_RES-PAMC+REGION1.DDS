@@ -765,6 +765,7 @@ PARAMETER ATOP_IN /
   'REGION1'                 .'RHEKOKEPRIMUS-E'         .'RESOKE'                     1
   'REGION1'                 .'RHEKOLPSTOV-E'           .'RESOLP'                     1
   'REGION1'                 .'RHELELCINC-E'            .'RESELC'                     1
+  'REGION1'                 .'RHEOELCOTH-E'            .'RESELC'                     1
   'REGION1'                 .'RHERELCREF-E'            .'RESELC'                     1
   'REGION1'                 .'RHEWELCCHP-N'            .'RESELC'                     1
   'REGION1'                 .'RHEWELCGEY-E'            .'RESELC'                     1

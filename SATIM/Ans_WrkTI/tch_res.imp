@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/19	8:50:26 PM
+Creation Date:	2020/10/21	12:09:03 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_RES	Residential sector shortened TS	
@@ -18,16 +18,16 @@ TID DATA	_GLOBAL
 ITEMS	REGION1
 	C	RHIEW-LO	HIgh income water heating HP and SWH LO	uconstraint	UC_N,UCRT,UCRULE	
 	C	RHIEW-UP	HIgh income water heating HP and SWH UB	uconstraint	UC_N,UCRT,UCRULE	
-	E	RESBIW	Residential - Biomass Wood	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESBIW	Residential Biomass Wood	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	RESCH4	Residential - Methane	KT	COM,ENV,ANNUAL,GHG	
 	E	RESCO2	Residential - Carbon Dioxide	KT	COM,ENV,ANNUAL,GHG	
-	E	RESCOA	Residential - Coal	PJ	COM,NRG,DAYNITE,FOSSIL	
-	E	RESELC	Residential - Electricity	PJ	COM,NRG,DAYNITE,ELC	
-	E	RESGAS	Residential - Natural gas	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESCOA	Residential Coal	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESELC	Residential Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	RESGAS	Residential Gas South Africa	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	RESN2O	Residential - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
 	E	RESNOX	Residential - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	RESOKE	Residential - Oil Paraffin	PJ	COM,NRG,DAYNITE,FOSSIL	
-	E	RESOLP	Residential - Oil LPG	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESOKE	Residential Oil Kerosene	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	RESOLP	Residential Oil LPG	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	RESSOX	Residential - Sulphur Gases	KT	COM,ENV,ANNUAL,GHG	
 	E	RHEH	Residential - Space Heating - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
 	E	RHEK	Residential - Cooking - High Income Electrified	PJ	COM,DEM,DAYNITE,RES	
@@ -814,12 +814,12 @@ TS DATA	REGION1
 	PRC_RESID	RMEWGASGEY-N	-	-	-	-	-	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
 	PRC_RESID	RMEWOKEKETPR-E	-	-	-	-	-	0	2.8295459340772	2.65361952368225	2.4776931132873	2.30176670289235	2.1258402924974	1.94991388210244	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
 	PRC_RESID	RMEWOLPKETLPG-E	-	-	-	-	-	0	3.89512001061182E-02	0.18454956147972	0.330147922853321	0.475746284226922	0.621344645600524	0.766943006974125	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	6
-	UC__RHSRT	RHIEW-LO	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	0	0	0	0	
+	UC__RHSRT	RHIEW-LO	-	-	-	-	NB	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	0	0	0	0	
 	UC__RHSRT	RHIEW-UP	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	0	0	0	0	
-	UCRULE_ACT	RHIEW-LO	LHS	S-RHEWG-ALL	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	-0.042949718022145	null	null	null	null	-0.117480448491974	null	null	null	null	-0.252669198744021	null	null	null	null	-0.437188304378449	null	null	null	null	-0.568856730251763	-0.61190381259499	-0.626732173638616	-0.626732173638616	-0.626732173638616	
-	UCRULE_ACT	RHIEW-LO	LHS	S-RHEWG-EFF	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	
-	UCRULE_ACT	RHIEW-UP	LHS	S-RHEWG-ALL	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	-6.16772354582861E-02	null	null	null	null	-0.123354470916572	null	null	null	null	-0.265302658681222	null	null	null	null	-0.459047719597371	null	null	null	null	-0.597299566764351	-0.64249900322474	-0.658068782320547	-0.658068782320547	-0.658068782320547	
-	UCRULE_ACT	RHIEW-UP	LHS	S-RHEWG-EFF	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	
+	UCRULE_ACT	RHIEW-LO	LHS	S-RHEWG-ALL	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.117480448491974	null	null	null	null	-0.252669198744021	null	null	null	null	-0.437188304378449	null	null	null	null	-0.568856730251763	-0.61190381259499	-0.626732173638616	-0.626732173638616	-0.626732173638616	
+	UCRULE_ACT	RHIEW-LO	LHS	S-RHEWG-EFF	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	
+	UCRULE_ACT	RHIEW-UP	LHS	S-RHEWG-ALL	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.123354470916572	null	null	null	null	-0.265302658681222	null	null	null	null	-0.459047719597371	null	null	null	null	-0.597299566764351	-0.64249900322474	-0.658068782320547	-0.658068782320547	-0.658068782320547	
+	UCRULE_ACT	RHIEW-UP	LHS	S-RHEWG-EFF	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	1	1	1	1	
 
 TID DATA	REGION1
 	PRC_ACTUNT	RHEHBIWSTOV-E	-	RHEH	-	-	-	1	
@@ -1002,6 +1002,7 @@ TID DATA	REGION1
 	TOP-IN	RHEKOKEPRIMUS-E	RESOKE	-	-	-	-	1	
 	TOP-IN	RHEKOLPSTOV-E	RESOLP	-	-	-	-	1	
 	TOP-IN	RHELELCINC-E	RESELC	-	-	-	-	1	
+	TOP-IN	RHEOELCOTH-E	RESELC	-	-	-	-	1	
 	TOP-IN	RHERELCREF-E	RESELC	-	-	-	-	1	
 	TOP-IN	RHEWELCCHP-N	RESELC	-	-	-	-	1	
 	TOP-IN	RHEWELCGEY-E	RESELC	-	-	-	-	1	

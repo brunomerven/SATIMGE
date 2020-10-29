@@ -54,7 +54,8 @@ $BATINCLUDE SATIM\Includes\interpolate.inc COM_PROJ 'REG' 'COM' ",'0','0','0','0
 
 
 * Attempt at putting parameter for results equal to variable:
-  PAR_VCAPL(REG,TC,PRC) = VAR_CAP.L(REG,TC,PRC);
+ PAR_VCAPL(REG,TC,PRC) = VAR_CAP.L(REG,TC,PRC);
+$BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','0','0'" TC 'PAR_VCAPL(REG,TC,PRC)'
 
 
 
@@ -75,7 +76,9 @@ $BATINCLUDE SATIM\Includes\interpolate.inc COM_PROJ 'REG' 'COM' ",'0','0','0','0
   );
 
 
- TVCAP(TC,PRC)     = RESID('REGION1',TC,PRC)+PAR_CAPL('REGION1',TC,PRC);
+* TVCAP(TC,PRC)     = RESID('REGION1',TC,PRC)+PAR_CAPL('REGION1',TC,PRC);
+ TVCAP(TC,PRC)     = PAR_VCAPL('REGION1',TC,PRC);
+
 
  TVACT(TC,PRC)     = VARACT('REGION1',TC,PRC);
 * TVCAP(TC,PRC)     = PAR_CAPL('REGION1',TC,PRC);

@@ -1,1 +1,1 @@
-echo CPAMS-TrGr
+echo NoPAMS-Resid

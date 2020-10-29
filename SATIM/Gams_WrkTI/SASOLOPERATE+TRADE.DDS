@@ -1,0 +1,6 @@
+SET UC_N /
+  'UCCSASOL'                 'growth constraint on activity for Sasol           '
+/;
+PARAMETER AUC_DYNBND /
+  'UCCSASOL'                .'UP'                         1
+/;
