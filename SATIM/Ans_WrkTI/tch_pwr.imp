@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/10/12	10:25:18 PM
+Creation Date:	2020/11/04	9:42:10 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -621,16 +621,16 @@ TS DATA	REGION1
 	NCAP_AFA	ETGASENSS-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICCC-N	-	-	-	-	LO	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICCC-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETGICEN-N	-	-	-	-	LO	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETGICEN-N	-	-	-	-	LO	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICEN-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICGT-N	-	-	-	-	LO	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETGICGT-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETNUC-E	-	-	-	-	LO	0	null	null	null	null	null	0.926018804929543	0.646627238179408	0.832982283473266	0.646627238179408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETNUC-E	-	-	-	-	UP	0	null	null	null	null	null	0.926018804929543	0.6472745126921	0.833816099572838	0.8416	0.8296	0.7032	0.9008	0.8646	0.7493	0.9004	0.895	0.9211	0.845	0.8454	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETNUC-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETODSGT-E	-	-	-	-	LO	0	null	null	null	null	null	1.83840563165906E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-E	-	-	-	-	LO	0	null	null	null	null	null	2.96060046476778E-03	2.87819885519885E-02	7.09068328322217E-02	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETODSGT-E	-	-	-	-	UP	0	null	null	null	null	null	0.9588	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETODSGT-N	-	-	-	-	LO	0	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETODSGT-N	-	-	-	-	LO	0	0.05	null	null	null	null	2.96060046476778E-03	2.87819885519885E-02	7.09068328322217E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETODSGT-N	-	-	-	-	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFC	EPTSTO-E	-	ACTGRP	-	DAYNITE	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFC	EPTSTO-N	-	ACTGRP	-	DAYNITE	-	0	0.657	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -690,11 +690,11 @@ TS DATA	REGION1
 	NCAP_COST	ERHYDGIW-I	-	-	-	-	-	0	51227.1074878751	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERHYD-I	-	-	-	-	-	0	4292.96272257137	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ERHYD-N	-	-	-	-	-	0	11515.6695525528	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ERSOLPCF-N	-	-	-	-	-	0	26049.680465	null	null	14267.25	null	12569.9587345254	null	null	8900.35	null	null	null	null	8354.65	null	null	null	null	7848.9	null	null	null	null	null	null	null	null	null	6972.55	null	6159.95	null	null	
+	NCAP_COST	ERSOLPCF-N	-	-	-	-	-	0	28748.2158176991	null	null	15745.2212389381	null	13872.1043816731	null	null	9822.35398230089	null	null	null	null	9220.12389380531	null	null	null	null	8661.98230088496	null	null	null	null	null	null	null	null	null	7694.84955752213	null	6798.07079646018	null	null	
 	NCAP_COST	ERSOLPCT-N	-	-	-	-	-	0	30646.6829	null	null	16785	null	14788.1867465005	null	null	10471	null	null	null	null	9829	null	null	null	null	9234	null	null	null	null	null	null	null	null	null	8203	null	7247	null	null	
-	NCAP_COST	ERSOLPRC-N	-	-	-	-	-	0	30217.6293394	null	null	16550.01	null	14581.1521320495	null	null	10324.406	null	null	null	null	9691.394	null	null	null	null	9104.724	null	null	null	null	null	null	null	null	null	8088.158	null	7145.542	null	null	
-	NCAP_COST	ERSOLPRI-N	-	-	-	-	-	0	30217.6293394	null	null	16550.01	null	14581.1521320495	null	null	10324.406	null	null	null	null	9691.394	null	null	null	null	9104.724	null	null	null	null	null	null	null	null	null	8088.158	null	7145.542	null	null	
-	NCAP_COST	ERSOLPRR-N	-	-	-	-	-	0	45586.94081375	null	null	24967.6875	null	21997.4277854195	null	null	15575.6125	null	null	null	null	14620.6375	null	null	null	null	13735.575	null	null	null	null	null	null	null	null	null	12201.9625	null	10779.9125	null	null	
+	NCAP_COST	ERSOLPRC-N	-	-	-	-	-	0	33347.930348531	null	null	18264.4566371681	null	16091.6410827408	null	null	11393.930619469	null	null	null	null	10695.3437168142	null	null	null	null	10047.8994690265	null	null	null	null	null	null	null	null	null	8926.02548672566	null	7885.76212389381	null	null	
+	NCAP_COST	ERSOLPRI-N	-	-	-	-	-	0	33347.930348531	null	null	18264.4566371681	null	16091.6410827408	null	null	11393.930619469	null	null	null	null	10695.3437168142	null	null	null	null	10047.8994690265	null	null	null	null	null	null	null	null	null	8926.02548672566	null	7885.76212389381	null	null	
+	NCAP_COST	ERSOLPRR-N	-	-	-	-	-	0	50309.3776809735	null	null	27554.1371681416	null	24276.1826679279	null	null	17189.1194690266	null	null	null	null	16135.2168141593	null	null	null	null	15158.4690265487	null	null	null	null	null	null	null	null	null	13465.9867256637	null	11896.6238938053	null	null	
 	NCAP_COST	ERSOLTC09-N	-	-	-	-	-	0	null	null	null	null	null	57809.3771959677	null	null	52630.5355636711	null	null	null	null	43999.1328431769	null	null	null	null	35367.7301226827	null	null	null	null	null	null	null	null	null	35367.7301226827	null	35367.7301226827	null	null	
 	NCAP_COST	ERWNDH-N	-	-	-	-	-	0	19786.1982	null	null	19208	null	15312.5398495024	null	null	12500	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	11859	null	null	
 	NCAP_COST	ESTSUTL	-	-	-	-	-	0	null	null	null	null	null	27165.0638401165	null	null	20309.8105	null	null	null	null	14178.547	null	null	null	null	9963.3033	null	null	null	null	null	null	null	null	null	9196.8953	null	9196.8953	null	null	
