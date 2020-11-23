@@ -116,7 +116,8 @@ SETS
   MPRCSector(PRC,Sector) MAP for PRC to sectors
   MPRCSubSector(PRC,Sector,SubSector)          Map for PRC to subsectors
   MPRCSubsubSector(PRC,Sector,SubSector,SubSubSector)  Map for PRC to subsubsectors
-  PRCPower(PRC)                  Technology set used to computer elc price
+  PRCPower(PRC)                  Technology set used to compute elc price
+  PRCBulkPower(PRC)              Technology set used to compute bulk elc price (up to ETRANS)
 * Emissions sets
   CO2SET(COM)                    Sectoral emissions
 
@@ -170,9 +171,9 @@ SETS
 *FH*----------------------------------------------------------------------------
  MFHHT(FH,H,AY) reverse mapping (TIMES to CGE) for households
 
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, Marginals, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
-  IndicatorsH SATIM Sub-annual indicators /FlowIn, FlowOut, Demand/
+  IndicatorsH SATIM Sub-annual indicators /FlowIn, FlowOut, Marginal, Price, Demand/
 
 
 * Other
@@ -225,6 +226,10 @@ PARAMETERS
 
   OB_ICOST(REG,PRC,XXX,AY)       Interpolated investment cost from TIMES run
   OBICOST(REG,AY,PRC)            TIMES investment cost restructured for interpolation
+
+  OB_ACT(REG,PRC,XXX,AY)       Interpolated variable unit cost from TIMES run R per kW or GJ-a
+  OBACT(REG,AY,PRC)            TIMES variable unit cost restructured for interpolation R per GJ
+
 
 * Data from Demand Model (spreadsheet-based at this stage)
   SIM_DEMX(COM,AY)               Demand extracted from excel
@@ -329,18 +334,32 @@ PARAMETERS
   P_IN_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)       power flow-ins (hourly)
   P_OUT_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)      power outflows (hourly)
   P_DEM_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)      Demand profiles (hourly)
+
   P_IN(PRC,COM,AY,TS_DAYNITE)              power flow-ins
   P_OUT(PRC,COM,AY,TS_DAYNITE)             power outflows
   P_DEM(PRC,COM,AY,TS_DAYNITE)             Demand profiles
-  E_IN(PRC,COM,AY,TS_DAYNITE)              power flow-ins
-  E_OUT(PRC,COM,AY,TS_DAYNITE)             power outflows
-  E_DEM(PRC,COM,AY,TS_DAYNITE)             Demand profiles
+
+  E_IN(PRC,COM,AY,TS_DAYNITE)              energy flow-ins
+  E_OUT(PRC,COM,AY,TS_DAYNITE)             energy outflows
+  E_DEM(PRC,COM,AY,TS_DAYNITE)             energy Demand profiles
+
+  Marginal(COM,AY,TS_DAYNITE)          Marginals
+  Marginal_H(COM,AY,TS_WEEKLY,TS_HOURLY) Marginals (hourly)
+
+  VarCosts_TS(PRC,COM,AY,TS_DAYNITE)               variable costs per timeslice
+  Marginal_H(COM,AY,TS_WEEKLY,TS_HOURLY)           Marginal hourly
+  AggFixPrice(COM,AY,RUN)                      Aggregate Fixed Cost mR per GW
+  AggVarCost(COM,AY,RUN)           Aggregate Cost mR
+  AggVarCost_TS(COM,AY,TS_DAYNITE)           Aggregate Variable Cost in each timeslice
+  AggVarPrice(COM,AY,RUN)           Aggregate Variable Price R per GJ
+  AggVarPrice_TS(COM,AY,TS_DAYNITE)           Aggregate Variable Cost in each timeslice
+  AggVarPrice_H(COM,AY,TS_WEEKLY,TS_HOURLY)  Aggregate Variable Cost (hourly)
 
   VALHOURLY(TS_HOURLY)                    value of TS_HOURLY
   TS_REF(TS_DAYNITE)                      Hourly Reference point
 ;
 LOOP(TS_HOURLY,
-VALHOURLY(TS_HOURLY) = ORD(TS_HOURLY);
+   VALHOURLY(TS_HOURLY) = ORD(TS_HOURLY);
 );
 
 
@@ -368,10 +387,21 @@ $loaddc PRC COM S TS_DAYNITE TS_WEEKLY TS_SEASON DEM1 UC_N FSATIM FS FH COALSUP 
 $load MFHH MHPRCH MCTCG MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
 $load PassengerOccupancy  FreightLoad CoalCV
 
+
+* some subset definitions
 FSATIMNOELEC(FSATIM) = yes;
 FSATIMNOELEC('elec') = no;
 
 PRCPower(PRC)$MPRCSector(PRC,'Power') = yes;
+PRCBulkPower(PRC)$PRCPower(PRC) = yes;
+PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','EDist') = no;
+PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','ETrans') = no;
+PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','AutoGen-Chemical') = no;
+PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','AutoGen-EnergySupply') = no;
+PRCBulkPower(PRC)$MPRCSubSubSector(PRC,'Power','EBattery','Ebattery_Dist') = no;
+PRCBulkPower(PRC)$MPRCSubSubSector(PRC,'Power','EPV','EPV_Dist') = no;
+
+
 
 FSGDP(FS) = yes;
 FSGDP('fa') = no;
@@ -401,6 +431,8 @@ EmisFactor(COM,'CO2eq') = 0;
 
 $include cge\includes\2energychecksinit.inc
 
+
+$include KLEM\KLEM_init.inc
 
 
 Alias (MILESTONYR,MY), (P,PP);
@@ -533,10 +565,13 @@ if(SIM_AFOLU(RUN) eq 1,
 * Run AFOLU Model
 $include AFOLU\includes\GHGAfoluReport.inc
 *$offtext
+
 );
 
+$include KLEM\KLEM_Report.inc
+
 * generate report for run, which can then be combined later
-REPORT_RUN(PRC,COM,AY,Indicators) = REPORT(PRC,COM,AY,RUN,Indicators);
+REPORT_RUN(PRC,COM,TC,Indicators) = REPORT(PRC,COM,TC,RUN,Indicators);
 put_utilities Scen 'gdxout' / RUN.TL:20;
 execute_unload REPORT_RUN
 

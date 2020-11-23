@@ -8,7 +8,7 @@ SETS
   TC(T)                   eSAGE active time periods
   PRC                            TIMES Processes
   COM                            TIMES Commodities
-  IndicatorsH SATIM indicators /FlowIn, FlowOut/
+  IndicatorsH SATIM Sub-annual indicators /FlowIn, FlowOut, Marginal, Price, Demand/
   TS_WEEKLY(S) day-type timeslices
   TS_HOURLY Hours in a day /1*24/
 ;

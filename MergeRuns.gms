@@ -7,13 +7,13 @@ SETS
   TC(T)                   eSAGE active time periods
   PRC                            TIMES Processes
   COM                            TIMES Commodities
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, Marginals, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Sector
   SubSector
 
   MPRCSubSector(PRC,Sector,SubSector)          Map for PRC to subsectors
 ;
-
+*$onExternalOutput
 Parameters
   REPORT_RUN(PRC,COM,AY,Indicators) REPORT of indicators by run and process and commodity for each run
   REPORTM(PRC,COM,AY,RUN,Indicators) Merged Report
@@ -48,7 +48,7 @@ REPORTM(PRC,'IISCOA',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351')
 REPORTM(PRC,'IISCKC',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
 REPORTM('PEXCOA','COA',TC,RUN,'FlowInMt') = 75;
 
-
+*$offExternalOutput
 
 *end loop
 

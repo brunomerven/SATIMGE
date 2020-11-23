@@ -19,6 +19,8 @@ REPORT('ETCLEPFSS-E','UPSCLE',TC,RUN,'CO2') = REPORT('ETCLEPFSS-E','UPSCLE',TC,R
 REPORT('ETCLEPFSS-E','UPSCLE',TC,RUN,'CH4') = REPORT('ETCLEPFSS-E','UPSCLE',TC,RUN,'FlowIn')*0.001;
 REPORT('ETCLEPFSS-E','UPSCLE',TC,RUN,'N2O') = REPORT('ETCLEPFSS-E','UPSCLE',TC,RUN,'FlowIn')*0.0014;
 
+*GTL combustion Emissions
+REPORT('XUPSGIC','UPSGIC',TC,RUN,'CO2') = REPORT('UGTLGICCO-E','UPSGIC',TC,RUN,'FlowIn')*811.58/25.838;
 
 
 * Mining 1B1 Fugitive Emissions
@@ -30,10 +32,6 @@ REPORT(PRC,'ACTGRP',TC,RUN,'CH4')$MPRCSubSector(PRC,'Supply','Extraction-Gas') =
 * CTL 1B3 Fugitive emissions
 REPORT('UCTLCLEIN-E','UPSCLE',TC,RUN,'CO2') = REPORT('UCTLCLEIN-E','CO2SF',TC,RUN,'FlowOut');
 REPORT('UCTLCLEIN-E','UPSCLE',TC,RUN,'CH4') = REPORT('UCTLCLEIN-E','CH4SF',TC,RUN,'FlowOut');
-
-* GTL 1B3 emissions
-REPORT('XUPSGIC','ACTGRP',TC,RUN,'CO2') = REPORT('UGTLGICCO-E','UPSCO2S',TC,RUN,'FlowOut');
-REPORT('XUPSGIC','ACTGRP',TC,RUN,'CH4') = REPORT('UGTLGICCO-E','UPSCH4S',TC,RUN,'FlowOut');
 
 
 * Gas 1B2 Fugitive Emissions = the rest of fugitive emissions happening all over the place (gas network)
