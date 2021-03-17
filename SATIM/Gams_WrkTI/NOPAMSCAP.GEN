@@ -142,7 +142,7 @@ PARAMETER E / 2012 2013, 2015 2015, 2016 2016, 2017 2017, 2018 2018, 2019 2019, 
 $INCLUDE ANS2GAMS-DATAYEAR.ANS
 
 * ANSWER will set G_DYEAR to the G_DYEAR database value.
-G_DYEAR = 2018;
+G_DYEAR = 2012;
 
 * For a Time-Stepped Run, ANSWER will set G_OVERLAP to the G_OVERLAP value specified by the user.
 $IF NOT '%TIMESTEP%' == '' G_OVERLAP = 0; display G_OVERLAP;

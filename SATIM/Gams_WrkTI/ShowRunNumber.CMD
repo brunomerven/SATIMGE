@@ -1,1 +1,1 @@
-echo NoPAMS-Resid
+echo NoPAMS_Fnuc-

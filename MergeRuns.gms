@@ -44,9 +44,9 @@ REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT_RUN(PRC,COM,TC,Indicators);
 );
 
 *tmp fixes until model is rerun These fixes have been made in the model.
-REPORTM(PRC,'IISCOA',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
-REPORTM(PRC,'IISCKC',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
-REPORTM('PEXCOA','COA',TC,RUN,'FlowInMt') = 75;
+*REPORTM(PRC,'IISCOA',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
+*REPORTM(PRC,'IISCKC',TC,RUN,'CO2')$MPRCSubSector(PRC,'Industry','Iron_Steel351') = 0;
+*REPORTM('PEXCOA','COA',TC,RUN,'FlowInMt') = 75;
 
 *$offExternalOutput
 
