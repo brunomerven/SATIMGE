@@ -1,1 +1,1 @@
-echo NoPAMS_Fnuc-
+echo NoPAMS-CAP06

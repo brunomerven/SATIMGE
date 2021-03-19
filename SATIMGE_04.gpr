@@ -5261,16 +5261,6 @@ PlaneRownr=-1
 [RP:GHGPROCESSREPORT]
 1=
 
-[RP:SATIMGE]
-1=r=cge\model, gdx = NuclearRuns
-2=r=cge\model, gdx = 2itercheck2
-3=r=cge\model, gdx = 1itercheck
-4=r=cge\model, gdx = 2itercheck
-5=r=cge\model, gdx = 4itercheck
-6=r=cge\model, gdx = preHFO
-7=r=cge\model, gdx = test
-8=
-
 [GDXDISP: T_COMBALEM Par 3]
 PlaneDim=0
 RowDim=3
@@ -5301,10 +5291,6 @@ SqTrail0=0
 Order=1,2
 Decim=7
 PlaneRownr=-1
-
-[RP:MERGERUNS]
-1=gdx = merged
-2=
 
 [GDXDISP: CA Set 1]
 PlaneDim=0
@@ -5630,9 +5616,6 @@ Order=1,2,3,4
 Decim=7
 PlaneRownr=-1
 
-[RP:2CAPITAL]
-1=
-
 [GDXDISP: BMAT Par 2]
 PlaneDim=0
 RowDim=2
@@ -5759,6 +5742,33 @@ Order=1,2,3,4,5
 Decim=7
 PlaneRownr=-1
 
+[GDXDISP: VAR_RCAP Var 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[RP:2CAPITAL]
+1=
+
+[RP:MERGERUNS]
+1=gdx = merged
+2=
+
+[RP:SATIMGE]
+1=r=cge\model, gdx = RESCOMTestRun
+2=r=cge\model, gdx = NuclearRuns
+3=r=cge\model, gdx = 2itercheck2
+4=r=cge\model, gdx = 1itercheck
+5=r=cge\model, gdx = 2itercheck
+6=r=cge\model, gdx = 4itercheck
+7=r=cge\model, gdx = preHFO
+8=r=cge\model, gdx = test
+9=
+
 [MRUFILES]
 1=C:\Models\SATIMGE\testLinked3.gdx
 2=C:\Models\SATIMGE\testLinked2.gdx
@@ -5804,6 +5814,17 @@ HEIGHT=908
 WIDTH=1064
 
 [OPENWINDOW_4]
+FILE0=C:\Models\SATIMGE\test.gdx
+FILE1=C:\SATIMGE_03\CalibRefSATIM2.gdx
+FILE2=C:\SATIMGE_03\CGE\includes\2runTIMES.inc
+FILE3=C:\Models\SATIMGE\test.gdx
+MAXIM=0
+TOP=6
+LEFT=1021
+HEIGHT=910
+WIDTH=874
+
+[OPENWINDOW_5]
 FILE0=C:\Models\SATIMGE\1itercheck.gdx
 FILE1=C:\Models\SATIMGE\2itercheck.gdx
 FILE2=C:\Models\SATIMGE\2itercheck2.gdx
@@ -5836,29 +5857,9 @@ FILE28=C:\Models\SATIMGE\test.gdx
 FILE29=C:\Models\SATIMGE\testLinked4.gdx
 FILE30=C:\Models\SATIMGE\Waste\Includes\GHGWasteReport.inc
 FILE31=C:\SATIMGE_03\CO2_Calcs_NDC.gms
-FILE32=C:\Models\SATIMGE\CGE\includes\2capital.inc
+FILE32=C:\Models\SATIMGE\SATIMGE.lst
 MAXIM=0
 TOP=5
 LEFT=25
 HEIGHT=908
 WIDTH=993
-
-[OPENWINDOW_5]
-FILE0=C:\Models\SATIMGE\test.gdx
-FILE1=C:\SATIMGE_03\CalibRefSATIM2.gdx
-FILE2=C:\SATIMGE_03\CGE\includes\2runTIMES.inc
-FILE3=C:\Models\SATIMGE\test.gdx
-MAXIM=0
-TOP=6
-LEFT=1021
-HEIGHT=910
-WIDTH=874
-
-[GDXDISP: VAR_RCAP Var 4]
-PlaneDim=0
-RowDim=4
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,4,5
-Decim=7
-PlaneRownr=-1
