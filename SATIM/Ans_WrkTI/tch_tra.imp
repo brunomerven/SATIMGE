@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/25	18:59:13
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+Creation Date:	2021/04/08	3:01:40 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\Archive\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_TRA	Transport Default: relaxed investment limits with EV cost parity in 2030	IL: investment limit
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -826,16 +826,16 @@ TS DATA	REGION1
 	COM_PROJ	-	TADJET	-	-	-	-	0	20.123	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TAIJET	-	-	-	-	0	60.368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TAOAG	-	-	-	-	0	1.07013110351562	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV1	-	-	-	-	0	3.31056375231767	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV2	-	-	-	-	0	0.654783954070881	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV3	-	-	-	-	0	2.71140634782114	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV4	-	-	-	-	0	0.57023972229677	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV5	-	-	-	-	0	0.273265019355413	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV6	-	-	-	-	0	5.03613751132096	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV7	-	-	-	-	0	1.5653068685252	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV8	-	-	-	-	0	5.84861569219739E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV9	-	-	-	-	0	0.039969372950315	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFLCV	-	-	-	-	0	43.1125037505688	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV1	-	-	-	-	0	3.25118715637943	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV2	-	-	-	-	0	0.679620758627945	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV3	-	-	-	-	0	2.80892781502475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV4	-	-	-	-	0	0.591872290504067	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV5	-	-	-	-	0	0.283785602922782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV6	-	-	-	-	0	5.19171297373332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV7	-	-	-	-	0	1.6160523733748	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV8	-	-	-	-	0	5.93637526985761E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV9	-	-	-	-	0	4.11100072842856E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFLCV	-	-	-	-	0	42.1846641198993	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFPIP	-	-	-	-	0	0.820564128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFRCO	-	-	-	-	0	22	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFREX	-	-	-	-	0	82	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1411,28 +1411,28 @@ TS DATA	REGION1
 	NCAP_TLIFE	TPPUMBTOGS-N	-	-	-	-	-	3	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	TPPUMERELC-N	-	-	-	-	-	3	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	TSHFOOHF-N	-	-	-	-	-	3	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	TADJETOKE-E	-	-	-	-	-	3	20.123	null	null	null	null	20.123	null	null	20.123	null	null	null	null	null	null	null	null	null	20.123	null	null	null	null	null	null	null	null	null	20.123	null	20.123	null	null	
-	PRC_RESID	TAIJETOKE-E	-	-	-	-	-	3	60.368	null	null	null	null	60.368	null	null	60.368	null	null	null	null	null	null	null	null	null	60.368	null	null	null	null	null	null	null	null	null	60.368	null	60.368	null	null	
-	PRC_RESID	TAOAGOAG-E	-	-	-	-	-	3	1.07013110351562	null	null	null	null	1.07013110351562	null	null	1.07013110351562	null	null	null	null	null	null	null	null	null	1.07013110351562	null	null	null	null	null	null	null	null	null	1.07013110351562	null	1.07013110351562	null	null	
-	PRC_RESID	TFHCV1ODS-E	-	-	-	-	-	3	119.1023936313	null	null	null	null	136.546113772819	null	null	125.508970845285	null	null	null	null	null	null	null	null	null	41.8040851997793	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV1OGS-E	-	-	-	-	-	3	3.57886552534493	null	null	null	null	1.71919727385085	null	null	1.05058728640187	null	null	null	null	null	null	null	null	null	0.137902246730323	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV2ODS-E	-	-	-	-	-	3	29.1348763552751	null	null	null	null	33.88729941174	null	null	31.8957562040254	null	null	null	null	null	null	null	null	null	12.5017844881947	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV3ODS-E	-	-	-	-	-	3	53.8723663393837	null	null	null	null	62.7478935464563	null	null	57.9791368611603	null	null	null	null	null	null	null	null	null	22.5960726157625	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV4ODS-E	-	-	-	-	-	3	11.5325038617354	null	null	null	null	12.0618211794326	null	null	10.8873477374588	null	null	null	null	null	null	null	null	null	4.05499726112688	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV5ODS-E	-	-	-	-	-	3	4.77323263405073	null	null	null	null	5.45034139917372	null	null	4.96106912048567	null	null	null	null	null	null	null	null	null	1.8948356500284	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV6ODS-E	-	-	-	-	-	3	77.4960071589078	null	null	null	null	105.965107407333	null	null	103.221907624015	null	null	null	null	null	null	null	null	null	42.8216697692296	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV7ODS-E	-	-	-	-	-	3	20.7086486802288	null	null	null	null	25.8917612872038	null	null	24.1345356624045	null	null	null	null	null	null	null	null	null	9.61006274284376	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV8ODS-E	-	-	-	-	-	3	0.59556345837586	null	null	null	null	1.14057384846063	null	null	1.1881104287732	null	null	null	null	null	null	null	null	null	0.537985856026334	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV9ODS-E	-	-	-	-	-	3	0.493807855130809	null	null	null	null	0.423967966873006	null	null	0.35524835823617	null	null	null	null	null	null	null	null	null	0.116730674372241	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFLCVODS-E	-	-	-	-	-	3	837.177044530837	null	null	null	null	1132.87832682265	null	null	1097.76845430681	null	null	null	null	null	null	null	null	null	451.539243553558	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFLCVOGS-E	-	-	-	-	-	3	1391.28075635948	null	null	null	null	1275.95767415935	null	null	1103.55879906345	null	null	null	null	null	null	null	null	null	390.476008824768	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TADJETOKE-E	-	-	-	-	-	3	20.123	null	null	null	null	20.123	null	null	20.123	null	null	null	null	null	null	null	null	null	16.0984	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TAIJETOKE-E	-	-	-	-	-	3	60.368	null	null	null	null	60.368	null	null	60.368	null	null	null	null	null	null	null	null	null	48.2944	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TAOAGOAG-E	-	-	-	-	-	3	1.07013110351562	null	null	null	null	1.07013110351562	null	null	1.07013110351562	null	null	null	null	null	null	null	null	null	0.8561048828125	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV1ODS-E	-	-	-	-	-	3	116.6	null	null	null	null	126.2	null	null	128.9	null	null	null	null	null	null	null	null	null	41.8040851997793	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV1OGS-E	-	-	-	-	-	3	4.066	null	null	null	null	2.334	null	null	1.879	null	null	null	null	null	null	null	null	null	0.137902246730323	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV2ODS-E	-	-	-	-	-	3	30.24	null	null	null	null	33.93	null	null	34.44	null	null	null	null	null	null	null	null	null	12.5017844881947	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV3ODS-E	-	-	-	-	-	3	55.81	null	null	null	null	62.7	null	null	63.62	null	null	null	null	null	null	null	null	null	22.5960726157625	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV4ODS-E	-	-	-	-	-	3	11.97	null	null	null	null	12.06	null	null	12.29	null	null	null	null	null	null	null	null	null	4.05499726112688	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV5ODS-E	-	-	-	-	-	3	4.957	null	null	null	null	5.454	null	null	5.536	null	null	null	null	null	null	null	null	null	1.8948356500284	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV6ODS-E	-	-	-	-	-	3	79.89	null	null	null	null	106.1	null	null	107.7	null	null	null	null	null	null	null	null	null	42.8216697692296	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV7ODS-E	-	-	-	-	-	3	21.38	null	null	null	null	25.87	null	null	26.47	null	null	null	null	null	null	null	null	null	9.61006274284376	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV8ODS-E	-	-	-	-	-	3	0.6045	null	null	null	null	1.128	null	null	1.146	null	null	null	null	null	null	null	null	null	0.537985856026334	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV9ODS-E	-	-	-	-	-	3	0.5079	null	null	null	null	0.424	null	null	0.4434	null	null	null	null	null	null	null	null	null	0.116730674372241	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFLCVODS-E	-	-	-	-	-	3	845.4	null	null	null	null	1152	null	null	1025	null	null	null	null	null	null	null	null	null	451.539243553558	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFLCVOGS-E	-	-	-	-	-	3	1330	null	null	null	null	1297	null	null	1150	null	null	null	null	null	null	null	null	null	390.476008824768	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFPIPELC-E	-	-	-	-	-	3	0.820564128	null	null	null	null	0.820564128	null	null	0.820564128	null	null	null	null	null	null	null	null	null	0.820564128	null	null	null	null	null	null	null	null	null	0.820564128	null	0.820564128	null	null	
 	PRC_RESID	TFRCOELC-E	-	-	-	-	-	3	18.4146367658079	null	null	null	null	18.4146367658079	null	null	18.4146367658079	null	null	null	null	null	null	null	null	null	18.4146367658079	null	null	null	null	null	null	null	null	null	18.4146367658079	null	18.4146367658079	null	null	
-	PRC_RESID	TFRCOODS-E	-	-	-	-	-	3	3.5853632341921	null	null	null	null	4.66033821695309	null	null	4.66033821695309	null	null	null	null	null	null	null	null	null	4.66033821695309	null	null	null	null	null	null	null	null	null	4.66033821695309	null	4.66033821695309	null	null	
+	PRC_RESID	TFRCOODS-E	-	-	-	-	-	3	3.5853632341921	null	null	null	null	4.66033821695309	null	null	4.66033821695309	null	null	null	null	null	null	null	null	null	3.72827057356247	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFREXELCR-E	-	-	-	-	-	3	68.6363733998294	null	null	null	null	68.6363733998294	null	null	68.6363733998294	null	null	null	null	null	null	null	null	null	68.6363733998294	null	null	null	null	null	null	null	null	null	68.6363733998294	null	68.6363733998294	null	null	
-	PRC_RESID	TFREXODSR-E	-	-	-	-	-	3	13.3636266001706	null	null	null	null	17.3703515359161	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	17.3703515359161	null	17.3703515359161	null	null	
+	PRC_RESID	TFREXODSR-E	-	-	-	-	-	3	13.3636266001706	null	null	null	null	17.3703515359161	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	13.8962812287329	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFROTELC-E	-	-	-	-	-	3	21.009426491899	null	null	null	null	21.009426491899	null	null	21.009426491899	null	null	null	null	null	null	null	null	null	21.009426491899	null	null	null	null	null	null	null	null	null	21.009426491899	null	21.009426491899	null	null	
-	PRC_RESID	TFROTODS-E	-	-	-	-	-	3	4.09057350810099	null	null	null	null	5.31702223843285	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	5.31702223843285	null	5.31702223843285	null	null	
+	PRC_RESID	TFROTODS-E	-	-	-	-	-	3	4.09057350810099	null	null	null	null	5.31702223843285	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	4.25361779074628	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRCARODS-E	-	-	-	-	-	3	277.451172948226	null	null	null	null	377.86061319863	null	null	363.621176066941	null	null	null	null	null	null	null	null	null	165.609816555523	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRCAROGS-E	-	-	-	-	-	3	5432.54323073162	null	null	null	null	5864.18472182402	null	null	5465.75453290936	null	null	null	null	null	null	null	null	null	2532.31435057314	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRCAROGSH-E	-	-	-	-	-	3	2.30047893134586	null	null	null	null	4.11499277098739	null	null	4.01994657242249	null	null	null	null	null	null	null	null	null	1.98446573588613	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
@@ -1444,8 +1444,8 @@ TS DATA	REGION1
 	PRC_RESID	TPPUBUSODS-E	-	-	-	-	-	3	28.1262561763703	null	null	null	null	32.6547058504089	null	null	32.7103775398953	null	null	null	null	null	null	null	null	null	22.4431960133381	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPUMBTODS-E	-	-	-	-	-	3	22.7208978625508	null	null	null	null	65.5744308495519	null	null	76.7278199908877	null	null	null	null	null	null	null	null	null	46.0547570366294	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPUMBTOGS-E	-	-	-	-	-	3	270.392594400515	null	null	null	null	244.596262368518	null	null	211.736823059502	null	null	null	null	null	null	null	null	null	83.3986195387792	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPUMERELC-E	-	-	-	-	-	3	15.8	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TSHFOOHF-E	-	-	-	-	-	3	4.509	null	null	null	null	4.509	null	null	4.509	null	null	null	null	null	null	null	null	null	4.509	null	null	null	null	null	null	null	null	null	4.509	null	4.509	null	null	
+	PRC_RESID	TPPUMERELC-E	-	-	-	-	-	3	15.8	null	null	null	null	15.8	null	null	15.8	null	null	null	null	null	null	null	null	null	12.64	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TSHFOOHF-E	-	-	-	-	-	3	4.509	null	null	null	null	4.509	null	null	4.509	null	null	null	null	null	null	null	null	null	3.6072	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	UC__RHSRT	TFHCV1ELC_L	-	-	-	-	LO	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 	UC__RHSRT	TFHCV1ELC_U	-	-	-	-	UP	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 	UC__RHSRT	TFHCV1GAS_L	-	-	-	-	LO	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
@@ -2105,81 +2105,81 @@ TID DATA	REGION1
 	PRC_NOFF	TADJETOKE-N	-	-	-	BOH	2012	1	-
 	PRC_NOFF	TAIJETOKE-N	-	-	-	BOH	2012	1	-
 	PRC_NOFF	TAOAGOAG-N	-	-	-	BOH	2012	1	-
-	PRC_NOFF	TFHCV1ELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV1GAS-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV1ELC-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV1GAS-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV1ODS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TFHCV1OGS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV2ELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV2GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV2HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV2ELC-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV2GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV2HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV2ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV3ELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV3GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV3HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV3ELC-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV3GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV3HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV3ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV4GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV4HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV4GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV4HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV4ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV5GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV5HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV5GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV5HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV5ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV6GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV6HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV6GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV6HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV6ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV7GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV7HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV7GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV7HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV7ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV8GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV8HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV8GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV8HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV8ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV9GAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFHCV9HGN-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFHCV9GAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFHCV9HGN-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFHCV9ODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFLCVELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFLCVGAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFLCVODSH-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFLCVELC-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFLCVGAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TFLCVODSH-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFLCVODS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFLCVOGSH-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TFLCVOGSH-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TFLCVOGS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TFPIPELC-N	-	-	-	BOH	2012	1	-
 	PRC_NOFF	TFRCOELC-N	-	-	-	BOH	2012	1	-
 	PRC_NOFF	TFRCOGAS-N	-	-	-	BOH	2012	1	-
 	PRC_NOFF	TFREXELC-N	-	-	-	BOH	2012	1	-
 	PRC_NOFF	TFROTELC-N	-	-	-	BOH	2012	1	-
-	PRC_NOFF	TPPRCARBGS-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPRCARBGS-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPRCARELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPRCARGAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPRCARHGNF-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPRCARGAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPRCARHGNF-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPRCARODSH-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRCARODS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRCAROGSH-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRCAROGS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRMOTELC-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRMOTOGS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPRSUVBGS-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPRSUVBGS-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPRSUVELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPRSUVGAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPRSUVHGNF-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPRSUVGAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPRSUVHGNF-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPRSUVODSH-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRSUVODS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRSUVOGSH-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRSUVOGS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUBRTBGS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUBRTELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUBRTGAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUBRTHGNF-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPUBRTBGS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPUBRTELC-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPUBRTGAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPUBRTHGNF-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPUBRTODS-N	-	-	-	BOH	2012	1	-
-	PRC_NOFF	TPPUBUSBGS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUBUSELC-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPUBUSBGS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPUBUSELC-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPUBUSGAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUBUSHGNF-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPUBUSHGNF-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPUBUSODS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPUGATELC-N	-	-	-	BOH	2012	1	-
-	PRC_NOFF	TPPUMBTBGS-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPUMBTBGS-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPUMBTELC-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUMBTGAS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUMBTHGNF-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TPPUMBTODSH-N	-	-	-	BOH	2017	1	-
+	PRC_NOFF	TPPUMBTGAS-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPUMBTHGNF-N	-	-	-	BOH	2025	1	-
+	PRC_NOFF	TPPUMBTODSH-N	-	-	-	BOH	2025	1	-
 	PRC_NOFF	TPPUMBTODS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPUMBTOGS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPUMERELC-N	-	-	-	BOH	2012	1	-
