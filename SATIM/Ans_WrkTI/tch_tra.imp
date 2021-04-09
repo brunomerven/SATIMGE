@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/04/08	3:01:40 PM
+Creation Date:	2021/04/08	4:56:00 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\Archive\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_TRA	Transport Default: relaxed investment limits with EV cost parity in 2030	IL: investment limit
@@ -74,21 +74,21 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S012	A010	-	-	0.740818220681718	-
 	SHAPE	-	_	S012	A030	-	-	0.406569659740599	-
 	SHAPE	-	_	S012	A050	-	-	0.149568619222635	-
-	SHAPE	-	_	S013	A001	-	-	0.942128561864291	-
-	SHAPE	-	_	S013	A005	-	-	0.852473175375217	-
-	SHAPE	-	_	S013	A010	-	-	0.69794600485373	-
-	SHAPE	-	_	S013	A030	-	-	0.383040888829065	-
-	SHAPE	-	_	S013	A050	-	-	0.140912868128249	-
-	SHAPE	-	_	S014	A001	-	-	0.942128561864291	-
-	SHAPE	-	_	S014	A005	-	-	0.852473175375217	-
-	SHAPE	-	_	S014	A010	-	-	0.69794600485373	-
-	SHAPE	-	_	S014	A030	-	-	0.383040888829065	-
-	SHAPE	-	_	S014	A050	-	-	0.140912868128249	-
-	SHAPE	-	_	S015	A001	-	-	0.942128561864291	-
-	SHAPE	-	_	S015	A005	-	-	0.852473175375217	-
-	SHAPE	-	_	S015	A010	-	-	0.69794600485373	-
-	SHAPE	-	_	S015	A030	-	-	0.383040888829065	-
-	SHAPE	-	_	S015	A050	-	-	0.140912868128249	-
+	SHAPE	-	_	S013	A001	-	-	0.955912270209252	-
+	SHAPE	-	_	S013	A005	-	-	0.864945190445032	-
+	SHAPE	-	_	S013	A010	-	-	0.708157227144239	-
+	SHAPE	-	_	S013	A030	-	-	0.388644926440839	-
+	SHAPE	-	_	S013	A050	-	-	0.142974478353172	-
+	SHAPE	-	_	S014	A001	-	-	0.955912270209252	-
+	SHAPE	-	_	S014	A005	-	-	0.864945190445032	-
+	SHAPE	-	_	S014	A010	-	-	0.708157227144239	-
+	SHAPE	-	_	S014	A030	-	-	0.388644926440839	-
+	SHAPE	-	_	S014	A050	-	-	0.142974478353172	-
+	SHAPE	-	_	S015	A001	-	-	0.955912270209252	-
+	SHAPE	-	_	S015	A005	-	-	0.864945190445032	-
+	SHAPE	-	_	S015	A010	-	-	0.708157227144239	-
+	SHAPE	-	_	S015	A030	-	-	0.388644926440839	-
+	SHAPE	-	_	S015	A050	-	-	0.142974478353172	-
 	SHAPE	-	_	S016	A001	-	-	1	-
 	SHAPE	-	_	S016	A005	-	-	0.90483741803596	-
 	SHAPE	-	_	S016	A010	-	-	0.740818220681718	-
@@ -105,30 +105,30 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S018	A030	-	-	0.509156420607549	-
 	SHAPE	-	_	S018	A050	-	-	0.240508463208342	-
 	SHAPE	-	_	S019	A001	-	-	1	-
-	SHAPE	-	_	S019	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S019	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S019	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S019	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S019	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S019	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S019	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S019	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S020	A001	-	-	1	-
-	SHAPE	-	_	S020	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S020	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S020	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S020	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S020	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S020	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S020	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S020	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S021	A001	-	-	1	-
-	SHAPE	-	_	S021	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S021	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S021	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S021	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S021	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S021	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S021	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S021	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S022	A001	-	-	1	-
-	SHAPE	-	_	S022	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S022	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S022	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S022	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S022	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S022	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S022	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S022	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S023	A001	-	-	1	-
-	SHAPE	-	_	S023	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S023	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S023	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S023	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S023	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S023	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S023	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S023	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S024	A001	-	-	1	-
 	SHAPE	-	_	S024	A005	-	-	0.839457020769207	-
 	SHAPE	-	_	S024	A010	-	-	0.591555364366815	-
@@ -165,30 +165,30 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S030	A030	-	-	0.207007552681153	-
 	SHAPE	-	_	S030	A050	-	-	3.59725187534297E-02	-
 	SHAPE	-	_	S031	A001	-	-	1	-
-	SHAPE	-	_	S031	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S031	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S031	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S031	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S031	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S031	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S031	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S031	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S032	A001	-	-	1	-
-	SHAPE	-	_	S032	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S032	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S032	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S032	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S032	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S032	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S032	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S032	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S033	A001	-	-	1	-
-	SHAPE	-	_	S033	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S033	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S033	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S033	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S033	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S033	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S033	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S033	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S034	A001	-	-	1	-
-	SHAPE	-	_	S034	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S034	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S034	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S034	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S034	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S034	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S034	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S034	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S035	A001	-	-	1	-
-	SHAPE	-	_	S035	A005	-	-	0.734037618733813	-
-	SHAPE	-	_	S035	A010	-	-	0.395507709071918	-
-	SHAPE	-	_	S035	A030	-	-	6.18678265103839E-02	-
-	SHAPE	-	_	S035	A050	-	-	2.80962291104257E-03	-
+	SHAPE	-	_	S035	A005	-	-	0.740818220681718	-
+	SHAPE	-	_	S035	A010	-	-	0.406569659740599	-
+	SHAPE	-	_	S035	A030	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S035	A050	-	-	3.34596545747127E-03	-
 	SHAPE	-	_	S036	A001	-	-	1	-
 	SHAPE	-	_	S036	A005	-	-	1	-
 	SHAPE	-	_	S036	A010	-	-	1	-
@@ -200,15 +200,15 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S037	A030	-	-	1	-
 	SHAPE	-	_	S037	A050	-	-	1	-
 	SHAPE	-	_	S038	A001	-	-	1	-
-	SHAPE	-	_	S038	A005	-	-	0.839457020769207	-
-	SHAPE	-	_	S038	A010	-	-	0.591555364366815	-
-	SHAPE	-	_	S038	A030	-	-	0.207007552681153	-
-	SHAPE	-	_	S038	A050	-	-	3.59725187534297E-02	-
+	SHAPE	-	_	S038	A005	-	-	0.818730753077982	-
+	SHAPE	-	_	S038	A010	-	-	0.548811636094026	-
+	SHAPE	-	_	S038	A030	-	-	0.165298888221587	-
+	SHAPE	-	_	S038	A050	-	-	2.23707718561656E-02	-
 	SHAPE	-	_	S039	A001	-	-	1	-
-	SHAPE	-	_	S039	A005	-	-	0.839457020769207	-
-	SHAPE	-	_	S039	A010	-	-	0.591555364366815	-
-	SHAPE	-	_	S039	A030	-	-	0.207007552681153	-
-	SHAPE	-	_	S039	A050	-	-	3.59725187534297E-02	-
+	SHAPE	-	_	S039	A005	-	-	0.818730753077982	-
+	SHAPE	-	_	S039	A010	-	-	0.548811636094027	-
+	SHAPE	-	_	S039	A030	-	-	0.165298888221587	-
+	SHAPE	-	_	S039	A050	-	-	2.23707718561656E-02	-
 	SHAPE	-	_	S040	A001	-	-	1	-
 	SHAPE	-	_	S040	A005	-	-	0.839457020769207	-
 	SHAPE	-	_	S040	A010	-	-	0.591555364366815	-
@@ -230,10 +230,10 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S043	A030	-	-	0.207007552681153	-
 	SHAPE	-	_	S043	A050	-	-	3.59725187534297E-02	-
 	SHAPE	-	_	S044	A001	-	-	1	-
-	SHAPE	-	_	S044	A005	-	-	0.786627861066553	-
-	SHAPE	-	_	S044	A010	-	-	0.486752255959972	-
-	SHAPE	-	_	S044	A030	-	-	0.115325121038063	-
-	SHAPE	-	_	S044	A050	-	-	1.04620589434268E-02	-
+	SHAPE	-	_	S044	A005	-	-	0.759572123224968	-
+	SHAPE	-	_	S044	A010	-	-	0.438234992464949	-
+	SHAPE	-	_	S044	A030	-	-	8.41629902573104E-02	-
+	SHAPE	-	_	S044	A050	-	-	5.38035995991082E-03	-
 	SHAPE	-	_	S045	A001	-	-	1	-
 	SHAPE	-	_	S045	A005	-	-	0.786627861066553	-
 	SHAPE	-	_	S045	A010	-	-	0.486752255959972	-
@@ -245,15 +245,15 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S046	A030	-	-	0.115325121038063	-
 	SHAPE	-	_	S046	A050	-	-	1.04620589434268E-02	-
 	SHAPE	-	_	S047	A001	-	-	1	-
-	SHAPE	-	_	S047	A005	-	-	0.677056874498165	-
-	SHAPE	-	_	S047	A010	-	-	0.310366941265485	-
-	SHAPE	-	_	S047	A030	-	-	2.98969144369263E-02	-
-	SHAPE	-	_	S047	A050	-	-	6.05170694535053E-04	-
+	SHAPE	-	_	S047	A005	-	-	0.653769785129847	-
+	SHAPE	-	_	S047	A010	-	-	0.279430968221407	-
+	SHAPE	-	_	S047	A030	-	-	2.18184355310428E-02	-
+	SHAPE	-	_	S047	A050	-	-	3.11223267943215E-04	-
 	SHAPE	-	_	S048	A001	-	-	1	-
-	SHAPE	-	_	S048	A005	-	-	0.677056874498165	-
-	SHAPE	-	_	S048	A010	-	-	0.310366941265485	-
-	SHAPE	-	_	S048	A030	-	-	2.98969144369263E-02	-
-	SHAPE	-	_	S048	A050	-	-	6.05170694535053E-04	-
+	SHAPE	-	_	S048	A005	-	-	0.653769785129847	-
+	SHAPE	-	_	S048	A010	-	-	0.279430968221407	-
+	SHAPE	-	_	S048	A030	-	-	2.18184355310428E-02	-
+	SHAPE	-	_	S048	A050	-	-	3.11223267943215E-04	-
 	SHAPE	-	_	S049	A001	-	-	1	-
 	SHAPE	-	_	S049	A005	-	-	0.576949810380487	-
 	SHAPE	-	_	S049	A010	-	-	0.192049908620754	-
@@ -265,20 +265,20 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S050	A030	-	-	7.08340892905212E-03	-
 	SHAPE	-	_	S050	A050	-	-	2.89482732982116E-05	-
 	SHAPE	-	_	S051	A001	-	-	1	-
-	SHAPE	-	_	S051	A005	-	-	0.496585303791409	-
-	SHAPE	-	_	S051	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S051	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S051	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S051	A005	-	-	0.449328964117222	-
+	SHAPE	-	_	S051	A010	-	-	9.07179532894125E-02	-
+	SHAPE	-	_	S051	A030	-	-	7.46585808376679E-04	-
+	SHAPE	-	_	S051	A050	-	-	2.50451637232762E-07	-
 	SHAPE	-	_	S052	A001	-	-	1	-
-	SHAPE	-	_	S052	A005	-	-	0.49658530379141	-
-	SHAPE	-	_	S052	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S052	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S052	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S052	A005	-	-	0.449328964117222	-
+	SHAPE	-	_	S052	A010	-	-	9.07179532894125E-02	-
+	SHAPE	-	_	S052	A030	-	-	7.46585808376679E-04	-
+	SHAPE	-	_	S052	A050	-	-	2.50451637232762E-07	-
 	SHAPE	-	_	S053	A001	-	-	1	-
-	SHAPE	-	_	S053	A005	-	-	0.49658530379141	-
-	SHAPE	-	_	S053	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S053	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S053	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S053	A005	-	-	0.406569659740599	-
+	SHAPE	-	_	S053	A010	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S053	A030	-	-	3.03539138078867E-04	-
+	SHAPE	-	_	S053	A050	-	-	3.74597055629525E-08	-
 	SHAPE	-	_	S054	A001	-	-	1	-
 	SHAPE	-	_	S054	A005	-	-	0.786627861066553	-
 	SHAPE	-	_	S054	A010	-	-	0.486752255959972	-
@@ -290,15 +290,15 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S055	A030	-	-	0.115325121038063	-
 	SHAPE	-	_	S055	A050	-	-	1.04620589434268E-02	-
 	SHAPE	-	_	S056	A001	-	-	1	-
-	SHAPE	-	_	S056	A005	-	-	0.677056874498165	-
-	SHAPE	-	_	S056	A010	-	-	0.310366941265485	-
-	SHAPE	-	_	S056	A030	-	-	2.98969144369263E-02	-
-	SHAPE	-	_	S056	A050	-	-	6.05170694535053E-04	-
+	SHAPE	-	_	S056	A005	-	-	0.653769785129847	-
+	SHAPE	-	_	S056	A010	-	-	0.279430968221407	-
+	SHAPE	-	_	S056	A030	-	-	2.18184355310428E-02	-
+	SHAPE	-	_	S056	A050	-	-	3.11223267943215E-04	-
 	SHAPE	-	_	S057	A001	-	-	1	-
-	SHAPE	-	_	S057	A005	-	-	0.677056874498165	-
-	SHAPE	-	_	S057	A010	-	-	0.310366941265485	-
-	SHAPE	-	_	S057	A030	-	-	2.98969144369263E-02	-
-	SHAPE	-	_	S057	A050	-	-	6.05170694535053E-04	-
+	SHAPE	-	_	S057	A005	-	-	0.653769785129847	-
+	SHAPE	-	_	S057	A010	-	-	0.279430968221407	-
+	SHAPE	-	_	S057	A030	-	-	2.18184355310428E-02	-
+	SHAPE	-	_	S057	A050	-	-	3.11223267943215E-04	-
 	SHAPE	-	_	S058	A001	-	-	1	-
 	SHAPE	-	_	S058	A005	-	-	0.576949810380487	-
 	SHAPE	-	_	S058	A010	-	-	0.192049908620754	-
@@ -310,50 +310,50 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S059	A030	-	-	7.08340892905212E-03	-
 	SHAPE	-	_	S059	A050	-	-	2.89482732982116E-05	-
 	SHAPE	-	_	S060	A001	-	-	1	-
-	SHAPE	-	_	S060	A005	-	-	0.49658530379141	-
-	SHAPE	-	_	S060	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S060	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S060	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S060	A005	-	-	0.449328964117222	-
+	SHAPE	-	_	S060	A010	-	-	9.07179532894125E-02	-
+	SHAPE	-	_	S060	A030	-	-	7.46585808376679E-04	-
+	SHAPE	-	_	S060	A050	-	-	2.50451637232762E-07	-
 	SHAPE	-	_	S061	A001	-	-	1	-
-	SHAPE	-	_	S061	A005	-	-	0.496585303791409	-
-	SHAPE	-	_	S061	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S061	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S061	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S061	A005	-	-	0.449328964117222	-
+	SHAPE	-	_	S061	A010	-	-	9.07179532894125E-02	-
+	SHAPE	-	_	S061	A030	-	-	7.46585808376679E-04	-
+	SHAPE	-	_	S061	A050	-	-	2.50451637232762E-07	-
 	SHAPE	-	_	S062	A001	-	-	1	-
-	SHAPE	-	_	S062	A005	-	-	0.49658530379141	-
-	SHAPE	-	_	S062	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S062	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S062	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S062	A005	-	-	0.406569659740599	-
+	SHAPE	-	_	S062	A010	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S062	A030	-	-	3.03539138078867E-04	-
+	SHAPE	-	_	S062	A050	-	-	3.74597055629525E-08	-
 	SHAPE	-	_	S063	A001	-	-	1	-
-	SHAPE	-	_	S063	A005	-	-	0.52254173525775	-
-	SHAPE	-	_	S063	A010	-	-	0.323340147303057	-
-	SHAPE	-	_	S063	A030	-	-	7.66082563924604E-02	-
-	SHAPE	-	_	S063	A050	-	-	6.94974422499456E-03	-
+	SHAPE	-	_	S063	A005	-	-	0.436666154561579	-
+	SHAPE	-	_	S063	A010	-	-	0.270201764206559	-
+	SHAPE	-	_	S063	A030	-	-	6.40182983854151E-02	-
+	SHAPE	-	_	S063	A050	-	-	5.80760900259576E-03	-
 	SHAPE	-	_	S064	A001	-	-	1	-
-	SHAPE	-	_	S064	A005	-	-	0.52254173525775	-
-	SHAPE	-	_	S064	A010	-	-	0.323340147303057	-
-	SHAPE	-	_	S064	A030	-	-	7.66082563924604E-02	-
-	SHAPE	-	_	S064	A050	-	-	6.94974422499456E-03	-
+	SHAPE	-	_	S064	A005	-	-	0.436666154561579	-
+	SHAPE	-	_	S064	A010	-	-	0.270201764206559	-
+	SHAPE	-	_	S064	A030	-	-	6.40182983854151E-02	-
+	SHAPE	-	_	S064	A050	-	-	5.80760900259576E-03	-
 	SHAPE	-	_	S065	A001	-	-	1	-
-	SHAPE	-	_	S065	A005	-	-	0.558357030160439	-
-	SHAPE	-	_	S065	A010	-	-	0.255954219080077	-
-	SHAPE	-	_	S065	A030	-	-	0.024655465419114	-
-	SHAPE	-	_	S065	A050	-	-	4.99073747668799E-04	-
+	SHAPE	-	_	S065	A005	-	-	0.638726077955451	-
+	SHAPE	-	_	S065	A010	-	-	0.273001063143206	-
+	SHAPE	-	_	S065	A030	-	-	2.13163778303075E-02	-
+	SHAPE	-	_	S065	A050	-	-	3.04061799464113E-04	-
 	SHAPE	-	_	S066	A001	-	-	1	-
 	SHAPE	-	_	S066	A005	-	-	0.786627861066553	-
 	SHAPE	-	_	S066	A010	-	-	0.486752255959972	-
 	SHAPE	-	_	S066	A030	-	-	0.115325121038063	-
 	SHAPE	-	_	S066	A050	-	-	1.04620589434268E-02	-
 	SHAPE	-	_	S067	A001	-	-	1	-
-	SHAPE	-	_	S067	A005	-	-	0.677056874498165	-
-	SHAPE	-	_	S067	A010	-	-	0.310366941265485	-
-	SHAPE	-	_	S067	A030	-	-	2.98969144369263E-02	-
-	SHAPE	-	_	S067	A050	-	-	6.05170694535053E-04	-
+	SHAPE	-	_	S067	A005	-	-	0.653769785129847	-
+	SHAPE	-	_	S067	A010	-	-	0.279430968221407	-
+	SHAPE	-	_	S067	A030	-	-	2.18184355310428E-02	-
+	SHAPE	-	_	S067	A050	-	-	3.11223267943215E-04	-
 	SHAPE	-	_	S068	A001	-	-	1	-
-	SHAPE	-	_	S068	A005	-	-	0.677056874498165	-
-	SHAPE	-	_	S068	A010	-	-	0.310366941265485	-
-	SHAPE	-	_	S068	A030	-	-	2.98969144369263E-02	-
-	SHAPE	-	_	S068	A050	-	-	6.05170694535053E-04	-
+	SHAPE	-	_	S068	A005	-	-	0.653769785129847	-
+	SHAPE	-	_	S068	A010	-	-	0.279430968221407	-
+	SHAPE	-	_	S068	A030	-	-	2.18184355310428E-02	-
+	SHAPE	-	_	S068	A050	-	-	3.11223267943215E-04	-
 	SHAPE	-	_	S069	A001	-	-	1	-
 	SHAPE	-	_	S069	A005	-	-	0.576949810380487	-
 	SHAPE	-	_	S069	A010	-	-	0.192049908620754	-
@@ -365,20 +365,20 @@ TID DATA	_GLOBAL
 	SHAPE	-	_	S070	A030	-	-	7.08340892905212E-03	-
 	SHAPE	-	_	S070	A050	-	-	2.89482732982116E-05	-
 	SHAPE	-	_	S071	A001	-	-	1	-
-	SHAPE	-	_	S071	A005	-	-	0.49658530379141	-
-	SHAPE	-	_	S071	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S071	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S071	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S071	A005	-	-	0.449328964117222	-
+	SHAPE	-	_	S071	A010	-	-	9.07179532894125E-02	-
+	SHAPE	-	_	S071	A030	-	-	7.46585808376679E-04	-
+	SHAPE	-	_	S071	A050	-	-	2.50451637232762E-07	-
 	SHAPE	-	_	S072	A001	-	-	1	-
-	SHAPE	-	_	S072	A005	-	-	0.496585303791409	-
-	SHAPE	-	_	S072	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S072	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S072	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S072	A005	-	-	0.449328964117222	-
+	SHAPE	-	_	S072	A010	-	-	9.07179532894125E-02	-
+	SHAPE	-	_	S072	A030	-	-	7.46585808376679E-04	-
+	SHAPE	-	_	S072	A050	-	-	2.50451637232762E-07	-
 	SHAPE	-	_	S073	A001	-	-	1	-
-	SHAPE	-	_	S073	A005	-	-	0.49658530379141	-
-	SHAPE	-	_	S073	A010	-	-	0.122456428252982	-
-	SHAPE	-	_	S073	A030	-	-	1.83630477702891E-03	-
-	SHAPE	-	_	S073	A050	-	-	1.67449320943427E-06	-
+	SHAPE	-	_	S073	A005	-	-	0.406569659740599	-
+	SHAPE	-	_	S073	A010	-	-	6.72055127397498E-02	-
+	SHAPE	-	_	S073	A030	-	-	3.03539138078867E-04	-
+	SHAPE	-	_	S073	A050	-	-	3.74597055629525E-08	-
 	SHAPE	-	_	S074	A001	-	-	1	-
 	SHAPE	-	_	S074	A005	-	-	0.606530659712633	-
 	SHAPE	-	_	S074	A010	-	-	0.22313016014843	-
@@ -712,54 +712,54 @@ TS DATA	REGION1
 	ACT_EFF	TAIJETOKE-N	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	TAOAGOAG-E	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	1	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	TAOAGOAG-N	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	ACT_EFF	TFHCV1ELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.556413147874463	null	null	null	null	null	null	null	null	null	0.587962339223184	null	null	null	null	null	null	null	null	null	0.650126042378118	null	0.718862149464637	null	null	
-	ACT_EFF	TFHCV1GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.147770036911028	null	null	null	null	null	null	null	null	null	0.156148748283904	null	null	null	null	null	null	null	null	null	0.172657942476784	null	0.190912610110171	null	null	
-	ACT_EFF	TFHCV1ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.1824	null	null	null	null	0.169426245457031	null	null	0.171265075136131	null	null	null	null	null	null	null	null	null	0.175245557931033	null	null	null	null	null	null	null	null	null	0.178905849835745	null	0.181048090174894	null	null	
-	ACT_EFF	TFHCV1ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.169935542447682	null	null	null	null	null	null	null	null	null	0.17957106052649	null	null	null	null	null	null	null	null	null	0.198556633848301	null	0.219549501626697	null	null	
-	ACT_EFF	TFHCV1OGS-E	-	ACTGRP	-	ANNUAL	-	3	0.1536	null	null	null	null	0.16207205201891	null	null	0.165528249310776	null	null	null	null	null	null	null	null	null	0.172925143976949	null	null	null	null	null	null	null	null	null	0.174847172096525	null	0.175861597309126	null	null	
-	ACT_EFF	TFHCV1OGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.183530385843497	null	null	null	null	null	null	null	null	null	0.193936745368609	null	null	null	null	null	null	null	null	null	0.214441164556165	null	0.237113461756833	null	null	
-	ACT_EFF	TFHCV2ELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.45383101807274	null	null	null	null	null	null	null	null	null	0.47956369833714	null	null	null	null	null	null	null	null	null	0.530266699870706	null	0.586330395663297	null	null	
-	ACT_EFF	TFHCV2GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.120526674375259	null	null	null	null	null	null	null	null	null	0.127360659386246	null	null	null	null	null	null	null	null	null	0.140826165075204	null	0.155715343068728	null	null	
-	ACT_EFF	TFHCV2HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.293958727615297	null	null	null	null	null	null	null	null	null	0.31062648642292	null	null	null	null	null	null	null	null	null	0.343468203325344	null	0.37978218810009	null	null	
-	ACT_EFF	TFHCV2ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.1171	null	null	null	null	0.138190274183374	null	null	0.139968674939598	null	null	null	null	null	null	null	null	null	0.141223991255792	null	null	null	null	null	null	null	null	null	0.142163984752694	null	0.142876923245938	null	null	
-	ACT_EFF	TFHCV2ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.138605675531548	null	null	null	null	null	null	null	null	null	0.146464758294183	null	null	null	null	null	null	null	null	null	0.161950089836485	null	0.179072644529038	null	null	
-	ACT_EFF	TFHCV3ELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.390889911734551	null	null	null	null	null	null	null	null	null	0.413053767259368	null	null	null	null	null	null	null	null	null	0.456724849677441	null	0.50501316014362	null	null	
-	ACT_EFF	TFHCV3GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.103811020472498	null	null	null	null	null	null	null	null	null	0.109697210907617	null	null	null	null	null	null	null	null	null	0.121295206903066	null	0.134119428342147	null	null	
-	ACT_EFF	TFHCV3HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.253190056464425	null	null	null	null	null	null	null	null	null	0.267546190156636	null	null	null	null	null	null	null	null	null	0.295833141268342	null	0.327110796911209	null	null	
-	ACT_EFF	TFHCV3ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.1139	null	null	null	null	0.119024883551381	null	null	0.120366526058437	null	null	null	null	null	null	null	null	null	0.121823676039717	null	null	null	null	null	null	null	null	null	0.122910349935711	null	0.123744636261884	null	null	
-	ACT_EFF	TFHCV3ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.119382673543373	null	null	null	null	null	null	null	null	null	0.126151792543759	null	null	null	null	null	null	null	null	null	0.139489487938526	null	0.154237342593469	null	null	
-	ACT_EFF	TFHCV4GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	8.95984534539373E-02	null	null	null	null	null	null	null	null	null	9.46787768851254E-02	null	null	null	null	null	null	null	null	null	0.1046889135703	null	0.115757395533609	null	null	
-	ACT_EFF	TFHCV4HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.217382637239426	null	null	null	null	null	null	null	null	null	0.229708453845945	null	null	null	null	null	null	null	null	null	0.253994921166155	null	0.280849132446242	null	null	
-	ACT_EFF	TFHCV4ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.09849	null	null	null	null	0.102729415819238	null	null	0.103930211164628	null	null	null	null	null	null	null	null	null	0.105357189404461	null	null	null	null	null	null	null	null	null	0.106473903296704	null	0.107352156405017	null	null	
-	ACT_EFF	TFHCV4ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.103038221472028	null	null	null	null	null	null	null	null	null	0.108880593417894	null	null	null	null	null	null	null	null	null	0.120392250605845	null	0.13312100486365	null	null	
-	ACT_EFF	TFHCV5GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	8.19235356231683E-02	null	null	null	null	null	null	null	null	null	8.65686834080697E-02	null	null	null	null	null	null	null	null	null	9.57213613585021E-02	null	0.105841727742747	null	null	
-	ACT_EFF	TFHCV5HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.198761848438577	null	null	null	null	null	null	null	null	null	0.210031847383011	null	null	null	null	null	null	null	null	null	0.232237959140185	null	0.256791864365428	null	null	
-	ACT_EFF	TFHCV5ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.07884	null	null	null	null	9.39297123107294E-02	null	null	9.49300801154294E-02	null	null	null	null	null	null	null	null	null	9.59264872673174E-02	null	null	null	null	null	null	null	null	null	9.66817369165338E-02	null	9.72634234076764E-02	null	null	
-	ACT_EFF	TFHCV5ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	9.42120659666435E-02	null	null	null	null	null	null	null	null	null	9.95539859192802E-02	null	null	null	null	null	null	null	null	null	0.110079565562277	null	0.121717986904159	null	null	
-	ACT_EFF	TFHCV6GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.61992336451227E-02	null	null	null	null	null	null	null	null	null	5.93857873466206E-02	null	null	null	null	null	null	null	null	null	6.56644895864864E-02	null	7.26070224090268E-02	null	null	
-	ACT_EFF	TFHCV6HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.136349871562148	null	null	null	null	null	null	null	null	null	0.144081047945598	null	null	null	null	null	null	null	null	null	0.159314356096891	null	0.176158241631823	null	null	
-	ACT_EFF	TFHCV6ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.08282	null	null	null	null	6.44354251585424E-02	null	null	6.51691194623212E-02	null	null	null	null	null	null	null	null	null	6.56826911077281E-02	null	null	null	null	null	null	null	null	null	6.60750313514636E-02	null	6.63827899879073E-02	null	null	
-	ACT_EFF	TFHCV6ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.46291186918911E-02	null	null	null	null	null	null	null	null	null	6.82936554486137E-02	null	null	null	null	null	null	null	null	null	7.55141630244594E-02	null	8.34980757703808E-02	null	null	
-	ACT_EFF	TFHCV7GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.10472470632725E-02	null	null	null	null	null	null	null	null	null	0.06450868805594	null	null	null	null	null	null	null	null	null	7.13290210393787E-02	null	7.88704497915711E-02	null	null	
-	ACT_EFF	TFHCV7HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.147808424752061	null	null	null	null	null	null	null	null	null	0.156189312754564	null	null	null	null	null	null	null	null	null	0.172702795721646	null	0.190962205569991	null	null	
-	ACT_EFF	TFHCV7ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.06993	null	null	null	null	6.99939316631931E-02	null	null	7.06760999836653E-02	null	null	null	null	null	null	null	null	null	7.12575429753559E-02	null	null	null	null	null	null	null	null	null	0.071715345653074	null	7.20783734025167E-02	null	null	
-	ACT_EFF	TFHCV7ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	7.02043341227634E-02	null	null	null	null	null	null	null	null	null	0.074184991264331	null	null	null	null	null	null	null	null	null	8.20283741952856E-02	null	9.07010172603067E-02	null	null	
-	ACT_EFF	TFHCV8GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.94086709672438E-02	null	null	null	null	null	null	null	null	null	6.27772030288579E-02	null	null	null	null	null	null	null	null	null	6.94144706796039E-02	null	7.67534790856266E-02	null	null	
-	ACT_EFF	TFHCV8HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.143841082025872	null	null	null	null	null	null	null	null	null	0.151997017661068	null	null	null	null	null	null	null	null	null	0.168067260355186	null	0.185836567308734	null	null	
-	ACT_EFF	TFHCV8ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.06307	null	null	null	null	6.81152165890882E-02	null	null	6.87513617283374E-02	null	null	null	null	null	null	null	null	null	6.90672031537054E-02	null	null	null	null	null	null	null	null	null	6.93283764252867E-02	null	6.95450140887617E-02	null	null	
-	ACT_EFF	TFHCV8ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.83199716123303E-02	null	null	null	null	null	null	null	null	null	7.21937834831866E-02	null	null	null	null	null	null	null	null	null	7.98266412815444E-02	null	8.82665009484706E-02	null	null	
-	ACT_EFF	TFHCV9GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	4.79569237276261E-02	null	null	null	null	null	null	null	null	null	5.06761300744903E-02	null	null	null	null	null	null	null	null	null	5.60339832852137E-02	null	6.19583081461099E-02	null	null	
-	ACT_EFF	TFHCV9HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.116113955880572	null	null	null	null	null	null	null	null	null	0.122697735265238	null	null	null	null	null	null	null	null	null	0.135670242318816	null	0.150014298235063	null	null	
-	ACT_EFF	TFHCV9ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.05092	null	null	null	null	5.49851762961461E-02	null	null	5.50621409505818E-02	null	null	null	null	null	null	null	null	null	0.055309083184852	null	null	null	null	null	null	null	null	null	5.55607693634846E-02	null	5.58261220650583E-02	null	null	
-	ACT_EFF	TFHCV9ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.05515046228677	null	null	null	null	null	null	null	null	null	5.82775495856638E-02	null	null	null	null	null	null	null	null	null	6.44390807779958E-02	null	7.12520543680263E-02	null	null	
-	ACT_EFF	TFLCVELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.83196806484991	null	null	null	null	null	null	null	null	null	0.879141500226562	null	null	null	null	null	null	null	null	null	0.972090805999227	null	1.07486739605024	null	null	
-	ACT_EFF	TFLCVGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.177439975452054	null	null	null	null	null	null	null	null	null	0.187501002514111	null	null	null	null	null	null	null	null	null	0.207324987630129	null	0.229244910264404	null	null	
-	ACT_EFF	TFLCVODS-E	-	ACTGRP	-	ANNUAL	-	3	0.2214	null	null	null	null	0.232592168401241	null	null	0.235363079589336	null	null	null	null	null	null	null	null	null	0.237618657334245	null	null	null	null	null	null	null	null	null	0.239276003096816	null	0.240521938284811	null	null	
-	ACT_EFF	TFLCVODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.244258211695509	null	null	null	null	null	null	null	null	null	0.258107900705763	null	null	null	null	null	null	null	null	null	0.285396966435066	null	0.315571232913134	null	null	
-	ACT_EFF	TFLCVODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.233291342788871	null	null	null	null	null	null	null	null	null	0.246519199178969	null	null	null	null	null	null	null	null	null	0.27258302214423	null	0.301402504181185	null	null	
-	ACT_EFF	TFLCVOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.1998	null	null	null	null	0.207569959036634	null	null	0.209981197647958	null	null	null	null	null	null	null	null	null	0.215174030225645	null	null	null	null	null	null	null	null	null	0.219818792465021	null	0.223320526410568	null	null	
-	ACT_EFF	TFLCVOGSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.27247112694622	null	null	null	null	null	null	null	null	null	0.287920516943323	null	null	null	null	null	null	null	null	null	0.318361591742649	null	0.352021120873663	null	null	
-	ACT_EFF	TFLCVOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.208193916412316	null	null	null	null	null	null	null	null	null	0.219998723203139	null	null	null	null	null	null	null	null	null	0.243258606381597	null	0.26897769549361	null	null	
+	ACT_EFF	TFHCV1ELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.559362043987842	null	null	null	null	null	null	null	null	null	0.591078440745177	null	null	null	null	null	null	null	null	null	0.653571601072946	null	0.722671997967876	null	null	
+	ACT_EFF	TFHCV1GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.148553193256606	null	null	null	null	null	null	null	null	null	0.156976310390735	null	null	null	null	null	null	null	null	null	0.173573000536534	null	0.191924414838545	null	null	
+	ACT_EFF	TFHCV1ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.15973207030061	null	null	null	null	0.170324176066042	null	null	0.170199848439245	null	null	null	null	null	null	null	null	null	0.17409813013726	null	null	null	null	null	null	null	null	null	0.17789366131389	null	0.18082625096775	null	null	
+	ACT_EFF	TFHCV1ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.170836172245097	null	null	null	null	null	null	null	null	null	0.180522756949345	null	null	null	null	null	null	null	null	null	0.199608950617014	null	0.220713077064327	null	null	
+	ACT_EFF	TFHCV1OGS-E	-	ACTGRP	-	ANNUAL	-	3	0.145272894864184	null	null	null	null	0.148964352103899	null	null	0.152765483769921	null	null	null	null	null	null	null	null	null	0.166094046548537	null	null	null	null	null	null	null	null	null	0.172111345147179	null	0.173986340906439	null	null	
+	ACT_EFF	TFHCV1OGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.184503066024704	null	null	null	null	null	null	null	null	null	0.194964577505293	null	null	null	null	null	null	null	null	null	0.215577666666376	null	0.238370123229473	null	null	
+	ACT_EFF	TFHCV2ELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.448056101787193	null	null	null	null	null	null	null	null	null	0.473461338425195	null	null	null	null	null	null	null	null	null	0.523519153584048	null	0.578869449152839	null	null	
+	ACT_EFF	TFHCV2GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.118992994598041	null	null	null	null	null	null	null	null	null	0.125740018405929	null	null	null	null	null	null	null	null	null	0.139034178010112	null	0.153733893950473	null	null	
+	ACT_EFF	TFHCV2HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.290218156839432	null	null	null	null	null	null	null	null	null	0.306673821479956	null	null	null	null	null	null	null	null	null	0.339097633571486	null	0.374949529564907	null	null	
+	ACT_EFF	TFHCV2ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.127009163286346	null	null	null	null	0.136431828345373	null	null	0.136459139072411	null	null	null	null	null	null	null	null	null	0.140137996888521	null	null	null	null	null	null	null	null	null	0.143519603118716	null	0.145969837687622	null	null	
+	ACT_EFF	TFHCV2ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.136841943787747	null	null	null	null	null	null	null	null	null	0.144601021166818	null	null	null	null	null	null	null	null	null	0.159889304711629	null	0.176793978043044	null	null	
+	ACT_EFF	TFHCV3ELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.391733547951429	null	null	null	null	null	null	null	null	null	0.413945238507708	null	null	null	null	null	null	null	null	null	0.457710573823214	null	0.506103102296403	null	null	
+	ACT_EFF	TFHCV3GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.104035070093511	null	null	null	null	null	null	null	null	null	0.109933964369996	null	null	null	null	null	null	null	null	null	0.121556991682885	null	0.134408890934401	null	null	
+	ACT_EFF	TFHCV3HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.253736502650357	null	null	null	null	null	null	null	null	null	0.268123620397039	null	null	null	null	null	null	null	null	null	0.296471621680945	null	0.327816782169261	null	null	
+	ACT_EFF	TFHCV3ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.1115864559088	null	null	null	null	0.119281768417066	null	null	0.119318687171821	null	null	null	null	null	null	null	null	null	0.122321536232333	null	null	null	null	null	null	null	null	null	0.125092537334597	null	0.127240561079166	null	null	
+	ACT_EFF	TFHCV3ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.119640330607537	null	null	null	null	null	null	null	null	null	0.126424059025495	null	null	null	null	null	null	null	null	null	0.139790540435318	null	0.154570224574561	null	null	
+	ACT_EFF	TFHCV4GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	8.94083794562169E-02	null	null	null	null	null	null	null	null	null	9.44779254984317E-02	null	null	null	null	null	null	null	null	null	0.104466826697679	null	0.115511828003293	null	null	
+	ACT_EFF	TFHCV4HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.216921482104462	null	null	null	null	null	null	null	null	null	0.22922115074584	null	null	null	null	null	null	null	null	null	0.253456096798036	null	0.280253339602699	null	null	
+	ACT_EFF	TFHCV4ODS-E	-	ACTGRP	-	ANNUAL	-	3	9.66868558854183E-02	null	null	null	null	0.102511485821615	null	null	0.10254809996583	null	null	null	null	null	null	null	null	null	0.105418203184048	null	null	null	null	null	null	null	null	null	0.108304805407653	null	0.110554573148034	null	null	
+	ACT_EFF	TFHCV4ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.102819636374649	null	null	null	null	null	null	null	null	null	0.108649614323196	null	null	null	null	null	null	null	null	null	0.12013685070233	null	0.132838602203787	null	null	
+	ACT_EFF	TFHCV5GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	8.23682288293095E-02	null	null	null	null	null	null	null	null	null	8.70385911712458E-02	null	null	null	null	null	null	null	null	null	9.62409512267241E-02	null	0.106416252473588	null	null	
+	ACT_EFF	TFHCV5HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.199840757484291	null	null	null	null	null	null	null	null	null	0.211171931668852	null	null	null	null	null	null	null	null	null	0.233498581522413	null	0.258185769018188	null	null	
+	ACT_EFF	TFHCV5ODS-E	-	ACTGRP	-	ANNUAL	-	3	8.80226577576198E-02	null	null	null	null	9.44395768399108E-02	null	null	9.43701200752892E-02	null	null	null	null	null	null	null	null	null	9.64414068011618E-02	null	null	null	null	null	null	null	null	null	9.84196638079447E-02	null	9.98896009843333E-02	null	null	
+	ACT_EFF	TFHCV5ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	9.47234631537059E-02	null	null	null	null	null	null	null	null	null	0.100094379846933	null	null	null	null	null	null	null	null	null	0.110677093910733	null	0.122378690344626	null	null	
+	ACT_EFF	TFHCV6GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.68138137978511E-02	null	null	null	null	null	null	null	null	null	0.060035214819028	null	null	null	null	null	null	null	null	null	6.63825793080248E-02	null	7.34010338577072E-02	null	null	
+	ACT_EFF	TFHCV6HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.137840958174082	null	null	null	null	null	null	null	null	null	0.145656680684842	null	null	null	null	null	null	null	null	null	0.161056576318613	null	0.178084662189977	null	null	
+	ACT_EFF	TFHCV6ODS-E	-	ACTGRP	-	ANNUAL	-	3	6.07705109067327E-02	null	null	null	null	6.51400741522479E-02	null	null	6.50868355254673E-02	null	null	null	null	null	null	null	null	null	0.066124396909204	null	null	null	null	null	null	null	null	null	6.71662600474157E-02	null	6.80126221290193E-02	null	null	
+	ACT_EFF	TFHCV6ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.53358858675288E-02	null	null	null	null	null	null	null	null	null	6.90404970418821E-02	null	null	null	null	null	null	null	null	null	7.63399662042285E-02	null	8.44111889363633E-02	null	null	
+	ACT_EFF	TFHCV7GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.13297544911839E-02	null	null	null	null	null	null	null	null	null	6.48072139423201E-02	null	null	null	null	null	null	null	null	null	7.16591092782209E-02	null	7.92354373869288E-02	null	null	
+	ACT_EFF	TFHCV7HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.148492435578251	null	null	null	null	null	null	null	null	null	0.156912107690228	null	null	null	null	null	null	null	null	null	0.173502009854298	null	0.191845918499224	null	null	
+	ACT_EFF	TFHCV7ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.065864517822129	null	null	null	null	7.03178415289907E-02	null	null	7.02346048058222E-02	null	null	null	null	null	null	null	null	null	0.071524983519216	null	null	null	null	null	null	null	null	null	7.28649144111625E-02	null	7.39190120279309E-02	null	null	
+	ACT_EFF	TFHCV7ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	7.05292176648615E-02	null	null	null	null	null	null	null	null	null	7.45282960336681E-02	null	null	null	null	null	null	null	null	null	0.082407975669954	null	9.11207529949681E-02	null	null	
+	ACT_EFF	TFHCV8GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.03492214085118E-02	null	null	null	null	null	null	null	null	null	6.37710836366723E-02	null	null	null	null	null	null	null	null	null	7.05134316555881E-02	null	7.79686302992036E-02	null	null	
+	ACT_EFF	TFHCV8HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.146118355544522	null	null	null	null	null	null	null	null	null	0.154403414904181	null	null	null	null	null	null	null	null	null	0.170728079614667	null	0.188778707951509	null	null	
+	ACT_EFF	TFHCV8ODS-E	-	ACTGRP	-	ANNUAL	-	3	0.064937428235684	null	null	null	null	6.91936079413415E-02	null	null	6.91346135538737E-02	null	null	null	null	null	null	null	null	null	6.97566388064786E-02	null	null	null	null	null	null	null	null	null	7.05393223372859E-02	null	7.12398269344157E-02	null	null	
+	ACT_EFF	TFHCV8ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.94016046197886E-02	null	null	null	null	null	null	null	null	null	7.33367461821731E-02	null	null	null	null	null	null	null	null	null	8.10904464039263E-02	null	8.96639248440842E-02	null	null	
+	ACT_EFF	TFHCV9GAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	4.74215695364595E-02	null	null	null	null	null	null	null	null	null	5.01104207562369E-02	null	null	null	null	null	null	null	null	null	5.54084630168605E-02	null	6.12666532740834E-02	null	null	
+	ACT_EFF	TFHCV9HGN-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.114817749032804	null	null	null	null	null	null	null	null	null	0.121328032170978	null	null	null	null	null	null	null	null	null	0.134155724138824	null	0.148339654053313	null	null	
+	ACT_EFF	TFHCV9ODS-E	-	ACTGRP	-	ANNUAL	-	3	5.36637919616479E-02	null	null	null	null	5.43713641019077E-02	null	null	0.054374543331148	null	null	null	null	null	null	null	null	null	5.48954356745246E-02	null	null	null	null	null	null	null	null	null	5.58203180481329E-02	null	0.057192352651667	null	null	
+	ACT_EFF	TFHCV9ODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.45348049669284E-02	null	null	null	null	null	null	null	null	null	5.76269838696724E-02	null	null	null	null	null	null	null	null	null	6.37197324693896E-02	null	7.04566512651959E-02	null	null	
+	ACT_EFF	TFLCVELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.826694478386208	null	null	null	null	null	null	null	null	null	0.873568896047205	null	null	null	null	null	null	null	null	null	0.965929025117731	null	1.06805414637207	null	null	
+	ACT_EFF	TFLCVGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.176315238707703	null	null	null	null	null	null	null	null	null	0.186312492052514	null	null	null	null	null	null	null	null	null	0.206010819100655	null	0.227791798171861	null	null	
+	ACT_EFF	TFLCVODS-E	-	ACTGRP	-	ANNUAL	-	3	0.224634152664134	null	null	null	null	0.235945638671695	null	null	0.236416891901715	null	null	null	null	null	null	null	null	null	0.237476755649043	null	null	null	null	null	null	null	null	null	0.238207348645309	null	0.238773147737598	null	null	
+	ACT_EFF	TFLCVODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.242709934960779	null	null	null	null	null	null	null	null	null	0.256471835105599	null	null	null	null	null	null	null	null	null	0.283587923945863	null	0.313570925145882	null	null	
+	ACT_EFF	TFLCVODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.236654893624543	null	null	null	null	null	null	null	null	null	0.250073466767707	null	null	null	null	null	null	null	null	null	0.276513073045231	null	0.30574806897023	null	null	
+	ACT_EFF	TFLCVOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.19897796018658	null	null	null	null	0.206254237709705	null	null	0.206726097108171	null	null	null	null	null	null	null	null	null	0.207851705084952	null	null	null	null	null	null	null	null	null	0.208664606093644	null	0.209312603622752	null	null	
+	ACT_EFF	TFLCVOGSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.270744017328049	null	null	null	null	null	null	null	null	null	0.286095478453355	null	null	null	null	null	null	null	null	null	0.316343596759777	null	0.3497897686182	null	null	
+	ACT_EFF	TFLCVOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.206874240013901	null	null	null	null	null	null	null	null	null	0.218604219810842	null	null	null	null	null	null	null	null	null	0.241716665833645	null	0.267272729649459	null	null	
 	ACT_EFF	TFPIPELC-E	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	1	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	TFPIPELC-N	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	TFRCOELC-E	-	ACTGRP	-	ANNUAL	-	3	5.00566585300937	null	null	null	null	5.20009798466629	null	null	5.20009798466629	null	null	null	null	null	null	null	null	null	5.20009798466629	null	null	null	null	null	null	null	null	null	5.20009798466629	null	5.20009798466629	null	null	
@@ -772,53 +772,53 @@ TS DATA	REGION1
 	ACT_EFF	TFROTELC-E	-	ACTGRP	-	ANNUAL	-	3	11.6197431566971	null	null	null	null	12.0710819990419	null	null	12.0710819990419	null	null	null	null	null	null	null	null	null	12.0710819990419	null	null	null	null	null	null	null	null	null	12.0710819990419	null	12.0710819990419	null	null	
 	ACT_EFF	TFROTELC-N	-	ACTGRP	-	ANNUAL	-	3	5.00566585300937	null	null	null	null	null	null	null	5.00566585300937	null	null	null	null	null	null	null	null	null	5.00566585300937	null	null	null	null	null	null	null	null	null	5.00566585300937	null	5.00566585300937	null	null	
 	ACT_EFF	TFROTODS-E	-	ACTGRP	-	ANNUAL	-	3	4.06691010484397	null	null	null	null	4.22487869966468	null	null	4.22487869966468	null	null	null	null	null	null	null	null	null	4.22487869966468	null	null	null	null	null	null	null	null	null	4.22487869966468	null	4.22487869966468	null	null	
-	ACT_EFF	TPPRCARBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.362252371216809	null	null	null	null	null	null	null	null	null	0.390576475943302	null	null	null	null	null	null	null	null	null	0.431871093795728	null	0.477531682382718	null	null	
+	ACT_EFF	TPPRCARBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.36226864396574	null	null	null	null	null	null	null	null	null	0.390594021040136	null	null	null	null	null	null	null	null	null	0.431890493889249	null	0.47755313359682	null	null	
 	ACT_EFF	TPPRCARELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	1.78472443642944	null	null	null	null	null	null	null	null	null	1.92427002912096	null	null	null	null	null	null	null	null	null	2.12771801022508	null	2.35267600831691	null	null	
-	ACT_EFF	TPPRCARGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.362252371216809	null	null	null	null	null	null	null	null	null	0.390576475943302	null	null	null	null	null	null	null	null	null	0.431871093795728	null	0.477531682382718	null	null	
-	ACT_EFF	TPPRCARHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.934298679258565	null	null	null	null	null	null	null	null	null	1.00735044024015	null	null	null	null	null	null	null	null	null	1.11385493816908	null	1.23161987499391	null	null	
-	ACT_EFF	TPPRCARODS-E	-	ACTGRP	-	ANNUAL	-	3	0.3226	null	null	null	null	0.332988185683032	null	null	0.335087979283706	null	null	null	null	null	null	null	null	null	0.339773698470112	null	null	null	null	null	null	null	null	null	0.345228788418956	null	0.34975048008485	null	null	
-	ACT_EFF	TPPRCARODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.567785185601855	null	null	null	null	null	null	null	null	null	0.612179669494723	null	null	null	null	null	null	null	null	null	0.676903806932223	null	0.74847105624648	null	null	
-	ACT_EFF	TPPRCARODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.338033376075125	null	null	null	null	null	null	null	null	null	0.364463824860984	null	null	null	null	null	null	null	null	null	0.402997621174033	null	0.445605493861773	null	null	
-	ACT_EFF	TPPRCAROGS-E	-	ACTGRP	-	ANNUAL	-	3	0.341	null	null	null	null	0.356845709294852	null	null	0.361550721651372	null	null	null	null	null	null	null	null	null	0.369566675920298	null	null	null	null	null	null	null	null	null	0.376076347127527	null	0.381084329123316	null	null	
-	ACT_EFF	TPPRCAROGSH-E	-	ACTGRP	-	ANNUAL	-	3	0.4751	null	null	null	null	0.486602847259448	null	null	0.487715228277602	null	null	null	null	null	null	null	null	null	0.490594307058023	null	null	null	null	null	null	null	null	null	0.494732273568706	null	0.499322278054445	null	null	
-	ACT_EFF	TPPRCAROGSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.474093160478851	null	null	null	null	null	null	null	null	null	0.51116197049771	null	null	null	null	null	null	null	null	null	0.565205773779554	null	0.624963485453924	null	null	
-	ACT_EFF	TPPRCAROGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.362252371216809	null	null	null	null	null	null	null	null	null	0.390576475943302	null	null	null	null	null	null	null	null	null	0.431871093795728	null	0.477531682382718	null	null	
+	ACT_EFF	TPPRCARGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.36226864396574	null	null	null	null	null	null	null	null	null	0.390594021040136	null	null	null	null	null	null	null	null	null	0.431890493889249	null	0.47755313359682	null	null	
+	ACT_EFF	TPPRCARHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.934340648915749	null	null	null	null	null	null	null	null	null	1.00739569145754	null	null	null	null	null	null	null	null	null	1.113904973678	null	1.23167520062487	null	null	
+	ACT_EFF	TPPRCARODS-E	-	ACTGRP	-	ANNUAL	-	3	0.322309968517159	null	null	null	null	0.332001778720379	null	null	0.332657177586085	null	null	null	null	null	null	null	null	null	0.336519346505427	null	null	null	null	null	null	null	null	null	0.342112820282567	null	0.3471078335645	null	null	
+	ACT_EFF	TPPRCARODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.567810691096107	null	null	null	null	null	null	null	null	null	0.612207169234832	null	null	null	null	null	null	null	null	null	0.676934214147126	null	0.748504678335798	null	null	
+	ACT_EFF	TPPRCARODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.337032023804667	null	null	null	null	null	null	null	null	null	0.363384177984803	null	null	null	null	null	null	null	null	null	0.401803826088951	null	0.444285481979549	null	null	
+	ACT_EFF	TPPRCAROGS-E	-	ACTGRP	-	ANNUAL	-	3	0.340937013529691	null	null	null	null	0.356861739170971	null	null	0.359493521492633	null	null	null	null	null	null	null	null	null	0.36773748352763	null	null	null	null	null	null	null	null	null	0.374376610599087	null	0.379387921318559	null	null	
+	ACT_EFF	TPPRCAROGSH-E	-	ACTGRP	-	ANNUAL	-	3	0.475035020619682	null	null	null	null	0.486342188578272	null	null	0.486582394941893	null	null	null	null	null	null	null	null	null	0.488495857501961	null	null	null	null	null	null	null	null	null	0.492038428921173	null	0.496485579652801	null	null	
+	ACT_EFF	TPPRCAROGSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.474114457231015	null	null	null	null	null	null	null	null	null	0.511184932418928	null	null	null	null	null	null	null	null	null	0.565231163403976	null	0.624991559456188	null	null	
+	ACT_EFF	TPPRCAROGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.36226864396574	null	null	null	null	null	null	null	null	null	0.390594021040136	null	null	null	null	null	null	null	null	null	0.431890493889249	null	0.47755313359682	null	null	
 	ACT_EFF	TPPRMOTELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	2.84317419420727	null	null	null	null	null	null	null	null	null	3.06547878081877	null	null	null	null	null	null	null	null	null	3.38958374511008	null	3.74795547012261	null	null	
 	ACT_EFF	TPPRMOTOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.5604	null	null	null	null	0.5647	null	null	0.5674	null	null	null	null	null	null	null	null	null	0.5759	null	null	null	null	null	null	null	null	null	0.5831	null	0.5884	null	null	
 	ACT_EFF	TPPRMOTOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.57325591620637	null	null	null	null	null	null	null	null	null	0.618078150360892	null	null	null	null	null	null	null	null	null	0.683425918580789	null	0.755682733510763	null	null	
-	ACT_EFF	TPPRSUVBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.446809883267833	null	null	null	null	null	null	null	null	null	0.48174544458383	null	null	null	null	null	null	null	null	null	0.532679116378042	null	0.588997870587889	null	null	
+	ACT_EFF	TPPRSUVBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.434071508340947	null	null	null	null	null	null	null	null	null	0.468011070474765	null	null	null	null	null	null	null	null	null	0.517492643217424	null	0.572205771783332	null	null	
 	ACT_EFF	TPPRSUVELC-E	-	ACTGRP	-	ANNUAL	-	3	1.477	null	null	null	null	1.477	null	null	1.477	null	null	null	null	null	null	null	null	null	1.477	null	null	null	null	null	null	null	null	null	1.477	null	1.477	null	null	
 	ACT_EFF	TPPRSUVELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	1.49937841019445	null	null	null	null	null	null	null	null	null	1.61661311861703	null	null	null	null	null	null	null	null	null	1.78753334822707	null	1.97652452168478	null	null	
-	ACT_EFF	TPPRSUVGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.380808123911586	null	null	null	null	null	null	null	null	null	0.410583082033021	null	null	null	null	null	null	null	null	null	0.453992945436279	null	0.501992418892048	null	null	
-	ACT_EFF	TPPRSUVHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.906827823710823	null	null	null	null	null	null	null	null	null	0.97773166945076	null	null	null	null	null	null	null	null	null	1.08110465307624	null	1.19540698887217	null	null	
-	ACT_EFF	TPPRSUVODS-E	-	ACTGRP	-	ANNUAL	-	3	0.2242	null	null	null	null	0.233235080539969	null	null	0.235341783849309	null	null	null	null	null	null	null	null	null	0.237620749185823	null	null	null	null	null	null	null	null	null	0.240186338979277	null	0.24238727288663	null	null	
-	ACT_EFF	TPPRSUVODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.524208319510839	null	null	null	null	null	null	null	null	null	0.565195577345619	null	null	null	null	null	null	null	null	null	0.624952210977995	null	0.69102675544726	null	null	
-	ACT_EFF	TPPRSUVODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.236768885755988	null	null	null	null	null	null	null	null	null	0.255281578146658	null	null	null	null	null	null	null	null	null	0.2822718242665	null	0.31211567772808	null	null	
-	ACT_EFF	TPPRSUVOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.2071	null	null	null	null	0.207778592492344	null	null	0.208273286792456	null	null	null	null	null	null	null	null	null	0.210098263584494	null	null	null	null	null	null	null	null	null	0.211899597080588	null	0.213479725926044	null	null	
-	ACT_EFF	TPPRSUVOGSH-E	-	ACTGRP	-	ANNUAL	-	3	0.4183	null	null	null	null	0.440141189908825	null	null	0.442784634593258	null	null	null	null	null	null	null	null	null	0.443440086021425	null	null	null	null	null	null	null	null	null	0.444699157355836	null	0.44634047038452	null	null	
-	ACT_EFF	TPPRSUVOGSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.58475672355186	null	null	null	null	null	null	null	null	null	0.63047819287384	null	null	null	null	null	null	null	null	null	0.697136984794509	null	0.770843434493903	null	null	
-	ACT_EFF	TPPRSUVOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.446809883267833	null	null	null	null	null	null	null	null	null	0.48174544458383	null	null	null	null	null	null	null	null	null	0.532679116378042	null	0.588997870587889	null	null	
-	ACT_EFF	TPPUBRTBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.064674596143753	null	null	null	null	null	null	null	null	null	6.97314299421519E-02	null	null	null	null	null	null	null	null	null	7.71039496127486E-02	null	8.52559462901761E-02	null	null	
-	ACT_EFF	TPPUBRTELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.210645409201426	null	null	null	null	null	null	null	null	null	0.227115536395722	null	null	null	null	null	null	null	null	null	0.251127861411352	null	0.277678946046014	null	null	
-	ACT_EFF	TPPUBRTGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.62387792554374E-02	null	null	null	null	null	null	null	null	null	6.06360260366538E-02	null	null	null	null	null	null	null	null	null	6.70469127067379E-02	null	7.41356054697183E-02	null	null	
-	ACT_EFF	TPPUBRTHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.13644077641456	null	null	null	null	null	null	null	null	null	0.147108926983592	null	null	null	null	null	null	null	null	null	0.162662364777807	null	0.179860226416168	null	null	
-	ACT_EFF	TPPUBRTODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.064674596143753	null	null	null	null	null	null	null	null	null	6.97314299421519E-02	null	null	null	null	null	null	null	null	null	7.71039496127486E-02	null	8.52559462901761E-02	null	null	
-	ACT_EFF	TPPUBUSBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.064674596143753	null	null	null	null	null	null	null	null	null	6.97314299421519E-02	null	null	null	null	null	null	null	null	null	7.71039496127486E-02	null	8.52559462901761E-02	null	null	
-	ACT_EFF	TPPUBUSELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.210645409201426	null	null	null	null	null	null	null	null	null	0.227115536395722	null	null	null	null	null	null	null	null	null	0.251127861411352	null	0.277678946046014	null	null	
-	ACT_EFF	TPPUBUSGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.62387792554374E-02	null	null	null	null	null	null	null	null	null	6.06360260366538E-02	null	null	null	null	null	null	null	null	null	6.70469127067379E-02	null	7.41356054697183E-02	null	null	
-	ACT_EFF	TPPUBUSHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.13644077641456	null	null	null	null	null	null	null	null	null	0.147108926983592	null	null	null	null	null	null	null	null	null	0.162662364777807	null	0.179860226416168	null	null	
-	ACT_EFF	TPPUBUSODS-E	-	ACTGRP	-	ANNUAL	-	3	0.06091	null	null	null	null	0.063709319711983	null	null	6.42743839993563E-02	null	null	null	null	null	null	null	null	null	0.06458857854892	null	null	null	null	null	null	null	null	null	6.50131559752755E-02	null	6.54914873288797E-02	null	null	
-	ACT_EFF	TPPUBUSODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.064674596143753	null	null	null	null	null	null	null	null	null	6.97314299421519E-02	null	null	null	null	null	null	null	null	null	7.71039496127486E-02	null	8.52559462901761E-02	null	null	
+	ACT_EFF	TPPRSUVGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.369951433316221	null	null	null	null	null	null	null	null	null	0.398877519033114	null	null	null	null	null	null	null	null	null	0.441049784217838	null	0.487680811468476	null	null	
+	ACT_EFF	TPPRSUVHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.880974517315549	null	null	null	null	null	null	null	null	null	0.949856922159444	null	null	null	null	null	null	null	null	null	1.05028278247354	null	1.16132640340458	null	null	
+	ACT_EFF	TPPRSUVODS-E	-	ACTGRP	-	ANNUAL	-	3	0.224059601886426	null	null	null	null	0.233057443921602	null	null	0.233405994198004	null	null	null	null	null	null	null	null	null	0.235098807485133	null	null	null	null	null	null	null	null	null	0.237131336819111	null	0.239041348172907	null	null	
+	ACT_EFF	TPPRSUVODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.509263345454123	null	null	null	null	null	null	null	null	null	0.549082072607116	null	null	null	null	null	null	null	null	null	0.607135067998523	null	0.671325853061178	null	null	
+	ACT_EFF	TPPRSUVODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.23658855771913	null	null	null	null	null	null	null	null	null	0.255087150463788	null	null	null	null	null	null	null	null	null	0.282056840258919	null	0.311877964029941	null	null	
+	ACT_EFF	TPPRSUVOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.206907399130638	null	null	null	null	0.215766875452244	null	null	0.216185783910005	null	null	null	null	null	null	null	null	null	0.218019202930891	null	null	null	null	null	null	null	null	null	0.220066514706491	null	0.221913269599656	null	null	
+	ACT_EFF	TPPRSUVOGSH-E	-	ACTGRP	-	ANNUAL	-	3	0.418260302510729	null	null	null	null	0.42759293682002	null	null	0.427755012301989	null	null	null	null	null	null	null	null	null	0.42938928409694	null	null	null	null	null	null	null	null	null	0.433220718248035	null	0.438675052448288	null	null	
+	ACT_EFF	TPPRSUVOGSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.56808553818966	null	null	null	null	null	null	null	null	null	0.612503506312938	null	null	null	null	null	null	null	null	null	0.677261882160784	null	0.748866989821963	null	null	
+	ACT_EFF	TPPRSUVOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.434071508340947	null	null	null	null	null	null	null	null	null	0.468011070474765	null	null	null	null	null	null	null	null	null	0.517492643217424	null	0.572205771783332	null	null	
+	ACT_EFF	TPPUBRTBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.53232977329719E-02	null	null	null	null	null	null	null	null	null	7.04308527776874E-02	null	null	null	null	null	null	null	null	null	7.78773205749371E-02	null	8.61110837188794E-02	null	null	
+	ACT_EFF	TPPUBRTELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.21275823278067	null	null	null	null	null	null	null	null	null	0.229393559269938	null	null	null	null	null	null	null	null	null	0.253646733619422	null	0.280464131951037	null	null	
+	ACT_EFF	TPPUBRTGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.68028675938886E-02	null	null	null	null	null	null	null	null	null	6.12442198066847E-02	null	null	null	null	null	null	null	null	null	6.77194091955974E-02	null	7.48792032338082E-02	null	null	
+	ACT_EFF	TPPUBRTHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.137809309869298	null	null	null	null	null	null	null	null	null	0.148584464527119	null	null	null	null	null	null	null	null	null	0.164293907003489	null	0.181664267286467	null	null	
+	ACT_EFF	TPPUBRTODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.53232977329719E-02	null	null	null	null	null	null	null	null	null	7.04308527776874E-02	null	null	null	null	null	null	null	null	null	7.78773205749371E-02	null	8.61110837188794E-02	null	null	
+	ACT_EFF	TPPUBUSBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.53232977329719E-02	null	null	null	null	null	null	null	null	null	7.04308527776874E-02	null	null	null	null	null	null	null	null	null	7.78773205749371E-02	null	8.61110837188794E-02	null	null	
+	ACT_EFF	TPPUBUSELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.21275823278067	null	null	null	null	null	null	null	null	null	0.229393559269938	null	null	null	null	null	null	null	null	null	0.253646733619422	null	0.280464131951037	null	null	
+	ACT_EFF	TPPUBUSGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	5.68028675938886E-02	null	null	null	null	null	null	null	null	null	6.12442198066847E-02	null	null	null	null	null	null	null	null	null	6.77194091955974E-02	null	7.48792032338082E-02	null	null	
+	ACT_EFF	TPPUBUSHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.137809309869298	null	null	null	null	null	null	null	null	null	0.148584464527119	null	null	null	null	null	null	null	null	null	0.164293907003489	null	0.181664267286467	null	null	
+	ACT_EFF	TPPUBUSODS-E	-	ACTGRP	-	ANNUAL	-	3	6.14512250522523E-02	null	null	null	null	6.43483393488951E-02	null	null	6.45328358259404E-02	null	null	null	null	null	null	null	null	null	6.52278940024831E-02	null	null	null	null	null	null	null	null	null	6.60112831018639E-02	null	0.066777008175099	null	null	
+	ACT_EFF	TPPUBUSODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	6.53232977329719E-02	null	null	null	null	null	null	null	null	null	7.04308527776874E-02	null	null	null	null	null	null	null	null	null	7.78773205749371E-02	null	8.61110837188794E-02	null	null	
 	ACT_EFF	TPPUGATELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	7.00269802786154	null	null	
-	ACT_EFF	TPPUMBTBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.206400755732953	null	null	null	null	null	null	null	null	null	0.222538998255342	null	null	null	null	null	null	null	null	null	0.24606745799686	null	0.272083519561646	null	null	
-	ACT_EFF	TPPUMBTELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.824802377945688	null	null	null	null	null	null	null	null	null	0.889292746505931	null	null	null	null	null	null	null	null	null	0.983315316700935	null	1.08727864458322	null	null	
-	ACT_EFF	TPPUMBTGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.175911696468639	null	null	null	null	null	null	null	null	null	0.189666033801633	null	null	null	null	null	null	null	null	null	0.20971892194987	null	0.231891948928586	null	null	
-	ACT_EFF	TPPUMBTHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.418902882730969	null	null	null	null	null	null	null	null	null	0.451656427120056	null	null	null	null	null	null	null	null	null	0.499408866673589	null	0.552210045371285	null	null	
-	ACT_EFF	TPPUMBTODS-E	-	ACTGRP	-	ANNUAL	-	3	0.226	null	null	null	null	0.236426983666018	null	null	0.238661013759683	null	null	null	null	null	null	null	null	null	0.239936532973817	null	null	null	null	null	null	null	null	null	0.241520246779404	null	0.243031637187525	null	null	
-	ACT_EFF	TPPUMBTODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.24000915023441	null	null	null	null	null	null	null	null	null	0.258775195253581	null	null	null	null	null	null	null	null	null	0.286134812270646	null	0.316387089237544	null	null	
-	ACT_EFF	TPPUMBTODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.24000915023441	null	null	null	null	null	null	null	null	null	0.258775195253581	null	null	null	null	null	null	null	null	null	0.286134812270646	null	0.316387089237544	null	null	
-	ACT_EFF	TPPUMBTOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.1935	null	null	null	null	0.203320198653544	null	null	0.206653088240052	null	null	null	null	null	null	null	null	null	0.213638777552374	null	null	null	null	null	null	null	null	null	0.21846882275841	null	0.222027160229668	null	null	
-	ACT_EFF	TPPUMBTOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.206400755732953	null	null	null	null	null	null	null	null	null	0.222538998255342	null	null	null	null	null	null	null	null	null	0.24606745799686	null	0.272083519561646	null	null	
+	ACT_EFF	TPPUMBTBGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.203802524444753	null	null	null	null	null	null	null	null	null	0.219737614190355	null	null	null	null	null	null	null	null	null	0.242969891003441	null	0.268658455002081	null	null	
+	ACT_EFF	TPPUMBTELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.814419531539194	null	null	null	null	null	null	null	null	null	0.878098077038103	null	null	null	null	null	null	null	null	null	0.970937064436571	null	1.07359167244344	null	null	
+	ACT_EFF	TPPUMBTGAS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.173697270111033	null	null	null	null	null	null	null	null	null	0.187278463942297	null	null	null	null	null	null	null	null	null	0.207078920643661	null	0.228972827266225	null	null	
+	ACT_EFF	TPPUMBTHGNF-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.413629614361561	null	null	null	null	null	null	null	null	null	0.44597084783866	null	null	null	null	null	null	null	null	null	0.493122166131299	null	0.545258668606958	null	null	
+	ACT_EFF	TPPUMBTODS-E	-	ACTGRP	-	ANNUAL	-	3	0.226141211498956	null	null	null	null	0.236936973862854	null	null	0.237140710547815	null	null	null	null	null	null	null	null	null	0.23771796611347	null	null	null	null	null	null	null	null	null	0.238197153562765	null	0.238609472414428	null	null	
+	ACT_EFF	TPPUMBTODSH-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.240526867425031	null	null	null	null	null	null	null	null	null	0.259333392167983	null	null	null	null	null	null	null	null	null	0.286752025868556	null	0.31706955919683	null	null	
+	ACT_EFF	TPPUMBTODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.240526867425031	null	null	null	null	null	null	null	null	null	0.259333392167983	null	null	null	null	null	null	null	null	null	0.286752025868556	null	0.31706955919683	null	null	
+	ACT_EFF	TPPUMBTOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.192681419377125	null	null	null	null	0.2007607462921	null	null	0.201598535803707	null	null	null	null	null	null	null	null	null	0.203758901219809	null	null	null	null	null	null	null	null	null	0.205400647316764	null	0.206733282045863	null	null	
+	ACT_EFF	TPPUMBTOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.203802524444753	null	null	null	null	null	null	null	null	null	0.219737614190355	null	null	null	null	null	null	null	null	null	0.242969891003441	null	0.268658455002081	null	null	
 	ACT_EFF	TPPUMERELC-E	-	ACTGRP	-	ANNUAL	-	3	7.00269802786154	null	null	null	null	0	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	7.00269802786154	null	null	
 	ACT_EFF	TPPUMERELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	7.00269802786154	null	null	
 	ACT_EFF	TSHFOOHF-E	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	1	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
@@ -826,27 +826,27 @@ TS DATA	REGION1
 	COM_PROJ	-	TADJET	-	-	-	-	0	20.123	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TAIJET	-	-	-	-	0	60.368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TAOAG	-	-	-	-	0	1.07013110351562	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV1	-	-	-	-	0	3.25118715637943	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV2	-	-	-	-	0	0.679620758627945	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV3	-	-	-	-	0	2.80892781502475	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV4	-	-	-	-	0	0.591872290504067	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV5	-	-	-	-	0	0.283785602922782	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV6	-	-	-	-	0	5.19171297373332	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV7	-	-	-	-	0	1.6160523733748	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV8	-	-	-	-	0	5.93637526985761E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFHCV9	-	-	-	-	0	4.11100072842856E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFLCV	-	-	-	-	0	42.1846641198993	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV1	-	-	-	-	0	3.66114769564931	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV2	-	-	-	-	0	0.910162880335147	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV3	-	-	-	-	0	3.04238730086416	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV4	-	-	-	-	0	0.641562999484342	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV5	-	-	-	-	0	0.281327856303449	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV6	-	-	-	-	0	5.15418175848178	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV7	-	-	-	-	0	1.97616162141197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV8	-	-	-	-	0	7.07016243959457E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFHCV9	-	-	-	-	0	0.052818957554105	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFLCV	-	-	-	-	0	43.5108907561023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFPIP	-	-	-	-	0	0.820564128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFRCO	-	-	-	-	0	22	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFREX	-	-	-	-	0	82	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFROT	-	-	-	-	0	25.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TPPRCAR	-	-	-	-	0	78.2853702570841	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TPPRCAR	-	-	-	-	0	78.94328845335	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPRMOT	-	-	-	-	0	4.78865506121103	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TPPRSUV	-	-	-	-	0	10.045687245472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TPPRSUV	-	-	-	-	0	10.115772764022	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPUBRT	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPUBUS	-	-	-	-	0	1.49903335205353	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPUGAT	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TPPUMBT	-	-	-	-	0	6.49786386210898	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TPPUMBT	-	-	-	-	0	6.17321867161956	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TPPUMER	-	-	-	-	0	15.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TSHFO	-	-	-	-	0	4.509	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	TADJETOKE-E	-	-	-	ANNUAL	UP	3	1	null	null	null	null	1	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
@@ -857,50 +857,50 @@ TS DATA	REGION1
 	NCAP_AF	TAOAGOAG-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV1ELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV1GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV1ODS-E	-	-	-	ANNUAL	UP	3	0.567749518936398	null	null	null	null	0.522630852631942	null	null	0.444201047082963	null	null	null	null	null	null	null	null	null	0.233991702610681	null	null	null	null	null	null	null	null	null	0.118986866181764	null	5.49655031126698E-02	null	null	
+	NCAP_AF	TFHCV1ODS-E	-	-	-	ANNUAL	UP	3	0.56009323611192	null	null	null	null	0.521325550799558	null	null	0.401599963181358	null	null	null	null	null	null	null	null	null	0.195830309774949	null	null	null	null	null	null	null	null	null	9.38865528289722E-02	null	4.32881694405318E-02	null	null	
 	NCAP_AF	TFHCV1ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV1OGS-E	-	-	-	ANNUAL	UP	3	0.377145068844285	null	null	null	null	0.339985595101919	null	null	0.325574853540621	null	null	null	null	null	null	null	null	null	0.244697648363248	null	null	null	null	null	null	null	null	null	0.143443744580401	null	8.02590533243669E-02	null	null	
+	NCAP_AF	TFHCV1OGS-E	-	-	-	ANNUAL	UP	3	0.35625583594079	null	null	null	null	0.287145197277117	null	null	0.266588733433933	null	null	null	null	null	null	null	null	null	0.211397022804956	null	null	null	null	null	null	null	null	null	0.137214465384396	null	7.79304932592104E-02	null	null	
 	NCAP_AF	TFHCV1OGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV2ELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV2GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV2HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV2ODS-E	-	-	-	ANNUAL	UP	3	0.468213154918944	null	null	null	null	0.452486041367967	null	null	0.370335407465888	null	null	null	null	null	null	null	null	null	0.128330372680269	null	null	null	null	null	null	null	null	null	4.25100471393592E-02	null	1.36572577999716E-02	null	null	
+	NCAP_AF	TFHCV2ODS-E	-	-	-	ANNUAL	UP	3	0.627005835586456	null	null	null	null	0.615874990886965	null	null	0.510369509008917	null	null	null	null	null	null	null	null	null	0.304394372400663	null	null	null	null	null	null	null	null	null	0.177983860548576	null	0.100449675985799	null	null	
 	NCAP_AF	TFHCV2ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV3ELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV3GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV3HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV3ODS-E	-	-	-	ANNUAL	UP	3	0.645258825737678	null	null	null	null	0.619204957173217	null	null	0.549718398486601	null	null	null	null	null	null	null	null	null	0.314330513933776	null	null	null	null	null	null	null	null	null	0.174877949017705	null	9.56011490396578E-02	null	null	
+	NCAP_AF	TFHCV3ODS-E	-	-	-	ANNUAL	UP	3	0.641323851217078	null	null	null	null	0.619055093604653	null	null	0.513140177611534	null	null	null	null	null	null	null	null	null	0.303593328887908	null	null	null	null	null	null	null	null	null	0.176085167218146	null	9.93103841565591E-02	null	null	
 	NCAP_AF	TFHCV3ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV4GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV4HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV4ODS-E	-	-	-	ANNUAL	UP	3	0.633927008230049	null	null	null	null	0.583896194177288	null	null	0.51854546155125	null	null	null	null	null	null	null	null	null	0.299091345003177	null	null	null	null	null	null	null	null	null	0.168219713769577	null	9.29224516712408E-02	null	null	
+	NCAP_AF	TFHCV4ODS-E	-	-	-	ANNUAL	UP	3	0.630683745230806	null	null	null	null	0.583924332438942	null	null	0.484450799311679	null	null	null	null	null	null	null	null	null	0.289187145333141	null	null	null	null	null	null	null	null	null	0.171235971168514	null	9.82900979079553E-02	null	null	
 	NCAP_AF	TFHCV4ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV5GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV5HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV5ODS-E	-	-	-	ANNUAL	UP	3	0.520449690837166	null	null	null	null	0.496451783334993	null	null	0.413112528438075	null	null	null	null	null	null	null	null	null	0.177648033449545	null	null	null	null	null	null	null	null	null	7.35729039509738E-02	null	2.97082688826263E-02	null	null	
+	NCAP_AF	TFHCV5ODS-E	-	-	-	ANNUAL	UP	3	0.515970594520289	null	null	null	null	0.496668877324927	null	null	0.373113076384564	null	null	null	null	null	null	null	null	null	0.16868898482817	null	null	null	null	null	null	null	null	null	7.44665566600934E-02	null	3.13590076928907E-02	null	null	
 	NCAP_AF	TFHCV5ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV6GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV6HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV6ODS-E	-	-	-	ANNUAL	UP	3	0.590779705473813	null	null	null	null	0.569723031537985	null	null	0.47731911833044	null	null	null	null	null	null	null	null	null	0.198581545161495	null	null	null	null	null	null	null	null	null	8.02148584728496E-02	null	3.18058572406658E-02	null	null	
+	NCAP_AF	TFHCV6ODS-E	-	-	-	ANNUAL	UP	3	0.586475730322575	null	null	null	null	0.570717498641095	null	null	0.426872577457722	null	null	null	null	null	null	null	null	null	0.184414072232833	null	null	null	null	null	null	null	null	null	7.84720930514811E-02	null	3.24553405913462E-02	null	null	
 	NCAP_AF	TFHCV6ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV7GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV7HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV7ODS-E	-	-	-	ANNUAL	UP	3	0.539907915733931	null	null	null	null	0.493753217938519	null	null	0.392246169123357	null	null	null	null	null	null	null	null	null	0.140764578488641	null	null	null	null	null	null	null	null	null	4.90090033569156E-02	null	1.66982027529882E-02	null	null	
+	NCAP_AF	TFHCV7ODS-E	-	-	-	ANNUAL	UP	3	0.577635570184401	null	null	null	null	0.537733945606067	null	null	0.400971313176519	null	null	null	null	null	null	null	null	null	0.175154020182711	null	null	null	null	null	null	null	null	null	7.62210703204688E-02	null	3.20088785926617E-02	null	null	
 	NCAP_AF	TFHCV7ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV8GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV8HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV8ODS-E	-	-	-	ANNUAL	UP	3	0.701450463175896	null	null	null	null	0.639065424260042	null	null	0.503603883834183	null	null	null	null	null	null	null	null	null	0.170135324548099	null	null	null	null	null	null	null	null	null	5.67087559098142E-02	null	1.87185264738685E-02	null	null	
+	NCAP_AF	TFHCV8ODS-E	-	-	-	ANNUAL	UP	3	0.730994899245275	null	null	null	null	0.677007156093019	null	null	0.503255492021344	null	null	null	null	null	null	null	null	null	0.202976414700007	null	null	null	null	null	null	null	null	null	8.29898913985025E-02	null	3.35952914326567E-02	null	null	
 	NCAP_AF	TFHCV8ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV9GAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFHCV9HGN-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFHCV9ODS-E	-	-	-	ANNUAL	UP	3	0.578151032040694	null	null	null	null	0.3854073688786	null	null	0.292299787392554	null	null	null	null	null	null	null	null	null	0.115131575330027	null	null	null	null	null	null	null	null	null	4.51011908856026E-02	null	1.76747193854816E-02	null	null	
+	NCAP_AF	TFHCV9ODS-E	-	-	-	ANNUAL	UP	3	0.577792139377483	null	null	null	null	0.3854073688786	null	null	0.290448339062066	null	null	null	null	null	null	null	null	null	0.116374988641418	null	null	null	null	null	null	null	null	null	4.83553765142883E-02	null	2.12759309486612E-02	null	null	
 	NCAP_AF	TFHCV9ODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFLCVELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFLCVGAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFLCVODS-E	-	-	-	ANNUAL	UP	3	0.615242378087606	null	null	null	null	0.610138865208	null	null	0.529575730022637	null	null	null	null	null	null	null	null	null	0.260835034781043	null	null	null	null	null	null	null	null	null	0.124874008932086	null	5.86534631941246E-02	null	null	
+	NCAP_AF	TFLCVODS-E	-	-	-	ANNUAL	UP	3	0.618837340210292	null	null	null	null	0.61072362441792	null	null	0.497022591347115	null	null	null	null	null	null	null	null	null	0.245271759217078	null	null	null	null	null	null	null	null	null	0.11943096485546	null	5.77554693317563E-02	null	null	
 	NCAP_AF	TFLCVODSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFLCVODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TFLCVOGS-E	-	-	-	ANNUAL	UP	3	0.515150534794094	null	null	null	null	0.473601978852817	null	null	0.419487736727071	null	null	null	null	null	null	null	null	null	0.254308764942513	null	null	null	null	null	null	null	null	null	0.14878924695702	null	8.30253071543606E-02	null	null	
+	NCAP_AF	TFLCVOGS-E	-	-	-	ANNUAL	UP	3	0.485257178653	null	null	null	null	0.42864819562748	null	null	0.352902433261577	null	null	null	null	null	null	null	null	null	0.181539716055383	null	null	null	null	null	null	null	null	null	9.22452634357429E-02	null	4.65568417017126E-02	null	null	
 	NCAP_AF	TFLCVOGSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFLCVOGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TFPIPELC-E	-	-	-	ANNUAL	UP	3	1	null	null	null	null	1	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
@@ -919,11 +919,11 @@ TS DATA	REGION1
 	NCAP_AF	TPPRCARELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRCARGAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRCARHGNF-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPRCARODS-E	-	-	-	ANNUAL	UP	3	0.813658184398027	null	null	null	null	0.752850793725871	null	null	0.6845892057376	null	null	null	null	null	null	null	null	null	0.486576749383267	null	null	null	null	null	null	null	null	null	0.349017062960881	null	0.247252075771124	null	null	
+	NCAP_AF	TPPRCARODS-E	-	-	-	ANNUAL	UP	3	0.809793316412164	null	null	null	null	0.743535267140604	null	null	0.66511435113412	null	null	null	null	null	null	null	null	null	0.46809798221108	null	null	null	null	null	null	null	null	null	0.336514533877803	null	0.239932873665886	null	null	
 	NCAP_AF	TPPRCARODSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRCARODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPRCAROGS-E	-	-	-	ANNUAL	UP	3	0.6733840859945	null	null	null	null	0.6609622403723	null	null	0.619840409082635	null	null	null	null	null	null	null	null	null	0.45981063916014	null	null	null	null	null	null	null	null	null	0.333388743610922	null	0.23685198186844	null	null	
-	NCAP_AF	TPPRCAROGSH-E	-	-	-	ANNUAL	UP	3	0.91769367171507	null	null	null	null	0.825359132779525	null	null	0.73866428965308	null	null	null	null	null	null	null	null	null	0.50736940929477	null	null	null	null	null	null	null	null	null	0.352105783847473	null	0.245168129816364	null	null	
+	NCAP_AF	TPPRCAROGS-E	-	-	-	ANNUAL	UP	3	0.672918703801765	null	null	null	null	0.661632726470265	null	null	0.607434192600685	null	null	null	null	null	null	null	null	null	0.452028108452068	null	null	null	null	null	null	null	null	null	0.328183084689723	null	0.233113097699446	null	null	
+	NCAP_AF	TPPRCAROGSH-E	-	-	-	ANNUAL	UP	3	0.917269095470365	null	null	null	null	0.82349664056722	null	null	0.73189081439097	null	null	null	null	null	null	null	null	null	0.498686668519571	null	null	null	null	null	null	null	null	null	0.344461449464449	null	0.239651741385958	null	null	
 	NCAP_AF	TPPRCAROGSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRCAROGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRMOTELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
@@ -934,11 +934,11 @@ TS DATA	REGION1
 	NCAP_AF	TPPRSUVELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVGAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVHGNF-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPRSUVODS-E	-	-	-	ANNUAL	UP	3	0.851958245096833	null	null	null	null	0.815788586786317	null	null	0.750064889818467	null	null	null	null	null	null	null	null	null	0.524292385445579	null	null	null	null	null	null	null	null	null	0.36800192441921	null	0.256417847105748	null	null	
+	NCAP_AF	TPPRSUVODS-E	-	-	-	ANNUAL	UP	3	0.850211541345888	null	null	null	null	0.812965869248	null	null	0.725821564756112	null	null	null	null	null	null	null	null	null	0.502102337737746	null	null	null	null	null	null	null	null	null	0.349282354723237	null	0.24228368202297	null	null	
 	NCAP_AF	TPPRSUVODSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPRSUVOGS-E	-	-	-	ANNUAL	UP	3	0.833472628331083	null	null	null	null	0.692743858089246	null	null	0.620858935626121	null	null	null	null	null	null	null	null	null	0.432130801743617	null	null	null	null	null	null	null	null	null	0.300317498012162	null	0.207636627622762	null	null	
-	NCAP_AF	TPPRSUVOGSH-E	-	-	-	ANNUAL	UP	3	0.927163265311608	null	null	null	null	0.931487263960004	null	null	0.845866059351192	null	null	null	null	null	null	null	null	null	0.570420791220304	null	null	null	null	null	null	null	null	null	0.386807961570485	null	0.263226085864658	null	null	
+	NCAP_AF	TPPRSUVOGS-E	-	-	-	ANNUAL	UP	3	0.830003966395288	null	null	null	null	0.801996017589454	null	null	0.717565771787292	null	null	null	null	null	null	null	null	null	0.499221328671429	null	null	null	null	null	null	null	null	null	0.348471062594397	null	0.2421326906288	null	null	
+	NCAP_AF	TPPRSUVOGSH-E	-	-	-	ANNUAL	UP	3	0.927101509278888	null	null	null	null	0.825898719674821	null	null	0.73361846696395	null	null	null	null	null	null	null	null	null	0.499318535584179	null	null	null	null	null	null	null	null	null	0.346958024861432	null	0.244943217469741	null	null	
 	NCAP_AF	TPPRSUVOGSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPRSUVOGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUBRTBGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
@@ -950,17 +950,17 @@ TS DATA	REGION1
 	NCAP_AF	TPPUBUSELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUBUSGAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUBUSHGNF-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPUBUSODS-E	-	-	-	ANNUAL	UP	3	0.861860366231373	null	null	null	null	0.806668748091363	null	null	0.65933107484666	null	null	null	null	null	null	null	null	null	0.274617857066311	null	null	null	null	null	null	null	null	null	0.117631956316139	null	5.04968846954592E-02	null	null	
+	NCAP_AF	TPPUBUSODS-E	-	-	-	ANNUAL	UP	3	0.888276386456365	null	null	null	null	0.831393145220363	null	null	0.67953957229071	null	null	null	null	null	null	null	null	null	0.283034894385393	null	null	null	null	null	null	null	null	null	0.121237375777229	null	0.052044614211375	null	null	
 	NCAP_AF	TPPUBUSODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUGATELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMBTBGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMBTELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMBTGAS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMBTHGNF-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPUMBTODS-E	-	-	-	ANNUAL	UP	3	0.880915641687029	null	null	null	null	0.864478106025409	null	null	0.796298176896714	null	null	null	null	null	null	null	null	null	0.546424261256543	null	null	null	null	null	null	null	null	null	0.3767405788775	null	0.259296664199308	null	null	
+	NCAP_AF	TPPUMBTODS-E	-	-	-	ANNUAL	UP	3	0.883366575185254	null	null	null	null	0.872370089713063	null	null	0.776653763213111	null	null	null	null	null	null	null	null	null	0.526189928754583	null	null	null	null	null	null	null	null	null	0.355828074746391	null	0.240315419527833	null	null	
 	NCAP_AF	TPPUMBTODSH-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMBTODS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	NCAP_AF	TPPUMBTOGS-E	-	-	-	ANNUAL	UP	3	0.612583562985717	null	null	null	null	0.610989564313174	null	null	0.581780828826817	null	null	null	null	null	null	null	null	null	0.455080649763283	null	null	null	null	null	null	null	null	null	0.337018366919906	null	0.242190149242883	null	null	
+	NCAP_AF	TPPUMBTOGS-E	-	-	-	ANNUAL	UP	3	0.599000256059549	null	null	null	null	0.57175281338926	null	null	0.516193558606326	null	null	null	null	null	null	null	null	null	0.362516881706446	null	null	null	null	null	null	null	null	null	0.251891819052387	null	0.173891588687718	null	null	
 	NCAP_AF	TPPUMBTOGS-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMERELC-E	-	-	-	ANNUAL	UP	3	1	null	null	null	null	0	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	NCAP_AF	TPPUMERELC-N	-	-	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
@@ -1414,18 +1414,18 @@ TS DATA	REGION1
 	PRC_RESID	TADJETOKE-E	-	-	-	-	-	3	20.123	null	null	null	null	20.123	null	null	20.123	null	null	null	null	null	null	null	null	null	16.0984	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TAIJETOKE-E	-	-	-	-	-	3	60.368	null	null	null	null	60.368	null	null	60.368	null	null	null	null	null	null	null	null	null	48.2944	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TAOAGOAG-E	-	-	-	-	-	3	1.07013110351562	null	null	null	null	1.07013110351562	null	null	1.07013110351562	null	null	null	null	null	null	null	null	null	0.8561048828125	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV1ODS-E	-	-	-	-	-	3	116.6	null	null	null	null	126.2	null	null	128.9	null	null	null	null	null	null	null	null	null	41.8040851997793	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV1OGS-E	-	-	-	-	-	3	4.066	null	null	null	null	2.334	null	null	1.879	null	null	null	null	null	null	null	null	null	0.137902246730323	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV2ODS-E	-	-	-	-	-	3	30.24	null	null	null	null	33.93	null	null	34.44	null	null	null	null	null	null	null	null	null	12.5017844881947	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV3ODS-E	-	-	-	-	-	3	55.81	null	null	null	null	62.7	null	null	63.62	null	null	null	null	null	null	null	null	null	22.5960726157625	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV4ODS-E	-	-	-	-	-	3	11.97	null	null	null	null	12.06	null	null	12.29	null	null	null	null	null	null	null	null	null	4.05499726112688	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV5ODS-E	-	-	-	-	-	3	4.957	null	null	null	null	5.454	null	null	5.536	null	null	null	null	null	null	null	null	null	1.8948356500284	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV6ODS-E	-	-	-	-	-	3	79.89	null	null	null	null	106.1	null	null	107.7	null	null	null	null	null	null	null	null	null	42.8216697692296	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV7ODS-E	-	-	-	-	-	3	21.38	null	null	null	null	25.87	null	null	26.47	null	null	null	null	null	null	null	null	null	9.61006274284376	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV8ODS-E	-	-	-	-	-	3	0.6045	null	null	null	null	1.128	null	null	1.146	null	null	null	null	null	null	null	null	null	0.537985856026334	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFHCV9ODS-E	-	-	-	-	-	3	0.5079	null	null	null	null	0.424	null	null	0.4434	null	null	null	null	null	null	null	null	null	0.116730674372241	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFLCVODS-E	-	-	-	-	-	3	845.4	null	null	null	null	1152	null	null	1025	null	null	null	null	null	null	null	null	null	451.539243553558	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFLCVOGS-E	-	-	-	-	-	3	1330	null	null	null	null	1297	null	null	1150	null	null	null	null	null	null	null	null	null	390.476008824768	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV1ODS-E	-	-	-	-	-	3	116.591505230221	null	null	null	null	126.227705550552	null	null	128.856695855616	null	null	null	null	null	null	null	null	null	52.7237943215911	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV1OGS-E	-	-	-	-	-	3	4.06610034601266	null	null	null	null	2.33355548599952	null	null	1.87929418014928	null	null	null	null	null	null	null	null	null	0.286924555297648	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV2ODS-E	-	-	-	-	-	3	30.2417068509633	null	null	null	null	33.9293427149394	null	null	34.4420633850553	null	null	null	null	null	null	null	null	null	14.4077222453834	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV3ODS-E	-	-	-	-	-	3	55.8107915477436	null	null	null	null	62.7019053147121	null	null	63.6168505193392	null	null	null	null	null	null	null	null	null	26.8723160227484	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV4ODS-E	-	-	-	-	-	3	11.9676463061074	null	null	null	null	12.0564974495467	null	null	12.2894367454119	null	null	null	null	null	null	null	null	null	4.85896883518838	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV5ODS-E	-	-	-	-	-	3	4.95672814217792	null	null	null	null	5.45430328951662	null	null	5.53641818071254	null	null	null	null	null	null	null	null	null	2.27689843118454	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV6ODS-E	-	-	-	-	-	3	79.8945214299112	null	null	null	null	106.12140587785	null	null	107.749502594289	null	null	null	null	null	null	null	null	null	49.4905140281978	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV7ODS-E	-	-	-	-	-	3	21.3820110314224	null	null	null	null	25.8742804975207	null	null	26.4741570116765	null	null	null	null	null	null	null	null	null	11.6019349392074	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV8ODS-E	-	-	-	-	-	3	0.604498270686828	null	null	null	null	1.12825320373206	null	null	1.1464635873024	null	null	null	null	null	null	null	null	null	0.602988552069618	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFHCV9ODS-E	-	-	-	-	-	3	0.507861968137043	null	null	null	null	0.423967966873006	null	null	0.443402315511932	null	null	null	null	null	null	null	null	null	0.158316783256986	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFLCVODS-E	-	-	-	-	-	3	845.35637012111	null	null	null	null	1151.53020025537	null	null	1024.61760418971	null	null	null	null	null	null	null	null	null	487.386314939053	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFLCVOGS-E	-	-	-	-	-	3	1329.80249560937	null	null	null	null	1296.71124133498	null	null	1149.83638939547	null	null	null	null	null	null	null	null	null	577.064838903193	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFPIPELC-E	-	-	-	-	-	3	0.820564128	null	null	null	null	0.820564128	null	null	0.820564128	null	null	null	null	null	null	null	null	null	0.820564128	null	null	null	null	null	null	null	null	null	0.820564128	null	0.820564128	null	null	
 	PRC_RESID	TFRCOELC-E	-	-	-	-	-	3	18.4146367658079	null	null	null	null	18.4146367658079	null	null	18.4146367658079	null	null	null	null	null	null	null	null	null	18.4146367658079	null	null	null	null	null	null	null	null	null	18.4146367658079	null	18.4146367658079	null	null	
 	PRC_RESID	TFRCOODS-E	-	-	-	-	-	3	3.5853632341921	null	null	null	null	4.66033821695309	null	null	4.66033821695309	null	null	null	null	null	null	null	null	null	3.72827057356247	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
@@ -1433,17 +1433,17 @@ TS DATA	REGION1
 	PRC_RESID	TFREXODSR-E	-	-	-	-	-	3	13.3636266001706	null	null	null	null	17.3703515359161	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	13.8962812287329	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFROTELC-E	-	-	-	-	-	3	21.009426491899	null	null	null	null	21.009426491899	null	null	21.009426491899	null	null	null	null	null	null	null	null	null	21.009426491899	null	null	null	null	null	null	null	null	null	21.009426491899	null	21.009426491899	null	null	
 	PRC_RESID	TFROTODS-E	-	-	-	-	-	3	4.09057350810099	null	null	null	null	5.31702223843285	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	4.25361779074628	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPRCARODS-E	-	-	-	-	-	3	277.451172948226	null	null	null	null	377.86061319863	null	null	363.621176066941	null	null	null	null	null	null	null	null	null	165.609816555523	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPRCAROGS-E	-	-	-	-	-	3	5432.54323073162	null	null	null	null	5864.18472182402	null	null	5465.75453290936	null	null	null	null	null	null	null	null	null	2532.31435057314	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPRCAROGSH-E	-	-	-	-	-	3	2.30047893134586	null	null	null	null	4.11499277098739	null	null	4.01994657242249	null	null	null	null	null	null	null	null	null	1.98446573588613	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPRCARODS-E	-	-	-	-	-	3	283.266255294215	null	null	null	null	387.586468355653	null	null	369.960101548163	null	null	null	null	null	null	null	null	null	194.505610108408	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPRCAROGS-E	-	-	-	-	-	3	5479.09601073015	null	null	null	null	5902.05729724512	null	null	5259.50907455972	null	null	null	null	null	null	null	null	null	2370.90149933811	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPRCAROGSH-E	-	-	-	-	-	3	2.30873011186192	null	null	null	null	4.1935845862025	null	null	4.11763972020184	null	null	null	null	null	null	null	null	null	2.51095310762135	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRMOTOGS-E	-	-	-	-	-	3	418.162080708481	null	null	null	null	353.397863560673	null	null	303.272921972294	null	null	null	null	null	null	null	null	null	93.490016949956	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRSUVELC-E	-	-	-	-	-	3	0	null	null	null	null	0	null	null	3.99699586946158E-03	null	null	null	null	null	null	null	null	null	2.72063909147699E-03	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPRSUVODS-E	-	-	-	-	-	3	229.837829640377	null	null	null	null	429.106098993686	null	null	455.863131758621	null	null	null	null	null	null	null	null	null	241.011072656214	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPRSUVOGS-E	-	-	-	-	-	3	266.685228318536	null	null	null	null	244.666890546536	null	null	221.845540838813	null	null	null	null	null	null	null	null	null	85.5689651516032	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPRSUVOGSH-E	-	-	-	-	-	3	0.521191608577362	null	null	null	null	220.308257771185	null	null	272.186563079166	null	null	null	null	null	null	null	null	null	166.512127267166	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPRSUVODS-E	-	-	-	-	-	3	231.738806163914	null	null	null	null	439.316081881942	null	null	423.992156547069	null	null	null	null	null	null	null	null	null	244.301375608173	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPRSUVOGS-E	-	-	-	-	-	3	269.853817653155	null	null	null	null	476.243900144387	null	null	456.377734329994	null	null	null	null	null	null	null	null	null	257.180523482494	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPRSUVOGSH-E	-	-	-	-	-	3	0.521825552113361	null	null	null	null	0.803125175258512	null	null	0.789343560533778	null	null	null	null	null	null	null	null	null	0.482127627376798	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPUBUSODS-E	-	-	-	-	-	3	28.1262561763703	null	null	null	null	32.6547058504089	null	null	32.7103775398953	null	null	null	null	null	null	null	null	null	22.4431960133381	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPUMBTODS-E	-	-	-	-	-	3	22.7208978625508	null	null	null	null	65.5744308495519	null	null	76.7278199908877	null	null	null	null	null	null	null	null	null	46.0547570366294	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TPPUMBTOGS-E	-	-	-	-	-	3	270.392594400515	null	null	null	null	244.596262368518	null	null	211.736823059502	null	null	null	null	null	null	null	null	null	83.3986195387792	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPUMBTODS-E	-	-	-	-	-	3	22.3002511899882	null	null	null	null	69.8415661662536	null	null	66.6909703537209	null	null	null	null	null	null	null	null	null	38.6758776841921	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TPPUMBTOGS-E	-	-	-	-	-	3	261.56646550238	null	null	null	null	253.885003628612	null	null	223.816989913597	null	null	null	null	null	null	null	null	null	108.875563554886	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPUMERELC-E	-	-	-	-	-	3	15.8	null	null	null	null	15.8	null	null	15.8	null	null	null	null	null	null	null	null	null	12.64	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TSHFOOHF-E	-	-	-	-	-	3	4.509	null	null	null	null	4.509	null	null	4.509	null	null	null	null	null	null	null	null	null	3.6072	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	UC__RHSRT	TFHCV1ELC_L	-	-	-	-	LO	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
@@ -1993,8 +1993,8 @@ TID DATA	REGION1
 	PRC_CAPACT	TAOAGOAG-N	-	-	-	-	-	1	-
 	PRC_CAPACT	TFHCV1ELC-N	-	-	-	-	-	0.048	-
 	PRC_CAPACT	TFHCV1GAS-N	-	-	-	-	-	0.048	-
-	PRC_CAPACT	TFHCV1ODS-E	-	-	-	-	-	0.048	
-	PRC_CAPACT	TFHCV1ODS-N	-	-	-	-	-	0.048	-
+	PRC_CAPACT	TFHCV1ODS-E	-	-	-	-	-	0.055	
+	PRC_CAPACT	TFHCV1ODS-N	-	-	-	-	-	0.055	-
 	PRC_CAPACT	TFHCV1OGS-E	-	-	-	-	-	0.048	
 	PRC_CAPACT	TFHCV1OGS-N	-	-	-	-	-	0.048	-
 	PRC_CAPACT	TFHCV2ELC-N	-	-	-	-	-	0.048	-
@@ -2002,15 +2002,15 @@ TID DATA	REGION1
 	PRC_CAPACT	TFHCV2HGN-N	-	-	-	-	-	0.048	-
 	PRC_CAPACT	TFHCV2ODS-E	-	-	-	-	-	0.048	
 	PRC_CAPACT	TFHCV2ODS-N	-	-	-	-	-	0.048	-
-	PRC_CAPACT	TFHCV3ELC-N	-	-	-	-	-	0.078	-
-	PRC_CAPACT	TFHCV3GAS-N	-	-	-	-	-	0.078	-
-	PRC_CAPACT	TFHCV3HGN-N	-	-	-	-	-	0.078	-
-	PRC_CAPACT	TFHCV3ODS-E	-	-	-	-	-	0.078	
-	PRC_CAPACT	TFHCV3ODS-N	-	-	-	-	-	0.078	-
-	PRC_CAPACT	TFHCV4GAS-N	-	-	-	-	-	0.078	-
-	PRC_CAPACT	TFHCV4HGN-N	-	-	-	-	-	0.078	-
-	PRC_CAPACT	TFHCV4ODS-E	-	-	-	-	-	0.078	
-	PRC_CAPACT	TFHCV4ODS-N	-	-	-	-	-	0.078	-
+	PRC_CAPACT	TFHCV3ELC-N	-	-	-	-	-	0.085	-
+	PRC_CAPACT	TFHCV3GAS-N	-	-	-	-	-	0.085	-
+	PRC_CAPACT	TFHCV3HGN-N	-	-	-	-	-	0.085	-
+	PRC_CAPACT	TFHCV3ODS-E	-	-	-	-	-	0.085	
+	PRC_CAPACT	TFHCV3ODS-N	-	-	-	-	-	0.085	-
+	PRC_CAPACT	TFHCV4GAS-N	-	-	-	-	-	0.085	-
+	PRC_CAPACT	TFHCV4HGN-N	-	-	-	-	-	0.085	-
+	PRC_CAPACT	TFHCV4ODS-E	-	-	-	-	-	0.085	
+	PRC_CAPACT	TFHCV4ODS-N	-	-	-	-	-	0.085	-
 	PRC_CAPACT	TFHCV5GAS-N	-	-	-	-	-	0.11	-
 	PRC_CAPACT	TFHCV5HGN-N	-	-	-	-	-	0.11	-
 	PRC_CAPACT	TFHCV5ODS-E	-	-	-	-	-	0.11	
@@ -2019,23 +2019,23 @@ TID DATA	REGION1
 	PRC_CAPACT	TFHCV6HGN-N	-	-	-	-	-	0.11	-
 	PRC_CAPACT	TFHCV6ODS-E	-	-	-	-	-	0.11	
 	PRC_CAPACT	TFHCV6ODS-N	-	-	-	-	-	0.11	-
-	PRC_CAPACT	TFHCV7GAS-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV7HGN-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV7ODS-E	-	-	-	-	-	0.14	
-	PRC_CAPACT	TFHCV7ODS-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV8GAS-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV8HGN-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV8ODS-E	-	-	-	-	-	0.14	
-	PRC_CAPACT	TFHCV8ODS-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV9GAS-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV9HGN-N	-	-	-	-	-	0.14	-
-	PRC_CAPACT	TFHCV9ODS-E	-	-	-	-	-	0.14	
-	PRC_CAPACT	TFHCV9ODS-N	-	-	-	-	-	0.14	-
+	PRC_CAPACT	TFHCV7GAS-N	-	-	-	-	-	0.16	-
+	PRC_CAPACT	TFHCV7HGN-N	-	-	-	-	-	0.16	-
+	PRC_CAPACT	TFHCV7ODS-E	-	-	-	-	-	0.16	
+	PRC_CAPACT	TFHCV7ODS-N	-	-	-	-	-	0.16	-
+	PRC_CAPACT	TFHCV8GAS-N	-	-	-	-	-	0.16	-
+	PRC_CAPACT	TFHCV8HGN-N	-	-	-	-	-	0.16	-
+	PRC_CAPACT	TFHCV8ODS-E	-	-	-	-	-	0.16	
+	PRC_CAPACT	TFHCV8ODS-N	-	-	-	-	-	0.16	-
+	PRC_CAPACT	TFHCV9GAS-N	-	-	-	-	-	0.18	-
+	PRC_CAPACT	TFHCV9HGN-N	-	-	-	-	-	0.18	-
+	PRC_CAPACT	TFHCV9ODS-E	-	-	-	-	-	0.18	
+	PRC_CAPACT	TFHCV9ODS-N	-	-	-	-	-	0.18	-
 	PRC_CAPACT	TFLCVELC-N	-	-	-	-	-	0.035	-
 	PRC_CAPACT	TFLCVGAS-N	-	-	-	-	-	0.035	-
-	PRC_CAPACT	TFLCVODS-E	-	-	-	-	-	0.035	
-	PRC_CAPACT	TFLCVODSH-N	-	-	-	-	-	0.035	-
-	PRC_CAPACT	TFLCVODS-N	-	-	-	-	-	0.035	-
+	PRC_CAPACT	TFLCVODS-E	-	-	-	-	-	0.04	
+	PRC_CAPACT	TFLCVODSH-N	-	-	-	-	-	0.04	-
+	PRC_CAPACT	TFLCVODS-N	-	-	-	-	-	0.04	-
 	PRC_CAPACT	TFLCVOGS-E	-	-	-	-	-	0.035	
 	PRC_CAPACT	TFLCVOGSH-N	-	-	-	-	-	0.035	-
 	PRC_CAPACT	TFLCVOGS-N	-	-	-	-	-	0.035	-
@@ -2077,17 +2077,17 @@ TID DATA	REGION1
 	PRC_CAPACT	TPPRSUVOGSH-E	-	-	-	-	-	0.024	
 	PRC_CAPACT	TPPRSUVOGSH-N	-	-	-	-	-	0.024	-
 	PRC_CAPACT	TPPRSUVOGS-N	-	-	-	-	-	0.024	-
-	PRC_CAPACT	TPPUBRTBGS-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBRTELC-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBRTGAS-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBRTHGNF-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBRTODS-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBUSBGS-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBUSELC-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBUSGAS-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBUSHGNF-N	-	-	-	-	-	0.061839	-
-	PRC_CAPACT	TPPUBUSODS-E	-	-	-	-	-	0.061839	
-	PRC_CAPACT	TPPUBUSODS-N	-	-	-	-	-	0.061839	-
+	PRC_CAPACT	TPPUBRTBGS-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBRTELC-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBRTGAS-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBRTHGNF-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBRTODS-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBUSBGS-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBUSELC-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBUSGAS-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBUSHGNF-N	-	-	-	-	-	0.06	-
+	PRC_CAPACT	TPPUBUSODS-E	-	-	-	-	-	0.06	
+	PRC_CAPACT	TPPUBUSODS-N	-	-	-	-	-	0.06	-
 	PRC_CAPACT	TPPUGATELC-N	-	-	-	-	-	1	-
 	PRC_CAPACT	TPPUMBTBGS-N	-	-	-	-	-	0.035	-
 	PRC_CAPACT	TPPUMBTELC-N	-	-	-	-	-	0.035	-
