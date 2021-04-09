@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/12/11	5:17:04 PM
+Creation Date:	2021/04/09	3:44:49 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -135,6 +135,7 @@ ITEMS	REGION1
 	E	ICPELC	Industry-CP-Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	ICPF	Industry-Chemicals-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPGAS	Industry-CP-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	ICPGMU	Industry-CP-Material use Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	ICPH	Industry-Chemicals-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPK	Industry-Chemicals-Elec Heating - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPL	Industry-Chemicals-Lighting - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -334,6 +335,7 @@ ITEMS	REGION1
 	T	IMILELC-E	Industry-Mining-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IMIOELC-E	Industry-Mining-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IMIPELC-E	Industry-Mining-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIRELC-E	Industry-Mining-Transport - Electricity - New	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IMIRODS-E	Industry-Mining-Transport - Oil Diesel - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IMISCOA-E	Industry-Mining-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IMISELC-E	Industry-Mining-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
@@ -390,6 +392,7 @@ ITEMS	REGION1
 	T	IOTLELC-E	Industry-Other-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTOELC-E	Industry-Other-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTPELC-E	Industry-Other-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTRELC-E	Industry-Other-Transport - Electricity - New	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTRODS-E	Industry-Other-Transport - Oil Diesel - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTSCOA-E	Industry-Other-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTSELC-E	Industry-Other-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
@@ -564,6 +567,7 @@ TS DATA	REGION1
 	ACT_EFF	IMILELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	
 	ACT_EFF	IMIOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	
 	ACT_EFF	IMIPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	
+	ACT_EFF	IMIRELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
 	ACT_EFF	IMIRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
 	ACT_EFF	IMISCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
 	ACT_EFF	IMISELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
@@ -595,6 +599,7 @@ TS DATA	REGION1
 	ACT_EFF	IOTLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	
 	ACT_EFF	IOTOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	
 	ACT_EFF	IOTPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	
+	ACT_EFF	IOTRELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
 	ACT_EFF	IOTRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
 	ACT_EFF	IOTSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
 	ACT_EFF	IOTSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
@@ -661,8 +666,8 @@ TS DATA	REGION1
 	COM_PROJ	-	ICPL	-	-	-	-	0	0.333885979169771	null	null	null	null	0.485508	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPO	-	-	-	-	0	4.45181305559694	null	null	null	null	6.47344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	11.32852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	16.6503684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	28.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	19.3071684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFAM	-	-	-	-	0	4.0821	4.1754	4.8629	4.4806	4.32606122354372	4.37275410408246	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBA	-	-	-	-	0	3.19316332629067E-02	null	null	null	null	0.029904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBC	-	-	-	-	0	7.34427565046855	null	null	null	null	6.87792	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -684,7 +689,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IMIL	-	-	-	-	0	1.44290622233195	null	null	null	null	1.485972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIO	-	-	-	-	0	28.8949768078483	null	null	null	null	29.7573922771775	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIP	-	-	-	-	0	15.2945172722485	null	null	null	null	15.7510058992934	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	46.046	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	29.931	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	0.9080571912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFA	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFC	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -709,7 +714,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IOTL	-	-	-	-	0	1.00958343021635	null	null	null	null	0.54733968	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTO	-	-	-	-	0	12.3044909233109	null	null	null	null	6.670806912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTP	-	-	-	-	0	4.33691353748451	null	null	null	null	2.351232	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	37.63	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	61.5613408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPAP	-	-	-	-	0	2.0533	2.078652	2.104004	2.129356	2.154708	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPULPD	-	-	-	-	0	0.737115145	0.737115145	0.737115145	0.737115145	0.7	0.659107198066639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -791,14 +796,14 @@ TS DATA	REGION1
 	FLO_FUNC	IPPPAP-N	-	IPPPULP	IPPODS	ANNUAL	-	0	0.05	null	null	null	null	0.05	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IPPREC-E	-	IPPPULP	CG-IPPREC-E-I	ANNUAL	-	0	3.85	null	null	null	null	3.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IPPREC-N	-	IPPPULP	CG-IPPREC-N-I	ANNUAL	-	0	2.24	null	null	null	null	3.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.927242618848001	null	null	null	null	null	null	null	null	null	null	null	null	0.374643482362829	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.936608705907072	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
-	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.82826895289596E-02	null	null	null	null	null	null	null	null	null	null	null	null	7.38694526422611E-03	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.84673631605653E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.257749178855967	null	null	null	null	null	null	null	null	null	0.757749178855967	null	null	null	null	
-	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
-	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	LO	0	0	null	null	null	null	4.44746916230394E-02	null	null	null	null	null	null	null	null	null	null	null	null	1.79695723729452E-02	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0.044923930932363	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.799647616892387	null	null	null	null	null	null	null	null	null	null	null	null	0.323089946219146	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.807724865547866	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.57668649122054E-02	null	null	null	null	null	null	null	null	null	null	null	null	6.37045046957792E-03	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.59261261739448E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.257749178855967	null	null	null	null	null	null	null	null	null	0.757749178855967	null	null	null	null	
+	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0.13623085195652	null	null	null	null	null	null	null	null	null	null	null	null	5.50427684672808E-02	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0.137606921168202	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
+	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	LO	0	0	null	null	null	null	3.83546662388877E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.015496834843995	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	UP	0	0	null	null	null	null	3.87420871099876E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
 	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
 	FLO_MARK	ICPSWAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -819,6 +824,8 @@ TS DATA	REGION1
 	FLO_MARK	IFBSOLP-E	IFBS	-	-	-	UP	0	6.85694466742226E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.318569446674223	null	null	null	null	null	null	null	null	null	0.818569446674223	null	null	null	null	
 	FLO_MARK	IFBSWAS-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IFBSWAS-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
+	FLO_MARK	IMIRELC-E	IMIR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMIRELC-E	IMIR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
 	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.883355814780755	null	null	null	null	null	null	null	null	null	null	null	null	0.356911440315457	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -847,6 +854,8 @@ TS DATA	REGION1
 	FLO_MARK	INFSWAS-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
 	FLO_MARK	INMCEMFGBM	INMCEM	-	-	-	LO	0	0.62	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_MARK	INMCEMPGBM	INMRWM	-	-	-	LO	0	0.61913564202135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_MARK	IOTRELC-E	IOTR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.75	null	null	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	
 	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.937575836554879	null	null	null	null	null	null	null	null	null	null	null	null	0.378818519820153	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -1088,6 +1097,7 @@ TS DATA	REGION1
 	NCAP_AFA	IMILELC-E	-	-	-	-	UP	0	0.12455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IMIOELC-E	-	-	-	-	UP	0	0.13082	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IMIPELC-E	-	-	-	-	UP	0	0.12116	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIRELC-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IMIRODS-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IMISCOA-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IMISELC-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1140,6 +1150,7 @@ TS DATA	REGION1
 	NCAP_AFA	IOTLELC-E	-	-	-	-	UP	0	0.12455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IOTOELC-E	-	-	-	-	UP	0	0.13082	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IOTPELC-E	-	-	-	-	UP	0	0.12116	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTRELC-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IOTRODS-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IOTSCOA-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IOTSELC-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1228,6 +1239,7 @@ TS DATA	REGION1
 	NCAP_BND	IMILELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIRELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIRODS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMISCOA-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMISELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1263,6 +1275,7 @@ TS DATA	REGION1
 	NCAP_BND	IOTLELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IOTOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IOTPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTRELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IOTRODS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IOTSCOA-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IOTSELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1458,6 +1471,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	IMILELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IMIOELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IMIPELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIRELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IMIRODS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IMISCOA-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IMISELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1510,13 +1524,14 @@ TS DATA	REGION1
 	NCAP_TLIFE	IOTLELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IOTOELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IOTPELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IOTRODS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTRELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTRODS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IOTSCOA-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IOTSELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IOTSGAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IOTSOHF-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IOTSOLP-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IOTSWAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSGAS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSOHF-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSOLP-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSWAS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IPPCHE-E	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IPPCHE-E-T1	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IPPCHE-E-T2	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1642,11 +1657,11 @@ TS DATA	REGION1
 	PRC_RESID	ICPPELC-E	-	-	-	-	-	0	64.3007002913061	null	null	null	null	93.5004952129416	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSCLE-E	-	-	-	-	-	0	175.515239515136	null	null	null	null	101.088221948532	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSELC-E	-	-	-	-	-	0	1.37072094471287	null	null	null	null	1.99318337978868	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPSGAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSGAS-E	-	-	-	-	-	0	0	null	null	null	null	17.2217540675439	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSOHF-E	-	-	-	-	-	0	0	null	null	null	null	4.84864199131393	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPTGAS-E	-	-	-	-	-	0	39.0040000305176	null	null	null	null	28.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPTGAS-E	-	-	-	-	-	0	39.0040000305176	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFAEAF	-	-	-	-	-	0	4.456	null	null	null	null	5.090963	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBAELC-E	-	-	-	-	-	0	0.27562911750459	null	null	null	null	0.258126888217523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBCELC-E	-	-	-	-	-	0	56.6862893676177	null	null	null	null	53.0867551713492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1678,7 +1693,8 @@ TS DATA	REGION1
 	PRC_RESID	IMILELC-E	-	-	-	-	-	0	11.5849556188836	null	null	null	null	11.9307266158169	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMIOELC-E	-	-	-	-	-	0	220.875835559152	null	null	null	null	227.468217987903	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMIPELC-E	-	-	-	-	-	0	126.234048136749	null	null	null	null	130.001699399912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIRODS-E	-	-	-	-	-	0	51.4885232177635	null	null	null	null	46.046	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIRELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIRODS-E	-	-	-	-	-	0	51.4885232177635	null	null	null	null	29.931	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISCOA-E	-	-	-	-	-	0	130.279199844429	null	null	null	null	5.25209049069813	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISGAS-E	-	-	-	-	-	0	1.14702015946069	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1712,20 +1728,21 @@ TS DATA	REGION1
 	PRC_RESID	INMLIMSTD	-	-	-	-	-	0	2.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTAELC-E	-	-	-	-	-	0	1.96716846073776	null	null	null	null	1.06648873543375	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTCELC-E	-	-	-	-	-	0	33.0879301284086	null	null	null	null	17.9384254399506	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTEELC-E	-	-	-	-	-	0	3.11826980015846	null	null	null	null	1.69055151212877	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTEELC-E	-	-	-	-	-	0	3.11826980015846	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTFELC-E	-	-	-	-	-	0	16.8832800655339	null	null	null	null	9.15317033921551	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTHELC-E	-	-	-	-	-	0	24.2107774280064	null	null	null	null	13.1257296558012	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTKELC-E	-	-	-	-	-	0	35.1977201931702	null	null	null	null	19.0822356336919	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTLELC-E	-	-	-	-	-	0	8.10584849631752	null	null	null	null	4.39453777599358	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTOELC-E	-	-	-	-	-	0	94.0566497730536	null	null	null	null	50.9922558630179	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTPELC-E	-	-	-	-	-	0	35.7949285035037	null	null	null	null	19.406008583691	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTRODS-E	-	-	-	-	-	0	9.46856592467852	null	null	null	null	37.63	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTSCOA-E	-	-	-	-	-	0	326.259755701044	null	null	null	null	377.918195371751	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTSELC-E	-	-	-	-	-	0	2.05437412957816	null	null	null	null	1.11376677254165	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTSGAS-E	-	-	-	-	-	0	59.3153380436896	null	null	null	null	20.017372139755	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTSOHF-E	-	-	-	-	-	0	54.5811662380771	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTSOLP-E	-	-	-	-	-	0	35.4615461754155	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IOTSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTRELC-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTRODS-E	-	-	-	-	-	0	9.46856592467852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSCOA-E	-	-	-	-	-	0	326.259755701044	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSELC-E	-	-	-	-	-	0	2.05437412957816	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSGAS-E	-	-	-	-	-	0	59.3153380436896	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSOHF-E	-	-	-	-	-	0	54.5811662380771	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSOLP-E	-	-	-	-	-	0	35.4615461754155	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSWAS-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPCHE-E	-	-	-	-	-	0	2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPCHPGAS01-N	-	-	-	-	-	0	0.801385411764706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPCHPGAS02-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2121,6 +2138,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	IMILELC-E	-	IMIL	-	-	-	1	
 	PRC_ACTUNT	IMIOELC-E	-	IMIO	-	-	-	1	
 	PRC_ACTUNT	IMIPELC-E	-	IMIP	-	-	-	1	
+	PRC_ACTUNT	IMIRELC-E	-	IMIR	-	-	-	1	
 	PRC_ACTUNT	IMIRODS-E	-	IMIR	-	-	-	1	
 	PRC_ACTUNT	IMISCOA-E	-	IMIS	-	-	-	1	
 	PRC_ACTUNT	IMISELC-E	-	IMIS	-	-	-	1	
@@ -2177,6 +2195,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	IOTLELC-E	-	IOTL	-	-	-	1	
 	PRC_ACTUNT	IOTOELC-E	-	IOTO	-	-	-	1	
 	PRC_ACTUNT	IOTPELC-E	-	IOTP	-	-	-	1	
+	PRC_ACTUNT	IOTRELC-E	-	IOTR	-	-	-	1	
 	PRC_ACTUNT	IOTRODS-E	-	IOTR	-	-	-	1	
 	PRC_ACTUNT	IOTSCOA-E	-	IOTS	-	-	-	1	
 	PRC_ACTUNT	IOTSELC-E	-	IOTS	-	-	-	1	
@@ -2327,6 +2346,7 @@ TID DATA	REGION1
 	PRC_CAPACT	IMILELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IMIOELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IMIPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIRELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IMIRODS-E	-	-	-	-	-	1	
 	PRC_CAPACT	IMISCOA-E	-	-	-	-	-	1	
 	PRC_CAPACT	IMISELC-E	-	-	-	-	-	1	
@@ -2383,6 +2403,7 @@ TID DATA	REGION1
 	PRC_CAPACT	IOTLELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTOELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTRELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTRODS-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTSCOA-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTSELC-E	-	-	-	-	-	1	
@@ -2580,6 +2601,7 @@ TID DATA	REGION1
 	TOP-IN	IMILELC-E	IMIELC	-	-	-	-	1	
 	TOP-IN	IMIOELC-E	IMIELC	-	-	-	-	1	
 	TOP-IN	IMIPELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIRELC-E	IMIELC	-	-	-	-	1	
 	TOP-IN	IMIRODS-E	INDODS	-	-	-	-	1	
 	TOP-IN	IMISCOA-E	INDCOA	-	-	-	-	1	
 	TOP-IN	IMISELC-E	IMIELC	-	-	-	-	1	
@@ -2666,6 +2688,7 @@ TID DATA	REGION1
 	TOP-IN	IOTLELC-E	IOTELC	-	-	-	-	1	
 	TOP-IN	IOTOELC-E	IOTELC	-	-	-	-	1	
 	TOP-IN	IOTPELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTRELC-E	IOTELC	-	-	-	-	1	
 	TOP-IN	IOTRODS-E	INDODS	-	-	-	-	1	
 	TOP-IN	IOTSCOA-E	INDCOA	-	-	-	-	1	
 	TOP-IN	IOTSELC-E	IOTELC	-	-	-	-	1	
@@ -2840,6 +2863,7 @@ TID DATA	REGION1
 	TOP-OUT	IMILELC-E	IMIL	-	-	-	-	1	
 	TOP-OUT	IMIOELC-E	IMIO	-	-	-	-	1	
 	TOP-OUT	IMIPELC-E	IMIP	-	-	-	-	1	
+	TOP-OUT	IMIRELC-E	IMIR	-	-	-	-	1	
 	TOP-OUT	IMIRODS-E	IMIR	-	-	-	-	1	
 	TOP-OUT	IMISCOA-E	IMIS	-	-	-	-	1	
 	TOP-OUT	IMISELC-E	IMIS	-	-	-	-	1	
@@ -2911,6 +2935,7 @@ TID DATA	REGION1
 	TOP-OUT	IOTLELC-E	IOTL	-	-	-	-	1	
 	TOP-OUT	IOTOELC-E	IOTO	-	-	-	-	1	
 	TOP-OUT	IOTPELC-E	IOTP	-	-	-	-	1	
+	TOP-OUT	IOTRELC-E	IOTR	-	-	-	-	1	
 	TOP-OUT	IOTRODS-E	IOTR	-	-	-	-	1	
 	TOP-OUT	IOTSCOA-E	IOTS	-	-	-	-	1	
 	TOP-OUT	IOTSELC-E	IOTS	-	-	-	-	1	
