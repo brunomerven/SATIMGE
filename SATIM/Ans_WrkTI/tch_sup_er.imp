@@ -1,0 +1,34 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/04/09	12:00:40 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_SUP_ER	Endogenous Retirement for Sasol and Refineries	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	T	UCTLCLEIN-E	Refinery CTL Existing	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	RCAP_BND	UCTLCLEIN-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	131	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	UREFOCRCO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	365.71	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	UREFOCRIN-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	212.16	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_RCAP	UCTLCLEIN-E	-	-	-	-	-	1	
+	PRC_RCAP	UREFOCRCO-E	-	-	-	-	-	1	
+	PRC_RCAP	UREFOCRIN-E	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
