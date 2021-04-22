@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/04/09	2:52:52 PM
+Creation Date:	2021/04/13	4:31:35 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -55,6 +55,8 @@ ITEMS	REGION1
 	D	UELEA1HGN-O	UELEA1HGN-O		COM_GRP,COM_GRPTRU	
 	D	UELEP1HGN-I	UELEP1HGN-I		COM_GRP,COM_GRPTRU	
 	D	UELEP1HGN-O	UELEP1HGN-O		COM_GRP,COM_GRPTRU	
+	D	UFTHGNCO2-N-I	UFTHGNCO2-N-I		COM_GRP,COM_GRPTRU	
+	D	UFTHGNCO2-N-O	UFTHGNCO2-N-O		COM_GRP,COM_GRPTRU	
 	D	UGTLGASIN-N-I	UGTLGASIN-N-I		COM_GRP,COM_GRPTRU	
 	D	UGTLGASIN-N-O	UGTLGASIN-N-O		COM_GRP,COM_GRPTRU	
 	D	UGTLGICCO-E-I	UGTLGICCO-E-I		COM_GRP,COM_GRPTRU	
@@ -311,6 +313,7 @@ ITEMS	REGION1
 	T	UCTLCLEIN-N	Refinery CTL New	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UELEA1HGN	Production Plant Hydrogen Electrolysis Alkaline	PJ,PJa	PRC,PRE,DAYNITE	
 	T	UELEP1HGN	Production Plant Hydrogen Electrolysis PEM	PJ,PJa	PRC,PRE,DAYNITE	
+	T	UFTHGNCO2-N	Fischer-Tropsch SynFuel plant for Chemicals and Jetfuel-NEW	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UGASGIB-N	Pipeline Gas Indigenous Ibhubezi	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UGASGIC-N	Pipeline Coastal Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UGASGIH-N	Pipeline Gas Indigenous Shale	PJ,PJa	PRC,PRE,ANNUAL	
@@ -518,6 +521,7 @@ TS DATA	REGION1
 	ACT_COST	UCTLCLEIN-N	-	-	-	-	-	0	23.7398752470631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UELEA1HGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UELEP1HGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	0	
 	ACT_COST	UGTLGASIN-N	-	-	-	-	-	0	18.6585561041635	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UGTLGICCO-E	-	-	-	-	-	0	47.4529924683302	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UGTLGICCO-N	-	-	-	-	-	0	18.6585561041635	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -693,6 +697,7 @@ TS DATA	REGION1
 	FLO_EMIS	UELEA1HGN	UPSCO2S	UELEA1HGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEP1HGN	UPSCH4S	UELEP1HGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEP1HGN	UPSCO2S	UELEP1HGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UFTHGNCO2-N	CO2SP	UFTHGNCO2-N-O	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	-107.37556955364	null	null	null	null	null	null	null	null	null	-107.37556955364	null	null	null	null	-107.37556955364	null	null	null	null	-107.37556955364	null	-107.37556955364	-107.37556955364	-107.37556955364	
 	FLO_EMIS	UGASGIB-N	CH4SF	GIB	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGIC-N	CH4SF	GIC	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGIH-N	CH4SF	GIH	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1011,6 +1016,7 @@ TS DATA	REGION1
 	FLO_FUNC	UCTLCLEIN-N	-	UCTLCLEIN-N-I	UCTLCLEIN-N-O	ANNUAL	-	0	0.349224148012841	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UELEA1HGN	-	UELEA1HGN-I	UELEA1HGN-O	ANNUAL	-	0	0.665	null	null	null	null	null	null	null	0.665	null	null	null	null	null	null	null	null	null	0.68	null	null	null	null	0.75	null	null	null	null	0.815799999999999	null	0.815799999999999	null	null	
 	FLO_FUNC	UELEP1HGN	-	UELEP1HGN-I	UELEP1HGN-O	ANNUAL	-	0	0.58	null	null	null	null	null	null	null	0.58	null	null	null	null	null	null	null	null	null	0.655	null	null	null	null	0.705	null	null	null	null	0.713000000000001	null	0.795000000000002	null	null	
+	FLO_FUNC	UFTHGNCO2-N	-	UFTHGNCO2-N-I	UFTHGNCO2-N-O	ANNUAL	-	0	null	null	null	null	null	null	null	null	0.316389165813787	null	null	null	null	null	null	null	null	null	0.316389165813787	null	null	null	null	0.316389165813787	null	null	null	null	0.316389165813787	null	0.316389165813787	0.316389165813787	0.316389165813787	
 	FLO_FUNC	UGTLGASIN-N	-	UGTLGASIN-N-I	UGTLGASIN-N-O	ANNUAL	-	0	0.80809626745745	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UGTLGICCO-E	-	UGTLGICCO-E-I	UGTLGICCO-E-O	ANNUAL	-	0	0.769615492816619	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	UGTLGICCO-N	-	UGTLGICCO-N-I	UGTLGICCO-N-O	ANNUAL	-	0	0.80809626745745	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1049,6 +1055,10 @@ TS DATA	REGION1
 	FLO_SHAR	UELEA1HGN	UPSHGN	UELEA1HGN-O	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UELEP1HGN	UPSELC	UELEP1HGN-I	-	ANNUAL	FX	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UELEP1HGN	UPSHGN	UELEP1HGN-O	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	UFTHGNCO2-N	HGN	UFTHGNCO2-N-I	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	0.922217160815398	null	null	null	null	null	null	null	null	null	0.922217160815398	null	null	null	null	0.922217160815398	null	null	null	null	0.922217160815398	null	0.922217160815398	0.922217160815398	0.922217160815398	
+	FLO_SHAR	UFTHGNCO2-N	OAG	UFTHGNCO2-N-O	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	0.511832924985986	null	null	null	null	null	null	null	null	null	0.511832924985986	null	null	null	null	0.511832924985986	null	null	null	null	0.511832924985986	null	0.511832924985986	0.511832924985986	0.511832924985986	
+	FLO_SHAR	UFTHGNCO2-N	OKE	UFTHGNCO2-N-O	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	0.488167075014014	null	null	null	null	null	null	null	null	null	0.488167075014014	null	null	null	null	0.488167075014014	null	null	null	null	0.488167075014014	null	0.488167075014014	0.488167075014014	0.488167075014014	
+	FLO_SHAR	UFTHGNCO2-N	UPSELC	UFTHGNCO2-N-I	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	7.77828391846016E-02	null	null	null	null	null	null	null	null	null	7.77828391846016E-02	null	null	null	null	7.77828391846016E-02	null	null	null	null	7.77828391846016E-02	null	7.77828391846016E-02	7.77828391846016E-02	7.77828391846016E-02	
 	FLO_SHAR	UGTLGASIN-N	OAG	UGTLGASIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGASIN-N	ODS	UGTLGASIN-N-O	-	ANNUAL	UP	3	0.287679321159069	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGASIN-N	OGS	UGTLGASIN-N-O	-	ANNUAL	UP	3	0.498090896335345	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1123,6 +1133,8 @@ TS DATA	REGION1
 	NCAP_AFA	UELEA1HGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
 	NCAP_AFA	UELEP1HGN	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UELEP1HGN	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	NCAP_AFA	UFTHGNCO2-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	0.5	null	null	null	null	0.5	null	0.5	0.5	0.5	
+	NCAP_AFA	UFTHGNCO2-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	0.91324200913242	null	null	null	null	null	null	null	null	null	0.91324200913242	null	null	null	null	0.91324200913242	null	null	null	null	0.91324200913242	null	0.91324200913242	0.91324200913242	0.91324200913242	
 	NCAP_AFA	UGASGIB-N	-	-	-	-	LO	3	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGIB-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGIC-N	-	-	-	-	LO	3	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1173,6 +1185,7 @@ TS DATA	REGION1
 	NCAP_COST	UCTLCLEIN-N	-	-	-	-	-	0	577.069098756959	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UELEA1HGN	-	-	-	-	-	0	578.237383233354	null	null	null	null	null	null	null	578.237383233354	null	null	null	null	null	null	null	null	null	351.072696963108	null	null	null	null	289.118691616677	null	null	null	null	137.403034949969	null	85.8772085126578	null	null	
 	NCAP_COST	UELEP1HGN	-	-	-	-	-	0	743.44806415717	null	null	null	null	null	null	null	743.44806415717	null	null	null	null	null	null	null	null	null	619.540053464308	null	null	null	null	371.724032078585	null	null	null	null	338.369937681187	null	222.716429334383	null	null	
+	NCAP_COST	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	521.412037037037	null	null	null	null	null	null	null	null	null	495.92027057272	null	null	null	null	483.645625523908	null	null	null	null	471.674793245041	null	448.614674140707	448.614674140707	448.614674140707	
 	NCAP_COST	UGASGIB-N	-	-	-	-	-	0	239.708489570121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UGASGIC-N	-	-	-	-	-	0	239.708489570121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UGASGIH-N	-	-	-	-	-	0	239.708489570121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1263,6 +1276,7 @@ TS DATA	REGION1
 	NCAP_FOM	UCTLCLEIN-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UELEA1HGN	-	-	-	-	-	0	34.6942429940013	null	null	null	null	null	null	null	34.6942429940013	null	null	null	null	null	null	null	null	null	21.0643618177865	null	null	null	null	17.3471214970006	null	null	null	null	8.24418209699813	null	5.15263251075947	null	null	
 	NCAP_FOM	UELEP1HGN	-	-	-	-	-	0	44.6068838494302	null	null	null	null	null	null	null	44.6068838494302	null	null	null	null	null	null	null	null	null	37.1724032078585	null	null	null	null	22.3034419247151	null	null	null	null	20.3021962608712	null	13.362985760063	null	null	
+	NCAP_FOM	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	20.8564814814815	null	null	null	null	null	null	null	null	null	19.8368108229088	null	null	null	null	19.3458250209563	null	null	null	null	18.8669917298016	null	17.9445869656283	17.9445869656283	17.9445869656283	
 	NCAP_FOM	UGTLGASIN-N	-	-	-	-	-	0	16.868609235306	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UGTLGICCO-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UGTLGICCO-N	-	-	-	-	-	0	16.868609235306	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1276,6 +1290,7 @@ TS DATA	REGION1
 	NCAP_ILED	UCTLCLEIN-N	-	-	-	-	-	0	-6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	UELEA1HGN	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	-2	null	null	null	null	null	null	null	null	null	-2	null	null	null	null	-2	null	null	null	null	-2	null	-2	null	null	
 	NCAP_ILED	UELEP1HGN	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	-2	null	null	null	null	null	null	null	null	null	-2	null	null	null	null	-2	null	null	null	null	-2	null	-2	null	null	
+	NCAP_ILED	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	-6	null	null	null	null	null	null	null	null	null	-6	null	null	null	null	-6	null	null	null	null	-6	null	-6	-6	-6	
 	NCAP_ILED	UGASGIB-N	-	-	-	-	-	0	-4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	UGASGIC-N	-	-	-	-	-	0	-4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	UGASGIH-N	-	-	-	-	-	0	-4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1294,6 +1309,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	UCTLCLEIN-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UELEA1HGN	-	-	-	-	-	0	7.6103500761035	null	null	null	null	null	null	null	7.6103500761035	null	null	null	null	null	null	null	null	null	9.51293759512938	null	null	null	null	15.8548959918823	null	null	null	null	24.9274479959411	null	30	null	null	
 	NCAP_TLIFE	UELEP1HGN	-	-	-	-	-	0	7.6103500761035	null	null	null	null	null	null	null	7.6103500761035	null	null	null	null	null	null	null	null	null	9.51293759512938	null	null	null	null	15.8548959918823	null	null	null	null	24.9274479959411	null	30	null	null	
+	NCAP_TLIFE	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	25	null	null	null	null	null	null	null	null	null	25	null	null	null	null	25	null	null	null	null	25	null	25	25	25	
 	NCAP_TLIFE	UGASGIB-N	-	-	-	-	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UGASGIC-N	-	-	-	-	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	UGASGIH-N	-	-	-	-	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1482,8 +1498,10 @@ TID DATA	REGION1
 	COM_GMAP	-	GIM	UCTLCLEIN-N-O	-	-	-	1	
 	COM_GMAP	-	HEN	USMRGASHGN-O	-	-	-	1	
 	COM_GMAP	-	HEN	USMRGICHGN-O	-	-	-	1	
+	COM_GMAP	-	HGN	UFTHGNCO2-N-I	-	-	-	1	
 	COM_GMAP	-	OAG	UCTLCLEIN-E-O	-	-	-	1	
 	COM_GMAP	-	OAG	UCTLCLEIN-N-O	-	-	-	1	
+	COM_GMAP	-	OAG	UFTHGNCO2-N-O	-	-	-	1	
 	COM_GMAP	-	OAG	UGTLGASIN-N-O	-	-	-	1	
 	COM_GMAP	-	OAG	UGTLGICCO-N-O	-	-	-	1	
 	COM_GMAP	-	OAG	UREFOCRCO-E-O	-	-	-	1	
@@ -1511,6 +1529,7 @@ TID DATA	REGION1
 	COM_GMAP	-	OHF	UREFOCRIN-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UCTLCLEIN-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UCTLCLEIN-N-O	-	-	-	1	
+	COM_GMAP	-	OKE	UFTHGNCO2-N-O	-	-	-	1	
 	COM_GMAP	-	OKE	UGTLGASIN-N-O	-	-	-	1	
 	COM_GMAP	-	OKE	UGTLGICCO-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UGTLGICCO-N-O	-	-	-	1	
@@ -1540,6 +1559,7 @@ TID DATA	REGION1
 	COM_GMAP	-	UPSELC	UCTLCLEIN-N-I	-	-	-	1	
 	COM_GMAP	-	UPSELC	UELEA1HGN-I	-	-	-	1	
 	COM_GMAP	-	UPSELC	UELEP1HGN-I	-	-	-	1	
+	COM_GMAP	-	UPSELC	UFTHGNCO2-N-I	-	-	-	1	
 	COM_GMAP	-	UPSELC	UGTLGASIN-N-I	-	-	-	1	
 	COM_GMAP	-	UPSELC	UGTLGICCO-E-I	-	-	-	1	
 	COM_GMAP	-	UPSELC	UGTLGICCO-N-I	-	-	-	1	
@@ -1635,6 +1655,7 @@ TID DATA	REGION1
 	NCAP_START	UCTLCLEIN-N	-	-	-	-	-	2030	
 	NCAP_START	UELEA1HGN	-	-	-	-	-	2020	
 	NCAP_START	UELEP1HGN	-	-	-	-	-	2020	
+	NCAP_START	UFTHGNCO2-N	-	-	-	-	-	2030	
 	NCAP_START	UGASGIB-N	-	-	-	-	-	2022	
 	NCAP_START	UGASGIC-N	-	-	-	-	-	2022	
 	NCAP_START	UGASGIH-N	-	-	-	-	-	2027	
@@ -1698,6 +1719,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	UCTLCLEIN-N	-	UCTLCLEIN-N-O	-	-	-	1	
 	PRC_ACTUNT	UELEA1HGN	-	UELEA1HGN-O	-	-	-	1	
 	PRC_ACTUNT	UELEP1HGN	-	UELEP1HGN-O	-	-	-	1	
+	PRC_ACTUNT	UFTHGNCO2-N	-	UFTHGNCO2-N-O	-	-	-	1	
 	PRC_ACTUNT	UGASGIB-N	-	GIC	-	-	-	1	
 	PRC_ACTUNT	UGASGIC-N	-	GAS	-	-	-	1	
 	PRC_ACTUNT	UGASGIH-N	-	GAS	-	-	-	1	
@@ -1840,6 +1862,7 @@ TID DATA	REGION1
 	PRC_CAPACT	UCTLCLEIN-N	-	-	-	-	-	1	
 	PRC_CAPACT	UELEA1HGN	-	-	-	-	-	1	
 	PRC_CAPACT	UELEP1HGN	-	-	-	-	-	1	
+	PRC_CAPACT	UFTHGNCO2-N	-	-	-	-	-	1	
 	PRC_CAPACT	UGASGIB-N	-	-	-	-	-	1	
 	PRC_CAPACT	UGASGIC-N	-	-	-	-	-	1	
 	PRC_CAPACT	UGASGIH-N	-	-	-	-	-	1	
@@ -1956,6 +1979,8 @@ TID DATA	REGION1
 	TOP-IN	UCTLCLEIN-N	UPSHEN	-	-	-	-	1	
 	TOP-IN	UELEA1HGN	UPSELC	-	-	-	-	1	
 	TOP-IN	UELEP1HGN	UPSELC	-	-	-	-	1	
+	TOP-IN	UFTHGNCO2-N	HGN	-	-	-	-	1	
+	TOP-IN	UFTHGNCO2-N	UPSELC	-	-	-	-	1	
 	TOP-IN	UGASGIB-N	GIB	-	-	-	-	1	
 	TOP-IN	UGASGIC-N	GIC	-	-	-	-	1	
 	TOP-IN	UGASGIH-N	GIH	-	-	-	-	1	
@@ -2140,6 +2165,8 @@ TID DATA	REGION1
 	TOP-OUT	UELEP1HGN	UPSCH4S	-	-	-	-	1	
 	TOP-OUT	UELEP1HGN	UPSCO2S	-	-	-	-	1	
 	TOP-OUT	UELEP1HGN	UPSHGN	-	-	-	-	1	
+	TOP-OUT	UFTHGNCO2-N	OAG	-	-	-	-	1	
+	TOP-OUT	UFTHGNCO2-N	OKE	-	-	-	-	1	
 	TOP-OUT	UGASGIB-N	CH4SF	-	-	-	-	1	
 	TOP-OUT	UGASGIB-N	GIC	-	-	-	-	1	
 	TOP-OUT	UGASGIC-N	CH4SF	-	-	-	-	1	

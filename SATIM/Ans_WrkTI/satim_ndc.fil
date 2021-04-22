@@ -1,0 +1,469 @@
+ITEMS FILTERS
+-	_ALLPROC	1	All Processes	1	07 Nov 2006 23:34:32	null	(((([GroupFlags]\1) Mod 2) = 1))	null	null	null	null	null	null	null
+-	DMD_PROC	1	Demand Processes	1	28 Jul 2010 08:37:57	null	((((([GroupFlags]\512) Mod 2) = 1)))	null	null	null	null	null	null	null
+-	DMDELC_PROC	1	Demand Processe Electricity	1	27 Feb 2018 12:51:34	null	null	((((([GroupFlags]\512) Mod 2) = 1)) AND (INPCOM.Item2 Like "*ELC*"))	null	null	null	null	null	null
+-	EIMP	1	Imports of Electricity	1	25 Feb 2013 12:16:10	null	((tblITEMS.Item Like "E*I"))	null	null	null	null	null	null	null
+-	ELE_PROC	1	Electric Processes	1	28 Jul 2010 09:31:33	null	((((([GroupFlags]\64) Mod 2) = 1)))	null	null	null	null	null	null	null
+-	ETG	1	Gas plants CCGT and OCGT domestic	1	26 Feb 2018 16:29:42	null	((tblITEMS.Item Like "ETG*"))	null	null	null	((tblITEMS.Item Like "ETG*-I"))	null	null	null
+-	IMIB_ALL	1	IMIB_ALL	1	26 Jul 2011 14:18:05	null	((tblITEMS.Item Like "IMIB*"))	null	null	null	null	null	null	null
+-	IMIBCOA	1	IMIBCOA	1	26 Jul 2011 15:37:23	null	((tblITEMS.Item Like "IMIBCOA*"))	null	null	null	null	null	null	null
+-	IMPORTS-ALL	1	Importation of all commodities	1	02 Jun 2016 16:39:24	null	((tblITEMS.Item Like "IMP*"))	null	null	null	null	null	null	null
+-	S_EBATUTIL	1	Utility Battery Storage	1	26 May 2018 13:50:22	null	((tblITEMS.Item = "ESTSUTL"))	null	null	null	null	null	null	null
+-	S_ESTALL	1	All Battery Storage	1	26 Feb 2018 17:46:44	null	((tblITEMS.Item Like "EST*"))	null	null	null	null	null	null	null
+-	S_ESTDIST	1	Battery Storage Distrubuted Only	1	26 May 2018 13:51:53	null	((tblITEMS.Item Like "ESTS*"))	null	null	null	((tblITEMS.Item = "ESTSUTL"))	null	null	null
+-	S_PWRALL	1	All power plants	1	05 Aug 2013 09:52:33	null	((tblITEMS.Item Like "E*"))	null	null	null	(((tblITEMS.Item = "ETRANS")) OR ((tblITEMS.Item Like "EXP*")) OR ((tblITEMS.Item Like "EPP*")) OR ((tblITEMS.Item Like "EPD*")) OR ((tblITEMS.Item Like "*DEM*")))	null	null	null
+-	S_PWRALLC	1	All centralised power plants. excluding battery storage	1	09 Oct 2018 12:05:34	null	(((tblITEMS.Item Like "ERSOLT*")) OR ((tblITEMS.Item Like "ET*")) OR ((tblITEMS.Item Like "ERW*")) OR ((tblITEMS.Item Like "ERSOLPC*")) OR ((tblITEMS.Item Like "ERHYD*")) OR ((tblITEMS.Item Like "EPT*")))	null	null	null	((tblITEMS.Item Like "ETRANS*"))	null	null	null
+-	S_PWRALLX	1	All power plants. excluding pumped storage	1	27 Jun 2018 11:32:26	null	((tblITEMS.Item Like "E*"))	null	null	null	(((tblITEMS.Item = "ETRANS")) OR ((tblITEMS.Item Like "EXP*")) OR ((tblITEMS.Item Like "EPP*")) OR ((tblITEMS.Item Like "EPD*")) OR ((tblITEMS.Item Like "*DEM*")) OR ((tblITEMS.Item Like "EPT*")))	null	null	null
+-	S_PWRCCGAS	1	Gas power plants - Combined cycle only	1	22 Jun 2018 16:49:37	null	(((tblITEMS.Item = "ETGASCC-N")) OR ((tblITEMS.Item = "ETGICCC-N")))	null	null	null	((tblITEMS.Item Like "ETG*-I"))	null	null	null
+-	S_PWRCL-N	1	New coal plants	1	10 Feb 2017 13:14:09	null	(((tblITEMS.Item Like "E*CL*-N")) OR ((tblITEMS.Item Like "E*CL*-N-A")))	null	null	null	null	null	null	null
+-	S_PWRDCOAL	1	Coal plants domestic	1	26 Jun 2018 14:38:34	null	(((tblITEMS.Item Like "ETC*")) OR ((tblITEMS.Item = "ETCLEPFD-E-A")))	null	null	null	((tblITEMS.Item Like "ETC*-I"))	null	null	null
+-	S_PWRDCOAL-N	1	Coal plants new domestic	1	01 Mar 2013 10:52:18	null	((tblITEMS.Item Like "ETC*-N"))	null	null	null	null	null	null	null
+-	S_PWRDGAS	1	Gas plants CCGT and OCGT domestic	1	27 Feb 2018 12:24:54	null	((tblITEMS.Item Like "ETG*"))	null	null	null	((tblITEMS.Item Like "ETG*-I"))	null	null	null
+-	S_PWRDGAS-N	1	Gas plants CCGT and OCGT new domestic	1	01 Mar 2013 10:23:42	null	((tblITEMS.Item Like "ETG*-N"))	null	null	null	null	null	null	null
+-	S_PWRDPKBATMIN	1	All centralised Batteries	1	25 Oct 2018 09:57:46	null	((tblITEMS.Item Like "EST*"))	null	null	null	((tblITEMS.Item Like "*H*"))	null	null	null
+-	S_PWRDPKGASMIN	1	Activity on combined domestic gas and diesel turbines OCGT and CCGT	1	05 May 2018 13:42:22	null	(((tblITEMS.Item Like "ETG*")) OR ((tblITEMS.Item Like "ETO*")))	null	null	null	((tblITEMS.Item Like "*H*"))	null	null	null
+-	S_PWREPT	1	Domestic Pump Storage	1	26 Feb 2018 16:38:36	null	((tblITEMS.Item Like "EPT*"))	null	null	null	null	null	null	null
+-	S_PWRFIRM	1	Firm centralised power techs	1	09 Apr 2021 07:09:08	null	(((tblITEMS.Item Like "ETG*")) OR ((tblITEMS.Item Like "ETO*")) OR ((tblITEMS.Item Like "ETH*")) OR ((tblITEMS.Item Like "ETNUC*-N")))	null	null	null	((tblITEMS.Item Like "ETGASENS*"))	null	null	null
+-	S_PWRHYD	1	Domestic Hydro	1	26 Feb 2018 16:37:08	null	((tblITEMS.Item Like "ERHYD*"))	null	null	null	((tblITEMS.Item Like "ERHYD*-I"))	null	null	null
+-	S_PWRHYD-I	1	Imported Hydro New	1	04 Mar 2013 21:07:52	null	((tblITEMS.Item Like "ERHYD?-I"))	null	null	null	null	null	null	null
+-	S_PWRNUC	1	Nuclear power plants	1	23 Aug 2013 05:20:58	null	((tblITEMS.Item Like "ETNUC*"))	null	null	null	null	null	null	null
+-	S_PWRNUC_N	1	New Nuclear power plants	1	22 Feb 2013 14:26:25	null	((tblITEMS.Item Like "ETNUC*-N"))	null	null	null	null	null	null	null
+-	S_PWRRWN-N	1	New renewables	1	03 Dec 2012 08:04:11	null	((tblITEMS.Item Like "ER*-N"))	null	null	null	null	null	null	null
+-	S_PWRSOLPA	1	Solar PV all	1	02 Nov 2017 12:37:05	null	((tblITEMS.Item Like "ERSOLP*"))	null	null	null	null	null	null	null
+-	S_PWRSOLPC	1	Solar PV Central	1	16 Dec 2012 17:25:56	null	((tblITEMS.Item Like "ERSOLPC*"))	null	null	null	null	null	null	null
+-	S_PWRSOLT	1	Solar Thermal Plants	1	22 Feb 2013 14:27:00	null	((tblITEMS.Item Like "ERSOLT*"))	null	null	null	null	null	null	null
+-	S_PWRWND	1	Wind Plants	1	25 Feb 2013 13:19:54	null	((tblITEMS.Item Like "ERWND*"))	null	null	null	null	null	null	null
+-	S_TFELC	1	Transport Road Freight - Electricity	1	13 Jul 2018 16:44:15	null	((tblITEMS.Item Like "TF*ELC*"))	null	null	null	(((tblITEMS.Item Like "TFR*")) OR ((tblITEMS.Item Like "TFP*")))	null	null	null
+-	S_TFELC_ALL	1	Transport Freight - Electricity	1	13 Jul 2018 16:43:10	null	((tblITEMS.Item Like "TF*ELC*"))	null	null	null	null	null	null	null
+-	S_TFHCV	1	TFHCV Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TFHCV*"))	null	null	null	null	null	null	null
+-	S_TFHCV1	1	Freight HCV Class1 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV1*"))	null	null	null	null	null	null	null
+-	S_TFHCV1ELC	1	Transport Freight - HCV1 Electricity	1	18 Jan 2017 11:42:32	null	((tblITEMS.Item Like "TFHCV1ELC*"))	null	null	null	null	null	null	null
+-	S_TFHCV1GAS	1	TFHCV1GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV1GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV1ODS	1	TFHCV1ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV1ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV1OGS	1	TFHCV1OGS-N Set	1	12 Apr 2016 12:49:28	null	((tblITEMS.Item Like "TFHCV1OGS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV2	1	Freight HCV Class2 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV2*"))	null	null	null	null	null	null	null
+-	S_TFHCV2ELC	1	Transport Freight - HCV2 Electricity	1	18 Jan 2017 11:45:42	null	((tblITEMS.Item Like "TFHCV2ELC*"))	null	null	null	null	null	null	null
+-	S_TFHCV2GAS	1	TFHCV2GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV2GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV2HGN	1	Transport Freight - HCV2 Hydrogen	1	18 Jan 2017 12:04:43	null	((tblITEMS.Item Like "TFHCV2HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV2ODS	1	TFHCV2ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV2ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV3	1	Freight HCV Class3 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV3*"))	null	null	null	null	null	null	null
+-	S_TFHCV3ELC	1	Transport Freight - HCV3 Electricity	1	18 Jan 2017 11:46:46	null	((tblITEMS.Item Like "TFHCV3ELC*"))	null	null	null	null	null	null	null
+-	S_TFHCV3GAS	1	TFHCV3GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV3GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV3HGN	1	Transport Freight - HCV3 Hydrogen	1	18 Jan 2017 11:50:15	null	((tblITEMS.Item Like "TFHCV3HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV3ODS	1	TFHCV3ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV3ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV4	1	Freight HCV Class4 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV4*"))	null	null	null	null	null	null	null
+-	S_TFHCV4GAS	1	TFHCV4GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV4GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV4HGN	1	Transport Freight - HCV4 Hydrogen	1	18 Jan 2017 11:50:50	null	((tblITEMS.Item Like "TFHCV4HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV4ODS	1	TFHCV4ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV4ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV5	1	Freight HCV Class5 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV5*"))	null	null	null	null	null	null	null
+-	S_TFHCV5GAS	1	TFHCV5GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV5GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV5HGN	1	Transport Freight - HCV5 Hydrogen	1	18 Jan 2017 11:55:16	null	((tblITEMS.Item Like "TFHCV5HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV5ODS	1	TFHCV5ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV5ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV6	1	Freight HCV Class6 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV6*"))	null	null	null	null	null	null	null
+-	S_TFHCV6GAS	1	TFHCV6GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV6GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV6HGN	1	Transport Freight - HCV6 Hydrogen	1	18 Jan 2017 11:52:47	null	((tblITEMS.Item Like "TFHCV6HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV6ODS	1	TFHCV6ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV6ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV7	1	Freight HCV Class7 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV7*"))	null	null	null	null	null	null	null
+-	S_TFHCV7GAS	1	TFHCV7GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV7GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV7HGN	1	Transport Freight - HCV7 Hydrogen	1	18 Jan 2017 11:53:24	null	((tblITEMS.Item Like "TFHCV7HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV7ODS	1	TFHCV7ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV7ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV8	1	Freight HCV Class8 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV8*"))	null	null	null	null	null	null	null
+-	S_TFHCV8GAS	1	TFHCV8GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV8GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV8HGN	1	Transport Freight - HCV8 Hydrogen	1	18 Jan 2017 11:54:17	null	((tblITEMS.Item Like "TFHCV8HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV8ODS	1	TFHCV8ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV8ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV9	1	Freight HCV Class9 Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV9*"))	null	null	null	null	null	null	null
+-	S_TFHCV9GAS	1	TFHCV9GAS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV9GAS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCV9HGN	1	Transport Freight - HCV9 Hydrogen	1	18 Jan 2017 11:55:07	null	((tblITEMS.Item Like "TFHCV9HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCV9ODS	1	TFHCV9ODS-N Set	1	08 Apr 2016 12:14:24	null	((tblITEMS.Item Like "TFHCV9ODS-N*"))	null	null	null	null	null	null	null
+-	S_TFHCVELC	1	Transport Freight - HCV Electricity	1	18 Jan 2017 11:44:45	null	((tblITEMS.Item Like "TFHCV*ELC*"))	null	null	null	null	null	null	null
+-	S_TFHCVGAS	1	TFHCVGAS-N Set	1	18 Jan 2017 12:09:12	null	((tblITEMS.Item Like "TFHCV*GAS*"))	null	null	null	null	null	null	null
+-	S_TFHCVHGN	1	Transport Freight - HCV Hydrogen	1	18 Jan 2017 11:56:41	null	((tblITEMS.Item Like "TFHCV*HGN*"))	null	null	null	null	null	null	null
+-	S_TFHCVODS	1	TFHCVODS-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TFHCVODS-N*"))	null	null	null	null	null	null	null
+-	S_TFLCV	1	TFLCV Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TFLCV*"))	null	null	null	null	null	null	null
+-	S_TFLCVELC	1	Transport Freight: LCVs Electric	1	12 Jan 2017 17:48:33	null	((tblITEMS.Item Like "TF*LCV*ELC*"))	null	null	null	null	null	null	null
+-	S_TFLCVGAS	1	TFLCVGAS-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TFLCVGAS-N*"))	null	null	null	null	null	null	null
+-	S_TFLCVODS	1	TFLCVODS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TFLCVODS-N*"))	null	null	null	null	null	null	null
+-	S_TFLCVODSH	1	TFLCVODSH-N Set	1	05 Mar 2019 17:53:38	null	((tblITEMS.Item Like "TFLCVODSH-N*"))	null	null	null	null	null	null	null
+-	S_TFLCVOGS	1	TFLCVOGS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TFLCVOGS-N*"))	null	null	null	null	null	null	null
+-	S_TFLCVOGSH	1	TFLCVOGSH-N Set	1	05 Mar 2019 17:54:01	null	((tblITEMS.Item Like "TFLCVOGSH-N*"))	null	null	null	null	null	null	null
+-	S_TFRCO	1	Transport Freight - Rail Corridor	1	17 Jan 2017 15:54:32	null	((tblITEMS.Item Like "TFRCO*"))	null	null	null	null	null	null	null
+-	S_TFRCOGAS	1	Transport Freight - Rail Corridor Gas	1	18 Jan 2017 12:06:07	null	((tblITEMS.Item Like "TFRCOGAS*"))	null	null	null	null	null	null	null
+-	S_TPELC	1	Passenger Transport - Electric	1	01 Aug 2017 17:36:58	null	((tblITEMS.Item Like "TP*ELC*"))	null	null	null	null	null	null	null
+-	S_TPPRBGS	1	TPPRBGS-N Set	1	18 Nov 2016 17:42:32	null	((tblITEMS.Item Like "TPPR*BGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCAR	1	TPPRCAR Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRCAR*"))	null	null	null	null	null	null	null
+-	S_TPPRCARBGS	1	TPPRCARBGS-N Set	1	18 Nov 2016 14:49:50	null	((tblITEMS.Item Like "TPPRCARBGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCARELC	1	TPPRCARELC-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRCARELC-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCARGAS	1	TPPRCARGAS-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TPPRCARGAS-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCARHGNF	1	TPPRCARHGNF-N Set	1	04 Apr 2013 13:12:20	null	((tblITEMS.Item Like "TPPRCARHGNF-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCARODS	1	TPPRCARODS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRCARODS-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCARODSH	1	TPPRCARODSH-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRCARODSH-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCAROGS	1	TPPRCAROGS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRCAROGS-N*"))	null	null	null	null	null	null	null
+-	S_TPPRCAROGSH	1	TPPRCAROGSH-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRCAROGSH-N*"))	null	null	null	null	null	null	null
+-	S_TPPRELC	1	Passenger Private Road Transport - Electric	1	13 Jul 2018 16:39:55	null	((tblITEMS.Item Like "TPPR*ELC*"))	null	null	null	(((tblITEMS.Item Like "*GAT*")) OR ((tblITEMS.Item Like "*MER*")))	null	null	null
+-	S_TPPRSUV	1	TPPRSUV Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRSUV*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVBGS	1	TPPRSUVBGS-N Set	1	18 Nov 2016 15:12:19	null	((tblITEMS.Item Like "TPPRSUVBGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVELC	1	TPPRSUVELC-N Set	1	13 Jul 2018 14:14:38	null	((tblITEMS.Item Like "TPPRSUVELC-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVGAS	1	TPPRSUVGAS-N Set	1	20 Jun 2014 12:44:46	null	((tblITEMS.Item Like "TPPRSUVGAS-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVHGNF	1	TPPRSUVHGNF-N Set	1	04 Apr 2013 13:06:49	null	((tblITEMS.Item Like "TPPRSUVHGNF-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVODS	1	TPPRSUVODS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRSUVODS-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVODSH	1	TPPRSUVODSH-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRSUVODSH-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVOGS	1	TPPRSUVOGS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRSUVOGS-N*"))	null	null	null	null	null	null	null
+-	S_TPPRSUVOGSH	1	TPPRSUVOGSH-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPRSUVOGSH-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBGS	1	TPPUBGS-N Set	1	18 Nov 2016 17:36:50	null	((tblITEMS.Item Like "TPPU*BGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBRT	1	TPPUBRT Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUBRT*"))	null	null	null	null	null	null	null
+-	S_TPPUBRTBGS	1	TPPUBRTBGS-N Set	1	18 Nov 2016 15:12:29	null	((tblITEMS.Item Like "TPPUBRTBGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBRTELC	1	TPPUBRTELC-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TPPUBRTELC-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBRTGAS	1	TPPUBRTGAS-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TPPUBRTGAS-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBRTHGNF	1	TPPUBRTHGNF-N Set	1	12 Apr 2016 12:51:33	null	((tblITEMS.Item Like "TPPUBRTHGNF-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBRTODS	1	TPPUBRTODS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUBRTODS-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBUS	1	TPPUBUS Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUBUS*"))	null	null	null	null	null	null	null
+-	S_TPPUBUSBGS	1	TPPUBUSBGS-N Set	1	18 Nov 2016 15:12:46	null	((tblITEMS.Item Like "TPPUBUSBGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBUSELC	1	Transport Public Bus Electric	1	24 Jan 2017 17:01:45	null	((tblITEMS.Item Like "TPPUBUSELC*"))	null	null	null	null	null	null	null
+-	S_TPPUBUSGAS	1	TPPUBUSGAS-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TPPUBUSGAS-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBUSHGNF	1	TPPUBUSHGNF-N Set	1	10 Apr 2013 23:52:53	null	((tblITEMS.Item Like "TPPUBUSHGNF-N*"))	null	null	null	null	null	null	null
+-	S_TPPUBUSODS	1	TPPUBUSODS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUBUSODS-N*"))	null	null	null	null	null	null	null
+-	S_TPPUELC	1	Passenger Public Road Transport - Electric	1	13 Jul 2018 16:38:34	null	((tblITEMS.Item Like "TPPU*ELC*"))	null	null	null	(((tblITEMS.Item Like "*GAT*")) OR ((tblITEMS.Item Like "*MER*")) OR ((tblITEMS.Item Like "*GAT*")) OR ((tblITEMS.Item Like "*MER*")))	null	null	null
+-	S_TPPUMBT	1	TPPUMBT Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUMBT*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTBGS	1	TPPUMBTBGS-N Set	1	18 Nov 2016 15:13:12	null	((tblITEMS.Item Like "TPPUMBTBGS*-N*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTELC	1	TPPUMBTELC-N Set	1	11 Jul 2018 18:03:04	null	((tblITEMS.Item Like "TPPUMBTELC-N*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTGAS	1	TPPUMBTGAS-N Set	1	24 May 2012 13:56:52	null	((tblITEMS.Item Like "TPPUMBTGAS-N*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTHGNF	1	TPPUMBTHGNF-N Set	1	10 Apr 2013 23:53:55	null	((tblITEMS.Item Like "TPPUMBTHGNF-N*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTODS	1	TPPUMBTODS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUMBTODS-N*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTODSH	1	TPPUMBTODSH-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUMBTODSH-N*"))	null	null	null	null	null	null	null
+-	S_TPPUMBTOGS	1	TPPUMBTOGS-N Set	1	10 Feb 2012 17:03:55	null	((tblITEMS.Item Like "TPPUMBTOGS-N*"))	null	null	null	null	null	null	null
+-	S_TRA_RETRO	1	Transport technologies retrofitted for alternative fuel use	1	22 Jun 2016 09:19:31	*	((tblITEMS.Item Like "*-R"))	null	null	null	null	null	null	null
+-	S_TRAELC	1	Transport Electric Vehicles	1	18 Jan 2017 12:51:56	null	(((tblITEMS.Item Like "TP*ELC*")) OR ((tblITEMS.Item Like "TF*ELC*")) OR ((tblITEMS.Item Like "TFR*ELC*")))	null	null	null	((tblITEMS.Item Like "TFPI*"))	null	null	null
+-	S_TRAELC_H	1	Transport: Electric and Hybrid Road Fleet (Freight and Private)	1	18 Oct 2017 11:44:05	null	(((tblITEMS.Item Like "TP*ELC*")) OR ((tblITEMS.Item Like "TP*O?SH-**")) OR ((tblITEMS.Item Like "TFH*O?SH-**")) OR ((tblITEMS.Item Like "TFL*O?SH-**")) OR ((tblITEMS.Item Like "TFH*ELC**")) OR ((tblITEMS.Item Like "TFL*ELC**")))	null	null	null	(((tblITEMS.Item Like "TPPU*GAT*")) OR ((tblITEMS.Item Like "TPPU*MER*")))	null	null	null
+-	S_TRAPARC	1	Transport Road Vehicles	1	18 Oct 2017 12:13:55	null	(((tblITEMS.Item Like "TP*")) OR ((tblITEMS.Item Like "TFL*")) OR ((tblITEMS.Item Like "TFH*")))	null	null	null	(((tblITEMS.Item Like "TP*GAT*")) OR ((tblITEMS.Item Like "TP*MER*")))	null	null	null
+-	S_XELC	1	All elc distribution (peak demand)	1	27 Feb 2018 12:22:57	null	((tblITEMS.Item Like "X*ELC"))	null	null	null	((tblITEMS.Item = "XINDELC"))	null	null	null
+-	S-CEM-ALLKILNS	1	Set for Industry - NMM sector - All kilns	1	13 Jun 2014 14:02:45	null	((tblITEMS.Item Like "*INMCEMK*"))	null	null	null	null	null	null	null
+-	S-CEMKLD-E	1	Set for Industry - NMM - Kiln Long Dry - Existing	1	13 Jun 2014 14:03:16	null	((tblITEMS.Item Like "*KLD-E*"))	null	null	null	null	null	null	null
+-	S-CEMKLD-E-T1	1	Set for Industry - NMM - Kiln Long Dry - Existing - EE Technology Level 1	1	13 Jun 2014 14:03:34	null	((tblITEMS.Item Like "*KLD-E-T1*"))	null	null	null	null	null	null	null
+-	S-CEMKLD-E-T2	1	Set for Industry - NMM - Kiln Long Dry - Existing - EE Technology Level 2	1	13 Jun 2014 14:03:45	null	((tblITEMS.Item Like "*KLD-E-T2*"))	null	null	null	null	null	null	null
+-	S-CEMKPP-E	1	Set for Industry - NMM - Kiln Suspension Preheater Precalciner - Existing	1	13 Jun 2014 14:04:28	null	((tblITEMS.Item Like "*KPP-E*"))	null	null	null	null	null	null	null
+-	S-CEMKPP-E-T1	1	Set for Industry - NMM - Kiln Suspension Preheater Precalciner - Existing - EE Technology Level 1	1	13 Jun 2014 14:04:41	null	((tblITEMS.Item Like "*KPP-E-T1*"))	null	null	null	null	null	null	null
+-	S-CEMKPP-E-T2	1	Set for Industry - NMM - Kiln Suspension Preheater Precalciner - Existing - EE Technology Level 2	1	13 Jun 2014 14:04:53	null	((tblITEMS.Item Like "*KPP-E-T2*"))	null	null	null	null	null	null	null
+-	S-CEMKSP-E	1	Set for Industry - NMM - Kiln Suspension Preheater - Existing	1	13 Jun 2014 14:03:58	null	((tblITEMS.Item Like "*KSP-E*"))	null	null	null	null	null	null	null
+-	S-CEMKSP-E-T1	1	Set for Industry - NMM - Kiln Suspension Preheater - Existing - EE Technology Level 1	1	13 Jun 2014 14:04:07	null	((tblITEMS.Item Like "*KSP-E-T1*"))	null	null	null	null	null	null	null
+-	S-CEMKSP-E-T2	1	Set for Industry - NMM - Kiln Suspension Preheater - Existing - EE Technology Level 2	1	13 Jun 2014 14:04:16	null	((tblITEMS.Item Like "*KSP-E-T2*"))	null	null	null	null	null	null	null
+-	S-IIS	1	Set for Industry - Iron&Steel - All steel processes	1	19 Apr 2021 15:06:56	null	((tblITEMS.Item Like "*IIS*"))	null	null	null	(((tblITEMS.Item Like "*COV*")) OR ((tblITEMS.Item Like "X*")) OR ((tblITEMS.Item Like "E*")) OR ((tblITEMS.Item Like "IISH*")))	null	null	null
+-	S-IIS-BFBOF	1	Set for Industry - Iron&Steel - BFBOF route - All	1	25 Nov 2013 22:01:56	null	((tblITEMS.Item Like "*BFBOF*"))	null	null	null	null	null	null	null
+-	S-IIS-BFBOF-E	1	Set for Industry - Iron&Steel - BFBOF route - All existing	1	11 Nov 2013 18:38:17	null	((tblITEMS.Item Like "*BFBOF-E*"))	null	null	null	null	null	null	null
+-	S-IIS-BFBOF-E-T1	1	Set for Industry - Iron&Steel - BFBOF route - Energy Efficiency Technology level 1	1	11 Nov 2013 18:38:55	null	((tblITEMS.Item Like "*BFBOF-E-T1*"))	null	null	null	null	null	null	null
+-	S-IIS-BFBOF-E-T2	1	Set for Industry - Iron&Steel - BFBOF route - Energy Efficiency Technology level 2	1	11 Nov 2013 18:39:13	null	((tblITEMS.Item Like "*BFBOF-E-T2*"))	null	null	null	null	null	null	null
+-	S-IIS-BFBOF-EX	1	Set for Industry - Iron&Steel - BFBOF route - Main existing	1	11 Nov 2013 18:47:14	null	((tblITEMS.Item Like "*BFBOF-E*"))	null	null	null	(((tblITEMS.Item Like "*T1*")) OR ((tblITEMS.Item Like "*T2*")))	null	null	null
+-	S-IIS-COREAF-E	1	Set for Industry - Iron&Steel - COREAF route - All existing	1	06 Oct 2014 22:57:31	null	((tblITEMS.Item Like "*COREAF-E*"))	null	null	null	null	null	null	null
+-	S-IIS-COREAF-T1	1	Set for Industry - Iron&Steel - COREAFProcess - Energy efficiency technology level 1	1	06 Oct 2014 22:57:49	null	((tblITEMS.Item Like "*COREAF-E-T1*"))	null	null	null	null	null	null	null
+-	S-IIS-COREAF-T2	1	Set for Industry - Iron&Steel - COREAF route - Energy Efficiency Technology level 2	1	06 Oct 2014 22:58:08	null	((tblITEMS.Item Like "*COREAF-E-T2*"))	null	null	null	null	null	null	null
+-	S-IIS-DRIEAF-E	1	Set for Industry - Iron&Steel - DRIEAF route - All existing	1	05 Nov 2013 17:57:07	null	((tblITEMS.Item Like "*DRIEAF-E*"))	null	null	null	null	null	null	null
+-	S-IIS-DRIEAF-EX	1	Set for Industry - Iron&Steel - DRIEAF Process - Main existing	1	11 Nov 2013 18:48:08	null	((tblITEMS.Item Like "*DRIEAF-E*"))	null	null	null	(((tblITEMS.Item Like "*T1*")) OR ((tblITEMS.Item Like "*T2*")))	null	null	null
+-	S-IIS-DRIEAF-T1	1	Set for Industry - Iron&Steel - DRIEAF Process - Energy efficiency technology level 1	1	11 Nov 2013 18:44:09	null	((tblITEMS.Item Like "*DRIEAF-E-T1*"))	null	null	null	null	null	null	null
+-	S-IIS-DRIEAF-T2	1	Set for Industry - Iron&Steel - DRIEAF route - Energy Efficiency Technology level 2	1	05 Nov 2013 17:57:18	null	((tblITEMS.Item Like "*DRIEAF-E-T2*"))	null	null	null	null	null	null	null
+-	S-IIS-OTHEAF-E	1	Set for Industry - Iron&Steel - OTHEAF route - All existing	1	22 Nov 2013 15:37:40	null	((tblITEMS.Item Like "*OTHEAF-E*"))	null	null	null	null	null	null	null
+-	S-IIS-OTHEAF-T1	1	Set for Industry - Iron&Steel - OTHEAF Process - Energy efficiency technology level 1	1	22 Nov 2013 15:36:45	null	((tblITEMS.Item Like "*OTHEAF-E-T1*"))	null	null	null	null	null	null	null
+-	S-IIS-OTHEAF-T2	1	Set for Industry - Iron&Steel - OTHEAF route - Energy Efficiency Technology level 2	1	22 Nov 2013 15:37:07	null	((tblITEMS.Item Like "*OTHEAF-E-T2*"))	null	null	null	null	null	null	null
+-	S-IIS-SCR	1	Set for Industry - Iron&Steel - All EAF processes	1	22 Nov 2013 14:05:57	null	((tblITEMS.Item Like "*EAF*"))	null	null	null	null	null	null	null
+-	S-IIS-SCREAF	1	Set for Industry - Iron&Steel - SCREAF route - All processes	1	05 Nov 2013 17:57:24	null	((tblITEMS.Item Like "*SCREAF*"))	null	null	null	null	null	null	null
+-	S-IIS-SCREAF-E	1	Set for Industry - Iron&Steel - SCREAF route - All existing	1	11 Nov 2013 18:47:55	null	((tblITEMS.Item Like "*SCREAF-E*"))	null	null	null	null	null	null	null
+-	S-IIS-SCREAF-EX	1	Set for Industry - Iron&Steel - SCREAF route - Main existing	1	11 Nov 2013 18:48:34	null	((tblITEMS.Item Like "*SCREAF-E*"))	null	null	null	(((tblITEMS.Item Like "*T1*")) OR ((tblITEMS.Item Like "*T2*")))	null	null	null
+-	S-IIS-SCREAF-T1	1	Set for Industry - Iron&Steel - SCREAF route - Energy Efficiency Technology level 1	1	05 Nov 2013 17:57:37	null	((tblITEMS.Item Like "*SCREAF-E-T1*"))	null	null	null	null	null	null	null
+-	S-IIS-SCREAF-T2	1	Set for Industry - Iron&Steel - SCREAF route - Energy Efficiency Technology level 2	1	05 Nov 2013 17:57:44	null	((tblITEMS.Item Like "*SCREAF-E-T2*"))	null	null	null	null	null	null	null
+-	S-INM-ALLKILNS	1	Set for Industry - NMM sector - All kilns	1	06 Nov 2013 17:17:31	null	((tblITEMS.Item Like "*INMK*"))	null	null	null	null	null	null	null
+-	S-INMKLD-E	1	Set for Industry - NMM - Kiln Long Dry - Existing	1	06 Nov 2013 18:56:42	null	((tblITEMS.Item Like "*KLD-E*"))	null	null	null	null	null	null	null
+-	S-INMKLD-E-T1	1	Set for Industry - NMM - Kiln Long Dry - Existing - EE Technology Level 1	1	06 Nov 2013 18:57:13	null	((tblITEMS.Item Like "*KLD-E-T1*"))	null	null	null	null	null	null	null
+-	S-INMKLD-E-T2	1	Set for Industry - NMM - Kiln Long Dry - Existing - EE Technology Level 2	1	06 Nov 2013 18:57:24	null	((tblITEMS.Item Like "*KLD-E-T2*"))	null	null	null	null	null	null	null
+-	S-INMKSP-E	1	Set for Industry - NMM - Kiln Suspension Preheater - Existing	1	06 Nov 2013 18:57:53	null	((tblITEMS.Item Like "*KSP-E*"))	null	null	null	null	null	null	null
+-	S-INMKSP-E-T1	1	Set for Industry - NMM - Kiln Suspension Preheater - Existing - EE Technology Level 1	1	06 Nov 2013 18:58:16	null	((tblITEMS.Item Like "*KSP-E-T1*"))	null	null	null	null	null	null	null
+-	S-INMKSP-E-T2	1	Set for Industry - NMM - Kiln Suspension Preheater - Existing - EE Technology Level 2	1	06 Nov 2013 18:58:28	null	((tblITEMS.Item Like "*KSP-E-T2*"))	null	null	null	null	null	null	null
+-	S-INMKSPP-E	1	Set for Industry - NMM - Kiln Suspension Preheater Precalciner - Existing	1	06 Nov 2013 18:58:46	null	((tblITEMS.Item Like "*KSPP-E*"))	null	null	null	null	null	null	null
+-	S-INMKSPP-E-T1	1	Set for Industry - NMM - Kiln Suspension Preheater Precalciner - Existing - EE Technology Level 1	1	06 Nov 2013 18:59:09	null	((tblITEMS.Item Like "*KSPP-E-T1*"))	null	null	null	null	null	null	null
+-	S-INMKSPP-E-T2	1	Set for Industry - NMM - Kiln Suspension Preheater Precalciner - Existing - EE Technology Level 2	1	06 Nov 2013 18:59:20	null	((tblITEMS.Item Like "*KSPP-E-T2*"))	null	null	null	null	null	null	null
+-	S-IPP	1	Set for Industry - Pulp&Paper - All pulp	1	22 Jun 2014 23:21:12	null	(((tblITEMS.Item Like "IPPCHE*")) OR ((tblITEMS.Item Like "IPPMCH*")) OR ((tblITEMS.Item Like "IPPREC*")))	null	null	null	null	null	null	null
+-	S-IPP-CHE-E	1	Set for Industry - Pulp&Paper - Chemical Pulping - All existing	1	20 Jun 2014 12:17:51	null	((tblITEMS.Item Like "*CHE-E*"))	null	null	null	null	null	null	null
+-	S-IPP-CHE-E-T1	1	Set for Industry - Pulp&Paper - Chemical Pulping - EE Tech level 1	1	20 Jun 2014 12:18:01	null	((tblITEMS.Item Like "*CHE-E-T1*"))	null	null	null	null	null	null	null
+-	S-IPP-CHE-E-T2	1	Set for Industry - Pulp&Paper - Chemical Pulping - EE Tech level 2	1	20 Jun 2014 12:18:12	null	((tblITEMS.Item Like "*CHE-E-T2*"))	null	null	null	null	null	null	null
+-	S-IPP-DIS-E	1	Set for Industry - Pulp&Paper - Dissolving Pulp - All existing	1	19 Jun 2014 15:45:36	null	((tblITEMS.Item Like "*DIS-E*"))	null	null	null	null	null	null	null
+-	S-IPP-DIS-E-T1	1	Set for Industry - Pulp&Paper - Dissolving Pulp - EE Tech level 1	1	19 Jun 2014 15:45:57	null	((tblITEMS.Item Like "*DIS-E-T1*"))	null	null	null	null	null	null	null
+-	S-IPP-DIS-E-T2	1	Set for Industry - Pulp&Paper - Dissolving Pulp - EE Tech level 2	1	19 Jun 2014 15:46:22	null	((tblITEMS.Item Like "*DIS-E-T2*"))	null	null	null	null	null	null	null
+-	S-IPP-MCH-E	1	Set for Industry - Pulp&Paper - Mechanical Pulping - All existing	1	19 Jun 2014 15:44:35	null	((tblITEMS.Item Like "*MCH-E*"))	null	null	null	null	null	null	null
+-	S-IPP-MCH-E-T1	1	Set for Industry - Pulp&Paper - Mechanical Pulping - EE Tech level 1	1	19 Jun 2014 15:44:50	null	((tblITEMS.Item Like "*MCH-E-T1*"))	null	null	null	null	null	null	null
+-	S-IPP-MCH-E-T2	1	Set for Industry - Pulp&Paper - Mechanical Pulping - EE Tech level 2	1	19 Jun 2014 15:45:10	null	((tblITEMS.Item Like "*MCH-E-T2*"))	null	null	null	null	null	null	null
+-	S-IPP-PAP-E	1	Set for Industry - Pulp&Paper - Paper Mill - All existing	1	19 Jun 2014 15:47:44	null	((tblITEMS.Item Like "*PAP-E*"))	null	null	null	null	null	null	null
+-	S-IPP-PAP-E-T1	1	Set for Industry - Pulp&Paper - Paper Mill - EE Tech level 1	1	19 Jun 2014 15:47:56	null	((tblITEMS.Item Like "*PAP-E-T1*"))	null	null	null	null	null	null	null
+-	S-IPP-PAP-E-T2	1	Set for Industry - Pulp&Paper - Paper Mill - EE Tech level 2	1	19 Jun 2014 15:48:05	null	((tblITEMS.Item Like "*PAP-E-T2*"))	null	null	null	null	null	null	null
+-	S-IPPREC	1	Set for Industry - Pulp&Paper - Recovered paper SHARE	1	22 Jun 2014 23:22:15	null	((tblITEMS.Item Like "IPPREC*"))	null	null	null	null	null	null	null
+-	S-IPP-REC-E	1	Set for Industry - Pulp&Paper - Recovered paper Pulp - All existing	1	19 Jun 2014 15:46:45	null	((tblITEMS.Item Like "*REC-E*"))	null	null	null	null	null	null	null
+-	S-IPP-REC-E-T1	1	Set for Industry - Pulp&Paper - Recovered paper Pulp - EE Tech level 1	1	19 Jun 2014 15:47:06	null	((tblITEMS.Item Like "*REC-E-T1*"))	null	null	null	null	null	null	null
+-	S-IPP-REC-E-T2	1	Set for Industry - Pulp&Paper - Recovered paper Pulp - EE Tech level 2	1	19 Jun 2014 15:47:26	null	((tblITEMS.Item Like "*REC-E-T2*"))	null	null	null	null	null	null	null
+-	S-RHEWG-ALL	1	Residential water heating ALL Geysers	1	27 Aug 2020 22:12:18	null	((tblITEMS.Item Like "RHEW*"))	null	null	null	((tblITEMS.Item Like "RHEWOLP*"))	null	null	null
+-	S-RHEWG-EFF	1	Residential high income filter for solar water heaters and heatpumps	1	19 Dec 2017 18:48:29	null	(((tblITEMS.Item Like "RHEWELCCHP*")) OR ((tblITEMS.Item Like "RHEWELCSWH*")))	null	null	null	null	null	null	null
+ITEMS FILTERS CELLS
+-	_ALLPROC	1	3	True	PRC
+-	DMD_PROC	1	3	True	DMD
+-	DMDELC_PROC	1	3	True	DMD
+-	DMDELC_PROC	1	4	True	Like "*ELC*"
+-	EIMP	1	1	True	Like "E*I"
+-	ELE_PROC	1	3	True	ELE
+-	ETG	1	1	False	Like "ETG*-I"
+-	ETG	1	1	True	Like "ETG*"
+-	IMIB_ALL	1	1	True	Like "IMIB*"
+-	IMIBCOA	1	1	True	Like "IMIBCOA*"
+-	IMPORTS-ALL	1	1	True	Like "IMP*"
+-	S_EBATUTIL	1	1	True	= "ESTSUTL"
+-	S_ESTALL	1	1	True	Like "EST*"
+-	S_ESTDIST	1	1	True	Like "ESTS*"
+-	S_ESTDIST	1	1	False	= "ESTSUTL"
+-	S_PWRALL	3	1	False	Like "EPP*"
+-	S_PWRALL	1	1	True	Like "E*"
+-	S_PWRALL	4	1	False	Like "EPD*"
+-	S_PWRALL	5	1	False	Like "*DEM*"
+-	S_PWRALL	1	1	False	= "ETRANS"
+-	S_PWRALL	2	1	False	Like "EXP*"
+-	S_PWRALLC	3	1	True	Like "ERW*"
+-	S_PWRALLC	6	1	True	Like "EPT*"
+-	S_PWRALLC	4	1	True	Like "ERSOLPC*"
+-	S_PWRALLC	2	1	True	Like "ET*"
+-	S_PWRALLC	1	1	False	Like "ETRANS*"
+-	S_PWRALLC	1	1	True	Like "ERSOLT*"
+-	S_PWRALLC	5	1	True	Like "ERHYD*"
+-	S_PWRALLX	1	1	False	= "ETRANS"
+-	S_PWRALLX	1	1	True	Like "E*"
+-	S_PWRALLX	2	1	False	Like "EXP*"
+-	S_PWRALLX	4	1	False	Like "EPD*"
+-	S_PWRALLX	5	1	False	Like "*DEM*"
+-	S_PWRALLX	6	1	False	Like "EPT*"
+-	S_PWRALLX	3	1	False	Like "EPP*"
+-	S_PWRCCGAS	2	1	True	= "ETGICCC-N"
+-	S_PWRCCGAS	1	1	False	Like "ETG*-I"
+-	S_PWRCCGAS	1	1	True	= "ETGASCC-N"
+-	S_PWRCL-N	2	1	True	Like "E*CL*-N-A"
+-	S_PWRCL-N	1	1	True	Like "E*CL*-N"
+-	S_PWRDCOAL	2	1	True	= "ETCLEPFD-E-A"
+-	S_PWRDCOAL	1	1	False	Like "ETC*-I"
+-	S_PWRDCOAL	1	1	True	Like "ETC*"
+-	S_PWRDCOAL-N	1	1	True	Like "ETC*-N"
+-	S_PWRDGAS	1	1	False	Like "ETG*-I"
+-	S_PWRDGAS	1	1	True	Like "ETG*"
+-	S_PWRDGAS-N	1	1	True	Like "ETG*-N"
+-	S_PWRDPKBATMIN	1	1	True	Like "EST*"
+-	S_PWRDPKBATMIN	1	1	False	Like "*H*"
+-	S_PWRDPKGASMIN	2	1	True	Like "ETO*"
+-	S_PWRDPKGASMIN	1	1	False	Like "*H*"
+-	S_PWRDPKGASMIN	1	1	True	Like "ETG*"
+-	S_PWREPT	1	1	True	Like "EPT*"
+-	S_PWRFIRM	1	1	True	Like "ETG*"
+-	S_PWRFIRM	4	1	True	Like "ETNUC*-N"
+-	S_PWRFIRM	3	1	True	Like "ETH*"
+-	S_PWRFIRM	1	1	False	Like "ETGASENS*"
+-	S_PWRFIRM	2	1	True	Like "ETO*"
+-	S_PWRHYD	1	1	True	Like "ERHYD*"
+-	S_PWRHYD	1	1	False	Like "ERHYD*-I"
+-	S_PWRHYD-I	1	1	True	Like "ERHYD?-I"
+-	S_PWRNUC	1	1	True	Like "ETNUC*"
+-	S_PWRNUC_N	1	1	True	Like "ETNUC*-N"
+-	S_PWRRWN-N	1	1	True	Like "ER*-N"
+-	S_PWRSOLPA	1	1	True	Like "ERSOLP*"
+-	S_PWRSOLPC	1	1	True	Like "ERSOLPC*"
+-	S_PWRSOLT	1	1	True	Like "ERSOLT*"
+-	S_PWRWND	1	1	True	Like "ERWND*"
+-	S_TFELC	1	1	False	Like "TFR*"
+-	S_TFELC	1	1	True	Like "TF*ELC*"
+-	S_TFELC	2	1	False	Like "TFP*"
+-	S_TFELC_ALL	1	1	True	Like "TF*ELC*"
+-	S_TFHCV	1	1	True	Like "TFHCV*"
+-	S_TFHCV1	1	1	True	Like "TFHCV1*"
+-	S_TFHCV1ELC	1	1	True	Like "TFHCV1ELC*"
+-	S_TFHCV1GAS	1	1	True	Like "TFHCV1GAS-N*"
+-	S_TFHCV1ODS	1	1	True	Like "TFHCV1ODS-N*"
+-	S_TFHCV1OGS	1	1	True	Like "TFHCV1OGS-N*"
+-	S_TFHCV2	1	1	True	Like "TFHCV2*"
+-	S_TFHCV2ELC	1	1	True	Like "TFHCV2ELC*"
+-	S_TFHCV2GAS	1	1	True	Like "TFHCV2GAS-N*"
+-	S_TFHCV2HGN	1	1	True	Like "TFHCV2HGN*"
+-	S_TFHCV2ODS	1	1	True	Like "TFHCV2ODS-N*"
+-	S_TFHCV3	1	1	True	Like "TFHCV3*"
+-	S_TFHCV3ELC	1	1	True	Like "TFHCV3ELC*"
+-	S_TFHCV3GAS	1	1	True	Like "TFHCV3GAS-N*"
+-	S_TFHCV3HGN	1	1	True	Like "TFHCV3HGN*"
+-	S_TFHCV3ODS	1	1	True	Like "TFHCV3ODS-N*"
+-	S_TFHCV4	1	1	True	Like "TFHCV4*"
+-	S_TFHCV4GAS	1	1	True	Like "TFHCV4GAS-N*"
+-	S_TFHCV4HGN	1	1	True	Like "TFHCV4HGN*"
+-	S_TFHCV4ODS	1	1	True	Like "TFHCV4ODS-N*"
+-	S_TFHCV5	1	1	True	Like "TFHCV5*"
+-	S_TFHCV5GAS	1	1	True	Like "TFHCV5GAS-N*"
+-	S_TFHCV5HGN	1	1	True	Like "TFHCV5HGN*"
+-	S_TFHCV5ODS	1	1	True	Like "TFHCV5ODS-N*"
+-	S_TFHCV6	1	1	True	Like "TFHCV6*"
+-	S_TFHCV6GAS	1	1	True	Like "TFHCV6GAS-N*"
+-	S_TFHCV6HGN	1	1	True	Like "TFHCV6HGN*"
+-	S_TFHCV6ODS	1	1	True	Like "TFHCV6ODS-N*"
+-	S_TFHCV7	1	1	True	Like "TFHCV7*"
+-	S_TFHCV7GAS	1	1	True	Like "TFHCV7GAS-N*"
+-	S_TFHCV7HGN	1	1	True	Like "TFHCV7HGN*"
+-	S_TFHCV7ODS	1	1	True	Like "TFHCV7ODS-N*"
+-	S_TFHCV8	1	1	True	Like "TFHCV8*"
+-	S_TFHCV8GAS	1	1	True	Like "TFHCV8GAS-N*"
+-	S_TFHCV8HGN	1	1	True	Like "TFHCV8HGN*"
+-	S_TFHCV8ODS	1	1	True	Like "TFHCV8ODS-N*"
+-	S_TFHCV9	1	1	True	Like "TFHCV9*"
+-	S_TFHCV9GAS	1	1	True	Like "TFHCV9GAS-N*"
+-	S_TFHCV9HGN	1	1	True	Like "TFHCV9HGN*"
+-	S_TFHCV9ODS	1	1	True	Like "TFHCV9ODS-N*"
+-	S_TFHCVELC	1	1	True	Like "TFHCV*ELC*"
+-	S_TFHCVGAS	1	1	True	Like "TFHCV*GAS*"
+-	S_TFHCVHGN	1	1	True	Like "TFHCV*HGN*"
+-	S_TFHCVODS	1	1	True	Like "TFHCVODS-N*"
+-	S_TFLCV	1	1	True	Like "TFLCV*"
+-	S_TFLCVELC	1	1	True	Like "TF*LCV*ELC*"
+-	S_TFLCVGAS	1	1	True	Like "TFLCVGAS-N*"
+-	S_TFLCVODS	1	1	True	Like "TFLCVODS-N*"
+-	S_TFLCVODSH	1	1	True	Like "TFLCVODSH-N*"
+-	S_TFLCVOGS	1	1	True	Like "TFLCVOGS-N*"
+-	S_TFLCVOGSH	1	1	True	Like "TFLCVOGSH-N*"
+-	S_TFRCO	1	1	True	Like "TFRCO*"
+-	S_TFRCOGAS	1	1	True	Like "TFRCOGAS*"
+-	S_TPELC	1	1	True	Like "TP*ELC*"
+-	S_TPPRBGS	1	1	True	Like "TPPR*BGS*-N*"
+-	S_TPPRCAR	1	1	True	Like "TPPRCAR*"
+-	S_TPPRCARBGS	1	1	True	Like "TPPRCARBGS*-N*"
+-	S_TPPRCARELC	1	1	True	Like "TPPRCARELC-N*"
+-	S_TPPRCARGAS	1	1	True	Like "TPPRCARGAS-N*"
+-	S_TPPRCARHGNF	1	1	True	Like "TPPRCARHGNF-N*"
+-	S_TPPRCARODS	1	1	True	Like "TPPRCARODS-N*"
+-	S_TPPRCARODSH	1	1	True	Like "TPPRCARODSH-N*"
+-	S_TPPRCAROGS	1	1	True	Like "TPPRCAROGS-N*"
+-	S_TPPRCAROGSH	1	1	True	Like "TPPRCAROGSH-N*"
+-	S_TPPRELC	1	1	True	Like "TPPR*ELC*"
+-	S_TPPRELC	2	1	False	Like "*MER*"
+-	S_TPPRELC	1	1	False	Like "*GAT*"
+-	S_TPPRSUV	1	1	True	Like "TPPRSUV*"
+-	S_TPPRSUVBGS	1	1	True	Like "TPPRSUVBGS*-N*"
+-	S_TPPRSUVELC	1	1	True	Like "TPPRSUVELC-N*"
+-	S_TPPRSUVGAS	1	1	True	Like "TPPRSUVGAS-N*"
+-	S_TPPRSUVHGNF	1	1	True	Like "TPPRSUVHGNF-N*"
+-	S_TPPRSUVODS	1	1	True	Like "TPPRSUVODS-N*"
+-	S_TPPRSUVODSH	1	1	True	Like "TPPRSUVODSH-N*"
+-	S_TPPRSUVOGS	1	1	True	Like "TPPRSUVOGS-N*"
+-	S_TPPRSUVOGSH	1	1	True	Like "TPPRSUVOGSH-N*"
+-	S_TPPUBGS	1	1	True	Like "TPPU*BGS*-N*"
+-	S_TPPUBRT	1	1	True	Like "TPPUBRT*"
+-	S_TPPUBRTBGS	1	1	True	Like "TPPUBRTBGS*-N*"
+-	S_TPPUBRTELC	1	1	True	Like "TPPUBRTELC-N*"
+-	S_TPPUBRTGAS	1	1	True	Like "TPPUBRTGAS-N*"
+-	S_TPPUBRTHGNF	1	1	True	Like "TPPUBRTHGNF-N*"
+-	S_TPPUBRTODS	1	1	True	Like "TPPUBRTODS-N*"
+-	S_TPPUBUS	1	1	True	Like "TPPUBUS*"
+-	S_TPPUBUSBGS	1	1	True	Like "TPPUBUSBGS*-N*"
+-	S_TPPUBUSELC	1	1	True	Like "TPPUBUSELC*"
+-	S_TPPUBUSGAS	1	1	True	Like "TPPUBUSGAS-N*"
+-	S_TPPUBUSHGNF	1	1	True	Like "TPPUBUSHGNF-N*"
+-	S_TPPUBUSODS	1	1	True	Like "TPPUBUSODS-N*"
+-	S_TPPUELC	2	1	False	Like "*MER*"
+-	S_TPPUELC	1	1	False	Like "*GAT*"
+-	S_TPPUELC	3	1	False	Like "*GAT*"
+-	S_TPPUELC	4	1	False	Like "*MER*"
+-	S_TPPUELC	1	1	True	Like "TPPU*ELC*"
+-	S_TPPUMBT	1	1	True	Like "TPPUMBT*"
+-	S_TPPUMBTBGS	1	1	True	Like "TPPUMBTBGS*-N*"
+-	S_TPPUMBTELC	1	1	True	Like "TPPUMBTELC-N*"
+-	S_TPPUMBTGAS	1	1	True	Like "TPPUMBTGAS-N*"
+-	S_TPPUMBTHGNF	1	1	True	Like "TPPUMBTHGNF-N*"
+-	S_TPPUMBTODS	1	1	True	Like "TPPUMBTODS-N*"
+-	S_TPPUMBTODSH	1	1	True	Like "TPPUMBTODSH-N*"
+-	S_TPPUMBTOGS	1	1	True	Like "TPPUMBTOGS-N*"
+-	S_TRA_RETRO	1	1	True	Like "*-R"
+-	S_TRAELC	1	1	True	Like "TP*ELC*"
+-	S_TRAELC	1	1	False	Like "TFPI*"
+-	S_TRAELC	2	1	True	Like "TF*ELC*"
+-	S_TRAELC	3	1	True	Like "TFR*ELC*"
+-	S_TRAELC_H	1	1	True	Like "TP*ELC*"
+-	S_TRAELC_H	3	1	True	Like "TFH*O?SH-**"
+-	S_TRAELC_H	4	1	True	Like "TFL*O?SH-**"
+-	S_TRAELC_H	5	1	True	Like "TFH*ELC**"
+-	S_TRAELC_H	6	1	True	Like "TFL*ELC**"
+-	S_TRAELC_H	2	1	True	Like "TP*O?SH-**"
+-	S_TRAELC_H	2	1	False	Like "TPPU*MER*"
+-	S_TRAELC_H	1	1	False	Like "TPPU*GAT*"
+-	S_TRAPARC	2	1	False	Like "TP*MER*"
+-	S_TRAPARC	1	1	True	Like "TP*"
+-	S_TRAPARC	1	1	False	Like "TP*GAT*"
+-	S_TRAPARC	2	1	True	Like "TFL*"
+-	S_TRAPARC	3	1	True	Like "TFH*"
+-	S_XELC	1	1	True	Like "X*ELC"
+-	S_XELC	1	1	False	= "XINDELC"
+-	S-CEM-ALLKILNS	1	1	True	Like "*INMCEMK*"
+-	S-CEMKLD-E	1	1	True	Like "*KLD-E*"
+-	S-CEMKLD-E-T1	1	1	True	Like "*KLD-E-T1*"
+-	S-CEMKLD-E-T2	1	1	True	Like "*KLD-E-T2*"
+-	S-CEMKPP-E	1	1	True	Like "*KPP-E*"
+-	S-CEMKPP-E-T1	1	1	True	Like "*KPP-E-T1*"
+-	S-CEMKPP-E-T2	1	1	True	Like "*KPP-E-T2*"
+-	S-CEMKSP-E	1	1	True	Like "*KSP-E*"
+-	S-CEMKSP-E-T1	1	1	True	Like "*KSP-E-T1*"
+-	S-CEMKSP-E-T2	1	1	True	Like "*KSP-E-T2*"
+-	S-IIS	3	1	False	Like "E*"
+-	S-IIS	4	1	False	Like "IISH*"
+-	S-IIS	2	1	False	Like "X*"
+-	S-IIS	1	1	False	Like "*COV*"
+-	S-IIS	1	1	True	Like "*IIS*"
+-	S-IIS-BFBOF	1	1	True	Like "*BFBOF*"
+-	S-IIS-BFBOF-E	1	1	True	Like "*BFBOF-E*"
+-	S-IIS-BFBOF-E-T1	1	1	True	Like "*BFBOF-E-T1*"
+-	S-IIS-BFBOF-E-T2	1	1	True	Like "*BFBOF-E-T2*"
+-	S-IIS-BFBOF-EX	1	1	True	Like "*BFBOF-E*"
+-	S-IIS-BFBOF-EX	1	1	False	Like "*T1*"
+-	S-IIS-BFBOF-EX	2	1	False	Like "*T2*"
+-	S-IIS-COREAF-E	1	1	True	Like "*COREAF-E*"
+-	S-IIS-COREAF-T1	1	1	True	Like "*COREAF-E-T1*"
+-	S-IIS-COREAF-T2	1	1	True	Like "*COREAF-E-T2*"
+-	S-IIS-DRIEAF-E	1	1	True	Like "*DRIEAF-E*"
+-	S-IIS-DRIEAF-EX	1	1	True	Like "*DRIEAF-E*"
+-	S-IIS-DRIEAF-EX	1	1	False	Like "*T1*"
+-	S-IIS-DRIEAF-EX	2	1	False	Like "*T2*"
+-	S-IIS-DRIEAF-T1	1	1	True	Like "*DRIEAF-E-T1*"
+-	S-IIS-DRIEAF-T2	1	1	True	Like "*DRIEAF-E-T2*"
+-	S-IIS-OTHEAF-E	1	1	True	Like "*OTHEAF-E*"
+-	S-IIS-OTHEAF-T1	1	1	True	Like "*OTHEAF-E-T1*"
+-	S-IIS-OTHEAF-T2	1	1	True	Like "*OTHEAF-E-T2*"
+-	S-IIS-SCR	1	1	True	Like "*EAF*"
+-	S-IIS-SCREAF	1	1	True	Like "*SCREAF*"
+-	S-IIS-SCREAF-E	1	1	True	Like "*SCREAF-E*"
+-	S-IIS-SCREAF-EX	1	1	True	Like "*SCREAF-E*"
+-	S-IIS-SCREAF-EX	1	1	False	Like "*T1*"
+-	S-IIS-SCREAF-EX	2	1	False	Like "*T2*"
+-	S-IIS-SCREAF-T1	1	1	True	Like "*SCREAF-E-T1*"
+-	S-IIS-SCREAF-T2	1	1	True	Like "*SCREAF-E-T2*"
+-	S-INM-ALLKILNS	1	1	True	Like "*INMK*"
+-	S-INMKLD-E	1	1	True	Like "*KLD-E*"
+-	S-INMKLD-E-T1	1	1	True	Like "*KLD-E-T1*"
+-	S-INMKLD-E-T2	1	1	True	Like "*KLD-E-T2*"
+-	S-INMKSP-E	1	1	True	Like "*KSP-E*"
+-	S-INMKSP-E-T1	1	1	True	Like "*KSP-E-T1*"
+-	S-INMKSP-E-T2	1	1	True	Like "*KSP-E-T2*"
+-	S-INMKSPP-E	1	1	True	Like "*KSPP-E*"
+-	S-INMKSPP-E-T1	1	1	True	Like "*KSPP-E-T1*"
+-	S-INMKSPP-E-T2	1	1	True	Like "*KSPP-E-T2*"
+-	S-IPP	1	1	True	Like "IPPCHE*"
+-	S-IPP	2	1	True	Like "IPPMCH*"
+-	S-IPP	3	1	True	Like "IPPREC*"
+-	S-IPP-CHE-E	1	1	True	Like "*CHE-E*"
+-	S-IPP-CHE-E-T1	1	1	True	Like "*CHE-E-T1*"
+-	S-IPP-CHE-E-T2	1	1	True	Like "*CHE-E-T2*"
+-	S-IPP-DIS-E	1	1	True	Like "*DIS-E*"
+-	S-IPP-DIS-E-T1	1	1	True	Like "*DIS-E-T1*"
+-	S-IPP-DIS-E-T2	1	1	True	Like "*DIS-E-T2*"
+-	S-IPP-MCH-E	1	1	True	Like "*MCH-E*"
+-	S-IPP-MCH-E-T1	1	1	True	Like "*MCH-E-T1*"
+-	S-IPP-MCH-E-T2	1	1	True	Like "*MCH-E-T2*"
+-	S-IPP-PAP-E	1	1	True	Like "*PAP-E*"
+-	S-IPP-PAP-E-T1	1	1	True	Like "*PAP-E-T1*"
+-	S-IPP-PAP-E-T2	1	1	True	Like "*PAP-E-T2*"
+-	S-IPPREC	1	1	True	Like "IPPREC*"
+-	S-IPP-REC-E	1	1	True	Like "*REC-E*"
+-	S-IPP-REC-E-T1	1	1	True	Like "*REC-E-T1*"
+-	S-IPP-REC-E-T2	1	1	True	Like "*REC-E-T2*"
+-	S-RHEWG-ALL	1	1	True	Like "RHEW*"
+-	S-RHEWG-ALL	1	1	False	Like "RHEWOLP*"
+-	S-RHEWG-EFF	1	1	True	Like "RHEWELCCHP*"
+-	S-RHEWG-EFF	2	1	True	Like "RHEWELCSWH*"
