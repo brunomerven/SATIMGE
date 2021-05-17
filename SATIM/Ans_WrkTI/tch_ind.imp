@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/04/20	2:57:44 PM
+Creation Date:	2021/04/26	6:55:38 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -118,8 +118,13 @@ ITEMS	REGION1
 	D	IPPCHPGAS01-N-G	PCG for IPPCHPGAS01-N (Industry - Pulp&Paper - CHP gas turbine - New)	PJ	COM_GRP,COM_GRPTRU	
 	D	IPPCHPGAS02-N-G	PCG for IPPCHPGAS02-N (Industry - Pulp&Paper - CHP gas CCGT- New)	PJ	COM_GRP,COM_GRPTRU	
 	D	IPPCHPSTM01-N-G	PCG for IPPCHPSTM01-N (Industry - Pulp&Paper - CHP Steam turbine - New)	PJ	COM_GRP,COM_GRPTRU	
+	E	CF4	Process Emissions South Africa CF4	KT	COM,ENV,ANNUAL,GHG	
+	E	CF6	Process Emissions South Africa CF6	KT	COM,ENV,ANNUAL,GHG	
 	E	CH4S	CH4S South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SP	Process Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPCEM	Process Emissions CEM South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPIFC	Process Emissions FerroChrome South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPIFM	Process Emissions FerroManganese South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	IALM	Industry - Aluminium Metal	mt	COM,DEM,ANNUAL,IND	
 	E	ICPA	Industry-Chemicals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPC	Industry-Chemicals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -138,6 +143,7 @@ ITEMS	REGION1
 	E	IFACR	Industry - Ferro Alloy Metals production	PJ	COM,DEM,ANNUAL,RES	
 	E	IFAELC	Industry-FA-Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	IFAGAS	Industry-FA-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IFAMN	Industry - Ferro Alloy Metals production	PJ	COM,DEM,ANNUAL,RES	
 	E	IFBA	Industry-Food, Beverage & Tabacco-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	IFBC	Industry-Food, Beverage & Tabacco-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	IFBE	Industry-Food, Beverage & Tabacco-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -293,6 +299,9 @@ ITEMS	REGION1
 	T	IFCEAFB-N	FerroChrome with biomass	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IFCEAF-E	FerroChrome existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IFCEAF-N	FerrChrome New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFMEAFB-N	FerroMn with biomass	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFMEAF-E	FerroMn existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFMEAF-N	FerroMn New	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IISBFBOF-E	Industry - Iron&Steel - BF BOF route - Existing	mt,mt/a	PRC,PRE,ANNUAL	
 	T	IISBFBOF-E-T1	Industry - Iron&Steel - BF BOF route - Existing - Energy Efficiency Technology level 1	mt,mt/a	PRC,PRE,ANNUAL	
 	T	IISBFBOF-E-T2	Industry - Iron&Steel - BF BOF route - Existing - Energy Efficiency Technology level 2	mt,mt/a	PRC,PRE,ANNUAL	
@@ -658,8 +667,9 @@ TS DATA	REGION1
 	ACT_EFF	XIPPOGS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	CAP_BND	IFCEAF-E	-	-	-	-	UP	0	6.48	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IALM	-	-	-	-	0	0.72	null	null	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	0.806	
+	CAP_BND	IFCEAF-E	-	-	-	-	UP	0	4.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	IFMEAF-E	-	-	-	-	UP	0	0.6849	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IALM	-	-	-	-	0	0.72	null	null	null	null	0.72	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.72	null	null	
 	COM_PROJ	-	ICPA	-	-	-	-	0	0.208678736981107	null	null	null	null	0.3034425	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPC	-	-	-	-	0	2.78238315974809	null	null	null	null	4.0459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPE	-	-	-	-	0	1.69168896112684	null	null	null	null	2.4599072	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -671,7 +681,8 @@ TS DATA	REGION1
 	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	11.32852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	19.3071684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IFACR	-	-	-	-	0	null	null	null	null	null	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFACR	-	-	-	-	0	3.37	null	null	null	null	3.37	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFAMN	-	-	-	-	0	0.4587	null	null	null	null	0.4587	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBA	-	-	-	-	0	3.19316332629067E-02	null	null	null	null	0.029904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBC	-	-	-	-	0	7.34427565046855	null	null	null	null	6.87792	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBE	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -721,18 +732,24 @@ TS DATA	REGION1
 	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	61.5613408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPAP	-	-	-	-	0	2.0533	2.078652	2.104004	2.129356	2.154708	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPULPD	-	-	-	-	0	0.737115145	0.737115145	0.737115145	0.737115145	0.7	0.659107198066639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IALPOT	CF4	ACTGRP	-	ANNUAL	-	0	0.410167605050004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IALPOT	CF6	ACTGRP	-	ANNUAL	-	0	4.10628985933075E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IALPOT	CO2SP	ACTGRP	-	ANNUAL	-	0	1.64076884812174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IALPOTINERT	CF4	ACTGRP	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IALPOTINERT	CF6	ACTGRP	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IALPOTINERT	CO2SP	ACTGRP	-	ANNUAL	-	0	1.64076884812174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IALPOT	CF4	IALM	-	ANNUAL	-	0	0.410167605050004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IALPOT	CF6	IALM	-	ANNUAL	-	0	4.10628985933075E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IALPOT	CO2SP	IALM	-	ANNUAL	-	0	1640.76884812174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IALPOTINERT	CF4	IALM	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IALPOTINERT	CF6	IALM	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IALPOTINERT	CO2SP	IALM	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IFCEAFB-N	CH4S	IFACR	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IFCEAFB-N	CO2SP	IFACR	-	ANNUAL	-	0	933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFCEAFB-N	CO2SPIFC	IFACR	-	ANNUAL	-	0	933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IFCEAF-E	CH4S	IFACR	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IFCEAF-E	CO2SP	IFACR	-	ANNUAL	-	0	3225	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFCEAF-E	CO2SPIFC	IFACR	-	ANNUAL	-	0	3225	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IFCEAF-N	CH4S	IFACR	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	IFCEAF-N	CO2SP	IFACR	-	ANNUAL	-	0	2102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFCEAF-N	CO2SPIFC	IFACR	-	ANNUAL	-	0	2102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFMEAFB-N	CH4S	IFAMN	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFMEAFB-N	CO2SPIFM	IFAMN	-	ANNUAL	-	0	933	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFMEAF-E	CH4S	IFAMN	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFMEAF-E	CO2SPIFM	IFAMN	-	ANNUAL	-	0	3225	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFMEAF-N	CH4S	IFAMN	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFMEAF-N	CO2SPIFM	IFAMN	-	ANNUAL	-	0	2102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISBFBOF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2810	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISBFBOF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	2810	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISCOREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	2126.71428571429	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -743,23 +760,21 @@ TS DATA	REGION1
 	FLO_EMIS	IISOTHEAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	1540	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISSCREAF-E	CO2SP	ACTGRP	-	ANNUAL	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IISSCREAF-N	CO2SP	ACTGRP	-	ANNUAL	-	0	80	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKLD-E	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKLD-E-T1	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKLD-E-T2	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKPP-E	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKPP-E-T1	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKPP-E-T2	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKPP-N	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKSP-E	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKSP-E-T1	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKSP-E-T2	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMCEMKSP-N	CO2SP	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKLD-E	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKLD-E-T1	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKLD-E-T2	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKPP-E	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKPP-E-T1	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKPP-E-T2	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKPP-N	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKSP-E	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKSP-E-T1	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKSP-E-T2	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMCEMKSP-N	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMGLAADV	CO2SP	ACTGRP	-	ANNUAL	-	0	103.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMGLASTD	CO2SP	ACTGRP	-	ANNUAL	-	0	103.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMLIMADV	CO2SP	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMLIMSTD	CO2SP	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IALPOT	-	IALPOT_CG-O	IALPOT_CG-I	ANNUAL	-	3	51.8283701306756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IALPOTINERT	-	IALPOT_CG-O	IALPOT_CG-I	ANNUAL	-	3	62	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISBFBOF-E	-	CGBFBOF-E-O	CGBFBOF-E-I	ANNUAL	-	0	21.4006916923111	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	3	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	16.0159061625617	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOREAF-E	-	CGCOREAF-E-O	CGCOREAF-E-I	ANNUAL	-	0	21.5145885271352	null	null	null	null	22.1516761723534	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -838,13 +853,13 @@ TS DATA	REGION1
 	FLO_MARK	IFBSWAS-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IFBSWAS-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	FLO_MARK	IMIRELC-E	IMIR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMIRELC-E	IMIR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMIRELC-E	IMIR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.883355814780755	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISCOA-E	IMIS	-	-	-	UP	0	0.991272516553951	null	null	null	null	0.892278600788642	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISELC-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMISELC-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISELC-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISGAS-E	IMIS	-	-	-	LO	0	8.7274834460486E-03	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISGAS-E	IMIS	-	-	-	UP	0	8.7274834460486E-03	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.508727483446049	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISOHF-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -878,13 +893,13 @@ TS DATA	REGION1
 	FLO_MARK	INMCLISUBSPOZ	INMCLISUB	-	-	-	LO	0	2.22201681095674E-02	null	null	null	null	null	null	null	2.22201681095674E-02	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
 	FLO_MARK	INMCLISUBSPOZ	INMCLISUB	-	-	-	UP	0	2.24446142520883E-02	null	null	null	null	null	null	null	2.24446142520883E-02	null	null	null	null	null	null	null	null	null	5.06584824895996E-02	null	null	null	null	null	null	null	null	null	null	null	6.23501881845019E-02	null	null	
 	FLO_MARK	IOTRELC-E	IOTR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.937575836554879	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	UP	0	0.683020215882088	null	null	null	null	0.947046299550383	null	null	null	null	null	null	null	null	null	null	null	null	0.947046299550383	null	null	null	null	null	null	null	null	null	0.947046299550383	null	0.947046299550383	null	null	
 	FLO_MARK	IOTSELC-E	IOTS	-	-	-	LO	0	4.30080338432179E-03	null	null	null	null	2.76313981777343E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	2.79105032098326E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.504300803384322	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	2.79105032098326E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	LO	0	0.124175827045132	null	null	null	null	4.96610236273476E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	UP	0	0.124175827045132	null	null	null	null	0.050162650128634	null	null	null	null	null	null	null	null	null	null	null	null	0.624175827045132	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSOHF-E	IOTS	-	-	-	LO	0	0.114264904866746	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -892,13 +907,7 @@ TS DATA	REGION1
 	FLO_MARK	IOTSOLP-E	IOTS	-	-	-	LO	0	7.42382488217117E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSOLP-E	IOTS	-	-	-	UP	0	7.42382488217117E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.574238248821712	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	FLO_SHAR	IALPOT	INDGAS	IALPOT_CG-I	-	ANNUAL	FX	3	4.24553339387425E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IALPOT	INDOLP	IALPOT_CG-I	-	ANNUAL	FX	3	6.29000179683835E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IALPOT	INFELC	IALPOT_CG-I	-	ANNUAL	FX	3	0.894644648092874	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IALPOTINERT	INDGAS	IALPOT_CG-I	-	ANNUAL	FX	3	0.0355	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IALPOTINERT	INDOLP	IALPOT_CG-I	-	ANNUAL	FX	3	0.0526	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IALPOTINERT	INFELC	IALPOT_CG-I	-	ANNUAL	FX	3	0.9119	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	FLO_SHAR	IISBFBOF-E	IISCKE	CGBFBOF-E-I	-	ANNUAL	LO	3	0.42194897855775	null	null	null	null	0.540330901941921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.32194897855775	null	null	
 	FLO_SHAR	IISBFBOF-E	IISCKE	CGBFBOF-E-I	-	ANNUAL	UP	3	0.42194897855775	null	null	null	null	0.54573421096134	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISBFBOF-E	IISCOA	CGBFBOF-E-I	-	ANNUAL	LO	3	0.20494664672805	null	null	null	null	0.263610538748244	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1063,8 +1072,6 @@ TS DATA	REGION1
 	NCAP_AF	IPPSTMCOA-E	-	-	-	ANNUAL	UP	0	0.85	null	null	null	null	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	IPPSTMCOAOIL	-	-	-	ANNUAL	UP	0	0.85	null	null	null	null	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	IPPSTMGAS-E	-	-	-	ANNUAL	UP	0	0.85	null	null	null	null	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IALPOT	-	-	-	-	UP	3	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	IALPOTINERT	-	-	-	-	UP	3	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ICPAELC-E	-	-	-	-	UP	0	0.11585	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ICPCELC-E	-	-	-	-	UP	0	0.12956	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ICPEELC-E	-	-	-	-	UP	0	0.13233	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1340,10 +1347,12 @@ TS DATA	REGION1
 	NCAP_CHPR	IPPCHPGAS01-N	-	-	-	-	FX	0	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_CHPR	IPPCHPGAS02-N	-	-	-	-	FX	0	0.78	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_CHPR	IPPCHPSTM01-N	-	-	-	-	FX	0	3.44	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	IALPOT	-	-	-	-	-	0	27300	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	IALPOTINERT	-	-	-	-	-	0	35230	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IALPOT	-	-	-	-	-	0	22875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IALPOTINERT	-	-	-	-	-	0	29375	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IFCEAFB-N	-	-	-	-	-	0	11079	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IFCEAF-N	-	-	-	-	-	0	10072	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IFMEAFB-N	-	-	-	-	-	0	11079	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IFMEAF-N	-	-	-	-	-	0	10072	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IISBFBOF-E-T1	-	-	-	-	-	0	51.0670020164356	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IISBFBOF-E-T2	-	-	-	-	-	0	517.217071704925	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IISBFBOF-N	-	-	-	-	-	0	2960.57670664515	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1432,8 +1441,12 @@ TS DATA	REGION1
 	NCAP_COST	XIOTGAS	-	-	-	-	-	0	264.503820484722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XIPPELC	-	-	-	-	-	0	11787.4425346706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XIPPGAS	-	-	-	-	-	0	264.503820484722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	IALPOT	-	-	-	-	-	0	457.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	IALPOTINERT	-	-	-	-	-	0	587.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	IFCEAFB-N	-	-	-	-	-	0	221.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	IFCEAF-N	-	-	-	-	-	0	201.44	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	IFMEAFB-N	-	-	-	-	-	0	221.58	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	IFMEAF-N	-	-	-	-	-	0	201.44	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	IISHALKHGNO	-	-	-	-	-	0	431.2	null	null	null	null	null	null	null	557.622	null	null	null	null	null	null	null	null	null	372.34375	null	null	null	null	null	null	null	null	null	null	null	268.0875	null	null	
 	NCAP_FOM	IISHBATTERY	-	-	-	-	-	0	622.613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	IISHHDRI-N	-	-	-	-	-	0	150	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1444,8 +1457,8 @@ TS DATA	REGION1
 	NCAP_ILED	IISHDRIEAF-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	IISHHDRI-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	IISHHGNSTOR-N	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IALPOT	-	-	-	-	-	0	8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	IALPOTINERT	-	-	-	-	-	0	8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IALPOT	-	-	-	-	-	0	6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IALPOTINERT	-	-	-	-	-	0	6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ICPAELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ICPCELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ICPEELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1629,8 +1642,12 @@ TS DATA	REGION1
 	NCAP_TLIFE	XIOTGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XIPPELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XIPPGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_ACTFLO	IALPOT	-	IALM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_ACTFLO	IALPOTINERT	-	IALM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOT	-	INDGAS	-	-	-	0	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOT	-	INDOLP	-	-	-	0	3.26	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOT	-	INFELC	-	-	-	0	46.37	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOTINERT	-	INDGAS	-	-	-	0	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOTINERT	-	INDOLP	-	-	-	0	3.26	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOTINERT	-	INFELC	-	-	-	0	56.57	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IFCEAFB-N	-	IFAELC	-	-	-	0	8.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IFCEAFB-N	-	IISCKE	-	-	-	0	1.55	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IFCEAFB-N	-	IISCOA	-	-	-	0	2.33	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1642,6 +1659,17 @@ TS DATA	REGION1
 	PRC_ACTFLO	IFCEAF-N	-	IISCKE	-	-	-	0	4.48	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IFCEAF-N	-	IISCOA	-	-	-	0	3.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IFCEAF-N	-	INDBIO	-	-	-	0	7.72	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAFB-N	-	IFAELC	-	-	-	0	10.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAFB-N	-	IISCKE	-	-	-	0	2.46139534883721	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAFB-N	-	IISCOA	-	-	-	0	3.28186046511628	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAFB-N	-	INDBIO	-	-	-	0	8.12260465116279	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-E	-	IFAELC	-	-	-	0	12.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-E	-	IISCKE	-	-	-	0	9.84558139534884	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-E	-	IISCOA	-	-	-	0	3.28186046511628	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-N	-	IFAELC	-	-	-	0	10.08	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-N	-	IISCKE	-	-	-	0	4.92279069767442	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-N	-	IISCOA	-	-	-	0	3.28186046511628	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFMEAF-N	-	INDBIO	-	-	-	0	5.41506976744186	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IISBFBOF-E	-	IISSSC	-	-	-	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IISBFBOF-E-T1	-	IISSSC	-	-	-	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IISBFBOF-E-T2	-	IISSSC	-	-	-	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1695,7 +1723,7 @@ TS DATA	REGION1
 	PRC_ACTFLO	IPPREC-E-T1	-	IPPREC	-	-	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPPREC-E-T2	-	IPPREC	-	-	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPPREC-N	-	IPPREC	-	-	-	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IALPOT	-	-	-	-	-	0	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	948.2353	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IALPOT	-	-	-	-	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.8	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPAELC-E	-	-	-	-	-	0	1.80128387553825	null	null	null	null	2.61927060854553	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPCELC-E	-	-	-	-	-	0	21.4756341443971	null	null	null	null	31.2280024698981	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPEELC-E	-	-	-	-	-	0	12.7838657985856	null	null	null	null	18.5891876369682	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1728,7 +1756,8 @@ TS DATA	REGION1
 	PRC_RESID	IFBSOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSOLP-E	-	-	-	-	-	0	9.07704530770882	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IFCEAF-E	-	-	-	-	-	0	null	null	null	null	null	6.48	null	null	null	null	null	null	null	null	null	null	null	null	6.48	null	null	null	null	6.48	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	IFCEAF-E	-	-	-	-	-	0	4.8	null	null	null	null	4.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4.8	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	IFMEAF-E	-	-	-	-	-	0	0.6849	null	null	null	null	0.6849	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.6849	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	IISBFBOF-E	-	-	-	-	-	0	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	4.9	0	0	0	0	0	null	null	null	
 	PRC_RESID	IISCOREAF-E	-	-	-	-	-	0	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	null	null	null	
 	PRC_RESID	IISDRIEAF-E	-	-	-	-	-	0	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	0	0	0	0	0	null	null	null	
@@ -1946,7 +1975,6 @@ TS DATA	REGION1
 	UCRULE_CAP	UC-SCREAF	LHS	S-IIS-SCREAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 
 TID DATA	REGION1
-	COM_GMAP	-	IALM	IALPOT_CG-O	-	-	-	1	
 	COM_GMAP	-	IISCKE	CGBFBOF-E-I	-	-	-	1	
 	COM_GMAP	-	IISCKE	CGBFBOF-N-I	-	-	-	1	
 	COM_GMAP	-	IISCKE	CGCOREAF-E-I	-	-	-	1	
@@ -2088,9 +2116,11 @@ TID DATA	REGION1
 	COM_GMAP	-	IPPSTM	IPPCHPGAS01-N-G	-	-	-	1	
 	COM_GMAP	-	IPPSTM	IPPCHPGAS02-N-G	-	-	-	1	
 	COM_GMAP	-	IPPSTM	IPPCHPSTM01-N-G	-	-	-	1	
-	NCAP_START	IALPOTINERT	-	-	-	-	-	2026	
-	NCAP_START	IFCEAFB-N	-	-	-	-	-	2025	
-	NCAP_START	IFCEAF-N	-	-	-	-	-	2025	
+	NCAP_START	IALPOTINERT	-	-	-	-	-	2040	
+	NCAP_START	IFCEAFB-N	-	-	-	-	-	2040	
+	NCAP_START	IFCEAF-N	-	-	-	-	-	2040	
+	NCAP_START	IFMEAFB-N	-	-	-	-	-	2040	
+	NCAP_START	IFMEAF-N	-	-	-	-	-	2040	
 	NCAP_START	IISBFBOF-N	-	-	-	-	-	2017	
 	NCAP_START	IISDRIEAF-NC	-	-	-	-	-	2017	
 	NCAP_START	IISDRIEAF-NG	-	-	-	-	-	2017	
@@ -2152,6 +2182,9 @@ TID DATA	REGION1
 	PRC_ACTUNT	IFCEAFB-N	-	IFACR	-	-	-	1	
 	PRC_ACTUNT	IFCEAF-E	-	IFACR	-	-	-	1	
 	PRC_ACTUNT	IFCEAF-N	-	IFACR	-	-	-	1	
+	PRC_ACTUNT	IFMEAFB-N	-	IFAMN	-	-	-	1	
+	PRC_ACTUNT	IFMEAF-E	-	IFAMN	-	-	-	1	
+	PRC_ACTUNT	IFMEAF-N	-	IFAMN	-	-	-	1	
 	PRC_ACTUNT	IISBFBOF-E	-	IISCRS	-	-	-	1	
 	PRC_ACTUNT	IISBFBOF-E-T1	-	IISCRS	-	-	-	1	
 	PRC_ACTUNT	IISBFBOF-E-T2	-	IISCRS	-	-	-	1	
@@ -2366,6 +2399,7 @@ TID DATA	REGION1
 	PRC_CAPACT	IFBSOLP-E	-	-	-	-	-	1	
 	PRC_CAPACT	IFBSWAS-E	-	-	-	-	-	1	
 	PRC_CAPACT	IFCEAF-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFMEAF-E	-	-	-	-	-	1	
 	PRC_CAPACT	IISBFBOF-E	-	-	-	-	-	1	
 	PRC_CAPACT	IISBFBOF-E-T1	-	-	-	-	-	1	
 	PRC_CAPACT	IISBFBOF-E-T2	-	-	-	-	-	1	
@@ -2596,6 +2630,17 @@ TID DATA	REGION1
 	TOP-IN	IFCEAF-N	IISCKE	-	-	-	-	1	
 	TOP-IN	IFCEAF-N	IISCOA	-	-	-	-	1	
 	TOP-IN	IFCEAF-N	INDBIO	-	-	-	-	1	
+	TOP-IN	IFMEAFB-N	IFAELC	-	-	-	-	1	
+	TOP-IN	IFMEAFB-N	IISCKE	-	-	-	-	1	
+	TOP-IN	IFMEAFB-N	IISCOA	-	-	-	-	1	
+	TOP-IN	IFMEAFB-N	INDBIO	-	-	-	-	1	
+	TOP-IN	IFMEAF-E	IFAELC	-	-	-	-	1	
+	TOP-IN	IFMEAF-E	IISCKE	-	-	-	-	1	
+	TOP-IN	IFMEAF-E	IISCOA	-	-	-	-	1	
+	TOP-IN	IFMEAF-N	IFAELC	-	-	-	-	1	
+	TOP-IN	IFMEAF-N	IISCKE	-	-	-	-	1	
+	TOP-IN	IFMEAF-N	IISCOA	-	-	-	-	1	
+	TOP-IN	IFMEAF-N	INDBIO	-	-	-	-	1	
 	TOP-IN	IISBFBOF-E	IISCKE	-	-	-	-	1	
 	TOP-IN	IISBFBOF-E	IISCOA	-	-	-	-	1	
 	TOP-IN	IISBFBOF-E	IISELC	-	-	-	-	1	
@@ -2869,7 +2914,13 @@ TID DATA	REGION1
 	TOP-IN	XIPPOGS	INDOGS	-	-	-	-	1	
 	TOP-IN	XIPPOHF	INDOHF	-	-	-	-	1	
 	TOP-IN	XIPPOLP	INDOLP	-	-	-	-	1	
+	TOP-OUT	IALPOT	CF4	-	-	-	-	1	
+	TOP-OUT	IALPOT	CF6	-	-	-	-	1	
+	TOP-OUT	IALPOT	CO2SP	-	-	-	-	1	
 	TOP-OUT	IALPOT	IALM	-	-	-	-	1	
+	TOP-OUT	IALPOTINERT	CF4	-	-	-	-	1	
+	TOP-OUT	IALPOTINERT	CF6	-	-	-	-	1	
+	TOP-OUT	IALPOTINERT	CO2SP	-	-	-	-	1	
 	TOP-OUT	IALPOTINERT	IALM	-	-	-	-	1	
 	TOP-OUT	ICPAELC-E	ICPA	-	-	-	-	1	
 	TOP-OUT	ICPCELC-E	ICPC	-	-	-	-	1	
@@ -2904,14 +2955,23 @@ TID DATA	REGION1
 	TOP-OUT	IFBSOLP-E	IFBS	-	-	-	-	1	
 	TOP-OUT	IFBSWAS-E	IFBS	-	-	-	-	1	
 	TOP-OUT	IFCEAFB-N	CH4S	-	-	-	-	1	
-	TOP-OUT	IFCEAFB-N	CO2SP	-	-	-	-	1	
+	TOP-OUT	IFCEAFB-N	CO2SPIFC	-	-	-	-	1	
 	TOP-OUT	IFCEAFB-N	IFACR	-	-	-	-	1	
 	TOP-OUT	IFCEAF-E	CH4S	-	-	-	-	1	
-	TOP-OUT	IFCEAF-E	CO2SP	-	-	-	-	1	
+	TOP-OUT	IFCEAF-E	CO2SPIFC	-	-	-	-	1	
 	TOP-OUT	IFCEAF-E	IFACR	-	-	-	-	1	
 	TOP-OUT	IFCEAF-N	CH4S	-	-	-	-	1	
-	TOP-OUT	IFCEAF-N	CO2SP	-	-	-	-	1	
+	TOP-OUT	IFCEAF-N	CO2SPIFC	-	-	-	-	1	
 	TOP-OUT	IFCEAF-N	IFACR	-	-	-	-	1	
+	TOP-OUT	IFMEAFB-N	CH4S	-	-	-	-	1	
+	TOP-OUT	IFMEAFB-N	CO2SPIFM	-	-	-	-	1	
+	TOP-OUT	IFMEAFB-N	IFAMN	-	-	-	-	1	
+	TOP-OUT	IFMEAF-E	CH4S	-	-	-	-	1	
+	TOP-OUT	IFMEAF-E	CO2SPIFM	-	-	-	-	1	
+	TOP-OUT	IFMEAF-E	IFAMN	-	-	-	-	1	
+	TOP-OUT	IFMEAF-N	CH4S	-	-	-	-	1	
+	TOP-OUT	IFMEAF-N	CO2SPIFM	-	-	-	-	1	
+	TOP-OUT	IFMEAF-N	IFAMN	-	-	-	-	1	
 	TOP-OUT	IISBFBOF-E	IISCRS	-	-	-	-	1	
 	TOP-OUT	IISBFBOF-E-T1	IISCRS	-	-	-	-	1	
 	TOP-OUT	IISBFBOF-E-T2	IISCRS	-	-	-	-	1	
@@ -2978,27 +3038,27 @@ TID DATA	REGION1
 	TOP-OUT	INMCEMF2TF	INMCEMTHF	-	-	-	-	1	
 	TOP-OUT	INMCEMFGBM	INMCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMFGRP	INMCEM	-	-	-	-	1	
-	TOP-OUT	INMCEMKLD-E	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKLD-E	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKLD-E	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKLD-E-T1	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKLD-E-T1	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKLD-E-T1	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKLD-E-T2	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKLD-E-T2	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKLD-E-T2	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKPP-E	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKPP-E	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKPP-E	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKPP-E-T1	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKPP-E-T1	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKPP-E-T1	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKPP-E-T2	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKPP-E-T2	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKPP-E-T2	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKPP-N	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKPP-N	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKPP-N	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKSP-E	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKSP-E	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKSP-E	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKSP-E-T1	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKSP-E-T1	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKSP-E-T1	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKSP-E-T2	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKSP-E-T2	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKSP-E-T2	INMCLI	-	-	-	-	1	
-	TOP-OUT	INMCEMKSP-N	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMCEMKSP-N	CO2SPCEM	-	-	-	-	1	
 	TOP-OUT	INMCEMKSP-N	INMCLI	-	-	-	-	1	
 	TOP-OUT	INMCEMPGBM	INMRWM	-	-	-	-	1	
 	TOP-OUT	INMCEMPGRP	INMRWM	-	-	-	-	1	

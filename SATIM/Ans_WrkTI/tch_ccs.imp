@@ -1,0 +1,86 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/04/26	4:08:43 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_CCS	Carbon Capture And Storage Techs	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	CO2CAPT	CO2 Captured	KT	COM,NRG,ANNUAL,FOSSIL	
+	E	CO2SPIFC	Process Emissions FerroChrome South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2STOR	Transported and Stored CO2	KT	COM,NRG,ANNUAL,FOSSIL	
+	E	ELCC	Electricity Upstream Transmission	PJ	COM,NRG,DAYNITE,ELC	
+	E	IFAELC	Industry-FA-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	INMELC	Industry-NM-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	PWRCO2S	Power Sector Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	T	UCO2SPCEM	CO2SP Capture Cement	KT,KT/a	PRC,PRE,ANNUAL	
+	T	UCO2SPIFC	CO2SP Capture FerroChrome	KT,KT/a	PRC,PRE,ANNUAL	
+	T	UCO2SPIFM	CO2SP Capture FerroManganese	KT,KT/a	PRC,PRE,ANNUAL	
+	T	UCO2STOR	CO2 Storage - Durban Basin	KT,KT/a	PRC,PRE,ANNUAL	
+	T	UPWRCO2SC	PWRCO2S Power Sector Capture - Retrofit	KT,KT/a	PRC,PRE,ANNUAL	
+	T	XCO2TRANSPORT	CO2 Transport - Durban Basin	KT,KT/a	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_COST	UCO2SPCEM	-	-	-	-	-	0	0.429866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UCO2SPIFC	-	-	-	-	-	0	0.339437218309859	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UCO2SPIFM	-	-	-	-	-	0	0.339437218309859	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UCO2STOR	-	-	-	-	-	0	6.40867298105683E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	UPWRCO2SC	-	-	-	-	-	0	0.435588125623131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	XCO2TRANSPORT	-	-	-	-	-	0	0.248195114656032	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UCO2SPIFC	-	ACTGRP	-	ANNUAL	-	0	833.333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UCO2SPIFM	-	ACTGRP	-	ANNUAL	-	0	833.333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UCO2STOR	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UPWRCO2SC	-	ACTGRP	-	ANNUAL	-	0	810.309523809524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XCO2TRANSPORT	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCO2SPCEM	CO2SPCEM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCO2SPIFC	CO2SPIFC	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCO2SPIFM	CO2SPIFM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UPWRCO2SC	PWRCO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	UCO2SPCEM	-	INMCEMTHF	-	-	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	UCO2SPCEM	-	INMELC	-	-	-	0	0.000216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	UCO2SPCEM	-	CO2CAPT	-	-	-	1	
+	PRC_ACTUNT	UCO2SPIFC	-	CO2CAPT	-	-	-	1	
+	PRC_ACTUNT	UCO2SPIFM	-	CO2CAPT	-	-	-	1	
+	PRC_ACTUNT	UCO2STOR	-	ZDUMETRANS	-	-	-	1	
+	PRC_ACTUNT	UPWRCO2SC	-	CO2CAPT	-	-	-	1	
+	PRC_ACTUNT	XCO2Transport	-	CO2STOR	-	-	-	1	
+	PRC_CAPACT	UCO2SPCEM	-	-	-	-	-	1	
+	PRC_CAPACT	UCO2SPIFC	-	-	-	-	-	1	
+	PRC_CAPACT	UCO2SPIFM	-	-	-	-	-	1	
+	PRC_CAPACT	UCO2STOR	-	-	-	-	-	1	
+	PRC_CAPACT	UPWRCO2SC	-	-	-	-	-	1	
+	PRC_CAPACT	XCO2TRANSPORT	-	-	-	-	-	1	
+	TOP-IN	UCO2SPCEM	INMCEMTHF	-	-	-	-	1	
+	TOP-IN	UCO2SPCEM	INMELC	-	-	-	-	1	
+	TOP-IN	UCO2SPIFC	IFAELC	-	-	-	-	1	
+	TOP-IN	UCO2SPIFM	IFAELC	-	-	-	-	1	
+	TOP-IN	UCO2STOR	CO2STOR	-	-	-	-	1	
+	TOP-IN	UPWRCO2SC	ELCC	-	-	-	-	1	
+	TOP-IN	XCO2Transport	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UCO2SPCEM	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UCO2SPCEM	CO2SPCEM	-	-	-	-	1	
+	TOP-OUT	UCO2SPIFC	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UCO2SPIFC	CO2SPIFC	-	-	-	-	1	
+	TOP-OUT	UCO2SPIFM	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UCO2SPIFM	CO2SPIFM	-	-	-	-	1	
+	TOP-OUT	UCO2STOR	ZDUMETRANS	-	-	-	-	1	
+	TOP-OUT	UPWRCO2SC	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UPWRCO2SC	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	XCO2Transport	CO2STOR	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
