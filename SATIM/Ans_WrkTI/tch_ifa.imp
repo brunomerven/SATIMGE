@@ -1,0 +1,93 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/04/15	3:18:40 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_IFA	Ferro Alloys with retrofits	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	CH4S	CH4S South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SP	Process Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	IFAELC	Industry-FA-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IFAM	Industry - Ferro Alloy Metals production	PJ	COM,DEM,ANNUAL,RES	
+	E	IISCKE	Industry - Iron and Steel - Coke	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IISCOA	Industry - Iron and Steel - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIO	Industry Biochar	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	IFAEAF	FerroAlloys electric arc furnace	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFAEAF-N	FerroAlloys New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFAEAF-R	FerroAlloys retrofit	PJ,PJa	PRC,DMD,ANNUAL	
+	T	XINDBIO	Industry Biochar	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_EFF	XINDBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	IFAEAF	-	-	-	-	UP	3	3.93552	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	IFAEAF-R	-	-	-	-	UP	3	4.3728	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFAM	-	-	-	-	0	null	null	null	null	null	4.3728	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFAEAF	CH4S	IFAM	-	ANNUAL	-	0	3.59495060373216E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFAEAF	CO2SP	IFAM	-	ANNUAL	-	0	2847.56430662276	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFAEAF-N	CH4S	IFAM	-	ANNUAL	-	0	2.30076838638858E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFAEAF-N	CO2SP	IFAM	-	ANNUAL	-	0	1822.44115623857	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFAEAF-R	CH4S	IFAM	-	ANNUAL	-	0	2.87596048298573E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	IFAEAF-R	CO2SP	IFAM	-	ANNUAL	-	0	2278.05144529821	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IFAEAF-N	-	-	-	-	-	0	20000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IFAEAF-R	-	-	-	-	-	0	10000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	IFAEAF-N	-	-	-	-	-	0	400	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	IFAEAF-R	-	-	-	-	-	0	200	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF	-	IFAELC	-	-	-	0	16.3642974753019	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF	-	IISCKE	-	-	-	0	11.8665614709111	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF	-	IISCOA	-	-	-	0	5.82437275985663E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-N	-	IFAELC	-	-	-	0	4.09107436882547	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-N	-	IISCKE	-	-	-	0	9.61191479143798	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-N	-	IISCOA	-	-	-	0	1.45609318996416E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-N	-	INDBIO	-	-	-	0	1.45609318996416E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-R	-	IFAELC	-	-	-	0	8.18214873765094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-R	-	IISCKE	-	-	-	0	10.67990532382	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-R	-	IISCOA	-	-	-	0	2.91218637992832E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IFAEAF-R	-	INDBIO	-	-	-	0	2.91218637992832E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFAEAF	-	-	-	-	-	0	null	null	null	null	null	3.93552	null	null	null	null	null	null	null	null	null	null	null	null	3.93552	3.93552	null	null	null	null	null	null	null	3.93552	3.93552	null	null	null	null	
+	PRC_RESID	IFAEAF-R	-	-	-	-	-	0	null	null	null	null	null	0.43728	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	IFAEAF	-	IFAM	-	-	-	1	
+	PRC_ACTUNT	IFAEAF-N	-	IFAM	-	-	-	1	
+	PRC_ACTUNT	IFAEAF-R	-	IFAM	-	-	-	1	
+	PRC_ACTUNT	XINDBIO	-	INDBIO	-	-	-	1	
+	PRC_CAPACT	IFAEAF	-	-	-	-	-	1	
+	PRC_CAPACT	XINDBIO	-	-	-	-	-	1	
+	TOP-IN	IFAEAF	IFAELC	-	-	-	-	1	
+	TOP-IN	IFAEAF	IISCKE	-	-	-	-	1	
+	TOP-IN	IFAEAF	IISCOA	-	-	-	-	1	
+	TOP-IN	IFAEAF-N	IFAELC	-	-	-	-	1	
+	TOP-IN	IFAEAF-N	IISCKE	-	-	-	-	1	
+	TOP-IN	IFAEAF-N	IISCOA	-	-	-	-	1	
+	TOP-IN	IFAEAF-N	INDBIO	-	-	-	-	1	
+	TOP-IN	IFAEAF-R	IFAELC	-	-	-	-	1	
+	TOP-IN	IFAEAF-R	IISCKE	-	-	-	-	1	
+	TOP-IN	IFAEAF-R	IISCOA	-	-	-	-	1	
+	TOP-IN	IFAEAF-R	INDBIO	-	-	-	-	1	
+	TOP-IN	XINDBIO	BIO	-	-	-	-	1	
+	TOP-OUT	IFAEAF	CH4S	-	-	-	-	1	
+	TOP-OUT	IFAEAF	CO2SP	-	-	-	-	1	
+	TOP-OUT	IFAEAF	IFAM	-	-	-	-	1	
+	TOP-OUT	IFAEAF-N	CH4S	-	-	-	-	1	
+	TOP-OUT	IFAEAF-N	CO2SP	-	-	-	-	1	
+	TOP-OUT	IFAEAF-N	IFAM	-	-	-	-	1	
+	TOP-OUT	IFAEAF-R	CH4S	-	-	-	-	1	
+	TOP-OUT	IFAEAF-R	CO2SP	-	-	-	-	1	
+	TOP-OUT	IFAEAF-R	IFAM	-	-	-	-	1	
+	TOP-OUT	XINDBIO	INDBIO	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

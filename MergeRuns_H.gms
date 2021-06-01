@@ -31,7 +31,7 @@ $loaddc PRC COM S TS_WEEKLY
 
 LOOP(RUN$INCLRUN(RUN),
 
-put_utilities Scen 'gdxin' / "H_",RUN.TL:20;
+put_utilities Scen 'gdxin' / "H_",RUN.TL:30;
 execute_load REPORTH_RUN;
 
 REPORTMH(PRC,COM,TC,TS_WEEKLY,TS_HOURLY,RUN,IndicatorsH) = REPORTH_RUN(PRC,COM,TC,TS_WEEKLY,TS_HOURLY,IndicatorsH);

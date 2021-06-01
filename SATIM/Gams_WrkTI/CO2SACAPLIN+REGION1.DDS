@@ -1,0 +1,42 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET PRC /
+  'UDACCO2S'                 'Direct Air Capture for CO2S                       '
+/;
+SET PRC_PRE /
+  'REGION1'   .'UDACCO2S'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'UDACCO2S'
+/;
+SET PRC_IRE /
+  'REGION1'   .'UDACCO2S'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'UDACCO2S'.'PJ'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'UDACCO2S'                .'ZDUMETRANS'                 1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'UDACCO2S'                   1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'UDACCO2S'                .'ZDUMETRANS'                 1
+/;
+       TABLE AACT_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UDACCO2S'                         1462016                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+;
+       TABLE ACOMBNDNET
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'CO2S'                    .'ANNUAL'                  .'UP'                                                                                                                                                                                                                                                                                                                               379039          360587          342135          323683          305231          286779          268327          249875          231423          212971          194519          102260          10000                           
+;
+       TABLE AFLO_EMIS
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UDACCO2S'                .'CO2S'                    .'ACTGRP'                  .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;

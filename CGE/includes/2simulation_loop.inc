@@ -196,8 +196,16 @@ $offtext
 * make adjustments to ica
 
 *BM+FH 201218: SETTING STARTING POINT FOR HYDROGEN
+* ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+*                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
+* BM 260521: Adjusting absolute calc because of new approach using GVA rather than QA for EIntensity calc
+*This needs QA_FSStart: ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+*                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC));
  ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
                          = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
+* tmp fix until QA approach is done properly
+ ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+                         = ica('chydr',A,'NAT') * QVA.L(A,'nat')/QA.L(A);
 
 * calculate ica change for private passenger. This needs to be generalised to other household end-uses
   EHIntensity(C,'aprtr',TC) = FLOW_IN_FSFuels('tppr',C,TC)/sum(TPPR,COM_PROJ('REGION1',TC,TPPR));

@@ -1,0 +1,166 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'CO2CAPT'                  'CO2 Captured                                      '
+  'CO2SPIFC'                 'Process Emissions FerroChrome South Africa        '
+  'CO2STOR'                  'Transported and Stored CO2                        '
+  'ELCC'                     'Electricity Upstream Transmission                 '
+  'IFAELC'                   'Industry-FA-Electricity                           '
+  'INMELC'                   'Industry-NM-Electricity                           '
+  'PWRCO2S'                  'Power Sector Carbon dioxide South Africa          '
+/;
+SET COM /
+  'CO2CAPT'                  'CO2 Captured                                      '
+  'CO2SPIFC'                 'Process Emissions FerroChrome South Africa        '
+  'CO2STOR'                  'Transported and Stored CO2                        '
+  'ELCC'                     'Electricity Upstream Transmission                 '
+  'IFAELC'                   'Industry-FA-Electricity                           '
+  'INMELC'                   'Industry-NM-Electricity                           '
+  'PWRCO2S'                  'Power Sector Carbon dioxide South Africa          '
+/;
+SET COM_NRG /
+  'REGION1'   .'CO2CAPT'
+  'REGION1'   .'CO2STOR'
+  'REGION1'   .'ELCC'
+  'REGION1'   .'IFAELC'
+  'REGION1'   .'INMELC'
+/;
+SET COM_ENV /
+  'REGION1'   .'CO2SPIFC'
+  'REGION1'   .'PWRCO2S'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'CO2CAPT'
+  'REGION1'   .'CO2SPIFC'
+  'REGION1'   .'CO2STOR'
+  'REGION1'   .'PWRCO2S'
+/;
+SET COM_DAYNIT /
+  'REGION1'   .'ELCC'
+  'REGION1'   .'IFAELC'
+  'REGION1'   .'INMELC'
+/;
+SET COM_NRGELC /
+  'REGION1'   .'ELCC'
+  'REGION1'   .'IFAELC'
+  'REGION1'   .'INMELC'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'CO2CAPT'
+  'REGION1'   .'CO2STOR'
+/;
+SET COM_ENVGHG /
+  'REGION1'   .'CO2SPIFC'
+  'REGION1'   .'PWRCO2S'
+/;
+SET PRC /
+  'UCO2SPCEM'                'CO2SP Capture Cement                              '
+  'UCO2SPIFC'                'CO2SP Capture FerroChrome                         '
+  'UCO2SPIFM'                'CO2SP Capture FerroManganese                      '
+  'UCO2STOR'                 'CO2 Storage - Durban Basin                        '
+  'UPWRCO2SC'                'PWRCO2S Power Sector Capture - Retrofit           '
+  'XCO2TRANSPORT'            'CO2 Transport - Durban Basin                      '
+/;
+SET PRC_PRE /
+  'REGION1'   .'UCO2SPCEM'
+  'REGION1'   .'UCO2SPIFC'
+  'REGION1'   .'UCO2SPIFM'
+  'REGION1'   .'UCO2STOR'
+  'REGION1'   .'UPWRCO2SC'
+  'REGION1'   .'XCO2TRANSPORT'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'UCO2SPCEM'
+  'REGION1'   .'UCO2SPIFC'
+  'REGION1'   .'UCO2SPIFM'
+  'REGION1'   .'UCO2STOR'
+  'REGION1'   .'UPWRCO2SC'
+  'REGION1'   .'XCO2TRANSPORT'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'CO2CAPT'.'KT'
+  'REGION1'.'CO2SPIFC'.'KT'
+  'REGION1'.'CO2STOR'.'KT'
+  'REGION1'.'ELCC'.'PJ'
+  'REGION1'.'IFAELC'.'PJ'
+  'REGION1'.'INMELC'.'PJ'
+  'REGION1'.'PWRCO2S'.'KT'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'UCO2SPCEM'.'KT'
+  'REGION1'.'UCO2SPIFC'.'KT'
+  'REGION1'.'UCO2SPIFM'.'KT'
+  'REGION1'.'UCO2STOR'.'KT'
+  'REGION1'.'UPWRCO2SC'.'KT'
+  'REGION1'.'XCO2TRANSPORT'.'KT'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'UCO2SPCEM'               .'CO2CAPT'                    1
+  'REGION1'                 .'UCO2SPIFC'               .'CO2CAPT'                    1
+  'REGION1'                 .'UCO2SPIFM'               .'CO2CAPT'                    1
+  'REGION1'                 .'UCO2STOR'                .'ZDUMETRANS'                 1
+  'REGION1'                 .'UPWRCO2SC'               .'CO2CAPT'                    1
+  'REGION1'                 .'XCO2Transport'           .'CO2STOR'                    1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'UCO2SPCEM'                  1
+  'REGION1'                 .'UCO2SPIFC'                  1
+  'REGION1'                 .'UCO2SPIFM'                  1
+  'REGION1'                 .'UCO2STOR'                   1
+  'REGION1'                 .'UPWRCO2SC'                  1
+  'REGION1'                 .'XCO2TRANSPORT'              1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'UCO2SPCEM'               .'INMCEMTHF'                  1
+  'REGION1'                 .'UCO2SPCEM'               .'INMELC'                     1
+  'REGION1'                 .'UCO2SPIFC'               .'IFAELC'                     1
+  'REGION1'                 .'UCO2SPIFM'               .'IFAELC'                     1
+  'REGION1'                 .'UCO2STOR'                .'CO2STOR'                    1
+  'REGION1'                 .'UPWRCO2SC'               .'ELCC'                       1
+  'REGION1'                 .'XCO2Transport'           .'CO2CAPT'                    1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'UCO2SPCEM'               .'CO2CAPT'                    1
+  'REGION1'                 .'UCO2SPCEM'               .'CO2SPCEM'                   1
+  'REGION1'                 .'UCO2SPIFC'               .'CO2CAPT'                    1
+  'REGION1'                 .'UCO2SPIFC'               .'CO2SPIFC'                   1
+  'REGION1'                 .'UCO2SPIFM'               .'CO2CAPT'                    1
+  'REGION1'                 .'UCO2SPIFM'               .'CO2SPIFM'                   1
+  'REGION1'                 .'UCO2STOR'                .'ZDUMETRANS'                 1
+  'REGION1'                 .'UPWRCO2SC'               .'CO2CAPT'                    1
+  'REGION1'                 .'UPWRCO2SC'               .'PWRCO2S'                    1
+  'REGION1'                 .'XCO2Transport'           .'CO2STOR'                    1
+/;
+       TABLE AACT_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCO2SPCEM'                        .429866                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'UCO2SPIFC'                        .3394372183098                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UCO2SPIFM'                        .3394372183098                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UCO2STOR'                         6.40867298E-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UPWRCO2SC'                        .4355881256231                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'XCO2TRANSPORT'                    .2481951146560                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+;
+       TABLE AACT_EFF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCO2SPIFC'               .'ACTGRP'                  .'ANNUAL'                           833.3333333333                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UCO2SPIFM'               .'ACTGRP'                  .'ANNUAL'                           833.3333333333                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UCO2STOR'                .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UPWRCO2SC'               .'ACTGRP'                  .'ANNUAL'                           810.3095238095                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'XCO2TRANSPORT'           .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE AFLO_EMIS
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCO2SPCEM'               .'CO2SPCEM'                .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UCO2SPIFC'               .'CO2SPIFC'                .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UCO2SPIFM'               .'CO2SPIFM'                .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UPWRCO2SC'               .'PWRCO2S'                 .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE APRCACTFLO
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCO2SPCEM'               .'INMCEMTHF'                        .003                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'UCO2SPCEM'               .'INMELC'                           .000216                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+;

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/25	19:24:34
+Creation Date:	2021/05/06	17:32:01
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	GTS_MBTBF_C	UC: Bi-Fuel (BF) Minibus Taxis (MBT)  (NGas/Petrol) by 2030 NDC Central	UC = user constraint{/n}10% of minibus taxi fleet converted to bi-fueled (CNG:Petrol) by 2030 reaching 40% by 2050
@@ -17,7 +17,9 @@ TID DATA	_GLOBAL
 
 ITEMS	REGION1
 	C	GTS_MBTGAS	NDC PAMS: gas vehicles	uconstraint	UC_N,UCRT,UCRULE	
+	C	GTS_MBTGAS_C	NDC central:  ngas vehicles	uconstraint	UC_N,UCRT,UCRULE	
 	C	GTS_MBTOGS	NDC PAMS: petrol vehicles	uconstraint	UC_N,UCRT,UCRULE	
+	C	GTS_MBTOGS_C	NDC central: petrol vehicles	uconstraint	UC_N,UCRT,UCRULE	
 	D	TRABGS-G	Transport Blended E-Gasoline  set		COM_GRP,COM_GRPTRU	
 	E	BBE	Sugarbeet crop	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	BCA	Canola grain crop	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -35,22 +37,243 @@ ITEMS	REGION1
 	E	MTH	Methanol	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	TAXOGS	Fuel tax:petrol	2000$USm	COM,FIN	
 	E	TRABGS	Transport blended gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	MINAGR-N	establishment of agricultural land	Mha,mt/a	PRC,MISC,ANNUAL	
+	T	MINBBE	Extraction of Sugarbeet (Farming)	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINBCA	Extraction of Canola grains (Farming)	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MINBSC	Extraction of Sugar Cane(Farming)	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINBSR	Extraction of Sorghum (Farming)	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINBSY	Extraction of soybeans (Farming)	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINMTH	Local production of methanol	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UBBEBIE-N	Biofuel Refinery SugarBeet Bioethanol new	PJ,PJa	PRC,PRE,REF,ANNUAL	
+	T	UBCABID-N	Biofuel Refinery Canola Biodiesel new	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UBSCBIE-N	Biofuel Refinery Sugar Cane Bioethanol new	PJ,PJa	PRC,PRE,REF,ANNUAL	
+	T	UBSRBIE-N	Biofuel Refinery Sorghum Bioethanol new	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UBSYBID-N	Biofuel Refinery Soybean Biodiesel new	PJ,PJa	PRC,PRE,REF,ANNUAL	
+	T	UINDSCOA1-N	Coal boiler: industrial steam: Class1	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UINDSGAS1-N	Gas boiler: industrial steam: Class1	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGRBIO	Agricultural land for BIO-energy crops	Mha,mt/a	PRC,MISC,ANNUAL	
+	T	XTRABGS	Distribution of blended transport gasoline	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XTRABID	Biodiesel into Diesel system	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XTRABIE	Bioethanol into Petrol system	PJ,PJa	PRC,PRE,ANNUAL	
 
 TS DATA	REGION1
+	ACT_COST	MINAGR-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINMTH	-	-	-	-	-	0	216.0059	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UINDSCOA1-N	-	INDSHT1	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UINDSGAS1-N	-	INDSHT1	-	ANNUAL	-	0	0.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XAGRBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRABID	-	ACTGRP	-	ANNUAL	-	0	0.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XTRABIE	-	ACTGRP	-	ANNUAL	-	0	0.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	UBBEBIE-N	-	-	-	-	UP	3	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	MINBSC	LNDAGRBSC	BSC	-	ANNUAL	-	0	0.014	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	MINBSC	ODS	BSC	-	ANNUAL	-	0	0.1033	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBBEBIE-N	BBE	BIE	-	ANNUAL	-	0	0.3926	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBBEBIE-N	INDSHT1	BIE	-	ANNUAL	-	0	0.0755	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBBEBIE-N	UPSELC	BIE	-	ANNUAL	-	0	0.0152	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBCABID-N	BCA	BID	-	ANNUAL	-	0	0.0704	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBCABID-N	INDSHT1	BID	-	ANNUAL	-	0	0.0924	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBCABID-N	MTH	BID	-	ANNUAL	-	0	0.0495	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBCABID-N	UPSELC	BID	-	ANNUAL	-	0	0.0186	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSCBIE-N	BIB2	BIE	-	ANNUAL	-	0	0.61	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSCBIE-N	BSC	BIE	-	ANNUAL	-	0	0.55	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSRBIE-N	BSR	BIE	-	ANNUAL	-	0	0.3926	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSRBIE-N	INDSHT1	BIE	-	ANNUAL	-	0	0.2969	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSRBIE-N	UPSELC	BIE	-	ANNUAL	-	0	0.0154	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSYBID-N	BSY	BID	-	ANNUAL	-	0	0.1642	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSYBID-N	INDSHT1	BID	-	ANNUAL	-	0	0.2182	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSYBID-N	MTH	BID	-	ANNUAL	-	0	0.0495	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	UBSYBID-N	UPSELC	BID	-	ANNUAL	-	0	0.056	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRACH4S	OGS	-	ANNUAL	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRACMOX	OGS	-	ANNUAL	-	0	8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRACO2S	OGS	-	ANNUAL	-	0	69.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRAN2OS	OGS	-	ANNUAL	-	0	0.0006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRANMVS	OGS	-	ANNUAL	-	0	1.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRANOXS	OGS	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	XTRABGS	TRASOXS	OGS	-	ANNUAL	-	0	0.0467	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	XTRABGS	-	TRABGS-G	TRABGS	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	XTRABGS	BIE	TRABGS-G	-	ANNUAL	UP	5	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	XTRABGS	OGS	TRABGS-G	-	ANNUAL	UP	5	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UBBEBIE-N	-	-	-	-	UP	0	0.868	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UBCABID-N	-	-	-	-	UP	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UBSCBIE-N	-	-	-	-	UP	0	0.959	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UBSRBIE-N	-	-	-	-	UP	0	0.96	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UBSYBID-N	-	-	-	-	UP	0	0.98	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	MINAGR-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBBEBIE-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	0	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBCABID-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	0	14.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBSCBIE-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	0	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBSRBIE-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	0	3.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UBSYBID-N	-	-	-	-	LO	0	null	null	null	null	null	null	null	0	9.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	MINAGR-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UBBEBIE-N	-	-	-	-	-	0	403.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UBCABID-N	-	-	-	-	-	0	283.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UBSCBIE-N	-	-	-	-	-	0	801.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UBSRBIE-N	-	-	-	-	-	0	405.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UBSYBID-N	-	-	-	-	-	0	242.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRABGS	-	-	-	-	-	0	25.4636	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRABID	-	-	-	-	-	0	25.8279	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRABIE	-	-	-	-	-	0	25.4636	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	MINBBE	-	-	-	-	-	0	2744	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	MINBCA	-	-	-	-	-	0	2340	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	MINBSC	-	-	-	-	-	0	300	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	MINBSR	-	-	-	-	-	0	2207	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	MINBSY	-	-	-	-	-	0	4223	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UBBEBIE-N	-	-	-	-	-	0	8.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UBCABID-N	-	-	-	-	-	0	5.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UBSCBIE-N	-	-	-	-	-	0	16	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UBSRBIE-N	-	-	-	-	-	0	8.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	UBSYBID-N	-	-	-	-	-	0	4.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UBBEBIE-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UBCABID-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UBSCBIE-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UBSRBIE-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UBSYBID-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UBBEBIE-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UBCABID-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UBSCBIE-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UBSRBIE-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UBSYBID-N	-	-	-	-	-	0	50	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XTRABGS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XTRABID	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XTRABIE	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBBE	-	LNDAGRBBE	-	-	-	0	0.011	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBBE	-	ODS	-	-	-	0	0.0441	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBCA	-	LNDAGRBCA	-	-	-	0	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBCA	-	ODS	-	-	-	0	4.3021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBSR	-	LNDAGRBSR	-	-	-	0	0.386	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBSR	-	ODS	-	-	-	0	1.8178	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBSY	-	LNDAGRBSY	-	-	-	0	0.333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	MINBSY	-	ODS	-	-	-	0	1.1694	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	GTS_MBTGAS	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UC__RHSRT	GTS_MBTGAS_C	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	GTS_MBTOGS	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
+	UC__RHSRT	GTS_MBTOGS_C	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UCRULE_ACT	GTS_MBTGAS	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.0685	null	null	null	null	null	null	null	null	null	null	null	-0.274	-0.274	-0.274	
 	UCRULE_ACT	GTS_MBTGAS	LHS	S_TPPUMBTGAS	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
+	UCRULE_ACT	GTS_MBTGAS_C	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.0685	null	null	null	null	null	null	null	null	null	null	null	-0.274	-0.274	-0.274	
+	UCRULE_ACT	GTS_MBTGAS_C	LHS	S_TPPUMBTGAS	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
 	UCRULE_ACT	GTS_MBTOGS	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.0315	null	null	null	null	null	null	null	null	null	null	null	-0.126	-0.126	-0.126	
 	UCRULE_ACT	GTS_MBTOGS	LHS	S_TPPUMBTOGS	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
+	UCRULE_ACT	GTS_MBTOGS_C	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.0315	null	null	null	null	null	null	null	null	null	null	null	-0.126	-0.126	-0.126	
+	UCRULE_ACT	GTS_MBTOGS_C	LHS	S_TPPUMBTOGS	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
 
 TID DATA	REGION1
 	COM_GMAP	-	BIE	TRABGS-G	-	-	-	1	
 	COM_GMAP	-	OGS	TRABGS-G	-	-	-	1	
+	NCAP_START	UBBEBIE-N	-	-	-	-	-	2017	
+	NCAP_START	UBCABID-N	-	-	-	-	-	2017	
+	NCAP_START	UBSCBIE-N	-	-	-	-	-	2017	
+	NCAP_START	UBSRBIE-N	-	-	-	-	-	2017	
+	NCAP_START	UBSYBID-N	-	-	-	-	-	2017	
+	NCAP_START	XTRABGS	-	-	-	-	-	2023	
+	PRC_ACTUNT	MINAGR-N	-	LNDAGR	-	-	-	1	
+	PRC_ACTUNT	MINBBE	-	BBE	-	-	-	1	
+	PRC_ACTUNT	MINBCA	-	BCA	-	-	-	1	
+	PRC_ACTUNT	MINBSC	-	BSC	-	-	-	1	
+	PRC_ACTUNT	MINBSR	-	BSR	-	-	-	1	
+	PRC_ACTUNT	MINBSY	-	BSY	-	-	-	1	
+	PRC_ACTUNT	MINMTH	-	MTH	-	-	-	1	
+	PRC_ACTUNT	UBBEBIE-N	-	BIE	-	-	-	1	
+	PRC_ACTUNT	UBCABID-N	-	BID	-	-	-	1	
+	PRC_ACTUNT	UBSCBIE-N	-	BIE	-	-	-	1	
+	PRC_ACTUNT	UBSRBIE-N	-	BIE	-	-	-	1	
+	PRC_ACTUNT	UBSYBID-N	-	BID	-	-	-	1	
+	PRC_ACTUNT	UINDSCOA1-N	-	INDSHT1	-	-	-	1	
+	PRC_ACTUNT	UINDSGAS1-N	-	INDSHT1	-	-	-	1	
+	PRC_ACTUNT	XAGRBIO	-	LNDAGR	-	-	-	1	
+	PRC_ACTUNT	XTRABGS	-	TRABGS	-	-	-	1	
+	PRC_ACTUNT	XTRABID	-	TRAODS	-	-	-	1	
+	PRC_ACTUNT	XTRABIE	-	TRAOGS	-	-	-	1	
+	PRC_CAPACT	MINAGR-N	-	-	-	-	-	1	
+	PRC_CAPACT	MINBBE	-	-	-	-	-	1	
+	PRC_CAPACT	MINBCA	-	-	-	-	-	1	
+	PRC_CAPACT	MINBSC	-	-	-	-	-	1	
+	PRC_CAPACT	MINBSR	-	-	-	-	-	1	
+	PRC_CAPACT	MINBSY	-	-	-	-	-	1	
+	PRC_CAPACT	MINMTH	-	-	-	-	-	1	
+	PRC_CAPACT	UBBEBIE-N	-	-	-	-	-	1	
+	PRC_CAPACT	UBCABID-N	-	-	-	-	-	1	
+	PRC_CAPACT	UBSCBIE-N	-	-	-	-	-	1	
+	PRC_CAPACT	UBSRBIE-N	-	-	-	-	-	1	
+	PRC_CAPACT	UBSYBID-N	-	-	-	-	-	1	
+	PRC_CAPACT	UINDSCOA1-N	-	-	-	-	-	1	
+	PRC_CAPACT	UINDSGAS1-N	-	-	-	-	-	1	
+	PRC_CAPACT	XAGRBIO	-	-	-	-	-	1	
+	PRC_CAPACT	XTRABGS	-	-	-	-	-	1	
+	PRC_CAPACT	XTRABID	-	-	-	-	-	1	
+	PRC_CAPACT	XTRABIE	-	-	-	-	-	1	
+	TOP-IN	MINBBE	LNDAGRBBE	-	-	-	-	1	
+	TOP-IN	MINBBE	ODS	-	-	-	-	1	
+	TOP-IN	MINBCA	LNDAGRBCA	-	-	-	-	1	
+	TOP-IN	MINBCA	ODS	-	-	-	-	1	
+	TOP-IN	MINBSC	LNDAGRBSC	-	-	-	-	1	
+	TOP-IN	MINBSC	ODS	-	-	-	-	1	
+	TOP-IN	MINBSR	LNDAGRBSR	-	-	-	-	1	
+	TOP-IN	MINBSR	ODS	-	-	-	-	1	
+	TOP-IN	MINBSY	LNDAGRBSY	-	-	-	-	1	
+	TOP-IN	MINBSY	ODS	-	-	-	-	1	
+	TOP-IN	UBBEBIE-N	BBE	-	-	-	-	1	
+	TOP-IN	UBBEBIE-N	INDSHT1	-	-	-	-	1	
+	TOP-IN	UBBEBIE-N	UPSELC	-	-	-	-	1	
+	TOP-IN	UBCABID-N	BCA	-	-	-	-	1	
+	TOP-IN	UBCABID-N	INDSHT1	-	-	-	-	1	
+	TOP-IN	UBCABID-N	MTH	-	-	-	-	1	
+	TOP-IN	UBCABID-N	UPSELC	-	-	-	-	1	
+	TOP-IN	UBSCBIE-N	BIB2	-	-	-	-	1	
+	TOP-IN	UBSCBIE-N	BSC	-	-	-	-	1	
+	TOP-IN	UBSRBIE-N	BSR	-	-	-	-	1	
+	TOP-IN	UBSRBIE-N	INDSHT1	-	-	-	-	1	
+	TOP-IN	UBSRBIE-N	UPSELC	-	-	-	-	1	
+	TOP-IN	UBSYBID-N	BSY	-	-	-	-	1	
+	TOP-IN	UBSYBID-N	INDSHT1	-	-	-	-	1	
+	TOP-IN	UBSYBID-N	MTH	-	-	-	-	1	
+	TOP-IN	UBSYBID-N	UPSELC	-	-	-	-	1	
+	TOP-IN	UINDSCOA1-N	COA	-	-	-	-	1	
+	TOP-IN	UINDSGAS1-N	GAS	-	-	-	-	1	
+	TOP-IN	XAGRBIO	LNDAGR	-	-	-	-	1	
+	TOP-IN	XTRABGS	BIE	-	-	-	-	1	
+	TOP-IN	XTRABGS	OGS	-	-	-	-	1	
+	TOP-IN	XTRABID	BID	-	-	-	-	1	
+	TOP-IN	XTRABIE	BIE	-	-	-	-	1	
+	TOP-OUT	MINAGR-N	LNDAGR	-	-	-	-	1	
+	TOP-OUT	MINBBE	BBE	-	-	-	-	1	
+	TOP-OUT	MINBCA	BCA	-	-	-	-	1	
+	TOP-OUT	MINBSC	BIB2	-	-	-	-	1	
+	TOP-OUT	MINBSC	BSC	-	-	-	-	1	
+	TOP-OUT	MINBSR	BSR	-	-	-	-	1	
+	TOP-OUT	MINBSY	BSY	-	-	-	-	1	
+	TOP-OUT	MINMTH	MTH	-	-	-	-	1	
+	TOP-OUT	UBBEBIE-N	BIE	-	-	-	-	1	
+	TOP-OUT	UBCABID-N	BID	-	-	-	-	1	
+	TOP-OUT	UBSCBIE-N	BIE	-	-	-	-	1	
+	TOP-OUT	UBSRBIE-N	BIE	-	-	-	-	1	
+	TOP-OUT	UBSYBID-N	BID	-	-	-	-	1	
+	TOP-OUT	UINDSCOA1-N	INDSHT1	-	-	-	-	1	
+	TOP-OUT	UINDSGAS1-N	INDSHT1	-	-	-	-	1	
+	TOP-OUT	XAGRBIO	LNDAGRBBE	-	-	-	-	1	
+	TOP-OUT	XAGRBIO	LNDAGRBCA	-	-	-	-	1	
+	TOP-OUT	XAGRBIO	LNDAGRBSC	-	-	-	-	1	
+	TOP-OUT	XAGRBIO	LNDAGRBSR	-	-	-	-	1	
+	TOP-OUT	XAGRBIO	LNDAGRBSY	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRABGS	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRACH4S	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRACMOX	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRACO2S	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRAN2OS	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRANMVS	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRANOXS	-	-	-	-	1	
+	TOP-OUT	XTRABGS	TRASOXS	-	-	-	-	1	
+	TOP-OUT	XTRABID	TRAODS	-	-	-	-	1	
+	TOP-OUT	XTRABIE	TRAOGS	-	-	-	-	1	
+	TOP-OUT	ZZBKNRG	BSC	-	-	-	-	1	
 	UC_R_EACH	GTS_MBTGAS	-	-	-	-	-	1	
+	UC_R_EACH	GTS_MBTGAS_C	-	-	-	-	-	1	
 	UC_R_EACH	GTS_MBTOGS	-	-	-	-	-	1	
+	UC_R_EACH	GTS_MBTOGS_C	-	-	-	-	-	1	
 	UC_R_SUM	GTS_MBTGAS	-	-	-	-	-	1	
+	UC_R_SUM	GTS_MBTGAS_C	-	-	-	-	-	1	
 	UC_R_SUM	GTS_MBTOGS	-	-	-	-	-	1	
+	UC_R_SUM	GTS_MBTOGS_C	-	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1
 

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/09/02	6:00:03 PM
+Creation Date:	2021/05/19	2:26:29 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_REL	Reliability constraint	
@@ -16,8 +16,8 @@ TS DATA	_GLOBAL
 TID DATA	_GLOBAL
 
 ITEMS	REGION1
-	C	UCACT_BATR	Batr constraint	uconstraint	UC_N,UCRT,UCRULE	
-	C	UCACT_GAS	Gas constraint	uconstraint	UC_N,UCRT,UCRULE	
+	C	UCACT_FIRM	Constraint on dispatchable techs	uconstraint	UC_N,UCRT,UCRULE	
+	C	UCCAP_BATR	Battery constraint	uconstraint	UC_N,UCRT,UCRULE	
 	C	UCCAP_DUMETR	dummy technology tracking the sum of centralised generation over and above peak grid demand'	uconstraint	UC_N,UCRT	
 	C	UCCAP_ERMELC	Energy Reserve Margin on ELCC	uconstraint	UC_N,UCRT	
 	C	UCCAP_RMELCC	Capacity Reserve Margin on ELCC	uconstraint	UC_N,UCRT	
@@ -49,8 +49,8 @@ TS DATA	REGION1
 	ACT_EFF	EP_FLAB-P	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	EP_FLAB-S	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	EP_FLAB-T	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC__RHSRT	UCACT_BATR	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UC__RHSRT	UCACT_GAS	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UC__RHSRT	UCACT_FIRM	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UC__RHSRT	UCCAP_BATR	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_DUMETR	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_ERMELC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_RMELCC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
@@ -83,6 +83,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_DUMETR	LHS	ETCLDFB-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETCLEARNO-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETCLECAMD-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETCLE-CCS-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETCLEDUVH-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETCLEGROO-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETCLEHEND-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -106,6 +107,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_DUMETR	LHS	ETGICCC-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETGICEN-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETGICGT-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_DUMETR	LHS	ETHGNGT-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETNUC-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETNUC-N	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_DUMETR	LHS	ETODSGT-E	-	-	-	3	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -129,31 +131,34 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_ERMELC	LHS	ERWNDH-N	-	-	-	3	null	null	null	null	null	null	null	null	11.818439244	null	null	null	null	12.196770044976	null	null	null	null	12.575100845952	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ESTSUTL	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLDFB-N	-	-	-	3	null	null	null	null	null	null	null	null	25.2288	null	null	null	null	25.2288	null	null	null	null	25.2288	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEARNO-E	-	-	-	3	null	null	null	null	null	null	null	null	17.4337559870406	null	null	null	null	20.65608	null	null	null	null	17.2123488	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLECAMD-E	-	-	-	3	null	null	null	null	null	null	null	null	17.8325888937567	null	null	null	null	18.9216	null	null	null	null	18.9216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEDUVH-E	-	-	-	3	null	null	null	null	null	null	null	null	18.099885160251	null	null	null	null	19.2748032	null	null	null	null	18.9878256	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEGROO-E	-	-	-	3	null	null	null	null	null	null	null	null	12.1109044520399	null	null	null	null	12.1109044520399	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEHEND-E	-	-	-	3	null	null	null	null	null	null	null	null	18.3176780133026	null	null	null	null	19.2148848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEARNO-E	-	-	-	3	null	null	null	null	null	null	null	null	20.5173216	null	null	null	null	20.6497728	null	null	null	null	17.2123488	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLECAMD-E	-	-	-	3	null	null	null	null	null	null	null	null	18.9216	null	null	null	null	19.8866016	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLE-CCS-N	-	-	-	3	null	null	null	null	null	null	null	null	25.2288	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEDUVH-E	-	-	-	3	null	null	null	null	null	null	null	null	17.1808128	null	null	null	null	19.2748032	null	null	null	null	18.9878256	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEGROO-E	-	-	-	3	null	null	null	null	null	null	null	null	28.114344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEHEND-E	-	-	-	3	null	null	null	null	null	null	null	null	19.2148848	null	null	null	null	21.870216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKELB-E	-	-	-	3	null	null	null	null	null	null	null	null	10.24257	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKEND-E	-	-	-	3	null	null	null	null	null	null	null	null	24.3605179235664	null	null	null	null	23.3807904	null	null	null	null	23.0023584	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	11.1795007655318	null	null	null	null	11.1795007655318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKRIE-E	-	-	-	3	null	null	null	null	null	null	null	null	16.9482590398148	null	null	null	null	20.3217984	null	null	null	null	20.230344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	17.6744617457877	null	null	null	null	25.2288	null	null	null	null	25.2288	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLELETH-E	-	-	-	3	null	null	null	null	null	null	null	null	20.3099350561335	null	null	null	null	23.6141568	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMAJD-E	-	-	-	3	null	null	null	null	null	null	null	null	23.0254424100534	null	null	null	null	24.28272	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMAJW-E	-	-	-	3	null	null	null	null	null	null	null	null	23.0254424100534	null	null	null	null	24.28272	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMATI-E	-	-	-	3	null	null	null	null	null	null	null	null	26.0625590243902	null	null	null	null	24.7147632	null	null	null	null	25.0427376	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMATL-E	-	-	-	3	null	null	null	null	null	null	null	null	21.3210160730626	null	null	null	null	22.2423408	null	null	null	null	21.9995136	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMEDU-N	-	-	-	3	null	null	null	null	null	null	null	null	17.6744617457877	null	null	null	null	25.2288	null	null	null	null	25.2288	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKEND-E	-	-	-	3	null	null	null	null	null	null	null	null	21.791376	null	null	null	null	23.3807904	null	null	null	null	23.0023584	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	27.5593104	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKRIE-E	-	-	-	3	null	null	null	null	null	null	null	null	17.060976	null	null	null	null	20.3217984	null	null	null	null	20.230344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	23.8538304	null	null	null	null	25.827984	null	null	null	null	25.5630816	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLELETH-E	-	-	-	3	null	null	null	null	null	null	null	null	23.3303328	null	null	null	null	23.6141568	null	null	null	null	23.1348096	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMAJD-E	-	-	-	3	null	null	null	null	null	null	null	null	23.037048	null	null	null	null	24.2953344	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMAJW-E	-	-	-	3	null	null	null	null	null	null	null	null	23.037048	null	null	null	null	24.2953344	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMATI-E	-	-	-	3	null	null	null	null	null	null	null	null	26.09604	null	null	null	null	24.7147632	null	null	null	null	25.0427376	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMATL-E	-	-	-	3	null	null	null	null	null	null	null	null	21.223728	null	null	null	null	22.2423408	null	null	null	null	21.9711312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMEDU-N	-	-	-	3	null	null	null	null	null	null	null	null	23.8538304	null	null	null	null	25.827984	null	null	null	null	25.5630816	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEPFSI-E	-	-	-	3	null	null	null	null	null	null	null	null	17.561821021875	null	null	null	null	17.561821021875	null	null	null	null	17.561821021875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEPFSS-E	-	-	-	3	null	null	null	null	null	null	null	null	23.0787522755435	null	null	null	null	23.0787522755435	null	null	null	null	23.0787522755435	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLETUTU-E	-	-	-	3	null	null	null	null	null	null	null	null	17.7334828216125	null	null	null	null	19.284264	null	null	null	null	18.3161088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLETUTU-E	-	-	-	3	null	null	null	null	null	null	null	null	17.6790816	null	null	null	null	19.284264	null	null	null	null	18.3003408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEWATE-N	-	-	-	3	null	null	null	null	null	null	null	null	25.2288	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETGASENSI-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETGASENSS-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETGICCC-CCS-N	-	-	-	3	null	null	null	null	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETGICCC-N	-	-	-	3	null	null	null	null	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETGICEN-N	-	-	-	3	null	null	null	null	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	15.768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETGICGT-N	-	-	-	3	null	null	null	null	null	null	null	null	3.1536	null	null	null	null	3.1536	null	null	null	null	3.1536	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETHGNGT-N	-	-	-	3	null	null	null	null	null	null	null	null	3.1536	null	null	null	null	3.1536	null	null	null	null	3.1536	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETNUC-E	-	-	-	3	null	null	null	null	null	null	null	null	29.2029290322581	null	null	null	null	26.5406976	null	null	null	null	26.5406976	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETNUC-N	-	-	-	3	null	null	null	null	null	null	null	null	26.8056	null	null	null	null	26.8056	null	null	null	null	26.8056	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETODSGT-E	-	-	-	3	null	null	null	null	null	null	null	null	1.5768	null	null	null	null	1.5768	null	null	null	null	1.5768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -178,12 +183,13 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLDFB-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEARNO-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLECAMD-E	-	-	-	3	null	null	null	null	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETCLE-CCS-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEDUVH-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEGROO-E	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEHEND-E	-	-	-	3	null	null	null	null	null	null	null	null	0.714285714285714	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKELB-E	-	-	-	3	null	null	null	null	null	null	null	null	0.333333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKEND-E	-	-	-	3	null	null	null	null	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKRIE-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.8	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLELETH-E	-	-	-	3	null	null	null	null	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -198,9 +204,11 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEWATE-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGASENSI-N	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGASENSS-N	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETGICCC-CCS-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGICCC-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGICEN-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETGICGT-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETHGNGT-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETNUC-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETNUC-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETODSGT-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -439,11 +447,11 @@ TS DATA	REGION1
 	UC_NCAP	UCNCAP_GAS	LHS	ETGICGT-N	-	-	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_NCAP	UCNCAP_PV	LHS	ERSOLPCF-N	-	-	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_NCAP	UCNCAP_PV	LHS	ERSOLPCT-N	-	-	-	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UCRULE_ACT	UCACT_GAS	LHS	S_PWRDPKGASMIN	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
-	UCRULE_ACT	UCACT_GAS	LHS	S_PWRSOLPA	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	
-	UCRULE_ACT	UCACT_GAS	LHS	S_PWRWND	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	
-	UCRULE_CAP	UCACT_BATR	LHS	S_PWRDPKBATMIN	-	-	-	0	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	
-	UCRULE_CAP	UCACT_BATR	LHS	S_PWRDPKGASMIN	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_ACT	UCACT_FIRM	LHS	S_PWRFIRM	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_ACT	UCACT_FIRM	LHS	S_PWRSOLPA	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	
+	UCRULE_ACT	UCACT_FIRM	LHS	S_PWRWND	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	-0.08	
+	UCRULE_CAP	UCCAP_BATR	LHS	S_PWRDPKBATMIN	-	-	-	0	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	
+	UCRULE_CAP	UCCAP_BATR	LHS	S_PWRFIRM	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
 
 TID DATA	REGION1
 	PRC_ACTUNT	EP_FLAB-M	-	PWR_FLAB-M	-	-	-	1	
@@ -474,8 +482,8 @@ TID DATA	REGION1
 	TOP-OUT	MIN_FLAB-P	FLAB-P	-	-	-	-	1	
 	TOP-OUT	MIN_FLAB-S	FLAB-S	-	-	-	-	1	
 	TOP-OUT	MIN_FLAB-T	FLAB-T	-	-	-	-	1	
-	UC_R_EACH	UCACT_BATR	-	-	-	-	-	1	
-	UC_R_EACH	UCACT_GAS	-	-	-	-	-	1	
+	UC_R_EACH	UCACT_FIRM	-	-	-	-	-	1	
+	UC_R_EACH	UCCAP_BATR	-	-	-	-	-	1	
 	UC_R_EACH	UCCAP_DUMETR	-	-	-	-	-	1	
 	UC_R_EACH	UCCAP_ERMELC	-	-	-	-	-	1	
 	UC_R_EACH	UCCAP_RMELCC	-	-	-	-	-	1	

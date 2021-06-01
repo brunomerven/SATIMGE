@@ -1,2 +1,2 @@
 @echo off
-CALL C:\Models\SATIMGE\SATIM\Gams_SrcTI\ANS_RUN.CMD C:\Models\SATIMGE\SATIM\Gams_SrcTI START NOPAMS_EXP C:\Models\SATIMGE\SATIM\Gams_WrkTI\Gamssave C:\Models\SATIMGE\SATIM\Gams_WrkTI\Gamssave\NOPAMS_EXP '' ''
+CALL C:\Models\SATIMGE\SATIM\Gams_SrcTI\ANS_RUN.CMD C:\Models\SATIMGE\SATIM\Gams_SrcTI START NZ-REF C:\Models\SATIMGE\SATIM\Gams_WrkTI\Gamssave C:\Models\SATIMGE\SATIM\Gams_WrkTI\Gamssave\NZ-REF '' ''

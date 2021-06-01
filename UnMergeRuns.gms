@@ -33,7 +33,7 @@ $load REPORTM
 LOOP(RUN$INCLRUN(RUN),
 REPORT_RUN(PRC,COM,TC,Indicators) = REPORTM(PRC,COM,TC,RUN,Indicators);
 
-put_utilities Scen 'gdxout' / RUN.TL:20;
+put_utilities Scen 'gdxout' / RUN.TL:30;
 execute_unload REPORT_RUN;
 
 

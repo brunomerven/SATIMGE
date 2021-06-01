@@ -28,6 +28,7 @@ SET PRC /
   'ETCLDFB-N'                'Fluidised Bed Combustion Coal                     '
   'ETCLEARNO-E'              'ARNOT                                             '
   'ETCLECAMD-E'              'CAMDEN                                            '
+  'ETCLE-CCS-N'              'Generic Waterberg Coal Plant with CCS             '
   'ETCLEDUVH-E'              'DUVHA                                             '
   'ETCLEGROO-E'              'GROOTVLEI                                         '
   'ETCLEHEND-E'              'HENDRINA                                          '
@@ -48,9 +49,11 @@ SET PRC /
   'ETCLEWATE-N'              'Generic Waterberg Coal Plant                      '
   'ETGASENSI-N'              'Sasol Infrachem Gas Plant                         '
   'ETGASENSS-N'              'Sasol SSF Gas Plant                               '
+  'ETGICCC-CCS-N'            'Combined Cycle Gas Turbine - LNG with CCS         '
   'ETGICCC-N'                'Combined Cycle Gas Turbine - LNG                  '
   'ETGICEN-N'                'Gas Engines - LNG                                 '
   'ETGICGT-N'                'Open Cycle Gas Turbine - LNG                      '
+  'ETHGNGT-N'                'Open Cycle Gas Turbine - Hydrogen                 '
   'ETNUC-E'                  'Nuclear Existing                                  '
   'ETNUC-N'                  'Nuclear Mid                                       '
   'ETODSGT-E'                'OCGT liquid fuels Existing                        '
@@ -63,7 +66,7 @@ SET PRC /
   'MIN_FLAB-T'               'Supply - Factor-Labour-Tertiary                   '
   'MINCSARNOVRS'             'Coal Supply for Arnot-various                     '
   'MINCSCAMDVRS'             'Coal Supply for Camden-various                    '
-  'MINCSDUVHS32'             'Coal Supply for Duvha-South 32                    '
+  'MINCSDUVHSER'             'Coal Supply for Duvha-Seriti                      '
   'MINCSDUVHVRS'             'Coal Supply for Duvha-various                     '
   'MINCSGROOVRS'             'Coal Supply for Grootvlei-various                 '
   'MINCSHENDVRS'             'Coal Supply for Hendrina-various                  '
@@ -83,6 +86,7 @@ SET PRC /
   'MINCSTUTUSER'             'Coal Supply for Tutuka-Seriti                     '
   'MINCSTUTUVRS'             'Coal Supply for Tutuka-various                    '
   'MINCSWATEVRS'             'Coal Supply for New Plants in Waterberg           '
+  'MINPWRWAT'                'Water Supply for Power Sector                     '
   'PEXELC'                   'Exports of Electricity                            '
   'XAGRELC'                  'Agriculatural Electricity                         '
   'XCOMELC'                  'Commercial Electricity                            '
@@ -96,6 +100,8 @@ SET PRC /
   'XINMELC'                  'Industrial NM-Electricity                         '
   'XIOTELC'                  'Industrial OT-Electricity                         '
   'XIPPELC'                  'Industrial PP-Electricity                         '
+  'XPWROHF'                  'Power Oil HFO                                     '
+  'XPWROKE'                  'Power Oil Kerosene                                '
   'XRESELC'                  'Residential Electricity                           '
   'XTRAELC'                  'Transport Electricity                             '
   'XUPSELC'                  'Supply Sector Electricity                         '
@@ -103,7 +109,7 @@ SET PRC /
 SET PRC_XTRACT /
   'REGION1'   .'MINCSARNOVRS'
   'REGION1'   .'MINCSCAMDVRS'
-  'REGION1'   .'MINCSDUVHS32'
+  'REGION1'   .'MINCSDUVHSER'
   'REGION1'   .'MINCSDUVHVRS'
   'REGION1'   .'MINCSGROOVRS'
   'REGION1'   .'MINCSHENDVRS'
@@ -123,6 +129,7 @@ SET PRC_XTRACT /
   'REGION1'   .'MINCSTUTUSER'
   'REGION1'   .'MINCSTUTUVRS'
   'REGION1'   .'MINCSWATEVRS'
+  'REGION1'   .'MINPWRWAT'
 /;
 SET PRC_PRE /
   'REGION1'   .'EP_FLAB-M'
@@ -138,7 +145,7 @@ SET PRC_PRE /
   'REGION1'   .'MIN_FLAB-T'
   'REGION1'   .'MINCSARNOVRS'
   'REGION1'   .'MINCSCAMDVRS'
-  'REGION1'   .'MINCSDUVHS32'
+  'REGION1'   .'MINCSDUVHSER'
   'REGION1'   .'MINCSDUVHVRS'
   'REGION1'   .'MINCSGROOVRS'
   'REGION1'   .'MINCSHENDVRS'
@@ -158,6 +165,9 @@ SET PRC_PRE /
   'REGION1'   .'MINCSTUTUSER'
   'REGION1'   .'MINCSTUTUVRS'
   'REGION1'   .'MINCSWATEVRS'
+  'REGION1'   .'MINPWRWAT'
+  'REGION1'   .'XPWROHF'
+  'REGION1'   .'XPWROKE'
 /;
 SET PRC_ELE /
   'REGION1'   .'ERBIG-N'
@@ -176,6 +186,7 @@ SET PRC_ELE /
   'REGION1'   .'ETCLDFB-N'
   'REGION1'   .'ETCLEARNO-E'
   'REGION1'   .'ETCLECAMD-E'
+  'REGION1'   .'ETCLE-CCS-N'
   'REGION1'   .'ETCLEDUVH-E'
   'REGION1'   .'ETCLEGROO-E'
   'REGION1'   .'ETCLEHEND-E'
@@ -196,9 +207,11 @@ SET PRC_ELE /
   'REGION1'   .'ETCLEWATE-N'
   'REGION1'   .'ETGASENSI-N'
   'REGION1'   .'ETGASENSS-N'
+  'REGION1'   .'ETGICCC-CCS-N'
   'REGION1'   .'ETGICCC-N'
   'REGION1'   .'ETGICEN-N'
   'REGION1'   .'ETGICGT-N'
+  'REGION1'   .'ETHGNGT-N'
   'REGION1'   .'ETNUC-E'
   'REGION1'   .'ETNUC-N'
   'REGION1'   .'ETODSGT-E'
@@ -238,7 +251,7 @@ SET PRC_ANNUAL /
   'REGION1'   .'MIN_FLAB-T'
   'REGION1'   .'MINCSARNOVRS'
   'REGION1'   .'MINCSCAMDVRS'
-  'REGION1'   .'MINCSDUVHS32'
+  'REGION1'   .'MINCSDUVHSER'
   'REGION1'   .'MINCSDUVHVRS'
   'REGION1'   .'MINCSGROOVRS'
   'REGION1'   .'MINCSHENDVRS'
@@ -258,35 +271,17 @@ SET PRC_ANNUAL /
   'REGION1'   .'MINCSTUTUSER'
   'REGION1'   .'MINCSTUTUVRS'
   'REGION1'   .'MINCSWATEVRS'
+  'REGION1'   .'MINPWRWAT'
   'REGION1'   .'PEXELC'
+  'REGION1'   .'XPWROHF'
+  'REGION1'   .'XPWROKE'
 /;
 SET PRC_SEASON /
   'REGION1'   .'ETNUC-E'
-  'REGION1'   .'ETNUC-N'
 /;
 SET PRC_WEEKLY /
-  'REGION1'   .'ETCLDFB-N'
-  'REGION1'   .'ETCLEARNO-E'
-  'REGION1'   .'ETCLECAMD-E'
-  'REGION1'   .'ETCLEDUVH-E'
-  'REGION1'   .'ETCLEGROO-E'
-  'REGION1'   .'ETCLEHEND-E'
-  'REGION1'   .'ETCLEKELB-E'
-  'REGION1'   .'ETCLEKEND-E'
-  'REGION1'   .'ETCLEKOMA-E'
-  'REGION1'   .'ETCLEKRIE-E'
-  'REGION1'   .'ETCLEKUSI-N'
-  'REGION1'   .'ETCLELETH-E'
-  'REGION1'   .'ETCLEMAJD-E'
-  'REGION1'   .'ETCLEMAJW-E'
-  'REGION1'   .'ETCLEMATI-E'
-  'REGION1'   .'ETCLEMATL-E'
-  'REGION1'   .'ETCLEMEDU-N'
   'REGION1'   .'ETCLEPFSI-E'
   'REGION1'   .'ETCLEPFSS-E'
-  'REGION1'   .'ETCLETUTU-E'
-  'REGION1'   .'ETCLEWATE-N'
-  'REGION1'   .'ETGICCC-N'
 /;
 SET PRC_DAYNIT /
   'REGION1'   .'EPTSTO-E'
@@ -305,10 +300,34 @@ SET PRC_DAYNIT /
   'REGION1'   .'ERSOLTC09-N'
   'REGION1'   .'ERWNDH-N'
   'REGION1'   .'ESTSUTL'
+  'REGION1'   .'ETCLDFB-N'
+  'REGION1'   .'ETCLEARNO-E'
+  'REGION1'   .'ETCLECAMD-E'
+  'REGION1'   .'ETCLE-CCS-N'
+  'REGION1'   .'ETCLEDUVH-E'
+  'REGION1'   .'ETCLEGROO-E'
+  'REGION1'   .'ETCLEHEND-E'
+  'REGION1'   .'ETCLEKELB-E'
+  'REGION1'   .'ETCLEKEND-E'
+  'REGION1'   .'ETCLEKOMA-E'
+  'REGION1'   .'ETCLEKRIE-E'
+  'REGION1'   .'ETCLEKUSI-N'
+  'REGION1'   .'ETCLELETH-E'
+  'REGION1'   .'ETCLEMAJD-E'
+  'REGION1'   .'ETCLEMAJW-E'
+  'REGION1'   .'ETCLEMATI-E'
+  'REGION1'   .'ETCLEMATL-E'
+  'REGION1'   .'ETCLEMEDU-N'
+  'REGION1'   .'ETCLETUTU-E'
+  'REGION1'   .'ETCLEWATE-N'
   'REGION1'   .'ETGASENSI-N'
   'REGION1'   .'ETGASENSS-N'
+  'REGION1'   .'ETGICCC-CCS-N'
+  'REGION1'   .'ETGICCC-N'
   'REGION1'   .'ETGICEN-N'
   'REGION1'   .'ETGICGT-N'
+  'REGION1'   .'ETHGNGT-N'
+  'REGION1'   .'ETNUC-N'
   'REGION1'   .'ETODSGT-E'
   'REGION1'   .'ETODSGT-N'
   'REGION1'   .'ETRANS'
@@ -360,6 +379,7 @@ SET PRCTACTUNT /
   'REGION1'.'ETCLDFB-N'.'PJ'
   'REGION1'.'ETCLEARNO-E'.'PJ'
   'REGION1'.'ETCLECAMD-E'.'PJ'
+  'REGION1'.'ETCLE-CCS-N'.'PJ'
   'REGION1'.'ETCLEDUVH-E'.'PJ'
   'REGION1'.'ETCLEGROO-E'.'PJ'
   'REGION1'.'ETCLEHEND-E'.'PJ'
@@ -380,9 +400,11 @@ SET PRCTACTUNT /
   'REGION1'.'ETCLEWATE-N'.'PJ'
   'REGION1'.'ETGASENSI-N'.'PJ'
   'REGION1'.'ETGASENSS-N'.'PJ'
+  'REGION1'.'ETGICCC-CCS-N'.'PJ'
   'REGION1'.'ETGICCC-N'.'PJ'
   'REGION1'.'ETGICEN-N'.'PJ'
   'REGION1'.'ETGICGT-N'.'PJ'
+  'REGION1'.'ETHGNGT-N'.'PJ'
   'REGION1'.'ETNUC-E'.'PJ'
   'REGION1'.'ETNUC-N'.'PJ'
   'REGION1'.'ETODSGT-E'.'PJ'
@@ -395,7 +417,7 @@ SET PRCTACTUNT /
   'REGION1'.'MIN_FLAB-T'.'PJ'
   'REGION1'.'MINCSARNOVRS'.'PJ'
   'REGION1'.'MINCSCAMDVRS'.'PJ'
-  'REGION1'.'MINCSDUVHS32'.'PJ'
+  'REGION1'.'MINCSDUVHSER'.'PJ'
   'REGION1'.'MINCSDUVHVRS'.'PJ'
   'REGION1'.'MINCSGROOVRS'.'PJ'
   'REGION1'.'MINCSHENDVRS'.'PJ'
@@ -415,6 +437,7 @@ SET PRCTACTUNT /
   'REGION1'.'MINCSTUTUSER'.'PJ'
   'REGION1'.'MINCSTUTUVRS'.'PJ'
   'REGION1'.'MINCSWATEVRS'.'PJ'
+  'REGION1'.'MINPWRWAT'.'PJ'
   'REGION1'.'PEXELC'.'PJ'
   'REGION1'.'XAGRELC'.'PJ'
   'REGION1'.'XCOMELC'.'PJ'
@@ -428,16 +451,37 @@ SET PRCTACTUNT /
   'REGION1'.'XINMELC'.'PJ'
   'REGION1'.'XIOTELC'.'PJ'
   'REGION1'.'XIPPELC'.'PJ'
+  'REGION1'.'XPWROHF'.'PJ'
+  'REGION1'.'XPWROKE'.'PJ'
   'REGION1'.'XRESELC'.'PJ'
   'REGION1'.'XTRAELC'.'PJ'
   'REGION1'.'XUPSELC'.'PJ'
 /;
 PARAMETER APRCACTUNT /
+  'REGION1'                 .'EPTSTO-E'                .'ELCC'                       1
+  'REGION1'                 .'EPTSTO-N'                .'ELCC'                       1
+  'REGION1'                 .'ERBIG-N'                 .'ELCC'                       1
+  'REGION1'                 .'ERBIO-N'                 .'ELCC'                       1
+  'REGION1'                 .'ERHYD-E'                 .'ELCC'                       1
+  'REGION1'                 .'ERHYDGIW-I'              .'ELCC'                       1
+  'REGION1'                 .'ERHYD-I'                 .'ELCC'                       1
+  'REGION1'                 .'ERHYD-N'                 .'ELCC'                       1
+  'REGION1'                 .'ERSOLPCF-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPCT-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPRC-N'              .'COMELC'                     1
+  'REGION1'                 .'ERSOLPRI-N'              .'INDELC'                     1
+  'REGION1'                 .'ERSOLPRR-N'              .'RESELC'                     1
+  'REGION1'                 .'ERSOLTC09-N'             .'ELCC'                       1
+  'REGION1'                 .'ERWNDH-N'                .'ELCC'                       1
+  'REGION1'                 .'ESTSUTL'                 .'ELCC'                       1
+  'REGION1'                 .'ETCLDFB-N'               .'ELCC'                       1
   'REGION1'                 .'ETCLEARNO-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLECAMD-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLE-CCS-N'             .'ELCC'                       1
   'REGION1'                 .'ETCLEDUVH-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEGROO-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEHEND-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKELB-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEKEND-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEKOMA-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEKRIE-E'             .'ELCC'                       1
@@ -448,14 +492,45 @@ PARAMETER APRCACTUNT /
   'REGION1'                 .'ETCLEMATI-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEMATL-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEMEDU-N'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEPFSI-E'             .'ICPELC'                     1
+  'REGION1'                 .'ETCLEPFSS-E'             .'UPSELC'                     1
   'REGION1'                 .'ETCLETUTU-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEWATE-N'             .'ELCC'                       1
+  'REGION1'                 .'ETGASENSI-N'             .'ICPELC'                     1
+  'REGION1'                 .'ETGASENSS-N'             .'UPSELC'                     1
+  'REGION1'                 .'ETGICCC-CCS-N'           .'ELCC'                       1
+  'REGION1'                 .'ETGICCC-N'               .'ELCC'                       1
+  'REGION1'                 .'ETGICEN-N'               .'ELCC'                       1
+  'REGION1'                 .'ETGICGT-N'               .'ELCC'                       1
+  'REGION1'                 .'ETHGNGT-N'               .'ELCC'                       1
+  'REGION1'                 .'ETNUC-E'                 .'ELCC'                       1
+  'REGION1'                 .'ETNUC-N'                 .'ELCC'                       1
+  'REGION1'                 .'ETODSGT-E'               .'ELCC'                       1
+  'REGION1'                 .'ETODSGT-N'               .'ELCC'                       1
 /;
 PARAMETER ATOP_IN /
+  'REGION1'                 .'EPTSTO-E'                .'ELCC'                       1
+  'REGION1'                 .'EPTSTO-N'                .'ELCC'                       1
+  'REGION1'                 .'ERBIG-N'                 .'PWRBIG'                     1
+  'REGION1'                 .'ERBIO-N'                 .'PWRBIO'                     1
+  'REGION1'                 .'ERHYD-E'                 .'PWRHYD'                     1
+  'REGION1'                 .'ERHYD-N'                 .'PWRHYD'                     1
+  'REGION1'                 .'ERSOLPCF-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPCT-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPRC-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPRI-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPRR-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLTC09-N'             .'PWRSOL'                     1
+  'REGION1'                 .'ERWNDH-N'                .'PWRWND'                     1
+  'REGION1'                 .'ESTSUTL'                 .'ELCC'                       1
+  'REGION1'                 .'ETCLDFB-N'               .'PWRCLD'                     1
   'REGION1'                 .'ETCLEARNO-E'             .'PWRCLEARNO'                 1
   'REGION1'                 .'ETCLECAMD-E'             .'PWRCLECAMD'                 1
+  'REGION1'                 .'ETCLE-CCS-N'             .'PWRCLEMEDU'                 1
   'REGION1'                 .'ETCLEDUVH-E'             .'PWRCLEDUVH'                 1
   'REGION1'                 .'ETCLEGROO-E'             .'PWRCLEGROO'                 1
   'REGION1'                 .'ETCLEHEND-E'             .'PWRCLEHEND'                 1
+  'REGION1'                 .'ETCLEKELB-E'             .'PWRCLE'                     1
   'REGION1'                 .'ETCLEKEND-E'             .'PWRCLEKEND'                 1
   'REGION1'                 .'ETCLEKOMA-E'             .'PWRCLEKOMA'                 1
   'REGION1'                 .'ETCLEKRIE-E'             .'PWRCLEKRIE'                 1
@@ -466,14 +541,47 @@ PARAMETER ATOP_IN /
   'REGION1'                 .'ETCLEMATI-E'             .'PWRCLEMATI'                 1
   'REGION1'                 .'ETCLEMATL-E'             .'PWRCLEMATL'                 1
   'REGION1'                 .'ETCLEMEDU-N'             .'PWRCLEMEDU'                 1
+  'REGION1'                 .'ETCLEPFSI-E'             .'INDCLE'                     1
+  'REGION1'                 .'ETCLEPFSS-E'             .'UPSCLE'                     1
   'REGION1'                 .'ETCLETUTU-E'             .'PWRCLETUTU'                 1
+  'REGION1'                 .'ETCLEWATE-N'             .'PWRCLEMEDU'                 1
+  'REGION1'                 .'ETGASENSI-N'             .'PWRGAS'                     1
+  'REGION1'                 .'ETGASENSS-N'             .'PWRGAS'                     1
+  'REGION1'                 .'ETGICCC-CCS-N'           .'PWRGIC'                     1
+  'REGION1'                 .'ETGICCC-N'               .'PWRGIC'                     1
+  'REGION1'                 .'ETGICEN-N'               .'PWRGIC'                     1
+  'REGION1'                 .'ETGICGT-N'               .'PWRGIC'                     1
+  'REGION1'                 .'ETHGNGT-N'               .'PWRHGN'                     1
+  'REGION1'                 .'ETNUC-E'                 .'PWRNUC'                     1
+  'REGION1'                 .'ETNUC-N'                 .'PWRNUC'                     1
+  'REGION1'                 .'ETODSGT-E'               .'PWRODS'                     1
+  'REGION1'                 .'ETODSGT-N'               .'PWRODS'                     1
 /;
 PARAMETER ATOP_OUT /
+  'REGION1'                 .'EPTSTO-E'                .'ELCC'                       1
+  'REGION1'                 .'EPTSTO-N'                .'ELCC'                       1
+  'REGION1'                 .'ERBIG-N'                 .'ELCC'                       1
+  'REGION1'                 .'ERBIO-N'                 .'ELCC'                       1
+  'REGION1'                 .'ERHYD-E'                 .'ELCC'                       1
+  'REGION1'                 .'ERHYDGIW-I'              .'ELCC'                       1
+  'REGION1'                 .'ERHYD-I'                 .'ELCC'                       1
+  'REGION1'                 .'ERHYD-N'                 .'ELCC'                       1
+  'REGION1'                 .'ERSOLPCF-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPCT-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPRC-N'              .'COMELC'                     1
+  'REGION1'                 .'ERSOLPRI-N'              .'INDELC'                     1
+  'REGION1'                 .'ERSOLPRR-N'              .'RESELC'                     1
+  'REGION1'                 .'ERSOLTC09-N'             .'ELCC'                       1
+  'REGION1'                 .'ERWNDH-N'                .'ELCC'                       1
+  'REGION1'                 .'ESTSUTL'                 .'ELCC'                       1
+  'REGION1'                 .'ETCLDFB-N'               .'ELCC'                       1
   'REGION1'                 .'ETCLEARNO-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLECAMD-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLE-CCS-N'             .'ELCC'                       1
   'REGION1'                 .'ETCLEDUVH-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEGROO-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEHEND-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKELB-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEKEND-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEKOMA-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEKRIE-E'             .'ELCC'                       1
@@ -484,15 +592,72 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'ETCLEMATI-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEMATL-E'             .'ELCC'                       1
   'REGION1'                 .'ETCLEMEDU-N'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEPFSI-E'             .'ICPELC'                     1
+  'REGION1'                 .'ETCLEPFSS-E'             .'UPSELC'                     1
   'REGION1'                 .'ETCLETUTU-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEWATE-N'             .'ELCC'                       1
+  'REGION1'                 .'ETGASENSI-N'             .'ICPELC'                     1
+  'REGION1'                 .'ETGASENSS-N'             .'UPSELC'                     1
+  'REGION1'                 .'ETGICCC-CCS-N'           .'ELCC'                       1
+  'REGION1'                 .'ETGICCC-N'               .'ELCC'                       1
+  'REGION1'                 .'ETGICEN-N'               .'ELCC'                       1
+  'REGION1'                 .'ETGICGT-N'               .'ELCC'                       1
+  'REGION1'                 .'ETHGNGT-N'               .'ELCC'                       1
+  'REGION1'                 .'ETNUC-E'                 .'ELCC'                       1
+  'REGION1'                 .'ETNUC-N'                 .'ELCC'                       1
+  'REGION1'                 .'ETODSGT-E'               .'ELCC'                       1
+  'REGION1'                 .'ETODSGT-N'               .'ELCC'                       1
 /;
+       TABLE ANCAP_AF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'EPTSTO-E'                .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'EPTSTO-N'                .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ERHYD-E'                 .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ERHYDGIW-I'              .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ERHYD-I'                 .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ERHYD-N'                 .'ANNUAL'                  .'UP'                                                                                                                                                              EPS                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ESTSUTL'                 .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETCLDFB-N'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETCLEARNO-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .5833333333333                                                                  .625                                                                            .625                                                                                                                                                                                                                            
+  'REGION1'                 .'ETCLECAMD-E'             .'ANNUAL'                  .'UP'                                                                                                               .67                                             .5                                                                              .5625                                                                           .5625                                                                                                                                                                                                                           
+  'REGION1'                 .'ETCLE-CCS-N'             .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETCLEDUVH-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .5833333333333                                                                  .625                                                                            .625                                                                                                                                                                                                                            
+  'REGION1'                 .'ETCLEGROO-E'             .'ANNUAL'                  .'UP'                                                                                                               .6                                              .5                                                                              .5                                                                              .5                                                                                                                                                                                                                              
+  'REGION1'                 .'ETCLEHEND-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .6428571428571                                                                  .6785714285714                                                                  .6785714285714                                                                                                                                                                                                                  
+  'REGION1'                 .'ETCLEKELB-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .3333333333333                                                                  .3333333333333                                                                  .3333333333333                                                                                                                                                                                                                  
+  'REGION1'                 .'ETCLEKEND-E'             .'ANNUAL'                  .'UP'                                                                                                               1                                               .6666666666666                                                                  .75                                                                             .75                                                                                                                                                                                                                             
+  'REGION1'                 .'ETCLEKOMA-E'             .'ANNUAL'                  .'UP'                                                                                                               .6                                              .5                                                                              .625                                                                            .625                                                                                                                                                                                                                            
+  'REGION1'                 .'ETCLEKRIE-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .5                                                                              .5833333333333                                                                  .5833333333333                                                                                                                                                                                                                  
+  'REGION1'                 .'ETCLEKUSI-N'             .'ANNUAL'                  .'UP'                                                                                                                                                               .6666666666666                                                                  .8                                                                              1                                                                                                                                                                                                                               
+  'REGION1'                 .'ETCLELETH-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .6666666666666                                                                  .75                                                                             .75                                                                                                                                                                                                                             
+  'REGION1'                 .'ETCLEMAJD-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .6666666666666                                                                  .75                                                                             .75                                                                                                                                                                                                                             
+  'REGION1'                 .'ETCLEMAJW-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .6666666666666                                                                  .75                                                                             .75                                                                                                                                                                                                                             
+  'REGION1'                 .'ETCLEMATI-E'             .'ANNUAL'                  .'UP'                                                                                                               1                                               .9166666666666                                                                  .9583333333333                                                                  .9583333333333                                                                                                                                                                                                                  
+  'REGION1'                 .'ETCLEMATL-E'             .'ANNUAL'                  .'UP'                                                                                                               1                                               .6666666666666                                                                  .75                                                                             .75                                                                                                                                                                                                                             
+  'REGION1'                 .'ETCLEMEDU-N'             .'ANNUAL'                  .'UP'                                                                                                                                                               .8                                                                              .9                                                                              1                                                                                                                                                                                                                               
+  'REGION1'                 .'ETCLEPFSI-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .6666666666666                                                                  .6666666666666                                                                  .6666666666666                                                                                                                                                                                                                  
+  'REGION1'                 .'ETCLEPFSS-E'             .'ANNUAL'                  .'UP'                                                                                                               1                                               .8333333333333                                                                  .8333333333333                                                                  .8333333333333                                                                                                                                                                                                                  
+  'REGION1'                 .'ETCLETUTU-E'             .'ANNUAL'                  .'UP'                                                                                                               .8                                              .5833333333333                                                                  .625                                                                            .625                                                                                                                                                                                                                            
+  'REGION1'                 .'ETCLEWATE-N'             .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETGASENSI-N'             .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETGASENSS-N'             .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETGICCC-CCS-N'           .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETGICCC-N'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETGICEN-N'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETGICGT-N'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETHGNGT-N'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETNUC-E'                 .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETNUC-N'                 .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETODSGT-E'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ETODSGT-N'               .'ANNUAL'                  .'UP'                                                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                                                               
+;
        TABLE ANCAP_AFA
                                                                                      0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'ETCLEARNO-E'             .'UP'                                                                                                                                                               .546504         .51113384       .52104992       .48309066       .47391408       .4799684        .50071266       .47908652       .4252352        .4              .4                                                                              .4                                                                                                                                              
   'REGION1'                 .'ETCLECAMD-E'             .'UP'                                                                                                                                                               .504            .45686066       .48820528       .50170986       .47572464       .4622298        .45516708       .44810436       .44104164       .4              .4                                                                              .4                                                                                                                                              
   'REGION1'                 .'ETCLEDUVH-E'             .'UP'                                                                                                                                                               .457632         .40659862       .47959552       .44158536       .47391408       .4480096        .48519396       .4522969        .41572336       .41918262       .4076217                                                                        .4076217                                                                                                                                        
   'REGION1'                 .'ETCLEGROO-E'             .'UP'                                                                                                                                                               .74886          .7297819        .7107038        .4              .4              .4              .4              .4              .4              .4              .4                                                                              .4                                                                                                                                              
-  'REGION1'                 .'ETCLEHEND-E'             .'UP'                                                                                                                                                               .511812         .45808856       .5528582        .4              .4              .4              .4              .4              .4              .4              .4                                                                              .4                                                                                                                                              
+  'REGION1'                 .'ETCLEHEND-E'             .'UP'                                                                                                                                                               .511812         .45808856       .5528582        .5380173        .5231764        .5083355        .4              .4              .4              .4              .4                                                                              .4                                                                                                                                              
   'REGION1'                 .'ETCLEKEND-E'             .'UP'                                                                                                                                                               .63572          .64869462       .58831342       .64967643       .60553116       .6424231        .64877424       .59366373       .67406701       .62159524       .6116019                                                                        .6116019                                                                                                                                        
   'REGION1'                 .'ETCLEKOMA-E'             .'UP'                                                                                                                                                               .734076         .71537454       .69667308       .4              .4              .4              .4              .4              .4              .4              .4                                                                              .4                                                                                                                                              
   'REGION1'                 .'ETCLEKRIE-E'             .'UP'                                                                                                                                                               .45444          .51915612       .43551036       .4              .4918688        .4723452        .47198502       .48953234       .4              .41663628       .4342955                                                                        .4342955                                                                                                                                        

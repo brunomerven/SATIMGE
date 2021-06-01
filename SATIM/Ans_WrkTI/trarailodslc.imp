@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/04	14:17:15
+Creation Date:	2021/05/06	17:32:43
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TRARAILODSLC	Transport: Rail -Diesel - minimum utilisation NDC central case- 2035	(Copy of comment for Scenario TRARAILODS_L follows) {/n}In place to match transnet's reporting of diesel consumption. SATIM switches by default to elec trains after the  base year.{/n}{/n}No minimun activity after 3035{/n}

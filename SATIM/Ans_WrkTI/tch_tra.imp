@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/08/25	18:59:13
+Creation Date:	2021/05/06	17:30:02
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_TRA	Transport Default: relaxed investment limits with EV cost parity in 2030	IL: investment limit
@@ -1071,6 +1071,7 @@ TS DATA	REGION1
 	NCAP_BND	TFROTELC-E	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	TFROTODS-E	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	TPPRCARODS-E	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TPPRCARODSH-N	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	TPPRCAROGS-E	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	TPPRCAROGSH-E	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	TPPRMOTOGS-E	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1752,7 +1753,7 @@ TS DATA	REGION1
 	UCRULE_NCAP	TPPRCARHGNF_U	LHS	S_TPPRCARHGNF	-	-	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
 	UCRULE_NCAP	TPPRCARODS_L	LHS	S_TPPRCAR	-	-	-	3	null	-8.21101032619159E-02	-8.21101032619159E-02	-8.21101032619159E-02	-7.88256991314391E-02	-7.55412950009617E-02	-7.22568908704853E-02	-6.89724867400088E-02	-6.56880826095323E-02	-6.24036784790558E-02	-5.91192743485784E-02	-0.055834870218102	-5.25504660876255E-02	-0.049266061957149	-4.59816578266725E-02	-0.042697253696196	-3.94128495657187E-02	-3.61284454352422E-02	-3.28440413047657E-02	-2.95596371742901E-02	-2.62752330438136E-02	-2.29908289133371E-02	-1.97064247828598E-02	-1.64220206523833E-02	-1.31376165219068E-02	-9.85321239143033E-03	-6.56880826095385E-03	-3.28440413047737E-03	0	0	0	0	0	
 	UCRULE_NCAP	TPPRCARODS_L	LHS	S_TPPRCARODS	-	-	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
-	UCRULE_NCAP	TPPRCARODS_U	LHS	S_TPPRCAR	-	-	-	3	null	-0.108776769928589	-0.135443436595253	-0.162110103261917	-0.195625699131426	-0.229141295000957	-0.262656890870474	-0.296172486740005	-0.329688082609522	-0.363203678479067	-0.396719274348584	-0.430234870218101	-0.463750466087632	-0.497266061957149	-0.53078165782668	-0.564297253696196	-0.597812849565727	-0.631328445435244	-0.664844041304775	-0.698359637174278	-0.731875233043809	-0.765390828913326	-0.798906424782857	-0.832422020652373	-0.86593761652189	-0.899453212391421	-0.932968808260938	-0.966484404130469	-0.999999999999986	-1	-1	-1	-1	
+	UCRULE_NCAP	TPPRCARODS_U	LHS	S_TPPRCAR	-	-	-	3	null	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	-0.1088	
 	UCRULE_NCAP	TPPRCARODS_U	LHS	S_TPPRCARODS	-	-	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
 	UCRULE_NCAP	TPPRCARODSH_L	LHS	S_TPPRCAR	-	-	-	3	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UCRULE_NCAP	TPPRCARODSH_L	LHS	S_TPPRCARODSH	-	-	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1

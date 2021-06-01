@@ -1,0 +1,215 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/04/30	10:40:58 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWR_05P	5% Premium on PV and Wind	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	T	EP_FLAB-M	Power - Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ERBIG-N	Landfill gas	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERBIO-N	Biomass municipal waste	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-E	Hydro Existing South Africa	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYDGIW-I	Grand Inga	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-I	Hydro Existing Region	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-N	Micro hydro	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPCF-N	Solar PV Fixed	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPCT-N	Solar PV tracking	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRC-N	Solar PV rooftop commercial	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRI-N	Solar PV rooftop Industry	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRR-N	Solar PV rooftop residential	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLTC09-N	Solar Central Receiver 09 hrs storage	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERWNDH-N	Wind	PJ,GW	PRC,ELE,DAYNITE	
+	T	ESTSUTL	Utility Scale Storage - 4hrs	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ETCLDFB-N	Fluidised Bed Combustion Coal	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLE-CCS-N	Generic Waterberg Coal Plant with CCS	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKELB-E	KELVIN B	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEPFSI-E	Sasol Infrachem Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEPFSS-E	Sasol SSF Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEWATE-N	Generic Waterberg Coal Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGASENSI-N	Sasol Infrachem Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGASENSS-N	Sasol SSF Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICCC-CCS-N	Combined Cycle Gas Turbine - LNG with CCS	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICEN-N	Gas Engines - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICGT-N	Open Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETHGNGT-N	Open Cycle Gas Turbine - Hydrogen	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETNUC-E	Nuclear Existing	PJ,GW	PRC,ELE,SEASON	
+	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETRANS	Transmission	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETRANSDUM	dummy tech tracking investment costs	PJ,GW	PRC,ELE,DAYNITE	
+	T	MIN_FLAB-M	Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-P	Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-S	Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-T	Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MINCSARNOVRS	Coal Supply for Arnot-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSCAMDVRS	Coal Supply for Camden-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHS32	Coal Supply for Duvha-South 32	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHVRS	Coal Supply for Duvha-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSGROOVRS	Coal Supply for Grootvlei-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSHENDVRS	Coal Supply for Hendrina-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKENDS32	Coal Supply for Kendal-South 32	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKENDVRS	Coal Supply for Kendal-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKOMAVRS	Coal Supply for Komati-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKRIESER	Coal Supply for Kriel-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKRIEVRS	Coal Supply for Kriel-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKUSINLG	Coal Supply for Kusile-New Largo	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKUSIVRS	Coal Supply for Kusile-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSLETHSER	Coal Supply for Lethabo-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMAJUVRS	Coal Supply for Majuba-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATIEXX	Coal Supply for Matimba-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATLEXX	Coal Supply for Matla-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATLVRS	Coal Supply for Matla-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMEDUEXX	Coal Supply for Medupi-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSTUTUSER	Coal Supply for Tutuka-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSTUTUVRS	Coal Supply for Tutuka-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSWATEVRS	Coal Supply for New Plants in Waterberg	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XPWROHF	Power Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XPWROKE	Power Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
+
+TS DATA	REGION1
+	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B2	UP	0	0.55921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B2	UP	0	0.29684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B3	UP	0	0.63511	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCF-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B2	UP	0	0.62631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B2	UP	0	0.33246	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B3	UP	0	0.71133	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPCT-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B2	UP	0	0.237472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRC-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B2	UP	0	0.237472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRI-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B2	UP	0	0.447368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S1D1B3	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B2	UP	0	0.237472	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B3	UP	0	0.508088	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B4	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLPRR-N	-	-	-	S2D1B5	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B1	UP	0	0.01872	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B2	UP	0	0.75648	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S1D1B3	UP	0	0.73099	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B1	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B2	UP	0	0.31045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B3	UP	0	0.92279	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B4	UP	0	0.85089	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERSOLTC09-N	-	-	-	S2D1B5	UP	0	0.26989	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S1D1B1	UP	0	0.38579742506728	null	null	null	null	null	null	null	0.41309	null	null	null	null	null	null	null	null	null	0.43954	null	null	null	null	null	null	null	null	null	0.46009	null	0.47476	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S1D1B2	UP	0	0.285206101197606	null	null	null	null	null	null	null	0.30538	null	null	null	null	null	null	null	null	null	0.32493	null	null	null	null	null	null	null	null	null	0.34013	null	0.35097	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S1D1B3	UP	0	0.416946931281717	null	null	null	null	null	null	null	0.44644	null	null	null	null	null	null	null	null	null	0.47503	null	null	null	null	null	null	null	null	null	0.49724	null	0.51309	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B1	UP	0	0.409412608656582	null	null	null	null	null	null	null	0.43838	null	null	null	null	null	null	null	null	null	0.46644	null	null	null	null	null	null	null	null	null	0.48826	null	0.50382	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B2	UP	0	0.35570788059098	null	null	null	null	null	null	null	0.38088	null	null	null	null	null	null	null	null	null	0.40526	null	null	null	null	null	null	null	null	null	0.42422	null	0.43774	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B3	UP	0	0.298078429332817	null	null	null	null	null	null	null	0.31917	null	null	null	null	null	null	null	null	null	0.3396	null	null	null	null	null	null	null	null	null	0.35549	null	0.36682	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B4	UP	0	0.370423205261872	null	null	null	null	null	null	null	0.39663	null	null	null	null	null	null	null	null	null	0.42203	null	null	null	null	null	null	null	null	null	0.44177	null	0.45585	null	null	
+	NCAP_AF	ERWNDH-N	-	-	-	S2D1B5	UP	0	0.400207175183033	null	null	null	null	null	null	null	0.42852	null	null	null	null	null	null	null	null	null	0.45596	null	null	null	null	null	null	null	null	null	0.47729	null	0.4925	null	null	
+	NCAP_COST	ERSOLPCF-N	-	-	-	-	-	0	28748.2158176991	null	null	15745.2212389381	null	13872.1043816731	null	null	10313.4716814159	null	null	null	null	9681.13008849558	null	null	null	null	9095.08141592921	null	null	null	null	null	null	null	null	null	8079.59203539823	null	7137.97433628319	null	null	
+	NCAP_COST	ERSOLPCT-N	-	-	-	-	-	0	30646.6829	null	null	16785	null	14788.1867465005	null	null	10994.55	null	null	null	null	10320.45	null	null	null	null	9695.7	null	null	null	null	null	null	null	null	null	8613.15	null	7609.35	null	null	
+	NCAP_COST	ERSOLPRC-N	-	-	-	-	-	0	33347.930348531	null	null	18264.4566371681	null	16091.6410827408	null	null	11963.6271504425	null	null	null	null	11230.1109026549	null	null	null	null	10550.2944424779	null	null	null	null	null	null	null	null	null	9372.32676106195	null	8280.0502300885	null	null	
+	NCAP_COST	ERSOLPRI-N	-	-	-	-	-	0	33347.930348531	null	null	18264.4566371681	null	16091.6410827408	null	null	11963.6271504425	null	null	null	null	11230.1109026549	null	null	null	null	10550.2944424779	null	null	null	null	null	null	null	null	null	9372.32676106195	null	8280.0502300885	null	null	
+	NCAP_COST	ERSOLPRR-N	-	-	-	-	-	0	50309.3776809735	null	null	27554.1371681416	null	24276.1826679279	null	null	18048.5754424779	null	null	null	null	16941.9776548673	null	null	null	null	15916.3924778761	null	null	null	null	null	null	null	null	null	14139.2860619469	null	12491.4550884956	null	null	
+	NCAP_COST	ERSOLTC09-N	-	-	-	-	-	0	null	null	null	null	null	57809.3771959677	null	null	52630.5355636711	null	null	null	null	43999.1328431769	null	null	null	null	35367.7301226827	null	null	null	null	null	null	null	null	null	35367.7301226827	null	35367.7301226827	null	null	
+	NCAP_COST	ERWNDH-N	-	-	-	-	-	0	19786.1982	null	null	19208	null	15312.5398495024	null	null	13125	null	null	null	null	13010.55	null	null	null	null	12897.15	null	null	null	null	null	null	null	null	null	12672.45	null	12451.95	null	null	
+	NCAP_COST	ESTSUTL	-	-	-	-	-	0	null	null	null	null	null	27165.0638401165	null	null	20309.8105	null	null	null	null	14178.547	null	null	null	null	9963.3033	null	null	null	null	null	null	null	null	null	9196.8953	null	9196.8953	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	ERSOLPCF-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRC-N	-	COMELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRI-N	-	INDELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRR-N	-	RESELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLTC09-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERWNDH-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ESTSUTL	-	ELCC	-	-	-	1	
+	PRC_VINT	ERWNDH-N	-	-	-	-	-	1	
+	TOP-IN	ERSOLPCF-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPCT-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRC-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRI-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRR-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLTC09-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERWNDH-N	PWRWND	-	-	-	-	1	
+	TOP-IN	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCF-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRC-N	COMELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRI-N	INDELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRR-N	RESELC	-	-	-	-	1	
+	TOP-OUT	ERSOLTC09-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERWNDH-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ESTSUTL	ELCC	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
