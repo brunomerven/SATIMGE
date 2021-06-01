@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2020/09/22	5:16:07 PM
+Creation Date:	2021/05/25	1:46:17 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_LEAF	Low EAF Scenario	
@@ -36,34 +36,37 @@ ITEMS	REGION1
 	T	ERSOLTC09-N	Solar Central Receiver 09 hrs storage	PJ,GW	PRC,ELE,DAYNITE	
 	T	ERWNDH-N	Wind	PJ,GW	PRC,ELE,DAYNITE	
 	T	ESTSUTL	Utility Scale Storage - 4hrs	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
-	T	ETCLDFB-N	Fluidised Bed Combustion Coal	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEKELB-E	KELVIN B	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLDFB-N	Fluidised Bed Combustion Coal	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLE-CCS-N	Generic Waterberg Coal Plant with CCS	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKELB-E	KELVIN B	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETCLEPFSI-E	Sasol Infrachem Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
 	T	ETCLEPFSS-E	Sasol SSF Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,WEEKLY	
-	T	ETCLEWATE-N	Generic Waterberg Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEWATE-N	Generic Waterberg Coal Plant	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETGASENSI-N	Sasol Infrachem Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETGASENSS-N	Sasol SSF Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
-	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETGICCC-CCS-N	Combined Cycle Gas Turbine - LNG with CCS	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETGICEN-N	Gas Engines - LNG	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETGICGT-N	Open Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETHGNGT-N	Open Cycle Gas Turbine - Hydrogen	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETNUC-E	Nuclear Existing	PJ,GW	PRC,ELE,SEASON	
-	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,SEASON	
+	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETRANS	Transmission	PJ,GW	PRC,ELE,DAYNITE	
@@ -74,7 +77,7 @@ ITEMS	REGION1
 	T	MIN_FLAB-T	Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	MINCSARNOVRS	Coal Supply for Arnot-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSCAMDVRS	Coal Supply for Camden-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
-	T	MINCSDUVHS32	Coal Supply for Duvha-South 32	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHSER	Coal Supply for Duvha-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSDUVHVRS	Coal Supply for Duvha-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSGROOVRS	Coal Supply for Grootvlei-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSHENDVRS	Coal Supply for Hendrina-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
@@ -94,6 +97,7 @@ ITEMS	REGION1
 	T	MINCSTUTUSER	Coal Supply for Tutuka-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSTUTUVRS	Coal Supply for Tutuka-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	MINCSWATEVRS	Coal Supply for New Plants in Waterberg	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINPWRWAT	Water Supply for Power Sector	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
 	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
 	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
@@ -107,16 +111,58 @@ ITEMS	REGION1
 	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XPWROHF	Power Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XPWROKE	Power Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
 
 TS DATA	REGION1
+	NCAP_AF	EPTSTO-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	EPTSTO-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERHYD-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERHYDGIW-I	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERHYD-I	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ERHYD-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ESTSUTL	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLDFB-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEARNO-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.583333333333333	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLECAMD-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.67	null	null	0.5	null	null	null	null	0.5625	null	null	null	null	0.5625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLE-CCS-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEDUVH-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.583333333333333	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEGROO-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.6	null	null	0.5	null	null	null	null	0.5	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEHEND-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.642857142857143	null	null	null	null	0.678571428571429	null	null	null	null	0.678571428571429	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEKELB-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.333333333333333	null	null	null	null	0.333333333333333	null	null	null	null	0.333333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEKEND-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	1	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEKOMA-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.6	null	null	0.5	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEKRIE-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.5	null	null	null	null	0.583333333333333	null	null	null	null	0.583333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEKUSI-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.8	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLELETH-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEMAJD-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEMAJW-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEMATI-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	1	null	null	0.916666666666667	null	null	null	null	0.958333333333333	null	null	null	null	0.958333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEMATL-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	1	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEMEDU-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	0.8	null	null	null	null	0.9	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEPFSI-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.666666666666667	null	null	null	null	0.666666666666667	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEPFSS-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	1	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLETUTU-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.583333333333333	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLEWATE-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGASENSI-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGASENSS-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGICCC-CCS-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGICCC-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGICEN-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETGICGT-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETHGNGT-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETNUC-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETNUC-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETODSGT-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETODSGT-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEARNO-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.546504	0.51113384	0.52104992	0.48309066	0.47391408	0.4799684	0.50071266	0.47908652	0.4252352	0.4	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLECAMD-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.504	0.45686066	0.48820528	0.50170986	0.47572464	0.4622298	0.45516708	0.44810436	0.44104164	0.4	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.457632	0.40659862	0.47959552	0.44158536	0.47391408	0.4480096	0.48519396	0.4522969	0.41572336	0.41918262	0.4076217	null	null	null	null	0.4076217	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEGROO-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.74886	0.7297819	0.7107038	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ETCLEHEND-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.511812	0.45808856	0.5528582	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEHEND-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.511812	0.45808856	0.5528582	0.5380173	0.5231764	0.5083355	0.4	0.4	0.4	0.4	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKEND-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.63572	0.64869462	0.58831342	0.64967643	0.60553116	0.6424231	0.64877424	0.59366373	0.67406701	0.62159524	0.6116019	null	null	null	null	0.6116019	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.734076	0.71537454	0.69667308	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.45444	0.51915612	0.43551036	0.4	0.4918688	0.4723452	0.47198502	0.48953234	0.4	0.41663628	0.4342955	null	null	null	null	0.4342955	null	null	null	null	null	null	null	null	null	
@@ -130,11 +176,30 @@ TS DATA	REGION1
 	NCAP_AFA	ETCLETUTU-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	0.470904	0.46545596	0.4308866	0.4588857	0.41431648	0.4482295	0.41748912	0.40767122	0.4374747	0.40452396	0.4	null	null	null	null	0.4	null	null	null	null	null	null	null	null	null	
 
 TID DATA	REGION1
+	PRC_ACTUNT	EPTSTO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	EPTSTO-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERBIG-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERBIO-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYDGIW-I	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-I	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCF-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRC-N	-	COMELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRI-N	-	INDELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRR-N	-	RESELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLTC09-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERWNDH-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ESTSUTL	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLDFB-N	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEARNO-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLECAMD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLE-CCS-N	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEDUVH-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEGROO-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEHEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKELB-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEKEND-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEKOMA-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEKRIE-E	-	ELCC	-	-	-	1	
@@ -145,12 +210,43 @@ TID DATA	REGION1
 	PRC_ACTUNT	ETCLEMATI-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEMATL-E	-	ELCC	-	-	-	1	
 	PRC_ACTUNT	ETCLEMEDU-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEPFSI-E	-	ICPELC	-	-	-	1	
+	PRC_ACTUNT	ETCLEPFSS-E	-	UPSELC	-	-	-	1	
 	PRC_ACTUNT	ETCLETUTU-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEWATE-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGASENSI-N	-	ICPELC	-	-	-	1	
+	PRC_ACTUNT	ETGASENSS-N	-	UPSELC	-	-	-	1	
+	PRC_ACTUNT	ETGICCC-CCS-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICCC-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICEN-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICGT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETHGNGT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETNUC-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETNUC-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETODSGT-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETODSGT-N	-	ELCC	-	-	-	1	
+	TOP-IN	EPTSTO-E	ELCC	-	-	-	-	1	
+	TOP-IN	EPTSTO-N	ELCC	-	-	-	-	1	
+	TOP-IN	ERBIG-N	PWRBIG	-	-	-	-	1	
+	TOP-IN	ERBIO-N	PWRBIO	-	-	-	-	1	
+	TOP-IN	ERHYD-E	PWRHYD	-	-	-	-	1	
+	TOP-IN	ERHYD-N	PWRHYD	-	-	-	-	1	
+	TOP-IN	ERSOLPCF-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPCT-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRC-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRI-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRR-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLTC09-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERWNDH-N	PWRWND	-	-	-	-	1	
+	TOP-IN	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-IN	ETCLDFB-N	PWRCLD	-	-	-	-	1	
 	TOP-IN	ETCLEARNO-E	PWRCLEARNO	-	-	-	-	1	
 	TOP-IN	ETCLECAMD-E	PWRCLECAMD	-	-	-	-	1	
+	TOP-IN	ETCLE-CCS-N	PWRCLEMEDU	-	-	-	-	1	
 	TOP-IN	ETCLEDUVH-E	PWRCLEDUVH	-	-	-	-	1	
 	TOP-IN	ETCLEGROO-E	PWRCLEGROO	-	-	-	-	1	
 	TOP-IN	ETCLEHEND-E	PWRCLEHEND	-	-	-	-	1	
+	TOP-IN	ETCLEKELB-E	PWRCLE	-	-	-	-	1	
 	TOP-IN	ETCLEKEND-E	PWRCLEKEND	-	-	-	-	1	
 	TOP-IN	ETCLEKOMA-E	PWRCLEKOMA	-	-	-	-	1	
 	TOP-IN	ETCLEKRIE-E	PWRCLEKRIE	-	-	-	-	1	
@@ -161,12 +257,45 @@ TID DATA	REGION1
 	TOP-IN	ETCLEMATI-E	PWRCLEMATI	-	-	-	-	1	
 	TOP-IN	ETCLEMATL-E	PWRCLEMATL	-	-	-	-	1	
 	TOP-IN	ETCLEMEDU-N	PWRCLEMEDU	-	-	-	-	1	
+	TOP-IN	ETCLEPFSI-E	INDCLE	-	-	-	-	1	
+	TOP-IN	ETCLEPFSS-E	UPSCLE	-	-	-	-	1	
 	TOP-IN	ETCLETUTU-E	PWRCLETUTU	-	-	-	-	1	
+	TOP-IN	ETCLEWATE-N	PWRCLEMEDU	-	-	-	-	1	
+	TOP-IN	ETGASENSI-N	PWRGAS	-	-	-	-	1	
+	TOP-IN	ETGASENSS-N	PWRGAS	-	-	-	-	1	
+	TOP-IN	ETGICCC-CCS-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICCC-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICEN-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICGT-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETHGNGT-N	PWRHGN	-	-	-	-	1	
+	TOP-IN	ETNUC-E	PWRNUC	-	-	-	-	1	
+	TOP-IN	ETNUC-N	PWRNUC	-	-	-	-	1	
+	TOP-IN	ETODSGT-E	PWRODS	-	-	-	-	1	
+	TOP-IN	ETODSGT-N	PWRODS	-	-	-	-	1	
+	TOP-OUT	EPTSTO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	EPTSTO-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERBIG-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERBIO-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYDGIW-I	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-I	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCF-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRC-N	COMELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRI-N	INDELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRR-N	RESELC	-	-	-	-	1	
+	TOP-OUT	ERSOLTC09-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERWNDH-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEARNO-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLECAMD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLE-CCS-N	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEDUVH-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEGROO-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEHEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKELB-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEKEND-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEKOMA-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEKRIE-E	ELCC	-	-	-	-	1	
@@ -177,7 +306,21 @@ TID DATA	REGION1
 	TOP-OUT	ETCLEMATI-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEMATL-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETCLEMEDU-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEPFSI-E	ICPELC	-	-	-	-	1	
+	TOP-OUT	ETCLEPFSS-E	UPSELC	-	-	-	-	1	
 	TOP-OUT	ETCLETUTU-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGASENSI-N	ICPELC	-	-	-	-	1	
+	TOP-OUT	ETGASENSS-N	UPSELC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETHGNGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETNUC-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETNUC-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETODSGT-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	ELCC	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1
 

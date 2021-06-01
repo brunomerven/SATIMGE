@@ -7,7 +7,7 @@ SETS
   TC(T)                   eSAGE active time periods
   PRC                            TIMES Processes
   COM                            TIMES Commodities
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, Marginals, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, Marginals, Levies, ExternalityCosts, CO2Tax, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Sector
   SubSector
 
@@ -34,7 +34,7 @@ $load CoalCV
 
 LOOP(RUN$INCLRUN(RUN),
 
-put_utilities Scen 'gdxin' / RUN.TL:20;
+put_utilities Scen 'gdxin' / RUN.TL:30;
 execute_load REPORT_RUN;
 
 REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT_RUN(PRC,COM,TC,Indicators);

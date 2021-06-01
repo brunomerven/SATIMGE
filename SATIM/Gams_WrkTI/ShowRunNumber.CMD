@@ -1,1 +1,1 @@
-echo NoPAMS-CAP06
+echo NoPAMS-HiGr-

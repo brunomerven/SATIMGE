@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/04/26	6:55:38 PM
+Creation Date:	2021/05/26	2:48:34 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -528,15 +528,15 @@ TS DATA	REGION1
 	ACT_COST	XIISSSC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	XINDELP	-	-	-	-	-	0	0.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	XIPPRECP	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	ICPAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	5.49450549450549E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	6.09756097560976E-02	null	null	
-	ACT_EFF	ICPCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.1978021978022	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	2.4390243902439	null	null	
-	ACT_EFF	ICPEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.835164835164835	null	null	null	null	0.926829268292683	null	null	null	null	0.926829268292683	null	null	null	null	0.926829268292683	null	0.926829268292683	null	null	
-	ACT_EFF	ICPFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	ICPHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.989010989010989	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	1.09756097560976	null	null	
-	ACT_EFF	ICPKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.0989010989011	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	1.21951219512195	null	null	
-	ACT_EFF	ICPLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.32967032967033	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	0.365853658536585	null	null	
-	ACT_EFF	ICPOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	ICPPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
+	ACT_EFF	ICPAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	ICPCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	ICPEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	ICPFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	ICPHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	ICPKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	ICPLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	ICPOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	ICPPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
 	ACT_EFF	ICPSCLE-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
 	ACT_EFF	ICPSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
 	ACT_EFF	ICPSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
@@ -544,15 +544,15 @@ TS DATA	REGION1
 	ACT_EFF	ICPSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
 	ACT_EFF	ICPSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
 	ACT_EFF	ICPTGAS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
-	ACT_EFF	IFBAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	5.49450549450549E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	6.09756097560976E-02	null	null	
-	ACT_EFF	IFBCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.1978021978022	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	2.4390243902439	null	null	
-	ACT_EFF	IFBEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.835164835164835	null	null	null	null	0.926829268292683	null	null	null	null	0.926829268292683	null	null	null	null	0.926829268292683	null	0.926829268292683	null	null	
-	ACT_EFF	IFBFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	IFBHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.989010989010989	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	1.09756097560976	null	null	
-	ACT_EFF	IFBKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.0989010989011	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	1.21951219512195	null	null	
-	ACT_EFF	IFBLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.32967032967033	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	0.365853658536585	null	null	
-	ACT_EFF	IFBOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	IFBPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
+	ACT_EFF	IFBAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	IFBCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	IFBEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IFBFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IFBHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	IFBKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IFBLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	IFBOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IFBPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
 	ACT_EFF	IFBSBIB-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	IFBSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
 	ACT_EFF	IFBSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
@@ -563,15 +563,15 @@ TS DATA	REGION1
 	ACT_EFF	IISHALKHGNO	-	ACTGRP	-	ANNUAL	-	0	1.43	null	null	null	null	null	null	null	1.50375939849624	null	null	null	null	null	null	null	null	null	1.47058823529412	null	null	null	null	null	null	null	null	null	null	null	1.33333333333333	null	null	
 	ACT_EFF	IISHDRIHBI-STOR	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	IISXHGNCRS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IMIAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.050761421319797	null	null	null	null	5.10204081632653E-02	null	null	null	null	5.10204081632653E-02	null	null	null	null	5.10204081632653E-02	null	5.10204081632653E-02	null	null	
-	ACT_EFF	IMICELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.03045685279188	null	null	null	null	2.04081632653061	null	null	null	null	2.04081632653061	null	null	null	null	2.04081632653061	null	2.04081632653061	null	null	
-	ACT_EFF	IMIEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.771573604060914	null	null	null	null	0.775510204081633	null	null	null	null	0.775510204081633	null	null	null	null	0.775510204081633	null	0.775510204081633	null	null	
-	ACT_EFF	IMIFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.812182741116751	null	null	null	null	0.816326530612245	null	null	null	null	0.816326530612245	null	null	null	null	0.816326530612245	null	0.816326530612245	null	null	
-	ACT_EFF	IMIHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.913705583756345	null	null	null	null	0.918367346938776	null	null	null	null	0.918367346938776	null	null	null	null	0.918367346938776	null	0.918367346938776	null	null	
-	ACT_EFF	IMIKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.01522842639594	null	null	null	null	1.02040816326531	null	null	null	null	1.02040816326531	null	null	null	null	1.02040816326531	null	1.02040816326531	null	null	
-	ACT_EFF	IMILELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.304568527918782	null	null	null	null	0.306122448979592	null	null	null	null	0.306122448979592	null	null	null	null	0.306122448979592	null	0.306122448979592	null	null	
-	ACT_EFF	IMIOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.812182741116751	null	null	null	null	0.816326530612245	null	null	null	null	0.816326530612245	null	null	null	null	0.816326530612245	null	0.816326530612245	null	null	
-	ACT_EFF	IMIPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.812182741116751	null	null	null	null	0.816326530612245	null	null	null	null	0.816326530612245	null	null	null	null	0.816326530612245	null	0.816326530612245	null	null	
+	ACT_EFF	IMIAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	IMICELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	IMIEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IMIFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IMIHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	IMIKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IMILELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	IMIOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IMIPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
 	ACT_EFF	IMIRELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	IMIRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	IMISCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
@@ -580,15 +580,15 @@ TS DATA	REGION1
 	ACT_EFF	IMISOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
 	ACT_EFF	IMISOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
 	ACT_EFF	IMISWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
-	ACT_EFF	INFAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	5.49450549450549E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	6.09756097560976E-02	null	null	
-	ACT_EFF	INFCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.1978021978022	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	2.4390243902439	null	null	
-	ACT_EFF	INFEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.769620253164557	null	null	null	null	0.779487179487179	null	null	null	null	0.779487179487179	null	null	null	null	0.779487179487179	null	0.779487179487179	null	null	
-	ACT_EFF	INFFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	INFHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.989010989010989	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	1.09756097560976	null	null	
-	ACT_EFF	INFKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.0989010989011	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	1.21951219512195	null	null	
-	ACT_EFF	INFLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.32967032967033	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	0.365853658536585	null	null	
-	ACT_EFF	INFOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	INFPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
+	ACT_EFF	INFAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	INFCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	INFEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	INFFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	INFHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	INFKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	INFLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	INFOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	INFPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
 	ACT_EFF	INFSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
 	ACT_EFF	INFSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
 	ACT_EFF	INFSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
@@ -600,15 +600,15 @@ TS DATA	REGION1
 	ACT_EFF	INMCLISUBGYL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	INMCLISUBSLAG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	INMCLISUBSPOZ	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IOTAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	5.49450549450549E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	null	null	null	6.09756097560976E-02	null	6.09756097560976E-02	null	null	
-	ACT_EFF	IOTCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.1978021978022	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	null	null	null	2.4390243902439	null	2.4390243902439	null	null	
-	ACT_EFF	IOTEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.835164835164835	null	null	null	null	0.926829268292683	null	null	null	null	0.926829268292683	null	null	null	null	0.926829268292683	null	0.926829268292683	null	null	
-	ACT_EFF	IOTFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	IOTHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.989010989010989	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	null	null	null	1.09756097560976	null	1.09756097560976	null	null	
-	ACT_EFF	IOTKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.0989010989011	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	null	null	null	1.21951219512195	null	1.21951219512195	null	null	
-	ACT_EFF	IOTLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.32967032967033	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	null	null	null	0.365853658536585	null	0.365853658536585	null	null	
-	ACT_EFF	IOTOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
-	ACT_EFF	IOTPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.879120879120879	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	null	null	null	0.975609756097561	null	0.975609756097561	null	null	
+	ACT_EFF	IOTAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	IOTCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	IOTEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IOTFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IOTHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	IOTKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IOTLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	IOTOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IOTPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
 	ACT_EFF	IOTRELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	IOTRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	IOTSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
@@ -692,7 +692,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IFBL	-	-	-	-	0	0.2394872494718	null	null	null	null	0.22428	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBO	-	-	-	-	0	2.68225719408416	null	null	null	null	2.511936	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBP	-	-	-	-	0	3.57634292544555	null	null	null	null	3.349248	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IFBS	-	-	-	-	0	20.4218620324183	null	null	null	null	6.8922304	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBS	-	-	-	-	0	20.4218620324183	null	null	null	null	13.3946304	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IISCRS	-	-	-	-	0	6.94	7.1	6.5	6.4	6.091	6.23	6.3	6.12679748375827	5.0030232389252	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIA	-	-	-	-	0	0.993180581182697	null	null	null	null	1.02282359847062	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIC	-	-	-	-	0	17.3532402590831	null	null	null	null	17.8711746717646	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -704,7 +704,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IMIO	-	-	-	-	0	28.8949768078483	null	null	null	null	29.7573922771775	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIP	-	-	-	-	0	15.2945172722485	null	null	null	null	15.7510058992934	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	29.931	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	0.9080571912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	24.5131771912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFA	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFC	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	11.427588	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -729,7 +729,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IOTO	-	-	-	-	0	12.3044909233109	null	null	null	null	6.670806912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTP	-	-	-	-	0	4.33691353748451	null	null	null	null	2.351232	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	61.5613408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	117.4704608	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPAP	-	-	-	-	0	2.0533	2.078652	2.104004	2.129356	2.154708	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPULPD	-	-	-	-	0	0.737115145	0.737115145	0.737115145	0.737115145	0.7	0.659107198066639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IALPOT	CF4	IALM	-	ANNUAL	-	0	0.410167605050004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -776,18 +776,18 @@ TS DATA	REGION1
 	FLO_EMIS	INMLIMADV	CO2SP	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMLIMSTD	CO2SP	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISBFBOF-E	-	CGBFBOF-E-O	CGBFBOF-E-I	ANNUAL	-	0	21.4006916923111	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	3	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	16.0159061625617	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	0	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOREAF-E	-	CGCOREAF-E-O	CGCOREAF-E-I	ANNUAL	-	0	21.5145885271352	null	null	null	null	22.1516761723534	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOV	-	IISCKE	IISCKC	ANNUAL	-	0	1.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOV	-	IISCOG	IISCKE	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISDRIEAF-E	-	CGDRIEAF-E-O	CGDRIEAF-E-I	ANNUAL	-	0	31.2479501991702	null	null	null	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-NC	-	CGDRIEAF-N-O	CGDRIEAF-N-I	ANNUAL	-	3	20.3	null	null	20.3	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	27.0502284742317	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-NG	-	CGDRIEAF-NG-O	CGDRIEAF-NG-I	ANNUAL	-	3	14.6	null	null	14.6	null	22.1950592609081	null	null	null	null	null	null	null	null	null	null	null	null	21.6401827793854	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-NC	-	CGDRIEAF-N-O	CGDRIEAF-N-I	ANNUAL	-	0	20.3	null	null	null	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-NG	-	CGDRIEAF-NG-O	CGDRIEAF-NG-I	ANNUAL	-	0	14.6	null	null	null	null	22.1950592609081	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISHDRIEAF-N	-	CGIISHHDRIEAF-N-O	CGIISHHDRIEAF-N-I	ANNUAL	-	0	3.71	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISHHGNSTOR-N	-	IISHHGN	IISHHELC	ANNUAL	-	0	0.03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISOTHEAF-E	-	CGOTHEAF-E-O	CGOTHEAF-E-I	ANNUAL	-	0	37.0743751747228	null	null	null	null	44.655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISSCREAF-E	-	CGSCREAF-E-O	CGSCREAF-E-I	ANNUAL	-	0	10	null	null	null	null	5.48873228036323	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISSCREAF-N	-	CGSCREAF-N-O	CGSCREAF-N-I	ANNUAL	-	3	6.6	null	null	6.6	null	5.48873228036323	null	null	null	null	null	null	null	null	null	null	null	null	5.35151397335414	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISSCREAF-N	-	CGSCREAF-N-O	CGSCREAF-N-I	ANNUAL	-	0	6.6	null	null	null	null	5.48873228036323	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	INMBRIADV	-	INMBRI	CG-INMBRIADV-I	ANNUAL	-	0	3.33809366359439	null	null	3.33809366359439	null	1.48155446877725	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	INMBRIF2TF	-	INMBRITHF	CG-INMBRIF2THF-I	ANNUAL	-	0	1.66904683179719	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	INMBRISTD	-	INMBRI	CG-INMBRISTD-I	ANNUAL	-	0	5.00714049539159	null	null	5.00714049539159	null	2.22233170316587	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -840,12 +840,12 @@ TS DATA	REGION1
 	FLO_MARK	ICPTGAS-E	ICPT	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	LO	0	0.813009069087021	null	null	null	null	0.561873729583967	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	UP	0	0.813009069087021	null	null	null	null	0.567549221801987	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IFBSELC-E	IFBS	-	-	-	LO	0	1.18833636429848E-02	null	null	null	null	3.26451210917151E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSELC-E	IFBS	-	-	-	UP	0	1.18833636429848E-02	null	null	null	null	3.29748697896112E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.511883363642985	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	LO	0	0.106538120595772	null	null	null	null	0.395481149324317	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	UP	0	0.106538120595772	null	null	null	null	0.399475908408401	null	null	null	null	null	null	null	null	null	null	null	null	0.606538120595772	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	LO	0	0.813009069087021	null	null	null	null	0.769706881945768	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	UP	0	0.813009069087021	null	null	null	null	0.77748169893512	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSELC-E	IFBS	-	-	-	LO	0	1.18833636429848E-02	null	null	null	null	1.67976039114898E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSELC-E	IFBS	-	-	-	UP	0	1.18833636429848E-02	null	null	null	null	1.69672766782725E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.511883363642985	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	LO	0	0.106538120595772	null	null	null	null	0.203495514142742	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	UP	0	0.106538120595772	null	null	null	null	0.205551024386608	null	null	null	null	null	null	null	null	null	null	null	null	0.606538120595772	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IFBSOHF-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IFBSOHF-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IFBSOLP-E	IFBS	-	-	-	LO	0	6.85694466742226E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -856,16 +856,16 @@ TS DATA	REGION1
 	FLO_MARK	IMIRELC-E	IMIR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.883355814780755	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMISCOA-E	IMIS	-	-	-	UP	0	0.991272516553951	null	null	null	null	0.892278600788642	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.986049511716385	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISCOA-E	IMIS	-	-	-	UP	0	0.991272516553951	null	null	null	null	0.996009607794329	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISELC-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISELC-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISGAS-E	IMIS	-	-	-	LO	0	8.7274834460486E-03	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISGAS-E	IMIS	-	-	-	UP	0	8.7274834460486E-03	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.508727483446049	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISOHF-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISOHF-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IMISOLP-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0.106644185219245	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMISOLP-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0.107721399211358	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISOLP-E	IMIS	-	-	-	LO	0	0	null	null	null	null	3.95048828361443E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISOLP-E	IMIS	-	-	-	UP	0	0	null	null	null	null	3.99039220567114E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISWAS-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISWAS-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	FLO_MARK	INFSCOA-E	INFS	-	-	-	LO	0	0.304867654173098	null	null	null	null	0.437146004161057	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -896,12 +896,12 @@ TS DATA	REGION1
 	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.937575836554879	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	UP	0	0.683020215882088	null	null	null	null	0.947046299550383	null	null	null	null	null	null	null	null	null	null	null	null	0.947046299550383	null	null	null	null	null	null	null	null	null	0.947046299550383	null	0.947046299550383	null	null	
-	FLO_MARK	IOTSELC-E	IOTS	-	-	-	LO	0	4.30080338432179E-03	null	null	null	null	2.76313981777343E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	2.79105032098326E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	LO	0	0.124175827045132	null	null	null	null	4.96610236273476E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	UP	0	0.124175827045132	null	null	null	null	0.050162650128634	null	null	null	null	null	null	null	null	null	null	null	null	0.624175827045132	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.962526695051493	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	UP	0	0.683020215882088	null	null	null	null	0.9722491869207	null	null	null	null	null	null	null	null	null	null	null	null	0.9722491869207	null	null	null	null	null	null	null	null	null	0.9722491869207	null	0.9722491869207	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	LO	0	4.30080338432179E-03	null	null	null	null	1.44804566902661E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	1.46267239295617E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	LO	0	0.124175827045132	null	null	null	null	2.60252592794801E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	UP	0	0.124175827045132	null	null	null	null	2.62881406863435E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.624175827045132	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSOHF-E	IOTS	-	-	-	LO	0	0.114264904866746	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSOHF-E	IOTS	-	-	-	UP	0	0.114264904866746	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.614264904866746	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSOLP-E	IOTS	-	-	-	LO	0	7.42382488217117E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -1750,7 +1750,7 @@ TS DATA	REGION1
 	PRC_RESID	IFBOELC-E	-	-	-	-	-	0	20.5034183923266	null	null	null	null	19.2014676654946	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBPELC-E	-	-	-	-	-	0	29.5175216692436	null	null	null	null	27.6431825685045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSBIB-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IFBSCOA-E	-	-	-	-	-	0	107.624029558566	null	null	null	null	25.35606404356	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSCOA-E	-	-	-	-	-	0	107.624029558566	null	null	null	null	67.5055422311532	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSELC-E	-	-	-	-	-	0	1.57308882347891	null	null	null	null	1.47319893692876	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSGAS-E	-	-	-	-	-	0	14.1032397744215	null	null	null	null	17.847151098723	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1774,7 +1774,7 @@ TS DATA	REGION1
 	PRC_RESID	IMIPELC-E	-	-	-	-	-	0	126.234048136749	null	null	null	null	130.001699399912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMIRELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMIRODS-E	-	-	-	-	-	0	51.4885232177635	null	null	null	null	29.931	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMISCOA-E	-	-	-	-	-	0	130.279199844429	null	null	null	null	5.25209049069813	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISCOA-E	-	-	-	-	-	0	130.279199844429	null	null	null	null	158.263823167174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISGAS-E	-	-	-	-	-	0	1.14702015946069	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1861,14 +1861,14 @@ TS DATA	REGION1
 	STG_EFF	IISHBATTERY	-	-	-	-	-	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHHGNSTOR-N	-	-	-	-	-	0	0.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	UC-BFBOF	-	-	-	-	UP	0	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	null	
-	UC__RHSRT	UC-BFBOF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-BFBOF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-BFBOF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-BFBOF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-COREAF	-	-	-	-	UP	0	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	null	
-	UC__RHSRT	UC-COREAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-COREAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-COREAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-COREAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-DRIEAF	-	-	-	-	UP	0	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	null	
-	UC__RHSRT	UC-DRIEAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-DRIEAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-DRIEAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-DRIEAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KLD	-	-	-	-	UP	0	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	null	
 	UC__RHSRT	UC-INM-KLD-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KLD-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
@@ -1879,40 +1879,40 @@ TS DATA	REGION1
 	UC__RHSRT	UC-INM-KSP-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KSP-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-IPP-CEM	-	-	-	-	UP	0	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	null	
-	UC__RHSRT	UC-IPP-CEM-T1	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-CEM-T2	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-CEM-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-CEM-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-IPP-DIS	-	-	-	-	UP	0	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	0.867194288235294	null	
-	UC__RHSRT	UC-IPP-DIS-T1	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-DIS-T2	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-DIS-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-DIS-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-IPP-MCH	-	-	-	-	UP	0	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	0.393	null	
-	UC__RHSRT	UC-IPP-MCH-T1	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-MCH-T2	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-MCH-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-MCH-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-IPP-PAP	-	-	-	-	UP	0	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	2.90674666666667	null	
-	UC__RHSRT	UC-IPP-PAP-T1	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-PAP-T2	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-REC	-	-	-	-	FX	0	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	null	
+	UC__RHSRT	UC-IPP-PAP-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-PAP-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-REC	-	-	-	-	UP	0	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	1.28258588235294	null	
 	UC__RHSRT	UC-IPPREC-MAX	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-RECT1	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-IPP-REC-T2	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-RECT1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-REC-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-OTHEAF	-	-	-	-	UP	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-OTHEAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-OTHEAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF	-	-	-	-	UP	0	1.72	1.72	1.72	1.72	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MAX	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MIN	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-SCREAF-T1-ACT	-	-	-	-	FX	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-SCREAF-T2-ACT	-	-	-	-	FX	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	-0.003125	-0.00625	-0.009375	-0.0125	-0.0125	-0.015625	-0.01875	-0.021875	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	null	null	
+	UC__RHSRT	UC-SCREAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-SCREAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
+	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-COREAF-T1-ACT	LHS	S-IIS-COREAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	-0.003125	-0.00625	-0.009375	-0.0125	-0.0125	-0.015625	-0.01875	-0.021875	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	null	null	
+	UCRULE_ACT	UC-COREAF-T1-ACT	LHS	S-IIS-COREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-COREAF-T1-ACT	LHS	S-IIS-COREAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-COREAF-T2-ACT	LHS	S-IIS-COREAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
+	UCRULE_ACT	UC-COREAF-T2-ACT	LHS	S-IIS-COREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-COREAF-T2-ACT	LHS	S-IIS-COREAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	-0.003125	-0.00625	-0.009375	-0.0125	-0.0125	-0.015625	-0.01875	-0.021875	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	null	null	
+	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
+	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-INM-KLD-T1	LHS	S-CEMKLD-E	-	ANNUAL	-	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	null	
 	UCRULE_ACT	UC-INM-KLD-T1	LHS	S-CEMKLD-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
@@ -1926,39 +1926,39 @@ TS DATA	REGION1
 	UCRULE_ACT	UC-INM-KSP-T1	LHS	S-CEMKSP-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-INM-KSP-T2	LHS	S-CEMKSP-E	-	ANNUAL	-	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	null	
 	UCRULE_ACT	UC-INM-KSP-T2	LHS	S-CEMKSP-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-IPP-CEM-T1	LHS	S-IPP-CHE-E	-	ANNUAL	-	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	null	null	null	null	-0.08	null	null	null	null	-0.08	null	-0.08	-0.08	null	
+	UCRULE_ACT	UC-IPP-CEM-T1	LHS	S-IPP-CHE-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
 	UCRULE_ACT	UC-IPP-CEM-T1	LHS	S-IPP-CHE-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-IPP-CEM-T2	LHS	S-IPP-CHE-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UCRULE_ACT	UC-IPP-CEM-T2	LHS	S-IPP-CHE-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-IPP-DIS-T1	LHS	S-IPP-DIS-E	-	ANNUAL	-	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	null	null	null	null	-0.08	null	null	null	null	-0.08	null	-0.08	-0.08	null	
+	UCRULE_ACT	UC-IPP-DIS-T1	LHS	S-IPP-DIS-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
 	UCRULE_ACT	UC-IPP-DIS-T1	LHS	S-IPP-DIS-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-IPP-DIS-T2	LHS	S-IPP-DIS-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UCRULE_ACT	UC-IPP-DIS-T2	LHS	S-IPP-DIS-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-IPP-MCH-T1	LHS	S-IPP-MCH-E	-	ANNUAL	-	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	null	null	null	null	-0.08	null	null	null	null	-0.08	null	-0.08	-0.08	null	
+	UCRULE_ACT	UC-IPP-MCH-T1	LHS	S-IPP-MCH-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
 	UCRULE_ACT	UC-IPP-MCH-T1	LHS	S-IPP-MCH-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-IPP-MCH-T2	LHS	S-IPP-MCH-E	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UCRULE_ACT	UC-IPP-MCH-T2	LHS	S-IPP-MCH-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-IPP-PAP-T1	LHS	S-IPP-PAP-E	-	ANNUAL	-	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	null	null	null	null	-0.08	null	null	null	null	-0.08	null	-0.08	-0.08	null	
+	UCRULE_ACT	UC-IPP-PAP-T1	LHS	S-IPP-PAP-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
 	UCRULE_ACT	UC-IPP-PAP-T1	LHS	S-IPP-PAP-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-IPP-PAP-T2	LHS	S-IPP-PAP-E	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UCRULE_ACT	UC-IPP-PAP-T2	LHS	S-IPP-PAP-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-IPPREC-MAX	LHS	S-IPP	-	ANNUAL	-	0	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	null	
 	UCRULE_ACT	UC-IPPREC-MAX	LHS	S-IPPREC	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-IPP-RECT1	LHS	S-IPP-REC-E	-	ANNUAL	-	3	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	-0.08	null	null	null	null	-0.08	null	null	null	null	-0.08	null	-0.08	-0.08	null	
+	UCRULE_ACT	UC-IPP-RECT1	LHS	S-IPP-REC-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
 	UCRULE_ACT	UC-IPP-RECT1	LHS	S-IPP-REC-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-IPP-REC-T2	LHS	S-IPP-REC-E	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UCRULE_ACT	UC-IPP-REC-T2	LHS	S-IPP-REC-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	-0.003125	-0.00625	-0.009375	-0.0125	-0.0125	-0.015625	-0.01875	-0.021875	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	null	null	
+	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
+	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS	-	ANNUAL	-	0	-0.126	-0.126	-0.126	-0.217	-0.221	-0.216	-0.196	-0.201	-0.246	-0.25275	-0.2595	-0.26625	-0.273	-0.273	-0.27975	-0.2865	-0.29325	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	null	null	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	-0.003125	-0.00625	-0.009375	-0.0125	-0.0125	-0.015625	-0.01875	-0.021875	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	-0.025	null	null	
+	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
+	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
 	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_CAP	UC-BFBOF	LHS	S-IIS-BFBOF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_CAP	UC-COREAF	LHS	S-IIS-COREAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	

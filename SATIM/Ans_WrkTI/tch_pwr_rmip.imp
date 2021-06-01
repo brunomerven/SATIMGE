@@ -1,0 +1,185 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/05/27	12:56:35 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWR_RMIP	RMIPPPP forced in	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	T	EP_FLAB-M	Power - Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-P	Power - Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-S	Power - Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EP_FLAB-T	Power - Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL	
+	T	EPTSTO-E	Pump Storage All Existing - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	EPTSTO-N	Pumped Storage New Ingula - Single Storage Tech	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ERBIG-N	Landfill gas	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERBIO-N	Biomass municipal waste	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-E	Hydro Existing South Africa	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYDGIW-I	Grand Inga	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-I	Hydro Existing Region	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERHYD-N	Micro hydro	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPCF-N	Solar PV Fixed	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPCT-N	Solar PV tracking	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRC-N	Solar PV rooftop commercial	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRI-N	Solar PV rooftop Industry	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLPRR-N	Solar PV rooftop residential	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERSOLTC09-N	Solar Central Receiver 09 hrs storage	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERWNDH-N	Wind	PJ,GW	PRC,ELE,DAYNITE	
+	T	ESTSUTL	Utility Scale Storage - 4hrs	PJ,GW	PRC,PRE,STGTSS,DAYNITE	
+	T	ETCLDFB-N	Fluidised Bed Combustion Coal	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLE-CCS-N	Generic Waterberg Coal Plant with CCS	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKELB-E	KELVIN B	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEPFSI-E	Sasol Infrachem Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLEPFSS-E	Sasol SSF Coal Plant	PJ,GW	PRC,ELE,WEEKLY	
+	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEWATE-N	Generic Waterberg Coal Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGASENSI-N	Sasol Infrachem Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGASENSS-N	Sasol SSF Gas Plant	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICCC-CCS-N	Combined Cycle Gas Turbine - LNG with CCS	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICEN-N	Gas Engines - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICGT-N	Open Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETHGNGT-N	Open Cycle Gas Turbine - Hydrogen	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETNUC-E	Nuclear Existing	PJ,GW	PRC,ELE,SEASON	
+	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETRANS	Transmission	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETRANSDUM	dummy tech tracking investment costs	PJ,GW	PRC,ELE,DAYNITE	
+	T	MIN_FLAB-M	Supply - Factor-Labour-Mid	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-P	Supply - Factor-Labour-Primary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-S	Supply - Factor-Labour-Secondary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MIN_FLAB-T	Supply - Factor-Labour-Tertiary	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	MINCSARNOVRS	Coal Supply for Arnot-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSCAMDVRS	Coal Supply for Camden-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHSER	Coal Supply for Duvha-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSDUVHVRS	Coal Supply for Duvha-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSGROOVRS	Coal Supply for Grootvlei-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSHENDVRS	Coal Supply for Hendrina-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKENDS32	Coal Supply for Kendal-South 32	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKENDVRS	Coal Supply for Kendal-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKOMAVRS	Coal Supply for Komati-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKRIESER	Coal Supply for Kriel-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKRIEVRS	Coal Supply for Kriel-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKUSINLG	Coal Supply for Kusile-New Largo	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSKUSIVRS	Coal Supply for Kusile-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSLETHSER	Coal Supply for Lethabo-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMAJUVRS	Coal Supply for Majuba-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATIEXX	Coal Supply for Matimba-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATLEXX	Coal Supply for Matla-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMATLVRS	Coal Supply for Matla-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSMEDUEXX	Coal Supply for Medupi-Exxaro	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSTUTUSER	Coal Supply for Tutuka-Seriti	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSTUTUVRS	Coal Supply for Tutuka-various	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINCSWATEVRS	Coal Supply for New Plants in Waterberg	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	MINPWRWAT	Water Supply for Power Sector	PJ,PJa	PRC,XTRACT,PRE,ANNUAL	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XPWROHF	Power Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XPWROKE	Power Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
+
+TS DATA	REGION1
+	NCAP_AFA	ETGICEN-N	-	-	-	-	LO	0	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERSOLPCT-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	0.598583333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ERWNDH-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	0.169166666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ESTSUTL	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	0.52688	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ETGICEN-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	1.31888	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	ERBIG-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERBIO-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYDGIW-I	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERHYD-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCF-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPCT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRC-N	-	COMELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRI-N	-	INDELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLPRR-N	-	RESELC	-	-	-	1	
+	PRC_ACTUNT	ERSOLTC09-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ERWNDH-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ESTSUTL	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLDFB-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEWATE-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICCC-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICEN-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETGICGT-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETNUC-N	-	ELCC	-	-	-	1	
+	TOP-IN	ERBIG-N	PWRBIG	-	-	-	-	1	
+	TOP-IN	ERBIO-N	PWRBIO	-	-	-	-	1	
+	TOP-IN	ERHYD-N	PWRHYD	-	-	-	-	1	
+	TOP-IN	ERSOLPCF-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPCT-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRC-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRI-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLPRR-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERSOLTC09-N	PWRSOL	-	-	-	-	1	
+	TOP-IN	ERWNDH-N	PWRWND	-	-	-	-	1	
+	TOP-IN	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-IN	ETCLDFB-N	PWRCLD	-	-	-	-	1	
+	TOP-IN	ETCLEWATE-N	PWRCLEWATE	-	-	-	-	1	
+	TOP-IN	ETGICCC-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICEN-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETGICGT-N	PWRGIC	-	-	-	-	1	
+	TOP-IN	ETNUC-N	PWRNUC	-	-	-	-	1	
+	TOP-OUT	ERBIG-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERBIO-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYDGIW-I	ELCC	-	-	-	-	1	
+	TOP-OUT	ERHYD-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCF-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPCT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRC-N	COMELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRI-N	INDELC	-	-	-	-	1	
+	TOP-OUT	ERSOLPRR-N	RESELC	-	-	-	-	1	
+	TOP-OUT	ERSOLTC09-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ERWNDH-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ESTSUTL	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLDFB-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEWATE-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETNUC-N	ELCC	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

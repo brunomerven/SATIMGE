@@ -1,0 +1,99 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'CO2CAPT'                  'CO2 Captured                                      '
+  'CO2STOR'                  'Transported and Stored CO2                        '
+  'PWRCO2S'                  'Power Sector Carbon dioxide South Africa          '
+  'ZDUMETRANS'               'Dummy Commodity for ETRANSDUM                     '
+/;
+SET UC_N /
+  'U_CCS_CAPT'               'Constraint on capture and transport               '
+  'U_CCS_PWR'                'Constraint on CCS for power                       '
+  'U_CCS_STOR'               'Constraint on transport and storage               '
+/;
+SET UC_N_UCRT /
+  'REGION1'   .'U_CCS_CAPT'
+  'REGION1'   .'U_CCS_PWR'
+  'REGION1'   .'U_CCS_STOR'
+/;
+SET COM /
+  'CO2CAPT'                  'CO2 Captured                                      '
+  'CO2STOR'                  'Transported and Stored CO2                        '
+  'PWRCO2S'                  'Power Sector Carbon dioxide South Africa          '
+  'ZDUMETRANS'               'Dummy Commodity for ETRANSDUM                     '
+/;
+SET COM_NRG /
+  'REGION1'   .'CO2CAPT'
+  'REGION1'   .'CO2STOR'
+  'REGION1'   .'ZDUMETRANS'
+/;
+SET COM_ENV /
+  'REGION1'   .'PWRCO2S'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'CO2CAPT'
+  'REGION1'   .'CO2STOR'
+  'REGION1'   .'PWRCO2S'
+  'REGION1'   .'ZDUMETRANS'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'CO2CAPT'
+  'REGION1'   .'CO2STOR'
+  'REGION1'   .'ZDUMETRANS'
+/;
+SET COM_ENVGHG /
+  'REGION1'   .'PWRCO2S'
+/;
+SET PRC /
+  'UCO2STOR'                 'CO2 Storage - Durban Basin                        '
+  'UPWRCO2SC'                'PWRCO2S Power Sector Capture - Retrofit           '
+  'XCO2TRANSPORT'            'CO2 Transport - Durban Basin                      '
+/;
+SET PRC_PRE /
+  'REGION1'   .'UCO2STOR'
+  'REGION1'   .'UPWRCO2SC'
+  'REGION1'   .'XCO2TRANSPORT'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'UCO2STOR'
+  'REGION1'   .'UPWRCO2SC'
+  'REGION1'   .'XCO2TRANSPORT'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'CO2CAPT'.'KT'
+  'REGION1'.'CO2STOR'.'KT'
+  'REGION1'.'PWRCO2S'.'KT'
+  'REGION1'.'ZDUMETRANS'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'UCO2STOR'.'KT'
+  'REGION1'.'UPWRCO2SC'.'KT'
+  'REGION1'.'XCO2TRANSPORT'.'KT'
+/;
+PARAMETER AUC_R_EACH /
+  'REGION1'                 .'U_CCS_CAPT'                 1
+  'REGION1'                 .'U_CCS_PWR'                  1
+  'REGION1'                 .'U_CCS_STOR'                 1
+/;
+       TABLE AUC_ACT
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'U_CCS_CAPT'              .'LHS'                     .'XCO2TRANSPORT'           .'ANNUAL'                           1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+  'REGION1'                 .'U_CCS_PWR'               .'LHS'                     .'UPWRCO2SC'               .'ANNUAL'                           1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+  'REGION1'                 .'U_CCS_STOR'              .'LHS'                     .'UCO2STOR'                .'ANNUAL'                           1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+;
+       TABLE AUC_COMPRD
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'U_CCS_CAPT'              .'LHS'                     .'CO2CAPT'                 .'ANNUAL'                          -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1
+  'REGION1'                 .'U_CCS_PWR'               .'LHS'                     .'PWRCO2S'                 .'ANNUAL'                          -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9             -.9
+  'REGION1'                 .'U_CCS_STOR'              .'LHS'                     .'CO2STOR'                 .'ANNUAL'                          -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1              -1
+;
+       TABLE AUC_RHSRT
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'U_CCS_CAPT'              .'FX'                              EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'U_CCS_PWR'               .'UP'                              EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'U_CCS_STOR'              .'FX'                              EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+;

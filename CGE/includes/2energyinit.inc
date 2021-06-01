@@ -142,6 +142,7 @@ PARAMETER
  FHPOP(FH,AY)             result: final cluster populations after reallocations
  ELECRATE(FH,AY)          loaded: household electriification rates
  TFHPOP(FH,AY)            result: population kept before elc split for transport
+ TFHPOP2(FH,AY)           temp calc for TFHPOP
  TFHPOPMY(FH,AY)           result: population for TIMES milestone years
 *Exporting from CGE to TIMES
 
@@ -238,6 +239,8 @@ PARAMETER
 
  EIntensity_FH(FH,C,AY)    Energy Intensity of SATIM households
  EIntensity_FS(FS,C,AY)    Energy Intensity of SATIM sectors
+ EIntensityQA_FS(FS,C,AY)    Energy Intensity of SATIM sectors linked to QA rather than GVA
+
  FIntensity_FS(FS,F,AY)    Factor Intensity of SATIM sectors
 
 * ICA change/growth parameters

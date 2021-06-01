@@ -1,0 +1,149 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2020/12/11	5:14:21 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_IND_PAMH	Industry shortened ts - PAM high ambition	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+TS DATA	REGION1
+	ACT_EFF	ICPAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	6.06060606060606E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	
+	ACT_EFF	ICPCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.42424242424242	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	
+	ACT_EFF	ICPEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.921212121212121	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	
+	ACT_EFF	ICPFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	ICPHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	1.09090909090909	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	
+	ACT_EFF	ICPKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.21212121212121	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	
+	ACT_EFF	ICPLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.363636363636364	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	
+	ACT_EFF	ICPOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	ICPPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	ICPSCLE-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
+	ACT_EFF	ICPSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
+	ACT_EFF	ICPSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	ICPSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	
+	ACT_EFF	ICPSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	ICPSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	
+	ACT_EFF	ICPTGAS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
+	ACT_EFF	IFBAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	6.06060606060606E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	
+	ACT_EFF	IFBCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.42424242424242	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	
+	ACT_EFF	IFBEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.921212121212121	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	
+	ACT_EFF	IFBFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	IFBHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	1.09090909090909	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	
+	ACT_EFF	IFBKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.21212121212121	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	
+	ACT_EFF	IFBLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.363636363636364	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	
+	ACT_EFF	IFBOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	IFBPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	IFBSBIB-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IFBSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
+	ACT_EFF	IFBSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
+	ACT_EFF	IFBSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	IFBSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	
+	ACT_EFF	IFBSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	IFBSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	
+	ACT_EFF	IISHDRIHBI-STOR	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IISHPEMHGN	-	ACTGRP	-	ANNUAL	-	0	1.79	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.59	null	null	null	null	null	null	null	null	null	null	null	1.49	null	null	
+	ACT_EFF	IISHXCRS	-	ACTGRP	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	ACT_EFF	IMIAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	5.15463917525773E-02	null	null	null	null	5.20833333333333E-02	null	null	null	null	5.20833333333333E-02	null	null	null	null	5.20833333333333E-02	null	null	null	null	
+	ACT_EFF	IMICELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.06185567010309	null	null	null	null	2.08333333333333	null	null	null	null	2.08333333333333	null	null	null	null	2.08333333333333	null	null	null	null	
+	ACT_EFF	IMIEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.783505154639175	null	null	null	null	0.791666666666667	null	null	null	null	0.791666666666667	null	null	null	null	0.791666666666667	null	null	null	null	
+	ACT_EFF	IMIFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.824742268041237	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	
+	ACT_EFF	IMIHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.927835051546392	null	null	null	null	0.9375	null	null	null	null	0.9375	null	null	null	null	0.9375	null	null	null	null	
+	ACT_EFF	IMIKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.03092783505155	null	null	null	null	1.04166666666667	null	null	null	null	1.04166666666667	null	null	null	null	1.04166666666667	null	null	null	null	
+	ACT_EFF	IMILELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.309278350515464	null	null	null	null	0.3125	null	null	null	null	0.3125	null	null	null	null	0.3125	null	null	null	null	
+	ACT_EFF	IMIOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.824742268041237	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	
+	ACT_EFF	IMIPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.824742268041237	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	0.833333333333333	null	null	null	null	
+	ACT_EFF	IMIRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
+	ACT_EFF	IMISCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
+	ACT_EFF	IMISELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
+	ACT_EFF	IMISGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	IMISOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	
+	ACT_EFF	IMISOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	IMISWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	
+	ACT_EFF	INFAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	6.06060606060606E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	
+	ACT_EFF	INFCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.42424242424242	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	
+	ACT_EFF	INFEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.779487179487179	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	
+	ACT_EFF	INFFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	INFHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	1.09090909090909	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	
+	ACT_EFF	INFKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.21212121212121	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	
+	ACT_EFF	INFLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.363636363636364	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	
+	ACT_EFF	INFOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	INFPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	INFSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
+	ACT_EFF	INFSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
+	ACT_EFF	INFSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	INFSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	
+	ACT_EFF	INFSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	INFSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	
+	ACT_EFF	IOTAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	6.06060606060606E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	
+	ACT_EFF	IOTCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.42424242424242	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	
+	ACT_EFF	IOTEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.921212121212121	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	
+	ACT_EFF	IOTFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	IOTHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	1.09090909090909	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	1.38461538461538	null	null	null	null	
+	ACT_EFF	IOTKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1.21212121212121	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	1.53846153846154	null	null	null	null	
+	ACT_EFF	IOTLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.363636363636364	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	0.461538461538462	null	null	null	null	
+	ACT_EFF	IOTOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	IOTPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.96969696969697	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	1.23076923076923	null	null	null	null	
+	ACT_EFF	IOTRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	
+	ACT_EFF	IOTSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	
+	ACT_EFF	IOTSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	
+	ACT_EFF	IOTSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	IOTSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	
+	ACT_EFF	IOTSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	
+	ACT_EFF	IOTSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	
+	ACT_EFF	IPPCHPGAS01-N	-	IPPGAS	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPCHPGAS02-N	-	IPPGAS	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPCHPSTM01-N	-	IPPSTM	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPELCSTM-E	-	ACTGRP	-	ANNUAL	-	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBIO-E	-	ACTGRP	-	ANNUAL	-	0	0.69	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBIO-N	-	ACTGRP	-	ANNUAL	-	0	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBLQ-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBLQ-N	-	ACTGRP	-	ANNUAL	-	0	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.65	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMCOA-N	-	ACTGRP	-	ANNUAL	-	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMCOAOIL	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMGAS-N	-	ACTGRP	-	ANNUAL	-	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMOIL-N	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXOXY	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFAGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFBELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFBGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISCKC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISELCHY	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISOIL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISWAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIMIELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIMIGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINFELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINFGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMOIL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIOTGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPBIB	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPODS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPOGS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

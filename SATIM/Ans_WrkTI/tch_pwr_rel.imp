@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/04/19	5:06:24 PM
+Creation Date:	2021/05/19	2:26:29 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_REL	Reliability constraint	
@@ -141,13 +141,13 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKEND-E	-	-	-	3	null	null	null	null	null	null	null	null	21.791376	null	null	null	null	23.3807904	null	null	null	null	23.0023584	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	27.5593104	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKRIE-E	-	-	-	3	null	null	null	null	null	null	null	null	17.060976	null	null	null	null	20.3217984	null	null	null	null	20.230344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	23.8538304	null	null	null	null	25.827984	null	null	null	null	25.827984	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	23.8538304	null	null	null	null	25.827984	null	null	null	null	25.5630816	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLELETH-E	-	-	-	3	null	null	null	null	null	null	null	null	23.3303328	null	null	null	null	23.6141568	null	null	null	null	23.1348096	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMAJD-E	-	-	-	3	null	null	null	null	null	null	null	null	23.037048	null	null	null	null	24.2953344	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMAJW-E	-	-	-	3	null	null	null	null	null	null	null	null	23.037048	null	null	null	null	24.2953344	null	null	null	null	22.3684848	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMATI-E	-	-	-	3	null	null	null	null	null	null	null	null	26.09604	null	null	null	null	24.7147632	null	null	null	null	25.0427376	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMATL-E	-	-	-	3	null	null	null	null	null	null	null	null	21.223728	null	null	null	null	22.2423408	null	null	null	null	21.9711312	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMEDU-N	-	-	-	3	null	null	null	null	null	null	null	null	23.8538304	null	null	null	null	25.827984	null	null	null	null	25.827984	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_ERMELC	LHS	ETCLEMEDU-N	-	-	-	3	null	null	null	null	null	null	null	null	23.8538304	null	null	null	null	25.827984	null	null	null	null	25.5630816	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEPFSI-E	-	-	-	3	null	null	null	null	null	null	null	null	17.561821021875	null	null	null	null	17.561821021875	null	null	null	null	17.561821021875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLEPFSS-E	-	-	-	3	null	null	null	null	null	null	null	null	23.0787522755435	null	null	null	null	23.0787522755435	null	null	null	null	23.0787522755435	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_ERMELC	LHS	ETCLETUTU-E	-	-	-	3	null	null	null	null	null	null	null	null	17.6790816	null	null	null	null	19.284264	null	null	null	null	18.3003408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -189,7 +189,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEHEND-E	-	-	-	3	null	null	null	null	null	null	null	null	0.714285714285714	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKELB-E	-	-	-	3	null	null	null	null	null	null	null	null	0.333333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKEND-E	-	-	-	3	null	null	null	null	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKRIE-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.8	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLELETH-E	-	-	-	3	null	null	null	null	null	null	null	null	0.833333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

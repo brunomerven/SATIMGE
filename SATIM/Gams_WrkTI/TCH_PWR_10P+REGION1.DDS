@@ -1,0 +1,557 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET PRC /
+  'EP_FLAB-M'                'Power - Supply - Factor-Labour-Mid                '
+  'EP_FLAB-P'                'Power - Supply - Factor-Labour-Primary            '
+  'EP_FLAB-S'                'Power - Supply - Factor-Labour-Secondary          '
+  'EP_FLAB-T'                'Power - Supply - Factor-Labour-Tertiary           '
+  'EPTSTO-E'                 'Pump Storage All Existing - Single Storage Tech   '
+  'EPTSTO-N'                 'Pumped Storage New Ingula - Single Storage Tech   '
+  'ERBIG-N'                  'Landfill gas                                      '
+  'ERBIO-N'                  'Biomass municipal waste                           '
+  'ERHYD-E'                  'Hydro Existing South Africa                       '
+  'ERHYDGIW-I'               'Grand Inga                                        '
+  'ERHYD-I'                  'Hydro Existing Region                             '
+  'ERHYD-N'                  'Micro hydro                                       '
+  'ERSOLPCF-N'               'Solar PV Fixed                                    '
+  'ERSOLPCT-N'               'Solar PV tracking                                 '
+  'ERSOLPRC-N'               'Solar PV rooftop commercial                       '
+  'ERSOLPRI-N'               'Solar PV rooftop Industry                         '
+  'ERSOLPRR-N'               'Solar PV rooftop residential                      '
+  'ERSOLTC09-N'              'Solar Central Receiver 09 hrs storage             '
+  'ERWNDH-N'                 'Wind                                              '
+  'ESTSUTL'                  'Utility Scale Storage - 4hrs                      '
+  'ETCLDFB-N'                'Fluidised Bed Combustion Coal                     '
+  'ETCLEARNO-E'              'ARNOT                                             '
+  'ETCLECAMD-E'              'CAMDEN                                            '
+  'ETCLE-CCS-N'              'Generic Waterberg Coal Plant with CCS             '
+  'ETCLEDUVH-E'              'DUVHA                                             '
+  'ETCLEGROO-E'              'GROOTVLEI                                         '
+  'ETCLEHEND-E'              'HENDRINA                                          '
+  'ETCLEKELB-E'              'KELVIN B                                          '
+  'ETCLEKEND-E'              'KENDAL                                            '
+  'ETCLEKOMA-E'              'KOMATI                                            '
+  'ETCLEKRIE-E'              'KRIEL                                             '
+  'ETCLEKUSI-N'              'KUSILE                                            '
+  'ETCLELETH-E'              'LETHABO                                           '
+  'ETCLEMAJD-E'              'MAJUBA DRY                                        '
+  'ETCLEMAJW-E'              'MAJUBA WET                                        '
+  'ETCLEMATI-E'              'MATIMBA                                           '
+  'ETCLEMATL-E'              'MATLA                                             '
+  'ETCLEMEDU-N'              'MEDUPI                                            '
+  'ETCLEPFSI-E'              'Sasol Infrachem Coal Plant                        '
+  'ETCLEPFSS-E'              'Sasol SSF Coal Plant                              '
+  'ETCLETUTU-E'              'TUTUKA                                            '
+  'ETCLEWATE-N'              'Generic Waterberg Coal Plant                      '
+  'ETGASENSI-N'              'Sasol Infrachem Gas Plant                         '
+  'ETGASENSS-N'              'Sasol SSF Gas Plant                               '
+  'ETGICCC-CCS-N'            'Combined Cycle Gas Turbine - LNG with CCS         '
+  'ETGICCC-N'                'Combined Cycle Gas Turbine - LNG                  '
+  'ETGICEN-N'                'Gas Engines - LNG                                 '
+  'ETGICGT-N'                'Open Cycle Gas Turbine - LNG                      '
+  'ETHGNGT-N'                'Open Cycle Gas Turbine - Hydrogen                 '
+  'ETNUC-E'                  'Nuclear Existing                                  '
+  'ETNUC-N'                  'Nuclear Mid                                       '
+  'ETODSGT-E'                'OCGT liquid fuels Existing                        '
+  'ETODSGT-N'                'DOE Peakers                                       '
+  'ETRANS'                   'Transmission                                      '
+  'ETRANSDUM'                'dummy tech tracking investment costs              '
+  'MIN_FLAB-M'               'Supply - Factor-Labour-Mid                        '
+  'MIN_FLAB-P'               'Supply - Factor-Labour-Primary                    '
+  'MIN_FLAB-S'               'Supply - Factor-Labour-Secondary                  '
+  'MIN_FLAB-T'               'Supply - Factor-Labour-Tertiary                   '
+  'MINCSARNOVRS'             'Coal Supply for Arnot-various                     '
+  'MINCSCAMDVRS'             'Coal Supply for Camden-various                    '
+  'MINCSDUVHS32'             'Coal Supply for Duvha-South 32                    '
+  'MINCSDUVHVRS'             'Coal Supply for Duvha-various                     '
+  'MINCSGROOVRS'             'Coal Supply for Grootvlei-various                 '
+  'MINCSHENDVRS'             'Coal Supply for Hendrina-various                  '
+  'MINCSKENDS32'             'Coal Supply for Kendal-South 32                   '
+  'MINCSKENDVRS'             'Coal Supply for Kendal-various                    '
+  'MINCSKOMAVRS'             'Coal Supply for Komati-various                    '
+  'MINCSKRIESER'             'Coal Supply for Kriel-Seriti                      '
+  'MINCSKRIEVRS'             'Coal Supply for Kriel-various                     '
+  'MINCSKUSINLG'             'Coal Supply for Kusile-New Largo                  '
+  'MINCSKUSIVRS'             'Coal Supply for Kusile-various                    '
+  'MINCSLETHSER'             'Coal Supply for Lethabo-Seriti                    '
+  'MINCSMAJUVRS'             'Coal Supply for Majuba-various                    '
+  'MINCSMATIEXX'             'Coal Supply for Matimba-Exxaro                    '
+  'MINCSMATLEXX'             'Coal Supply for Matla-Exxaro                      '
+  'MINCSMATLVRS'             'Coal Supply for Matla-various                     '
+  'MINCSMEDUEXX'             'Coal Supply for Medupi-Exxaro                     '
+  'MINCSTUTUSER'             'Coal Supply for Tutuka-Seriti                     '
+  'MINCSTUTUVRS'             'Coal Supply for Tutuka-various                    '
+  'MINCSWATEVRS'             'Coal Supply for New Plants in Waterberg           '
+  'PEXELC'                   'Exports of Electricity                            '
+  'XAGRELC'                  'Agriculatural Electricity                         '
+  'XCOMELC'                  'Commercial Electricity                            '
+  'XICPELC'                  'Industrial CP-Electricity                         '
+  'XIFAELC'                  'Industrial FA-Electricity                         '
+  'XIFBELC'                  'Industrial FB-Electricity                         '
+  'XIISELC'                  'Industrial IS-Electricity                         '
+  'XIMIELC'                  'Industrial MI-Electricity                         '
+  'XINDELC'                  'Industry Electricity                              '
+  'XINFELC'                  'Industrial NF-Electricity                         '
+  'XINMELC'                  'Industrial NM-Electricity                         '
+  'XIOTELC'                  'Industrial OT-Electricity                         '
+  'XIPPELC'                  'Industrial PP-Electricity                         '
+  'XPWROHF'                  'Power Oil HFO                                     '
+  'XPWROKE'                  'Power Oil Kerosene                                '
+  'XRESELC'                  'Residential Electricity                           '
+  'XTRAELC'                  'Transport Electricity                             '
+  'XUPSELC'                  'Supply Sector Electricity                         '
+/;
+SET PRC_XTRACT /
+  'REGION1'   .'MINCSARNOVRS'
+  'REGION1'   .'MINCSCAMDVRS'
+  'REGION1'   .'MINCSDUVHS32'
+  'REGION1'   .'MINCSDUVHVRS'
+  'REGION1'   .'MINCSGROOVRS'
+  'REGION1'   .'MINCSHENDVRS'
+  'REGION1'   .'MINCSKENDS32'
+  'REGION1'   .'MINCSKENDVRS'
+  'REGION1'   .'MINCSKOMAVRS'
+  'REGION1'   .'MINCSKRIESER'
+  'REGION1'   .'MINCSKRIEVRS'
+  'REGION1'   .'MINCSKUSINLG'
+  'REGION1'   .'MINCSKUSIVRS'
+  'REGION1'   .'MINCSLETHSER'
+  'REGION1'   .'MINCSMAJUVRS'
+  'REGION1'   .'MINCSMATIEXX'
+  'REGION1'   .'MINCSMATLEXX'
+  'REGION1'   .'MINCSMATLVRS'
+  'REGION1'   .'MINCSMEDUEXX'
+  'REGION1'   .'MINCSTUTUSER'
+  'REGION1'   .'MINCSTUTUVRS'
+  'REGION1'   .'MINCSWATEVRS'
+/;
+SET PRC_PRE /
+  'REGION1'   .'EP_FLAB-M'
+  'REGION1'   .'EP_FLAB-P'
+  'REGION1'   .'EP_FLAB-S'
+  'REGION1'   .'EP_FLAB-T'
+  'REGION1'   .'EPTSTO-E'
+  'REGION1'   .'EPTSTO-N'
+  'REGION1'   .'ESTSUTL'
+  'REGION1'   .'MIN_FLAB-M'
+  'REGION1'   .'MIN_FLAB-P'
+  'REGION1'   .'MIN_FLAB-S'
+  'REGION1'   .'MIN_FLAB-T'
+  'REGION1'   .'MINCSARNOVRS'
+  'REGION1'   .'MINCSCAMDVRS'
+  'REGION1'   .'MINCSDUVHS32'
+  'REGION1'   .'MINCSDUVHVRS'
+  'REGION1'   .'MINCSGROOVRS'
+  'REGION1'   .'MINCSHENDVRS'
+  'REGION1'   .'MINCSKENDS32'
+  'REGION1'   .'MINCSKENDVRS'
+  'REGION1'   .'MINCSKOMAVRS'
+  'REGION1'   .'MINCSKRIESER'
+  'REGION1'   .'MINCSKRIEVRS'
+  'REGION1'   .'MINCSKUSINLG'
+  'REGION1'   .'MINCSKUSIVRS'
+  'REGION1'   .'MINCSLETHSER'
+  'REGION1'   .'MINCSMAJUVRS'
+  'REGION1'   .'MINCSMATIEXX'
+  'REGION1'   .'MINCSMATLEXX'
+  'REGION1'   .'MINCSMATLVRS'
+  'REGION1'   .'MINCSMEDUEXX'
+  'REGION1'   .'MINCSTUTUSER'
+  'REGION1'   .'MINCSTUTUVRS'
+  'REGION1'   .'MINCSWATEVRS'
+  'REGION1'   .'XPWROHF'
+  'REGION1'   .'XPWROKE'
+/;
+SET PRC_ELE /
+  'REGION1'   .'ERBIG-N'
+  'REGION1'   .'ERBIO-N'
+  'REGION1'   .'ERHYD-E'
+  'REGION1'   .'ERHYDGIW-I'
+  'REGION1'   .'ERHYD-I'
+  'REGION1'   .'ERHYD-N'
+  'REGION1'   .'ERSOLPCF-N'
+  'REGION1'   .'ERSOLPCT-N'
+  'REGION1'   .'ERSOLPRC-N'
+  'REGION1'   .'ERSOLPRI-N'
+  'REGION1'   .'ERSOLPRR-N'
+  'REGION1'   .'ERSOLTC09-N'
+  'REGION1'   .'ERWNDH-N'
+  'REGION1'   .'ETCLDFB-N'
+  'REGION1'   .'ETCLEARNO-E'
+  'REGION1'   .'ETCLECAMD-E'
+  'REGION1'   .'ETCLE-CCS-N'
+  'REGION1'   .'ETCLEDUVH-E'
+  'REGION1'   .'ETCLEGROO-E'
+  'REGION1'   .'ETCLEHEND-E'
+  'REGION1'   .'ETCLEKELB-E'
+  'REGION1'   .'ETCLEKEND-E'
+  'REGION1'   .'ETCLEKOMA-E'
+  'REGION1'   .'ETCLEKRIE-E'
+  'REGION1'   .'ETCLEKUSI-N'
+  'REGION1'   .'ETCLELETH-E'
+  'REGION1'   .'ETCLEMAJD-E'
+  'REGION1'   .'ETCLEMAJW-E'
+  'REGION1'   .'ETCLEMATI-E'
+  'REGION1'   .'ETCLEMATL-E'
+  'REGION1'   .'ETCLEMEDU-N'
+  'REGION1'   .'ETCLEPFSI-E'
+  'REGION1'   .'ETCLEPFSS-E'
+  'REGION1'   .'ETCLETUTU-E'
+  'REGION1'   .'ETCLEWATE-N'
+  'REGION1'   .'ETGASENSI-N'
+  'REGION1'   .'ETGASENSS-N'
+  'REGION1'   .'ETGICCC-CCS-N'
+  'REGION1'   .'ETGICCC-N'
+  'REGION1'   .'ETGICEN-N'
+  'REGION1'   .'ETGICGT-N'
+  'REGION1'   .'ETHGNGT-N'
+  'REGION1'   .'ETNUC-E'
+  'REGION1'   .'ETNUC-N'
+  'REGION1'   .'ETODSGT-E'
+  'REGION1'   .'ETODSGT-N'
+  'REGION1'   .'ETRANS'
+  'REGION1'   .'ETRANSDUM'
+  'REGION1'   .'PEXELC'
+  'REGION1'   .'XAGRELC'
+  'REGION1'   .'XCOMELC'
+  'REGION1'   .'XICPELC'
+  'REGION1'   .'XIFAELC'
+  'REGION1'   .'XIFBELC'
+  'REGION1'   .'XIISELC'
+  'REGION1'   .'XIMIELC'
+  'REGION1'   .'XINDELC'
+  'REGION1'   .'XINFELC'
+  'REGION1'   .'XINMELC'
+  'REGION1'   .'XIOTELC'
+  'REGION1'   .'XIPPELC'
+  'REGION1'   .'XRESELC'
+  'REGION1'   .'XTRAELC'
+  'REGION1'   .'XUPSELC'
+/;
+SET PRC_STG /
+  'REGION1'   .'EPTSTO-E'
+  'REGION1'   .'EPTSTO-N'
+  'REGION1'   .'ESTSUTL'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'EP_FLAB-M'
+  'REGION1'   .'EP_FLAB-P'
+  'REGION1'   .'EP_FLAB-S'
+  'REGION1'   .'EP_FLAB-T'
+  'REGION1'   .'MIN_FLAB-M'
+  'REGION1'   .'MIN_FLAB-P'
+  'REGION1'   .'MIN_FLAB-S'
+  'REGION1'   .'MIN_FLAB-T'
+  'REGION1'   .'MINCSARNOVRS'
+  'REGION1'   .'MINCSCAMDVRS'
+  'REGION1'   .'MINCSDUVHS32'
+  'REGION1'   .'MINCSDUVHVRS'
+  'REGION1'   .'MINCSGROOVRS'
+  'REGION1'   .'MINCSHENDVRS'
+  'REGION1'   .'MINCSKENDS32'
+  'REGION1'   .'MINCSKENDVRS'
+  'REGION1'   .'MINCSKOMAVRS'
+  'REGION1'   .'MINCSKRIESER'
+  'REGION1'   .'MINCSKRIEVRS'
+  'REGION1'   .'MINCSKUSINLG'
+  'REGION1'   .'MINCSKUSIVRS'
+  'REGION1'   .'MINCSLETHSER'
+  'REGION1'   .'MINCSMAJUVRS'
+  'REGION1'   .'MINCSMATIEXX'
+  'REGION1'   .'MINCSMATLEXX'
+  'REGION1'   .'MINCSMATLVRS'
+  'REGION1'   .'MINCSMEDUEXX'
+  'REGION1'   .'MINCSTUTUSER'
+  'REGION1'   .'MINCSTUTUVRS'
+  'REGION1'   .'MINCSWATEVRS'
+  'REGION1'   .'PEXELC'
+  'REGION1'   .'XPWROHF'
+  'REGION1'   .'XPWROKE'
+/;
+SET PRC_SEASON /
+  'REGION1'   .'ETNUC-E'
+/;
+SET PRC_WEEKLY /
+  'REGION1'   .'ETCLEPFSI-E'
+  'REGION1'   .'ETCLEPFSS-E'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'EPTSTO-E'
+  'REGION1'   .'EPTSTO-N'
+  'REGION1'   .'ERBIG-N'
+  'REGION1'   .'ERBIO-N'
+  'REGION1'   .'ERHYD-E'
+  'REGION1'   .'ERHYDGIW-I'
+  'REGION1'   .'ERHYD-I'
+  'REGION1'   .'ERHYD-N'
+  'REGION1'   .'ERSOLPCF-N'
+  'REGION1'   .'ERSOLPCT-N'
+  'REGION1'   .'ERSOLPRC-N'
+  'REGION1'   .'ERSOLPRI-N'
+  'REGION1'   .'ERSOLPRR-N'
+  'REGION1'   .'ERSOLTC09-N'
+  'REGION1'   .'ERWNDH-N'
+  'REGION1'   .'ESTSUTL'
+  'REGION1'   .'ETCLDFB-N'
+  'REGION1'   .'ETCLEARNO-E'
+  'REGION1'   .'ETCLECAMD-E'
+  'REGION1'   .'ETCLE-CCS-N'
+  'REGION1'   .'ETCLEDUVH-E'
+  'REGION1'   .'ETCLEGROO-E'
+  'REGION1'   .'ETCLEHEND-E'
+  'REGION1'   .'ETCLEKELB-E'
+  'REGION1'   .'ETCLEKEND-E'
+  'REGION1'   .'ETCLEKOMA-E'
+  'REGION1'   .'ETCLEKRIE-E'
+  'REGION1'   .'ETCLEKUSI-N'
+  'REGION1'   .'ETCLELETH-E'
+  'REGION1'   .'ETCLEMAJD-E'
+  'REGION1'   .'ETCLEMAJW-E'
+  'REGION1'   .'ETCLEMATI-E'
+  'REGION1'   .'ETCLEMATL-E'
+  'REGION1'   .'ETCLEMEDU-N'
+  'REGION1'   .'ETCLETUTU-E'
+  'REGION1'   .'ETCLEWATE-N'
+  'REGION1'   .'ETGASENSI-N'
+  'REGION1'   .'ETGASENSS-N'
+  'REGION1'   .'ETGICCC-CCS-N'
+  'REGION1'   .'ETGICCC-N'
+  'REGION1'   .'ETGICEN-N'
+  'REGION1'   .'ETGICGT-N'
+  'REGION1'   .'ETHGNGT-N'
+  'REGION1'   .'ETNUC-N'
+  'REGION1'   .'ETODSGT-E'
+  'REGION1'   .'ETODSGT-N'
+  'REGION1'   .'ETRANS'
+  'REGION1'   .'ETRANSDUM'
+  'REGION1'   .'XAGRELC'
+  'REGION1'   .'XCOMELC'
+  'REGION1'   .'XICPELC'
+  'REGION1'   .'XIFAELC'
+  'REGION1'   .'XIFBELC'
+  'REGION1'   .'XIISELC'
+  'REGION1'   .'XIMIELC'
+  'REGION1'   .'XINDELC'
+  'REGION1'   .'XINFELC'
+  'REGION1'   .'XINMELC'
+  'REGION1'   .'XIOTELC'
+  'REGION1'   .'XIPPELC'
+  'REGION1'   .'XRESELC'
+  'REGION1'   .'XTRAELC'
+  'REGION1'   .'XUPSELC'
+/;
+SET PRC_IRE /
+  'REGION1'   .'MIN_FLAB-M'
+  'REGION1'   .'MIN_FLAB-P'
+  'REGION1'   .'MIN_FLAB-S'
+  'REGION1'   .'MIN_FLAB-T'
+  'REGION1'   .'PEXELC'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'EP_FLAB-M'.'PJ'
+  'REGION1'.'EP_FLAB-P'.'PJ'
+  'REGION1'.'EP_FLAB-S'.'PJ'
+  'REGION1'.'EP_FLAB-T'.'PJ'
+  'REGION1'.'EPTSTO-E'.'PJ'
+  'REGION1'.'EPTSTO-N'.'PJ'
+  'REGION1'.'ERBIG-N'.'PJ'
+  'REGION1'.'ERBIO-N'.'PJ'
+  'REGION1'.'ERHYD-E'.'PJ'
+  'REGION1'.'ERHYDGIW-I'.'PJ'
+  'REGION1'.'ERHYD-I'.'PJ'
+  'REGION1'.'ERHYD-N'.'PJ'
+  'REGION1'.'ERSOLPCF-N'.'PJ'
+  'REGION1'.'ERSOLPCT-N'.'PJ'
+  'REGION1'.'ERSOLPRC-N'.'PJ'
+  'REGION1'.'ERSOLPRI-N'.'PJ'
+  'REGION1'.'ERSOLPRR-N'.'PJ'
+  'REGION1'.'ERSOLTC09-N'.'PJ'
+  'REGION1'.'ERWNDH-N'.'PJ'
+  'REGION1'.'ESTSUTL'.'PJ'
+  'REGION1'.'ETCLDFB-N'.'PJ'
+  'REGION1'.'ETCLEARNO-E'.'PJ'
+  'REGION1'.'ETCLECAMD-E'.'PJ'
+  'REGION1'.'ETCLE-CCS-N'.'PJ'
+  'REGION1'.'ETCLEDUVH-E'.'PJ'
+  'REGION1'.'ETCLEGROO-E'.'PJ'
+  'REGION1'.'ETCLEHEND-E'.'PJ'
+  'REGION1'.'ETCLEKELB-E'.'PJ'
+  'REGION1'.'ETCLEKEND-E'.'PJ'
+  'REGION1'.'ETCLEKOMA-E'.'PJ'
+  'REGION1'.'ETCLEKRIE-E'.'PJ'
+  'REGION1'.'ETCLEKUSI-N'.'PJ'
+  'REGION1'.'ETCLELETH-E'.'PJ'
+  'REGION1'.'ETCLEMAJD-E'.'PJ'
+  'REGION1'.'ETCLEMAJW-E'.'PJ'
+  'REGION1'.'ETCLEMATI-E'.'PJ'
+  'REGION1'.'ETCLEMATL-E'.'PJ'
+  'REGION1'.'ETCLEMEDU-N'.'PJ'
+  'REGION1'.'ETCLEPFSI-E'.'PJ'
+  'REGION1'.'ETCLEPFSS-E'.'PJ'
+  'REGION1'.'ETCLETUTU-E'.'PJ'
+  'REGION1'.'ETCLEWATE-N'.'PJ'
+  'REGION1'.'ETGASENSI-N'.'PJ'
+  'REGION1'.'ETGASENSS-N'.'PJ'
+  'REGION1'.'ETGICCC-CCS-N'.'PJ'
+  'REGION1'.'ETGICCC-N'.'PJ'
+  'REGION1'.'ETGICEN-N'.'PJ'
+  'REGION1'.'ETGICGT-N'.'PJ'
+  'REGION1'.'ETHGNGT-N'.'PJ'
+  'REGION1'.'ETNUC-E'.'PJ'
+  'REGION1'.'ETNUC-N'.'PJ'
+  'REGION1'.'ETODSGT-E'.'PJ'
+  'REGION1'.'ETODSGT-N'.'PJ'
+  'REGION1'.'ETRANS'.'PJ'
+  'REGION1'.'ETRANSDUM'.'PJ'
+  'REGION1'.'MIN_FLAB-M'.'PJ'
+  'REGION1'.'MIN_FLAB-P'.'PJ'
+  'REGION1'.'MIN_FLAB-S'.'PJ'
+  'REGION1'.'MIN_FLAB-T'.'PJ'
+  'REGION1'.'MINCSARNOVRS'.'PJ'
+  'REGION1'.'MINCSCAMDVRS'.'PJ'
+  'REGION1'.'MINCSDUVHS32'.'PJ'
+  'REGION1'.'MINCSDUVHVRS'.'PJ'
+  'REGION1'.'MINCSGROOVRS'.'PJ'
+  'REGION1'.'MINCSHENDVRS'.'PJ'
+  'REGION1'.'MINCSKENDS32'.'PJ'
+  'REGION1'.'MINCSKENDVRS'.'PJ'
+  'REGION1'.'MINCSKOMAVRS'.'PJ'
+  'REGION1'.'MINCSKRIESER'.'PJ'
+  'REGION1'.'MINCSKRIEVRS'.'PJ'
+  'REGION1'.'MINCSKUSINLG'.'PJ'
+  'REGION1'.'MINCSKUSIVRS'.'PJ'
+  'REGION1'.'MINCSLETHSER'.'PJ'
+  'REGION1'.'MINCSMAJUVRS'.'PJ'
+  'REGION1'.'MINCSMATIEXX'.'PJ'
+  'REGION1'.'MINCSMATLEXX'.'PJ'
+  'REGION1'.'MINCSMATLVRS'.'PJ'
+  'REGION1'.'MINCSMEDUEXX'.'PJ'
+  'REGION1'.'MINCSTUTUSER'.'PJ'
+  'REGION1'.'MINCSTUTUVRS'.'PJ'
+  'REGION1'.'MINCSWATEVRS'.'PJ'
+  'REGION1'.'PEXELC'.'PJ'
+  'REGION1'.'XAGRELC'.'PJ'
+  'REGION1'.'XCOMELC'.'PJ'
+  'REGION1'.'XICPELC'.'PJ'
+  'REGION1'.'XIFAELC'.'PJ'
+  'REGION1'.'XIFBELC'.'PJ'
+  'REGION1'.'XIISELC'.'PJ'
+  'REGION1'.'XIMIELC'.'PJ'
+  'REGION1'.'XINDELC'.'PJ'
+  'REGION1'.'XINFELC'.'PJ'
+  'REGION1'.'XINMELC'.'PJ'
+  'REGION1'.'XIOTELC'.'PJ'
+  'REGION1'.'XIPPELC'.'PJ'
+  'REGION1'.'XPWROHF'.'PJ'
+  'REGION1'.'XPWROKE'.'PJ'
+  'REGION1'.'XRESELC'.'PJ'
+  'REGION1'.'XTRAELC'.'PJ'
+  'REGION1'.'XUPSELC'.'PJ'
+/;
+PARAMETER APRC_VINT /
+  'REGION1'                 .'ERWNDH-N'                   1
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'ERSOLPCF-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPCT-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPRC-N'              .'COMELC'                     1
+  'REGION1'                 .'ERSOLPRI-N'              .'INDELC'                     1
+  'REGION1'                 .'ERSOLPRR-N'              .'RESELC'                     1
+  'REGION1'                 .'ERSOLTC09-N'             .'ELCC'                       1
+  'REGION1'                 .'ERWNDH-N'                .'ELCC'                       1
+  'REGION1'                 .'ESTSUTL'                 .'ELCC'                       1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'ERSOLPCF-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPCT-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPRC-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPRI-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLPRR-N'              .'PWRSOL'                     1
+  'REGION1'                 .'ERSOLTC09-N'             .'PWRSOL'                     1
+  'REGION1'                 .'ERWNDH-N'                .'PWRWND'                     1
+  'REGION1'                 .'ESTSUTL'                 .'ELCC'                       1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'ERSOLPCF-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPCT-N'              .'ELCC'                       1
+  'REGION1'                 .'ERSOLPRC-N'              .'COMELC'                     1
+  'REGION1'                 .'ERSOLPRI-N'              .'INDELC'                     1
+  'REGION1'                 .'ERSOLPRR-N'              .'RESELC'                     1
+  'REGION1'                 .'ERSOLTC09-N'             .'ELCC'                       1
+  'REGION1'                 .'ERWNDH-N'                .'ELCC'                       1
+  'REGION1'                 .'ESTSUTL'                 .'ELCC'                       1
+/;
+       TABLE ANCAP_AF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ERSOLPCF-N'              .'S1D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCF-N'              .'S1D1B2'                  .'UP'                               .55921                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLPCF-N'              .'S1D1B3'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCF-N'              .'S2D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCF-N'              .'S2D1B2'                  .'UP'                               .29684                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLPCF-N'              .'S2D1B3'                  .'UP'                               .63511                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLPCF-N'              .'S2D1B4'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCF-N'              .'S2D1B5'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCT-N'              .'S1D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCT-N'              .'S1D1B2'                  .'UP'                               .62631                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLPCT-N'              .'S1D1B3'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCT-N'              .'S2D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCT-N'              .'S2D1B2'                  .'UP'                               .33246                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLPCT-N'              .'S2D1B3'                  .'UP'                               .71133                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLPCT-N'              .'S2D1B4'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPCT-N'              .'S2D1B5'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRC-N'              .'S1D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRC-N'              .'S1D1B2'                  .'UP'                               .447368                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRC-N'              .'S1D1B3'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRC-N'              .'S2D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRC-N'              .'S2D1B2'                  .'UP'                               .237472                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRC-N'              .'S2D1B3'                  .'UP'                               .508088                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRC-N'              .'S2D1B4'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRC-N'              .'S2D1B5'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRI-N'              .'S1D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRI-N'              .'S1D1B2'                  .'UP'                               .447368                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRI-N'              .'S1D1B3'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRI-N'              .'S2D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRI-N'              .'S2D1B2'                  .'UP'                               .237472                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRI-N'              .'S2D1B3'                  .'UP'                               .508088                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRI-N'              .'S2D1B4'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRI-N'              .'S2D1B5'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRR-N'              .'S1D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRR-N'              .'S1D1B2'                  .'UP'                               .447368                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRR-N'              .'S1D1B3'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRR-N'              .'S2D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRR-N'              .'S2D1B2'                  .'UP'                               .237472                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRR-N'              .'S2D1B3'                  .'UP'                               .508088                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'ERSOLPRR-N'              .'S2D1B4'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLPRR-N'              .'S2D1B5'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLTC09-N'             .'S1D1B1'                  .'UP'                               .01872                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLTC09-N'             .'S1D1B2'                  .'UP'                               .75648                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLTC09-N'             .'S1D1B3'                  .'UP'                               .73099                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLTC09-N'             .'S2D1B1'                  .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ERSOLTC09-N'             .'S2D1B2'                  .'UP'                               .31045                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLTC09-N'             .'S2D1B3'                  .'UP'                               .92279                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLTC09-N'             .'S2D1B4'                  .'UP'                               .85089                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERSOLTC09-N'             .'S2D1B5'                  .'UP'                               .26989                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'ERWNDH-N'                .'S1D1B1'                  .'UP'                               .3857974250672                                                                                                                  .41309                                                                                                                                                          .43954                                                                                                                                                          .46009                          .47476                          
+  'REGION1'                 .'ERWNDH-N'                .'S1D1B2'                  .'UP'                               .2852061011976                                                                                                                  .30538                                                                                                                                                          .32493                                                                                                                                                          .34013                          .35097                          
+  'REGION1'                 .'ERWNDH-N'                .'S1D1B3'                  .'UP'                               .4169469312817                                                                                                                  .44644                                                                                                                                                          .47503                                                                                                                                                          .49724                          .51309                          
+  'REGION1'                 .'ERWNDH-N'                .'S2D1B1'                  .'UP'                               .4094126086565                                                                                                                  .43838                                                                                                                                                          .46644                                                                                                                                                          .48826                          .50382                          
+  'REGION1'                 .'ERWNDH-N'                .'S2D1B2'                  .'UP'                               .3557078805909                                                                                                                  .38088                                                                                                                                                          .40526                                                                                                                                                          .42422                          .43774                          
+  'REGION1'                 .'ERWNDH-N'                .'S2D1B3'                  .'UP'                               .2980784293328                                                                                                                  .31917                                                                                                                                                          .3396                                                                                                                                                           .35549                          .36682                          
+  'REGION1'                 .'ERWNDH-N'                .'S2D1B4'                  .'UP'                               .3704232052618                                                                                                                  .39663                                                                                                                                                          .42203                                                                                                                                                          .44177                          .45585                          
+  'REGION1'                 .'ERWNDH-N'                .'S2D1B5'                  .'UP'                               .4002071751830                                                                                                                  .42852                                                                                                                                                          .45596                                                                                                                                                          .47729                          .4925                           
+;
+       TABLE ANCAP_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ERSOLPCF-N'                       28748.21581769                                  15745.22123893                  13872.10438167                                  10804.58938053                                                                  10142.13628318                                                                  9528.180530973                                                                                                                                                  8464.334513274                  7477.877876106                  
+  'REGION1'                 .'ERSOLPCT-N'                       30646.6829                                      16785                           14788.18674650                                  11518.1                                                                         10811.9                                                                         10157.4                                                                                                                                                         9023.3                          7971.7                          
+  'REGION1'                 .'ERSOLPRC-N'                       33347.93034853                                  18264.45663716                  16091.64108274                                  12533.32368141                                                                  11764.87808849                                                                  11052.68941592                                                                                                                                                  9818.628035398                  8674.338336283                  
+  'REGION1'                 .'ERSOLPRI-N'                       33347.93034853                                  18264.45663716                  16091.64108274                                  12533.32368141                                                                  11764.87808849                                                                  11052.68941592                                                                                                                                                  9818.628035398                  8674.338336283                  
+  'REGION1'                 .'ERSOLPRR-N'                       50309.37768097                                  27554.13716814                  24276.18266792                                  18908.03141592                                                                  17748.73849557                                                                  16674.31592920                                                                                                                                                  14812.58539823                  13086.28628318                  
+  'REGION1'                 .'ERSOLTC09-N'                                                                                                      57809.37719596                                  52630.53556367                                                                  43999.13284317                                                                  35367.73012268                                                                                                                                                  35367.73012268                  35367.73012268                  
+  'REGION1'                 .'ERWNDH-N'                         19786.1982                                      19208                           15312.53984950                                  13750                                                                           13630.1                                                                         13511.3                                                                                                                                                         13275.9                         13044.9                         
+  'REGION1'                 .'ESTSUTL'                                                                                                          27165.06384011                                  20309.8105                                                                      14178.547                                                                       9963.3033                                                                                                                                                       9196.8953                       9196.8953                       
+;

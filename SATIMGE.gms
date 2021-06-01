@@ -121,6 +121,8 @@ SETS
 * Emissions sets
   CO2SET(COM)                    Sectoral emissions
 
+* Externality Commodities
+  COMEXT(COM)                    Externality Commodities
 
 * Results
   mFuels                         Map for Fuels set
@@ -171,7 +173,7 @@ SETS
 *FH*----------------------------------------------------------------------------
  MFHHT(FH,H,AY) reverse mapping (TIMES to CGE) for households
 
-  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, Marginals, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
+  Indicators SATIM indicators /Activity, Capacity, NewCapacity, CapFac, FlowIn, FlowOut, AnnInvCost, FOM, VOM, FuelCosts, Marginals, Levies, ExternalityCosts, CO2Tax, CO2, CH4, N2O, CF4, C2F6, CO2eq, FlowInMt, Investment,Price, GVA, Population, Consumption, Employment-p, Employment-m,Employment-s,Employment-t,PalmaRatio,20-20Ratio,TradeDeficit,Imports,Exports,pkm, tkm/
   Emiss(Indicators) / CO2, CH4, N2O, CF4, C2F6, CO2eq/
   IndicatorsH SATIM Sub-annual indicators /FlowIn, FlowOut, Marginal, Price, Demand/
 
@@ -238,6 +240,7 @@ PARAMETERS
 
   GVA_FS(FS,AY)                  SATIM Sector GVA
   GVA_FS_Start(FS,AY)            SATIM Sector GVA used to first iteration of linked model
+  QA_FS(FS,AY)                   SATIM Sector QA (used for setting absolute levels for ica for new sectors)
   POP(AY)                        Population Projection to be read from drivers workbook
   STFHPOP(AY)                    sum of population CGE
   POP_GR(AY)                     Population growth to be read from drivers workbook
@@ -384,7 +387,7 @@ LOOP(TS_HOURLY,
 $call   "gdxxrw i=SetsAndMaps\SetsAndMaps.xlsm o=SetsAndMaps\SetsMaps index=index!a6 checkdate"
 $gdxin  SetsAndMaps\SetsMaps.gdx
 $loaddc PRC COM S TS_DAYNITE TS_WEEKLY TS_SEASON DEM1 UC_N FSATIM FS FH COALSUP PRCH TCG
-$load MFHH MHPRCH MCTCG MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector
+$load MFHH MHPRCH MCTCG MFSA MPRCFS MPRCFS2 mCOMC mCOMF Sector SubSector SubSubSector MPRCSector MPRCSubSector MPRCSubSubSector COMEXT
 $load PassengerOccupancy  FreightLoad CoalCV
 
 
@@ -572,7 +575,7 @@ $include KLEM\KLEM_Report.inc
 
 * generate report for run, which can then be combined later
 REPORT_RUN(PRC,COM,TC,Indicators) = REPORT(PRC,COM,TC,RUN,Indicators);
-put_utilities Scen 'gdxout' / RUN.TL:20;
+put_utilities Scen 'gdxout' / RUN.TL:30;
 execute_unload REPORT_RUN
 
 );
