@@ -1,0 +1,276 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/06/18	12:21:52 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWRFGDB3	FGD retrofits Scenario B last 3 years	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	PWRFGDARNO	FGD DummyComm for ARNOT Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDCAMD	FGD DummyComm for CAMDEN Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDDUVH	FGD DummyComm for DUVHA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDGROO	FGD DummyComm for GROOTVLEI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDHEND	FGD DummyComm for HENDRINA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDKEND	FGD DummyComm for KENDAL Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDKOMA	FGD DummyComm for KOMATI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDKRIE	FGD DummyComm for KRIEL Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDLETH	FGD DummyComm for LETHABO Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMAJD	FGD DummyComm for MAJUBA DRY Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMAJW	FGD DummyComm for MAJUBA WET Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMATI	FGD DummyComm for MATIMBA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMATL	FGD DummyComm for MATLA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMEDU	FGD DummyComm for MEDUPI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDTUTU	FGD DummyComm for TUTUKA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,DAYNITE	
+	T	FGDARNO-E	FGD for ARNOT	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDCAMD-E	FGD for CAMDEN	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDDUVH-E	FGD for DUVHA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDGROO-E	FGD for GROOTVLEI	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDHEND-E	FGD for HENDRINA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDKEND-E	FGD for KENDAL	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDKOMA-E	FGD for KOMATI	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDKRIE-E	FGD for KRIEL	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDLETH-E	FGD for LETHABO	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMAJD-E	FGD for MAJUBA DRY	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMAJW-E	FGD for MAJUBA WET	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMATI-E	FGD for MATIMBA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMATL-E	FGD for MATLA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMEDU-N	FGD for MEDUPI	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDTUTU-E	FGD for TUTUKA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_COST	FGDLETH-E	-	-	-	-	-	0	3.02721363648623	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	FGDMAJD-E	-	-	-	-	-	0	3.02721363648623	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	FGDMAJW-E	-	-	-	-	-	0	3.02721363648623	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	FGDMATI-E	-	-	-	-	-	0	3.02721363648623	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	FGDMEDU-N	-	-	-	-	-	0	3.02721363648623	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLELETH-E	PWRSOXS	PWRCLELETH	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.868	0.06514	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJD-E	PWRSOXS	PWRCLEMAJU	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.868	0.06514	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMAJW-E	PWRSOXS	PWRCLEMAJU	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.868	0.06514	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMATI-E	PWRSOXS	PWRCLEMATI	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.868	0.06514	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETCLEMEDU-N	PWRSOXS	PWRCLEMEDU	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.93	0.06514	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	FGDLETH-E	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3.558	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	FGDMAJD-E	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.833	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	FGDMAJW-E	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2.01	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	FGDMATI-E	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	3.69	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	FGDMEDU-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4.33	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	FGDLETH-E	-	-	-	-	-	0	5867.89838337182	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	FGDMAJD-E	-	-	-	-	-	0	5867.89838337182	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	FGDMAJW-E	-	-	-	-	-	0	5867.89838337182	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	FGDMATI-E	-	-	-	-	-	0	5867.89838337182	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	FGDMEDU-N	-	-	-	-	-	0	5867.89838337182	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	FGDLETH-E	-	-	-	-	-	0	196.520754106319	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	FGDMAJD-E	-	-	-	-	-	0	196.520754106319	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	FGDMAJW-E	-	-	-	-	-	0	196.520754106319	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	FGDMATI-E	-	-	-	-	-	0	196.520754106319	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	FGDMEDU-N	-	-	-	-	-	0	196.520754106319	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDARNO-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDCAMD-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDDUVH-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDGROO-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDHEND-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDKEND-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDKOMA-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDKRIE-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDLETH-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDMAJD-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDMAJW-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDMATI-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDMATL-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDMEDU-N	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	FGDTUTU-E	-	-	-	-	-	0	-2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	FGDLETH-E	-	-	-	-	-	0	11	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	FGDMAJD-E	-	-	-	-	-	0	16	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	FGDMAJW-E	-	-	-	-	-	0	21	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	FGDMATI-E	-	-	-	-	-	0	11	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	FGDMEDU-N	-	-	-	-	-	0	30	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEARNO-E	-	PWRFGDARNO	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLECAMD-E	-	PWRFGDCAMD	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEDUVH-E	-	PWRFGDDUVH	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEGROO-E	-	PWRFGDGROO	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEHEND-E	-	PWRFGDHEND	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEKEND-E	-	PWRFGDKEND	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEKOMA-E	-	PWRFGDKOMA	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEKRIE-E	-	PWRFGDKRIE	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLELETH-E	-	PWRFGDLETH	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEMAJD-E	-	PWRFGDMAJD	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEMAJW-E	-	PWRFGDMAJW	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEMATI-E	-	PWRFGDMATI	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEMATL-E	-	PWRFGDMATL	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLEMEDU-N	-	PWRFGDMEDU	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	ETCLETUTU-E	-	PWRFGDTUTU	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ETCLEARNO-E	-	-	-	-	-	0	null	null	null	null	null	null	null	2.232	2.232	2.232	2.232	2.232	2.232	2.232	2.232	1.488	0.744	0.744	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLECAMD-E	-	-	-	-	-	0	null	null	null	null	null	null	null	1.481	1.481	1.481	1.481	1.481	1.481	1.481	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEDUVH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.3	1.15	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEGROO-E	-	-	-	-	-	0	null	null	null	null	null	null	null	0.57	0.57	0.57	0.57	0.57	0.57	0.57	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEHEND-E	-	-	-	-	-	0	null	null	null	null	null	null	null	1.293	1.293	1.293	1.293	1.293	1.0775	0.862	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEKEND-E	-	-	-	-	-	0	null	null	null	null	null	null	null	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	2.56	1.28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEKOMA-E	-	-	-	-	-	0	null	null	null	null	null	null	null	0.41	0.1025	0.1025	0.1025	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEKRIE-E	-	-	-	-	-	0	null	null	null	null	null	null	null	2.85	2.85	2.85	2.85	2.85	2.85	2.85	2.85	2.375	1.9	1.425	0.475	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLELETH-E	-	-	-	-	-	0	null	null	null	null	null	null	null	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	3.558	2.965	1.779	1.186	1.186	0	0	0	0	
+	PRC_RESID	ETCLEMAJD-E	-	-	-	-	-	0	null	null	null	null	null	null	null	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	1.833	0	0	0	
+	PRC_RESID	ETCLEMAJW-E	-	-	-	-	-	0	null	null	null	null	null	null	null	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	2.01	1.34	0	0	
+	PRC_RESID	ETCLEMATI-E	-	-	-	-	-	0	null	null	null	null	null	null	null	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	3.69	2.46	1.845	0	0	0	0	
+	PRC_RESID	ETCLEMATL-E	-	-	-	-	-	0	null	null	null	null	null	null	null	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	3.45	2.3	1.15	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLETUTU-E	-	-	-	-	-	0	null	null	null	null	null	null	null	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	3.51	2.34	1.17	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	RCAP_BND	ETCLEARNO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLECAMD-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEDUVH-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEGROO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEHEND-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEKEND-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEKOMA-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEKRIE-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEKUSI-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLELETH-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEMAJD-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEMAJW-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEMATI-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEMATL-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLEMEDU-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLETUTU-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	ETCLEARNO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLECAMD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEDUVH-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEGROO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEHEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKOMA-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKRIE-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKUSI-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLELETH-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMAJD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMAJW-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMATI-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMATL-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMEDU-N	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLETUTU-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	FGDARNO-E	-	PWRFGDARNO	-	-	-	1	
+	PRC_ACTUNT	FGDCAMD-E	-	PWRFGDCAMD	-	-	-	1	
+	PRC_ACTUNT	FGDDUVH-E	-	PWRFGDDUVH	-	-	-	1	
+	PRC_ACTUNT	FGDGROO-E	-	PWRFGDGROO	-	-	-	1	
+	PRC_ACTUNT	FGDHEND-E	-	PWRFGDHEND	-	-	-	1	
+	PRC_ACTUNT	FGDKEND-E	-	PWRFGDKEND	-	-	-	1	
+	PRC_ACTUNT	FGDKOMA-E	-	PWRFGDKOMA	-	-	-	1	
+	PRC_ACTUNT	FGDKRIE-E	-	PWRFGDKRIE	-	-	-	1	
+	PRC_ACTUNT	FGDLETH-E	-	PWRFGDLETH	-	-	-	1	
+	PRC_ACTUNT	FGDMAJD-E	-	PWRFGDMAJD	-	-	-	1	
+	PRC_ACTUNT	FGDMAJW-E	-	PWRFGDMAJW	-	-	-	1	
+	PRC_ACTUNT	FGDMATI-E	-	PWRFGDMATI	-	-	-	1	
+	PRC_ACTUNT	FGDMATL-E	-	PWRFGDMATL	-	-	-	1	
+	PRC_ACTUNT	FGDMEDU-N	-	PWRFGDMEDU	-	-	-	1	
+	PRC_ACTUNT	FGDTUTU-E	-	PWRFGDTUTU	-	-	-	1	
+	PRC_CAPACT	FGDARNO-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDCAMD-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDDUVH-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDGROO-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDHEND-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDKEND-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDKOMA-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDKRIE-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDLETH-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDMAJD-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDMAJW-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDMATI-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDMATL-E	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDMEDU-N	-	-	-	-	-	31.536	
+	PRC_CAPACT	FGDTUTU-E	-	-	-	-	-	31.536	
+	TOP-IN	ETCLEARNO-E	PWRCLEARNO	-	-	-	-	1	
+	TOP-IN	ETCLEARNO-E	PWRFGDARNO	-	-	-	-	1	
+	TOP-IN	ETCLECAMD-E	PWRCLECAMD	-	-	-	-	1	
+	TOP-IN	ETCLECAMD-E	PWRFGDCAMD	-	-	-	-	1	
+	TOP-IN	ETCLEDUVH-E	PWRCLEDUVH	-	-	-	-	1	
+	TOP-IN	ETCLEDUVH-E	PWRFGDDUVH	-	-	-	-	1	
+	TOP-IN	ETCLEGROO-E	PWRCLEGROO	-	-	-	-	1	
+	TOP-IN	ETCLEGROO-E	PWRFGDGROO	-	-	-	-	1	
+	TOP-IN	ETCLEHEND-E	PWRCLEHEND	-	-	-	-	1	
+	TOP-IN	ETCLEHEND-E	PWRFGDHEND	-	-	-	-	1	
+	TOP-IN	ETCLEKEND-E	PWRCLEKEND	-	-	-	-	1	
+	TOP-IN	ETCLEKEND-E	PWRFGDKEND	-	-	-	-	1	
+	TOP-IN	ETCLEKOMA-E	PWRCLEKOMA	-	-	-	-	1	
+	TOP-IN	ETCLEKOMA-E	PWRFGDKOMA	-	-	-	-	1	
+	TOP-IN	ETCLEKRIE-E	PWRCLEKRIE	-	-	-	-	1	
+	TOP-IN	ETCLEKRIE-E	PWRFGDKRIE	-	-	-	-	1	
+	TOP-IN	ETCLEKUSI-N	PWRCLEKUSI	-	-	-	-	1	
+	TOP-IN	ETCLELETH-E	PWRCLELETH	-	-	-	-	1	
+	TOP-IN	ETCLELETH-E	PWRFGDLETH	-	-	-	-	1	
+	TOP-IN	ETCLEMAJD-E	PWRCLEMAJU	-	-	-	-	1	
+	TOP-IN	ETCLEMAJD-E	PWRFGDMAJD	-	-	-	-	1	
+	TOP-IN	ETCLEMAJW-E	PWRCLEMAJU	-	-	-	-	1	
+	TOP-IN	ETCLEMAJW-E	PWRFGDMAJW	-	-	-	-	1	
+	TOP-IN	ETCLEMATI-E	PWRCLEMATI	-	-	-	-	1	
+	TOP-IN	ETCLEMATI-E	PWRFGDMATI	-	-	-	-	1	
+	TOP-IN	ETCLEMATL-E	PWRCLEMATL	-	-	-	-	1	
+	TOP-IN	ETCLEMATL-E	PWRFGDMATL	-	-	-	-	1	
+	TOP-IN	ETCLEMEDU-N	PWRCLEMEDU	-	-	-	-	1	
+	TOP-IN	ETCLEMEDU-N	PWRFGDMEDU	-	-	-	-	1	
+	TOP-IN	ETCLETUTU-E	PWRCLETUTU	-	-	-	-	1	
+	TOP-IN	ETCLETUTU-E	PWRFGDTUTU	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKUSI-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMEDU-N	PWRSOXS	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	ELCC	-	-	-	-	1	
+	TOP-OUT	FGDARNO-E	PWRFGDARNO	-	-	-	-	1	
+	TOP-OUT	FGDCAMD-E	PWRFGDCAMD	-	-	-	-	1	
+	TOP-OUT	FGDDUVH-E	PWRFGDDUVH	-	-	-	-	1	
+	TOP-OUT	FGDGROO-E	PWRFGDGROO	-	-	-	-	1	
+	TOP-OUT	FGDHEND-E	PWRFGDHEND	-	-	-	-	1	
+	TOP-OUT	FGDKEND-E	PWRFGDKEND	-	-	-	-	1	
+	TOP-OUT	FGDKOMA-E	PWRFGDKOMA	-	-	-	-	1	
+	TOP-OUT	FGDKRIE-E	PWRFGDKRIE	-	-	-	-	1	
+	TOP-OUT	FGDLETH-E	PWRFGDLETH	-	-	-	-	1	
+	TOP-OUT	FGDMAJD-E	PWRFGDMAJD	-	-	-	-	1	
+	TOP-OUT	FGDMAJW-E	PWRFGDMAJW	-	-	-	-	1	
+	TOP-OUT	FGDMATI-E	PWRFGDMATI	-	-	-	-	1	
+	TOP-OUT	FGDMATL-E	PWRFGDMATL	-	-	-	-	1	
+	TOP-OUT	FGDMEDU-N	PWRFGDMEDU	-	-	-	-	1	
+	TOP-OUT	FGDTUTU-E	PWRFGDTUTU	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
