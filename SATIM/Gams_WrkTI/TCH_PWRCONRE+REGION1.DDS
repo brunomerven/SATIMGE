@@ -1,0 +1,32 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+  'UCNCAP_PV'                'Max NCAP PV                                       '
+/;
+SET UC_N_UCRT /
+  'REGION1'   .'UCNCAP_PV'
+/;
+SET PRC /
+  'ERWNDH-N'                 'Wind                                              '
+/;
+SET PRC_ELE /
+  'REGION1'   .'ERWNDH-N'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'ERWNDH-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ERWNDH-N'.'PJ'
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ERWNDH-N'                .'UP'                                                                                                                                                               1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             3.2                                             6.4             8               4.8                             
+;
+       TABLE AUC_RHSRT
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCNCAP_PV'               .'UP'                                                                                                                                                               1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             1.6             3.2                                             6.4             8               4.8                             
+;

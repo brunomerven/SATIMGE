@@ -182,7 +182,7 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * recalculate intensity for energy sectors, where GVA not suitable
  EIntensity_FS('elec',C,TC) = FLOW_IN_FSFuels('elec',C,TC)/ELC_FLOW(RUN,TC);
  EIntensity_FS('hydr',C,TC)$FLOW_OUT_FSFuels('hydr','chydr',TC) = FLOW_IN_FSFuels('hydr',C,TC)/FLOW_OUT_FSFuels('hydr','chydr',TC);
- EIntensity_FS('petr',C,TC) = FLOW_IN_FSFuels('petr',C,TC)/OIL_FLOW(RUN,TC);
+ EIntensity_FS('petr',C,TC)$OIL_FLOW(RUN,TC) = FLOW_IN_FSFuels('petr',C,TC)/OIL_FLOW(RUN,TC);
 
 * BM!!! need to create QA_FSStart
 * EIntensityQA_FS(FS,'chydr',TC)$FLOW_IN_FSFuels(FS,'chydr',TC) = FLOW_IN_FSFuels(FS,'chydr',TC)/QA_FS(FS,TC);

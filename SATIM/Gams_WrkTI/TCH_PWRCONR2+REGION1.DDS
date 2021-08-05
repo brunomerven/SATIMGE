@@ -1,0 +1,63 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+  'UCNCAP_PV'                'Max NCAP PV                                       '
+/;
+SET UC_N_UCRT /
+  'REGION1'   .'UCNCAP_PV'
+/;
+SET PRC /
+  'ERSOLPCF-N'               'Solar PV Fixed                                    '
+  'ERSOLPCT-N'               'Solar PV tracking                                 '
+  'ERSOLPRC-N'               'Solar PV rooftop commercial                       '
+  'ERSOLPRI-N'               'Solar PV rooftop Industry                         '
+  'ERSOLPRR-N'               'Solar PV rooftop residential                      '
+  'ERSOLTC09-N'              'Solar Central Receiver 09 hrs storage             '
+  'ERWNDH-N'                 'Wind                                              '
+/;
+SET PRC_ELE /
+  'REGION1'   .'ERSOLPCF-N'
+  'REGION1'   .'ERSOLPCT-N'
+  'REGION1'   .'ERSOLPRC-N'
+  'REGION1'   .'ERSOLPRI-N'
+  'REGION1'   .'ERSOLPRR-N'
+  'REGION1'   .'ERSOLTC09-N'
+  'REGION1'   .'ERWNDH-N'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'ERSOLPCF-N'
+  'REGION1'   .'ERSOLPCT-N'
+  'REGION1'   .'ERSOLPRC-N'
+  'REGION1'   .'ERSOLPRI-N'
+  'REGION1'   .'ERSOLPRR-N'
+  'REGION1'   .'ERSOLTC09-N'
+  'REGION1'   .'ERWNDH-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ERSOLPCF-N'.'PJ'
+  'REGION1'.'ERSOLPCT-N'.'PJ'
+  'REGION1'.'ERSOLPRC-N'.'PJ'
+  'REGION1'.'ERSOLPRI-N'.'PJ'
+  'REGION1'.'ERSOLPRR-N'.'PJ'
+  'REGION1'.'ERSOLTC09-N'.'PJ'
+  'REGION1'.'ERWNDH-N'.'PJ'
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ERWNDH-N'                .'UP'                                                                                                                                                               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+;
+       TABLE AUC_NCAP
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCNCAP_PV'               .'LHS'                     .'ERSOLPRC-N'                       1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+  'REGION1'                 .'UCNCAP_PV'               .'LHS'                     .'ERSOLPRI-N'                       1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+  'REGION1'                 .'UCNCAP_PV'               .'LHS'                     .'ERSOLPRR-N'                       1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+  'REGION1'                 .'UCNCAP_PV'               .'LHS'                     .'ERSOLTC09-N'                      1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1
+;
+       TABLE AUC_RHSRT
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCNCAP_PV'               .'UP'                                                                                                                                                               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               2                                               4               5               3                               
+;

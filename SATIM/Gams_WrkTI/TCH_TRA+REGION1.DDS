@@ -656,81 +656,81 @@ PARAMETER APRC_NOFF /
   'REGION1'                 .'TADJETOKE-N'             .'BOH'                     .'2012'                       1
   'REGION1'                 .'TAIJETOKE-N'             .'BOH'                     .'2012'                       1
   'REGION1'                 .'TAOAGOAG-N'              .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TFHCV1ELC-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV1GAS-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV1ELC-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV1GAS-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV1ODS-N'             .'BOH'                     .'2017'                       1
   'REGION1'                 .'TFHCV1OGS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV2ELC-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV2GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV2HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV2ELC-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV2GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV2HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV2ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV3ELC-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV3GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV3HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV3ELC-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV3GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV3HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV3ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV4GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV4HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV4GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV4HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV4ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV5GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV5HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV5GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV5HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV5ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV6GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV6HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV6GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV6HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV6ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV7GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV7HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV7GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV7HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV7ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV8GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV8HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV8GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV8HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV8ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFHCV9GAS-N'             .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFHCV9HGN-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFHCV9GAS-N'             .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFHCV9HGN-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFHCV9ODS-N'             .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFLCVELC-N'              .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFLCVGAS-N'              .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TFLCVODSH-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFLCVELC-N'              .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFLCVGAS-N'              .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFLCVODSH-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFLCVODS-N'              .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TFLCVOGSH-N'             .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFLCVOGSH-N'             .'BOH'                     .'2024'                       1
   'REGION1'                 .'TFLCVOGS-N'              .'BOH'                     .'2017'                       1
   'REGION1'                 .'TFPIPELC-N'              .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TFRCOELC-N'              .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TFRCOGAS-N'              .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TFREXELC-N'              .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TFROTELC-N'              .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TPPRCARBGS-N'            .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TFRCOELC-N'              .'BOH'                     .'2014'                       1
+  'REGION1'                 .'TFRCOGAS-N'              .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TFREXELC-N'              .'BOH'                     .'2014'                       1
+  'REGION1'                 .'TFROTELC-N'              .'BOH'                     .'2014'                       1
+  'REGION1'                 .'TPPRCARBGS-N'            .'BOH'                     .'2024'                       1
   'REGION1'                 .'TPPRCARELC-N'            .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TPPRCARGAS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPRCARHGNF-N'           .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPRCARODSH-N'           .'BOH'                     .'2017'                       1
+  'REGION1'                 .'TPPRCARGAS-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPRCARHGNF-N'           .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPRCARODSH-N'           .'BOH'                     .'2079'                       1
   'REGION1'                 .'TPPRCARODS-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPRCAROGSH-N'           .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPRCAROGS-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPRMOTELC-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPRMOTOGS-N'            .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TPPRSUVBGS-N'            .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TPPRSUVBGS-N'            .'BOH'                     .'2024'                       1
   'REGION1'                 .'TPPRSUVELC-N'            .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TPPRSUVGAS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPRSUVHGNF-N'           .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPRSUVODSH-N'           .'BOH'                     .'2017'                       1
+  'REGION1'                 .'TPPRSUVGAS-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPRSUVHGNF-N'           .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPRSUVODSH-N'           .'BOH'                     .'2079'                       1
   'REGION1'                 .'TPPRSUVODS-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPRSUVOGSH-N'           .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPRSUVOGS-N'            .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TPPUBRTBGS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUBRTELC-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUBRTGAS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUBRTHGNF-N'           .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TPPUBRTBGS-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUBRTELC-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUBRTGAS-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUBRTHGNF-N'           .'BOH'                     .'2024'                       1
   'REGION1'                 .'TPPUBRTODS-N'            .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TPPUBUSBGS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUBUSELC-N'            .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TPPUBUSBGS-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUBUSELC-N'            .'BOH'                     .'2024'                       1
   'REGION1'                 .'TPPUBUSGAS-N'            .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TPPUBUSHGNF-N'           .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TPPUBUSHGNF-N'           .'BOH'                     .'2024'                       1
   'REGION1'                 .'TPPUBUSODS-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPUGATELC-N'            .'BOH'                     .'2012'                       1
-  'REGION1'                 .'TPPUMBTBGS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUMBTELC-N'            .'BOH'                     .'2017'                       1
-  'REGION1'                 .'TPPUMBTGAS-N'            .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUMBTHGNF-N'           .'BOH'                     .'2025'                       1
-  'REGION1'                 .'TPPUMBTODSH-N'           .'BOH'                     .'2025'                       1
+  'REGION1'                 .'TPPUMBTBGS-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUMBTELC-N'            .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUMBTGAS-N'            .'BOH'                     .'2017'                       1
+  'REGION1'                 .'TPPUMBTHGNF-N'           .'BOH'                     .'2024'                       1
+  'REGION1'                 .'TPPUMBTODSH-N'           .'BOH'                     .'2024'                       1
   'REGION1'                 .'TPPUMBTODS-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPUMBTOGS-N'            .'BOH'                     .'2017'                       1
   'REGION1'                 .'TPPUMERELC-N'            .'BOH'                     .'2012'                       1
@@ -1179,7 +1179,17 @@ PARAMETER ATOP_IN /
 /;
 PARAMETER ATOP_OUT /
   'REGION1'                 .'TADJETOKE-E'             .'TADJET'                     1
+  'REGION1'                 .'TADJETOKE-E'             .'TRACH4S'                    1
+  'REGION1'                 .'TADJETOKE-E'             .'TRACO2S'                    1
+  'REGION1'                 .'TADJETOKE-E'             .'TRAN2OS'                    1
+  'REGION1'                 .'TADJETOKE-E'             .'TRANOXS'                    1
+  'REGION1'                 .'TADJETOKE-E'             .'TRASOXS'                    1
   'REGION1'                 .'TADJETOKE-N'             .'TADJET'                     1
+  'REGION1'                 .'TADJETOKE-N'             .'TRACH4S'                    1
+  'REGION1'                 .'TADJETOKE-N'             .'TRACO2S'                    1
+  'REGION1'                 .'TADJETOKE-N'             .'TRAN2OS'                    1
+  'REGION1'                 .'TADJETOKE-N'             .'TRANOXS'                    1
+  'REGION1'                 .'TADJETOKE-N'             .'TRASOXS'                    1
   'REGION1'                 .'TAIJETOKE-E'             .'TAIJET'                     1
   'REGION1'                 .'TAIJETOKE-N'             .'TAIJET'                     1
   'REGION1'                 .'TAOAGOAG-E'              .'TAOAG'                      1
@@ -1448,6 +1458,19 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'TPPUMBT'                          6.173218671619                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'TPPUMER'                          15.8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
   'REGION1'                 .'TSHFO'                            4.509                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+;
+       TABLE AFLO_EMIS
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'TADJETOKE-E'             .'TRACH4S'                 .'TADJET'                  .'ANNUAL'                           .003                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'TADJETOKE-E'             .'TRACO2S'                 .'TADJET'                  .'ANNUAL'                           72.9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'TADJETOKE-E'             .'TRAN2OS'                 .'TADJET'                  .'ANNUAL'                           .0006                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'TADJETOKE-E'             .'TRANOXS'                 .'TADJET'                  .'ANNUAL'                           .2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TADJETOKE-E'             .'TRASOXS'                 .'TADJET'                  .'ANNUAL'                           .046                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'TADJETOKE-N'             .'TRACH4S'                 .'TADJET'                  .'ANNUAL'                           .003                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'TADJETOKE-N'             .'TRACO2S'                 .'TADJET'                  .'ANNUAL'                           72.9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'TADJETOKE-N'             .'TRAN2OS'                 .'TADJET'                  .'ANNUAL'                           .0006                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'TADJETOKE-N'             .'TRANOXS'                 .'TADJET'                  .'ANNUAL'                           .2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TADJETOKE-N'             .'TRASOXS'                 .'TADJET'                  .'ANNUAL'                           .046                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 ;
        TABLE ANCAP_AF
                                                                                                                 0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            

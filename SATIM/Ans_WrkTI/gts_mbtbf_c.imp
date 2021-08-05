@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/05/06	17:32:01
+Creation Date:	2021/06/09	12:16:16
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
 Scenario:	GTS_MBTBF_C	UC: Bi-Fuel (BF) Minibus Taxis (MBT)  (NGas/Petrol) by 2030 NDC Central	UC = user constraint{/n}10% of minibus taxi fleet converted to bi-fueled (CNG:Petrol) by 2030 reaching 40% by 2050
@@ -16,9 +16,7 @@ TS DATA	_GLOBAL
 TID DATA	_GLOBAL
 
 ITEMS	REGION1
-	C	GTS_MBTGAS	NDC PAMS: gas vehicles	uconstraint	UC_N,UCRT,UCRULE	
 	C	GTS_MBTGAS_C	NDC central:  ngas vehicles	uconstraint	UC_N,UCRT,UCRULE	
-	C	GTS_MBTOGS	NDC PAMS: petrol vehicles	uconstraint	UC_N,UCRT,UCRULE	
 	C	GTS_MBTOGS_C	NDC central: petrol vehicles	uconstraint	UC_N,UCRT,UCRULE	
 	D	TRABGS-G	Transport Blended E-Gasoline  set		COM_GRP,COM_GRPTRU	
 	E	BBE	Sugarbeet crop	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -144,16 +142,10 @@ TS DATA	REGION1
 	PRC_ACTFLO	MINBSR	-	ODS	-	-	-	0	1.8178	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	MINBSY	-	LNDAGRBSY	-	-	-	0	0.333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	MINBSY	-	ODS	-	-	-	0	1.1694	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC__RHSRT	GTS_MBTGAS	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
 	UC__RHSRT	GTS_MBTGAS_C	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UC__RHSRT	GTS_MBTOGS	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	0	
 	UC__RHSRT	GTS_MBTOGS_C	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UCRULE_ACT	GTS_MBTGAS	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.0685	null	null	null	null	null	null	null	null	null	null	null	-0.274	-0.274	-0.274	
-	UCRULE_ACT	GTS_MBTGAS	LHS	S_TPPUMBTGAS	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
 	UCRULE_ACT	GTS_MBTGAS_C	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.0685	null	null	null	null	null	null	null	null	null	null	null	-0.274	-0.274	-0.274	
 	UCRULE_ACT	GTS_MBTGAS_C	LHS	S_TPPUMBTGAS	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
-	UCRULE_ACT	GTS_MBTOGS	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	-0.0315	null	null	null	null	null	null	null	null	null	null	null	-0.126	-0.126	-0.126	
-	UCRULE_ACT	GTS_MBTOGS	LHS	S_TPPUMBTOGS	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	1	1	
 	UCRULE_ACT	GTS_MBTOGS_C	LHS	S_TPPUMBT	-	ANNUAL	-	3	0	0	0	0	0	0	0	0	0	null	null	null	null	null	null	null	null	null	-0.0315	null	null	null	null	null	null	null	null	null	null	null	-0.126	-0.126	-0.126	
 	UCRULE_ACT	GTS_MBTOGS_C	LHS	S_TPPUMBTOGS	-	ANNUAL	-	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
 
@@ -266,13 +258,9 @@ TID DATA	REGION1
 	TOP-OUT	XTRABID	TRAODS	-	-	-	-	1	
 	TOP-OUT	XTRABIE	TRAOGS	-	-	-	-	1	
 	TOP-OUT	ZZBKNRG	BSC	-	-	-	-	1	
-	UC_R_EACH	GTS_MBTGAS	-	-	-	-	-	1	
 	UC_R_EACH	GTS_MBTGAS_C	-	-	-	-	-	1	
-	UC_R_EACH	GTS_MBTOGS	-	-	-	-	-	1	
 	UC_R_EACH	GTS_MBTOGS_C	-	-	-	-	-	1	
-	UC_R_SUM	GTS_MBTGAS	-	-	-	-	-	1	
 	UC_R_SUM	GTS_MBTGAS_C	-	-	-	-	-	1	
-	UC_R_SUM	GTS_MBTOGS	-	-	-	-	-	1	
 	UC_R_SUM	GTS_MBTOGS_C	-	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1

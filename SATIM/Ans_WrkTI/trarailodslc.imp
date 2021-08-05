@@ -1,8 +1,8 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/05/06	17:32:43
+Creation Date:	2021/06/09	12:15:54
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
 ANSWER Version:	6.9.27
-Scenario:	TRARAILODSLC	Transport: Rail -Diesel - minimum utilisation NDC central case- 2035	(Copy of comment for Scenario TRARAILODS_L follows) {/n}In place to match transnet's reporting of diesel consumption. SATIM switches by default to elec trains after the  base year.{/n}{/n}No minimun activity after 3035{/n}
+Scenario:	TRARAILODSLC	Transport: Rail -Diesel - minimum utilisation NDC central case- 2030	(Copy of comment for Scenario TRARAILODS_L follows) {/n}In place to match transnet's reporting of diesel consumption. {/n}SATIM switches by default to elec trains after the  base year.{/n}No minimun activity by 2030{/n}
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
 
 REGIONS	_GLOBAL,REGION1
@@ -21,9 +21,9 @@ ITEMS	REGION1
 	T	TFROTODS-E	Transport Freight - Rail Other Oil Diesel-E	PJ,PJa	PRC,DMD,ANNUAL	
 
 TS DATA	REGION1
-	ACT_BND	TFRCOODS-E	-	-	-	ANNUAL	LO	3	3.5853	null	null	null	null	4.6601	null	null	4.6601	null	null	null	null	null	null	null	null	null	4.6601	null	null	null	null	null	null	null	null	null	0	0	0	0	0	
-	ACT_BND	TFREXODSR-E	-	-	-	ANNUAL	LO	3	13.3635	null	null	null	null	17.3701	null	null	17.3701	null	null	null	null	null	null	null	null	null	17.3701	null	null	null	null	null	null	null	null	null	0	0	0	0	0	
-	ACT_BND	TFROTODS-E	-	-	-	ANNUAL	LO	3	4.0905	null	null	null	null	5.3168	null	null	5.3168	null	null	null	null	null	null	null	null	null	5.3168	null	null	null	null	null	null	null	null	null	0	0	0	0	0	
+	ACT_BND	TFRCOODS-E	-	-	-	ANNUAL	LO	3	3.5853	null	null	null	null	4.6601	null	null	4.6601	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	0	0	0	0	
+	ACT_BND	TFREXODSR-E	-	-	-	ANNUAL	LO	3	13.3635	null	null	null	null	17.3701	null	null	17.3701	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	0	0	0	0	
+	ACT_BND	TFROTODS-E	-	-	-	ANNUAL	LO	3	4.0905	null	null	null	null	5.3168	null	null	5.3168	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	0	0	0	0	
 
 TID DATA	REGION1
 

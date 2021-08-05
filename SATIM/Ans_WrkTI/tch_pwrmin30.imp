@@ -1,0 +1,129 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/07/16	3:51:26 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWRMIN30	Minimum utilization for coal set to 30%	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	PWRFGDARNO	FGD DummyComm for ARNOT Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDCAMD	FGD DummyComm for CAMDEN Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDDUVH	FGD DummyComm for DUVHA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDGROO	FGD DummyComm for GROOTVLEI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDHEND	FGD DummyComm for HENDRINA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDKEND	FGD DummyComm for KENDAL Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDKOMA	FGD DummyComm for KOMATI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDKRIE	FGD DummyComm for KRIEL Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDLETH	FGD DummyComm for LETHABO Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMAJD	FGD DummyComm for MAJUBA DRY Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMAJW	FGD DummyComm for MAJUBA WET Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMATI	FGD DummyComm for MATIMBA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMATL	FGD DummyComm for MATLA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDMEDU	FGD DummyComm for MEDUPI Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	PWRFGDTUTU	FGD DummyComm for TUTUKA Power Plant	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	ETCLEARNO-E	ARNOT	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLECAMD-E	CAMDEN	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEDUVH-E	DUVHA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEGROO-E	GROOTVLEI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEHEND-E	HENDRINA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKEND-E	KENDAL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKOMA-E	KOMATI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKRIE-E	KRIEL	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEKUSI-N	KUSILE	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLELETH-E	LETHABO	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJD-E	MAJUBA DRY	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMAJW-E	MAJUBA WET	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATI-E	MATIMBA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMATL-E	MATLA	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLEMEDU-N	MEDUPI	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETCLETUTU-E	TUTUKA	PJ,GW	PRC,ELE,DAYNITE	
+	T	FGDARNO-E	FGD for ARNOT	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDCAMD-E	FGD for CAMDEN	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDDUVH-E	FGD for DUVHA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDGROO-E	FGD for GROOTVLEI	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDHEND-E	FGD for HENDRINA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDKEND-E	FGD for KENDAL	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDKOMA-E	FGD for KOMATI	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDKRIE-E	FGD for KRIEL	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDLETH-E	FGD for LETHABO	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMAJD-E	FGD for MAJUBA DRY	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMAJW-E	FGD for MAJUBA WET	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMATI-E	FGD for MATIMBA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMATL-E	FGD for MATLA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDMEDU-N	FGD for MEDUPI	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+	T	FGDTUTU-E	FGD for TUTUKA	PJ,GW	PRC,XTRACT,PRE,ANNUAL	
+
+TS DATA	REGION1
+	NCAP_AFA	ETCLEARNO-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLECAMD-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEDUVH-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEGROO-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEHEND-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKEND-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKOMA-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEKRIE-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLELETH-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJD-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMAJW-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATI-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLEMATL-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ETCLETUTU-E	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	ETCLEARNO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLECAMD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEDUVH-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEGROO-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEHEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKEND-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKOMA-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEKRIE-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLELETH-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMAJD-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMAJW-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMATI-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLEMATL-E	-	ELCC	-	-	-	1	
+	PRC_ACTUNT	ETCLETUTU-E	-	ELCC	-	-	-	1	
+	TOP-IN	ETCLEARNO-E	PWRCLEARNO	-	-	-	-	1	
+	TOP-IN	ETCLECAMD-E	PWRCLECAMD	-	-	-	-	1	
+	TOP-IN	ETCLEDUVH-E	PWRCLEDUVH	-	-	-	-	1	
+	TOP-IN	ETCLEGROO-E	PWRCLEGROO	-	-	-	-	1	
+	TOP-IN	ETCLEHEND-E	PWRCLEHEND	-	-	-	-	1	
+	TOP-IN	ETCLEKEND-E	PWRCLEKEND	-	-	-	-	1	
+	TOP-IN	ETCLEKOMA-E	PWRCLEKOMA	-	-	-	-	1	
+	TOP-IN	ETCLEKRIE-E	PWRCLEKRIE	-	-	-	-	1	
+	TOP-IN	ETCLELETH-E	PWRCLELETH	-	-	-	-	1	
+	TOP-IN	ETCLEMAJD-E	PWRCLEMAJU	-	-	-	-	1	
+	TOP-IN	ETCLEMAJW-E	PWRCLEMAJU	-	-	-	-	1	
+	TOP-IN	ETCLEMATI-E	PWRCLEMATI	-	-	-	-	1	
+	TOP-IN	ETCLEMATL-E	PWRCLEMATL	-	-	-	-	1	
+	TOP-IN	ETCLETUTU-E	PWRCLETUTU	-	-	-	-	1	
+	TOP-OUT	ETCLEARNO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLECAMD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEDUVH-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEGROO-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEHEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKEND-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKOMA-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEKRIE-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLELETH-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJD-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMAJW-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMATI-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLEMATL-E	ELCC	-	-	-	-	1	
+	TOP-OUT	ETCLETUTU-E	ELCC	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

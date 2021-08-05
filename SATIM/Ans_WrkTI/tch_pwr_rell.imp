@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/05/25	1:45:41 PM
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+Creation Date:	2021/08/05	12:06:25 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_RELL	Reliability constraint LEAF (low availability) scenario	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -54,8 +54,8 @@ TS DATA	REGION1
 	UC__RHSRT	UCCAP_DUMETR	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_ERMELC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_RMELCC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	22.5	15	null	null	
-	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	3	null	null	null	null	null	null	3.7	null	null	20	22.5	15	null	null	
+	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	5	null	null	null	null	null	null	100	null	null	null	null	null	null	null	
+	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	5	null	null	null	null	null	null	100	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-M	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-P	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-S	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -191,7 +191,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKEND-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKOMA-E	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKRIE-E	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	0.583333333333333	null	null	null	null	0.583333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.8	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ETCLEKUSI-N	-	-	-	3	null	null	null	null	null	null	null	null	0.6615096108767	null	null	null	null	0.8	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLELETH-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEMAJD-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEMAJW-E	-	-	-	3	null	null	null	null	null	null	null	null	0.666666666666667	null	null	null	null	0.75	null	null	null	null	0.75	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
