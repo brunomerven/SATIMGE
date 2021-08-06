@@ -247,6 +247,8 @@ PARAMETERS
   GDP_RUN(AY)                    GDP projection for RUN
 
   EmisFactor(COM,Emiss)          Combustion Emission Factor
+  EmisFactorCor(COM,Emiss,TC,RUN)       Corrected Combustion Emission Factor for exceptions
+
   LandEmissions(PRC,Emiss,AY) Land Emissions
   AgriEmissions(PRC,Emiss,AY) Agriculture Emissions
   WasteEmissions(PRC,Emiss,AY) Waste Emissions

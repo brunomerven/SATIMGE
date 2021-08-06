@@ -1,9 +1,12 @@
 * this module is run at the end to compile energy sector emissions
 
-REPORT(PRC,COM,TC,RUN,Emiss) = REPORT(PRC,COM,TC,RUN,'FlowIn')*EmisFactor(Com,Emiss);
+REPORT(PRC,COM,TC,RUN,Emiss)$EmisFactorCor(Com,Emiss,TC,RUN) = REPORT(PRC,COM,TC,RUN,'FlowIn')*EmisFactorCor(Com,Emiss,TC,RUN);
+REPORT(PRC,COM,TC,RUN,Emiss)$(Not EmisFactorCor(Com,Emiss,TC,RUN)) = REPORT(PRC,COM,TC,RUN,'FlowIn')*EmisFactor(Com,Emiss);
 
 * Exception for International Jet Kerosene
 REPORT(PRC,COM,TC,RUN,Emiss)$MPRCSubSector(PRC,'Transport','Aviation-International') = 0;
+
+
 
 * convert energy flows to TJ to match inventory and DOE energy balances
 *REPORT(PRC,COM,TC,RUN,'Flowin') = REPORT(PRC,COM,TC,RUN,'FlowIn')*1000;

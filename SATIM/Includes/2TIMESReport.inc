@@ -298,6 +298,15 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * mtons of coal
  REPORT(PRC,COM,TC,RUN,'FlowInMt')$CoalCV(COM) = TVFLOWIN(COM,TC,PRC)/CoalCV(COM);
 
+
+* Exception for biofuels in transport
+* Note that this is not perfect in that it doesn't take into account possible upstream emissions from production
+* it would be better in future iterations to have a sink linked to the supply of bioenergy
+EmisFactorCor('TRAODS','CO2',TC,RUN)$(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut')) = EmisFactor('TRAODS','CO2')*REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')/(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut'));
+EmisFactorCor('TRAOGS','CO2',TC,RUN)$(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut')) = EmisFactor('TRAOGS','CO2')*REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')/(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut'));
+
+
+
 $ontext
 * adding small Entry for coal IPP because of issues in Tableau
  REPORT('ETCLDFB-N','ACTGRP',TC,RUN,Indicators) = 0.00001;
