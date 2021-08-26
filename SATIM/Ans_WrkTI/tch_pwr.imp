@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/05	12:10:25 AM
+Creation Date:	2021/08/26	10:00:16 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -97,7 +97,7 @@ ITEMS	REGION1
 	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETGICEN-N	Gas Engines - LNG	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETGICGT-N	Open Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
-	T	ETHGNGT-N	Open Cycle Gas Turbine - Hydrogen	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETHGNGT-N	Hydrogen Turbine or FuelCell	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETNUC-E	Nuclear Existing	PJ,GW	PRC,ELE,SEASON	
 	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,DAYNITE	
 	T	ETODSGT-E	OCGT liquid fuels Existing	PJ,GW	PRC,ELE,DAYNITE	
@@ -159,19 +159,19 @@ TS DATA	REGION1
 	ACT_BND	MINCSTUTUVRS	-	-	-	ANNUAL	UP	3	110.23595	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXELC	-	-	-	ANNUAL	FX	3	54.126	null	null	48.474	54.3348	54.9648	44.8596	54.6804	51.46272	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	EPTSTO-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ERBIG-N	-	-	-	-	-	0	62.2613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ERBIO-N	-	-	-	-	-	0	115.143296383203	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERBIG-N	-	-	-	-	-	0	17.2948188904172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERBIO-N	-	-	-	-	-	0	31.984248995334	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERHYD-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERHYD-I	-	-	-	-	-	0	94.4444444444444	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERHYD-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERSOLPCF-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERSOLPCT-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ERSOLTC09-N	-	-	-	-	-	0	0.893276155028724	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ERSOLTC09-N	-	-	-	-	-	0	0.248132265285757	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ERWNDH-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLDFB-N	-	-	-	-	-	0	174.546160692613	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLDFB-N	-	-	-	-	-	0	48.4850446368368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEARNO-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLECAMD-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLE-CCS-N	-	-	-	-	-	0	148.819807427785	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLE-CCS-N	-	-	-	-	-	0	41.3388353966071	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEDUVH-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEGROO-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEHEND-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -189,18 +189,18 @@ TS DATA	REGION1
 	ACT_COST	ETCLEPFSI-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLEPFSS-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETCLETUTU-E	-	-	-	-	-	0	7.42821569799135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETCLEWATE-N	-	-	-	-	-	0	80.6628367990938	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETGASENSI-N	-	-	-	-	-	0	70.5688162472692	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETGASENSS-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETGICCC-CCS-N	-	-	-	-	-	0	34.301804353103	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETGICCC-N	-	-	-	-	-	0	22.0639210292095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETGICEN-N	-	-	-	-	-	0	70.5688162472692	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETGICGT-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETHGNGT-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETCLEWATE-N	-	-	-	-	-	0	22.4063435553038	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGASENSI-N	-	-	-	-	-	0	19.6024489575748	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGASENSS-N	-	-	-	-	-	0	0.669957116271543	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICCC-CCS-N	-	-	-	-	-	0	9.52827898697305	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICCC-N	-	-	-	-	-	0	6.12886695255819	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICEN-N	-	-	-	-	-	0	19.6024489575748	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETGICGT-N	-	-	-	-	-	0	0.669957116271543	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETHGNGT-N	-	-	-	-	-	0	74.6293333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETNUC-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETNUC-N	-	-	-	-	-	0	37.2942794724492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETNUC-N	-	-	-	-	-	0	10.3595220756803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ETODSGT-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ETODSGT-N	-	-	-	-	-	0	2.41184561857756	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	ETODSGT-N	-	-	-	-	-	0	0.669957116271543	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINCSARNOVRS	-	-	-	-	-	0	null	null	null	null	null	null	null	21.239630932003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINCSCAMDVRS	-	-	-	-	-	0	null	null	null	null	null	null	null	26.4631419226233	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINCSDUVHSER	-	-	-	-	-	0	null	null	null	null	null	null	null	16.41	null	21.0153994225217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -340,7 +340,7 @@ TS DATA	REGION1
 	FLO_EFF	ETGICCC-N	ELCC	PWRGIC	-	ANNUAL	-	0	0.487	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EFF	ETGICEN-N	ELCC	PWRGIC	-	ANNUAL	-	0	0.45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EFF	ETGICGT-N	ELCC	PWRGIC	-	ANNUAL	-	0	0.313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EFF	ETHGNGT-N	ELCC	PWRHGN	-	ANNUAL	-	0	0.313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EFF	ETHGNGT-N	ELCC	PWRHGN	-	ANNUAL	-	0	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EFF	ETNUC-N	ELCC	PWRNUC	-	ANNUAL	-	0	0.348	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EFF	ETODSGT-N	ELCC	PWRODS	-	ANNUAL	-	0	0.313	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETCLDFB-N	PWRCH4S	PWRCLD	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -514,14 +514,49 @@ TS DATA	REGION1
 	FLO_EMIS	ETCLEWATE-N	PWRSOXS	PWRCLEMEDU	-	ANNUAL	-	0	6.51414166666666E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETGASENSI-N	PWRENV	ICPELC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETGASENSS-N	PWRENV	UPSELC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRCH4S	PWRGIC	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRCMOX	PWRGIC	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRCO2S	PWRGIC	-	ANNUAL	-	0	6.42016348773842	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETGICCC-CCS-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRN2OS	PWRGIC	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRNMVS	PWRGIC	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRNOXS	PWRGIC	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-CCS-N	PWRSOXS	PWRGIC	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRCH4S	PWRGIC	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRCMOX	PWRGIC	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRCO2S	PWRGIC	-	ANNUAL	-	0	56.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETGICCC-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRN2OS	PWRGIC	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRNMVS	PWRGIC	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRNOXS	PWRGIC	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICCC-N	PWRSOXS	PWRGIC	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRCH4S	PWRGIC	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRCMOX	PWRGIC	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRCO2S	PWRGIC	-	ANNUAL	-	0	56.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETGICEN-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRN2OS	PWRGIC	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRNMVS	PWRGIC	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRNOXS	PWRGIC	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICEN-N	PWRSOXS	PWRGIC	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRCH4S	PWRGIC	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRCMOX	PWRGIC	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRCO2S	PWRGIC	-	ANNUAL	-	0	56.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETGICGT-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRN2OS	PWRGIC	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRNMVS	PWRGIC	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRNOXS	PWRGIC	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETGICGT-N	PWRSOXS	PWRGIC	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETHGNGT-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETNUC-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETNUC-N	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ETODSGT-E	PWRENV	ELCC	-	ANNUAL	-	0	277.778	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRCH4S	PWRODS	-	ANNUAL	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRCMOX	PWRODS	-	ANNUAL	-	0	0.015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRCO2S	PWRODS	-	ANNUAL	-	0	74.0667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRN2OS	PWRODS	-	ANNUAL	-	0	0.0006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRNMVS	PWRODS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRNOXS	PWRODS	-	ANNUAL	-	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ETODSGT-N	PWRSOXS	PWRODS	-	ANNUAL	-	0	0.2529	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINCSARNOVRS	CH4SF	PWRCLEARNO	-	ANNUAL	-	0	0.012537677121241	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINCSARNOVRS	CO2SF	PWRCLEARNO	-	ANNUAL	-	0	3.99792960288136E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	MINCSCAMDVRS	CH4SF	PWRCLECAMD	-	ANNUAL	-	0	1.37948061409043E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -837,10 +872,10 @@ TS DATA	REGION1
 	NCAP_COST	ETGASENSI-N	-	-	-	-	-	0	14143.5986730318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGASENSS-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGICCC-CCS-N	-	-	-	-	-	0	21874.7251395744	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETGICCC-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETGICCC-N	-	-	-	-	-	0	9954.7587992556	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGICEN-N	-	-	-	-	-	0	14143.5986730318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETGICGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	ETHGNGT-N	-	-	-	-	-	0	9065.50238692451	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	ETHGNGT-N	-	-	-	-	-	0	23508.24	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETNUC-E	-	-	-	-	-	0	13714.8235584672	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETNUC-N	-	-	-	-	-	0	68550.4185775548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ETODSGT-E	-	-	-	-	-	0	1548.83729872894	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -874,7 +909,7 @@ TS DATA	REGION1
 	NCAP_FOM	ERSOLPRR-N	-	-	-	-	-	0	472.096447932681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ERWNDH-N	-	-	-	-	-	0	611.000890039647	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ESTSUTL	-	-	-	-	-	0	622.613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETCLDFB-N	-	-	-	-	-	0	568	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ETCLDFB-N	-	-	-	-	-	0	627.079860830164	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLEARNO-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLECAMD-E	-	-	-	-	-	0	309.542566984717	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETCLE-CCS-N	-	-	-	-	-	0	1590.03155595113	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -902,7 +937,6 @@ TS DATA	REGION1
 	NCAP_FOM	ETGICCC-N	-	-	-	-	-	0	167.042640990371	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGICEN-N	-	-	-	-	-	0	425.199449793673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETGICGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ETHGNGT-N	-	-	-	-	-	0	161.682984060199	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETNUC-E	-	-	-	-	-	0	324.195469563875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETNUC-N	-	-	-	-	-	0	976.79747552391	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	ETODSGT-E	-	-	-	-	-	0	53.8494169784064	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1731,13 +1765,41 @@ TID DATA	REGION1
 	TOP-OUT	ETGASENSS-N	PWRENV	-	-	-	-	1	
 	TOP-OUT	ETGASENSS-N	UPSELC	-	-	-	-	1	
 	TOP-OUT	ETGICCC-CCS-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRCO2S	-	-	-	-	1	
 	TOP-OUT	ETGICCC-CCS-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETGICCC-CCS-N	PWRSOXS	-	-	-	-	1	
 	TOP-OUT	ETGICCC-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRCO2S	-	-	-	-	1	
 	TOP-OUT	ETGICCC-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETGICCC-N	PWRSOXS	-	-	-	-	1	
 	TOP-OUT	ETGICEN-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRCO2S	-	-	-	-	1	
 	TOP-OUT	ETGICEN-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETGICEN-N	PWRSOXS	-	-	-	-	1	
 	TOP-OUT	ETGICGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRCO2S	-	-	-	-	1	
 	TOP-OUT	ETGICGT-N	PWRENV	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETGICGT-N	PWRSOXS	-	-	-	-	1	
 	TOP-OUT	ETHGNGT-N	ELCC	-	-	-	-	1	
 	TOP-OUT	ETHGNGT-N	PWRENV	-	-	-	-	1	
 	TOP-OUT	ETNUC-E	ELCC	-	-	-	-	1	
@@ -1747,6 +1809,13 @@ TID DATA	REGION1
 	TOP-OUT	ETODSGT-E	ELCC	-	-	-	-	1	
 	TOP-OUT	ETODSGT-E	PWRENV	-	-	-	-	1	
 	TOP-OUT	ETODSGT-N	ELCC	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRCH4S	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRCMOX	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRN2OS	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRNMVS	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRNOXS	-	-	-	-	1	
+	TOP-OUT	ETODSGT-N	PWRSOXS	-	-	-	-	1	
 	TOP-OUT	ETRANS	ELC	-	-	-	-	1	
 	TOP-OUT	ETRANSDUM	ZDUMETRANS	-	-	-	-	1	
 	TOP-OUT	MINCSARNOVRS	CH4SF	-	-	-	-	1	

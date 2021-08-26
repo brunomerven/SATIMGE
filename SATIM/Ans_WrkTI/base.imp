@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/04	10:08:55 PM
+Creation Date:	2021/08/26	9:59:23 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -625,8 +625,8 @@ TS DATA	REGION1
 	COM_AGG	-	AGRNMVS	-	NMVS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	AGRNOXS	-	NOXS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	AGRSOXS	-	SOXS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_AGG	-	CH4S	-	CO2EQS	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_AGG	-	CH4SF	-	CO2EQS	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CH4S	-	CO2EQS	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CH4SF	-	CO2EQS	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	CMOX	-	CO2EQS	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	CO2S	-	CO2EQS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	CO2SF	-	CO2EQS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -648,7 +648,7 @@ TS DATA	REGION1
 	COM_AGG	-	INDNMVS	-	NMVS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	INDNOXS	-	NOXS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	INDSOXS	-	SOXS	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_AGG	-	N2OS	-	CO2EQS	-	-	0	298	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	N2OS	-	CO2EQS	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	NMVS	-	CO2EQS	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	NOXS	-	CO2EQS	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	PWRCH4S	-	CH4S	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -910,12 +910,6 @@ TS DATA	REGION1
 	FLO_EMIS	XPWRGAS	PWRNMVS	PWRGAS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGAS	PWRNOXS	PWRGAS	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGIC	CH4SF	PWRGIC	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRGIC	PWRCH4S	PWRGIC	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRGIC	PWRCMOX	PWRGIC	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRGIC	PWRCO2S	PWRGIC	-	ANNUAL	-	0	56.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRGIC	PWRN2OS	PWRGIC	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRGIC	PWRNMVS	PWRGIC	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRGIC	PWRNOXS	PWRGIC	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGIH	CH4SF	PWRGIH	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGIH	PWRCH4S	PWRGIH	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGIH	PWRCMOX	PWRGIH	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -940,13 +934,6 @@ TS DATA	REGION1
 	FLO_EMIS	XPWRGRS	PWRN2OR	PWRGRS	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGRS	PWRNMVR	PWRGRS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XPWRGRS	PWRNOXR	PWRGRS	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRCH4S	PWRODS	-	ANNUAL	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRCMOX	PWRODS	-	ANNUAL	-	0	0.015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRCO2S	PWRODS	-	ANNUAL	-	0	74.0667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRN2OS	PWRODS	-	ANNUAL	-	0	0.0006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRNMVS	PWRODS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRNOXS	PWRODS	-	ANNUAL	-	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XPWRODS	PWRSOXS	PWRODS	-	ANNUAL	-	0	0.2529	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XRESCOA	RESCH4S	RESCOA	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XRESCOA	RESCMOX	RESCOA	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XRESCOA	RESCO2S	RESCOA	-	ANNUAL	-	0	96.25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2458,13 +2445,7 @@ TID DATA	REGION1
 	TOP-OUT	XPWRGAS	PWRNMVS	-	-	-	-	1	
 	TOP-OUT	XPWRGAS	PWRNOXS	-	-	-	-	1	
 	TOP-OUT	XPWRGIC	CH4SF	-	-	-	-	1	
-	TOP-OUT	XPWRGIC	PWRCH4S	-	-	-	-	1	
-	TOP-OUT	XPWRGIC	PWRCMOX	-	-	-	-	1	
-	TOP-OUT	XPWRGIC	PWRCO2S	-	-	-	-	1	
 	TOP-OUT	XPWRGIC	PWRGIC	-	-	-	-	1	
-	TOP-OUT	XPWRGIC	PWRN2OS	-	-	-	-	1	
-	TOP-OUT	XPWRGIC	PWRNMVS	-	-	-	-	1	
-	TOP-OUT	XPWRGIC	PWRNOXS	-	-	-	-	1	
 	TOP-OUT	XPWRGIH	CH4SF	-	-	-	-	1	
 	TOP-OUT	XPWRGIH	PWRCH4S	-	-	-	-	1	
 	TOP-OUT	XPWRGIH	PWRCMOX	-	-	-	-	1	
@@ -2497,14 +2478,7 @@ TID DATA	REGION1
 	TOP-OUT	XPWRHGN	PWRHGN	-	-	-	-	1	
 	TOP-OUT	XPWRHYD	PWRHYD	-	-	-	-	1	
 	TOP-OUT	XPWRNUC	PWRNUC	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRCH4S	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRCMOX	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRCO2S	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRN2OS	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRNMVS	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRNOXS	-	-	-	-	1	
 	TOP-OUT	XPWRODS	PWRODS	-	-	-	-	1	
-	TOP-OUT	XPWRODS	PWRSOXS	-	-	-	-	1	
 	TOP-OUT	XPWRSOL	PWRSOL	-	-	-	-	1	
 	TOP-OUT	XPWRWND	PWRWND	-	-	-	-	1	
 	TOP-OUT	XRESBIW	RESBIW	-	-	-	-	1	

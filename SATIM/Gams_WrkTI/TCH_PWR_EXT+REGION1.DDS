@@ -232,7 +232,7 @@ SET PRC /
   'ETGICCC-N'                'Combined Cycle Gas Turbine - LNG                  '
   'ETGICEN-N'                'Gas Engines - LNG                                 '
   'ETGICGT-N'                'Open Cycle Gas Turbine - LNG                      '
-  'ETHGNGT-N'                'Open Cycle Gas Turbine - Hydrogen                 '
+  'ETHGNGT-N'                'Hydrogen Turbine or FuelCell                      '
   'ETNUC-E'                  'Nuclear Existing                                  '
   'ETNUC-N'                  'Nuclear Mid                                       '
   'ETODSGT-E'                'OCGT liquid fuels Existing                        '

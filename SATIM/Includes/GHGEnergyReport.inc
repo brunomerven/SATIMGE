@@ -45,3 +45,7 @@ REPORT('XUPSGAS','ACTGRP',TC,RUN,'CH4') = sum(PRC,REPORT(PRC,'CH4SF',TC,RUN,'Flo
                                                      -REPORT('XUPSCLE','ACTGRP',TC,RUN,'CH4')
                                                      -REPORT('UTRNGIMGAS','ACTGRP',TC,RUN,'CH4');
 
+
+* CO2 capture accounted for under CO2C
+REPORT('ETGICGT-N','ACTGRP',TC,RUN,'CO2C') = REPORT('UPWRCO2SCD','CO2CAPT',TC,RUN,'FlowOut')*(-1);
+REPORT('ETGICCC-CCS-N','ACTGRP',TC,RUN,'CO2C') = REPORT('UPWRCO2SCR','CO2CAPT',TC,RUN,'FlowOut')*(-1);

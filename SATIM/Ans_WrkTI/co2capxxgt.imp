@@ -1,0 +1,134 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/08/25	6:08:07 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+ANSWER Version:	6.9.27
+Scenario:	CO2CAPXXGT	XX GTon CO2 Cap 2020-2050 on Energy and IPPU	XX is specified in SATIMGE.xlsm
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	AGRCH4S	Agriculture Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRCMOX	Agriculture Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRCO2S	Agriculture Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRN2OS	Agriculture Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRNMVS	Agriculture NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRNOXS	Agriculture Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRP10S	Agriculture PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	AGRSOXS	Agriculture Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CH4S	CH4S South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CH4SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2EQSB	CO2eq for Carbon Cap constraints	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2S	CO2S South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SF	Fugitive Emissions Region	KT	COM,ENV,ANNUAL,GHG	
+	E	COMCH4S	Commercial Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMCMOX	Commercial Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMCO2S	Commercial Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMN2OS	Commercial Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMNMVS	Commercial NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMNOXS	Commercial Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMP10S	Commercial PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	COMSOXS	Commercial Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCH4S	Industry Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCO2S	Industry Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDN2OS	Industry Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDNMVS	Industry NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDNOXS	Industry Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDP10S	Industry PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDSOXS	Industry Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	N2OS	N2OS South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRCH4R	Power Sector Methane Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRCH4S	Power Sector Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRCMOR	Power Sector Carbon monoxide Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRCMOX	Power Sector Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRCO2R	Power Sector Carbon dioxide Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRCO2S	Power Sector Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRN2OR	Power Sector Nitrous Oxide Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRN2OS	Power Sector Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRNMVR	Power Sector NMVOCs Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRNMVS	Power Sector NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRNOXR	Power Sector Nitrogen gases Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRNOXS	Power Sector Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRP10R	Power Sector PM10 Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRP10S	Power Sector PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRSOXR	Power Sector Sulphur gases Region	KT	COM,ENV,ANNUAL,GHG	
+	E	PWRSOXS	Power Sector Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESCH4S	Residential Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESCMOX	Residential Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESCO2S	Residential Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESN2OS	Residential Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESNMVS	Residential NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESNOXS	Residential Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESP10S	Residential PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	RESSOXS	Residential Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRACH4S	Transport Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRACMOX	Transport Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRACO2S	Transport Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRAN2OS	Transport Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRANMVS	Transport NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRANOXS	Transport Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRAP10S	Transport PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	TRASOXS	Transport Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSCH4S	Supply Sector Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSCMOX	Supply Sector Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSCO2S	Supply Sector Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSN2OS	Supply Sector Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSNMVS	Supply Sector NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSNOXS	Supply Sector Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSP10S	Supply Sector PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	UPSSOXS	Supply Sector Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	ZCO2P	Dummy for process emissions	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	ZDUMCO2P	Dummy process for producing missing Process Emissions	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_BND	ZDUMCO2P	-	-	-	ANNUAL	FX	0	4379	4379	4379	4379	4379	4379	4381	4380	4343	4351	4358	4365	4373	4382	4232	4083	3933	3785	3637	3498	3353	3208	3063	2919	2775	2631	2486	2340	2195	1488	798	798	798	
+	COM_AGG	-	AGRCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	AGRCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	AGRN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CF4	-	CO2EQSB	-	-	0	6630	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CF6	-	CO2EQSB	-	-	0	11000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CH4SF	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CO2SF	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CO2SP	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	COMCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	COMCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	COMN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	INDCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	INDCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	INDN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	PWRCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	PWRCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	PWRN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	RESCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	RESCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	RESN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	TRACH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	TRACO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	TRAN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	UPSCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	UPSCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	UPSN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_BNDNET	-	CO2EQSB	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ICPAELC-E	CO2SP	ICPA	-	ANNUAL	-	0	3243.24324324324	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	ZDUMCO2P	CO2SP	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	COM_CUMNET	-	CO2EQSB	-	2020	2050	UP	10000000	
+	PRC_ACTUNT	ZDUMCO2P	-	ZCO2P	-	-	-	1	
+	PRC_CAPACT	ZDUMCO2P	-	-	-	-	-	1	
+	TOP-OUT	ZDUMCO2P	CO2SP	-	-	-	-	1	
+	TOP-OUT	ZDUMCO2P	ZCO2P	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+
