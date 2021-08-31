@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/26	9:59:23 AM
+Creation Date:	2021/08/31	9:11:07 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -305,7 +305,7 @@ ITEMS	REGION1
 	T	MNZZZ	Backstop for whole system	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOA	Exports of Coal	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOK	Exports of Coal Coking	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
 	T	PEXOAG	Exports of Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOCR	Exports of Oil Crude	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXODS	Exports of Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
@@ -337,14 +337,14 @@ ITEMS	REGION1
 	T	USMRGICHGN	Production Plant Hydrogen - Large SMR - Coastal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UTRNGIMGAS	Conversion Methane Rich Gas Natural Gas for use in industry and refineries	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGRCOA	Agriculture Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGRELC	Agriculture Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XAGRODS	Agriculture Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROGS	Agriculture Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROHF	Agriculture Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROKE	Agriculture Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROLP	Agriculture Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMCOA	Commercial Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XCOMGAS	Commercial Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMODS	Commercial Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMOGS	Commercial Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -356,7 +356,7 @@ ITEMS	REGION1
 	T	XINDCLE	Industry Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOA	Industry Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOK	Industry Coal Coking	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINDELC	Industry Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINDGAS	Industry Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDODS	Industry Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOGS	Industry Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -384,11 +384,11 @@ ITEMS	REGION1
 	T	XPWRWND	Power Sector Wind	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESBIW	Residential Biomass Wood	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESCOA	Residential Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XRESELC	Residential Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XRESGAS	Residential Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOKE	Residential Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOLP	Residential Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XTRAELC	Transport Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XTRAGAS	Transport Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XTRAHGN	Transport Hydrogen	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XTRAOAG	Transport Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -399,7 +399,7 @@ ITEMS	REGION1
 	T	XUPSBID	Supply Sector Biodiesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSBIE	Supply Sector Bioethanol	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSCLE	Supply Sector Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XUPSGAS	Supply Sector Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSGIC	Supply Sector Coastal Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSHEE	Supply Sector Heat-Steam Existing	PJ,PJa	PRC,PRE,ANNUAL	
@@ -477,19 +477,19 @@ TS DATA	REGION1
 	ACT_BND	PEXOHF	-	-	-	ANNUAL	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXOKE	-	-	-	ANNUAL	FX	0	5.02735604617284	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXOKE	-	-	-	ANNUAL	UP	3	5.02735604617284	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	IMPBID	-	-	-	-	-	0	177.364462625332	null	null	125.880221330696	null	null	null	null	144.026658548007	null	null	null	null	null	null	null	null	null	189.288126829598	null	null	null	null	null	null	null	null	null	null	null	232.035069095545	null	null	
-	ACT_COST	IMPBIE	-	-	-	-	-	0	185.742810632009	null	null	136.173808216837	null	null	null	null	152.214499565039	null	null	null	null	null	null	null	null	null	197.734611938762	null	null	null	null	null	null	null	null	null	null	null	240.725829180612	null	null	
+	ACT_COST	IMPBID	-	-	-	-	-	0	177.364462625332	null	null	125.880221330696	null	null	null	null	144.026658548007	null	null	null	null	null	null	null	null	null	138.159431178171	null	null	null	null	null	null	null	null	null	null	null	124.748625761403	null	null	
+	ACT_COST	IMPBIE	-	-	-	-	-	0	185.742810632009	null	null	136.173808216837	null	null	null	null	152.214499565039	null	null	null	null	null	null	null	null	null	146.313744257334	null	null	null	null	null	null	null	null	null	null	null	132.826303554009	null	null	
 	ACT_COST	IMPCOK	-	-	-	-	-	0	67.5183333333333	null	null	67.9591666666667	null	null	null	null	68.4	null	null	null	null	null	null	null	null	null	68.4	null	null	null	null	null	null	null	null	null	null	null	68.4	null	null	
-	ACT_COST	IMPGRL	-	-	-	-	-	0	96.6982947626913	null	null	70.4920646660748	null	null	null	null	79.5473921924936	null	null	null	null	null	null	null	null	null	102.83252011757	null	null	null	null	null	null	null	null	null	null	null	124.824029824587	null	null	
-	ACT_COST	IMPGWL	-	-	-	-	-	0	101.215830307715	null	null	75.0096002110985	null	null	null	null	84.0649277375173	null	null	null	null	null	null	null	null	null	107.350055662594	null	null	null	null	null	null	null	null	null	null	null	129.341565369611	null	null	
+	ACT_COST	IMPGRL	-	-	-	-	-	0	96.6982947626913	null	null	70.4920646660748	null	null	null	null	79.5473921924936	null	null	null	null	null	null	null	null	null	76.5289496836873	null	null	null	null	null	null	null	null	null	null	null	69.6296525207016	null	null	
+	ACT_COST	IMPGWL	-	-	-	-	-	0	101.215830307715	null	null	75.0096002110985	null	null	null	null	84.0649277375173	null	null	null	null	null	null	null	null	null	81.046485228711	null	null	null	null	null	null	null	null	null	null	null	74.1471880657252	null	null	
 	ACT_COST	IMPNUC	-	-	-	-	-	0	8.12881301076139	null	null	8.12881301076139	null	null	null	null	8.12881301076139	null	null	null	null	null	null	null	null	null	8.12881301076139	null	null	null	null	null	null	null	null	null	null	null	8.12881301076139	null	null	
-	ACT_COST	IMPOAG	-	-	-	-	-	0	176.897914887628	null	null	129.689341158892	null	null	null	null	144.966190061942	null	null	null	null	null	null	null	null	null	188.318678036916	null	null	null	null	null	null	null	null	null	null	null	229.262694457725	null	null	
-	ACT_COST	IMPOCR	-	-	-	-	-	0	140.379377042628	null	null	100.470677148847	null	null	null	null	114.260770090846	null	null	null	null	null	null	null	null	null	149.721009084556	null	null	null	null	null	null	null	null	null	null	null	183.211234800839	null	null	
-	ACT_COST	IMPODS	-	-	-	-	-	0	168.918535833649	null	null	119.885925076853	null	null	null	null	137.168246236197	null	null	null	null	null	null	null	null	null	180.274406504379	null	null	null	null	null	null	null	null	null	null	null	220.985780090995	null	null	
-	ACT_COST	IMPOGS	-	-	-	-	-	0	176.897914887628	null	null	129.689341158892	null	null	null	null	144.966190061942	null	null	null	null	null	null	null	null	null	188.318678036916	null	null	null	null	null	null	null	null	null	null	null	229.262694457725	null	null	
-	ACT_COST	IMPOHF	-	-	-	-	-	0	140.379377042628	null	null	100.470677148847	null	null	null	null	114.260770090846	null	null	null	null	null	null	null	null	null	149.721009084556	null	null	null	null	null	null	null	null	null	null	null	183.211234800839	null	null	
-	ACT_COST	IMPOKE	-	-	-	-	-	0	177.620678793203	null	null	130.765192986319	null	null	null	null	146.955685431304	null	null	null	null	null	null	null	null	null	188.588380289835	null	null	null	null	null	null	null	null	null	null	null	227.908147656226	null	null	
-	ACT_COST	IMPOLP	-	-	-	-	-	0	319.655031075523	null	null	279.110333860047	null	null	null	null	293.120189966477	null	null	null	null	null	null	null	null	null	329.145534240157	null	null	null	null	null	null	null	null	null	null	null	363.169470498632	null	null	
+	ACT_COST	IMPOAG	-	-	-	-	-	0	176.897914887628	null	null	129.689341158892	null	null	null	null	144.966190061942	null	null	null	null	null	null	null	null	null	139.346423102223	null	null	null	null	null	null	null	null	null	null	null	126.501241480008	null	null	
+	ACT_COST	IMPOCR	-	-	-	-	-	0	140.379377042628	null	null	100.470677148847	null	null	null	null	114.260770090846	null	null	null	null	null	null	null	null	null	109.664072443513	null	null	null	null	null	null	null	null	null	null	null	99.1573349638947	null	null	
+	ACT_COST	IMPODS	-	-	-	-	-	0	168.918535833649	null	null	119.885925076853	null	null	null	null	137.168246236197	null	null	null	null	null	null	null	null	null	131.580410645877	null	null	null	null	null	null	null	null	null	null	null	118.80821501086	null	null	
+	ACT_COST	IMPOGS	-	-	-	-	-	0	176.897914887628	null	null	129.689341158892	null	null	null	null	144.966190061942	null	null	null	null	null	null	null	null	null	139.346423102223	null	null	null	null	null	null	null	null	null	null	null	126.501241480008	null	null	
+	ACT_COST	IMPOHF	-	-	-	-	-	0	140.379377042628	null	null	100.470677148847	null	null	null	null	114.260770090846	null	null	null	null	null	null	null	null	null	109.664072443513	null	null	null	null	null	null	null	null	null	null	null	99.1573349638947	null	null	
+	ACT_COST	IMPOKE	-	-	-	-	-	0	177.620678793203	null	null	130.765192986319	null	null	null	null	146.955685431304	null	null	null	null	null	null	null	null	null	141.558854616309	null	null	null	null	null	null	null	null	null	null	null	129.223241324892	null	null	
+	ACT_COST	IMPOLP	-	-	-	-	-	0	319.655031075523	null	null	279.110333860047	null	null	null	null	293.120189966477	null	null	null	null	null	null	null	null	null	288.450237931001	null	null	null	null	null	null	null	null	null	null	null	277.77606184991	null	null	
 	ACT_COST	MINBIB	-	-	-	-	-	0	19.5	null	null	19.5	null	null	null	null	19.5	null	null	null	null	null	null	null	null	null	19.5	null	null	null	null	null	null	null	null	null	null	null	19.5	null	null	
 	ACT_COST	MINBIG	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINBIO	-	-	-	-	-	0	47.2628333333333	null	null	47.5714166666667	null	null	null	null	47.88	null	null	null	null	null	null	null	null	null	47.88	null	null	null	null	null	null	null	null	null	null	null	47.88	null	null	
@@ -498,11 +498,11 @@ TS DATA	REGION1
 	ACT_COST	MINCLE	-	-	-	-	-	0	15	null	null	16.7148487571384	null	null	null	null	18.4296975142768	null	null	null	null	null	null	null	null	null	18.4296975142768	null	null	null	null	null	null	null	null	null	null	null	18.4296975142768	null	null	
 	ACT_COST	MINCOA	-	-	-	-	-	0	45.0122222222222	null	null	45.3061111111111	null	null	null	null	45.6	null	null	null	null	null	null	null	null	null	45.6	null	null	null	null	null	null	null	null	null	null	null	45.6	null	null	
 	ACT_COST	MINGAS	-	-	-	-	-	0	76.0852122270861	null	null	54.4548134812407	null	null	null	null	54.4548134812407	null	null	null	null	null	null	null	null	null	54.4548134812407	null	null	null	null	null	null	null	null	null	null	null	54.4548134812407	null	null	
-	ACT_COST	MINGIB	-	-	-	-	-	0	84.1329857223769	null	null	60.2146713011459	null	null	null	null	68.4794301071855	null	null	null	null	null	null	null	null	null	89.7316670370017	null	null	null	null	null	null	null	null	null	null	null	109.803224137384	null	null	
+	ACT_COST	MINGIB	-	-	-	-	-	0	84.1329857223769	null	null	60.2146713011459	null	null	null	null	68.4794301071855	null	null	null	null	null	null	null	null	null	65.7245105051723	null	null	null	null	null	null	null	null	null	null	null	59.4275514148564	null	null	
 	ACT_COST	MINGIC	-	-	-	-	-	0	84.1329857223769	null	null	100.078528669864	null	null	null	null	100.078528669864	null	null	null	null	null	null	null	null	null	100.078528669864	null	null	null	null	null	null	null	null	null	null	null	100.078528669864	null	null	
 	ACT_COST	MINGIH	-	-	-	-	-	0	81.0308676525533	null	null	57.9944598310793	null	null	null	null	57.9944598310793	null	null	null	null	null	null	null	null	null	57.9944598310793	null	null	null	null	null	null	null	null	null	null	null	57.9944598310793	null	null	
 	ACT_COST	MINHYD	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	MINOCR	-	-	-	-	-	0	126.341439338365	null	null	90.4236094339623	null	null	null	null	102.834693081761	null	null	null	null	null	null	null	null	null	134.748908176101	null	null	null	null	null	null	null	null	null	null	null	164.890111320755	null	null	
+	ACT_COST	MINOCR	-	-	-	-	-	0	126.341439338365	null	null	90.4236094339623	null	null	null	null	102.834693081761	null	null	null	null	null	null	null	null	null	98.6976651991614	null	null	null	null	null	null	null	null	null	null	null	89.2416014675052	null	null	
 	ACT_COST	MINSOL	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINWAS	-	-	-	-	-	0	0	null	null	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
 	ACT_COST	MINWND	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -514,12 +514,12 @@ TS DATA	REGION1
 	ACT_COST	PEXCOA	-	-	-	-	-	3	-42.7616111111111	null	null	-43.0408055555556	null	null	null	null	-43.32	null	null	null	null	null	null	null	null	null	-43.32	null	null	null	null	null	null	null	null	null	null	null	-43.32	null	null	
 	ACT_COST	PEXCOK	-	-	-	-	-	0	-64.1424166666667	null	null	-64.5612083333333	null	null	null	null	-64.98	null	null	null	null	null	null	null	null	null	-64.98	null	null	null	null	null	null	null	null	null	null	null	-64.98	null	null	
 	ACT_COST	PEXELC	-	-	-	-	-	3	-34.054054054054	null	null	-34.054054054054	null	null	null	null	-34.054054054054	null	null	null	null	null	null	null	null	null	-34.054054054054	null	null	null	null	null	null	null	null	null	null	null	-34.054054054054	null	null	
-	ACT_COST	PEXOAG	-	-	-	-	-	0	-168.053019143247	null	null	-123.204874100948	null	null	null	null	-137.717880558845	null	null	null	null	null	null	null	null	null	-178.90274413507	null	null	null	null	null	null	null	null	null	null	null	-217.799559734839	null	null	
-	ACT_COST	PEXOCR	-	-	-	-	-	0	-133.360408190497	null	null	-95.4471432914046	null	null	null	null	-108.547731586303	null	null	null	null	null	null	null	null	null	-142.234958630328	null	null	null	null	null	null	null	null	null	null	null	-174.050673060797	null	null	
-	ACT_COST	PEXODS	-	-	-	-	-	0	-160.472609041967	null	null	-113.891628823011	null	null	null	null	-130.309833924387	null	null	null	null	null	null	null	null	null	-171.26068617916	null	null	null	null	null	null	null	null	null	null	null	-209.936491086446	null	null	
-	ACT_COST	PEXOGS	-	-	-	-	-	0	-168.053019143247	null	null	-123.204874100948	null	null	null	null	-137.717880558845	null	null	null	null	null	null	null	null	null	-178.90274413507	null	null	null	null	null	null	null	null	null	null	null	-217.799559734839	null	null	
-	ACT_COST	PEXOHF	-	-	-	-	-	0	-133.360408190497	null	null	-95.4471432914046	null	null	null	null	-108.547731586303	null	null	null	null	null	null	null	null	null	-142.234958630328	null	null	null	null	null	null	null	null	null	null	null	-174.050673060797	null	null	
-	ACT_COST	PEXOKE	-	-	-	-	-	0	-168.739644853543	null	null	-124.226933337003	null	null	null	null	-139.607901159739	null	null	null	null	null	null	null	null	null	-179.158961275344	null	null	null	null	null	null	null	null	null	null	null	-216.512740273415	null	null	
+	ACT_COST	PEXOAG	-	-	-	-	-	0	-168.053019143247	null	null	-123.204874100948	null	null	null	null	-137.717880558845	null	null	null	null	null	null	null	null	null	-132.379101947112	null	null	null	null	null	null	null	null	null	null	null	-120.176179406008	null	null	
+	ACT_COST	PEXOCR	-	-	-	-	-	0	-133.360408190497	null	null	-95.4471432914046	null	null	null	null	-108.547731586303	null	null	null	null	null	null	null	null	null	-104.180868821337	null	null	null	null	null	null	null	null	null	null	null	-94.1994682157	null	null	
+	ACT_COST	PEXODS	-	-	-	-	-	0	-160.472609041967	null	null	-113.891628823011	null	null	null	null	-130.309833924387	null	null	null	null	null	null	null	null	null	-125.001390113583	null	null	null	null	null	null	null	null	null	null	null	-112.867804260317	null	null	
+	ACT_COST	PEXOGS	-	-	-	-	-	0	-168.053019143247	null	null	-123.204874100948	null	null	null	null	-137.717880558845	null	null	null	null	null	null	null	null	null	-132.379101947112	null	null	null	null	null	null	null	null	null	null	null	-120.176179406008	null	null	
+	ACT_COST	PEXOHF	-	-	-	-	-	0	-133.360408190497	null	null	-95.4471432914046	null	null	null	null	-108.547731586303	null	null	null	null	null	null	null	null	null	-104.180868821337	null	null	null	null	null	null	null	null	null	null	null	-94.1994682157	null	null	
+	ACT_COST	PEXOKE	-	-	-	-	-	0	-168.739644853543	null	null	-124.226933337003	null	null	null	null	-139.607901159739	null	null	null	null	null	null	null	null	null	-134.480911885493	null	null	null	null	null	null	null	null	null	null	null	-122.762079258647	null	null	
 	ACT_COST	UCOGCLEHGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UCTLCLEIN-E	-	-	-	-	-	0	23.7398752470631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UCTLCLEIN-N	-	-	-	-	-	0	23.7398752470631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
