@@ -4435,9 +4435,9 @@ RowDim=3
 Squeeze=1
 SqTrail0=0
 Order=5,1,2,4,3
-Decim=0
-PlaneRownr=5
-PlaneFilter1=FlowOut
+Decim=2
+PlaneRownr=14
+PlaneFilter1=CO2C
 
 [GDXDISP: TX Set 1]
 PlaneDim=0
@@ -4624,11 +4624,11 @@ Decim=7
 PlaneRownr=-1
 
 [GDXDISP: QVAX Par 5]
-PlaneDim=0
-RowDim=4
+PlaneDim=1
+RowDim=3
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,5,4
+Order=5,1,2,3,4
 Decim=2
 PlaneRownr=-1
 
@@ -5201,16 +5201,6 @@ SqTrail0=0
 Order=1,2
 Decim=7
 PlaneRownr=-1
-
-[GDXDISP: REPORTM Par 5]
-PlaneDim=1
-RowDim=4
-Squeeze=1
-SqTrail0=0
-Order=4,1,2,3,5
-Decim=7
-PlaneRownr=-1
-PlaneFilter1=NoPAMS-CAP06
 
 [GDXDISP: FLOW_IN_FSFuels Par 4]
 PlaneDim=0
@@ -5990,9 +5980,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[RP:2SIMULATION_LOOP]
-1=
-
 [GDXDISP: VAL_FLO Par 5]
 PlaneDim=0
 RowDim=5
@@ -6191,6 +6178,49 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
+[GDXDISP: PRCBulkPower Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COMEQUIL Equ 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: REPORTM Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=5,1,2,4,3
+Decim=0
+PlaneRownr=9
+PlaneFilter1=FuelCosts
+
+[RP:GHGENERGYREPORT]
+1=
+
+[GDXDISP: COMEXT Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:2SIMULATION_LOOP]
+1=
+
 [RP:2TIMESREPORT]
 1=
 
@@ -6199,62 +6229,57 @@ PlaneRownr=-1
 2=
 
 [RP:SATIMGE]
-1=r=cge\model, gdx = NetZero
-2=r=cge\model, gdx = NetZeroFixes2
-3=r=cge\model, gdx = NetZeroFixes
-4=r=cge\model, gdx = RECAPrun
-5=r=cge\model, gdx = P4Ccaseshg4
-6=r=cge\model, gdx = P4Ccaseshg3
-7=r=cge\model, gdx = P4Ccaseshg2
-8=r=cge\model, gdx = P4Ccaseshg
-9=r=cge\model, gdx = P4Ccases
-10=r=cge\model, gdx = debugP4C
-11=r=cge\model, gdx = P4Ctest
-12=r=cge\model, gdx = P4CcasesHG
-13=r=cge\model, gdx = P4C_CumulCases
-14=r=cge\model, gdx = P4CTest
-15=r=cge\model, gdx = SAGEMbatch3
-16=r=cge\model, gdx = SAGEMbatch2
-17=r=cge\model, gdx = SAGEMcheck
-18=r=cge\model, gdx = SAGEM25popt
-19=r=cge\model, gdx = SAGEMdebug
-20=r=cge\model, gdx = SAGEM
-
-[RP:GHGENERGYREPORT]
-1=
+1=r=cge\model, gdx = NetZeroTest
+2=r=cge\model, gdx = hiGr
+3=r=cge\model, gdx = NetZero
+4=r=cge\model, gdx = LOP
+5=r=cge\model, gdx = NetZeroFixes2
+6=r=cge\model, gdx = NetZeroFixes
+7=r=cge\model, gdx = RECAPrun
+8=r=cge\model, gdx = P4Ccaseshg4
+9=r=cge\model, gdx = P4Ccaseshg3
+10=r=cge\model, gdx = P4Ccaseshg2
+11=r=cge\model, gdx = P4Ccaseshg
+12=r=cge\model, gdx = P4Ccases
+13=r=cge\model, gdx = debugP4C
+14=r=cge\model, gdx = P4Ctest
+15=r=cge\model, gdx = P4CcasesHG
+16=r=cge\model, gdx = P4C_CumulCases
+17=r=cge\model, gdx = P4CTest
+18=r=cge\model, gdx = SAGEMbatch3
+19=r=cge\model, gdx = SAGEMbatch2
+20=r=cge\model, gdx = SAGEMcheck
 
 [RP:GHGPROCESSREPORT]
 1=
 
 [MRUFILES]
-1=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NOPAMSCAP.gdx
-2=C:\Models\SATIMGE\MergeRuns_H.gms
-3=C:\Models\SATIMGE\test.gdx
-4=C:\Models\SATIMGE\REPORTM.gdx
-5=C:\Models\SATIMGE\SAGEMRuns.gdx
-6=C:\Models\SATIMGE\SAGEMcheck.gdx
-7=C:\Models\SATIMGE\SAGEMdebug.gdx
+1=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NOPAMSCAP2.gdx
+2=C:\Models\SATIMGE\NetZeroFixes2.gdx
+3=C:\Models\SATIMGE\NetZeroFixes.gdx
+4=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NOPAMSCAP.gdx
+5=C:\Models\SATIMGE\MergeRuns_H.gms
+6=C:\Models\SATIMGE\test.gdx
+7=C:\Models\SATIMGE\REPORTM.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\drivers.gdx
-FILE1=C:\Models\SATIMGE\NetZeroFixes.gdx
-FILE2=C:\Models\SATIMGE\NetZeroFixes2.gdx
-FILE3=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NOPAMSCAP2.gdx
-FILE4=C:\Models\SATIMGE\NetZeroFixes2.gdx
+FILE0=C:\Models\SATIMGE\merged.gdx
+FILE1=C:\Models\SATIMGE\NetZero.gdx
+FILE2=C:\Models\SATIMGE\NetZero.gdx
 MAXIM=0
-TOP=13
-LEFT=1268
-HEIGHT=1270
-WIDTH=1267
+TOP=0
+LEFT=0
+HEIGHT=1256
+WIDTH=1218
 
 [OPENWINDOW_2]
-FILE0=C:\Models\SATIMGE\NetZero.gdx
-FILE1=C:\Models\SATIMGE\NetZero.gdx
+FILE0=C:\Models\SATIMGE\NetZeroTest.gdx
+FILE1=C:\Models\SATIMGE\NetZeroTest.gdx
 MAXIM=0
-TOP=6
-LEFT=1279
-HEIGHT=1282
-WIDTH=1263
+TOP=4
+LEFT=6
+HEIGHT=1253
+WIDTH=1201
 
 [OPENWINDOW_3]
 FILE0=C:\Models\SATIMGE\4itercheck.gdx
@@ -6271,26 +6296,15 @@ FILE10=C:\Models\SATIMGE\drivers.gdx
 FILE11=C:\Models\SATIMGE\MergeRuns.gms
 FILE12=C:\Models\SATIMGE\MergeRuns.lst
 FILE13=C:\Models\SATIMGE\NetZero.gdx
-FILE14=C:\Models\SATIMGE\NetZeroFixes.gdx
-FILE15=C:\Models\SATIMGE\NZTest01.gdx
-FILE16=C:\Models\SATIMGE\P4C_CumulCases.gdx
-FILE17=C:\Models\SATIMGE\P4Ccases.gdx
-FILE18=C:\Models\SATIMGE\P4Ctest.gdx
-FILE19=C:\Models\SATIMGE\preHFO.gdx
-FILE20=C:\Models\SATIMGE\ref1.gdx
-FILE21=C:\Models\SATIMGE\refresh_demStart.gms
-FILE22=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
-FILE23=C:\Models\SATIMGE\SATIM\Includes\2TIMESSubAnnualReport.inc
-FILE24=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
-FILE25=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
-FILE26=C:\Models\SATIMGE\SATIMGE.gms
-FILE27=C:\Models\SATIMGE\SATIMGE.lst
-FILE28=C:\Models\SATIMGE\SetsAndMaps\SetsMaps.gdx
-FILE29=C:\Models\SATIMGE\testLinked4.gdx
-FILE30=C:\Models\SATIMGE\UnMergeRuns.gms
-FILE31=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE14=C:\Models\SATIMGE\NetZeroTest.gdx
+FILE15=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE16=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE17=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE18=C:\Models\SATIMGE\SATIMGE.gms
+FILE19=C:\Models\SATIMGE\SATIMGE.lst
+FILE20=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
 MAXIM=0
-TOP=32
-LEFT=10
-HEIGHT=1100
-WIDTH=1247
+TOP=-2
+LEFT=566
+HEIGHT=1256
+WIDTH=1218
