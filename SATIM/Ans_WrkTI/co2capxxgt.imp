@@ -1,8 +1,8 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/25	6:08:07 PM
+Creation Date:	2021/09/06	2:32:04 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
-Scenario:	CO2CAPXXGT	XX GTon CO2 Cap 2020-2050 on Energy and IPPU	XX is specified in SATIMGE.xlsm
+Scenario:	CO2CAPXXGT	XX GTon CO2 Cap 2021-2050 on Energy and IPPU	XX is specified in SATIMGE.xlsm
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
 
 REGIONS	_GLOBAL,REGION1
@@ -28,7 +28,9 @@ ITEMS	REGION1
 	E	CH4SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2EQSB	CO2eq for Carbon Cap constraints	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2S	CO2S South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	CO2SF	Fugitive Emissions Region	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPCEM	Process Emissions CEM South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPLIM	Process Emissions Lime South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMCH4S	Commercial Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMCMOX	Commercial Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMCO2S	Commercial Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
@@ -38,7 +40,7 @@ ITEMS	REGION1
 	E	COMP10S	Commercial PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMSOXS	Commercial Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCH4S	Industry Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry - Carbon Monoxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2S	Industry Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDN2OS	Industry Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMVS	Industry NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
@@ -99,6 +101,10 @@ TS DATA	REGION1
 	COM_AGG	-	CH4SF	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	CO2SF	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	CO2SP	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CO2SPCEM	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CO2SPIFC	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CO2SPIFM	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_AGG	-	CO2SPLIM	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	COMCH4S	-	CO2EQSB	-	-	0	28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	COMCO2S	-	CO2EQSB	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_AGG	-	COMN2OS	-	CO2EQSB	-	-	0	265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -122,7 +128,6 @@ TS DATA	REGION1
 	FLO_EMIS	ZDUMCO2P	CO2SP	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 
 TID DATA	REGION1
-	COM_CUMNET	-	CO2EQSB	-	2020	2050	UP	10000000	
 	PRC_ACTUNT	ZDUMCO2P	-	ZCO2P	-	-	-	1	
 	PRC_CAPACT	ZDUMCO2P	-	-	-	-	-	1	
 	TOP-OUT	ZDUMCO2P	CO2SP	-	-	-	-	1	

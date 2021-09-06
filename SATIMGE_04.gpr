@@ -5734,9 +5734,6 @@ Order=1,3,2
 Decim=1
 PlaneRownr=-1
 
-[RP:GHGAFOLUREPORT]
-1=
-
 [RP:GHGWASTEREPORT]
 1=
 
@@ -6206,9 +6203,6 @@ Decim=0
 PlaneRownr=9
 PlaneFilter1=FuelCosts
 
-[RP:GHGENERGYREPORT]
-1=
-
 [GDXDISP: COMEXT Set 1]
 PlaneDim=0
 RowDim=1
@@ -6227,6 +6221,15 @@ PlaneRownr=-1
 [RP:MERGERUNS]
 1=gdx = merged
 2=
+
+[RP:GHGENERGYREPORT]
+1=
+
+[RP:GHGPROCESSREPORT]
+1=
+
+[RP:GHGAFOLUREPORT]
+1=
 
 [RP:SATIMGE]
 1=r=cge\model, gdx = NetZeroTest
@@ -6249,9 +6252,6 @@ PlaneRownr=-1
 18=r=cge\model, gdx = SAGEMbatch3
 19=r=cge\model, gdx = SAGEMbatch2
 20=r=cge\model, gdx = SAGEMcheck
-
-[RP:GHGPROCESSREPORT]
-1=
 
 [MRUFILES]
 1=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NOPAMSCAP2.gdx
@@ -6283,26 +6283,27 @@ WIDTH=1201
 
 [OPENWINDOW_3]
 FILE0=C:\Models\SATIMGE\4itercheck.gdx
-FILE1=C:\Models\SATIMGE\batch_cap_Pams.gdx
-FILE2=C:\Models\SATIMGE\CGE\includes\2capital.inc
-FILE3=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
-FILE4=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
-FILE5=C:\Models\SATIMGE\CGE\includes\2projection.inc
-FILE6=C:\Models\SATIMGE\CGE\includes\2simulation.inc
-FILE7=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-FILE8=C:\Models\SATIMGE\debugP4C.gdx
-FILE9=C:\Models\SATIMGE\dem_start.gdx
-FILE10=C:\Models\SATIMGE\drivers.gdx
-FILE11=C:\Models\SATIMGE\MergeRuns.gms
-FILE12=C:\Models\SATIMGE\MergeRuns.lst
-FILE13=C:\Models\SATIMGE\NetZero.gdx
-FILE14=C:\Models\SATIMGE\NetZeroTest.gdx
-FILE15=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
-FILE16=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
-FILE17=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
-FILE18=C:\Models\SATIMGE\SATIMGE.gms
-FILE19=C:\Models\SATIMGE\SATIMGE.lst
-FILE20=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE1=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
+FILE2=C:\Models\SATIMGE\batch_cap_Pams.gdx
+FILE3=C:\Models\SATIMGE\CGE\includes\2capital.inc
+FILE4=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
+FILE5=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
+FILE6=C:\Models\SATIMGE\CGE\includes\2projection.inc
+FILE7=C:\Models\SATIMGE\CGE\includes\2simulation.inc
+FILE8=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+FILE9=C:\Models\SATIMGE\debugP4C.gdx
+FILE10=C:\Models\SATIMGE\dem_start.gdx
+FILE11=C:\Models\SATIMGE\drivers.gdx
+FILE12=C:\Models\SATIMGE\MergeRuns.gms
+FILE13=C:\Models\SATIMGE\MergeRuns.lst
+FILE14=C:\Models\SATIMGE\NetZero.gdx
+FILE15=C:\Models\SATIMGE\NetZeroTest.gdx
+FILE16=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE17=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE18=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE19=C:\Models\SATIMGE\SATIMGE.gms
+FILE20=C:\Models\SATIMGE\SATIMGE.lst
+FILE21=C:\Models\SATIMGE\SATIMGE.lst
 MAXIM=0
 TOP=-2
 LEFT=566

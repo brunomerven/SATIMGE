@@ -16,7 +16,7 @@ REPORT(PRC,'ACTGRP',TC,RUN,Emiss)$LandEmissions(PRC,Emiss,TC) = LandEmissions(PR
 
 
 * Write Drivers to Spreadsheet
-execute_unload "DriversAGRI.gdx" GVA_FS POP
+execute_unload "DriversAGRI.gdx" GVA_FS POP PAMS_RUN
 execute 'gdxxrw.exe i=DriversAGRI.gdx o=AFOLU\Agriculture_model_Linked.xlsx index=indexG2E!a6';
 
 * Read Results from Spreadsheet

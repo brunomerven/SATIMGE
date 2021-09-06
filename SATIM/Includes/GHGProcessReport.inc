@@ -2,7 +2,7 @@
 
 *Mineral Industry
 REPORT('I2A1','ACTGRP',TC,RUN,'CO2') = sum(PRC$MPRCSubSubSector(PRC,'Industry','NMMProducts34','Cement'),REPORT(PRC,'CO2SPCEM',TC,RUN,'FlowOut'));
-REPORT('I2A2','ACTGRP',TC,RUN,'CO2') = sum(PRC$MPRCSubSubSector(PRC,'Industry','NMMProducts34','Lime'),REPORT(PRC,'CO2SP',TC,RUN,'FlowOut'));
+REPORT('I2A2','ACTGRP',TC,RUN,'CO2') = sum(PRC$MPRCSubSubSector(PRC,'Industry','NMMProducts34','Lime'),REPORT(PRC,'CO2SPLIM',TC,RUN,'FlowOut'));
 REPORT('I2A3','ACTGRP',TC,RUN,'CO2') = sum(PRC$MPRCSubSubSector(PRC,'Industry','NMMProducts34','Glass'),REPORT(PRC,'CO2SP',TC,RUN,'FlowOut'));
 
 * Chemical Industry (currently not in SATIM),
@@ -28,6 +28,9 @@ REPORT('I2C5','ACTGRP',TC,RUN,'CO2') = 21.74*GVA_FS('nf',TC)/GVA_FS('nf','2017')
 REPORT('I2C6','ACTGRP',TC,RUN,'CO2') = 46.32*GVA_FS('nf',TC)/GVA_FS('nf','2017');
 
 * CO2 capture accounted for under CO2C
+REPORT('I2A1','ACTGRP',TC,RUN,'CO2C') = sum(PRC$MPRCSector(PRC,'CO2Capture&Storage'),REPORT(PRC,'CO2SPCEM',TC,RUN,'FlowOut'));
+REPORT('I2A2','ACTGRP',TC,RUN,'CO2C') = sum(PRC$MPRCSector(PRC,'CO2Capture&Storage'),REPORT(PRC,'CO2SPLIM',TC,RUN,'FlowOut'));
+
 REPORT('I2C2','ACTGRP',TC,RUN,'CO2C') = sum(PRC$MPRCSector(PRC,'CO2Capture&Storage'),REPORT(PRC,'CO2SPIFC',TC,RUN,'FlowOut'))+sum(PRC$MPRCSector(PRC,'CO2Capture&Storage'),REPORT(PRC,'CO2SPIFM',TC,RUN,'FlowOut'));
 
 * still need to add others if needed

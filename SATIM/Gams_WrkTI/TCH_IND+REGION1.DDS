@@ -54,9 +54,10 @@ SET COM_GRP /
   'CGXIISBIO-I'              'Comm. Group for Industry - Iron&Steel - Biomass su'
   'CH4S'                     'CH4S South Africa                                 '
   'CO2SP'                    'Process Emissions South Africa                    '
-  'CO2SPCEM'                 'Process Emissions Cement South Africa             '
+  'CO2SPCEM'                 'Process Emissions CEM South Africa                '
   'CO2SPIFC'                 'Process Emissions FerroChrome South Africa        '
   'CO2SPIFM'                 'Process Emissions FerroManganese South Africa     '
+  'CO2SPLIM'                 'Process Emissions Lime South Africa               '
   'IALM'                     'Industry - Aluminium Metal                        '
   'ICPA'                     'Industry-Chemicals-Compressed air - Electricity   '
   'ICPC'                     'Industry-Chemicals-Cooling - Electricity          '
@@ -119,29 +120,29 @@ SET COM_GRP /
   'IMIP'                     'Industry-Mining-Pumping - Electricity             '
   'IMIR'                     'Industry-Mining-Transport - Oil Diesel - Existing '
   'IMIS'                     'Industry-Mining-boiler/process heating - Waste - E'
-  'INDBIB'                   'Industry Biomass bagasse                          '
+  'INDBIB'                   'Industry - Biomass Bagasse                        '
   'INDBIO'                   'Industry Biochar                                  '
-  'INDBIW'                   'Industry Biomass Wood                             '
+  'INDBIW'                   'Industry - Biomass wood                           '
   'INDCH4'                   'Industry - Methane                                '
-  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
+  'INDCMOX'                  'Industry - Carbon Monoxide                        '
   'INDCO2'                   'Industry - Carbon Dioxide                         '
-  'INDCOA'                   'Industry Coal                                     '
-  'INDCOK'                   'Industry Coal Coking                              '
-  'INDGAS'                   'Industry Gas South Africa                         '
+  'INDCOA'                   'Industry - Coal                                   '
+  'INDCOK'                   'Industry - Coking coal                            '
+  'INDGAS'                   'Industry - South Africa gas                       '
   'INDHGN'                   'Industry Hydrogen                                 '
   'INDN2O'                   'Industry - Nitrous Oxide                          '
   'INDNMV'                   'Industry - NMVOCs                                 '
   'INDNOX'                   'Industry - Nitrogen Gases                         '
-  'INDODS'                   'Industry Oil Diesel                               '
-  'INDOHF'                   'Industry Oil HFO                                  '
-  'INDOLP'                   'Industry Oil LPG                                  '
+  'INDODS'                   'Industry - Diesel                                 '
+  'INDOHF'                   'Industry - Oil HFO                                '
+  'INDOLP'                   'Industry - Oil LPG                                '
   'INDPM10'                  'Industry - PM10                                   '
   'INDSOX'                   'Industry - Sulphur Gases                          '
-  'INDWAS'                   'Industry Waste                                    '
+  'INDWAS'                   'Industry - Waste                                  '
   'INFA'                     'Industry-Precious & Non-Ferrous metals-Compressed '
   'INFC'                     'Industry-Precious & Non-Ferrous metals-Cooling - E'
   'INFE'                     'Industry-Precious & Non-Ferrous metals-Electrochem'
-  'INFELC'                   'Industry-NF-Electricity                           '
+  'INFELC'                   'Industry - NonFerrous - Electricity               '
   'INFF'                     'Industry-Precious & Non-Ferrous metals-Fans - Elec'
   'INFGAS'                   'Industry-NF-Gas                                   '
   'INFH'                     'Industry-Precious & Non-Ferrous metals-HVAC - Elec'
@@ -179,7 +180,8 @@ SET COM_GRP /
   'IOTP'                     'Industry-Other-Pumping - Electricity              '
   'IOTR'                     'Industry-Other-Transport - Oil Diesel - Existing  '
   'IOTS'                     'Industry-Other-boiler/process heating - Waste - Ex'
-  'IPGM'                     'Commodity demand for Pt                           '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+  'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
   'IPPBIO'                   'Industry - PP - Biomass                           '
   'IPPBLQ'                   'Industry - PP - Black Liquor                      '
   'IPPCOA'                   'Industry - PP - Coal                              '
@@ -201,9 +203,10 @@ SET COM /
   'CF6'                      'Process Emissions South Africa CF6                '
   'CH4S'                     'CH4S South Africa                                 '
   'CO2SP'                    'Process Emissions South Africa                    '
-  'CO2SPCEM'                 'Process Emissions Cement South Africa             '
+  'CO2SPCEM'                 'Process Emissions CEM South Africa                '
   'CO2SPIFC'                 'Process Emissions FerroChrome South Africa        '
   'CO2SPIFM'                 'Process Emissions FerroManganese South Africa     '
+  'CO2SPLIM'                 'Process Emissions Lime South Africa               '
   'IALM'                     'Industry - Aluminium Metal                        '
   'ICPA'                     'Industry-Chemicals-Compressed air - Electricity   '
   'ICPC'                     'Industry-Chemicals-Cooling - Electricity          '
@@ -266,29 +269,29 @@ SET COM /
   'IMIP'                     'Industry-Mining-Pumping - Electricity             '
   'IMIR'                     'Industry-Mining-Transport - Oil Diesel - Existing '
   'IMIS'                     'Industry-Mining-boiler/process heating - Waste - E'
-  'INDBIB'                   'Industry Biomass bagasse                          '
+  'INDBIB'                   'Industry - Biomass Bagasse                        '
   'INDBIO'                   'Industry Biochar                                  '
-  'INDBIW'                   'Industry Biomass Wood                             '
+  'INDBIW'                   'Industry - Biomass wood                           '
   'INDCH4'                   'Industry - Methane                                '
-  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
+  'INDCMOX'                  'Industry - Carbon Monoxide                        '
   'INDCO2'                   'Industry - Carbon Dioxide                         '
-  'INDCOA'                   'Industry Coal                                     '
-  'INDCOK'                   'Industry Coal Coking                              '
-  'INDGAS'                   'Industry Gas South Africa                         '
+  'INDCOA'                   'Industry - Coal                                   '
+  'INDCOK'                   'Industry - Coking coal                            '
+  'INDGAS'                   'Industry - South Africa gas                       '
   'INDHGN'                   'Industry Hydrogen                                 '
   'INDN2O'                   'Industry - Nitrous Oxide                          '
   'INDNMV'                   'Industry - NMVOCs                                 '
   'INDNOX'                   'Industry - Nitrogen Gases                         '
-  'INDODS'                   'Industry Oil Diesel                               '
-  'INDOHF'                   'Industry Oil HFO                                  '
-  'INDOLP'                   'Industry Oil LPG                                  '
+  'INDODS'                   'Industry - Diesel                                 '
+  'INDOHF'                   'Industry - Oil HFO                                '
+  'INDOLP'                   'Industry - Oil LPG                                '
   'INDPM10'                  'Industry - PM10                                   '
   'INDSOX'                   'Industry - Sulphur Gases                          '
-  'INDWAS'                   'Industry Waste                                    '
+  'INDWAS'                   'Industry - Waste                                  '
   'INFA'                     'Industry-Precious & Non-Ferrous metals-Compressed '
   'INFC'                     'Industry-Precious & Non-Ferrous metals-Cooling - E'
   'INFE'                     'Industry-Precious & Non-Ferrous metals-Electrochem'
-  'INFELC'                   'Industry-NF-Electricity                           '
+  'INFELC'                   'Industry - NonFerrous - Electricity               '
   'INFF'                     'Industry-Precious & Non-Ferrous metals-Fans - Elec'
   'INFGAS'                   'Industry-NF-Gas                                   '
   'INFH'                     'Industry-Precious & Non-Ferrous metals-HVAC - Elec'
@@ -326,7 +329,8 @@ SET COM /
   'IOTP'                     'Industry-Other-Pumping - Electricity              '
   'IOTR'                     'Industry-Other-Transport - Oil Diesel - Existing  '
   'IOTS'                     'Industry-Other-boiler/process heating - Waste - Ex'
-  'IPGM'                     'Commodity demand for Pt                           '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+  'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
   'IPPBIO'                   'Industry - PP - Biomass                           '
   'IPPBLQ'                   'Industry - PP - Black Liquor                      '
   'IPPCOA'                   'Industry - PP - Coal                              '
@@ -402,6 +406,7 @@ SET COM_DEM /
   'REGION1'   .'IOTR'
   'REGION1'   .'IOTS'
   'REGION1'   .'IPGM'
+  'REGION1'   .'IPGMOP'
   'REGION1'   .'IPPPAP'
   'REGION1'   .'IPPPULPD'
 /;
@@ -476,6 +481,7 @@ SET COM_ENV /
   'REGION1'   .'CO2SPCEM'
   'REGION1'   .'CO2SPIFC'
   'REGION1'   .'CO2SPIFM'
+  'REGION1'   .'CO2SPLIM'
   'REGION1'   .'IISCO2'
   'REGION1'   .'INDCH4'
   'REGION1'   .'INDCMOX'
@@ -494,6 +500,7 @@ SET COM_ANNUAL /
   'REGION1'   .'CO2SPCEM'
   'REGION1'   .'CO2SPIFC'
   'REGION1'   .'CO2SPIFM'
+  'REGION1'   .'CO2SPLIM'
   'REGION1'   .'IALM'
   'REGION1'   .'ICPA'
   'REGION1'   .'ICPC'
@@ -606,6 +613,7 @@ SET COM_ANNUAL /
   'REGION1'   .'IOTR'
   'REGION1'   .'IOTS'
   'REGION1'   .'IPGM'
+  'REGION1'   .'IPGMOP'
   'REGION1'   .'IPPBIO'
   'REGION1'   .'IPPBLQ'
   'REGION1'   .'IPPCOA'
@@ -705,7 +713,6 @@ SET COM_DEMIND /
   'REGION1'   .'INMLIM'
 /;
 SET COM_DEMOTH /
-  'REGION1'   .'IPGM'
   'REGION1'   .'IPPPAP'
   'REGION1'   .'IPPPULPD'
 /;
@@ -765,6 +772,8 @@ SET COM_DEMRES /
   'REGION1'   .'IOTP'
   'REGION1'   .'IOTR'
   'REGION1'   .'IOTS'
+  'REGION1'   .'IPGM'
+  'REGION1'   .'IPGMOP'
 /;
 SET COM_ENVGHG /
   'REGION1'   .'CF4'
@@ -774,6 +783,7 @@ SET COM_ENVGHG /
   'REGION1'   .'CO2SPCEM'
   'REGION1'   .'CO2SPIFC'
   'REGION1'   .'CO2SPIFM'
+  'REGION1'   .'CO2SPLIM'
   'REGION1'   .'IISCO2'
   'REGION1'   .'INDCH4'
   'REGION1'   .'INDCMOX'
@@ -939,7 +949,8 @@ SET PRC /
   'IOTSOHF-E'                'Industry-Other-boiler/process heating - Oil HFO - '
   'IOTSOLP-E'                'Industry-Other-boiler/process heating - Oil LPG - '
   'IOTSWAS-E'                'Industry-Other-boiler/process heating - Waste - Ex'
-  'IPGM-E'                   'Industry - PGMs - Mine and Refine - existing      '
+  'IPGMME-E'                 'Industry - PGMs - Mine and refine - existing      '
+  'IPGMME-N'                 'Industry - PGMs - Mine and refine - New           '
   'IPPCHE-E'                 'Pulping - Chemical                                '
   'IPPCHE-E-T1'              'Pulping - Chemical efficiency level 1             '
   'IPPCHE-E-T2'              'Pulping - Chemical efficiency level 2             '
@@ -1100,42 +1111,40 @@ SET PRC_PRE /
   'REGION1'   .'IPPSTMGAS-E'
   'REGION1'   .'IPPSTMGAS-N'
   'REGION1'   .'MINFEORE'
+  'REGION1'   .'XICPELC'
   'REGION1'   .'XICPGAS'
+  'REGION1'   .'XIFAELC'
   'REGION1'   .'XIFAGAS'
+  'REGION1'   .'XIFBELC'
   'REGION1'   .'XIFBGAS'
   'REGION1'   .'XIISBIO'
   'REGION1'   .'XIISCKC'
   'REGION1'   .'XIISCOA'
+  'REGION1'   .'XIISELC'
   'REGION1'   .'XIISELCHY'
   'REGION1'   .'XIISGAS'
   'REGION1'   .'XIISOIL'
   'REGION1'   .'XIISOLP'
   'REGION1'   .'XIISSSC'
   'REGION1'   .'XIISWAS'
+  'REGION1'   .'XIMIELC'
   'REGION1'   .'XIMIGAS'
   'REGION1'   .'XINDBIO'
+  'REGION1'   .'XINFELC'
   'REGION1'   .'XINFGAS'
   'REGION1'   .'XINMBIO'
   'REGION1'   .'XINMCOA'
+  'REGION1'   .'XINMELC'
   'REGION1'   .'XINMGAS'
   'REGION1'   .'XINMOIL'
+  'REGION1'   .'XIOTELC'
   'REGION1'   .'XIOTGAS'
   'REGION1'   .'XIPPBIO'
   'REGION1'   .'XIPPCOA'
+  'REGION1'   .'XIPPELC'
   'REGION1'   .'XIPPGAS'
   'REGION1'   .'XIPPOTH'
   'REGION1'   .'XIPPREC'
-/;
-SET PRC_ELE /
-  'REGION1'   .'XICPELC'
-  'REGION1'   .'XIFAELC'
-  'REGION1'   .'XIFBELC'
-  'REGION1'   .'XIISELC'
-  'REGION1'   .'XIMIELC'
-  'REGION1'   .'XINFELC'
-  'REGION1'   .'XINMELC'
-  'REGION1'   .'XIOTELC'
-  'REGION1'   .'XIPPELC'
 /;
 SET PRC_CHP /
   'REGION1'   .'IPPCHPGAS-N'
@@ -1236,7 +1245,8 @@ SET PRC_DMD /
   'REGION1'   .'IOTSOHF-E'
   'REGION1'   .'IOTSOLP-E'
   'REGION1'   .'IOTSWAS-E'
-  'REGION1'   .'IPGM-E'
+  'REGION1'   .'IPGMME-E'
+  'REGION1'   .'IPGMME-N'
 /;
 SET PRC_STG /
   'REGION1'   .'IISHBATTERY'
@@ -1392,7 +1402,8 @@ SET PRC_ANNUAL /
   'REGION1'   .'IOTSOHF-E'
   'REGION1'   .'IOTSOLP-E'
   'REGION1'   .'IOTSWAS-E'
-  'REGION1'   .'IPGM-E'
+  'REGION1'   .'IPGMME-E'
+  'REGION1'   .'IPGMME-N'
   'REGION1'   .'IPPCHE-E'
   'REGION1'   .'IPPCHE-E-T1'
   'REGION1'   .'IPPCHE-E-T2'
@@ -1480,6 +1491,7 @@ SET ACOM_UNIT /
   'REGION1'.'CO2SPCEM'.'KT'
   'REGION1'.'CO2SPIFC'.'KT'
   'REGION1'.'CO2SPIFM'.'KT'
+  'REGION1'.'CO2SPLIM'.'KT'
   'REGION1'.'IALM'.'mt'
   'REGION1'.'ICPA'.'PJ'
   'REGION1'.'ICPC'.'PJ'
@@ -1579,7 +1591,7 @@ SET ACOM_UNIT /
   'REGION1'.'INMCEM'.'mt'
   'REGION1'.'INMCEMTHF'.'PJ'
   'REGION1'.'INMCLI'.'mt'
-  'REGION1'.'INMCLISUB'.'KT'
+  'REGION1'.'INMCLISUB'.'mt'
   'REGION1'.'INMCOA'.'PJ'
   'REGION1'.'INMELC'.'PJ'
   'REGION1'.'INMGAS'.'PJ'
@@ -1603,6 +1615,7 @@ SET ACOM_UNIT /
   'REGION1'.'IOTR'.'PJ'
   'REGION1'.'IOTS'.'PJ'
   'REGION1'.'IPGM'.'PJ'
+  'REGION1'.'IPGMOP'.'PJ'
   'REGION1'.'IPPBIO'.'PJ'
   'REGION1'.'IPPBLQ'.'PJ'
   'REGION1'.'IPPCOA'.'PJ'
@@ -1740,11 +1753,11 @@ SET PRCTACTUNT /
   'REGION1'.'INMCEMKSP-N'.'mt'
   'REGION1'.'INMCEMPGBM'.'mt'
   'REGION1'.'INMCEMPGRP'.'mt'
-  'REGION1'.'INMCLISUBASH'.'PJ'
-  'REGION1'.'INMCLISUBCLY'.'PJ'
-  'REGION1'.'INMCLISUBGYL'.'PJ'
-  'REGION1'.'INMCLISUBSLAG'.'PJ'
-  'REGION1'.'INMCLISUBSPOZ'.'PJ'
+  'REGION1'.'INMCLISUBASH'.'mt'
+  'REGION1'.'INMCLISUBCLY'.'mt'
+  'REGION1'.'INMCLISUBGYL'.'mt'
+  'REGION1'.'INMCLISUBSLAG'.'mt'
+  'REGION1'.'INMCLISUBSPOZ'.'mt'
   'REGION1'.'INMGLAADV'.'PJ'
   'REGION1'.'INMGLAF2TF'.'PJ'
   'REGION1'.'INMGLASTD'.'PJ'
@@ -1770,7 +1783,8 @@ SET PRCTACTUNT /
   'REGION1'.'IOTSOHF-E'.'PJ'
   'REGION1'.'IOTSOLP-E'.'PJ'
   'REGION1'.'IOTSWAS-E'.'PJ'
-  'REGION1'.'IPGM-E'.'PJ'
+  'REGION1'.'IPGMME-E'.'PJ'
+  'REGION1'.'IPGMME-N'.'PJ'
   'REGION1'.'IPPCHE-E'.'PJ'
   'REGION1'.'IPPCHE-E-T1'.'PJ'
   'REGION1'.'IPPCHE-E-T2'.'PJ'
@@ -1975,6 +1989,7 @@ PARAMETER ANCAP_START /
   'REGION1'                 .'INMCEMKSP-N'                2018
   'REGION1'                 .'INMGLAADV'                  2018
   'REGION1'                 .'INMLIMADV'                  2018
+  'REGION1'                 .'IPGMME-N'                   2025
   'REGION1'                 .'IPPCHE-N'                   2025
   'REGION1'                 .'IPPDIS-N'                   2025
   'REGION1'                 .'IPPMCH-N'                   2025
@@ -2144,7 +2159,8 @@ PARAMETER APRCACTUNT /
   'REGION1'                 .'IOTSOHF-E'               .'IOTS'                       1
   'REGION1'                 .'IOTSOLP-E'               .'IOTS'                       1
   'REGION1'                 .'IOTSWAS-E'               .'IOTS'                       1
-  'REGION1'                 .'IPGM-E'                  .'IPGM'                       1
+  'REGION1'                 .'IPGMME-E'                .'IPGM'                       1
+  'REGION1'                 .'IPGMME-N'                .'IPGM'                       1
   'REGION1'                 .'IPPCHE-E'                .'IPPPULP'                    1
   'REGION1'                 .'IPPCHE-E-T1'             .'IPPPULP'                    1
   'REGION1'                 .'IPPCHE-E-T2'             .'IPPPULP'                    1
@@ -2362,7 +2378,8 @@ PARAMETER APRCCAPACT /
   'REGION1'                 .'IOTSOHF-E'                  1
   'REGION1'                 .'IOTSOLP-E'                  1
   'REGION1'                 .'IOTSWAS-E'                  1
-  'REGION1'                 .'IPGM-E'                     1
+  'REGION1'                 .'IPGMME-E'                   1
+  'REGION1'                 .'IPGMME-N'                   1
   'REGION1'                 .'IPPCHE-E'                   1
   'REGION1'                 .'IPPCHE-E-T1'                1
   'REGION1'                 .'IPPCHE-E-T2'                1
@@ -2673,8 +2690,14 @@ PARAMETER ATOP_IN /
   'REGION1'                 .'IOTSOHF-E'               .'INDOHF'                     1
   'REGION1'                 .'IOTSOLP-E'               .'INDOLP'                     1
   'REGION1'                 .'IOTSWAS-E'               .'INDWAS'                     1
-  'REGION1'                 .'IPGM-E'                  .'INDODS'                     1
-  'REGION1'                 .'IPGM-E'                  .'INFELC'                     1
+  'REGION1'                 .'IPGMME-E'                .'INDCOA'                     1
+  'REGION1'                 .'IPGMME-E'                .'INDODS'                     1
+  'REGION1'                 .'IPGMME-E'                .'INFELC'                     1
+  'REGION1'                 .'IPGMME-E'                .'INFGAS'                     1
+  'REGION1'                 .'IPGMME-N'                .'INDCOA'                     1
+  'REGION1'                 .'IPGMME-N'                .'INDODS'                     1
+  'REGION1'                 .'IPGMME-N'                .'INFELC'                     1
+  'REGION1'                 .'IPGMME-N'                .'INFGAS'                     1
   'REGION1'                 .'IPPCHE-E'                .'IPPCOA'                     1
   'REGION1'                 .'IPPCHE-E'                .'IPPELC'                     1
   'REGION1'                 .'IPPCHE-E'                .'IPPSTM'                     1
@@ -2919,10 +2942,9 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMGLAF2TF'              .'INMGLATHF'                  1
   'REGION1'                 .'INMGLASTD'               .'CO2SP'                      1
   'REGION1'                 .'INMGLASTD'               .'INMGLA'                     1
-  'REGION1'                 .'INMLIMADV'               .'CO2SP'                      1
   'REGION1'                 .'INMLIMADV'               .'INMLIM'                     1
   'REGION1'                 .'INMLIMF2TF'              .'INMLIMTHF'                  1
-  'REGION1'                 .'INMLIMSTD'               .'CO2SP'                      1
+  'REGION1'                 .'INMLIMSTD'               .'CO2SPLIM'                   1
   'REGION1'                 .'INMLIMSTD'               .'INMLIM'                     1
   'REGION1'                 .'IOTAELC-E'               .'IOTA'                       1
   'REGION1'                 .'IOTCELC-E'               .'IOTC'                       1
@@ -2943,7 +2965,10 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IOTSOHF-E'               .'IOTS'                       1
   'REGION1'                 .'IOTSOLP-E'               .'IOTS'                       1
   'REGION1'                 .'IOTSWAS-E'               .'IOTS'                       1
-  'REGION1'                 .'IPGM-E'                  .'IPGM'                       1
+  'REGION1'                 .'IPGMME-E'                .'IPGM'                       1
+  'REGION1'                 .'IPGMME-E'                .'IPGMOP'                     1
+  'REGION1'                 .'IPGMME-N'                .'IPGM'                       1
+  'REGION1'                 .'IPGMME-N'                .'IPGMOP'                     1
   'REGION1'                 .'IPPCHE-E'                .'IPPBLQ'                     1
   'REGION1'                 .'IPPCHE-E'                .'IPPPULP'                    1
   'REGION1'                 .'IPPCHE-E-T1'             .'IPPBLQ'                     1
@@ -3062,14 +3087,17 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IISSCREAF-N'                      4352.479864170                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'INMBRIADV'                        1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'INMBRISTD'                        1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'INMCEMPGBM'                       330.026875                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  'REGION1'                 .'INMCEMPGRP'                       330.026875                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
   'REGION1'                 .'INMCLISUBASH'                     692                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'INMCLISUBCLY'                     1065                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'INMCLISUBGYL'                     330.026875                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
   'REGION1'                 .'INMCLISUBSLAG'                    1008                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'INMCLISUBSPOZ'                    955                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'INMGLAADV'                        1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'INMGLASTD'                        1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'INMLIMADV'                        1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'INMLIMSTD'                        1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-  'REGION1'                 .'IPGM-E'                           338.5313099598                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'MINFEORE'                         1413                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
   'REGION1'                 .'XIISSSC'                         EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 ;
@@ -3219,6 +3247,7 @@ PARAMETER ATOP_OUT /
                                                                                      0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'IFCEAF-E'                .'UP'                               4.857                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
   'REGION1'                 .'IFMEAF-E'                .'UP'                               .6849                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'IPGMME-E'                .'UP'                         3     288.8888888888                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPCHE-E'                .'UP'                         3     1.622402517438                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPDIS-E'                .'UP'                         3     .9305042796234                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPMCH-E'                .'UP'                         3     .4484506097970                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -3288,7 +3317,8 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IOTP'                             4.336913537484                                                                  2.351232                                                                                                                                                                                                                                                                                                                                                                                                                                        
   'REGION1'                 .'IOTR'                             9.468565924678                                                                  4.2                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'IOTS'                             73.69048725299                                                                  68.3095008                                                                                                                                                                                                                                                                                                                                                                                                                                      
-  'REGION1'                 .'IPGM'                             254             264             188             276             264             260                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'IPGM'                             152.6995239213  158.7113162016  113.0216948708  165.9254669381  158.7113162016  156.3065992895                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMOP'                           101.3004760786  105.2886837983  74.97830512910  110.0745330618  105.2886837983  103.6934007104                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPPAP'                           2.18006         2.18006         2.18006         2.18006         2.18006         2.18006                                                                                                                                                                                                                                                                                                                                                                                                                                         
   'REGION1'                 .'IPPPULPD'                         .6591071980666  .6591071980666  .6591071980666  .6591071980666  .6591071980666  .6591071980666                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ;
@@ -3335,8 +3365,8 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMCEMKSP-N'             .'CO2SPCEM'                .'ACTGRP'                  .'ANNUAL'                           520                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'INMGLAADV'               .'CO2SP'                   .'ACTGRP'                  .'ANNUAL'                           103.99                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
   'REGION1'                 .'INMGLASTD'               .'CO2SP'                   .'ACTGRP'                  .'ANNUAL'                           103.99                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-  'REGION1'                 .'INMLIMADV'               .'CO2SP'                   .'ACTGRP'                  .'ANNUAL'                           768                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'INMLIMSTD'               .'CO2SP'                   .'ACTGRP'                  .'ANNUAL'                           768                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'INMLIMADV'               .'CO2SPLIM'                .'ACTGRP'                  .'ANNUAL'                           768                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'INMLIMSTD'               .'CO2SPLIM'                .'ACTGRP'                  .'ANNUAL'                           768                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 ;
        TABLE AFLO_FUNC
                                                                                                                                            0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
@@ -3559,8 +3589,10 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMCEMF2TF'              .'INMGAS'                  .'CG-INMCEMF2THF-I'        .'ANNUAL'                  .'UP'                         3     .05                                                                             .2895439184068                                                                                                                                                                                                  .5                                                                                                                                                                                                                              
   'REGION1'                 .'INMCEMF2TF'              .'INMOIL'                  .'CG-INMCEMF2THF-I'        .'ANNUAL'                  .'LO'                         3    EPS                                                                             EPS                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'INMCEMF2TF'              .'INMOIL'                  .'CG-INMCEMF2THF-I'        .'ANNUAL'                  .'UP'                         3    EPS                                                                             EPS                                                                                                                                                                                                              .5                                                                                                                                                                                                                              
-  'REGION1'                 .'INMCEMFGBM'              .'INMCLISUB'               .'CG-INMCEMCLISUB'         .'ANNUAL'                  .'LO'                         5     .3                                                                                                                              .3                                                                                                                                                              .3                                                                                                                                                                                              .3                              
-  'REGION1'                 .'INMCEMFGRP'              .'INMCLISUB'               .'CG-INMCEMCLISUBM'        .'ANNUAL'                  .'LO'                         5     .3                                                                                                                              .3                                                                                                                                                              .3                                                                                                                                                                                              .3                              
+  'REGION1'                 .'INMCEMFGBM'              .'INMCLISUB'               .'CG-INMCEMCLISUB'         .'ANNUAL'                  .'LO'                         5     .3168                                                                           .3168                                           .3168                                                                                                                                                           .3168                                                                                                                                                                                           .3168                           
+  'REGION1'                 .'INMCEMFGBM'              .'INMCLISUB'               .'CG-INMCEMCLISUB'         .'ANNUAL'                  .'UP'                         5     .32                                                                             .32                                             .32                                                                                                                                                             .5                                                                                                                                                                                              .6                              
+  'REGION1'                 .'INMCEMFGRP'              .'INMCLISUB'               .'CG-INMCEMCLISUBM'        .'ANNUAL'                  .'LO'                         5     .3168                                                                           .3168                                           .3168                                                                                                                                                           .3168                                                                                                                                                                                           .3168                           
+  'REGION1'                 .'INMCEMFGRP'              .'INMCLISUB'               .'CG-INMCEMCLISUBM'        .'ANNUAL'                  .'UP'                         5     .32                                                                             .32                                             .32                                                                                                                                                             .5                                                                                                                                                                                              .6                              
   'REGION1'                 .'INMCEMKLD-E'             .'INMCEMTHF'               .'CG-INMCEMLDK-E-I'        .'ANNUAL'                  .'FX'                         3     .98                                                                             .98                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'INMCEMKLD-E'             .'INMELC'                  .'CG-INMCEMLDK-E-I'        .'ANNUAL'                  .'FX'                         3     .02                                                                             .02                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'INMCEMKPP-E'             .'INMCEMTHF'               .'CG-INMCEMNPP-E-I'        .'ANNUAL'                  .'FX'                         3     .97                                                                             .97                                                                                                                                                                                                                                                                                                                                                                                                                                             
@@ -3583,8 +3615,8 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMGLAF2TF'              .'INMOIL'                  .'CG-INMGLAF2THF-I'        .'ANNUAL'                  .'UP'                         3    EPS                                                                             EPS                                                                                                                                                                                                              .5                                                                                                                                                                                                                              
   'REGION1'                 .'INMGLASTD'               .'INMELC'                  .'CG-INMGLASTD-I'          .'ANNUAL'                  .'UP'                         3     .1                                                                              4.50497443E-04                                                                                                                                                                                                  .3                                                                                                                                                                                                                              
   'REGION1'                 .'INMGLASTD'               .'INMGLATHF'               .'CG-INMGLASTD-I'          .'ANNUAL'                  .'UP'                         3     .9                                                                              .9995495025569                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  'REGION1'                 .'INMLIMADV'               .'INMELC'                  .'CG-INMLIMADV-I'          .'ANNUAL'                  .'LO'                         3     .06                                                                             .06                                                                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'INMLIMADV'               .'INMLIMTHF'               .'CG-INMLIMADV-I'          .'ANNUAL'                  .'UP'                         3     .94                                                                             .94                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'INMLIMADV'               .'INMELC'                  .'CG-INMLIMADV-I'          .'ANNUAL'                  .'LO'                         3     .06                                                                             .06                                                                                                                                                                                                             .06                                                                                                                                                                                             .06                             
+  'REGION1'                 .'INMLIMADV'               .'INMLIMTHF'               .'CG-INMLIMADV-I'          .'ANNUAL'                  .'UP'                         3     .94                                                                             .94                                                                                                                                                                                                             .94                                                                                                                                                                                             .94                             
   'REGION1'                 .'INMLIMF2TF'              .'INMBIO'                  .'CG-INMLIMF2THF-I'        .'ANNUAL'                  .'LO'                         3    EPS                                                                             EPS                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'INMLIMF2TF'              .'INMBIO'                  .'CG-INMLIMF2THF-I'        .'ANNUAL'                  .'UP'                         3    EPS                                                                             EPS                                                                                                                                                                                                              .2                                                                                                                                                                                                                              
   'REGION1'                 .'INMLIMF2TF'              .'INMCOA'                  .'CG-INMLIMF2THF-I'        .'ANNUAL'                  .'LO'                         3     .95                                                                             .95                                                                                                                                                                                                             .5                                                                                                                                                                                                                              
@@ -3593,8 +3625,8 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMLIMF2TF'              .'INMGAS'                  .'CG-INMLIMF2THF-I'        .'ANNUAL'                  .'UP'                         3     .05                                                                             .05                                                                                                                                                                                                             .5                                                                                                                                                                                                                              
   'REGION1'                 .'INMLIMF2TF'              .'INMOIL'                  .'CG-INMLIMF2THF-I'        .'ANNUAL'                  .'LO'                         3    EPS                                                                             EPS                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'INMLIMF2TF'              .'INMOIL'                  .'CG-INMLIMF2THF-I'        .'ANNUAL'                  .'UP'                         3    EPS                                                                             EPS                                                                                                                                                                                                              .5                                                                                                                                                                                                                              
-  'REGION1'                 .'INMLIMSTD'               .'INMELC'                  .'CG-INMLIMSTD-I'          .'ANNUAL'                  .'LO'                         3     .06                                                                             .06                                                                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'INMLIMSTD'               .'INMLIMTHF'               .'CG-INMLIMSTD-I'          .'ANNUAL'                  .'UP'                         3     .94                                                                             .94                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'INMLIMSTD'               .'INMELC'                  .'CG-INMLIMSTD-I'          .'ANNUAL'                  .'LO'                         3     .06                                                                             .06                                                                                                                                                                                                             .06                                                                                                                                                                                             .06                             
+  'REGION1'                 .'INMLIMSTD'               .'INMLIMTHF'               .'CG-INMLIMSTD-I'          .'ANNUAL'                  .'UP'                         3     .94                                                                             .94                                                                                                                                                                                                             .94                                                                                                                                                                                             .94                             
 ;
        TABLE ANCAP_AF
                                                                                                                 0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
@@ -3949,6 +3981,7 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMGLASTD'                        1.31                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
   'REGION1'                 .'INMLIMADV'                        1754.09                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
   'REGION1'                 .'INMLIMSTD'                        1.31                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  'REGION1'                 .'IPGMME-N'                         1159.584577919                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPCHE-E-T1'                      23.50391503064                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPCHE-E-T2'                      709.7003869976                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPCHE-N'                         13094.10308113                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -4009,6 +4042,7 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IISHBATTERY'                      622.6134800550                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IISHHDRI-N'                       150                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'IISHHGNSTOR-N'                                                                                                                                                    522.05                                                                                                                                                          349.77                                                                                                                                                                                          314.8                           
+  'REGION1'                 .'IPGMME-N'                         214.8382514199                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ;
        TABLE ANCAP_ILED
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
@@ -4157,6 +4191,7 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IOTSOHF-E'                        100                                                                             100                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'IOTSOLP-E'                        100                                                                             100                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'IOTSWAS-E'                        100                                                                             100                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'IPGMME-N'                         45                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IPPCHE-N'                         25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IPPDIS-N'                         25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IPPMCH-N'                         25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
@@ -4302,7 +4337,8 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IOTSOHF-E'                        54.58116623807                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IOTSOLP-E'                        35.46154617541                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IOTSWAS-E'                       EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-  'REGION1'                 .'IPGM-E'                           260                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'IPGMME-E'                         288.8888888888                                                                                                                                                                                                                                                                                  288.8888888888                                                                                                                                                                                  288.8888888888                  
+  'REGION1'                 .'IPGMME-N'                        EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IPPCHE-E'                         1.622402517438                                                                  1.622402517438                                                                                                                                                                                                  1.622402517438                                                                 EPS                                                                             EPS                             EPS                              
   'REGION1'                 .'IPPCHE-E-T1'                     EPS                                                                             EPS                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IPPCHE-E-T2'                     EPS                                                                             EPS                                                                                                                                                                                                                                                                                                                                                                                                                                              
@@ -4423,8 +4459,18 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'INMCEMKSP-N'             .'INMRWM'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'INMCEMPGBM'              .'INMRWM'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'INMCEMPGRP'              .'INMRWM'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-  'REGION1'                 .'IPGM-E'                  .'INDODS'                           1.99794041E-02                                                                                                                                                                                                                                                                                                                                                                 EPS                                                                                                                                              
-  'REGION1'                 .'IPGM-E'                  .'INFELC'                           .1735260858229                                                                                                                                                                                                                                                                                                                                                                  .1835157878862                                                                                                                                  
+  'REGION1'                 .'IPGMME-E'                .'INDCOA'                           .0151840241540                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-E'                .'INDODS'                           1.74024960E-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-E'                .'INFELC'                           .1511449993767                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-E'                .'INFGAS'                           1.02210360E-03                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-E'                .'IPGM'                             .6011792280366                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-E'                .'IPGMOP'                           .3988207719633                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-N'                .'INDCOA'                           1.53358643E-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-N'                .'INDODS'                           .0175765210172                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-N'                .'INFELC'                           .1526564493704                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-N'                .'INFGAS'                           1.03232463E-03                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-N'                .'IPGM'                             .6011792280366                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IPGMME-N'                .'IPGMOP'                           .3988207719633                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPCHE-E'                .'IPPBLQ'                           18.00815095507                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'IPPCHE-E'                .'IPPCOA'                           3.4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'IPPCHE-E'                .'IPPELC'                           3.564424712023                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

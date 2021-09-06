@@ -1,4 +1,4 @@
-* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_IND','TCH_COM','TCH_COM_AF','TCH_RES','TCH_RES_AF','TCH_PWR','TCH_PWR_RELL','TCH_PWR_LEAF','TCH_NH3','TCH_CCS','TCH_CCS_C','SUP_BIO2030','TCH_TRA','GTS_METBUS_L','TCH_SUP_ER','TRARAILODSLC','CO2SACAPL45','DMD_ALL' for region REGION1
+* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_IND','TCH_COM','TCH_COM_AF','TCH_RES','TCH_RES_AF','TCH_PWR','TCH_PWR_RELL','TCH_PWR_LEAF','TCH_NH3','TCH_CCS','TCH_CCS_C','SUP_BIO2030','TCH_TRA','GTS_METBUS_L','TCH_SUP_ER','TRARAILODSLC','CO2SACAPL45','CO2CAPXXGT','DMD_ALL' for region REGION1
 SET UC_N /
   'GTS_METROBUS'             'NDC PAMS                                          '
   'RHIEW-LO'                 'HIgh income water heating HP and SWH LO           '

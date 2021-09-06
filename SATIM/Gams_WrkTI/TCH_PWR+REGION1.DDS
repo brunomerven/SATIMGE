@@ -345,8 +345,24 @@ SET PRC_PRE /
   'REGION1'   .'MINCSTUTUVRS'
   'REGION1'   .'MINCSWATEVRS'
   'REGION1'   .'MINPWRWAT'
+  'REGION1'   .'PEXELC'
+  'REGION1'   .'XAGRELC'
+  'REGION1'   .'XCOMELC'
+  'REGION1'   .'XICPELC'
+  'REGION1'   .'XIFAELC'
+  'REGION1'   .'XIFBELC'
+  'REGION1'   .'XIISELC'
+  'REGION1'   .'XIMIELC'
+  'REGION1'   .'XINDELC'
+  'REGION1'   .'XINFELC'
+  'REGION1'   .'XINMELC'
+  'REGION1'   .'XIOTELC'
+  'REGION1'   .'XIPPELC'
   'REGION1'   .'XPWROHF'
   'REGION1'   .'XPWROKE'
+  'REGION1'   .'XRESELC'
+  'REGION1'   .'XTRAELC'
+  'REGION1'   .'XUPSELC'
 /;
 SET PRC_ELE /
   'REGION1'   .'ERBIG-N'
@@ -397,22 +413,6 @@ SET PRC_ELE /
   'REGION1'   .'ETODSGT-N'
   'REGION1'   .'ETRANS'
   'REGION1'   .'ETRANSDUM'
-  'REGION1'   .'PEXELC'
-  'REGION1'   .'XAGRELC'
-  'REGION1'   .'XCOMELC'
-  'REGION1'   .'XICPELC'
-  'REGION1'   .'XIFAELC'
-  'REGION1'   .'XIFBELC'
-  'REGION1'   .'XIISELC'
-  'REGION1'   .'XIMIELC'
-  'REGION1'   .'XINDELC'
-  'REGION1'   .'XINFELC'
-  'REGION1'   .'XINMELC'
-  'REGION1'   .'XIOTELC'
-  'REGION1'   .'XIPPELC'
-  'REGION1'   .'XRESELC'
-  'REGION1'   .'XTRAELC'
-  'REGION1'   .'XUPSELC'
 /;
 SET PRC_STG /
   'REGION1'   .'EPTSTO-E'
@@ -2008,7 +2008,7 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'ETGASENSI-N'             .'UP'                               .85                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'ETGASENSS-N'             .'LO'                                                                                                               .7963576073308                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'ETGASENSS-N'             .'UP'                               .85                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'ETGICCC-CCS-N'           .'LO'                               .1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'ETGICCC-CCS-N'           .'LO'                               .2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'ETGICCC-CCS-N'           .'UP'                               .85                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'ETGICCC-N'               .'LO'                               .2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'ETGICCC-N'               .'UP'                               .85                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

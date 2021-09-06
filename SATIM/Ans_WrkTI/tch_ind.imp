@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/04	10:18:05 AM
+Creation Date:	2021/09/06	2:54:11 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -110,6 +110,7 @@ ITEMS	REGION1
 	E	CO2SPCEM	Process Emissions CEM South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFC	Process Emissions FerroChrome South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFM	Process Emissions FerroManganese South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPLIM	Process Emissions Lime South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	IALM	Industry - Aluminium Metal	mt	COM,DEM,ANNUAL,IND	
 	E	ICPA	Industry-Chemicals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPC	Industry-Chemicals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -185,7 +186,7 @@ ITEMS	REGION1
 	E	INDN2O	Industry - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMV	Industry - NMVOCs	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOX	Industry - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry - Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry - Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDPM10	Industry - PM10	KT	COM,ENV,ANNUAL,GHG	
@@ -194,7 +195,7 @@ ITEMS	REGION1
 	E	INFA	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFC	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFE	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
-	E	INFELC	Industry-NF-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	INFELC	Industry - NonFerrous - Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	INFF	Industry-Precious & Non-Ferrous metals-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFGAS	Industry-NF-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INFH	Industry-Precious & Non-Ferrous metals-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -209,7 +210,7 @@ ITEMS	REGION1
 	E	INMCEM	Industry - Non-metallic minerals	mt	COM,DEM,ANNUAL,IND	
 	E	INMCEMTHF	Industry - NMM- Cement - Thermal Fuel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INMCLI	Industry - NMM- Clinker	mt	COM,NRG,ANNUAL,FOSSIL	
-	E	INMCLISUB	Cement sector clinker substitute	KT	COM,NRG,ANNUAL,FOSSIL	
+	E	INMCLISUB	Cement sector clinker substitute	mt	COM,NRG,ANNUAL,FOSSIL	
 	E	INMCOA	Industry - NMM- Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INMELC	Industry-NM-Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	INMGAS	Industry - NMM- Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -232,7 +233,8 @@ ITEMS	REGION1
 	E	IOTP	Industry-Other-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	IOTR	Industry-Other-Transport - Oil Diesel - Existing	PJ	COM,DEM,ANNUAL,RES	
 	E	IOTS	Industry-Other-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
-	E	IPGM	Commodity demand for Pt	PJ	COM,DEM,ANNUAL,OTH	
+	E	IPGM	Industry - PGMs - Platinum	PJ	COM,DEM,ANNUAL,RES	
+	E	IPGMOP	Industry - PGMs - Other PGMs	PJ	COM,DEM,ANNUAL,RES	
 	E	IPPBIO	Industry - PP - Biomass	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IPPBLQ	Industry - PP - Black Liquor	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IPPCOA	Industry - PP - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -368,11 +370,11 @@ ITEMS	REGION1
 	T	INMCEMKSP-N	Industry - NMM- Cement - Kiln Suspension Preheater - New Build	mt,mt/a	PRC,PRE,ANNUAL	
 	T	INMCEMPGBM	Industry - NMM- Cement - Pre-grinding - Ball mill	mt,mt/a	PRC,PRE,ANNUAL	
 	T	INMCEMPGRP	Industry - NMM- Cement - Pre-grinding - Rotary Press	mt,mt/a	PRC,PRE,ANNUAL	
-	T	INMCLISUBASH	Industry - NMM - Cement sector subtitution - coal power fly ash	PJ,PJa	PRC,PRE,ANNUAL	
-	T	INMCLISUBCLY	Industry - NMM - Cement sector subtitution - Clay	PJ,PJa	PRC,PRE,ANNUAL	
-	T	INMCLISUBGYL	Industry - NMM - Cement sector subtitution - Gypsum	PJ,PJa	PRC,PRE,ANNUAL	
-	T	INMCLISUBSLAG	Industry - NMM - Cement sector subtitution - Blast furnace slag	PJ,PJa	PRC,PRE,ANNUAL	
-	T	INMCLISUBSPOZ	Industry - NMM - Cement sector subtitution - Lime	PJ,PJa	PRC,PRE,ANNUAL	
+	T	INMCLISUBASH	Industry - NMM - Cement sector subtitution - coal power fly ash	mt,mt/a	PRC,PRE,ANNUAL	
+	T	INMCLISUBCLY	Industry - NMM - Cement sector subtitution - Clay	mt,mt/a	PRC,PRE,ANNUAL	
+	T	INMCLISUBGYL	Industry - NMM - Cement sector subtitution - Gypsum	mt,mt/a	PRC,PRE,ANNUAL	
+	T	INMCLISUBSLAG	Industry - NMM - Cement sector subtitution - Blast furnace slag	mt,mt/a	PRC,PRE,ANNUAL	
+	T	INMCLISUBSPOZ	Industry - NMM - Cement sector subtitution - Lime	mt,mt/a	PRC,PRE,ANNUAL	
 	T	INMGLAADV	Industry - NMM- Glass - Advanced kiln	PJ,PJa	PRC,PRE,ANNUAL	
 	T	INMGLAF2TF	Industry - NMM- Glass - Fuel to thermal fuel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	INMGLASTD	Industry - NMM- Glass - Standard kiln	PJ,PJa	PRC,PRE,ANNUAL	
@@ -398,7 +400,8 @@ ITEMS	REGION1
 	T	IOTSOHF-E	Industry-Other-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTSOLP-E	Industry-Other-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTSWAS-E	Industry-Other-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
-	T	IPGM-E	Industry - PGMs - Mine and Refine - existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IPGMME-E	Industry - PGMs - Mine and refine - existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IPGMME-N	Industry - PGMs - Mine and refine - New	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IPPCHE-E	Pulping - Chemical	PJ,PJa	PRC,PRE,ANNUAL	
 	T	IPPCHE-E-T1	Pulping - Chemical efficiency level 1	PJ,PJa	PRC,PRE,ANNUAL	
 	T	IPPCHE-E-T2	Pulping - Chemical efficiency level 2	PJ,PJa	PRC,PRE,ANNUAL	
@@ -508,14 +511,17 @@ TS DATA	REGION1
 	ACT_COST	IISSCREAF-N	-	-	-	-	-	0	4352.47986417005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMBRIADV	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMBRISTD	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	INMCEMPGBM	-	-	-	-	-	0	330.026875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	INMCEMPGRP	-	-	-	-	-	0	330.026875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMCLISUBASH	-	-	-	-	-	0	692	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMCLISUBCLY	-	-	-	-	-	0	1065	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	INMCLISUBGYL	-	-	-	-	-	0	330.026875	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMCLISUBSLAG	-	-	-	-	-	0	1008	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	INMCLISUBSPOZ	-	-	-	-	-	0	955	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMGLAADV	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMGLASTD	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMLIMADV	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	INMLIMSTD	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	IPGM-E	-	-	-	-	-	0	338.531309959881	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINFEORE	-	-	-	-	-	0	1413	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	XIISSSC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	ICPAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
@@ -659,6 +665,7 @@ TS DATA	REGION1
 	ACT_EFF	XIPPOTH	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IFCEAF-E	-	-	-	-	UP	0	4.857	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IFMEAF-E	-	-	-	-	UP	0	0.6849	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	IPGMME-E	-	-	-	-	UP	3	288.888888888889	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IPPCHE-E	-	-	-	-	UP	3	1.62240251743806	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IPPDIS-E	-	-	-	-	UP	3	0.930504279623491	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IPPMCH-E	-	-	-	-	UP	3	0.448450609797072	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -725,7 +732,8 @@ TS DATA	REGION1
 	COM_PROJ	-	IOTP	-	-	-	-	0	4.33691353748451	null	null	null	null	2.351232	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	68.3095008	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IPGM	-	-	-	-	0	254	264	188	276	264	260	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IPGM	-	-	-	-	0	152.699523921318	158.711316201685	113.021694870897	165.925466938125	158.711316201685	156.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IPGMOP	-	-	-	-	0	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPAP	-	-	-	-	0	2.18006	2.18006	2.18006	2.18006	2.18006	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPULPD	-	-	-	-	0	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IALPOT	CF4	IALM	-	ANNUAL	-	0	0.410167605050004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -769,8 +777,8 @@ TS DATA	REGION1
 	FLO_EMIS	INMCEMKSP-N	CO2SPCEM	ACTGRP	-	ANNUAL	-	0	520	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMGLAADV	CO2SP	ACTGRP	-	ANNUAL	-	0	103.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	INMGLASTD	CO2SP	ACTGRP	-	ANNUAL	-	0	103.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMLIMADV	CO2SP	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	INMLIMSTD	CO2SP	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMLIMADV	CO2SPLIM	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	INMLIMSTD	CO2SPLIM	ACTGRP	-	ANNUAL	-	0	768	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISBFBOF-E	-	CGBFBOF-E-O	CGBFBOF-E-I	ANNUAL	-	0	21.4006916923111	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	3	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	16.0159061625617	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOREAF-E	-	CGCOREAF-E-O	CGCOREAF-E-I	ANNUAL	-	0	21.5145885271352	null	null	null	null	22.1516761723534	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -984,8 +992,10 @@ TS DATA	REGION1
 	FLO_SHAR	INMCEMF2TF	INMGAS	CG-INMCEMF2THF-I	-	ANNUAL	UP	3	0.05	null	null	null	null	0.289543918406876	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMF2TF	INMOIL	CG-INMCEMF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMF2TF	INMOIL	CG-INMCEMF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMCEMFGBM	INMCLISUB	CG-INMCEMCLISUB	-	ANNUAL	LO	5	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	0.3	null	null	
-	FLO_SHAR	INMCEMFGRP	INMCLISUB	CG-INMCEMCLISUBM	-	ANNUAL	LO	5	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	0.3	null	null	
+	FLO_SHAR	INMCEMFGBM	INMCLISUB	CG-INMCEMCLISUB	-	ANNUAL	LO	5	0.3168	null	null	null	null	0.3168	null	null	0.3168	null	null	null	null	null	null	null	null	null	0.3168	null	null	null	null	null	null	null	null	null	null	null	0.3168	null	null	
+	FLO_SHAR	INMCEMFGBM	INMCLISUB	CG-INMCEMCLISUB	-	ANNUAL	UP	5	0.32	null	null	null	null	0.32	null	null	0.32	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	0.6	null	null	
+	FLO_SHAR	INMCEMFGRP	INMCLISUB	CG-INMCEMCLISUBM	-	ANNUAL	LO	5	0.3168	null	null	null	null	0.3168	null	null	0.3168	null	null	null	null	null	null	null	null	null	0.3168	null	null	null	null	null	null	null	null	null	null	null	0.3168	null	null	
+	FLO_SHAR	INMCEMFGRP	INMCLISUB	CG-INMCEMCLISUBM	-	ANNUAL	UP	5	0.32	null	null	null	null	0.32	null	null	0.32	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	0.6	null	null	
 	FLO_SHAR	INMCEMKLD-E	INMCEMTHF	CG-INMCEMLDK-E-I	-	ANNUAL	FX	3	0.98	null	null	null	null	0.98	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMKLD-E	INMELC	CG-INMCEMLDK-E-I	-	ANNUAL	FX	3	0.02	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMKPP-E	INMCEMTHF	CG-INMCEMNPP-E-I	-	ANNUAL	FX	3	0.97	null	null	null	null	0.97	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1008,8 +1018,8 @@ TS DATA	REGION1
 	FLO_SHAR	INMGLAF2TF	INMOIL	CG-INMGLAF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLASTD	INMELC	CG-INMGLASTD-I	-	ANNUAL	UP	3	0.1	null	null	null	null	4.50497443015512E-04	null	null	null	null	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLASTD	INMGLATHF	CG-INMGLASTD-I	-	ANNUAL	UP	3	0.9	null	null	null	null	0.999549502556984	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMLIMADV	INMELC	CG-INMLIMADV-I	-	ANNUAL	LO	3	0.06	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMLIMADV	INMLIMTHF	CG-INMLIMADV-I	-	ANNUAL	UP	3	0.94	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	INMLIMADV	INMELC	CG-INMLIMADV-I	-	ANNUAL	LO	3	0.06	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	
+	FLO_SHAR	INMLIMADV	INMLIMTHF	CG-INMLIMADV-I	-	ANNUAL	UP	3	0.94	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	0.94	null	null	
 	FLO_SHAR	INMLIMF2TF	INMBIO	CG-INMLIMF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMLIMF2TF	INMBIO	CG-INMLIMF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMLIMF2TF	INMCOA	CG-INMLIMF2THF-I	-	ANNUAL	LO	3	0.95	null	null	null	null	0.95	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1018,8 +1028,8 @@ TS DATA	REGION1
 	FLO_SHAR	INMLIMF2TF	INMGAS	CG-INMLIMF2THF-I	-	ANNUAL	UP	3	0.05	null	null	null	null	0.05	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMLIMF2TF	INMOIL	CG-INMLIMF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMLIMF2TF	INMOIL	CG-INMLIMF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMLIMSTD	INMELC	CG-INMLIMSTD-I	-	ANNUAL	LO	3	0.06	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMLIMSTD	INMLIMTHF	CG-INMLIMSTD-I	-	ANNUAL	UP	3	0.94	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	INMLIMSTD	INMELC	CG-INMLIMSTD-I	-	ANNUAL	LO	3	0.06	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	
+	FLO_SHAR	INMLIMSTD	INMLIMTHF	CG-INMLIMSTD-I	-	ANNUAL	UP	3	0.94	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	0.94	null	null	
 	NCAP_AF	IISHBATTERY	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	IISHHDRI-N	-	-	-	ANNUAL	UP	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	INMBRISTD	-	-	-	ANNUAL	UP	0	0.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1359,6 +1369,7 @@ TS DATA	REGION1
 	NCAP_COST	INMGLASTD	-	-	-	-	-	0	1.31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	INMLIMADV	-	-	-	-	-	0	1754.09	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	INMLIMSTD	-	-	-	-	-	0	1.31	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	IPGMME-N	-	-	-	-	-	0	1159.5845779194	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IPPCHE-E-T1	-	-	-	-	-	0	23.5039150306415	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IPPCHE-E-T2	-	-	-	-	-	0	709.700386997644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	IPPCHE-N	-	-	-	-	-	0	13094.1030811373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1416,6 +1427,7 @@ TS DATA	REGION1
 	NCAP_FOM	IISHBATTERY	-	-	-	-	-	0	622.613480055021	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	IISHHDRI-N	-	-	-	-	-	0	150	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	IISHHGNSTOR-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	522.05	null	null	null	null	null	null	null	null	null	349.77	null	null	null	null	null	null	null	null	null	null	null	314.8	null	null	
+	NCAP_FOM	IPGMME-N	-	-	-	-	-	0	214.838251419958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	IISDRIEAF-NC	-	-	-	-	-	0	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	IISHALKHGNO	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	IISHBATTERY	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1558,6 +1570,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	IOTSOHF-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IOTSOLP-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IOTSWAS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IPGMME-N	-	-	-	-	-	0	45	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IPPCHE-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IPPDIS-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IPPMCH-N	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1658,8 +1671,18 @@ TS DATA	REGION1
 	PRC_ACTFLO	INMCEMKSP-N	-	INMRWM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	INMCEMPGBM	-	INMRWM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	INMCEMPGRP	-	INMRWM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_ACTFLO	IPGM-E	-	INDODS	-	-	-	0	1.99794041266674E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	
-	PRC_ACTFLO	IPGM-E	-	INFELC	-	-	-	0	0.1735260858229	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.183515787886234	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-E	-	INDCOA	-	-	-	0	0.015184024154039	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-E	-	INDODS	-	-	-	0	1.74024960567288E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-E	-	INFELC	-	-	-	0	0.15114499937673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-E	-	INFGAS	-	-	-	0	1.02210360090774E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-E	-	IPGM	-	-	-	0	0.601179228036686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-E	-	IPGMOP	-	-	-	0	0.398820771963314	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-N	-	INDCOA	-	-	-	0	1.53358643955794E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-N	-	INDODS	-	-	-	0	0.017576521017296	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-N	-	INFELC	-	-	-	0	0.152656449370498	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-N	-	INFGAS	-	-	-	0	1.03232463691681E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-N	-	IPGM	-	-	-	0	0.601179228036686	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IPGMME-N	-	IPGMOP	-	-	-	0	0.398820771963314	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPPCHE-E	-	IPPBLQ	-	-	-	0	18.0081509550741	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPPCHE-E	-	IPPCOA	-	-	-	0	3.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPPCHE-E	-	IPPELC	-	-	-	0	3.56442471202365	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1809,7 +1832,8 @@ TS DATA	REGION1
 	PRC_RESID	IOTSOHF-E	-	-	-	-	-	0	54.5811662380771	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTSOLP-E	-	-	-	-	-	0	35.4615461754155	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTSWAS-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IPGM-E	-	-	-	-	-	0	260	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IPGMME-E	-	-	-	-	-	0	288.888888888889	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	288.888888888889	null	null	null	null	null	null	null	null	null	null	null	288.888888888889	null	null	
+	PRC_RESID	IPGMME-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPCHE-E	-	-	-	-	-	0	1.62240251743806	null	null	null	null	1.62240251743806	null	null	null	null	null	null	null	null	null	null	null	null	1.62240251743806	null	null	null	null	0	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	IPPCHE-E-T1	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPCHE-E-T2	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2112,6 +2136,7 @@ TID DATA	REGION1
 	NCAP_START	INMCEMKSP-N	-	-	-	-	-	2018	
 	NCAP_START	INMGLAADV	-	-	-	-	-	2018	
 	NCAP_START	INMLIMADV	-	-	-	-	-	2018	
+	NCAP_START	IPGMME-N	-	-	-	-	-	2025	
 	NCAP_START	IPPCHE-N	-	-	-	-	-	2025	
 	NCAP_START	IPPDIS-N	-	-	-	-	-	2025	
 	NCAP_START	IPPMCH-N	-	-	-	-	-	2025	
@@ -2276,7 +2301,8 @@ TID DATA	REGION1
 	PRC_ACTUNT	IOTSOHF-E	-	IOTS	-	-	-	1	
 	PRC_ACTUNT	IOTSOLP-E	-	IOTS	-	-	-	1	
 	PRC_ACTUNT	IOTSWAS-E	-	IOTS	-	-	-	1	
-	PRC_ACTUNT	IPGM-E	-	IPGM	-	-	-	1	
+	PRC_ACTUNT	IPGMME-E	-	IPGM	-	-	-	1	
+	PRC_ACTUNT	IPGMME-N	-	IPGM	-	-	-	1	
 	PRC_ACTUNT	IPPCHE-E	-	IPPPULP	-	-	-	1	
 	PRC_ACTUNT	IPPCHE-E-T1	-	IPPPULP	-	-	-	1	
 	PRC_ACTUNT	IPPCHE-E-T2	-	IPPPULP	-	-	-	1	
@@ -2492,7 +2518,8 @@ TID DATA	REGION1
 	PRC_CAPACT	IOTSOHF-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTSOLP-E	-	-	-	-	-	1	
 	PRC_CAPACT	IOTSWAS-E	-	-	-	-	-	1	
-	PRC_CAPACT	IPGM-E	-	-	-	-	-	1	
+	PRC_CAPACT	IPGMME-E	-	-	-	-	-	1	
+	PRC_CAPACT	IPGMME-N	-	-	-	-	-	1	
 	PRC_CAPACT	IPPCHE-E	-	-	-	-	-	1	
 	PRC_CAPACT	IPPCHE-E-T1	-	-	-	-	-	1	
 	PRC_CAPACT	IPPCHE-E-T2	-	-	-	-	-	1	
@@ -2802,8 +2829,14 @@ TID DATA	REGION1
 	TOP-IN	IOTSOHF-E	INDOHF	-	-	-	-	1	
 	TOP-IN	IOTSOLP-E	INDOLP	-	-	-	-	1	
 	TOP-IN	IOTSWAS-E	INDWAS	-	-	-	-	1	
-	TOP-IN	IPGM-E	INDODS	-	-	-	-	1	
-	TOP-IN	IPGM-E	INFELC	-	-	-	-	1	
+	TOP-IN	IPGMME-E	INDCOA	-	-	-	-	1	
+	TOP-IN	IPGMME-E	INDODS	-	-	-	-	1	
+	TOP-IN	IPGMME-E	INFELC	-	-	-	-	1	
+	TOP-IN	IPGMME-E	INFGAS	-	-	-	-	1	
+	TOP-IN	IPGMME-N	INDCOA	-	-	-	-	1	
+	TOP-IN	IPGMME-N	INDODS	-	-	-	-	1	
+	TOP-IN	IPGMME-N	INFELC	-	-	-	-	1	
+	TOP-IN	IPGMME-N	INFGAS	-	-	-	-	1	
 	TOP-IN	IPPCHE-E	IPPCOA	-	-	-	-	1	
 	TOP-IN	IPPCHE-E	IPPELC	-	-	-	-	1	
 	TOP-IN	IPPCHE-E	IPPSTM	-	-	-	-	1	
@@ -3046,10 +3079,9 @@ TID DATA	REGION1
 	TOP-OUT	INMGLAF2TF	INMGLATHF	-	-	-	-	1	
 	TOP-OUT	INMGLASTD	CO2SP	-	-	-	-	1	
 	TOP-OUT	INMGLASTD	INMGLA	-	-	-	-	1	
-	TOP-OUT	INMLIMADV	CO2SP	-	-	-	-	1	
 	TOP-OUT	INMLIMADV	INMLIM	-	-	-	-	1	
 	TOP-OUT	INMLIMF2TF	INMLIMTHF	-	-	-	-	1	
-	TOP-OUT	INMLIMSTD	CO2SP	-	-	-	-	1	
+	TOP-OUT	INMLIMSTD	CO2SPLIM	-	-	-	-	1	
 	TOP-OUT	INMLIMSTD	INMLIM	-	-	-	-	1	
 	TOP-OUT	IOTAELC-E	IOTA	-	-	-	-	1	
 	TOP-OUT	IOTCELC-E	IOTC	-	-	-	-	1	
@@ -3070,7 +3102,10 @@ TID DATA	REGION1
 	TOP-OUT	IOTSOHF-E	IOTS	-	-	-	-	1	
 	TOP-OUT	IOTSOLP-E	IOTS	-	-	-	-	1	
 	TOP-OUT	IOTSWAS-E	IOTS	-	-	-	-	1	
-	TOP-OUT	IPGM-E	IPGM	-	-	-	-	1	
+	TOP-OUT	IPGMME-E	IPGM	-	-	-	-	1	
+	TOP-OUT	IPGMME-E	IPGMOP	-	-	-	-	1	
+	TOP-OUT	IPGMME-N	IPGM	-	-	-	-	1	
+	TOP-OUT	IPGMME-N	IPGMOP	-	-	-	-	1	
 	TOP-OUT	IPPCHE-E	IPPBLQ	-	-	-	-	1	
 	TOP-OUT	IPPCHE-E	IPPPULP	-	-	-	-	1	
 	TOP-OUT	IPPCHE-E-T1	IPPBLQ	-	-	-	-	1	

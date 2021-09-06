@@ -18,6 +18,8 @@ SET COM_GRP /
   'CO2EQSB'                  'CO2eq for Carbon Cap constraints                  '
   'CO2S'                     'CO2S South Africa                                 '
   'CO2SF'                    'Fugitive Emissions South Africa                   '
+  'CO2SPCEM'                 'Process Emissions CEM South Africa                '
+  'CO2SPLIM'                 'Process Emissions Lime South Africa               '
   'COMCH4S'                  'Commercial Methane South Africa                   '
   'COMCMOX'                  'Commercial Carbon monoxide South Africa           '
   'COMCO2S'                  'Commercial Carbon dioxide South Africa            '
@@ -27,7 +29,7 @@ SET COM_GRP /
   'COMP10S'                  'Commercial PM10 South Africa                      '
   'COMSOXS'                  'Commercial Sulphur gases South Africa             '
   'INDCH4S'                  'Industry Methane South Africa                     '
-  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
+  'INDCMOX'                  'Industry - Carbon Monoxide                        '
   'INDCO2S'                  'Industry Carbon dioxide South Africa              '
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
@@ -91,6 +93,8 @@ SET COM /
   'CO2EQSB'                  'CO2eq for Carbon Cap constraints                  '
   'CO2S'                     'CO2S South Africa                                 '
   'CO2SF'                    'Fugitive Emissions South Africa                   '
+  'CO2SPCEM'                 'Process Emissions CEM South Africa                '
+  'CO2SPLIM'                 'Process Emissions Lime South Africa               '
   'COMCH4S'                  'Commercial Methane South Africa                   '
   'COMCMOX'                  'Commercial Carbon monoxide South Africa           '
   'COMCO2S'                  'Commercial Carbon dioxide South Africa            '
@@ -100,7 +104,7 @@ SET COM /
   'COMP10S'                  'Commercial PM10 South Africa                      '
   'COMSOXS'                  'Commercial Sulphur gases South Africa             '
   'INDCH4S'                  'Industry Methane South Africa                     '
-  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
+  'INDCMOX'                  'Industry - Carbon Monoxide                        '
   'INDCO2S'                  'Industry Carbon dioxide South Africa              '
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
@@ -167,6 +171,8 @@ SET COM_ENV /
   'REGION1'   .'CO2EQSB'
   'REGION1'   .'CO2S'
   'REGION1'   .'CO2SF'
+  'REGION1'   .'CO2SPCEM'
+  'REGION1'   .'CO2SPLIM'
   'REGION1'   .'COMCH4S'
   'REGION1'   .'COMCMOX'
   'REGION1'   .'COMCO2S'
@@ -239,6 +245,8 @@ SET COM_ANNUAL /
   'REGION1'   .'CO2EQSB'
   'REGION1'   .'CO2S'
   'REGION1'   .'CO2SF'
+  'REGION1'   .'CO2SPCEM'
+  'REGION1'   .'CO2SPLIM'
   'REGION1'   .'COMCH4S'
   'REGION1'   .'COMCMOX'
   'REGION1'   .'COMCO2S'
@@ -315,6 +323,8 @@ SET COM_ENVGHG /
   'REGION1'   .'CO2EQSB'
   'REGION1'   .'CO2S'
   'REGION1'   .'CO2SF'
+  'REGION1'   .'CO2SPCEM'
+  'REGION1'   .'CO2SPLIM'
   'REGION1'   .'COMCH4S'
   'REGION1'   .'COMCMOX'
   'REGION1'   .'COMCO2S'
@@ -396,6 +406,8 @@ SET ACOM_UNIT /
   'REGION1'.'CO2EQSB'.'KT'
   'REGION1'.'CO2S'.'KT'
   'REGION1'.'CO2SF'.'KT'
+  'REGION1'.'CO2SPCEM'.'KT'
+  'REGION1'.'CO2SPLIM'.'KT'
   'REGION1'.'COMCH4S'.'KT'
   'REGION1'.'COMCMOX'.'KT'
   'REGION1'.'COMCO2S'.'KT'
@@ -458,9 +470,6 @@ SET ACOM_UNIT /
 SET PRCTACTUNT /
   'REGION1'.'ZDUMCO2P'.'PJ'
 /;
-PARAMETER ACOMCUMNET /
-  'REGION1'                 .'CO2EQSB'                 .'2020'                    .'2050'                    .'UP'                         10000000
-/;
 PARAMETER APRCACTUNT /
   'REGION1'                 .'ZDUMCO2P'                .'ZCO2P'                      1
 /;
@@ -485,6 +494,10 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'CH4SF'                   .'CO2EQSB'                          28                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'CO2SF'                   .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'CO2SP'                   .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'CO2SPCEM'                .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'CO2SPIFC'                .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'CO2SPIFM'                .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'CO2SPLIM'                .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'COMCH4S'                 .'CO2EQSB'                          28                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'COMCO2S'                 .'CO2EQSB'                          1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'COMN2OS'                 .'CO2EQSB'                          265                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
