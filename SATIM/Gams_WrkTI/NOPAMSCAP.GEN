@@ -152,7 +152,7 @@ $IF NOT '%TIMESTEP%' == '' G_OVERLAP = 0; display G_OVERLAP;
 
 * ANSWER will put out appropriate $SET SPOINT, $SET LPOINT lines 
 * determined from Run Model Restart and Save options selected.
-* No Restart or Save, so no SPOINT or LPOINT
+$SET SPOINT 1
 
 * Do the rest.
 $BATINCLUDE maindrv.mod mod

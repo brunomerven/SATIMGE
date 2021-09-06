@@ -209,21 +209,40 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 *Power Plant Costs (excluding fuel)
 
 
- REPORT(PRCPower,'ACTGRP',TC,RUN,'AnnInvCost') = TCST_INVC('REGION1',TC,PRCPower);
- REPORT(PRCPower,'ACTGRP',TC,RUN,'FOM') = TCST_FIXC('REGION1',TC,PRCPower);
- REPORT(PRCPower,'ACTGRP',TC,RUN,'VOM') = TCST_ACTC('REGION1',TC,PRCPower);
- REPORT(PRCPower,'ACTGRP',TC,RUN,'FuelCosts') = SUM(COM, TVFLOWIN(COM,TC,PRCPower)*T_COMBALEM('REGION1',TC,COM));
+ REPORT(PRC,'ACTGRP',TC,RUN,'AnnInvCost') = TCST_INVC('REGION1',TC,PRC);
+ REPORT(PRC,'ACTGRP',TC,RUN,'FOM') = TCST_FIXC('REGION1',TC,PRC);
+ REPORT(PRC,'ACTGRP',TC,RUN,'VOM') = TCST_ACTC('REGION1',TC,PRC);
+ REPORT(PRC,'ACTGRP',TC,RUN,'FuelCosts') = SUM(COM, TVFLOWIN(COM,TC,PRC)*T_COMBALEM('REGION1',TC,COM));
+* bm!!! If there are fixed costs, they might not be taken into account in the marginal and so would have to be added to this calc
 
- REPORT(PRCPower,'ACTGRP',TC,RUN,'Levies') = TVFLOWOUT('PWRENV',TC,PRCPower)*T_COMBALEM('REGION1',TC,'PWRENV')*(-1);
- REPORT(PRCPower,'ACTGRP',TC,RUN,'ExternalityCosts') = SUM(COMEXT,TVFLOWOUT(COMEXT,TC,PRCPower)*T_COMBALEM('REGION1',TC,COMEXT)*(-1));
- REPORT(PRCPower,'ACTGRP',TC,RUN,'CO2Tax') = TVFLOWOUT('PWRCO2S',TC,PRCPower)*T_COMBALEM('REGION1',TC,'PWRCO2S')*(-1);
+ REPORT(PRC,'ACTGRP',TC,RUN,'CO2Tax') = TVFLOWOUT('PWRCO2S',TC,PRC)*T_COMBALEM('REGION1',TC,'PWRCO2S')*(-1);
+
+ REPORT(PRC,'ACTGRP',TC,RUN,'Levies') = TVFLOWOUT('PWRENV',TC,PRC)*T_COMBALEM('REGION1',TC,'PWRENV')*(-1);
+
+ REPORT(PRC,'ACTGRP',TC,RUN,'ExternalityCosts') = SUM(COMEXT,TVFLOWOUT(COMEXT,TC,PRC)*T_COMBALEM('REGION1',TC,COMEXT)*(-1));
 
 
- TCST_ELE_I(RUN,TC) = SUM(PRCPower,TCST_INVC('REGION1',TC,PRCPower));
- TCST_ELE_A(RUN,TC) = SUM(PRCPower,TCST_ACTC('REGION1',TC,PRCPower));
- TCST_ELE_F(RUN,TC) = SUM(PRCPower,TCST_FIXC('REGION1',TC,PRCPower));
+* bm!!! would need to expand fuel cost calc if fixed costs or lower limits on coal production for power plants are set
 
- TCST_ELE_INV(RUN,TC) = TCST_ELE_I(RUN,TC);
+*sum the components of elec costs calcs:
+ TCST_ELE(RUN,TC) = sum(PRCPower,REPORT(PRCPower,'ACTGRP',TC,RUN,'AnnInvCost')+REPORT(PRCPower,'ACTGRP',TC,RUN,'FOM')+REPORT(PRCPower,'ACTGRP',TC,RUN,'VOM')+REPORT(PRCPower,'ACTGRP',TC,RUN,'FuelCosts')+REPORT(PRCPower,'ACTGRP',TC,RUN,'CO2Tax')+REPORT(PRCPower,'ACTGRP',TC,RUN,'Levies'));
+
+
+* Elc Price
+ ETPRICE(TC) = TCST_ELE(RUN,TC)/ELC_FLOW(RUN,TC);
+
+ AggFixPrice('ELC',TC,RUN) = Sum(PRCBulkPower,(REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'AnnInvCost')+REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'FOM')))/TVCAP(TC,'ETRANS');
+ AggVarCost('ELC',TC,RUN) = Sum(PRCBulkPower, (REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'VOM')+REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'FuelCosts')+REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'CO2Tax')+REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'Levies')));
+ AggVarPrice('ELC',TC,RUN)$REPORT('ETRANS','ELC',TC,RUN,'FlowOut') = AggVarCost('ELC',TC,RUN)/REPORT('ETRANS','ELC',TC,RUN,'FlowOut');
+
+
+
+*b add growth rates from TIMES from 2014 onward
+ ETPRICEGR(TC)$(not T1(TC)) = ETPRICE(TC)/ETPRICE(TC-1)-1;
+
+
+* Labour and capital intensity
+ TCST_ELE_INV(RUN,TC) = Sum(PRCPower,REPORT(PRCPower,'ACTGRP',TC,RUN,'AnnInvCost'));
  QFEGY_GR(RUN,TC)$TCST_ELE_INV(RUN,TC-1) = TCST_ELE_INV(RUN,TC)/TCST_ELE_INV(RUN,TC-1);
 
  FIntensity_FS('elec','fegy',TC) = TCST_ELE_INV(RUN,TC)/ELC_FLOW(RUN,TC);
@@ -231,36 +250,8 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 
  IFAFSGR(F,FS,TC)$FIntensity_FS(FS,F,TC-1) = FIntensity_FS(FS,F,TC)/FIntensity_FS(FS,F,TC-1);
 
-*sum the components of elec costs calcs:
- TCST_ELE(RUN,TC) = TCST_ELE_I(RUN,TC) + TCST_ELE_A(RUN,TC)+TCST_ELE_F(RUN,TC);
-
-* Coal costs
-*detailed coal supply model calcs:
- TCST_COALSUP(RUN,TC) = SUM(COALSUP,TCST_INVC('REGION1',TC,COALSUP)+TCST_ACTC('REGION1',TC,COALSUP)+TCST_FIXC('REGION1',TC,COALSUP));
-
- TCST_PWRCLT(RUN,TC) = TCST_COALSUP(RUN,TC);
 
 
-* Gas and hydrogen costs
-*bm using marginals TCST_PWROTH(RUN,TC) = TVACT(TC,'XPWRGIC')*T_COMBALEM('REGION1',TC,'PWRGIC') + TVACT(TC,'XPWRGAS') *T_COMBALEM('REGION1',TC,'PWRGAS') + TVACT(TC,'XPWRHGN')*T_COMBALEM('REGION1',TC,'PWRHGN');
-
-* using input costs - the 1.15 coefficient is for the FSRU costs ~ 15% added according to marginals
- TCST_PWROTH(RUN,TC) = TVACT(TC,'XPWRGIC')*OB_ACT('REGION1','IMPGRL','CUR',TC)*1.15 + TVACT(TC,'XPWRGAS') *OB_ACT('REGION1','MIRGRS','CUR',TC) + TVACT(TC,'XPWRODS') *OB_ACT('REGION1','IMPODS','CUR',TC) + TVACT(TC,'XPWRHGN')*T_COMBALEM('REGION1',TC,'PWRHGN');
-
-
-*still need to add CO2 tax here
-
-* Elc Price
- ETPRICE(TC) = (TCST_PWRCLT(RUN,TC)+TCST_PWROTH(RUN,TC)+TCST_ELE(RUN,TC))/ELC_FLOW(RUN,TC);
-
- AggFixPrice('ELC',TC,RUN) = Sum(PRCBulkPower,(TCST_INVC('REGION1',TC,PRCBulkPower)+TCST_FIXC('REGION1',TC,PRCBulkPower)))/TVCAP(TC,'ETRANS');
- AggVarCost('ELC',TC,RUN) = Sum(PRCBulkPower, (TCST_ACTC('REGION1',TC,PRCBulkPower)+REPORT(PRCBulkPower,'ACTGRP',TC,RUN,'FuelCosts')));
- AggVarPrice('ELC',TC,RUN)$REPORT('ETRANS','ELC',TC,RUN,'FlowOut') = AggVarCost('ELC',TC,RUN)/REPORT('ETRANS','ELC',TC,RUN,'FlowOut');
-
-
-
-*b add growth rates from TIMES from 2014 onward
- ETPRICEGR(TC)$(not T1(TC)) = ETPRICE(TC)/ETPRICE(TC-1)-1;
 
 
 * Energy Model Indicators
