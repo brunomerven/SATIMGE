@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/09/06	2:54:11 PM
+Creation Date:	07 Sep 2021	16:21:48
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -696,25 +696,25 @@ TS DATA	REGION1
 	COM_PROJ	-	IFBP	-	-	-	-	0	3.57634292544555	null	null	null	null	3.349248	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBS	-	-	-	-	0	20.4218620324183	null	null	null	null	13.3946304	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IISCRS	-	-	-	-	0	6.94	7.1	6.5	6.4	6.091	6.23	6.3	6.12679748375827	5.0030232389252	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIA	-	-	-	-	0	0.993180581182697	null	null	null	null	0.674465030645694	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIC	-	-	-	-	0	17.3532402590831	null	null	null	null	11.7845172820506	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIE	-	-	-	-	0	0.186829635306388	null	null	null	null	0.126875271315104	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIF	-	-	-	-	0	5.88890634149207	null	null	null	null	3.99913316000833	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIH	-	-	-	-	0	7.69549985243705	null	null	null	null	5.22598371549626	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIK	-	-	-	-	0	2.13763884789918	null	null	null	null	1.4516621431934	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIL	-	-	-	-	0	1.44290622233195	null	null	null	null	0.979871946655548	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIO	-	-	-	-	0	28.8949768078483	null	null	null	null	19.6224652268217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIP	-	-	-	-	0	15.2945172722485	null	null	null	null	10.3864465900593	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	24.7363549270665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIA	-	-	-	-	0	0.993180581182697	null	null	null	null	0.719395700197653	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIC	-	-	-	-	0	17.3532402590831	null	null	null	null	12.5695635450455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIE	-	-	-	-	0	0.186829635306388	null	null	null	null	0.1353272897753	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIF	-	-	-	-	0	5.88890634149207	null	null	null	null	4.26554242118914	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIH	-	-	-	-	0	7.69549985243705	null	null	null	null	5.57412177564163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIK	-	-	-	-	0	2.13763884789918	null	null	null	null	1.54836715990045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIL	-	-	-	-	0	1.44290622233195	null	null	null	null	1.04514783293281	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIO	-	-	-	-	0	28.8949768078483	null	null	null	null	20.9296501227637	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIP	-	-	-	-	0	15.2945172722485	null	null	null	null	11.0783579247511	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	25.4063510252505	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	24.5131771912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFA	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFC	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	6.21011160004102	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	6.88305244224678	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFF	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFH	-	-	-	-	0	0.601106293893148	null	null	null	null	8.17119947373818E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFK	-	-	-	-	0	0.667895882103497	null	null	null	null	9.07911052637575E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFL	-	-	-	-	0	0.200368764631049	null	null	null	null	2.72373315791273E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFO	-	-	-	-	0	3.74021693977959	null	null	null	null	0.508430189477042	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFH	-	-	-	-	0	0.601106293893148	null	null	null	null	9.05664795032471E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFK	-	-	-	-	0	0.667895882103497	null	null	null	null	0.100629421670275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFL	-	-	-	-	0	0.200368764631049	null	null	null	null	3.01888265010824E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFO	-	-	-	-	0	3.74021693977959	null	null	null	null	0.563524761353538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFP	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFS	-	-	-	-	0	2.487856608	null	null	null	null	0.65368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INMBRI	-	-	-	-	0	3.296	4.559	5.8221	7.0851	8.3482	9.611178437	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1769,17 +1769,17 @@ TS DATA	REGION1
 	PRC_RESID	IISDRIEAF-E	-	-	-	-	-	0	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	0	0	0	0	0	null	null	null	
 	PRC_RESID	IISOTHEAF-E	-	-	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	null	null	null	
 	PRC_RESID	IISSCREAF-E	-	-	-	-	-	0	1.72	1.72	1.72	1.72	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	0	0	0	0	0	null	null	null	
-	PRC_RESID	IMIAELC-E	-	-	-	-	-	0	8.57298732138712	null	null	null	null	5.82188200816309	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMICELC-E	-	-	-	-	-	0	133.93979823312	null	null	null	null	90.9579907537095	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIEELC-E	-	-	-	-	-	0	1.41184640902583	null	null	null	null	0.958779349468024	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIFELC-E	-	-	-	-	-	0	53.8438908429374	null	null	null	null	36.5651747280637	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIHELC-E	-	-	-	-	-	0	58.4719994866427	null	null	null	null	39.7081051249621	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIKELC-E	-	-	-	-	-	0	18.6970947948848	null	null	null	null	12.6971236175405	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMILELC-E	-	-	-	-	-	0	11.5849556188836	null	null	null	null	7.86729784548814	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIOELC-E	-	-	-	-	-	0	220.875835559152	null	null	null	null	149.995912145098	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIPELC-E	-	-	-	-	-	0	126.234048136749	null	null	null	null	85.7250461378286	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIAELC-E	-	-	-	-	-	0	8.57298732138712	null	null	null	null	6.20971687697586	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMICELC-E	-	-	-	-	-	0	133.93979823312	null	null	null	null	97.0173166490085	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIEELC-E	-	-	-	-	-	0	1.41184640902583	null	null	null	null	1.02265011543338	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIFELC-E	-	-	-	-	-	0	53.8438908429374	null	null	null	null	39.0010278978618	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIHELC-E	-	-	-	-	-	0	58.4719994866427	null	null	null	null	42.3533301089707	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIKELC-E	-	-	-	-	-	0	18.6970947948848	null	null	null	null	13.5429647502882	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMILELC-E	-	-	-	-	-	0	11.5849556188836	null	null	null	null	8.391391673487	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIOELC-E	-	-	-	-	-	0	220.875835559152	null	null	null	null	159.988152597185	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIPELC-E	-	-	-	-	-	0	126.234048136749	null	null	null	null	91.4357702604089	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMIRELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMIRODS-E	-	-	-	-	-	0	51.4885232177635	null	null	null	null	24.7363549270665	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIRODS-E	-	-	-	-	-	0	51.4885232177635	null	null	null	null	25.4063510252505	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISCOA-E	-	-	-	-	-	0	130.279199844429	null	null	null	null	158.263823167174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISELC-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1790,12 +1790,12 @@ TS DATA	REGION1
 	PRC_RESID	IMISWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFAELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFCELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFEELC-E	-	-	-	-	-	0	345.228431465875	null	null	null	null	46.9289775564197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFEELC-E	-	-	-	-	-	0	345.228431465875	null	null	null	null	52.0143009313593	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFFELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFHELC-E	-	-	-	-	-	0	4.5673299437212	null	null	null	null	0.620864635950017	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFKELC-E	-	-	-	-	-	0	5.84182526111692	null	null	null	null	0.794114451707842	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFLELC-E	-	-	-	-	-	0	1.60874158676073	null	null	null	null	0.218685921952045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFOELC-E	-	-	-	-	-	0	28.5905590871395	null	null	null	null	3.88648669528392	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFHELC-E	-	-	-	-	-	0	4.5673299437212	null	null	null	null	0.688142842513845	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFKELC-E	-	-	-	-	-	0	5.84182526111692	null	null	null	null	0.880166375144534	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFLELC-E	-	-	-	-	-	0	1.60874158676073	null	null	null	null	0.242383191498052	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFOELC-E	-	-	-	-	-	0	28.5905590871395	null	null	null	null	4.30763462279115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFPELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSCOA-E	-	-	-	-	-	0	4.91649062034096	null	null	null	null	1.87100538017761	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
