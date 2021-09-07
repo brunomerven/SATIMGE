@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	07 Sep 2021	16:21:48
+Creation Date:	07 Sep 2021	17:24:17
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -1006,8 +1006,8 @@ TS DATA	REGION1
 	FLO_SHAR	INMCEMKSP-E	INMELC	CG-INMCEMNSP-E-I	-	ANNUAL	FX	3	0.02	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMKSP-N	INMCEMTHF	CG-INMCEMNSP-N-I	-	ANNUAL	FX	3	0.98	null	null	null	null	0.98	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMKSP-N	INMELC	CG-INMCEMNSP-N-I	-	ANNUAL	FX	3	0.02	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMGLAADV	INMELC	CG-INMGLAADV-I	-	ANNUAL	UP	3	0.1	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMGLAADV	INMGLATHF	CG-INMGLAADV-I	-	ANNUAL	UP	3	0.9	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	INMGLAADV	INMELC	CG-INMGLAADV-I	-	ANNUAL	UP	3	0.1	null	null	null	null	0.1	null	null	null	null	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	0.9	null	null	
+	FLO_SHAR	INMGLAADV	INMGLATHF	CG-INMGLAADV-I	-	ANNUAL	UP	3	0.9	null	null	null	null	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLAF2TF	INMBIO	CG-INMGLAF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLAF2TF	INMBIO	CG-INMGLAF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLAF2TF	INMCOA	CG-INMGLAF2THF-I	-	ANNUAL	LO	3	0.224458479179749	null	null	null	null	0.2245	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1017,7 +1017,7 @@ TS DATA	REGION1
 	FLO_SHAR	INMGLAF2TF	INMOIL	CG-INMGLAF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLAF2TF	INMOIL	CG-INMGLAF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMGLASTD	INMELC	CG-INMGLASTD-I	-	ANNUAL	UP	3	0.1	null	null	null	null	4.50497443015512E-04	null	null	null	null	null	null	null	null	null	null	null	null	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	INMGLASTD	INMGLATHF	CG-INMGLASTD-I	-	ANNUAL	UP	3	0.9	null	null	null	null	0.999549502556984	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	INMGLASTD	INMGLATHF	CG-INMGLASTD-I	-	ANNUAL	UP	3	0.9	null	null	null	null	0.999549502556984	null	null	null	null	null	null	null	null	null	null	null	null	0.999549502556984	null	null	null	null	null	null	null	null	null	null	null	0.999549502556984	null	null	
 	FLO_SHAR	INMLIMADV	INMELC	CG-INMLIMADV-I	-	ANNUAL	LO	3	0.06	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	null	null	null	null	null	null	null	null	null	0.06	null	null	
 	FLO_SHAR	INMLIMADV	INMLIMTHF	CG-INMLIMADV-I	-	ANNUAL	UP	3	0.94	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	null	0.94	null	null	null	null	null	null	null	null	null	null	null	0.94	null	null	
 	FLO_SHAR	INMLIMF2TF	INMBIO	CG-INMLIMF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
