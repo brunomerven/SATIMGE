@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	07 Sep 2021	17:24:17
+Creation Date:	09 Sep 2021	17:29:49
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -126,6 +126,7 @@ ITEMS	REGION1
 	E	ICPP	Industry-Chemicals-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPS	Industry-Chemicals-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPT	Industry-Chemicals-Ancillary - Gas - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	IDUM	Dummy commodity	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IFACR	Industry - Ferro Alloy Metals production	PJ	COM,DEM,ANNUAL,RES	
 	E	IFAELC	Industry-FA-Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	IFAGAS	Industry-FA-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -233,8 +234,9 @@ ITEMS	REGION1
 	E	IOTP	Industry-Other-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	IOTR	Industry-Other-Transport - Oil Diesel - Existing	PJ	COM,DEM,ANNUAL,RES	
 	E	IOTS	Industry-Other-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
-	E	IPGM	Industry - PGMs - Platinum	PJ	COM,DEM,ANNUAL,RES	
-	E	IPGMOP	Industry - PGMs - Other PGMs	PJ	COM,DEM,ANNUAL,RES	
+	E	IPGM	Industry - PGMs - Platinum	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IPGMD	Industry - demand for PGMS - Pt	PJ	COM,DEM,ANNUAL,IND	
+	E	IPGMOP	Industry - PGMs - Other PGMs	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IPPBIO	Industry - PP - Biomass	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IPPBLQ	Industry - PP - Black Liquor	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IPPCOA	Industry - PP - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -400,8 +402,8 @@ ITEMS	REGION1
 	T	IOTSOHF-E	Industry-Other-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTSOLP-E	Industry-Other-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IOTSWAS-E	Industry-Other-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
-	T	IPGMME-E	Industry - PGMs - Mine and refine - existing	PJ,PJa	PRC,DMD,ANNUAL	
-	T	IPGMME-N	Industry - PGMs - Mine and refine - New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IPGMME-E	Industry - PGMs - Mine and refine - existing	PJ,PJa	PRC,PRE,ANNUAL	
+	T	IPGMME-N	Industry - PGMs - Mine and refine - New	PJ,PJa	PRC,PRE,ANNUAL	
 	T	IPPCHE-E	Pulping - Chemical	PJ,PJa	PRC,PRE,ANNUAL	
 	T	IPPCHE-E-T1	Pulping - Chemical efficiency level 1	PJ,PJa	PRC,PRE,ANNUAL	
 	T	IPPCHE-E-T2	Pulping - Chemical efficiency level 2	PJ,PJa	PRC,PRE,ANNUAL	
@@ -435,6 +437,8 @@ ITEMS	REGION1
 	T	IPPSTMGAS-E	Boiler - Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	IPPSTMGAS-N	Boiler - Gas New	PJ,PJa	PRC,PRE,ANNUAL	
 	T	MINFEORE	Extraction of Iron ore	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXPGM	Export PGMs - Pt	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXPGMO	Export PGMs - Others	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
@@ -463,6 +467,7 @@ ITEMS	REGION1
 	T	XINMOIL	Industry - NMM- Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIPGM	To local demand	PJ,PJa	PRC,DMD,ANNUAL	
 	T	XIPPBIO	Industry - IPP - Biomass	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPCOA	Industry - IPP - Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
@@ -487,6 +492,10 @@ TS DATA	REGION1
 	ACT_BND	IPPSTMCOA-E	-	-	-	ANNUAL	LO	0	40.878	null	null	null	null	40.878	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPSTMCOAOIL	-	-	-	ANNUAL	LO	0	8.66858287657997	null	null	null	null	8.66858287657997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPSTMGAS-E	-	-	-	ANNUAL	LO	0	0.639715022044026	null	null	null	null	0.639715022044026	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXPGM	-	-	-	ANNUAL	FX	3	124.699523921318	130.711316201685	84.0216948708969	133.925466938125	127.711316201685	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXPGM	-	-	-	ANNUAL	LO	0	null	null	null	null	null	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	125.306599289538	null	null	
+	ACT_BND	PEXPGMO	-	-	-	ANNUAL	FX	3	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXPGMO	-	-	-	ANNUAL	LO	0	null	null	null	null	null	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	103.693400710462	null	null	
 	ACT_COST	IISBFBOF-E	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T1	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T2	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -631,6 +640,8 @@ TS DATA	REGION1
 	ACT_EFF	IPPSTMCOAOIL	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	IPPSTMGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	IPPSTMGAS-N	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXPGM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXPGMO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XICPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -658,6 +669,7 @@ TS DATA	REGION1
 	ACT_EFF	XINMOIL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIOTGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPGM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -732,8 +744,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IOTP	-	-	-	-	0	4.33691353748451	null	null	null	null	2.351232	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	68.3095008	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IPGM	-	-	-	-	0	152.699523921318	158.711316201685	113.021694870897	165.925466938125	158.711316201685	156.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IPGMOP	-	-	-	-	0	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IPGMD	-	-	-	-	0	28	28	29	32	31	31	null	null	null	null	null	null	null	null	null	null	null	null	31	null	null	null	null	null	null	null	null	null	null	null	31	null	null	
 	COM_PROJ	-	IPPPAP	-	-	-	-	0	2.18006	2.18006	2.18006	2.18006	2.18006	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPULPD	-	-	-	-	0	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IALPOT	CF4	IALM	-	ANNUAL	-	0	0.410167605050004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2334,6 +2345,8 @@ TID DATA	REGION1
 	PRC_ACTUNT	IPPSTMGAS-E	-	IPPSTM	-	-	-	1	
 	PRC_ACTUNT	IPPSTMGAS-N	-	IPPSTM	-	-	-	1	
 	PRC_ACTUNT	MINFEORE	-	IISFEORE	-	-	-	1	
+	PRC_ACTUNT	PEXPGM	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXPGMO	-	IDUM	-	-	-	1	
 	PRC_ACTUNT	XICPELC	-	ICPELC	-	-	-	1	
 	PRC_ACTUNT	XICPGAS	-	ICPGAS	-	-	-	1	
 	PRC_ACTUNT	XIFAELC	-	IFAELC	-	-	-	1	
@@ -2362,6 +2375,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	XINMOIL	-	INMOIL	-	-	-	1	
 	PRC_ACTUNT	XIOTELC	-	IOTELC	-	-	-	1	
 	PRC_ACTUNT	XIOTGAS	-	IOTGAS	-	-	-	1	
+	PRC_ACTUNT	XIPGM	-	IPGMD	-	-	-	1	
 	PRC_ACTUNT	XIPPBIO	-	IPPBIO	-	-	-	1	
 	PRC_ACTUNT	XIPPCOA	-	IPPCOA	-	-	-	1	
 	PRC_ACTUNT	XIPPELC	-	IPPELC	-	-	-	1	
@@ -2550,6 +2564,8 @@ TID DATA	REGION1
 	PRC_CAPACT	IPPSTMGAS-E	-	-	-	-	-	1	
 	PRC_CAPACT	IPPSTMGAS-N	-	-	-	-	-	1	
 	PRC_CAPACT	MINFEORE	-	-	-	-	-	1	
+	PRC_CAPACT	PEXPGM	-	-	-	-	-	1	
+	PRC_CAPACT	PEXPGMO	-	-	-	-	-	1	
 	PRC_CAPACT	XICPELC	-	-	-	-	-	31.536	
 	PRC_CAPACT	XICPGAS	-	-	-	-	-	1	
 	PRC_CAPACT	XIFAELC	-	-	-	-	-	31.536	
@@ -2578,6 +2594,7 @@ TID DATA	REGION1
 	PRC_CAPACT	XINMOIL	-	-	-	-	-	1	
 	PRC_CAPACT	XIOTELC	-	-	-	-	-	31.536	
 	PRC_CAPACT	XIOTGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIPGM	-	-	-	-	-	1	
 	PRC_CAPACT	XIPPBIO	-	-	-	-	-	1	
 	PRC_CAPACT	XIPPCOA	-	-	-	-	-	1	
 	PRC_CAPACT	XIPPELC	-	-	-	-	-	31.536	
@@ -2878,6 +2895,8 @@ TID DATA	REGION1
 	TOP-IN	IPPSTMCOAOIL	IPPOHF	-	-	-	-	1	
 	TOP-IN	IPPSTMGAS-E	IPPGAS	-	-	-	-	1	
 	TOP-IN	IPPSTMGAS-N	IPPGAS	-	-	-	-	1	
+	TOP-IN	PEXPGM	IPGM	-	-	-	-	1	
+	TOP-IN	PEXPGMO	IPGMOP	-	-	-	-	1	
 	TOP-IN	XICPELC	INDELC	-	-	-	-	1	
 	TOP-IN	XICPGAS	INDGAS	-	-	-	-	1	
 	TOP-IN	XIFAELC	INDELC	-	-	-	-	1	
@@ -2910,6 +2929,7 @@ TID DATA	REGION1
 	TOP-IN	XINMOIL	INDOHF	-	-	-	-	1	
 	TOP-IN	XIOTELC	INDELC	-	-	-	-	1	
 	TOP-IN	XIOTGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIPGM	IPGM	-	-	-	-	1	
 	TOP-IN	XIPPBIO	INDBIO	-	-	-	-	1	
 	TOP-IN	XIPPCOA	INDCOA	-	-	-	-	1	
 	TOP-IN	XIPPELC	INDELC	-	-	-	-	1	
@@ -3145,6 +3165,8 @@ TID DATA	REGION1
 	TOP-OUT	IPPSTMGAS-E	IPPSTM	-	-	-	-	1	
 	TOP-OUT	IPPSTMGAS-N	IPPSTM	-	-	-	-	1	
 	TOP-OUT	MINFEORE	IISFEORE	-	-	-	-	1	
+	TOP-OUT	PEXPGM	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXPGMO	IDUM	-	-	-	-	1	
 	TOP-OUT	XICPELC	ICPELC	-	-	-	-	1	
 	TOP-OUT	XICPGAS	ICPGAS	-	-	-	-	1	
 	TOP-OUT	XIFAELC	IFAELC	-	-	-	-	1	
@@ -3173,6 +3195,7 @@ TID DATA	REGION1
 	TOP-OUT	XINMOIL	INMOIL	-	-	-	-	1	
 	TOP-OUT	XIOTELC	IOTELC	-	-	-	-	1	
 	TOP-OUT	XIOTGAS	IOTGAS	-	-	-	-	1	
+	TOP-OUT	XIPGM	IPGMD	-	-	-	-	1	
 	TOP-OUT	XIPPBIO	IPPBIO	-	-	-	-	1	
 	TOP-OUT	XIPPCOA	IPPCOA	-	-	-	-	1	
 	TOP-OUT	XIPPELC	IPPELC	-	-	-	-	1	
