@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/04/09	12:00:40 PM
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC.mdb
+Creation Date:	2021/09/13	10:04:19 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_SUP_ER	Endogenous Retirement for Sasol and Refineries	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -19,9 +19,10 @@ ITEMS	REGION1
 	T	UCTLCLEIN-E	Refinery CTL Existing	PJ,PJa	PRC,PRE,ANNUAL	
 
 TS DATA	REGION1
-	RCAP_BND	UCTLCLEIN-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	131	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	RCAP_BND	UREFOCRCO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	365.71	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	RCAP_BND	UREFOCRIN-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	212.16	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UREFOCRCO-N	-	-	-	-	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	Bruno (Sept 2021 - net zero) Capped here as we are getting small amounts of new capacity in {/n}low oil price scenarios without a cumulative cap.
+	RCAP_BND	UCTLCLEIN-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	131	null	null	null	null	null	null	null	null	
+	RCAP_BND	UREFOCRCO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	UREFOCRIN-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	212.16	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 
 TID DATA	REGION1
 	PRC_RCAP	UCTLCLEIN-E	-	-	-	-	-	1	

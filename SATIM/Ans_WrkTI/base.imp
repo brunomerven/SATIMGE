@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/31	9:11:07 AM
+Creation Date:	2021/09/10	3:08:20 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -100,6 +100,7 @@ ITEMS	REGION1
 	E	CLD	Coal Discard	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	CLE	Coal low grade	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	CMOX	CMOX South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2CAPT	CO2 Captured	KT	COM,NRG,ANNUAL,FOSSIL	
 	E	CO2EQS	CO2EQS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2S	CO2S South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
@@ -174,6 +175,7 @@ ITEMS	REGION1
 	E	OGS	Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	OHF	Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	OKE	Oil Kerosene	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	OKG	Oil Green JetFuel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	OLP	Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	OTH	Oil Other	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	PWRBIB	Power Sector Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -305,13 +307,14 @@ ITEMS	REGION1
 	T	MNZZZ	Backstop for whole system	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOA	Exports of Coal	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOK	Exports of Coal Coking	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOAG	Exports of Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOCR	Exports of Oil Crude	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXODS	Exports of Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOGS	Exports of Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOHF	Exports of Oil HFO	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOKE	Exports of Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXOKG	Exports of Green JetFuel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	UCOGCLEHGN	Production Plant Hydrogen - Large Coal Gasification	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UCTLCLEIN-E	Refinery CTL Existing	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UCTLCLEIN-N	Refinery CTL New	PJ,PJa	PRC,PRE,ANNUAL	
@@ -337,14 +340,14 @@ ITEMS	REGION1
 	T	USMRGICHGN	Production Plant Hydrogen - Large SMR - Coastal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UTRNGIMGAS	Conversion Methane Rich Gas Natural Gas for use in industry and refineries	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGRCOA	Agriculture Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XAGRELC	Agriculture Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XAGRODS	Agriculture Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROGS	Agriculture Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROHF	Agriculture Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROKE	Agriculture Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROLP	Agriculture Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMCOA	Commercial Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XCOMGAS	Commercial Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMODS	Commercial Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMOGS	Commercial Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -356,13 +359,14 @@ ITEMS	REGION1
 	T	XINDCLE	Industry Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOA	Industry Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOK	Industry Coal Coking	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XINDGAS	Industry Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDODS	Industry Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOGS	Industry Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOHF	Industry Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOLP	Industry Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDWAS	Industry Waste	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XOKGOKE	Conversion Tech from Green	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XPWRBIB	Power Sector Biomass bagasse	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XPWRBIG	Power Sector Biogas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XPWRBIO	Power Sector Biomass Other	PJ,PJa	PRC,PRE,ANNUAL	
@@ -384,11 +388,11 @@ ITEMS	REGION1
 	T	XPWRWND	Power Sector Wind	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESBIW	Residential Biomass Wood	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESCOA	Residential Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XRESGAS	Residential Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOKE	Residential Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOLP	Residential Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XTRAGAS	Transport Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XTRAHGN	Transport Hydrogen	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XTRAOAG	Transport Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -399,7 +403,7 @@ ITEMS	REGION1
 	T	XUPSBID	Supply Sector Biodiesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSBIE	Supply Sector Bioethanol	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSCLE	Supply Sector Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XUPSGAS	Supply Sector Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSGIC	Supply Sector Coastal Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSHEE	Supply Sector Heat-Steam Existing	PJ,PJa	PRC,PRE,ANNUAL	
@@ -477,6 +481,8 @@ TS DATA	REGION1
 	ACT_BND	PEXOHF	-	-	-	ANNUAL	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXOKE	-	-	-	ANNUAL	FX	0	5.02735604617284	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXOKE	-	-	-	ANNUAL	UP	3	5.02735604617284	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOKG	-	-	-	ANNUAL	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXOKG	-	-	-	ANNUAL	UP	3	200	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IMPBID	-	-	-	-	-	0	177.364462625332	null	null	125.880221330696	null	null	null	null	144.026658548007	null	null	null	null	null	null	null	null	null	138.159431178171	null	null	null	null	null	null	null	null	null	null	null	124.748625761403	null	null	
 	ACT_COST	IMPBIE	-	-	-	-	-	0	185.742810632009	null	null	136.173808216837	null	null	null	null	152.214499565039	null	null	null	null	null	null	null	null	null	146.313744257334	null	null	null	null	null	null	null	null	null	null	null	132.826303554009	null	null	
 	ACT_COST	IMPCOK	-	-	-	-	-	0	67.5183333333333	null	null	67.9591666666667	null	null	null	null	68.4	null	null	null	null	null	null	null	null	null	68.4	null	null	null	null	null	null	null	null	null	null	null	68.4	null	null	
@@ -520,6 +526,7 @@ TS DATA	REGION1
 	ACT_COST	PEXOGS	-	-	-	-	-	0	-168.053019143247	null	null	-123.204874100948	null	null	null	null	-137.717880558845	null	null	null	null	null	null	null	null	null	-132.379101947112	null	null	null	null	null	null	null	null	null	null	null	-120.176179406008	null	null	
 	ACT_COST	PEXOHF	-	-	-	-	-	0	-133.360408190497	null	null	-95.4471432914046	null	null	null	null	-108.547731586303	null	null	null	null	null	null	null	null	null	-104.180868821337	null	null	null	null	null	null	null	null	null	null	null	-94.1994682157	null	null	
 	ACT_COST	PEXOKE	-	-	-	-	-	0	-168.739644853543	null	null	-124.226933337003	null	null	null	null	-139.607901159739	null	null	null	null	null	null	null	null	null	-134.480911885493	null	null	null	null	null	null	null	null	null	null	null	-122.762079258647	null	null	
+	ACT_COST	PEXOKG	-	-	-	-	-	0	-266.431018189804	null	null	-196.147789479479	null	null	null	null	-220.433528146956	null	null	null	null	null	null	null	null	null	-212.338281924463	null	null	null	null	null	null	null	null	null	null	null	-193.834861987338	null	null	
 	ACT_COST	UCOGCLEHGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UCTLCLEIN-E	-	-	-	-	-	0	23.7398752470631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UCTLCLEIN-N	-	-	-	-	-	0	23.7398752470631	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -571,6 +578,7 @@ TS DATA	REGION1
 	ACT_EFF	XINDOHF	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDOLP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDWAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XOKGOKE	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRBIB	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRBIG	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XPWRBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -704,7 +712,6 @@ TS DATA	REGION1
 	FLO_EMIS	UELEA1HGN	UPSCO2S	UELEA1HGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEP1HGN	UPSCH4S	UELEP1HGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UELEP1HGN	UPSCO2S	UELEP1HGN-O	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UFTHGNCO2-N	CO2SPIFC	UFTHGNCO2-N-O	-	ANNUAL	-	0	null	null	null	null	null	null	null	null	-107.37556955364	null	null	null	null	null	null	null	null	null	-107.37556955364	null	null	null	null	-107.37556955364	null	null	null	null	-107.37556955364	null	-107.37556955364	-107.37556955364	-107.37556955364	
 	FLO_EMIS	UGASGIB-N	CH4SF	GIB	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGIC-N	CH4SF	GIC	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UGASGIH-N	CH4SF	GIH	-	ANNUAL	-	0	6.99864330624809E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1043,8 +1050,8 @@ TS DATA	REGION1
 	FLO_SHAR	UELEP1HGN	UPSELC	UELEP1HGN-I	-	ANNUAL	FX	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UELEP1HGN	UPSHGN	UELEP1HGN-O	-	ANNUAL	UP	3	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UFTHGNCO2-N	HGN	UFTHGNCO2-N-I	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	0.922217160815398	null	null	null	null	null	null	null	null	null	0.922217160815398	null	null	null	null	0.922217160815398	null	null	null	null	0.922217160815398	null	0.922217160815398	0.922217160815398	0.922217160815398	
-	FLO_SHAR	UFTHGNCO2-N	OAG	UFTHGNCO2-N-O	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	0.511832924985986	null	null	null	null	null	null	null	null	null	0.511832924985986	null	null	null	null	0.511832924985986	null	null	null	null	0.511832924985986	null	0.511832924985986	0.511832924985986	0.511832924985986	
-	FLO_SHAR	UFTHGNCO2-N	OKE	UFTHGNCO2-N-O	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	0.488167075014014	null	null	null	null	null	null	null	null	null	0.488167075014014	null	null	null	null	0.488167075014014	null	null	null	null	0.488167075014014	null	0.488167075014014	0.488167075014014	0.488167075014014	
+	FLO_SHAR	UFTHGNCO2-N	OAG	UFTHGNCO2-N-O	-	ANNUAL	LO	3	null	null	null	null	null	null	null	null	0.511832924985986	null	null	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	0.05	0.05	
+	FLO_SHAR	UFTHGNCO2-N	OKG	UFTHGNCO2-N-O	-	ANNUAL	LO	3	null	null	null	null	null	null	null	null	0.488167075014014	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	0	
 	FLO_SHAR	UFTHGNCO2-N	UPSELC	UFTHGNCO2-N-I	-	ANNUAL	FX	3	null	null	null	null	null	null	null	null	7.77828391846016E-02	null	null	null	null	null	null	null	null	null	7.77828391846016E-02	null	null	null	null	7.77828391846016E-02	null	null	null	null	7.77828391846016E-02	null	7.77828391846016E-02	7.77828391846016E-02	7.77828391846016E-02	
 	FLO_SHAR	UGTLGASIN-N	OAG	UGTLGASIN-N-O	-	ANNUAL	UP	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	UGTLGASIN-N	ODS	UGTLGASIN-N-O	-	ANNUAL	UP	3	0.287679321159069	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1381,6 +1388,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	XUPSOCR	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XUPSOHF	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	HGNXUPS	-	ELC	-	-	-	0	null	null	null	null	null	null	null	null	3.03324369673377E-02	null	null	null	null	null	null	null	null	null	3.03324369673377E-02	null	null	null	null	3.03324369673377E-02	null	null	null	null	3.03324369673377E-02	null	3.03324369673377E-02	3.03324369673377E-02	3.03324369673377E-02	
+	PRC_ACTFLO	UFTHGNCO2-N	-	CO2CAPT	-	-	-	0	null	null	null	null	null	null	null	null	107.37556955364	null	null	null	null	null	null	null	null	null	107.37556955364	null	null	null	null	107.37556955364	null	null	null	null	107.37556955364	null	107.37556955364	107.37556955364	107.37556955364	
 	PRC_ACTFLO	XTRAHGN	-	ELC	-	-	-	0	null	null	null	null	null	null	null	null	5.03624583047528E-02	null	null	null	null	null	null	null	null	null	5.03624583047528E-02	null	null	null	null	5.03624583047528E-02	null	null	null	null	5.03624583047528E-02	null	5.03624583047528E-02	5.03624583047528E-02	5.03624583047528E-02	
 	PRC_RESID	UCTLCLEIN-E	-	-	-	-	-	0	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	261.966563922629	
 	PRC_RESID	UELEA1HGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1516,13 +1524,13 @@ TID DATA	REGION1
 	COM_GMAP	-	OHF	UREFOCRIN-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UCTLCLEIN-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UCTLCLEIN-N-O	-	-	-	1	
-	COM_GMAP	-	OKE	UFTHGNCO2-N-O	-	-	-	1	
 	COM_GMAP	-	OKE	UGTLGASIN-N-O	-	-	-	1	
 	COM_GMAP	-	OKE	UGTLGICCO-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UGTLGICCO-N-O	-	-	-	1	
 	COM_GMAP	-	OKE	UREFOCRCO-E-O	-	-	-	1	
 	COM_GMAP	-	OKE	UREFOCRCO-N-O	-	-	-	1	
 	COM_GMAP	-	OKE	UREFOCRIN-E-O	-	-	-	1	
+	COM_GMAP	-	OKG	UFTHGNCO2-N-O	-	-	-	1	
 	COM_GMAP	-	OLP	UCTLCLEIN-E-O	-	-	-	1	
 	COM_GMAP	-	OLP	UCTLCLEIN-N-O	-	-	-	1	
 	COM_GMAP	-	OLP	UGTLGASIN-N-O	-	-	-	1	
@@ -1701,6 +1709,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	PEXOGS	-	OGS	-	-	-	1	
 	PRC_ACTUNT	PEXOHF	-	OHF	-	-	-	1	
 	PRC_ACTUNT	PEXOKE	-	OKE	-	-	-	1	
+	PRC_ACTUNT	PEXOKG	-	OKG	-	-	-	1	
 	PRC_ACTUNT	UCOGCLEHGN	-	UCOGCLEHGN-O	-	-	-	1	
 	PRC_ACTUNT	UCTLCLEIN-E	-	UCTLCLEIN-E-O	-	-	-	1	
 	PRC_ACTUNT	UCTLCLEIN-N	-	UCTLCLEIN-N-O	-	-	-	1	
@@ -1752,6 +1761,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	XINDOHF	-	INDOHF	-	-	-	1	
 	PRC_ACTUNT	XINDOLP	-	INDOLP	-	-	-	1	
 	PRC_ACTUNT	XINDWAS	-	INDWAS	-	-	-	1	
+	PRC_ACTUNT	XOKGOKE	-	OKE	-	-	-	1	
 	PRC_ACTUNT	XPWRBIB	-	PWRBIB	-	-	-	1	
 	PRC_ACTUNT	XPWRBIG	-	PWRBIG	-	-	-	1	
 	PRC_ACTUNT	XPWRBIO	-	PWRBIO	-	-	-	1	
@@ -1844,6 +1854,7 @@ TID DATA	REGION1
 	PRC_CAPACT	PEXOGS	-	-	-	-	-	1	
 	PRC_CAPACT	PEXOHF	-	-	-	-	-	1	
 	PRC_CAPACT	PEXOKE	-	-	-	-	-	1	
+	PRC_CAPACT	PEXOKG	-	-	-	-	-	1	
 	PRC_CAPACT	UCOGCLEHGN	-	-	-	-	-	1	
 	PRC_CAPACT	UCTLCLEIN-E	-	-	-	-	-	1	
 	PRC_CAPACT	UCTLCLEIN-N	-	-	-	-	-	1	
@@ -1895,6 +1906,7 @@ TID DATA	REGION1
 	PRC_CAPACT	XINDOHF	-	-	-	-	-	1	
 	PRC_CAPACT	XINDOLP	-	-	-	-	-	1	
 	PRC_CAPACT	XINDWAS	-	-	-	-	-	1	
+	PRC_CAPACT	XOKGOKE	-	-	-	-	-	1	
 	PRC_CAPACT	XPWRBIB	-	-	-	-	-	1	
 	PRC_CAPACT	XPWRBIG	-	-	-	-	-	1	
 	PRC_CAPACT	XPWRBIO	-	-	-	-	-	1	
@@ -1953,6 +1965,7 @@ TID DATA	REGION1
 	TOP-IN	PEXOGS	OGS	-	-	-	-	1	
 	TOP-IN	PEXOHF	OHF	-	-	-	-	1	
 	TOP-IN	PEXOKE	OKE	-	-	-	-	1	
+	TOP-IN	PEXOKG	OKG	-	-	-	-	1	
 	TOP-IN	UCOGCLEHGN	UPSCLE	-	-	-	-	1	
 	TOP-IN	UCOGCLEHGN	UPSELC	-	-	-	-	1	
 	TOP-IN	UCOGCLEHGN	UPSHEN	-	-	-	-	1	
@@ -1966,6 +1979,7 @@ TID DATA	REGION1
 	TOP-IN	UCTLCLEIN-N	UPSHEN	-	-	-	-	1	
 	TOP-IN	UELEA1HGN	UPSELC	-	-	-	-	1	
 	TOP-IN	UELEP1HGN	UPSELC	-	-	-	-	1	
+	TOP-IN	UFTHGNCO2-N	CO2CAPT	-	-	-	-	1	
 	TOP-IN	UFTHGNCO2-N	HGN	-	-	-	-	1	
 	TOP-IN	UFTHGNCO2-N	UPSELC	-	-	-	-	1	
 	TOP-IN	UGASGIB-N	GIB	-	-	-	-	1	
@@ -2029,6 +2043,7 @@ TID DATA	REGION1
 	TOP-IN	XINDOHF	OHF	-	-	-	-	1	
 	TOP-IN	XINDOLP	OLP	-	-	-	-	1	
 	TOP-IN	XINDWAS	WAS	-	-	-	-	1	
+	TOP-IN	XOKGOKE	OKG	-	-	-	-	1	
 	TOP-IN	XPWRBIB	BIB	-	-	-	-	1	
 	TOP-IN	XPWRBIG	BIG	-	-	-	-	1	
 	TOP-IN	XPWRBIO	BIO	-	-	-	-	1	
@@ -2153,7 +2168,7 @@ TID DATA	REGION1
 	TOP-OUT	UELEP1HGN	UPSCO2S	-	-	-	-	1	
 	TOP-OUT	UELEP1HGN	UPSHGN	-	-	-	-	1	
 	TOP-OUT	UFTHGNCO2-N	OAG	-	-	-	-	1	
-	TOP-OUT	UFTHGNCO2-N	OKE	-	-	-	-	1	
+	TOP-OUT	UFTHGNCO2-N	OKG	-	-	-	-	1	
 	TOP-OUT	UGASGIB-N	CH4SF	-	-	-	-	1	
 	TOP-OUT	UGASGIB-N	GTB	-	-	-	-	1	
 	TOP-OUT	UGASGIC-N	CH4SF	-	-	-	-	1	
@@ -2408,6 +2423,7 @@ TID DATA	REGION1
 	TOP-OUT	XINDWAS	INDNOXS	-	-	-	-	1	
 	TOP-OUT	XINDWAS	INDSOXS	-	-	-	-	1	
 	TOP-OUT	XINDWAS	INDWAS	-	-	-	-	1	
+	TOP-OUT	XOKGOKE	OKE	-	-	-	-	1	
 	TOP-OUT	XPWRBIB	PWRBIB	-	-	-	-	1	
 	TOP-OUT	XPWRBIG	PWRBIG	-	-	-	-	1	
 	TOP-OUT	XPWRBIO	PWRBIO	-	-	-	-	1	

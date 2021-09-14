@@ -280,7 +280,7 @@ $offtext
 
          AFX('AHYDR',RD) = NO;
 *         AFX('AHYDR',RD)$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
-         AFX('AHYDR',RD)$(NOT T1(TC)) = YES;
+         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.00001)) = YES;
          AFLEO('AHYDR') = NO;
          AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
@@ -342,7 +342,7 @@ $offtext
 * QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC,TT);
 
 *bm hydrogen not in public transport in SAM so leaving it out for now
- QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_IN_FSFuels('tranlf','chydr',TC);
+ QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
 
 
 *bm set reasonable starting value for QVA otherwise wfdist goes -ve.
@@ -350,9 +350,9 @@ $offtext
  PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = 1;
 
 * QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_OUT_FSFuels('hydr','CHYDR',TC);
- QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_IN_FSFuels('tranlf','CHYDR',TC);
+*! QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_IN_FSFuels('tranlf','CHYDR',TC);
 
- QINT.L(C,'AHYDR')$(HCAP(XC,TC,TT) GT 0.00001) = ica(C,'AHYDR','NAT')*QINTA.L('AHYDR','NAT');
+*! QINT.L(C,'AHYDR')$(HCAP(XC,TC,TT) GT 0.00001) = ica(C,'AHYDR','NAT')*QINTA.L('AHYDR','NAT');
 
 
 
@@ -379,31 +379,28 @@ $offtext
 *CA
  ANFX(A,RD)=NO;
 
-*fh
+* other exogenous sectors
+* gold - set to slow decline
  AFX('AGOLD',RD)=YES;
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
  AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1;
+
+
+* chemicals set to partially track Secunda and jet fuel production
+* wip AFX('ABCHM',RD) = YES;
+* wip AFXGR('ABCHM',NAT,XC,TC) = 0.5 * (SUM(a,QINTX('CBCHM')
+
+
+
+
+
+
 *bm
  AFLEO('AGOLD') = YES;
  AFLEO('ACOIL') = YES;
 
-* AFXGR('AGOLD','NAT',XC,TC) = 0.08;
-
-$ontext
- AFX('AMORE',RD)=YES;
- ANFX(A,RD)=NO;
- ANFX(A,RD)$(NOT AFX(A,RD))=YES;
- AFXGR('AMORE','NAT',XC,TC) = 0.03;
-* AFXGR('AMORE','NAT',XC,TC) = 0.3;
-
- AFX('APAPR',RD)=YES;
- ANFX(A,RD)=NO;
- ANFX(A,RD)$(NOT AFX(A,RD))=YES;
- AFXGR('APAPR','NAT',XC,TC) = -0.005;
-* AFXGR('APAPR','NAT',XC,TC) = -0.05;
-$offtext
 
 
 
