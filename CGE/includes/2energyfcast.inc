@@ -10,6 +10,11 @@
 * Another possible approach is to link to QA but QA has different units in different activities and doesn't add up to GDP
  QA_FS(FS,T) = SUM(A$MFSA(FS,A), QAX(A,XC,T,TT));
 
+* Domestic demand for energy model
+ QD_FS('is',T) = QA_FS('is',T)-QEX('ciron','rest',XC,T,TT);
+ QD_FS('am',T) = QA_FS('am',T)-QEX('cammo','rest',XC,T,TT);
+
+
  HFORE(FH,XC,TC)$SUM(H$MFHH(FH,H), HPOPX(H,XC,TC,TT)) = SUM(H$MFHH(FH,H), YIX(H,XC,TC,TT)/HPOPX(H,XC,TC,TT))/CPIX(XC,TC,TT);
  PFORE(FH,XC,TC) = SUM(H$MFHH(FH,H), HPOPX(H,XC,TC,TT));
 
@@ -82,7 +87,7 @@ loop (H,
 
 * write new demand driver values to drivers gdx if CGE gets to 2050
 *  if(QVAX('aagri','nat',XC,'2050',TT),
-    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
+    execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN QA_FS QD_FS;
 *  );
 
 

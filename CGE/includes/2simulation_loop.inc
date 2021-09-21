@@ -201,11 +201,15 @@ $offtext
 * BM 260521: Adjusting absolute calc because of new approach using GVA rather than QA for EIntensity calc
 *This needs QA_FSStart: ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
 *                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC));
- ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+ ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
                          = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
 * tmp fix until QA approach is done properly
- ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+ ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
                          = ica('chydr',A,'NAT') * QVA.L(A,'nat')/QA.L(A);
+
+* fix for aelec
+ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
+                     = EIntensity_FS('elec','chydr',TC);
 
 * calculate ica change for private passenger. This needs to be generalised to other household end-uses
   EHIntensity(C,'aprtr',TC) = FLOW_IN_FSFuels('tppr',C,TC)/sum(TPPR,COM_PROJ('REGION1',TC,TPPR));
@@ -273,6 +277,7 @@ $offtext
           AFX('APETR',RD)$EFX(TT,TC) = YES;
 
           AFX('ACOIL',RD)$EFX(TT,TC) = YES;
+          AFLEO('ACOIL') = YES;
 
 *FH 71218
           AFX('APETR',RD)$(NOT EFX(TT,TC) AND QFSUPX('FCAP',XC,TC-1,TT) LT .9) = YES;
@@ -382,24 +387,42 @@ $offtext
 * other exogenous sectors
 * gold - set to slow decline
  AFX('AGOLD',RD)=YES;
+*bm
+ AFLEO('AGOLD') = YES;
+
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
  AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1;
 
 
+* iron and steel
+* the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
+ QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI')) ;
+
+
+* ammonia
+*WIP QE.FX('cammo','REST') = QE0('cammo','REST')*(1+VARACT('REGION1',TC,'PEXNH3')/QA0('aammo');
+ QE.FX('cammo','REST')$(ORD(TC) gt 2050-2030) = QE.L('cammo','rest')*1.1;
+
+
+
 * chemicals set to partially track Secunda and jet fuel production
-* wip AFX('ABCHM',RD) = YES;
-* wip AFXGR('ABCHM',NAT,XC,TC) = 0.5 * (SUM(a,QINTX('CBCHM')
+ CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2012','UCTLCLEIN-E');
 
+ AFX('ABCHM',RD) = YES;
+ AFLEO('ABCHM') = YES;
+ AFX('AOCHM',RD) = YES;
+ AFLEO('AOCHM') = YES;
 
+ AFXGR('ABCHM','NAT',XC,TC)$QINTCBCHM(TC-2,RUN) =
+                         (1 - CTL_Weight(TC,RUN)) * (QINTCBCHM(TC-1,RUN)/QINTCBCHM(TC-2,RUN)) +
+                         CTL_Weight(TC,RUN) * VARACT('REGION1',TC,'UCTLCLEIN-E')/(VARACT('REGION1',TC-1,'UCTLCLEIN-E')+0.00001) - 1;
 
+ AFXGR('AOCHM','NAT',XC,TC)$QINTCOCHM(TC-2,RUN) =
+                         (1 - CTL_Weight(TC,RUN)) * (QINTCOCHM(TC-1,RUN)/QINTCOCHM(TC-2,RUN)) +
+                         CTL_Weight(TC,RUN) * VARACT('REGION1',TC,'UCTLCLEIN-E')/(VARACT('REGION1',TC-1,'UCTLCLEIN-E')+0.00001) - 1;
 
-
-
-*bm
- AFLEO('AGOLD') = YES;
- AFLEO('ACOIL') = YES;
 
 
 
@@ -535,6 +558,12 @@ $offtext
         CTA_EMRR(A)$(PAR.L(A,'NAT')*QAR.L(A,'NAT'))=CTA_EMR(A)/(PAR.L(A,'NAT')*QAR.L(A,'NAT'));
 
 $include cge\includes\2results.inc
+
+* bits needed for some of the exogenous sectors
+QINTCBCHM(TC,RUN) = SUM(a,QINT.L('CBCHM',a));
+QINTCOCHM(TC,RUN) = SUM(a,QINT.L('CBCHM',a));
+QINTCIRON(TC,RUN) = SUM(a,QINT.L('CIRON',a));
+
 
 *       CA make growth in transfers from government to HH a function of nominal absorption growth plus a small increment
       IF(NOT T1(TC),

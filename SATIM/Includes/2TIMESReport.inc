@@ -121,6 +121,7 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 
  EIntensity_FS(FS,C,TC)$(GVA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/GVA_FS(FS,TC);
+*! EIntensityQA_FS(FS,C,TC)$(QA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/QA_FS(FS,TC);
 
 *bm calculating coal mining capacity based on consumption+exports)
  COALMINCAP(TC) = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC))+sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC));
@@ -173,6 +174,9 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 *Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2012 Rands for CGE
 * EINVCOST(XC,T,TT) = SUM((SUPELE AND SUPOIL), INVCOST(XC,T,TT,ELE));
  EINVCOST(RUN,TC) = SUM(PRCPower, INVCOST(RUN,TC,PRCPower)) * 0.852;
+
+* fixing end effect until we run past 2050
+ EINVCOST(RUN,'2050') = EINVCOST(RUN,'2049');
 
 * EFLOW('NAT',XC,TC,TT) = SUM(SUPELE, TVACT(TC,SUPELE))/3.6;
 * !!EFLOW now calculated from flow through transmission. When we include distributed generation we also need to include them in the calc

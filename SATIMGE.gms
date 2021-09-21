@@ -333,6 +333,15 @@ PARAMETERS
   FossilShareFinal(ALLYEAR,RUN)
   ERPRICE(AY,RUN)                regulated electricity price
 
+* CTL links
+  CTL_Weight(AY,RUN)             Weighting of CTL changes in chemicals AFXGR calc
+* tracking trends in intermediate use of goods produced by exogenous sectors
+  QINTCBCHM(AY,RUN)             stored value for sum(a.QINT(CBCHM.a)
+  QINTCOCHM(AY,RUN)             stored value for sum(a.QINT(COCHM.a)
+  QINTCIRON(AY,RUN)             stored value for sum(a.QINT(CIRON.a)
+
+* domestic demand to drive energy model (i.e. excluding exports)
+  QD_FS(FS,AY)            domestic demand to drive energy model
 
 * SubAnnual Analysis parameters
   TS_Duration(TS_DAYNITE)                  duration in hours of each daynite timeslice
@@ -454,6 +463,7 @@ Alias (MILESTONYR,MY), (P,PP);
  TRAMOD                transport mode parameter
  TS_TMP1               temporary values in sub-annual results calc
  TS_TMP2               temporary values in sub-annual results calc
+
 
 ;
 *-------------------------------------------------------------------------------
