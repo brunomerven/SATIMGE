@@ -105,6 +105,8 @@ $include SATIM\includes\2TIMESReport.inc
 
 *tmp fix until EB is improved
  ica('celec','apgm','NAT') = 0.5*ica0('celec','apgm','NAT');
+ ica('celec','altrp-f','NAT') = 0.72*ica0('celec','altrp-f','NAT');
+ ica('ccoal-hgh','amore','NAT') = 0.3*ica0('ccoal-hgh','amore','NAT');
 
 
 *   Loop over CGE model solve periods
@@ -319,7 +321,9 @@ $offtext
 
          AFX('AHYDR',RD) = NO;
 *         AFX('AHYDR',RD)$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
-         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
+
+         AFX('AHYDR',RD) = YES;
+*         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
          AFLEO('AHYDR') = NO;
          AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
@@ -342,7 +346,7 @@ $offtext
 *          if(TT1(TT), AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05);
 *          AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05;
 
-          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = QE.L('ccoal-hgh','REST')*FLOW_IN_FSFuels('EXP','ccoal-hgh',TC)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) ;
+          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = QE.L('ccoal-hgh','REST') * FLOW_IN_FSFuels('EXP','ccoal-hgh',TC)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) ;
 *          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = FLOW_IN_FSFuels('EXP','ccoal-hgh',TC);
 
           AFLEO('ACOAL')$(NOT T1(TC)) = YES;
