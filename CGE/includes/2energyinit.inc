@@ -178,6 +178,7 @@ PARAMETER
  TPWRCLE(AY) TIMES calculated annual coal use in power sector (PJ)
  TPWRCLETAX(AY) TIMES calculated CO2 tax
 
+ COM_CSTCO2(REG,TC,COM) CO2 tax for elc price calc
 
 *Exporting from TIMES to CGE
  TVNCAP(AY,PRC)   New Capacity

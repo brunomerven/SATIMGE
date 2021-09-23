@@ -6,7 +6,7 @@ loop(MRUNCASE(RUN,SATIMCASES),
 
  put_utilities SATIM_Scen 'gdxin' / "%GDXfolder%",SATIMCASES.TL:50;
  execute_load MILESTONYR ELE RTP B E V TS_MAP COM_NRGELC PRC_ANNUAL PRC_WEEKLY PRC_SEASON PRC_DAYNIT
- execute_load COM_PROJ REG_OBJ PAR_NCAPL PRC_RESID PRC_CAPACT PAR_CAPL VARACT F_IN F_OUT NCAP_ILED OB_ICOST OB_ACT PAR_COMBALEM CST_FIXC CST_ACTC CST_INVC VAR_CAP UC_CAP G_YRFR;
+ execute_load COM_PROJ REG_OBJ PAR_NCAPL PRC_RESID PRC_CAPACT PAR_CAPL VARACT F_IN F_OUT NCAP_ILED OB_ICOST OB_ACT PAR_COMBALEM CST_FIXC CST_ACTC CST_INVC VAR_CAP UC_CAP G_YRFR COM_CSTNET;
 * VAR_RCAP;
 );
 
@@ -49,6 +49,11 @@ $BATINCLUDE SATIM\Includes\interpolate.inc TCST_ACTC 'REG' 'PRC' ",'0','0','0','
 
  TCST_FIXC(REG,TC,PRC)= sum(V,CST_FIXC(REG,V,TC,PRC));
 $BATINCLUDE SATIM\Includes\interpolate.inc TCST_FIXC 'REG' 'PRC' ",'0','0','0','0','0'" TC 'TCST_FIXC(REG,TC,PRC)'
+
+ COM_CSTCO2('REGION1',TC,'CO2EQST')= COM_CSTNET('REGION1',TC,'CO2EQST','ANNUAL','CUR');
+*$BATINCLUDE SATIM\Includes\interpolate.inc COM_CSTCO2 'REG' 'COM' ",'0','0','0','0','0'" TC 'COM_CSTCO2(REG,TC,COM)'
+
+
 
  T_COMBALEM(REG,TC,COM) = PAR_COMBALEM(REG,TC,COM,'ANNUAL');
 *Special calc for hydrogen for power
@@ -119,9 +124,10 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
  COAL_FLOW(RUN,TC,'ccoal-low') = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC));
  COAL_FLOW(RUN,TC,'ccoal-hgh') = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC));
 
+* EIntensityQA_FS(FS,C,TC)$(QA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/QA_FS(FS,TC);
 
  EIntensity_FS(FS,C,TC)$(GVA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/GVA_FS(FS,TC);
-*! EIntensityQA_FS(FS,C,TC)$(QA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/QA_FS(FS,TC);
+* EIntensity_FS(FS,C,TC)$(QA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/QA_FS(FS,TC);
 
 *bm calculating coal mining capacity based on consumption+exports)
  COALMINCAP(TC) = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC))+sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC));
@@ -185,8 +191,13 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 
 * recalculate intensity for energy sectors, where GVA not suitable
  EIntensity_FS('elec',C,TC) = FLOW_IN_FSFuels('elec',C,TC)/ELC_FLOW(RUN,TC);
+ EIntensity_FS('elec','ccoal-low',TC) = max(0.01,EIntensity_FS('elec','ccoal-low',TC));
+ EIntensity_FS(FS,'ccoal-hgh',TC) = max(0.0001,EIntensity_FS(FS,'ccoal-hgh',TC));
+
  EIntensity_FS('hydr',C,TC)$(FLOW_OUT_FSFuels('hydr','chydr',TC) GT .001) = FLOW_IN_FSFuels('hydr',C,TC)/FLOW_OUT_FSFuels('hydr','chydr',TC);
  EIntensity_FS('petr',C,TC)$OIL_FLOW(RUN,TC) = FLOW_IN_FSFuels('petr',C,TC)/OIL_FLOW(RUN,TC);
+ EIntensity_FS('am',C,TC)$FLOW_OUT_FSFuels('am','cammo',TC) = FLOW_IN_FSFuels('am',C,TC)/FLOW_OUT_FSFuels('am','cammo',TC);
+ EIntensity_FS('is',C,TC) = FLOW_IN_FSFuels('is',C,TC)/(FLOW_OUT_FS('is','IISCRS',TC)+VARACT('REGION1',TC,'PEXGDRI'));
 
 * BM!!! need to create QA_FSStart
 * EIntensityQA_FS(FS,'chydr',TC)$FLOW_IN_FSFuels(FS,'chydr',TC) = FLOW_IN_FSFuels(FS,'chydr',TC)/QA_FS(FS,TC);
@@ -218,7 +229,7 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  REPORT(PRC,'ACTGRP',TC,RUN,'FuelCosts') = SUM(COM, TVFLOWIN(COM,TC,PRC)*T_COMBALEM('REGION1',TC,COM));
 * bm!!! If there are fixed costs, they might not be taken into account in the marginal and so would have to be added to this calc
 
- REPORT(PRC,'ACTGRP',TC,RUN,'CO2Tax') = TVFLOWOUT('PWRCO2S',TC,PRC)*T_COMBALEM('REGION1',TC,'PWRCO2S')*(-1);
+ REPORT(PRC,'ACTGRP',TC,RUN,'CO2Tax') = TVFLOWOUT('PWRCO2S',TC,PRC)*COM_CSTCO2('REGION1',TC,'CO2EQST');
 
  REPORT(PRC,'ACTGRP',TC,RUN,'Levies') = TVFLOWOUT('PWRENV',TC,PRC)*T_COMBALEM('REGION1',TC,'PWRENV')*(-1);
 

@@ -51,34 +51,34 @@
  FHMOVE('HHD-ME','HHD-HE',TC)$(FHMOVE('HHD-ME','HHD-HE',TC) LT 0) = 0;
 
 *Final population numbers
- TFHPOP2('HHD-LE',TC) = PFORE('HHD-LE',XC,TC) *
+ TFHPOP('HHD-LE',TC) = PFORE('HHD-LE',XC,TC) *
          (1 - FHMOVE('HHD-LE','HHD-ME',TC) - FHMOVE('HHD-LE','HHD-HE',TC));
 
- TFHPOP2('HHD-ME',TC) = PFORE('HHD-ME',XC,TC) *
+ TFHPOP('HHD-ME',TC) = PFORE('HHD-ME',XC,TC) *
          (1 - FHMOVE('HHD-ME','HHD-HE',TC))
          + FHMOVE('HHD-LE','HHD-ME',TC)*PFORE('HHD-LE',XC,TC);
 
- TFHPOP2('HHD-HE',TC) = PFORE('HHD-HE',XC,TC)
+ TFHPOP('HHD-HE',TC) = PFORE('HHD-HE',XC,TC)
          + FHMOVE('HHD-LE','HHD-HE',TC)*PFORE('HHD-LE',XC,TC)
          + FHMOVE('HHD-ME','HHD-HE',TC)*PFORE('HHD-ME',XC,TC);
 
 *INCOME CALCULATIONS (CONT)
 
 loop (H,
- popval(H,XC,TC) =  (sum(FH,TFHPOP2(FH,TC))/10)*ORD(H)*popvalfact(H,XC,TC);
+ popval(H,XC,TC) =  (sum(FH,TFHPOP(FH,TC))/10)*ORD(H)*popvalfact(H,XC,TC);
  );
 
 *Reverse mapping
  MFHHT(FH,H,TC)=no;
- MFHHT('hhd-le',H,TC)$((popval(H,XC,TC) LE TFHPOP2('hhd-le',TC)))=YES;
- MFHHT('hhd-me',H,TC)$(((popval(H,XC,TC) GT TFHPOP2('hhd-le',TC)) and (popval(H,XC,TC) LE (TFHPOP2('hhd-le',TC)+TFHPOP2('hhd-me',TC)))))=YES;
- MFHHT('hhd-he',H,TC)$((popval(H,XC,TC) GT (TFHPOP2('hhd-me',TC)+TFHPOP('hhd-le',TC))))=YES;
+ MFHHT('hhd-le',H,TC)$((popval(H,XC,TC) LE TFHPOP('hhd-le',TC)))=YES;
+ MFHHT('hhd-me',H,TC)$(((popval(H,XC,TC) GT TFHPOP('hhd-le',TC)) and (popval(H,XC,TC) LE (TFHPOP('hhd-le',TC)+TFHPOP('hhd-me',TC)))))=YES;
+ MFHHT('hhd-he',H,TC)$((popval(H,XC,TC) GT (TFHPOP('hhd-me',TC)+TFHPOP('hhd-le',TC))))=YES;
 
  HFORE(FH,XC,TC)$SUM(H$MFHHT(FH,H,TC), HPOPX(H,XC,TC,TT)) = SUM(H$MFHHT(FH,H,TC), YIX(H,XC,TC,TT)/HPOPX(H,XC,TC,TT))/CPIX(XC,TC,TT);
 
- STFHPOP(TC) = sum(FH,TFHPOP2(FH,TC));
+ STFHPOP(TC) = sum(FH,TFHPOP(FH,TC));
 
- TFHPOP(FH,TC)$STFHPOP(TC) = TFHPOP2(FH,TC)/STFHPOP(TC);
+ TFHPOP(FH,TC) = TFHPOP(FH,TC)/STFHPOP(TC);
 
 * remember to update HFORE with new mappings
 *    HFORE(FH,XC,MYPTC) = HFORE(FH,XC,'2040');

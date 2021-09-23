@@ -120,6 +120,7 @@
 
  CERES('ccoal-low')=YES;
 
+ CERES('ccoil') = YES;
 
 
  CERES('chydr')=YES;

@@ -219,7 +219,7 @@ PARAMETERS
   CST_INVC(REG,AY,AY,PRC,XXX)     TIMES calculated annual investment costs
   CST_ACTC(REG,AY,AY,PRC,XXX)     TIMES calculated annual activity costs
   CST_FIXC(REG,AY,AY,PRC)         TIMES calculated annual fixed costs
-
+  COM_CSTNET(REG,AY,COM,S,XXX)  TIMES specified commodity taxes
   COM_PROJ(REG,AY,COM)           TIMES Demand baseline projection
 
   UC_CAP(UC_N,SIDE,REG,AY,PRC)   TIMES multiplier of capacity variables
