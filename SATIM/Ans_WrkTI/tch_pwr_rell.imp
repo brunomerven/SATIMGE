@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/05	12:06:25 AM
+Creation Date:	2021/09/21	8:42:14 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_RELL	Reliability constraint LEAF (low availability) scenario	
@@ -213,7 +213,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ETNUC-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETODSGT-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETODSGT-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ETRANS	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	-1.19667013527575	
+	UC_CAP	UCCAP_RMELCC	LHS	ETRANS	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	-1.24869927159209	
 	UC_CAP	UCPWR_FLAB-M	LHS	EPTSTO-E	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCPWR_FLAB-M	LHS	EPTSTO-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCPWR_FLAB-M	LHS	ERBIG-N	-	-	-	3	-0.01958	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

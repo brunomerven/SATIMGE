@@ -120,9 +120,23 @@
 
  CERES('ccoal-low')=YES;
 
+ CERES('ccoil') = YES;
 
 
  CERES('chydr')=YES;
+
+ CERES('cbchm') = YES;
+ CERES('cochm') = YES;
+
+
+ CERES('ciron') = YES;
+ CEFIX('ciron') = YES;
+ QE.FX('ciron','REST') = QE0('ciron','REST') ;
+
+
+ CERES('cammo') = YES;
+ CEFIX('cammo') = YES;
+ QE.FX('cammo','REST') = QE0('cammo','REST') ;
 
 
 * CMRES('cpetr_p')= YES;
@@ -252,3 +266,9 @@ BudShare0(C,H,TC) = BUDSHR(C,H);
 
 BudShareNonEnergy(H,T1) =  1-sum(CHEnergy,BudShare0(CHEnergy,H,T1));
 
+
+
+* Other parameters needed for exogenous sectors
+QINTCBCHM(T1,RUN) = SUM(a,QINT0('CBCHM',a));
+QINTCOCHM(T1,RUN) = SUM(a,QINT0('COCHM',a));
+QINTCIRON(T1,RUN) = SUM(a,QINT0('CIRON',a));

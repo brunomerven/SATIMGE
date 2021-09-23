@@ -2,9 +2,8 @@
 *Loop over simulations
 LOOP(XC$MRUNX(RUN,XC),
 
-execute_load "dem_start.gdx" GVA_FS POP YHE TFHPOP MFHHT;
-execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
-
+execute_load "dem_start.gdx" GVA_FS POP YHE TFHPOP MFHHT QA_FS QD_FS;
+execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN QA_FS QD_FS;
 
 * Loop over TIMES model solve periods
   LOOP(TT$(NOT fail),
@@ -96,12 +95,16 @@ $include SATIM\includes\2TIMESReport.inc
  ACET2('apetr') = YES;
 
 * do reverse mapping for industry sectors (excludes power and petroleum)
+
  ICAGR(CXEP,A,TC) = SUM(FSXEP$MFSA(FSXEP,A),ICAFSGR(CXEP,FSXEP,TC));
  IFAGR(F,A,TC) = SUM(FS$MFSA(FS,A),IFAFSGR(F,FS,TC));
 *IFAGR(F,A,TC) = 1;
 
 *BM correction on power sector from freight demand for moving coal
  ICAGR('cftrp-l','aelec',TC) = ICAGR('ccoal-low','aelec',TC);
+
+*tmp fix until EB is improved
+ ica('celec','apgm','NAT') = 0.5*ica0('celec','apgm','NAT');
 
 
 *   Loop over CGE model solve periods
@@ -195,16 +198,12 @@ $offtext
 
 * make adjustments to ica
 
-*BM+FH 201218: SETTING STARTING POINT FOR HYDROGEN
-* ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
-*                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
-* BM 260521: Adjusting absolute calc because of new approach using GVA rather than QA for EIntensity calc
-*This needs QA_FSStart: ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
-*                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensityQA_FS(FSXEP,'chydr',TC));
- ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+ ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
+                     = EIntensity_FS('elec','chydr',TC);
+ ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
                          = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
 * tmp fix until QA approach is done properly
- ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.00001 AND ica('chydr',A,'NAT'))
+ ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
                          = ica('chydr',A,'NAT') * QVA.L(A,'nat')/QA.L(A);
 
 * calculate ica change for private passenger. This needs to be generalised to other household end-uses
@@ -222,6 +221,51 @@ $offtext
 *!!!!
 *ICAGR(C,A,TC)=1;
   ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
+
+
+* Other fixes to ica
+
+* coal
+* fade coal own use to match Energy model
+  ica('ccoal-low','acoal','NAT') = ica('ccoal-low','acoal','NAT')*0.5;
+* petr
+  ica('ccoil','apetr','NAT') = max(0.07,ica('ccoil','apetr','NAT'));
+
+
+* Hydrogen calibrated on cbchm
+
+  ica('cammo','ahydr','NAT') = 0.000001;
+  ica('cbchm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
+  ica('cochm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
+
+  ICA('celec','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = EIntensity_FS('hydr','celec',TC);
+  ICA('cngas','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001 and EIntensity_FS('hydr','cngas',TC)) = EIntensity_FS('hydr','cngas',TC);
+
+
+ ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.03;
+*0.03;
+ ica('chydr','aammo','NAT')$(EIntensity_FS('am','chydr',TC) gt 0.001) = EIntensity_FS('am','chydr',TC)*0.92;
+
+
+* Ammonia sector calibrated on cbchm
+  ica('cammo','aammo','NAT') = 0.28;
+  ica('cbchm','aammo','NAT') = 0.01;
+  ica('cochm','aammo','NAT') = 0.01;
+
+
+* tweaks to iron and steel sector
+*  ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
+*                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
+
+  ica('cnfrm','airon','NAT') = (ica0('cnfrm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
+                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
+
+
+*bm/sr/fh added this to save model from crashing from demand for ccoal-low disapearing completely.
+  ica('ccoal-low',A,'NAT')$ica0('ccoal-low',A,'NAT') = max(ica('ccoal-low',A,'NAT'),0.0004);
+  ica('ccoal-low','ahydr','NAT') = 0.00000001;
+
+
 
 
 
@@ -250,14 +294,6 @@ $offtext
           ifa(F,A,'nat') = ifa(F,A,'nat')*IFAGR(F,A,TC);
 
 
-         ICA('celec','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = EIntensity_FS('hydr','celec',TC);
-         ICA('cngas','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001 and EIntensity_FS('hydr','cngas',TC)) = EIntensity_FS('hydr','cngas',TC);
-
-
-
-*bm/sr/fh added this to save model from crashing from demand for ccoal-low disapearing completely.
-          ica('ccoal-low',A,'NAT')$ica0('ccoal-low',A,'NAT') = max(ica('ccoal-low',A,'NAT'),0.0004);
-          ica('ccoal-low','ahydr','NAT') = 0.00000001;
 
 *       ENERGY: Set electricity sector capital growth rate equal to TIMES results
 *       CA: 2capital.inc modified to use EINVCOST
@@ -273,6 +309,7 @@ $offtext
           AFX('APETR',RD)$EFX(TT,TC) = YES;
 
           AFX('ACOIL',RD)$EFX(TT,TC) = YES;
+          AFLEO('ACOIL') = YES;
 
 *FH 71218
           AFX('APETR',RD)$(NOT EFX(TT,TC) AND QFSUPX('FCAP',XC,TC-1,TT) LT .9) = YES;
@@ -280,7 +317,7 @@ $offtext
 
          AFX('AHYDR',RD) = NO;
 *         AFX('AHYDR',RD)$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
-         AFX('AHYDR',RD)$(NOT T1(TC)) = YES;
+         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
          AFLEO('AHYDR') = NO;
          AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
@@ -299,13 +336,12 @@ $offtext
 
           CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
           AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1)*pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
-
 *bm cap decrease to 5%
 *          if(TT1(TT), AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05);
 *          AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05;
 
-
           QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = QE.L('ccoal-hgh','REST')*FLOW_IN_FSFuels('EXP','ccoal-hgh',TC)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) ;
+*          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = FLOW_IN_FSFuels('EXP','ccoal-hgh',TC);
 
           AFLEO('ACOAL')$(NOT T1(TC)) = YES;
 
@@ -342,7 +378,7 @@ $offtext
 * QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC,TT);
 
 *bm hydrogen not in public transport in SAM so leaving it out for now
- QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_IN_FSFuels('tranlf','chydr',TC);
+ QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
 
 
 *bm set reasonable starting value for QVA otherwise wfdist goes -ve.
@@ -350,9 +386,9 @@ $offtext
  PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = 1;
 
 * QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_OUT_FSFuels('hydr','CHYDR',TC);
- QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_IN_FSFuels('tranlf','CHYDR',TC);
+*! QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_IN_FSFuels('tranlf','CHYDR',TC);
 
- QINT.L(C,'AHYDR')$(HCAP(XC,TC,TT) GT 0.00001) = ica(C,'AHYDR','NAT')*QINTA.L('AHYDR','NAT');
+*! QINT.L(C,'AHYDR')$(HCAP(XC,TC,TT) GT 0.00001) = ica(C,'AHYDR','NAT')*QINTA.L('AHYDR','NAT');
 
 
 
@@ -379,31 +415,46 @@ $offtext
 *CA
  ANFX(A,RD)=NO;
 
-*fh
+* other exogenous sectors
+* gold - set to slow decline
  AFX('AGOLD',RD)=YES;
+*bm
+ AFLEO('AGOLD') = YES;
+
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
- AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1;
-*bm
- AFLEO('AGOLD') = YES;
- AFLEO('ACOIL') = YES;
+ AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
 
-* AFXGR('AGOLD','NAT',XC,TC) = 0.08;
 
-$ontext
- AFX('AMORE',RD)=YES;
- ANFX(A,RD)=NO;
- ANFX(A,RD)$(NOT AFX(A,RD))=YES;
- AFXGR('AMORE','NAT',XC,TC) = 0.03;
-* AFXGR('AMORE','NAT',XC,TC) = 0.3;
+* iron and steel
+* the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
+ QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
 
- AFX('APAPR',RD)=YES;
- ANFX(A,RD)=NO;
- ANFX(A,RD)$(NOT AFX(A,RD))=YES;
- AFXGR('APAPR','NAT',XC,TC) = -0.005;
-* AFXGR('APAPR','NAT',XC,TC) = -0.05;
-$offtext
+
+* ammonia
+
+ QE.FX('cammo','REST')$VARACT('REGION1',TC-1,'PEXNH3') = QE.L('cammo','REST')*VARACT('REGION1',TC,'PEXNH3')/VARACT('REGION1',TC-1,'PEXNH3');
+
+
+
+* chemicals set to partially track Secunda and jet fuel production
+ CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2012','UCTLCLEIN-E');
+
+ AFX('ABCHM',RD) = YES;
+ AFLEO('ABCHM') = YES;
+ AFX('AOCHM',RD) = YES;
+ AFLEO('AOCHM') = YES;
+
+ AFXGR('ABCHM','NAT',XC,TC)$QINTCBCHM(TC-2,RUN) =
+                         (1 - CTL_Weight(TC,RUN)) * (QINTCBCHM(TC-1,RUN)/QINTCBCHM(TC-2,RUN)) +
+                         CTL_Weight(TC,RUN) * VARACT('REGION1',TC,'UCTLCLEIN-E')/(VARACT('REGION1',TC-1,'UCTLCLEIN-E')+0.00001) - 1;
+
+ AFXGR('AOCHM','NAT',XC,TC)$QINTCOCHM(TC-2,RUN) =
+                         (1 - CTL_Weight(TC,RUN)) * (QINTCOCHM(TC-1,RUN)/QINTCOCHM(TC-2,RUN)) +
+                         CTL_Weight(TC,RUN) * VARACT('REGION1',TC,'UCTLCLEIN-E')/(VARACT('REGION1',TC-1,'UCTLCLEIN-E')+0.00001) - 1;
+
+
 
 
 
@@ -538,6 +589,12 @@ $offtext
         CTA_EMRR(A)$(PAR.L(A,'NAT')*QAR.L(A,'NAT'))=CTA_EMR(A)/(PAR.L(A,'NAT')*QAR.L(A,'NAT'));
 
 $include cge\includes\2results.inc
+
+* bits needed for some of the exogenous sectors
+QINTCBCHM(TC,RUN) = SUM(a,QINT.L('CBCHM',a));
+QINTCOCHM(TC,RUN) = SUM(a,QINT.L('CBCHM',a));
+QINTCIRON(TC,RUN) = SUM(a,QINT.L('CIRON',a));
+
 
 *       CA make growth in transfers from government to HH a function of nominal absorption growth plus a small increment
       IF(NOT T1(TC),

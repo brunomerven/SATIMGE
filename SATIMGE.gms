@@ -219,7 +219,7 @@ PARAMETERS
   CST_INVC(REG,AY,AY,PRC,XXX)     TIMES calculated annual investment costs
   CST_ACTC(REG,AY,AY,PRC,XXX)     TIMES calculated annual activity costs
   CST_FIXC(REG,AY,AY,PRC)         TIMES calculated annual fixed costs
-
+  COM_CSTNET(REG,AY,COM,S,XXX)  TIMES specified commodity taxes
   COM_PROJ(REG,AY,COM)           TIMES Demand baseline projection
 
   UC_CAP(UC_N,SIDE,REG,AY,PRC)   TIMES multiplier of capacity variables
@@ -333,6 +333,15 @@ PARAMETERS
   FossilShareFinal(ALLYEAR,RUN)
   ERPRICE(AY,RUN)                regulated electricity price
 
+* CTL links
+  CTL_Weight(AY,RUN)             Weighting of CTL changes in chemicals AFXGR calc
+* tracking trends in intermediate use of goods produced by exogenous sectors
+  QINTCBCHM(AY,RUN)             stored value for sum(a.QINT(CBCHM.a)
+  QINTCOCHM(AY,RUN)             stored value for sum(a.QINT(COCHM.a)
+  QINTCIRON(AY,RUN)             stored value for sum(a.QINT(CIRON.a)
+
+* domestic demand to drive energy model (i.e. excluding exports)
+  QD_FS(FS,AY)            domestic demand to drive energy model
 
 * SubAnnual Analysis parameters
   TS_Duration(TS_DAYNITE)                  duration in hours of each daynite timeslice
@@ -455,6 +464,7 @@ Alias (MILESTONYR,MY), (P,PP);
  TS_TMP1               temporary values in sub-annual results calc
  TS_TMP2               temporary values in sub-annual results calc
 
+
 ;
 *-------------------------------------------------------------------------------
 
@@ -487,12 +497,12 @@ ELSE
 
 * Read in GDP and Population from Drivers Workbook
   execute 'gdxxrw.exe i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6';
-  execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT;
+  execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT QD_FS;
 
 
   if(SIM_SATIM(RUN) eq 1,
 * Write Drivers to DMD_PROJ workbook
-         execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT PAMS_RUN;
+         execute_unload "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT QD_FS PAMS_RUN;
          execute 'gdxxrw.exe i=drivers.gdx o=.\SATIM\DataSpreadsheets\DMD_PRJ.xlsx index=index_G2E!a6';
 
 * Read resulting Demand from DMD_PROJ workbook

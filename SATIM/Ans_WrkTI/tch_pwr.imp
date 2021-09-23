@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/08/30	10:29:18 PM
+Creation Date:	2021/09/20	4:30:37 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -1244,7 +1244,7 @@ TID DATA	REGION1
 	NCAP_START	ETGICCC-CCS-N	-	-	-	-	-	2026	
 	NCAP_START	ETGICCC-N	-	-	-	-	-	2026	
 	NCAP_START	ETGICEN-N	-	-	-	-	-	2023	
-	NCAP_START	ETGICGT-N	-	-	-	-	-	2026	
+	NCAP_START	ETGICGT-N	-	-	-	-	-	2025	
 	NCAP_START	ETHGNGT-N	-	-	-	-	-	2026	
 	NCAP_START	ETNUC-N	-	-	-	-	-	2030	
 	NCAP_START	MINCSKUSINLG	-	-	-	-	-	2022	
