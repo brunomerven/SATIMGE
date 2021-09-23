@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/09/10	3:08:20 PM
+Creation Date:	2021/09/23	5:11:47 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -100,12 +100,12 @@ ITEMS	REGION1
 	E	CLD	Coal Discard	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	CLE	Coal low grade	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	CMOX	CMOX South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	CO2CAPT	CO2 Captured	KT	COM,NRG,ANNUAL,FOSSIL	
+	E	CO2CAPT	CO2 Captured	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	CO2EQS	CO2EQS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2S	CO2S South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SP	Process Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	CO2SPCEM	Process Emissions Cement South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPCEM	Process Emissions CEM South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFC	Process Emissions FerroChrome South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFM	Process Emissions FerroManganese South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COA	Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -145,26 +145,26 @@ ITEMS	REGION1
 	E	HET	Heat-Steam	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	HGN	Hydrogen	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	HYD	Hydro	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIB	Industry Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIW	Industry Biomass Wood	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIB	Industry - Biomass Bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIW	Industry - Biomass wood	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCH4S	Industry Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCLE	Industry Coal low grade	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry - Carbon Monoxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2S	Industry Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDCOA	Industry Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCOK	Industry Coal Coking	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOA	Industry - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOK	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDELC	Industry Electricity	PJ	COM,NRG,DAYNITE,ELC	
-	E	INDGAS	Industry Gas South Africa	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDGAS	Industry - South Africa gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDN2OS	Industry Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMVS	Industry NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOXS	Industry Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry - Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOGS	Industry Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOHF	Industry Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOLP	Industry Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDP10S	Industry PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDSOXS	Industry Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDWAS	Industry Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDWAS	Industry - Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	N2OS	N2OS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	NMVS	NMVS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	NOXS	NOXS South Africa	KT	COM,ENV,ANNUAL,GHG	
@@ -307,7 +307,7 @@ ITEMS	REGION1
 	T	MNZZZ	Backstop for whole system	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOA	Exports of Coal	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOK	Exports of Coal Coking	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
 	T	PEXOAG	Exports of Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOCR	Exports of Oil Crude	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXODS	Exports of Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
@@ -340,14 +340,14 @@ ITEMS	REGION1
 	T	USMRGICHGN	Production Plant Hydrogen - Large SMR - Coastal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UTRNGIMGAS	Conversion Methane Rich Gas Natural Gas for use in industry and refineries	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGRCOA	Agriculture Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGRELC	Agriculture Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XAGRODS	Agriculture Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROGS	Agriculture Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROHF	Agriculture Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROKE	Agriculture Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROLP	Agriculture Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMCOA	Commercial Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XCOMGAS	Commercial Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMODS	Commercial Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMOGS	Commercial Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -359,7 +359,7 @@ ITEMS	REGION1
 	T	XINDCLE	Industry Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOA	Industry Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOK	Industry Coal Coking	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINDELC	Industry Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINDGAS	Industry Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDODS	Industry Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOGS	Industry Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -388,11 +388,11 @@ ITEMS	REGION1
 	T	XPWRWND	Power Sector Wind	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESBIW	Residential Biomass Wood	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESCOA	Residential Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XRESELC	Residential Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XRESGAS	Residential Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOKE	Residential Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOLP	Residential Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XTRAELC	Transport Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XTRAGAS	Transport Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XTRAHGN	Transport Hydrogen	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XTRAOAG	Transport Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -403,7 +403,7 @@ ITEMS	REGION1
 	T	XUPSBID	Supply Sector Biodiesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSBIE	Supply Sector Bioethanol	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSCLE	Supply Sector Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XUPSGAS	Supply Sector Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSGIC	Supply Sector Coastal Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSHEE	Supply Sector Heat-Steam Existing	PJ,PJa	PRC,PRE,ANNUAL	
@@ -413,7 +413,7 @@ ITEMS	REGION1
 	T	XUPSOHF	Supply Sector Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	ZZBKELCC	Backstop for Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	ZZBKNRG	Backstop for all energy except elc	PJ,PJa	PRC,PRE,ANNUAL	
-	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
+	W	ANNUAL	Annual		ALL_TS,ANNUAL	
 	W	S1	s1		ALL_TS,SEASON	
 	W	S1D1	s1d1		ALL_TS,WEEKLY	
 	W	S1D1B1	s1d1b1		ALL_TS,DAYNITE	
@@ -462,8 +462,8 @@ TS DATA	REGION1
 	ACT_BND	MIRCRB	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRM	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRN	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	154	null	null	116	null	null	null	null	156	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	161	null	null	122	null	null	null	null	161	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.9963	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1727	null	null	null	null	1727	null	null	null	null	1727	null	1000	null	null	
 	ACT_BND	PEXCOA	-	-	-	ANNUAL	UP	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	FX	0	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	UP	3	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1394,8 +1394,8 @@ TS DATA	REGION1
 	PRC_RESID	UELEA1HGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	UGASGRS-N	-	-	-	-	-	0	116	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	UGTLGICCO-E	-	-	-	-	-	0	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	
-	PRC_RESID	UREFOCRIN-E	-	-	-	-	-	0	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	
+	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	
+	PRC_RESID	UREFOCRIN-E	-	-	-	-	-	0	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	
 	PRC_RESID	XAGRCOA	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XAGRELC	-	-	-	-	-	0	0.911977121489164	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XAGRODS	-	-	-	-	-	0	42.04873098492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
