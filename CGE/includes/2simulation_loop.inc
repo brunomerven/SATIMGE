@@ -231,6 +231,8 @@ $offtext
 * petr
   ica('ccoil','apetr','NAT') = max(0.07,ica('ccoil','apetr','NAT'));
 
+* tmp fix on pp until fixed on SATIM side
+  ica('celec','apapr','NAT') = ica0('celec','apapr','NAT');
 
 * Hydrogen calibrated on cbchm
 
@@ -254,8 +256,8 @@ $offtext
 
 
 * tweaks to iron and steel sector
-*  ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
-*                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
+  ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + ica0('cpgm','airon','NAT')* 0.9 * VARACT('REGION1',TC,'PEXGDRI'))
+                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
 
   ica('cnfrm','airon','NAT') = (ica0('cnfrm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
                               /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));

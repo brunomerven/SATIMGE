@@ -27,7 +27,7 @@ SET COM_GRP /
   'COMP10S'                  'Commercial PM10 South Africa                      '
   'COMSOXS'                  'Commercial Sulphur gases South Africa             '
   'INDCH4S'                  'Industry Methane South Africa                     '
-  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
+  'INDCMOX'                  'Industry - Carbon Monoxide                        '
   'INDCO2S'                  'Industry Carbon dioxide South Africa              '
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
@@ -99,7 +99,7 @@ SET COM /
   'COMP10S'                  'Commercial PM10 South Africa                      '
   'COMSOXS'                  'Commercial Sulphur gases South Africa             '
   'INDCH4S'                  'Industry Methane South Africa                     '
-  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
+  'INDCMOX'                  'Industry - Carbon Monoxide                        '
   'INDCO2S'                  'Industry Carbon dioxide South Africa              '
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
@@ -468,5 +468,5 @@ SET ACOM_UNIT /
 ;
        TABLE ACOMCSTNET
                                                                                      0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'CO2EQST'                 .'ANNUAL'                                                                                                                          EPS              .0246           .025092         .02559384       .0261057168                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'CO2EQST'                 .'ANNUAL'                           .0001           .0001           .0001           .0001           .0001           .0001           .0001           .0246           .025092         .02559384       .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261           .0261
 ;

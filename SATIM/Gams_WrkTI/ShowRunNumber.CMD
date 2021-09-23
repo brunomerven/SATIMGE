@@ -1,1 +1,1 @@
-echo NZ-CO2S2050-
+echo 0RG_NZ20_HiE

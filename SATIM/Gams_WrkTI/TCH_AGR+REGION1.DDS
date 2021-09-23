@@ -56,7 +56,7 @@ SET PRC /
   'ATODS-E'                  'Agriculture - Traction - Oil Diesel - Existing    '
   'ATOGS-E'                  'Agriculture - Traction - Oil Gasoline - Existing  '
   'XAGRCOA'                  'Agriculture Coal                                  '
-  'XAGRELC'                  'Agriculture Electricity                           '
+  'XAGRELC'                  'Agriculatural Electricity                         '
   'XAGRODS'                  'Agriculture Oil Diesel                            '
   'XAGROGS'                  'Agriculture Oil Gasoline                          '
   'XAGROHF'                  'Agriculture Oil HFO                               '
@@ -65,12 +65,14 @@ SET PRC /
 /;
 SET PRC_PRE /
   'REGION1'   .'XAGRCOA'
-  'REGION1'   .'XAGRELC'
   'REGION1'   .'XAGRODS'
   'REGION1'   .'XAGROGS'
   'REGION1'   .'XAGROHF'
   'REGION1'   .'XAGROKE'
   'REGION1'   .'XAGROLP'
+/;
+SET PRC_ELE /
+  'REGION1'   .'XAGRELC'
 /;
 SET PRC_DMD /
   'REGION1'   .'AHCOA-E'
