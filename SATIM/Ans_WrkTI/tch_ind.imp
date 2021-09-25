@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/09/23	5:23:14 PM
+Creation Date:	25 Sep 2021	17:53:30
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -1293,10 +1293,20 @@ TS DATA	REGION1
 	NCAP_BND	IFBSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IFBSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISBFBOF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISBFBOF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISBFBOF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISCOREAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISCOREAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISCOREAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISDRIEAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISDRIEAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISDRIEAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISOTHEAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISOTHEAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISOTHEAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISSCREAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISSCREAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISSCREAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMICELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1935,15 +1945,6 @@ TS DATA	REGION1
 	PRC_RESID	XIPPGAS	-	-	-	-	-	0	4.836	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHBATTERY	-	-	-	-	-	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHHGNSTOR-N	-	-	-	-	-	0	0.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC__RHSRT	UC-BFBOF	-	-	-	-	UP	0	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	null	
-	UC__RHSRT	UC-BFBOF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-BFBOF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-COREAF	-	-	-	-	UP	0	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	null	
-	UC__RHSRT	UC-COREAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-COREAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-DRIEAF	-	-	-	-	UP	0	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	null	
-	UC__RHSRT	UC-DRIEAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-DRIEAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KLD	-	-	-	-	UP	0	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	0.841809450395659	null	
 	UC__RHSRT	UC-INM-KLD-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KLD-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
@@ -1953,22 +1954,9 @@ TS DATA	REGION1
 	UC__RHSRT	UC-INM-KSPP-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KSP-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-INM-KSP-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF	-	-	-	-	UP	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF	-	-	-	-	UP	0	1.72	1.72	1.72	1.72	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MAX	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MIN	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-SCREAF-T1-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-SCREAF-T2-ACT	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-INM-KLD-T1	LHS	S-CEMKLD-E	-	ANNUAL	-	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	null	
 	UCRULE_ACT	UC-INM-KLD-T1	LHS	S-CEMKLD-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-INM-KLD-T2	LHS	S-CEMKLD-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
@@ -1981,26 +1969,13 @@ TS DATA	REGION1
 	UCRULE_ACT	UC-INM-KSP-T1	LHS	S-CEMKSP-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-INM-KSP-T2	LHS	S-CEMKSP-E	-	ANNUAL	-	0	0	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	0	null	
 	UCRULE_ACT	UC-INM-KSP-T2	LHS	S-CEMKSP-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS	-	ANNUAL	-	0	-0.126	-0.126	-0.126	-0.217	-0.221	-0.216	-0.196	-0.201	-0.246	-0.25275	-0.2595	-0.26625	-0.273	-0.273	-0.27975	-0.2865	-0.29325	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	null	null	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-BFBOF	LHS	S-IIS-BFBOF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-COREAF	LHS	S-IIS-COREAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-DRIEAF	LHS	S-IIS-DRIEAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_CAP	UC-INM-KLD	LHS	S-CEMKLD-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_CAP	UC-INM-KSP	LHS	S-CEMKSP-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_CAP	UC-INM-KSPP	LHS	S-CEMKPP-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
-	UCRULE_CAP	UC-OTHEAF	LHS	S-IIS-OTHEAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-SCREAF	LHS	S-IIS-SCREAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 
 TID DATA	REGION1
 	COM_GMAP	-	IISCKE	CGBFBOF-E-I	-	-	-	1	
@@ -3233,15 +3208,6 @@ TID DATA	REGION1
 	TOP-OUT	XIPPGAS	IPPGAS	-	-	-	-	1	
 	TOP-OUT	XIPPOTH	IPPOHF	-	-	-	-	1	
 	TOP-OUT	XIPPREC	IPPREC	-	-	-	-	1	
-	UC_R_EACH	UC-BFBOF	-	-	-	-	-	1	
-	UC_R_EACH	UC-BFBOF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-BFBOF-T2-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-COREAF	-	-	-	-	-	1	
-	UC_R_EACH	UC-COREAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-COREAF-T2-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-DRIEAF	-	-	-	-	-	1	
-	UC_R_EACH	UC-DRIEAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-DRIEAF-T2-ACT	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KLD	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KLD-T1	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KLD-T2	-	-	-	-	-	1	
@@ -3251,14 +3217,9 @@ TID DATA	REGION1
 	UC_R_EACH	UC-INM-KSPP-T2	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KSP-T1	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KSP-T2	-	-	-	-	-	1	
-	UC_R_EACH	UC-OTHEAF	-	-	-	-	-	1	
-	UC_R_EACH	UC-OTHEAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-OTHEAF-T2-ACT	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF-MAX	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF-MIN	-	-	-	-	-	1	
-	UC_R_EACH	UC-SCREAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-SCREAF-T2-ACT	-	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1
 
