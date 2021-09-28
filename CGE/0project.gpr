@@ -100,6 +100,28 @@ PlaneFilter1=rest
 [RP:2VARINIT]
 1=
 
+[RP:SATIMGE]
+1=r=cge\model, gdx = NetZeroLinkedLE
+2=r=cge\model, gdx = NetZeroLinkedLE_6test
+3=r=cge\model, gdx = NetZeroLinkedHE
+4=r=cge\model, gdx = NetZeroLinked3Iter
+5=r=cge\model, gdx = NetZeroLinkedNewSAM
+6=r=cge\model, gdx = NetZeroLinkedtest
+7=r=cge\model, gdx = NetZeroLinkedtestNew2
+8=r=cge\model, gdx = NetZeroLinkedtestNew
+9=r=cge\model, gdx = NetZeroLinked
+10=r=cge\model, gdx = NetZeroLinkedTest_Elas5
+11=r=cge\model, gdx = NetZeroLinkedTest_Elas4
+12=r=cge\model, gdx = NetZeroLinkedTest_Elas3
+13=r=cge\model, gdx = NetZeroLinkedTest_Elas2
+14=r=cge\model, gdx = NetZeroLinkedTest_Elas
+15=r=cge\model, gdx = NetZeroLinkedTest3
+16=r=cge\model, gdx = NetZeroLinkedTest2
+17=r=cge\model, gdx = NetZeroLinkedTest
+18=r=cge\model, gdx = NetZeroTest
+19=r=cge\model, gdx = hiGr
+20=r=cge\model, gdx = NetZero
+
 [RP:1MODEL]
 1=gdx=model s=model
 2=gdx = model s = model

@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	26 Sep 2021	12:10:57
+Creation Date:	28 Sep 2021	15:21:07
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -16,15 +16,6 @@ TS DATA	_GLOBAL
 TID DATA	_GLOBAL
 
 ITEMS	REGION1
-	C	UC-BFBOF	Act. constraint for Industry - Iron&Steel - BFBOF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-BFBOF-T1-ACT	Act. constraint for Industry - Iron&Steel - BFBOF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-BFBOF-T2-ACT	Act. constraint for Industry - Iron&Steel - BFBOF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-COREAF	Act. constraint for Industry - Iron&Steel - COREAF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-COREAF-T1-ACT	Act. constraint for Industry - Iron&Steel - COREAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-COREAF-T2-ACT	Act. constraint for Industry - Iron&Steel - COREAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-DRIEAF	Act. constraint for Industry - Iron&Steel - DRIEAF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-DRIEAF-T1-ACT	Act. constraint for Industry - Iron&Steel - DRIEAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-DRIEAF-T2-ACT	Act. constraint for Industry - Iron&Steel - DRIEAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KLD	Act. constraint for Industry - NMM Sector - Kiln Long Dry - All existing	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KLD-T1	Act. constraint for Industry - NMM Sector - Kiln Long Dry - EE Tech Level 1	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KLD-T2	Act. constraint for Industry - NMM Sector - Kiln Long Dry - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
@@ -34,14 +25,9 @@ ITEMS	REGION1
 	C	UC-INM-KSPP-T2	Act. constraint for Industry - NMM Sector - Kiln SP Precalciner - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KSP-T1	Act. constraint for Industry - NMM Sector - Kiln Suspension Preheater - EE Tech Level 1	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KSP-T2	Act. constraint for Industry - NMM Sector - Kiln Suspension Preheater - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-OTHEAF	Act. constraint for Industry - Iron&Steel - OTHEAF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-OTHEAF-T1-ACT	Act. constraint for Industry - Iron&Steel - OTHEAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-OTHEAF-T2-ACT	Act. constraint for Industry - Iron&Steel - OTHEAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF	Act. constraint for Industry - Iron&Steel - SCREAF	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF-MAX	Act. constraint for Industry - Iron&Seel - SCREAF - Max Share	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF-MIN	Act. constraint for Industry - Iron&Seel - SCREAF - Minimum Share	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-SCREAF-T1-ACT	Act. constraint for Industry - Iron&Steel - SCREAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-SCREAF-T2-ACT	Act. constraint for Industry - Iron&Steel - SCREAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	D	CGBFBOF-E-I	Comm. Group for Industry - Iron&Steel - BF-BOF - Existing - Input		COM_GRP,COM_GRPTRU	
 	D	CGBFBOF-E-O	Comm. Group for Industry - Iron&Steel - BF-BOF - Existing - Output		COM_GRP,COM_GRPTRU	
 	D	CGBFBOF-N-I	Comm. Group for Industry - Iron&Steel - BF-BOF - New Build - Input		COM_GRP,COM_GRPTRU	
@@ -1971,7 +1957,7 @@ TS DATA	REGION1
 	UCRULE_ACT	UC-INM-KSP-T2	LHS	S-CEMKSP-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS	-	ANNUAL	-	0	-0.126	-0.126	-0.126	-0.217	-0.221	-0.216	-0.196	-0.201	-0.246	-0.25275	-0.2595	-0.26625	-0.273	-0.273	-0.27975	-0.2865	-0.29325	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	null	null	
+	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	null	null	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_CAP	UC-INM-KLD	LHS	S-CEMKLD-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_CAP	UC-INM-KSP	LHS	S-CEMKSP-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	

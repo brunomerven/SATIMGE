@@ -246,7 +246,11 @@ $offtext
   ICA('cngas','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001 and EIntensity_FS('hydr','cngas',TC)) = EIntensity_FS('hydr','cngas',TC);
 
 
- ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.03;
+ ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.0433;
+* ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC-1) LT 0.0001 and EIntensity_FS('is','chydr',TC) GT 0.0001)
+*                         = EIntensity_FS('is','chydr',TC)*0.0433;
+
+
 *0.03;
  ica('chydr','aammo','NAT')$(EIntensity_FS('am','chydr',TC) gt 0.001) = EIntensity_FS('am','chydr',TC)*0.92;
 
@@ -384,7 +388,7 @@ $offtext
 * QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC,TT);
 
 *bm hydrogen not in public transport in SAM so leaving it out for now
- QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+ QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
 
 
 *bm set reasonable starting value for QVA otherwise wfdist goes -ve.
@@ -432,6 +436,8 @@ $offtext
 
  AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
 
+ AFX('ANGAS',RD) = YES;
+ AFXGR('ANGAS','NAT',XC,TC) = -.001;
 
 * iron and steel
 * the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
