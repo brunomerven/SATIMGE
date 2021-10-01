@@ -533,7 +533,7 @@ ELSE
          PUT 'PARAMETER ACOMCUMNET /' /;
          EFVAL = SIM_CO2CUMUL(RUN)*1000000;
          if(EFVAL,
-                 PUT "REGION1.CO2EQSB.2020.2050.'UP'  ", EFVAL /;
+                 PUT "REGION1.CO2EQSB.2021.2050.'UP'  ", EFVAL /;
          );
 
          PUTCLOSE "/;";

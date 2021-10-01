@@ -104,9 +104,9 @@
 * CMFIX('CPETR_T')=YES;
 * CMRES('CPETR_T')= YES;
 * QM.FX('CPETR_T','REST') = QM0('CPETR_T','REST') ;
- CEFIX('ccoal-hgh')=YES;
- CERES('ccoal-hgh')=YES;
- QE.FX('ccoal-hgh','REST') = QE0('ccoal-hgh','REST') ;
+* CEFIX('ccoal-hgh')=YES;
+* CERES('ccoal-hgh')=YES;
+* QE.FX('ccoal-hgh','REST') = QE0('ccoal-hgh','REST') ;
 
 
  CEFIX('cftrp-o')=YES;
@@ -119,6 +119,7 @@
 
 
  CERES('ccoal-low')=YES;
+ CERES('ccoal-hgh')=YES;
 
  CERES('ccoil') = YES;
 

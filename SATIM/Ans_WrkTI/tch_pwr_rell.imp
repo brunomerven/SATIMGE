@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/09/21	8:42:14 AM
+Creation Date:	2021/09/30	6:02:53 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_RELL	Reliability constraint LEAF (low availability) scenario	
@@ -49,12 +49,12 @@ TS DATA	REGION1
 	ACT_EFF	EP_FLAB-P	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	EP_FLAB-S	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	EP_FLAB-T	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC__RHSRT	UCACT_FIRM	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UC__RHSRT	UCACT_FIRM	-	-	-	-	NB	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_BATR	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_DUMETR	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_ERMELC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_RMELCC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	5	null	null	null	null	null	null	100	null	null	null	null	null	null	null	
+	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	2.3	2.6	2.9	3.2	5	5.2	5.4	5.6	5.8	6	null	null	null	null	null	null	12.8	null	null	null	null	null	null	null	
 	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	5	null	null	null	null	null	null	100	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-M	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-P	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

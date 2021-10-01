@@ -192,10 +192,14 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * recalculate intensity for energy sectors, where GVA not suitable
  EIntensity_FS('elec',C,TC) = FLOW_IN_FSFuels('elec',C,TC)/ELC_FLOW(RUN,TC);
  EIntensity_FS('elec','ccoal-low',TC) = max(0.01,EIntensity_FS('elec','ccoal-low',TC));
+
  EIntensity_FS(FS,'ccoal-hgh',TC) = max(0.0001,EIntensity_FS(FS,'ccoal-hgh',TC));
 
  EIntensity_FS('hydr',C,TC)$(FLOW_OUT_FSFuels('hydr','chydr',TC) GT .001) = FLOW_IN_FSFuels('hydr',C,TC)/FLOW_OUT_FSFuels('hydr','chydr',TC);
  EIntensity_FS('petr',C,TC)$OIL_FLOW(RUN,TC) = FLOW_IN_FSFuels('petr',C,TC)/OIL_FLOW(RUN,TC);
+
+ EIntensity_FS('petr','ccoal-low',TC) = max(0.01,EIntensity_FS('petr','ccoal-low',TC));
+
  EIntensity_FS('am',C,TC)$FLOW_OUT_FSFuels('am','cammo',TC) = FLOW_IN_FSFuels('am',C,TC)/FLOW_OUT_FSFuels('am','cammo',TC);
  EIntensity_FS('is',C,TC) = FLOW_IN_FSFuels('is',C,TC)/(FLOW_OUT_FS('is','IISCRS',TC)+VARACT('REGION1',TC,'PEXGDRI'));
 
