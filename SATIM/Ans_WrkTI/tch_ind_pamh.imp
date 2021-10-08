@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	30 Sep 2021	15:33:17
+Creation Date:	03 Oct 2021	16:40:14
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND_PAMH	Industry shortened ts - PAM high ambition	
@@ -160,7 +160,7 @@ ITEMS	REGION1
 	E	INDN2O	Industry - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMV	Industry - NMVOCs	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOX	Industry - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry - Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry - Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDPM10	Industry - PM10	KT	COM,ENV,ANNUAL,GHG	
@@ -416,41 +416,41 @@ ITEMS	REGION1
 	T	PEXGDRI	Export of Green DR Iron	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXPGM	Export PGMs - Pt	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXPGMO	Export PGMs - Others	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIFAGAS	Industrial FA-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIFBGAS	Industrial FB-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISBIO	Industry - Iron and Steel - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCKC	Industry - Iron and Steel - Coking Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCOA	Industry - Iron and Steel - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIISELCHY	Industry electricity to HDRI facility	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XIISGAS	Industry - Iron and Steel - Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOIL	Industry - Iron and Steel - Oil	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOLP	Industry - Iron and Steel - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISSSC	Industry - Iron and Steel - Steel Scrap	mt,mt/a	PRC,PRE,ANNUAL	
 	T	XIISWAS	Industry - Iron and Steel - Waste (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIMIGAS	Industrial MI-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDBIO	Industry Biochar	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINFGAS	Industrial NF-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMBIO	Industry - NMM- Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLCOA	Industry - NMM- Cement and lime Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLGAS	Industry - NMM- Cement and lime Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLOIL	Industry - NMM- Cement and lime Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCOA	Industry - NMM- Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINMGAS	Industry - NMM- Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMOIL	Industry - NMM- Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPGM	To local demand	PJ,PJa	PRC,DMD,ANNUAL	
 	T	XIPPBIO	Industry - IPP - Biomass	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPCOA	Industry - IPP - Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIPPGAS	Industry - IPP - Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOTH	Industry - IPP - HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPREC	Industry - PP - Source of recovery paper	PJ,PJa	PRC,PRE,ANNUAL	
@@ -1936,7 +1936,7 @@ TS DATA	REGION1
 	UC__RHSRT	UC-SCREAF-MIN	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS	-	ANNUAL	-	0	-0.126	-0.126	-0.126	-0.217	-0.221	-0.216	-0.196	-0.201	-0.246	-0.25275	-0.2595	-0.26625	-0.273	-0.273	-0.27975	-0.2865	-0.29325	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	null	null	
+	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 
 TID DATA	REGION1

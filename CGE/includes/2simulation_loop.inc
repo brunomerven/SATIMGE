@@ -279,6 +279,8 @@ $offtext
   ica('ccoal-low',A,'NAT')$ica0('ccoal-low',A,'NAT') = max(ica('ccoal-low',A,'NAT'),0.0004);
   ica('ccoal-low','ahydr','NAT') = 0.00000001;
 
+* this fix below doesn't work for PAMS_REF runs but is needed for other runs
+*  ica('celct','ahydr','NAT') = ica('celct','ahydr','NAT')*0.5;
 
 
 
@@ -335,7 +337,8 @@ $offtext
          AFX('AHYDR',RD) = YES;
 *         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
          AFLEO('AHYDR') = NO;
-         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
+*         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
+         AFLEO('AHYDR')$(HCAP(XC,TC,TT) GT 0.001) = YES;
 
 
 
@@ -440,7 +443,7 @@ $offtext
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
- AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
+ AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 1)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
 
  AFX('ANGAS',RD) = YES;
  AFXGR('ANGAS','NAT',XC,TC) = -.001;
