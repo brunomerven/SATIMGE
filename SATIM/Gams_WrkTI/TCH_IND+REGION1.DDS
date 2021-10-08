@@ -1167,43 +1167,45 @@ SET PRC_PRE /
   'REGION1'   .'PEXGDRI'
   'REGION1'   .'PEXPGM'
   'REGION1'   .'PEXPGMO'
-  'REGION1'   .'XICPELC'
   'REGION1'   .'XICPGAS'
-  'REGION1'   .'XIFAELC'
   'REGION1'   .'XIFAGAS'
-  'REGION1'   .'XIFBELC'
   'REGION1'   .'XIFBGAS'
   'REGION1'   .'XIISBIO'
   'REGION1'   .'XIISCKC'
   'REGION1'   .'XIISCOA'
-  'REGION1'   .'XIISELC'
   'REGION1'   .'XIISELCHY'
   'REGION1'   .'XIISGAS'
   'REGION1'   .'XIISOIL'
   'REGION1'   .'XIISOLP'
   'REGION1'   .'XIISSSC'
   'REGION1'   .'XIISWAS'
-  'REGION1'   .'XIMIELC'
   'REGION1'   .'XIMIGAS'
   'REGION1'   .'XINDBIO'
-  'REGION1'   .'XINFELC'
   'REGION1'   .'XINFGAS'
   'REGION1'   .'XINMBIO'
   'REGION1'   .'XINMCLCOA'
   'REGION1'   .'XINMCLGAS'
   'REGION1'   .'XINMCLOIL'
   'REGION1'   .'XINMCOA'
-  'REGION1'   .'XINMELC'
   'REGION1'   .'XINMGAS'
   'REGION1'   .'XINMOIL'
-  'REGION1'   .'XIOTELC'
   'REGION1'   .'XIOTGAS'
   'REGION1'   .'XIPPBIO'
   'REGION1'   .'XIPPCOA'
-  'REGION1'   .'XIPPELC'
   'REGION1'   .'XIPPGAS'
   'REGION1'   .'XIPPOTH'
   'REGION1'   .'XIPPREC'
+/;
+SET PRC_ELE /
+  'REGION1'   .'XICPELC'
+  'REGION1'   .'XIFAELC'
+  'REGION1'   .'XIFBELC'
+  'REGION1'   .'XIISELC'
+  'REGION1'   .'XIMIELC'
+  'REGION1'   .'XINFELC'
+  'REGION1'   .'XINMELC'
+  'REGION1'   .'XIOTELC'
+  'REGION1'   .'XIPPELC'
 /;
 SET PRC_CHP /
   'REGION1'   .'IPPCHPGAS-N'
@@ -4037,10 +4039,20 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'IFBSOLP-E'               .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IFBSWAS-E'               .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IISBFBOF-E'              .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISBFBOF-E-T1'           .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISBFBOF-E-T2'           .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IISCOREAF-E'             .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISCOREAF-E-T1'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISCOREAF-E-T2'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IISDRIEAF-E'             .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISDRIEAF-E-T1'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISDRIEAF-E-T2'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IISOTHEAF-E'             .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISOTHEAF-E-T1'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISOTHEAF-E-T2'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IISSCREAF-E'             .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISSCREAF-E-T1'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'IISSCREAF-E-T2'          .'FX'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IMIAELC-E'               .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IMICELC-E'               .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'IMIEELC-E'               .'UP'                              EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

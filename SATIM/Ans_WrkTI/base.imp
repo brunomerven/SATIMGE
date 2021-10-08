@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	28 Sep 2021	15:27:08
+Creation Date:	2021/10/01	4:52:40 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -463,7 +463,7 @@ TS DATA	REGION1
 	ACT_BND	MIRGRM	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRN	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	161	null	null	122	null	null	null	null	161	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.9963	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1200	null	null	null	null	null	null	null	null	null	null	null	1200	null	null	
+	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.9963	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1000	null	null	null	null	null	null	null	null	null	1000	null	500	null	null	
 	ACT_BND	PEXCOA	-	-	-	ANNUAL	UP	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1200	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	FX	0	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	UP	3	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

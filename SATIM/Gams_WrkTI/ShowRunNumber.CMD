@@ -1,1 +1,1 @@
-echo 0RG_NZ20_HiE
+echo 1HG_PAM_REF

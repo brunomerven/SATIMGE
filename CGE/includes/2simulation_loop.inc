@@ -57,7 +57,7 @@ $include cge\includes\2varinit.inc
          PUT 'PARAMETER ACOMCUMNET /' /;
          EFVAL = SIM_CO2CUMUL(RUN)*1000000;
          if(EFVAL,
-                 PUT "REGION1.CO2EQSB.2020.2050.'UP'  ", EFVAL /;
+                 PUT "REGION1.CO2EQSB.2021.2050.'UP'  ", EFVAL /;
          );
          PUTCLOSE "/;";
 
@@ -191,6 +191,10 @@ $offtext
   theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
   theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
 
+* shrinking production of cmore and cmine out of coal
+  theta('acoal','cmore') = theta('acoal','cmore')*0.5;
+  theta('acoal','cmine') = theta('acoal','cmine')*0.5;
+
 * adjust ica and ifa for acoal based on previous pacoal and new theta
   pacoalx(TC,RUN) = sum(CCOAL,theta('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta('acoal',CCOAL));
 *  ICAGR(C,'acoal',TC)$pacoalx(TC-1,RUN) = pacoalx(TC,RUN)/pacoalx(TC-1,RUN);
@@ -233,6 +237,8 @@ $offtext
 * petr
   ica('ccoil','apetr','NAT') = max(0.07,ica('ccoil','apetr','NAT'));
 
+
+
 * tmp fix on pp until fixed on SATIM side
   ica('celec','apapr','NAT') = ica0('celec','apapr','NAT');
 
@@ -246,7 +252,7 @@ $offtext
   ICA('cngas','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001 and EIntensity_FS('hydr','cngas',TC)) = EIntensity_FS('hydr','cngas',TC);
 
 
- ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.0433;
+ ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.034;
 * ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC-1) LT 0.0001 and EIntensity_FS('is','chydr',TC) GT 0.0001)
 *                         = EIntensity_FS('is','chydr',TC)*0.0433;
 
@@ -259,7 +265,7 @@ $offtext
   ica('cammo','aammo','NAT') = 0.28;
   ica('cbchm','aammo','NAT') = 0.01;
   ica('cochm','aammo','NAT') = 0.01;
-
+  ica('celec','aammo','NAT') = 0.005;
 
 * tweaks to iron and steel sector
   ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + ica0('cpgm','airon','NAT')* 0.9 * VARACT('REGION1',TC,'PEXGDRI'))
@@ -273,6 +279,8 @@ $offtext
   ica('ccoal-low',A,'NAT')$ica0('ccoal-low',A,'NAT') = max(ica('ccoal-low',A,'NAT'),0.0004);
   ica('ccoal-low','ahydr','NAT') = 0.00000001;
 
+* this fix below doesn't work for PAMS_REF runs but is needed for other runs
+*  ica('celct','ahydr','NAT') = ica('celct','ahydr','NAT')*0.5;
 
 
 
@@ -329,7 +337,8 @@ $offtext
          AFX('AHYDR',RD) = YES;
 *         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
          AFLEO('AHYDR') = NO;
-         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
+*         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
+         AFLEO('AHYDR')$(HCAP(XC,TC,TT) GT 0.001) = YES;
 
 
 
@@ -350,7 +359,7 @@ $offtext
 *          if(TT1(TT), AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05);
 *          AFXGR('ACOAL','NAT',XC,TC)$(AFXGR('ACOAL','NAT',XC,TC) LT -.05) = -.05;
 
-          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = QE.L('ccoal-hgh','REST') * FLOW_IN_FSFuels('EXP','ccoal-hgh',TC)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) ;
+*          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = QE.L('ccoal-hgh','REST') * FLOW_IN_FSFuels('EXP','ccoal-hgh',TC)/FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) ;
 *          QE.FX('ccoal-hgh','REST')$FLOW_IN_FSFuels('EXP','ccoal-hgh',TC-1) = FLOW_IN_FSFuels('EXP','ccoal-hgh',TC);
 
           AFLEO('ACOAL')$(NOT T1(TC)) = YES;
@@ -434,7 +443,7 @@ $offtext
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
- AFXGR('ACOIL','NAT',XC,TC)$Flow_in_FSFuels('petr','ccoil',TC-1) = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
+ AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 1)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
 
  AFX('ANGAS',RD) = YES;
  AFXGR('ANGAS','NAT',XC,TC) = -.001;
@@ -602,6 +611,8 @@ $offtext
 
 $include cge\includes\2results.inc
 
+$include cge\includes\2energychecks.inc
+
 * bits needed for some of the exogenous sectors
 QINTCBCHM(TC,RUN) = SUM(a,QINT.L('CBCHM',a));
 QINTCOCHM(TC,RUN) = SUM(a,QINT.L('CBCHM',a));
@@ -619,7 +630,7 @@ QINTCIRON(TC,RUN) = SUM(a,QINT.L('CIRON',a));
 
 * generate demand projection, fuel price projection and investment schedules for the next TIMES run
 $include cge\includes\2energyfcast.inc
-$include cge\includes\2energychecks.inc
+*!$include cge\includes\2energychecks.inc
 
 
 

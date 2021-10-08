@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	22 Sep 2021	13:53:22
+Creation Date:	03 Oct 2021	16:40:14
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND_PAMH	Industry shortened ts - PAM high ambition	
@@ -16,15 +16,6 @@ TS DATA	_GLOBAL
 TID DATA	_GLOBAL
 
 ITEMS	REGION1
-	C	UC-BFBOF	Act. constraint for Industry - Iron&Steel - BFBOF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-BFBOF-T1-ACT	Act. constraint for Industry - Iron&Steel - BFBOF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-BFBOF-T2-ACT	Act. constraint for Industry - Iron&Steel - BFBOF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-COREAF	Act. constraint for Industry - Iron&Steel - COREAF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-COREAF-T1-ACT	Act. constraint for Industry - Iron&Steel - COREAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-COREAF-T2-ACT	Act. constraint for Industry - Iron&Steel - COREAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-DRIEAF	Act. constraint for Industry - Iron&Steel - DRIEAF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-DRIEAF-T1-ACT	Act. constraint for Industry - Iron&Steel - DRIEAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-DRIEAF-T2-ACT	Act. constraint for Industry - Iron&Steel - DRIEAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KLD	Act. constraint for Industry - NMM Sector - Kiln Long Dry - All existing	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KLD-T1	Act. constraint for Industry - NMM Sector - Kiln Long Dry - EE Tech Level 1	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KLD-T2	Act. constraint for Industry - NMM Sector - Kiln Long Dry - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
@@ -34,14 +25,9 @@ ITEMS	REGION1
 	C	UC-INM-KSPP-T2	Act. constraint for Industry - NMM Sector - Kiln SP Precalciner - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KSP-T1	Act. constraint for Industry - NMM Sector - Kiln Suspension Preheater - EE Tech Level 1	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KSP-T2	Act. constraint for Industry - NMM Sector - Kiln Suspension Preheater - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-OTHEAF	Act. constraint for Industry - Iron&Steel - OTHEAF	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-OTHEAF-T1-ACT	Act. constraint for Industry - Iron&Steel - OTHEAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-OTHEAF-T2-ACT	Act. constraint for Industry - Iron&Steel - OTHEAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF	Act. constraint for Industry - Iron&Steel - SCREAF	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF-MAX	Act. constraint for Industry - Iron&Seel - SCREAF - Max Share	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF-MIN	Act. constraint for Industry - Iron&Seel - SCREAF - Minimum Share	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-SCREAF-T1-ACT	Act. constraint for Industry - Iron&Steel - SCREAF - EE Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
-	C	UC-SCREAF-T2-ACT	Act. constraint for Industry - Iron&Steel - SCREAF - EE Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	D	CGBFBOF-E-I	Comm. Group for Industry - Iron&Steel - BF-BOF - Existing - Input		COM_GRP,COM_GRPTRU	
 	D	CGBFBOF-E-O	Comm. Group for Industry - Iron&Steel - BF-BOF - Existing - Output		COM_GRP,COM_GRPTRU	
 	D	CGBFBOF-N-I	Comm. Group for Industry - Iron&Steel - BF-BOF - New Build - Input		COM_GRP,COM_GRPTRU	
@@ -183,7 +169,7 @@ ITEMS	REGION1
 	E	INFA	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFC	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFE	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
-	E	INFELC	Industry-NF-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	INFELC	Industry - NonFerrous - Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	INFF	Industry-Precious & Non-Ferrous metals-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFGAS	Industry-NF-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INFH	Industry-Precious & Non-Ferrous metals-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -430,41 +416,41 @@ ITEMS	REGION1
 	T	PEXGDRI	Export of Green DR Iron	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXPGM	Export PGMs - Pt	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXPGMO	Export PGMs - Others	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIFAGAS	Industrial FA-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIFBGAS	Industrial FB-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISBIO	Industry - Iron and Steel - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCKC	Industry - Iron and Steel - Coking Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCOA	Industry - Iron and Steel - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIISELCHY	Industry electricity to HDRI facility	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XIISGAS	Industry - Iron and Steel - Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOIL	Industry - Iron and Steel - Oil	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOLP	Industry - Iron and Steel - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISSSC	Industry - Iron and Steel - Steel Scrap	mt,mt/a	PRC,PRE,ANNUAL	
 	T	XIISWAS	Industry - Iron and Steel - Waste (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIMIGAS	Industrial MI-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDBIO	Industry Biochar	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINFGAS	Industrial NF-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMBIO	Industry - NMM- Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLCOA	Industry - NMM- Cement and lime Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLGAS	Industry - NMM- Cement and lime Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLOIL	Industry - NMM- Cement and lime Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCOA	Industry - NMM- Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINMGAS	Industry - NMM- Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMOIL	Industry - NMM- Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPGM	To local demand	PJ,PJa	PRC,DMD,ANNUAL	
 	T	XIPPBIO	Industry - IPP - Biomass	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPCOA	Industry - IPP - Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XIPPGAS	Industry - IPP - Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOTH	Industry - IPP - HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPREC	Industry - PP - Source of recovery paper	PJ,PJa	PRC,PRE,ANNUAL	
@@ -486,7 +472,11 @@ TS DATA	REGION1
 	ACT_BND	IPPSTMCOA-E	-	-	-	ANNUAL	LO	0	40.878	null	null	null	null	40.878	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPSTMCOAOIL	-	-	-	ANNUAL	LO	0	8.66858287657997	null	null	null	null	8.66858287657997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPSTMGAS-E	-	-	-	ANNUAL	LO	0	0.639715022044026	null	null	null	null	0.639715022044026	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	XIPPREC	-	-	-	ANNUAL	UP	0	1.827	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXPGM	-	-	-	ANNUAL	FX	3	124.699523921318	130.711316201685	84.0216948708969	133.925466938125	127.711316201685	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXPGM	-	-	-	ANNUAL	LO	0	null	null	null	null	null	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	125.306599289538	null	null	
+	ACT_BND	PEXPGMO	-	-	-	ANNUAL	FX	3	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXPGMO	-	-	-	ANNUAL	LO	0	null	null	null	null	null	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	103.693400710462	null	null	
+	ACT_BND	XIPPREC	-	-	-	ANNUAL	UP	5	2.721	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T1	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IISBFBOF-E-T2	-	-	-	-	-	0	3160.91648378655	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -632,6 +622,8 @@ TS DATA	REGION1
 	ACT_EFF	IPPSTMGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	IPPSTMGAS-N	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	PEXGDRI	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXPGM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXPGMO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XICPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -660,6 +652,7 @@ TS DATA	REGION1
 	ACT_EFF	XINMOIL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIOTGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPGM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -815,18 +808,18 @@ TS DATA	REGION1
 	FLO_EMIS	XINMCLOIL	INDNOXS	INMCLOIL	-	ANNUAL	-	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XINMCLOIL	INDSOXS	INMCLOIL	-	ANNUAL	-	0	1.5291	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISBFBOF-E	-	CGBFBOF-E-O	CGBFBOF-E-I	ANNUAL	-	0	21.4006916923111	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	15.6052419019832	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	0	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	15.6052419019832	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	3	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	15.6052419019832	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOREAF-E	-	CGCOREAF-E-O	CGCOREAF-E-I	ANNUAL	-	0	21.5145885271352	null	null	null	null	22.1516761723534	null	null	null	null	null	null	null	null	null	null	null	null	21.0440923637357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOV	-	IISCKE	IISCKC	ANNUAL	-	0	1.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOV	-	IISCOG	IISCKE	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISDRIEAF-E	-	CGDRIEAF-E-O	CGDRIEAF-E-I	ANNUAL	-	0	31.2479501991702	null	null	null	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	26.3566328723283	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-NC	-	CGDRIEAF-N-O	CGDRIEAF-N-I	ANNUAL	-	0	20.3	null	null	null	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	26.3566328723283	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-NG	-	CGDRIEAF-NG-O	CGDRIEAF-NG-I	ANNUAL	-	0	14.6	null	null	null	null	22.1950592609081	null	null	null	null	null	null	null	null	null	null	null	null	21.0853062978627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-NC	-	CGDRIEAF-N-O	CGDRIEAF-N-I	ANNUAL	-	3	20.3	null	null	20.3	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	26.3566328723283	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-NG	-	CGDRIEAF-NG-O	CGDRIEAF-NG-I	ANNUAL	-	3	14.6	null	null	14.6	null	22.1950592609081	null	null	null	null	null	null	null	null	null	null	null	null	21.0853062978627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISHDRIEAF-N	-	CGIISHHDRIEAF-N-O	CGIISHHDRIEAF-N-I	ANNUAL	-	0	3.71	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISHHGNSTOR-N	-	IISHHGN	IISHHELC	ANNUAL	-	0	0.03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISOTHEAF-E	-	CGOTHEAF-E-O	CGOTHEAF-E-I	ANNUAL	-	0	37.0743751747228	null	null	null	null	44.655	null	null	null	null	null	null	null	null	null	null	null	null	42.42225	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISSCREAF-E	-	CGSCREAF-E-O	CGSCREAF-E-I	ANNUAL	-	0	10	null	null	null	null	5.48873228036323	null	null	null	null	null	null	null	null	null	null	null	null	5.21429566634506	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISSCREAF-N	-	CGSCREAF-N-O	CGSCREAF-N-I	ANNUAL	-	0	6.6	null	null	null	null	5.48873228036323	null	null	null	null	null	null	null	null	null	null	null	null	5.21429566634506	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISSCREAF-N	-	CGSCREAF-N-O	CGSCREAF-N-I	ANNUAL	-	3	6.6	null	null	6.6	null	5.48873228036323	null	null	null	null	null	null	null	null	null	null	null	null	5.21429566634506	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	INMBRIADV	-	INMBRI	CG-INMBRIADV-I	ANNUAL	-	3	3.33809366359439	null	null	3.33809366359439	null	1.48155446877725	null	null	null	null	null	null	null	null	null	null	null	null	1.40747674533839	null	null	null	null	null	null	null	null	null	null	null	null	1.40747674533839	null	
 	FLO_FUNC	INMBRIF2TF	-	INMBRITHF	CG-INMBRIF2THF-I	ANNUAL	-	0	1.66904683179719	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	INMBRISTD	-	INMBRI	CG-INMBRISTD-I	ANNUAL	-	3	5.00714049539159	null	null	5.00714049539159	null	2.22233170316587	null	null	null	null	null	null	null	null	null	null	null	null	2.11121511800758	null	null	null	null	null	null	null	null	null	null	null	null	2.11121511800758	null	
@@ -1286,10 +1279,20 @@ TS DATA	REGION1
 	NCAP_BND	IFBSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IFBSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISBFBOF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISBFBOF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISBFBOF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISCOREAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISCOREAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISCOREAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISDRIEAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISDRIEAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISDRIEAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISOTHEAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISOTHEAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISOTHEAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IISSCREAF-E	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISSCREAF-E-T1	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IISSCREAF-E-T2	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMICELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IMIEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1928,48 +1931,13 @@ TS DATA	REGION1
 	PRC_RESID	XIPPGAS	-	-	-	-	-	0	4.836	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHBATTERY	-	-	-	-	-	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHHGNSTOR-N	-	-	-	-	-	0	0.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC__RHSRT	UC-BFBOF	-	-	-	-	UP	0	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	5.1	null	
-	UC__RHSRT	UC-BFBOF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-BFBOF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-COREAF	-	-	-	-	UP	0	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	1.24	null	
-	UC__RHSRT	UC-COREAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-COREAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-DRIEAF	-	-	-	-	UP	0	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	1.44	null	
-	UC__RHSRT	UC-DRIEAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-DRIEAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF	-	-	-	-	UP	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-OTHEAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF	-	-	-	-	UP	0	1.72	1.72	1.72	1.72	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MAX	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MIN	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-SCREAF-T1-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UC__RHSRT	UC-SCREAF-T2-ACT	-	-	-	-	FX	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
-	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-BFBOF-T1-ACT	LHS	S-IIS-BFBOF-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-BFBOF-T2-ACT	LHS	S-IIS-BFBOF-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-DRIEAF-T1-ACT	LHS	S-IIS-DRIEAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-DRIEAF-T2-ACT	LHS	S-IIS-DRIEAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-OTHEAF-T1-ACT	LHS	S-IIS-OTHEAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-OTHEAF-T2-ACT	LHS	S-IIS-OTHEAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS	-	ANNUAL	-	0	-0.126	-0.126	-0.126	-0.217	-0.221	-0.216	-0.196	-0.201	-0.246	-0.25275	-0.2595	-0.26625	-0.273	-0.273	-0.27975	-0.2865	-0.29325	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	-0.237	null	null	
+	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-SCREAF-T1-ACT	LHS	S-IIS-SCREAF-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-E	-	ANNUAL	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	null	
-	UCRULE_ACT	UC-SCREAF-T2-ACT	LHS	S-IIS-SCREAF-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-BFBOF	LHS	S-IIS-BFBOF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-COREAF	LHS	S-IIS-COREAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-DRIEAF	LHS	S-IIS-DRIEAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-OTHEAF	LHS	S-IIS-OTHEAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_CAP	UC-SCREAF	LHS	S-IIS-SCREAF-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
 
 TID DATA	REGION1
 	COM_GMAP	-	IISCKE	CGBFBOF-E-I	-	-	-	1	
@@ -2304,6 +2272,8 @@ TID DATA	REGION1
 	PRC_ACTUNT	IPPSTMGAS-N	-	IPPSTM	-	-	-	1	
 	PRC_ACTUNT	MINFEORE	-	IISFEORE	-	-	-	1	
 	PRC_ACTUNT	PEXGDRI	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXPGM	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXPGMO	-	IDUM	-	-	-	1	
 	PRC_ACTUNT	XICPELC	-	ICPELC	-	-	-	1	
 	PRC_ACTUNT	XICPGAS	-	ICPGAS	-	-	-	1	
 	PRC_ACTUNT	XIFAELC	-	IFAELC	-	-	-	1	
@@ -2335,6 +2305,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	XINMOIL	-	INMOIL	-	-	-	1	
 	PRC_ACTUNT	XIOTELC	-	IOTELC	-	-	-	1	
 	PRC_ACTUNT	XIOTGAS	-	IOTGAS	-	-	-	1	
+	PRC_ACTUNT	XIPGM	-	IPGMD	-	-	-	1	
 	PRC_ACTUNT	XIPPBIO	-	IPPBIO	-	-	-	1	
 	PRC_ACTUNT	XIPPCOA	-	IPPCOA	-	-	-	1	
 	PRC_ACTUNT	XIPPELC	-	IPPELC	-	-	-	1	
@@ -2524,6 +2495,8 @@ TID DATA	REGION1
 	PRC_CAPACT	IPPSTMGAS-N	-	-	-	-	-	1	
 	PRC_CAPACT	MINFEORE	-	-	-	-	-	1	
 	PRC_CAPACT	PEXGDRI	-	-	-	-	-	1	
+	PRC_CAPACT	PEXPGM	-	-	-	-	-	1	
+	PRC_CAPACT	PEXPGMO	-	-	-	-	-	1	
 	PRC_CAPACT	XICPELC	-	-	-	-	-	31.536	
 	PRC_CAPACT	XICPGAS	-	-	-	-	-	1	
 	PRC_CAPACT	XIFAELC	-	-	-	-	-	31.536	
@@ -2555,6 +2528,7 @@ TID DATA	REGION1
 	PRC_CAPACT	XINMOIL	-	-	-	-	-	1	
 	PRC_CAPACT	XIOTELC	-	-	-	-	-	31.536	
 	PRC_CAPACT	XIOTGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIPGM	-	-	-	-	-	1	
 	PRC_CAPACT	XIPPBIO	-	-	-	-	-	1	
 	PRC_CAPACT	XIPPCOA	-	-	-	-	-	1	
 	PRC_CAPACT	XIPPELC	-	-	-	-	-	31.536	
@@ -2857,6 +2831,8 @@ TID DATA	REGION1
 	TOP-IN	IPPSTMGAS-E	IPPGAS	-	-	-	-	1	
 	TOP-IN	IPPSTMGAS-N	IPPGAS	-	-	-	-	1	
 	TOP-IN	PEXGDRI	IISHBI	-	-	-	-	1	
+	TOP-IN	PEXPGM	IPGM	-	-	-	-	1	
+	TOP-IN	PEXPGMO	IPGMOP	-	-	-	-	1	
 	TOP-IN	XICPELC	INDELC	-	-	-	-	1	
 	TOP-IN	XICPGAS	INDGAS	-	-	-	-	1	
 	TOP-IN	XIFAELC	INDELC	-	-	-	-	1	
@@ -2893,6 +2869,7 @@ TID DATA	REGION1
 	TOP-IN	XINMOIL	INDOHF	-	-	-	-	1	
 	TOP-IN	XIOTELC	INDELC	-	-	-	-	1	
 	TOP-IN	XIOTGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIPGM	IPGM	-	-	-	-	1	
 	TOP-IN	XIPPBIO	INDBIW	-	-	-	-	1	
 	TOP-IN	XIPPCOA	INDCOA	-	-	-	-	1	
 	TOP-IN	XIPPELC	INDELC	-	-	-	-	1	
@@ -3135,6 +3112,8 @@ TID DATA	REGION1
 	TOP-OUT	IPPSTMGAS-N	IPPSTM	-	-	-	-	1	
 	TOP-OUT	MINFEORE	IISFEORE	-	-	-	-	1	
 	TOP-OUT	PEXGDRI	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXPGM	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXPGMO	IDUM	-	-	-	-	1	
 	TOP-OUT	XICPELC	ICPELC	-	-	-	-	1	
 	TOP-OUT	XICPGAS	ICPGAS	-	-	-	-	1	
 	TOP-OUT	XIFAELC	IFAELC	-	-	-	-	1	
@@ -3184,21 +3163,13 @@ TID DATA	REGION1
 	TOP-OUT	XINMOIL	INMOIL	-	-	-	-	1	
 	TOP-OUT	XIOTELC	IOTELC	-	-	-	-	1	
 	TOP-OUT	XIOTGAS	IOTGAS	-	-	-	-	1	
+	TOP-OUT	XIPGM	IPGMD	-	-	-	-	1	
 	TOP-OUT	XIPPBIO	IPPBIO	-	-	-	-	1	
 	TOP-OUT	XIPPCOA	IPPCOA	-	-	-	-	1	
 	TOP-OUT	XIPPELC	IPPELC	-	-	-	-	1	
 	TOP-OUT	XIPPGAS	IPPGAS	-	-	-	-	1	
 	TOP-OUT	XIPPOTH	IPPOHF	-	-	-	-	1	
 	TOP-OUT	XIPPREC	IPPREC	-	-	-	-	1	
-	UC_R_EACH	UC-BFBOF	-	-	-	-	-	1	
-	UC_R_EACH	UC-BFBOF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-BFBOF-T2-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-COREAF	-	-	-	-	-	1	
-	UC_R_EACH	UC-COREAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-COREAF-T2-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-DRIEAF	-	-	-	-	-	1	
-	UC_R_EACH	UC-DRIEAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-DRIEAF-T2-ACT	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KLD	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KLD-T1	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KLD-T2	-	-	-	-	-	1	
@@ -3208,14 +3179,9 @@ TID DATA	REGION1
 	UC_R_EACH	UC-INM-KSPP-T2	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KSP-T1	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KSP-T2	-	-	-	-	-	1	
-	UC_R_EACH	UC-OTHEAF	-	-	-	-	-	1	
-	UC_R_EACH	UC-OTHEAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-OTHEAF-T2-ACT	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF-MAX	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF-MIN	-	-	-	-	-	1	
-	UC_R_EACH	UC-SCREAF-T1-ACT	-	-	-	-	-	1	
-	UC_R_EACH	UC-SCREAF-T2-ACT	-	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1
 
