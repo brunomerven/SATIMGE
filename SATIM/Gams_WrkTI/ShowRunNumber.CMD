@@ -1,1 +1,1 @@
-echo ForcedCoal-L
+echo ForcedCoal42
