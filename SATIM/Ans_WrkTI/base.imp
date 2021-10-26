@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/10/01	4:52:40 PM
+Creation Date:	2021/10/18	11:12:53 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
@@ -105,7 +105,7 @@ ITEMS	REGION1
 	E	CO2S	CO2S South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SP	Process Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	CO2SPCEM	Process Emissions CEM South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPCEM	Process Emissions Cement South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFC	Process Emissions FerroChrome South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFM	Process Emissions FerroManganese South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COA	Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -145,26 +145,26 @@ ITEMS	REGION1
 	E	HET	Heat-Steam	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	HGN	Hydrogen	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	HYD	Hydro	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIB	Industry - Biomass Bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIW	Industry - Biomass wood	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIB	Industry Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIW	Industry Biomass Wood	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCH4S	Industry Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCLE	Industry Coal low grade	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCMOX	Industry - Carbon Monoxide	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2S	Industry Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDCOA	Industry - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCOK	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOA	Industry Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOK	Industry Coal Coking	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDELC	Industry Electricity	PJ	COM,NRG,DAYNITE,ELC	
-	E	INDGAS	Industry - South Africa gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDGAS	Industry Gas South Africa	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDN2OS	Industry Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMVS	Industry NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOXS	Industry Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry - Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOGS	Industry Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOHF	Industry Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOLP	Industry Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDP10S	Industry PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDSOXS	Industry Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDWAS	Industry - Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDWAS	Industry Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	N2OS	N2OS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	NMVS	NMVS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	NOXS	NOXS South Africa	KT	COM,ENV,ANNUAL,GHG	
@@ -307,7 +307,7 @@ ITEMS	REGION1
 	T	MNZZZ	Backstop for whole system	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOA	Exports of Coal	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOK	Exports of Coal Coking	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOAG	Exports of Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOCR	Exports of Oil Crude	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXODS	Exports of Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
@@ -340,14 +340,14 @@ ITEMS	REGION1
 	T	USMRGICHGN	Production Plant Hydrogen - Large SMR - Coastal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UTRNGIMGAS	Conversion Methane Rich Gas Natural Gas for use in industry and refineries	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGRCOA	Agriculture Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XAGRELC	Agriculture Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XAGRODS	Agriculture Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROGS	Agriculture Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROHF	Agriculture Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROKE	Agriculture Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XAGROLP	Agriculture Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMCOA	Commercial Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XCOMGAS	Commercial Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMODS	Commercial Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMOGS	Commercial Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -359,7 +359,7 @@ ITEMS	REGION1
 	T	XINDCLE	Industry Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOA	Industry Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOK	Industry Coal Coking	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XINDGAS	Industry Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDODS	Industry Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOGS	Industry Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -388,11 +388,11 @@ ITEMS	REGION1
 	T	XPWRWND	Power Sector Wind	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESBIW	Residential Biomass Wood	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESCOA	Residential Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XRESGAS	Residential Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOKE	Residential Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOLP	Residential Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XTRAGAS	Transport Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XTRAHGN	Transport Hydrogen	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XTRAOAG	Transport Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -403,7 +403,7 @@ ITEMS	REGION1
 	T	XUPSBID	Supply Sector Biodiesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSBIE	Supply Sector Bioethanol	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSCLE	Supply Sector Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XUPSGAS	Supply Sector Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSGIC	Supply Sector Coastal Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSHEE	Supply Sector Heat-Steam Existing	PJ,PJa	PRC,PRE,ANNUAL	
@@ -413,7 +413,7 @@ ITEMS	REGION1
 	T	XUPSOHF	Supply Sector Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	ZZBKELCC	Backstop for Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	ZZBKNRG	Backstop for all energy except elc	PJ,PJa	PRC,PRE,ANNUAL	
-	W	ANNUAL	Annual		ALL_TS,ANNUAL	
+	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
 	W	S1	s1		ALL_TS,SEASON	
 	W	S1D1	s1d1		ALL_TS,WEEKLY	
 	W	S1D1B1	s1d1b1		ALL_TS,DAYNITE	
@@ -462,9 +462,9 @@ TS DATA	REGION1
 	ACT_BND	MIRCRB	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRM	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRN	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	161	null	null	122	null	null	null	null	161	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.9963	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1000	null	null	null	null	null	null	null	null	null	1000	null	500	null	null	
-	ACT_BND	PEXCOA	-	-	-	ANNUAL	UP	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1200	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	154	null	null	116	null	null	null	null	156	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1000	null	null	null	null	null	null	null	null	null	1000	null	500	null	null	
+	ACT_BND	PEXCOA	-	-	-	ANNUAL	UP	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	FX	0	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	UP	3	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXELC	-	-	-	ANNUAL	FX	0	54.126	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1137,7 +1137,7 @@ TS DATA	REGION1
 	NCAP_AFA	UGASGIH-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGRM-N	-	-	-	-	LO	3	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGRM-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	UGASGRS-N	-	-	-	-	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	UGASGRS-N	-	-	-	-	LO	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGASGRS-N	-	-	-	-	UP	3	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGASIN-N	-	-	-	-	LO	3	0.43931915964624	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	UGTLGASIN-N	-	-	-	-	UP	3	0.462441220680253	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1177,8 +1177,8 @@ TS DATA	REGION1
 	NCAP_COST	HGNSTSUTL	-	-	-	-	-	0	null	null	null	null	null	null	null	null	46896.1251742805	null	null	null	null	null	null	null	null	null	43674.4796003331	null	null	null	null	32512.0195535978	null	null	null	null	28141.935483871	null	28141.935483871	28141.935483871	28141.935483871	
 	NCAP_COST	UCOGCLEHGN	-	-	-	-	-	0	443.238	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UCTLCLEIN-N	-	-	-	-	-	0	576.20825372119	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	UELEA1HGN	-	-	-	-	-	0	408.070381881824	null	null	null	null	null	null	null	408.070381881824	null	null	null	null	null	null	null	null	null	300.683439281344	null	null	null	null	193.296496680864	null	null	null	null	154.013068105646	null	114.729639530427	null	null	
-	NCAP_COST	UELEP1HGN	-	-	-	-	-	0	622.844267082784	null	null	null	null	null	null	null	622.844267082784	null	null	null	null	null	null	null	null	null	429.54777040192	null	null	null	null	236.251273721056	null	null	null	null	198.853583221029	null	161.455892721002	null	null	
+	NCAP_COST	UELEA1HGN	-	-	-	-	-	0	12868.9075630252	null	null	null	null	null	null	null	12868.9075630252	null	null	null	null	null	null	null	null	null	9482.35294117647	null	null	null	null	6095.79831932773	null	null	null	null	4856.95611577965	null	3618.11391223156	null	null	
+	NCAP_COST	UELEP1HGN	-	-	-	-	-	0	19642.0168067227	null	null	null	null	null	null	null	19642.0168067227	null	null	null	null	null	null	null	null	null	13546.218487395	null	null	null	null	7450.42016806723	null	null	null	null	6271.04660045837	null	5091.6730328495	null	null	
 	NCAP_COST	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	477.771942110177	null	null	null	null	null	null	null	null	null	409.541545668123	null	null	null	null	370.42417059229	null	null	null	null	331.306795516457	null	284.834537832823	284.834537832823	284.834537832823	
 	NCAP_COST	UGASGIB-N	-	-	-	-	-	0	239.708489570121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UGASGIC-N	-	-	-	-	-	0	239.708489570121	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1268,8 +1268,8 @@ TS DATA	REGION1
 	NCAP_FOM	UCOGCLEHGN	-	-	-	-	-	0	28.0829228781152	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UCTLCLEIN-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UCTLCLEIN-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	UELEA1HGN	-	-	-	-	-	0	6.12105572822736	null	null	null	null	null	null	null	6.12105572822736	null	null	null	null	null	null	null	null	null	4.51025158922016	null	null	null	null	2.89944745021296	null	null	null	null	2.31019602158469	null	1.72094459295641	null	null	
-	NCAP_FOM	UELEP1HGN	-	-	-	-	-	0	9.34266400624177	null	null	null	null	null	null	null	9.34266400624177	null	null	null	null	null	null	null	null	null	6.4432165560288	null	null	null	null	3.54376910581584	null	null	null	null	2.98280374831543	null	2.42183839081502	null	null	
+	NCAP_FOM	UELEA1HGN	-	-	-	-	-	0	193.033613445378	null	null	null	null	null	null	null	193.033613445378	null	null	null	null	null	null	null	null	null	142.235294117647	null	null	null	null	91.436974789916	null	null	null	null	72.8543417366947	null	54.2717086834734	null	null	
+	NCAP_FOM	UELEP1HGN	-	-	-	-	-	0	294.63025210084	null	null	null	null	null	null	null	294.63025210084	null	null	null	null	null	null	null	null	null	203.193277310924	null	null	null	null	111.756302521008	null	null	null	null	94.0656990068755	null	76.3750954927426	null	null	
 	NCAP_FOM	UFTHGNCO2-N	-	-	-	-	-	0	null	null	null	null	null	null	null	null	19.1108776844071	null	null	null	null	null	null	null	null	null	16.3816618267249	null	null	null	null	14.8169668236916	null	null	null	null	13.2522718206583	null	11.3933815133129	11.3933815133129	11.3933815133129	
 	NCAP_FOM	UGTLGASIN-N	-	-	-	-	-	0	16.868609235306	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_FOM	UGTLGICCO-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1394,8 +1394,8 @@ TS DATA	REGION1
 	PRC_RESID	UELEA1HGN	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	UGASGRS-N	-	-	-	-	-	0	116	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	UGTLGICCO-E	-	-	-	-	-	0	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	58.7955218047856	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	271.1914	
-	PRC_RESID	UREFOCRIN-E	-	-	-	-	-	0	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	212.1598	
+	PRC_RESID	UREFOCRCO-E	-	-	-	-	-	0	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	787.961544708644	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	271.191353819419	
+	PRC_RESID	UREFOCRIN-E	-	-	-	-	-	0	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	212.159791413877	
 	PRC_RESID	XAGRCOA	-	-	-	-	-	0	0.00001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XAGRELC	-	-	-	-	-	0	0.911977121489164	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XAGRODS	-	-	-	-	-	0	42.04873098492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1858,8 +1858,8 @@ TID DATA	REGION1
 	PRC_CAPACT	UCOGCLEHGN	-	-	-	-	-	1	
 	PRC_CAPACT	UCTLCLEIN-E	-	-	-	-	-	1	
 	PRC_CAPACT	UCTLCLEIN-N	-	-	-	-	-	1	
-	PRC_CAPACT	UELEA1HGN	-	-	-	-	-	1	
-	PRC_CAPACT	UELEP1HGN	-	-	-	-	-	1	
+	PRC_CAPACT	UELEA1HGN	-	-	-	-	-	31.536	
+	PRC_CAPACT	UELEP1HGN	-	-	-	-	-	31.536	
 	PRC_CAPACT	UFTHGNCO2-N	-	-	-	-	-	1	
 	PRC_CAPACT	UGASGIB-N	-	-	-	-	-	1	
 	PRC_CAPACT	UGASGIC-N	-	-	-	-	-	1	

@@ -102,25 +102,25 @@ PlaneFilter1=rest
 
 [RP:SATIMGE]
 1=r=cge\model, gdx = NetZeroLinkedLE
-2=r=cge\model, gdx = NetZeroLinkedLE_6test
-3=r=cge\model, gdx = NetZeroLinkedHE
-4=r=cge\model, gdx = NetZeroLinked3Iter
-5=r=cge\model, gdx = NetZeroLinkedNewSAM
-6=r=cge\model, gdx = NetZeroLinkedtest
-7=r=cge\model, gdx = NetZeroLinkedtestNew2
-8=r=cge\model, gdx = NetZeroLinkedtestNew
-9=r=cge\model, gdx = NetZeroLinked
-10=r=cge\model, gdx = NetZeroLinkedTest_Elas5
-11=r=cge\model, gdx = NetZeroLinkedTest_Elas4
-12=r=cge\model, gdx = NetZeroLinkedTest_Elas3
-13=r=cge\model, gdx = NetZeroLinkedTest_Elas2
-14=r=cge\model, gdx = NetZeroLinkedTest_Elas
-15=r=cge\model, gdx = NetZeroLinkedTest3
-16=r=cge\model, gdx = NetZeroLinkedTest2
-17=r=cge\model, gdx = NetZeroLinkedTest
-18=r=cge\model, gdx = NetZeroTest
-19=r=cge\model, gdx = hiGr
-20=r=cge\model, gdx = NetZero
+2=r=cge\model, gdx = NetZeroLinkedHE
+3=r=cge\model, gdx = NetZeroLinked3Iter
+4=r=cge\model, gdx = NetZeroLinkedNewSAM
+5=r=cge\model, gdx = NetZeroLinkedtest
+6=r=cge\model, gdx = NetZeroLinkedtestNew2
+7=r=cge\model, gdx = NetZeroLinkedtestNew
+8=r=cge\model, gdx = NetZeroLinked
+9=r=cge\model, gdx = NetZeroLinkedTest_Elas5
+10=r=cge\model, gdx = NetZeroLinkedTest_Elas4
+11=r=cge\model, gdx = NetZeroLinkedTest_Elas3
+12=r=cge\model, gdx = NetZeroLinkedTest_Elas2
+13=r=cge\model, gdx = NetZeroLinkedTest_Elas
+14=r=cge\model, gdx = NetZeroLinkedTest3
+15=r=cge\model, gdx = NetZeroLinkedTest2
+16=r=cge\model, gdx = NetZeroLinkedTest
+17=r=cge\model, gdx = NetZeroTest
+18=r=cge\model, gdx = hiGr
+19=r=cge\model, gdx = NetZero
+20=r=cge\model, gdx = LOP
 
 [RP:1MODEL]
 1=gdx=model s=model
@@ -128,10 +128,12 @@ PlaneFilter1=rest
 3=
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\CGE\1model.gms
-FILE1=C:\Models\SATIMGE\CGE\1model.lst
-FILE2=C:\Models\SATIMGE\CGE\model.gdx
-FILE3=C:\Models\SATIMGE\CGE\1model.lst
+FILE0=C:\Models\SATIMGE\CGE\1model.dat
+FILE1=C:\Models\SATIMGE\CGE\1model.gms
+FILE2=C:\Models\SATIMGE\CGE\1model.lst
+FILE3=C:\Models\SATIMGE\CGE\includes\2varinit.inc
+FILE4=C:\Models\SATIMGE\CGE\model.gdx
+FILE5=C:\Models\SATIMGE\CGE\model.gdx
 MAXIM=0
 TOP=4
 LEFT=2

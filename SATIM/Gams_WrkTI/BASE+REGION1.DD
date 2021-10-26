@@ -38,7 +38,7 @@ SET COM_GRP /
   'CO2S'                     'CO2S South Africa                                 '
   'CO2SF'                    'Fugitive Emissions South Africa                   '
   'CO2SP'                    'Process Emissions South Africa                    '
-  'CO2SPCEM'                 'Process Emissions CEM South Africa                '
+  'CO2SPCEM'                 'Process Emissions Cement South Africa             '
   'CO2SPIFC'                 'Process Emissions FerroChrome South Africa        '
   'CO2SPIFM'                 'Process Emissions FerroManganese South Africa     '
   'COA'                      'Coal                                              '
@@ -81,26 +81,26 @@ SET COM_GRP /
   'HET'                      'Heat-Steam                                        '
   'HGN'                      'Hydrogen                                          '
   'HYD'                      'Hydro                                             '
-  'INDBIB'                   'Industry - Biomass Bagasse                        '
-  'INDBIW'                   'Industry - Biomass wood                           '
+  'INDBIB'                   'Industry Biomass bagasse                          '
+  'INDBIW'                   'Industry Biomass Wood                             '
   'INDCH4S'                  'Industry Methane South Africa                     '
   'INDCLE'                   'Industry Coal low grade                           '
-  'INDCMOX'                  'Industry - Carbon Monoxide                        '
+  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
   'INDCO2S'                  'Industry Carbon dioxide South Africa              '
-  'INDCOA'                   'Industry - Coal                                   '
-  'INDCOK'                   'Industry - Coking coal                            '
+  'INDCOA'                   'Industry Coal                                     '
+  'INDCOK'                   'Industry Coal Coking                              '
   'INDELC'                   'Industry Electricity                              '
-  'INDGAS'                   'Industry - South Africa gas                       '
+  'INDGAS'                   'Industry Gas South Africa                         '
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
   'INDNOXS'                  'Industry Nitrogen gases South Africa              '
-  'INDODS'                   'Industry - Diesel                                 '
+  'INDODS'                   'Industry Oil Diesel                               '
   'INDOGS'                   'Industry Oil Gasoline                             '
-  'INDOHF'                   'Industry - Oil HFO                                '
-  'INDOLP'                   'Industry - Oil LPG                                '
+  'INDOHF'                   'Industry Oil HFO                                  '
+  'INDOLP'                   'Industry Oil LPG                                  '
   'INDP10S'                  'Industry PM10 South Africa                        '
   'INDSOXS'                  'Industry Sulphur gases South Africa               '
-  'INDWAS'                   'Industry - Waste                                  '
+  'INDWAS'                   'Industry Waste                                    '
   'MAT'                      'Material Commodity Type                           '
   'N2OS'                     'N2OS South Africa                                 '
   'NMVS'                     'NMVS South Africa                                 '
@@ -276,7 +276,7 @@ SET COM /
   'CO2S'                     'CO2S South Africa                                 '
   'CO2SF'                    'Fugitive Emissions South Africa                   '
   'CO2SP'                    'Process Emissions South Africa                    '
-  'CO2SPCEM'                 'Process Emissions CEM South Africa                '
+  'CO2SPCEM'                 'Process Emissions Cement South Africa             '
   'CO2SPIFC'                 'Process Emissions FerroChrome South Africa        '
   'CO2SPIFM'                 'Process Emissions FerroManganese South Africa     '
   'COA'                      'Coal                                              '
@@ -316,26 +316,26 @@ SET COM /
   'HET'                      'Heat-Steam                                        '
   'HGN'                      'Hydrogen                                          '
   'HYD'                      'Hydro                                             '
-  'INDBIB'                   'Industry - Biomass Bagasse                        '
-  'INDBIW'                   'Industry - Biomass wood                           '
+  'INDBIB'                   'Industry Biomass bagasse                          '
+  'INDBIW'                   'Industry Biomass Wood                             '
   'INDCH4S'                  'Industry Methane South Africa                     '
   'INDCLE'                   'Industry Coal low grade                           '
-  'INDCMOX'                  'Industry - Carbon Monoxide                        '
+  'INDCMOX'                  'Industry Carbon monoxide South Africa             '
   'INDCO2S'                  'Industry Carbon dioxide South Africa              '
-  'INDCOA'                   'Industry - Coal                                   '
-  'INDCOK'                   'Industry - Coking coal                            '
+  'INDCOA'                   'Industry Coal                                     '
+  'INDCOK'                   'Industry Coal Coking                              '
   'INDELC'                   'Industry Electricity                              '
-  'INDGAS'                   'Industry - South Africa gas                       '
+  'INDGAS'                   'Industry Gas South Africa                         '
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
   'INDNOXS'                  'Industry Nitrogen gases South Africa              '
-  'INDODS'                   'Industry - Diesel                                 '
+  'INDODS'                   'Industry Oil Diesel                               '
   'INDOGS'                   'Industry Oil Gasoline                             '
-  'INDOHF'                   'Industry - Oil HFO                                '
-  'INDOLP'                   'Industry - Oil LPG                                '
+  'INDOHF'                   'Industry Oil HFO                                  '
+  'INDOLP'                   'Industry Oil LPG                                  '
   'INDP10S'                  'Industry PM10 South Africa                        '
   'INDSOXS'                  'Industry Sulphur gases South Africa               '
-  'INDWAS'                   'Industry - Waste                                  '
+  'INDWAS'                   'Industry Waste                                    '
   'N2OS'                     'N2OS South Africa                                 '
   'NMVS'                     'NMVS South Africa                                 '
   'NOXS'                     'NOXS South Africa                                 '
@@ -1118,7 +1118,7 @@ SET PRC /
   'USMRGICHGN'               'Production Plant Hydrogen - Large SMR - Coastal   '
   'UTRNGIMGAS'               'Conversion Methane Rich Gas Natural Gas for use in'
   'XAGRCOA'                  'Agriculture Coal                                  '
-  'XAGRELC'                  'Agriculatural Electricity                         '
+  'XAGRELC'                  'Agriculture Electricity                           '
   'XAGRODS'                  'Agriculture Oil Diesel                            '
   'XAGROGS'                  'Agriculture Oil Gasoline                          '
   'XAGROHF'                  'Agriculture Oil HFO                               '
@@ -1231,6 +1231,7 @@ SET PRC_PRE /
   'REGION1'   .'MNZZZ'
   'REGION1'   .'PEXCOA'
   'REGION1'   .'PEXCOK'
+  'REGION1'   .'PEXELC'
   'REGION1'   .'PEXOAG'
   'REGION1'   .'PEXOCR'
   'REGION1'   .'PEXODS'
@@ -1263,12 +1264,14 @@ SET PRC_PRE /
   'REGION1'   .'USMRGICHGN'
   'REGION1'   .'UTRNGIMGAS'
   'REGION1'   .'XAGRCOA'
+  'REGION1'   .'XAGRELC'
   'REGION1'   .'XAGRODS'
   'REGION1'   .'XAGROGS'
   'REGION1'   .'XAGROHF'
   'REGION1'   .'XAGROKE'
   'REGION1'   .'XAGROLP'
   'REGION1'   .'XCOMCOA'
+  'REGION1'   .'XCOMELC'
   'REGION1'   .'XCOMGAS'
   'REGION1'   .'XCOMODS'
   'REGION1'   .'XCOMOGS'
@@ -1280,6 +1283,7 @@ SET PRC_PRE /
   'REGION1'   .'XINDCLE'
   'REGION1'   .'XINDCOA'
   'REGION1'   .'XINDCOK'
+  'REGION1'   .'XINDELC'
   'REGION1'   .'XINDGAS'
   'REGION1'   .'XINDODS'
   'REGION1'   .'XINDOGS'
@@ -1308,9 +1312,11 @@ SET PRC_PRE /
   'REGION1'   .'XPWRWND'
   'REGION1'   .'XRESBIW'
   'REGION1'   .'XRESCOA'
+  'REGION1'   .'XRESELC'
   'REGION1'   .'XRESGAS'
   'REGION1'   .'XRESOKE'
   'REGION1'   .'XRESOLP'
+  'REGION1'   .'XTRAELC'
   'REGION1'   .'XTRAGAS'
   'REGION1'   .'XTRAHGN'
   'REGION1'   .'XTRAOAG'
@@ -1321,6 +1327,7 @@ SET PRC_PRE /
   'REGION1'   .'XUPSBID'
   'REGION1'   .'XUPSBIE'
   'REGION1'   .'XUPSCLE'
+  'REGION1'   .'XUPSELC'
   'REGION1'   .'XUPSGAS'
   'REGION1'   .'XUPSGIC'
   'REGION1'   .'XUPSHEE'
@@ -1333,15 +1340,6 @@ SET PRC_PRE /
 /;
 SET PRC_PRV /
   'REGION1'   .'MINWAT'
-/;
-SET PRC_ELE /
-  'REGION1'   .'PEXELC'
-  'REGION1'   .'XAGRELC'
-  'REGION1'   .'XCOMELC'
-  'REGION1'   .'XINDELC'
-  'REGION1'   .'XRESELC'
-  'REGION1'   .'XTRAELC'
-  'REGION1'   .'XUPSELC'
 /;
 SET PRC_STG /
   'REGION1'   .'HGNSTSUTL'
@@ -1540,7 +1538,6 @@ SET PRC_IRE /
   'REGION1'   .'PEXOGS'
   'REGION1'   .'PEXOHF'
   'REGION1'   .'PEXOKE'
-  'REGION1'   .'PEXOKG'
 /;
 SET TOTALS /
   'TOTAL_PRC'                'TOTAL over Relevant Processes                     '
@@ -2414,8 +2411,8 @@ PARAMETER APRCCAPACT /
   'REGION1'                 .'UCOGCLEHGN'                 1
   'REGION1'                 .'UCTLCLEIN-E'                1
   'REGION1'                 .'UCTLCLEIN-N'                1
-  'REGION1'                 .'UELEA1HGN'                  1
-  'REGION1'                 .'UELEP1HGN'                  1
+  'REGION1'                 .'UELEA1HGN'                  31.536
+  'REGION1'                 .'UELEP1HGN'                  31.536
   'REGION1'                 .'UFTHGNCO2-N'                1
   'REGION1'                 .'UGASGIB-N'                  1
   'REGION1'                 .'UGASGIC-N'                  1
@@ -3245,9 +3242,9 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'MIRCRB'                  .'ANNUAL'                  .'UP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'MIRGRM'                  .'ANNUAL'                  .'UP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'MIRGRN'                  .'ANNUAL'                  .'UP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-  'REGION1'                 .'MIRGRS'                  .'ANNUAL'                  .'UP'                         3     161                                             122                                                                             161                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'PEXCOA'                  .'ANNUAL'                  .'FX'                         3     2129.9963                                       1727                                                                            1727                                                                                                                                                            1000                                                                                                                                                            1000                            500                             
-  'REGION1'                 .'PEXCOA'                  .'ANNUAL'                  .'UP'                         3     2129.99625                                      1727                                                                            1727                                                                                                                                                            1200                                                                                                                                                                                                                            
+  'REGION1'                 .'MIRGRS'                  .'ANNUAL'                  .'UP'                         3     154                                             116                                                                             156                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'PEXCOA'                  .'ANNUAL'                  .'FX'                         3     2129.99625                                      1727                                                                            1727                                                                                                                                                            1000                                                                                                                                                            1000                            500                             
+  'REGION1'                 .'PEXCOA'                  .'ANNUAL'                  .'UP'                         3     2129.99625                                      1727                                                                            1727                                                                                                                                                            1000                                                                                                                                                                                                                            
   'REGION1'                 .'PEXCOK'                  .'ANNUAL'                  .'FX'                               20.834015                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
   'REGION1'                 .'PEXCOK'                  .'ANNUAL'                  .'UP'                         3     20.834015                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
   'REGION1'                 .'PEXELC'                  .'ANNUAL'                  .'FX'                               54.126                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
@@ -3953,7 +3950,7 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'UGASGIH-N'               .'UP'                         3     .9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGASGRM-N'               .'LO'                         3     .5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGASGRM-N'               .'UP'                         3     .9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-  'REGION1'                 .'UGASGRS-N'               .'LO'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'UGASGRS-N'               .'LO'                         3    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGASGRS-N'               .'UP'                         3     .9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGTLGASIN-N'             .'LO'                         3     .4393191596462                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UGTLGASIN-N'             .'UP'                         3     .4624412206802                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -4002,8 +3999,8 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'HGNSTSUTL'                                                                                                                                                        46896.12517428                                                                                                                                                  43674.47960033                                                                  32512.01955359                                                                  28141.93548387                  28141.93548387  28141.93548387  28141.93548387
   'REGION1'                 .'UCOGCLEHGN'                       443.238                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
   'REGION1'                 .'UCTLCLEIN-N'                      576.2082537211                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  'REGION1'                 .'UELEA1HGN'                        408.0703818818                                                                                                                  408.0703818818                                                                                                                                                  300.6834392813                                                                  193.2964966808                                                                  154.0130681056                  114.7296395304                  
-  'REGION1'                 .'UELEP1HGN'                        622.8442670827                                                                                                                  622.8442670827                                                                                                                                                  429.5477704019                                                                  236.2512737210                                                                  198.8535832210                  161.4558927210                  
+  'REGION1'                 .'UELEA1HGN'                        12868.90756302                                                                                                                  12868.90756302                                                                                                                                                  9482.352941176                                                                  6095.798319327                                                                  4856.956115779                  3618.113912231                  
+  'REGION1'                 .'UELEP1HGN'                        19642.01680672                                                                                                                  19642.01680672                                                                                                                                                  13546.21848739                                                                  7450.420168067                                                                  6271.046600458                  5091.673032849                  
   'REGION1'                 .'UFTHGNCO2-N'                                                                                                                                                      477.7719421101                                                                                                                                                  409.5415456681                                                                  370.4241705922                                                                  331.3067955164                  284.8345378328  284.8345378328  284.8345378328
   'REGION1'                 .'UGASGIB-N'                        239.7084895701                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UGASGIC-N'                        239.7084895701                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -4096,8 +4093,8 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'UCOGCLEHGN'                       28.08292287811                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UCTLCLEIN-E'                     EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UCTLCLEIN-N'                     EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-  'REGION1'                 .'UELEA1HGN'                        6.121055728227                                                                                                                  6.121055728227                                                                                                                                                  4.510251589220                                                                  2.899447450212                                                                  2.310196021584                  1.720944592956                  
-  'REGION1'                 .'UELEP1HGN'                        9.342664006241                                                                                                                  9.342664006241                                                                                                                                                  6.443216556028                                                                  3.543769105815                                                                  2.982803748315                  2.421838390815                  
+  'REGION1'                 .'UELEA1HGN'                        193.0336134453                                                                                                                  193.0336134453                                                                                                                                                  142.2352941176                                                                  91.43697478991                                                                  72.85434173669                  54.27170868347                  
+  'REGION1'                 .'UELEP1HGN'                        294.6302521008                                                                                                                  294.6302521008                                                                                                                                                  203.1932773109                                                                  111.7563025210                                                                  94.06569900687                  76.37509549274                  
   'REGION1'                 .'UFTHGNCO2-N'                                                                                                                                                      19.11087768440                                                                                                                                                  16.38166182672                                                                  14.81696682369                                                                  13.25227182065                  11.39338151331  11.39338151331  11.39338151331
   'REGION1'                 .'UGTLGASIN-N'                      16.86860923530                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UGTLGICCO-E'                     EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
@@ -4231,8 +4228,8 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'UELEA1HGN'                       EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGASGRS-N'                        116                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
   'REGION1'                 .'UGTLGICCO-E'                      58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478  58.79552180478 EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
-  'REGION1'                 .'UREFOCRCO-E'                      787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914        271.1914
-  'REGION1'                 .'UREFOCRIN-E'                      212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598        212.1598
+  'REGION1'                 .'UREFOCRCO-E'                      787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  787.9615447086  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194  271.1913538194
+  'REGION1'                 .'UREFOCRIN-E'                      212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138  212.1597914138
   'REGION1'                 .'XAGRCOA'                          .00001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
   'REGION1'                 .'XAGRELC'                          .9119771214891                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'XAGRODS'                          42.04873098492                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

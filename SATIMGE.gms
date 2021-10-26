@@ -47,7 +47,7 @@ SETS
   PRC_SEASON(REG,PRC)            Seasonal Processes
   PRC_WEEKLY(REG,PRC)            Weekly Processes
   PRC_DAYNIT(REG,PRC)           Daynite Processes
-
+  PRC_RCAP(REG,PRC)             Process with early retirement
 
   PRCH(PRC)                      Households groupings in eSAGE
 

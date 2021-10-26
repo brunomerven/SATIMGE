@@ -334,11 +334,16 @@ $offtext
          AFX('AHYDR',RD) = NO;
 *         AFX('AHYDR',RD)$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
-         AFX('AHYDR',RD) = YES;
-*         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
+*         AFX('AHYDR',RD) = YES;
+         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
          AFLEO('AHYDR') = NO;
 *         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
          AFLEO('AHYDR')$(HCAP(XC,TC,TT) GT 0.001) = YES;
+
+         AFX('AELCT',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
+         AFLEO('AELCT') = NO;
+*         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
+         AFLEO('AELCT')$(HCAP(XC,TC,TT) GT 0.001) = YES;
 
 
 
@@ -399,6 +404,8 @@ $offtext
 *bm hydrogen not in public transport in SAM so leaving it out for now
  QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
 
+ QF.L(F,'AELCT','NAT')$(HCAP(XC,TC,TT) GT 0.1) = ifa(F,'AELCT','NAT')*iva('AELCT','NAT')*QA.L('AHYDR')/QA.L('AELCT');
+
 
 *bm set reasonable starting value for QVA otherwise wfdist goes -ve.
  QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = sum(F,QF.L(F,'AHYDR','NAT'));
@@ -414,7 +421,7 @@ $offtext
 
 
 *CA fix imports in accordance with TIMES for all periods
-          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);
+*!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);
 *IF(ord(TC) gt 17,
 *     CERES('cpetr_d')= YES;
 *     CEFIX('cpetr_d')=YES;
@@ -443,10 +450,11 @@ $offtext
  ANFX(A,RD)$(NOT AFX(A,RD))=YES;
  AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
- AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 1)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
+ AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 0.5)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
 
  AFX('ANGAS',RD) = YES;
- AFXGR('ANGAS','NAT',XC,TC) = -.001;
+* AFLEO('ANGAS') = YES;
+ AFXGR('ANGAS','NAT',XC,TC) = -.05;
 
 * iron and steel
 * the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons

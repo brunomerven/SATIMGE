@@ -123,6 +123,8 @@
 
  CERES('ccoil') = YES;
 
+ CERES('cngas') = YES;
+* QM.FX('cngas','REST') = QM0('CNGAS','REST');
 
  CERES('chydr')=YES;
 
