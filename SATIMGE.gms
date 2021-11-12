@@ -345,6 +345,7 @@ PARAMETERS
 
 * Electrolysers and Fuel Cells
   ELCTCAP(AY,RUN)            Electrolyser capacity in SATIM
+  FCELLCAP(AY,RUN)            Fuelcell capacity in SATIM
 
 * SubAnnual Analysis parameters
   TS_Duration(TS_DAYNITE)                  duration in hours of each daynite timeslice

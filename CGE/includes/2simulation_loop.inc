@@ -97,6 +97,9 @@ $include SATIM\includes\2TIMESReport.inc
 * do reverse mapping for industry sectors (excludes power and petroleum)
 
  ICAGR(CXEP,A,TC) = SUM(FSXEP$MFSA(FSXEP,A),ICAFSGR(CXEP,FSXEP,TC));
+ ICAGR(C,'afcel',TC) = 0.971;
+ ICAGR(C,'aelct',TC) = 0.957;
+
  IFAGR(F,A,TC) = SUM(FS$MFSA(FS,A),IFAFSGR(F,FS,TC));
 *IFAGR(F,A,TC) = 1;
 
@@ -154,6 +157,11 @@ $include cge\includes\2carbon.inc
 
 *       World price changes - standard CGE input
 *FH: REMOVED CODE AND RESET TO ORIGINAL CODE
+        PWGR('celct',RUN,TC)$(ord(TC) gt 9) = -0.0426;
+        PWGR('cfcel',RUN,TC)$(ord(TC) gt 9) = -0.0291;
+        PWGR('chydr',RUN,TC)$(ord(TC) gt 9) = -0.015;
+
+
         pwebar(C,RW) = pwebar(C,RW) * (1+PWGR(C,RUN,TC));
         pwmbar(C,RW) = pwmbar(C,RW) * (1+PWGR(C,RUN,TC));
 *fh 211218
@@ -223,7 +231,6 @@ $offtext
 
 
 
-
 *!!!!
 *ICAGR(C,A,TC)=1;
   ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
@@ -257,8 +264,14 @@ $offtext
 *                         = EIntensity_FS('is','chydr',TC)*0.0433;
 
 
+ ica('chydr','apetr','NAT')$(EIntensity_FS('petr','chydr',TC) gt 0.001) = EIntensity_FS('petr','chydr',TC);
+
 *0.03;
  ica('chydr','aammo','NAT')$(EIntensity_FS('am','chydr',TC) gt 0.001) = EIntensity_FS('am','chydr',TC)*0.92;
+
+* setting electrolyser input - this could be made more elegant later
+ ica('celct','ahydr','NAT')$(ord(TC) gt 5) = max(0.04,ica('celct','ahydr','NAT') *0.1);
+ ica('celct','ahydr','NAT')$(TVNCAP(TC,'UELEP1HGN') gt 0.15) = max(0.04,TVNCAP(TC,'UELEP1HGN')*19/FLOW_OUT_FSFuels('hydr','chydr',TC));
 
 
 * Ammonia sector calibrated on cbchm
@@ -274,13 +287,14 @@ $offtext
   ica('cnfrm','airon','NAT') = (ica0('cnfrm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
                               /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
 
+  ica('ciron','airon','NAT') = (ica0('ciron','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
+                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
+
 
 *bm/sr/fh added this to save model from crashing from demand for ccoal-low disapearing completely.
   ica('ccoal-low',A,'NAT')$ica0('ccoal-low',A,'NAT') = max(ica('ccoal-low',A,'NAT'),0.0004);
   ica('ccoal-low','ahydr','NAT') = 0.00000001;
 
-* this fix below doesn't work for PAMS_REF runs but is needed for other runs
-*  ica('celct','ahydr','NAT') = ica('celct','ahydr','NAT')*0.5;
 
 
 
@@ -331,20 +345,28 @@ $offtext
           AFX('APETR',RD)$(NOT EFX(TT,TC) AND QFSUPX('FCAP',XC,TC-1,TT) LT .9) = YES;
 *          AFX('APETR',RD)$(NOT EFX(TT,TC) AND QFSUPX('FSAS',XC,TC-1,TT) LT .9) = YES;
 
-         AFX('AHYDR',RD) = NO;
+*         AFX('AHYDR',RD) = NO;
 *         AFX('AHYDR',RD)$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
 *         AFX('AHYDR',RD) = YES;
-         AFX('AHYDR',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
-         AFLEO('AHYDR') = NO;
-*         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
+         AFX('AHYDR',RD)$(HCAP(XC,TC,TT) GT 0.001) = YES;
+*         AFLEO('AHYDR') = YES;
          AFLEO('AHYDR')$(HCAP(XC,TC,TT) GT 0.001) = YES;
 
-         AFX('AELCT',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
-         AFLEO('AELCT') = NO;
-*         AFLEO('AHYDR')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
-         AFLEO('AELCT')$(HCAP(XC,TC,TT) GT 0.001) = YES;
+*         AFX('AELCT',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
+         ELCTCAP(TC,RUN) = TVNCAP(TC,'UELEP1HGN')+TVACT(TC,'PEXHETP');
+         AFLEO('AELCT')$(ELCTCAP(TC,RUN) GT 0.015) = YES;
+         AFX('AELCT',RD)$(ELCTCAP(TC,RUN) GT 0.015) = YES;
+* this is done to catch sudden increase in electrolyser activity/demand from h2 sector
+         QF.L(F,'AELCT','NAT')$(ELCTCAP(TC,RUN) GT 0.015 and ELCTCAP(TC-1,RUN) LT 0.015) = ifa(F,'AELCT','NAT')*iva('AELCT','NAT')*ELCTCAP(TC,RUN)*19;
+         QE.L('CELCT','REST')$(TVACT(TC,'PEXHETP') GT 0.015 and TVACT(TC-1,'PEXHETP') lt 0.015) = TVACT(TC,'PEXHETP')*19;
+         AFXGR('AELCT','NAT',XC,TC)$(ELCTCAP(TC-1,RUN) GT 0.015) = ELCTCAP(TC,RUN)/ELCTCAP(TC-1,RUN)-1;
+*         AFLEO('AELCT')$(HCAP(XC,TC,TT) GT 0.001) = YES;
+*         AFLEO('AELCT') = YES;
 
+*         AFX('AFCEL',RD)$(NOT T1(TC) and (HCAP(XC,TC,TT) GT 0.001)) = YES;
+*         AFLEO('AFCEL') = NO;
+*         AFLEO('AFCEL')$(HCAP(XC,TC,TT) GT 0.001) = YES;
 
 
 
@@ -402,10 +424,15 @@ $offtext
 * QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC,TT);
 
 *bm hydrogen not in public transport in SAM so leaving it out for now
- QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+* ifa('fcap','ahydr','NAT')$(HCAP(XC,TC,TT) GT 0.1) = 0.00001;
+ QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.1 and HCAP(XC,TC-1,TT) le 0.1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+ AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.1) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
 
- QF.L(F,'AELCT','NAT')$(HCAP(XC,TC,TT) GT 0.1) = ifa(F,'AELCT','NAT')*iva('AELCT','NAT')*QA.L('AHYDR')/QA.L('AELCT');
+* ica('celct','ahydr','NAT')$(HCAP(XC,TC,TT) GT 0.1) = .179;
 
+* bm since celct is the main part of the capital we make fcap coefficient zero
+* QF.L(F,'AELCT','NAT')$(HCAP(XC,TC,TT) GT 0.1 and HCAP(XC,TC-1,TT) le 0.1) = ifa(F,'AELCT','NAT')*iva('AELCT','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC)*0.179;
+* AFXGR('AELCT','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.1) =
 
 *bm set reasonable starting value for QVA otherwise wfdist goes -ve.
  QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = sum(F,QF.L(F,'AHYDR','NAT'));
@@ -415,7 +442,6 @@ $offtext
 *! QINTA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = FLOW_IN_FSFuels('tranlf','CHYDR',TC);
 
 *! QINT.L(C,'AHYDR')$(HCAP(XC,TC,TT) GT 0.00001) = ica(C,'AHYDR','NAT')*QINTA.L('AHYDR','NAT');
-
 
 
 
@@ -460,11 +486,13 @@ $offtext
 * the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
  QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
 
-
 * ammonia
-
  QE.FX('cammo','REST')$VARACT('REGION1',TC-1,'PEXNH3') = QE.L('cammo','REST')*VARACT('REGION1',TC,'PEXNH3')/VARACT('REGION1',TC-1,'PEXNH3');
 
+ QE.FX('cpgm','REST') = QE.L('cpgm','REST')*VARACT('REGION1',TC,'PEXPGM')/VARACT('REGION1',TC-1,'PEXPGM');
+
+* slowly grow electrolyser exports to 2021 level
+* QE.FX('celct','REST')$(ord(TC) lt 19) = QE.L('celct','REST')*(1+0.663);
 
 
 * chemicals set to partially track Secunda and jet fuel production

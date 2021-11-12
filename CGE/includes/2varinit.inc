@@ -127,6 +127,9 @@
 * QM.FX('cngas','REST') = QM0('CNGAS','REST');
 
  CERES('chydr')=YES;
+ CERES('cfcel')=YES;
+ CERES('celct')=YES;
+* QE.FX('celct','REST') = QE0('celct','REST') ;
 
  CERES('cbchm') = YES;
  CERES('cochm') = YES;
@@ -135,11 +138,28 @@
  CERES('ciron') = YES;
  CEFIX('ciron') = YES;
  QE.FX('ciron','REST') = QE0('ciron','REST') ;
+*bm reason for fixing imports: without fixing it we seem to see an explosion in imports caused by an increase in PQ?
+ CMRES('ciron')= YES;
+ QM.FX('ciron','REST') = QM0('ciron','REST') ;
 
 
  CERES('cammo') = YES;
  CEFIX('cammo') = YES;
  QE.FX('cammo','REST') = QE0('cammo','REST') ;
+ CMRES('cammo')= YES;
+ QM.FX('cammo','REST') = QM0('cammo','REST') ;
+
+
+ CERES('cpgm') = YES;
+ CEFIX('cpgm') = YES;
+ QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
+
+
+ CERES('cmore') = YES;
+ CMRES('cmore')= YES;
+ QM.FX('cmore','REST') = QM0('cmore','REST') ;
+
+
 
 
 * CMRES('cpetr_p')= YES;
