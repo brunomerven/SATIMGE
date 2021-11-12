@@ -343,6 +343,9 @@ PARAMETERS
 * domestic demand to drive energy model (i.e. excluding exports)
   QD_FS(FS,AY)            domestic demand to drive energy model
 
+* Electrolysers and Fuel Cells
+  ELCTCAP(AY,RUN)            Electrolyser capacity in SATIM
+
 * SubAnnual Analysis parameters
   TS_Duration(TS_DAYNITE)                  duration in hours of each daynite timeslice
   P_IN_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)       power flow-ins (hourly)

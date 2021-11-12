@@ -1,0 +1,165 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
+  'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
+  'IDUM'                     'Dummy commodity                                   '
+  'IISHBI'                   'Green Iron                                        '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+  'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
+  'NH3'                      'Ammonia                                           '
+  'OKG'                      'Oil Green JetFuel                                 '
+/;
+SET COM /
+  'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
+  'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
+  'IDUM'                     'Dummy commodity                                   '
+  'IISHBI'                   'Green Iron                                        '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+  'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
+  'NH3'                      'Ammonia                                           '
+  'OKG'                      'Oil Green JetFuel                                 '
+/;
+SET COM_NRG /
+  'REGION1'   .'HETP_EX'
+  'REGION1'   .'HFCP_EX'
+  'REGION1'   .'IDUM'
+  'REGION1'   .'IISHBI'
+  'REGION1'   .'IPGM'
+  'REGION1'   .'IPGMOP'
+  'REGION1'   .'NH3'
+  'REGION1'   .'OKG'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'HETP_EX'
+  'REGION1'   .'HFCP_EX'
+  'REGION1'   .'IDUM'
+  'REGION1'   .'IISHBI'
+  'REGION1'   .'IPGM'
+  'REGION1'   .'IPGMOP'
+  'REGION1'   .'NH3'
+  'REGION1'   .'OKG'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'HETP_EX'
+  'REGION1'   .'HFCP_EX'
+  'REGION1'   .'IDUM'
+  'REGION1'   .'IISHBI'
+  'REGION1'   .'IPGM'
+  'REGION1'   .'IPGMOP'
+  'REGION1'   .'NH3'
+  'REGION1'   .'OKG'
+/;
+SET PRC /
+  'PEXGDRI'                  'Exports of Green Iron                             '
+  'PEXHETP'                  'H2 PEM Electrolyser Stack Exports (GW)            '
+  'PEXHFCP'                  'H2 PEM Fuel Cell Exports (GW)                     '
+  'PEXNH3'                   'Ammonia to Export Market                          '
+  'PEXOKG'                   'Exports of Green JetFuel                          '
+  'PEXPGM'                   'Export PGMs - Pt                                  '
+  'PEXPGMO'                  'Export PGMs - Others                              '
+/;
+SET PRC_PRE /
+  'REGION1'   .'PEXGDRI'
+  'REGION1'   .'PEXHETP'
+  'REGION1'   .'PEXHFCP'
+  'REGION1'   .'PEXNH3'
+  'REGION1'   .'PEXOKG'
+  'REGION1'   .'PEXPGM'
+  'REGION1'   .'PEXPGMO'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'PEXGDRI'
+  'REGION1'   .'PEXHETP'
+  'REGION1'   .'PEXHFCP'
+  'REGION1'   .'PEXNH3'
+  'REGION1'   .'PEXOKG'
+  'REGION1'   .'PEXPGM'
+  'REGION1'   .'PEXPGMO'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'HETP_EX'.'PJ'
+  'REGION1'.'HFCP_EX'.'PJ'
+  'REGION1'.'IDUM'.'PJ'
+  'REGION1'.'IISHBI'.'PJ'
+  'REGION1'.'IPGM'.'PJ'
+  'REGION1'.'IPGMOP'.'PJ'
+  'REGION1'.'NH3'.'PJ'
+  'REGION1'.'OKG'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'PEXGDRI'.'PJ'
+  'REGION1'.'PEXHETP'.'PJ'
+  'REGION1'.'PEXHFCP'.'PJ'
+  'REGION1'.'PEXNH3'.'PJ'
+  'REGION1'.'PEXOKG'.'PJ'
+  'REGION1'.'PEXPGM'.'PJ'
+  'REGION1'.'PEXPGMO'.'PJ'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'PEXGDRI'                 .'IDUM'                       1
+  'REGION1'                 .'PEXHETP'                 .'IDUM'                       1
+  'REGION1'                 .'PEXHFCP'                 .'IDUM'                       1
+  'REGION1'                 .'PEXNH3'                  .'IDUM'                       1
+  'REGION1'                 .'PEXOKG'                  .'IDUM'                       1
+  'REGION1'                 .'PEXPGM'                  .'IDUM'                       1
+  'REGION1'                 .'PEXPGMO'                 .'IDUM'                       1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'PEXGDRI'                    1
+  'REGION1'                 .'PEXHETP'                    1
+  'REGION1'                 .'PEXHFCP'                    1
+  'REGION1'                 .'PEXNH3'                     1
+  'REGION1'                 .'PEXOKG'                     1
+  'REGION1'                 .'PEXPGM'                     1
+  'REGION1'                 .'PEXPGMO'                    1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'PEXGDRI'                 .'IISHBI'                     1
+  'REGION1'                 .'PEXHETP'                 .'HETP_EX'                    1
+  'REGION1'                 .'PEXHFCP'                 .'HFCP_EX'                    1
+  'REGION1'                 .'PEXNH3'                  .'NH3'                        1
+  'REGION1'                 .'PEXOKG'                  .'OKG'                        1
+  'REGION1'                 .'PEXPGM'                  .'IPGM'                       1
+  'REGION1'                 .'PEXPGMO'                 .'IPGMOP'                     1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'PEXGDRI'                 .'IDUM'                       1
+  'REGION1'                 .'PEXHETP'                 .'IDUM'                       1
+  'REGION1'                 .'PEXHFCP'                 .'IDUM'                       1
+  'REGION1'                 .'PEXNH3'                  .'IDUM'                       1
+  'REGION1'                 .'PEXOKG'                  .'IDUM'                       1
+  'REGION1'                 .'PEXPGM'                  .'IDUM'                       1
+  'REGION1'                 .'PEXPGMO'                 .'IDUM'                       1
+/;
+       TABLE AACT_BND
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'PEXGDRI'                 .'ANNUAL'                  .'FX'                         5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'PEXHETP'                 .'ANNUAL'                  .'FX'                         5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'PEXHFCP'                 .'ANNUAL'                  .'FX'                         5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'PEXNH3'                  .'ANNUAL'                  .'FX'                         5     2.7578                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'PEXOKG'                  .'ANNUAL'                  .'FX'                         5                                                                                                                                                                                                                                                                                                                                                                                                                                                    EPS             EPS             EPS             EPS                              
+  'REGION1'                 .'PEXPGM'                  .'ANNUAL'                  .'FX'                         5     124.6995239213  130.7113162016  84.02169487089  133.9254669381  127.7113162016  125.3065992895  132.9289637778  143.5685920986  107.4388538483                                                                  138.2487779382                                                                  140.6204204005                                                                                                                                                  140                             505                             
+  'REGION1'                 .'PEXPGMO'                 .'ANNUAL'                  .'FX'                         5     101.3004760786  105.2886837983  74.97830512910  110.0745330618  105.2886837983  103.6934007104                                  103.6934007104                                                                  103.6934007104                                                                  103.6934007104                                                                                                                                                                                  103.6934007104                  
+;
+       TABLE AACT_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'PEXGDRI'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'PEXNH3'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'PEXPGM'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'PEXPGMO'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+;
+       TABLE AACT_EFF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'PEXGDRI'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXHETP'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXHFCP'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXNH3'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXOKG'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXPGM'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXPGMO'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;

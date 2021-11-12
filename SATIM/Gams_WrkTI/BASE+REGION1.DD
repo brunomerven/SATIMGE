@@ -81,6 +81,7 @@ SET COM_GRP /
   'HET'                      'Heat-Steam                                        '
   'HGN'                      'Hydrogen                                          '
   'HYD'                      'Hydro                                             '
+  'IDUM'                     'Dummy commodity                                   '
   'INDBIB'                   'Industry Biomass bagasse                          '
   'INDBIW'                   'Industry Biomass Wood                             '
   'INDCH4S'                  'Industry Methane South Africa                     '
@@ -316,6 +317,7 @@ SET COM /
   'HET'                      'Heat-Steam                                        '
   'HGN'                      'Hydrogen                                          '
   'HYD'                      'Hydro                                             '
+  'IDUM'                     'Dummy commodity                                   '
   'INDBIB'                   'Industry Biomass bagasse                          '
   'INDBIW'                   'Industry Biomass Wood                             '
   'INDCH4S'                  'Industry Methane South Africa                     '
@@ -486,6 +488,7 @@ SET COM_NRG /
   'REGION1'   .'HET'
   'REGION1'   .'HGN'
   'REGION1'   .'HYD'
+  'REGION1'   .'IDUM'
   'REGION1'   .'INDBIB'
   'REGION1'   .'INDBIW'
   'REGION1'   .'INDCLE'
@@ -707,6 +710,7 @@ SET COM_ANNUAL /
   'REGION1'   .'HEN'
   'REGION1'   .'HET'
   'REGION1'   .'HYD'
+  'REGION1'   .'IDUM'
   'REGION1'   .'INDBIB'
   'REGION1'   .'INDBIW'
   'REGION1'   .'INDCH4S'
@@ -890,6 +894,7 @@ SET COM_NRGFOS /
   'REGION1'   .'HET'
   'REGION1'   .'HGN'
   'REGION1'   .'HYD'
+  'REGION1'   .'IDUM'
   'REGION1'   .'INDBIB'
   'REGION1'   .'INDBIW'
   'REGION1'   .'INDCLE'
@@ -1538,6 +1543,7 @@ SET PRC_IRE /
   'REGION1'   .'PEXOGS'
   'REGION1'   .'PEXOHF'
   'REGION1'   .'PEXOKE'
+  'REGION1'   .'PEXOKG'
 /;
 SET TOTALS /
   'TOTAL_PRC'                'TOTAL over Relevant Processes                     '
@@ -1718,6 +1724,7 @@ SET ACOM_UNIT /
   'REGION1'.'HET'.'PJ'
   'REGION1'.'HGN'.'PJ'
   'REGION1'.'HYD'.'PJ'
+  'REGION1'.'IDUM'.'PJ'
   'REGION1'.'INDBIB'.'PJ'
   'REGION1'.'INDBIW'.'PJ'
   'REGION1'.'INDCH4S'.'KT'
@@ -2260,7 +2267,7 @@ PARAMETER APRCACTUNT /
   'REGION1'                 .'PEXOGS'                  .'OGS'                        1
   'REGION1'                 .'PEXOHF'                  .'OHF'                        1
   'REGION1'                 .'PEXOKE'                  .'OKE'                        1
-  'REGION1'                 .'PEXOKG'                  .'OKG'                        1
+  'REGION1'                 .'PEXOKG'                  .'IDUM'                       1
   'REGION1'                 .'UCOGCLEHGN'              .'UCOGCLEHGN-O'               1
   'REGION1'                 .'UCTLCLEIN-E'             .'UCTLCLEIN-E-O'              1
   'REGION1'                 .'UCTLCLEIN-N'             .'UCTLCLEIN-N-O'              1
@@ -2697,6 +2704,7 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'MIRGRN'                  .'GRN'                        1
   'REGION1'                 .'MIRGRS'                  .'GRS'                        1
   'REGION1'                 .'MNZZZ'                   .'ZZZ'                        1
+  'REGION1'                 .'PEXOKG'                  .'IDUM'                       1
   'REGION1'                 .'UCOGCLEHGN'              .'UPSCH4S'                    1
   'REGION1'                 .'UCOGCLEHGN'              .'UPSCO2S'                    1
   'REGION1'                 .'UCOGCLEHGN'              .'UPSHGN'                     1
