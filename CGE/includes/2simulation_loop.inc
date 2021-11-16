@@ -91,7 +91,7 @@ $include SATIM\includes\2TIMESReport.inc
 
 
 * make acoal output leontief - controlled by SATIM - see theta calcs below
- ACET2('acoal') = YES;
+ ACET2('acoal') = NO;
  ACET2('apetr') = YES;
 
 * do reverse mapping for industry sectors (excludes power and petroleum)
@@ -157,8 +157,8 @@ $include cge\includes\2carbon.inc
 
 *       World price changes - standard CGE input
 *FH: REMOVED CODE AND RESET TO ORIGINAL CODE
-        PWGR('celct',RUN,TC)$(ord(TC) gt 9) = -0.0426;
-        PWGR('cfcel',RUN,TC)$(ord(TC) gt 9) = -0.0291;
+        PWGR('celct',RUN,TC)$(ord(TC) gt 9) = -0.0326;
+        PWGR('cfcel',RUN,TC)$(ord(TC) gt 9) = -0.0191;
         PWGR('chydr',RUN,TC)$(ord(TC) gt 9) = -0.015;
 
 
@@ -200,8 +200,8 @@ $offtext
   theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
 
 * shrinking production of cmore and cmine out of coal
-  theta('acoal','cmore') = theta('acoal','cmore')*0.5;
-  theta('acoal','cmine') = theta('acoal','cmine')*0.5;
+  theta('acoal','cmore') = theta('acoal','cmore')*0.95;
+  theta('acoal','cmine') = theta('acoal','cmine')*0.95;
 
 * adjust ica and ifa for acoal based on previous pacoal and new theta
   pacoalx(TC,RUN) = sum(CCOAL,theta('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta('acoal',CCOAL));
@@ -233,6 +233,7 @@ $offtext
 
 *!!!!
 *ICAGR(C,A,TC)=1;
+
   ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
 
 
@@ -271,7 +272,7 @@ $offtext
 
 * setting fcell input - this could be made more elegant later
 * 3.3 is the base year price of electrolysers
-* ica('cfcel','avehi','NAT')$(TVCAP(TC,'UELEP1HGN') gt 0.15) = TVCAP(TC,'HFCP-TRAHCV-N')*3.3/QA.L('avehi');
+ ica('cfcel','avehi','NAT')$(TVCAP(TC,'HFCP-TRAHCV-N') gt 0.15) = TVCAP(TC,'HFCP-TRAHCV-N')*3.3/QA.L('avehi');
 
 
 * Ammonia sector calibrated on cbchm
@@ -335,10 +336,10 @@ $offtext  change to IFA
 *         AFX('AHYDR',RD) = NO;
 *         AFX('AHYDR',RD)$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = YES;
 
-*         AFX('AHYDR',RD) = YES;
-         AFX('AHYDR',RD)$(HCAP(XC,TC,TT) GT 0.001) = YES;
-*         AFLEO('AHYDR') = YES;
-         AFLEO('AHYDR')$(HCAP(XC,TC,TT) GT 0.001) = YES;
+         AFX('AHYDR',RD) = YES;
+*         AFX('AHYDR',RD)$(HCAP(XC,TC,TT) GT 0.001) = YES;
+         AFLEO('AHYDR') = YES;
+*         AFLEO('AHYDR')$(HCAP(XC,TC,TT) GT 0.001) = YES;
 
 * Electrolyser sector - supply of electrolysers is linked to electrolyser exports and PEM electrolyser capacity in SATIM (ELCTCAP)
          AFLEO('AELCT')$(ELCTCAP(TC,RUN) GT 0.015) = YES;
@@ -350,17 +351,17 @@ $offtext  change to IFA
          QE.L('CELCT','REST')$(TVACT(TC,'PEXHETP') GT 0.015 and TVACT(TC-1,'PEXHETP') lt 0.015) = TVACT(TC,'PEXHETP')*19;
          AFXGR('AELCT','NAT',XC,TC)$(ELCTCAP(TC-1,RUN) GT 0.015) = ELCTCAP(TC,RUN)/ELCTCAP(TC-1,RUN)-1;
 
-$ontext
+*$ontext
 * fuelcell sector - supply of fuel cells is linked to fuel cell export and fuel cell capacity in trucks (ELCTCAP)
 * 3.3 is base year price of electrolyser. Future cost decreases are captured by TFP growth and EE in intermediates
          AFLEO('AFCEL')$(FCELLCAP(TC,RUN) GT 0.015) = YES;
          AFX('AFCEL',RD)$(FCELLCAP(TC,RUN) GT 0.015) = YES;
 * this is done to catch sudden increase in fuelcell activity/demand from freight/vehicle sector
          QF.L(F,'AFCEL','NAT')$(FCELLCAP(TC,RUN) GT 0.015 and FCELLCAP(TC-1,RUN) LT 0.015) = ifa(F,'AFCEL','NAT')*iva('AFCEL','NAT')*FCELLCAP(TC,RUN)*3.3;
-* QE is not fixed this just helps the MCP by setting a starting point (hopefully) close to the solution
-         QE.L('CFCEL','REST')$(TVACT(TC,'PEXHETP') GT 0.015 and TVACT(TC-1,'PEXHETP') lt 0.015) = TVACT(TC,'PEXHETP')*3.3;
+* QE is not fixed this just helps the MCP by setting a starting point (hopefully) close to the solution, 3.3 is the base year price
+         QE.L('CFCEL','REST')$(TVACT(TC,'PEXHFCP') GT 0.015 and TVACT(TC-1,'PEXHFCP') lt 0.015) = TVACT(TC,'PEXHFCP')*3.3;
          AFXGR('AFCEL','NAT',XC,TC)$(FCELLCAP(TC-1,RUN) GT 0.015) = FCELLCAP(TC,RUN)/FCELLCAP(TC-1,RUN)-1;
-$offtext
+*$offtext
 
 * electricity sector
          AFXGR('aelec','NAT',XC,TC)$EFX(TT,TC) = QFEGY_GR(RUN,TC)- 1;
@@ -369,8 +370,13 @@ $offtext
 * coal sector
          AFX('acoal',RD)$EFX(TT,TC) = YES;
          CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
-         AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1)*pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
+         AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
+*pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
          AFLEO('ACOAL')$(NOT T1(TC)) = YES;
+* setting starting position to avoid -ve values on qe
+         QE.L('ccoal-hgh','REST')$(NOT T1(TC)) = TVACT(TC,'PEXCOA');
+         QE.L('ccoal-low','REST')$(NOT T1(TC)) = 0;
+
 
 * petroleum sector
          AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
@@ -393,23 +399,6 @@ $offtext
 
 *CA fix imports in accordance with TIMES for all periods
 *!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);
-*IF(ord(TC) gt 17,
-*     CERES('cpetr_d')= YES;
-*     CEFIX('cpetr_d')=YES;
-*     QM.FX('cpetr_d','REST') =  FLOW_OUT_FSFuels('imp','cpetr_d',TC,TT);
-*);
-
-*bm+fh 20190207
-* QM.FX('cpetr_o','rest')$PFLOW('imp',XC,TC-1,TT) = QM.L('cpetr_o','rest')*PFLOW('imp',XC,TC,TT)/PFLOW('imp',XC,TC-1,TT);
-
-*if(ord(TC) gt 9,
-* QM.FX('cpetr_t','rest')$PFLOW('imp',XC,TC-1,TT) = QM.L('cpetr_t','rest')*(1+(PFLOW('imp',XC,TC,TT)/PFLOW('imp',XC,TC-1,TT)-1)/2);
-* QM.FX('cpetr','rest')$PFLOW('imp',XC,TC-1,TT) = QM.L('cpetr','rest')*PFLOW('imp',XC,TC,TT)/PFLOW('imp',XC,TC-1,TT);
-*);
-
-
-
-*CA
  ANFX(A,RD)=NO;
 
 * other exogenous sectors
