@@ -1,1 +1,1 @@
-echo 0RG_NZ20_8
+echo 0RG_NZ20_8_N

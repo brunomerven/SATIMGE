@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/10/26	18:48:48
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZSAIIA.mdb
+Creation Date:	2021/11/17	11:18:02 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	SUP_HETP	Supply: H2 Electrolyser Stacks - PEM v2	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -17,15 +17,15 @@ TID DATA	_GLOBAL
 
 ITEMS	REGION1
 	E	DMDEXPHELTP	Export Demand - Electrolyser PEM (GW)	PJ	COM,DEM,ANNUAL,OTH	
-	E	HETP_EX	Electrolyser H2 PEM  Capacity (GW) Export	PJ	COM,DEM,ANNUAL,OTH	
-	E	IPGM	Industry - PGMs - Platinum	PJ	COM,DEM,ANNUAL,RES	
+	E	HETP_EX	Electrolyser H2 PEM  Capacity (GW) Export	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IPGM	Industry - PGMs - Platinum	PJ	COM,NRG,ANNUAL,FOSSIL	
 	T	EXPHFCP	Export - Fuel Cells (GW)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	HETP-N	Electrolyser H2 PEM generic export	PJ,PJa	PRC,PRE,ANNUAL	
-	T	PEXHETP	Electrolyser Stacks  (GW) Export	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXHETP	H2 PEM Electrolyser Stack Exports (GW)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UELEP1HGN	Production Plant Hydrogen Electrolysis PEM	PJ,PJa	PRC,PRE,DAYNITE	
 
 TS DATA	REGION1
-	ACT_BND	PEXHETP	-	-	-	ANNUAL	FX	3	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	6	null	21	21	21	
+	ACT_BND	PEXHETP	-	-	-	ANNUAL	FX	3	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	EXPHFCP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	HETP-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	PEXHETP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

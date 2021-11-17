@@ -1,1 +1,1 @@
-.\satim\Gams_WrkTI\RUNTIMES.CMD C:\Models\SATIMGE\                    NZ-20NE-08          Gams_WrkTI
+.\satim\Gams_WrkTI\RUNTIMES.CMD C:\Models\SATIMGE\                    NZ-20NENH           Gams_WrkTI

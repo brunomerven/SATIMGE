@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/10/26	19:11:37
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZSAIIA.mdb
+Creation Date:	2021/11/17	11:18:12 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	SUP_HFCP	Supply: H2 Fuel Cells - PEM v2	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -21,18 +21,18 @@ ITEMS	REGION1
 	E	DMDEXPHFCP	Export Demand - Fuel Cell (GW)	PJ	COM,DEM,ANNUAL,OTH	
 	E	HELTP-U	Fuel Cell -  H2 PEM - Volume (Units)	PJ	COM,FIN	
 	E	HFCP_CAP	Fuel Cell H2 PEM  Capacity (GW)	PJ	COM,DEM,ANNUAL,OTH	
-	E	HFCP_EX	Fuel Cell H2 PEM  Capacity (GW)	PJ	COM,DEM,ANNUAL,OTH	
+	E	HFCP_EX	Fuel Cell H2 PEM  Capacity (GW)	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	HFCP_TRA	Fuel Cell H2 PEM  Capacity (GW) transport	PJ	COM,DEM,ANNUAL,OTH	
-	E	IPGM	Industry - PGMs - Platinum	PJ	COM,DEM,ANNUAL,RES	
+	E	IPGM	Industry - PGMs - Platinum	PJ	COM,NRG,ANNUAL,FOSSIL	
 	T	EXPHFCP	Export - Fuel Cells (GW)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	HFCP-N	Fuel Cell H2 PEM generic export	PJ,PJa	PRC,PRE,ANNUAL	
 	T	HFCP-TRAHCV-N	Fuel Cell H2 PEM Transport HCV	PJ,PJa	PRC,PRE,ANNUAL	
-	T	PEXHFCP	Fuel Cells (GW) Export	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXHFCP	H2 PEM Fuel Cell Exports (GW)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UELEP1HGN	Production Plant Hydrogen Electrolysis PEM	PJ,PJa	PRC,PRE,DAYNITE	
 	T	ZZZPHFCPTRA	Export - Fuel Cells (GW) transport process dummy for NCAP_ICOM use	PJ,PJa	PRC,PRE,ANNUAL	
 
 TS DATA	REGION1
-	ACT_BND	PEXHFCP	-	-	-	ANNUAL	FX	3	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	0.1	null	null	null	null	null	null	null	null	null	19	null	310	310	310	
+	ACT_BND	PEXHFCP	-	-	-	ANNUAL	FX	3	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	EXPHFCP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	HFCP-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	HFCP-TRAHCV-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

@@ -411,6 +411,9 @@ FSATIMNOELEC(FSATIM) = yes;
 FSATIMNOELEC('elec') = no;
 
 PRCPower(PRC)$MPRCSector(PRC,'Power') = yes;
+PRCPower(PRC)$MPRCSubsector(PRC,'CO2Capture&Storage','DAC') = yes;
+PRCPower(PRC)$MPRCSubsector(PRC,'CO2Capture&Storage','CO2Capture&Storage-Power') = yes;
+
 PRCBulkPower(PRC)$PRCPower(PRC) = yes;
 PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','EDist') = no;
 PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','ETrans') = no;
@@ -418,8 +421,6 @@ PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','AutoGen-Chemical') = no;
 PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','AutoGen-EnergySupply') = no;
 PRCBulkPower(PRC)$MPRCSubSubSector(PRC,'Power','EBattery','Ebattery_Dist') = no;
 PRCBulkPower(PRC)$MPRCSubSubSector(PRC,'Power','EPV','EPV_Dist') = no;
-
-
 
 FSGDP(FS) = yes;
 FSGDP('fa') = no;
