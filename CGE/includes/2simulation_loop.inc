@@ -343,7 +343,8 @@ $offtext  change to IFA
 
 * Electrolyser sector - supply of electrolysers is linked to electrolyser exports and PEM electrolyser capacity in SATIM (ELCTCAP)
          AFLEO('AELCT')$(ELCTCAP(TC,RUN) GT 0.015) = YES;
-         AFX('AELCT',RD)$(ELCTCAP(TC,RUN) GT 0.015) = YES;
+*         AFX('AELCT',RD)$(ELCTCAP(TC,RUN) GT 0.015) = YES;
+         AFX('AELCT',RD) = YES;
 * this is done to catch sudden increase in electrolyser activity/demand from h2 sector
 * 19 is base year price of electrolyser. Future cost decreases are captured by TFP growth and EE in intermediates
          QF.L(F,'AELCT','NAT')$(ELCTCAP(TC,RUN) GT 0.015 and ELCTCAP(TC-1,RUN) LT 0.015) = ifa(F,'AELCT','NAT')*iva('AELCT','NAT')*ELCTCAP(TC,RUN)*19;
@@ -355,7 +356,9 @@ $offtext  change to IFA
 * fuelcell sector - supply of fuel cells is linked to fuel cell export and fuel cell capacity in trucks (ELCTCAP)
 * 3.3 is base year price of electrolyser. Future cost decreases are captured by TFP growth and EE in intermediates
          AFLEO('AFCEL')$(FCELLCAP(TC,RUN) GT 0.015) = YES;
-         AFX('AFCEL',RD)$(FCELLCAP(TC,RUN) GT 0.015) = YES;
+*         AFX('AFCEL',RD)$(FCELLCAP(TC,RUN) GT 0.015) = YES;
+         AFX('AFCEL',RD) = YES;
+
 * this is done to catch sudden increase in fuelcell activity/demand from freight/vehicle sector
          QF.L(F,'AFCEL','NAT')$(FCELLCAP(TC,RUN) GT 0.015 and FCELLCAP(TC-1,RUN) LT 0.015) = ifa(F,'AFCEL','NAT')*iva('AFCEL','NAT')*FCELLCAP(TC,RUN)*3.3;
 * QE is not fixed this just helps the MCP by setting a starting point (hopefully) close to the solution, 3.3 is the base year price
