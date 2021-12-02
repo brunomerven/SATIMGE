@@ -1,6 +1,5 @@
-* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_IND','TCH_COM','TCH_COM_AF','TCH_RES','TCH_RES_AF','TCH_PWR','TCH_PWR_RELL','TCH_PWR_LEAF','TCH_NH3','TCH_CCS','TCH_CCS_C','SUP_BIO2030','TCH_TRA','GTS_METBUS_L','TCH_SUP_ER','TRARAILODSLC','SUP_BIO_X','CO2TAXCPAM','SUP_HETP','CO2CAP08GT','SUP_HFCP','CO2SACAPL20','TCH_GRNEXP','TCH_HGNNOGAS','DMD_ALL' for region REGION1
+* This DDS contains Rule-based constraints that occur in scenario(s) 'BASE','TCH_AGR','TCH_IND','TCH_COM','TCH_COM_AF','TCH_RES','TCH_RES_AF','TCH_PWR','TCH_PWR_RELL','TCH_PWR_LEAF','TCH_NH3','TCH_CCS','TCH_CCS_C','SUP_BIO2030','TCH_TRA','TCH_SUP_ER','TRARAILODSLC','SUP_BIO_X','CO2TAXCPAM','SUP_HETP','CO2CAP08GT','SUP_HFCP','CO2SACAPL20','TCH_GRNEXP','TCH_HGNNOGAS','DMD_ALL' for region REGION1
 SET UC_N /
-  'GTS_METROBUS'             'NDC PAMS                                          '
   'HFCPDOM_CAP'              'Fuel Cell - Domestic Capacity                     '
   'RHIEW-LO'                 'HIgh income water heating HP and SWH LO           '
   'RHIEW-UP'                 'HIgh income water heating HP and SWH UB           '
@@ -198,7 +197,6 @@ SET UC_N /
   'UC-SCREAF-T2-ACT'         'Act. constraint for Industry - Iron&Steel - SCREAF'
 /;
 SET UC_N_UCRT /
-  'REGION1'   .'GTS_METROBUS'
   'REGION1'   .'HFCPDOM_CAP'
   'REGION1'   .'RHIEW-LO'
   'REGION1'   .'RHIEW-UP'
@@ -395,21 +393,6 @@ SET UC_N_UCRT /
   'REGION1'   .'UC-SCREAF-T1-ACT'
   'REGION1'   .'UC-SCREAF-T2-ACT'
 /;
-
-* TS Data follows for Rule-based Constraint GTS_METROBUS taken from scenario GTS_METBUS_L
-       TABLE AUC_RHSRT
-                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'GTS_METROBUS'            .'LO'                         3    EPS                                                                                                                             EPS                                                                                                                                                                                                                                                                                                                                                             EPS             EPS             EPS
-;
-       TABLE AUC_ACT
-                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'GTS_METROBUS'            .'LHS'                     .'TPPUBUSBGS-N'            .'ANNUAL'                     3    EPS                                                                                                                             EPS                                                                                                                                                                                                                                                                                                                                                             -.0685          -.0685          -.0685
-  'REGION1'                 .'GTS_METROBUS'            .'LHS'                     .'TPPUBUSELC-N'            .'ANNUAL'                     3    EPS                                                                                                                             EPS                                                                                                                                                                                                                                                                                                                                                             -.0685          -.0685          -.0685
-  'REGION1'                 .'GTS_METROBUS'            .'LHS'                     .'TPPUBUSGAS-N'            .'ANNUAL'                     3     1                                                                                                                               1                                                                                                                                                                                                                                                                                                                                                               .9315           .9315           .9315
-  'REGION1'                 .'GTS_METROBUS'            .'LHS'                     .'TPPUBUSHGNF-N'           .'ANNUAL'                     3    EPS                                                                                                                             EPS                                                                                                                                                                                                                                                                                                                                                             -.0685          -.0685          -.0685
-  'REGION1'                 .'GTS_METROBUS'            .'LHS'                     .'TPPUBUSODS-E'            .'ANNUAL'                     3    EPS                                                                                                                             EPS                                                                                                                                                                                                                                                                                                                                                             -.0685          -.0685          -.0685
-  'REGION1'                 .'GTS_METROBUS'            .'LHS'                     .'TPPUBUSODS-N'            .'ANNUAL'                     3    EPS                                                                                                                             EPS                                                                                                                                                                                                                                                                                                                                                             -.0685          -.0685          -.0685
-;
 
 * TS Data follows for Rule-based Constraint HFCPDOM_CAP taken from scenario SUP_HFCP
        TABLE AUC_RHSRT
@@ -3061,9 +3044,8 @@ SET UC_N_UCRT /
   'REGION1'                 .'UC-SCREAF-T2-ACT'        .'LHS'                     .'IISSCREAF-E-T2'          .'ANNUAL'                           1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1               1                               
 ;
 
-* TID Data follows for Rule-based Constraint GTS_METROBUS taken from scenario GTS_METBUS_L
+* TID Data follows for Rule-based Constraint HFCPDOM_CAP taken from scenario SUP_HFCP
 PARAMETER AUC_R_EACH /
-  'REGION1'                 .'GTS_METROBUS'               1
   'REGION1'                 .'HFCPDOM_CAP'                1
   'REGION1'                 .'RHIEW-LO'                   1
   'REGION1'                 .'RHIEW-UP'                   1

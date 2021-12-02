@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/11/17	4:54:16 PM
+Creation Date:	2021/11/28	19:59:30
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_GRNEXP	H2 based Green Exports	
@@ -34,11 +34,11 @@ ITEMS	REGION1
 
 TS DATA	REGION1
 	ACT_BND	PEXGDRI	-	-	-	ANNUAL	FX	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	14	null	null	
-	ACT_BND	PEXHETP	-	-	-	ANNUAL	FX	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.2	null	null	null	null	null	null	null	null	null	2.3572744	null	21.333332	null	null	
-	ACT_BND	PEXHFCP	-	-	-	ANNUAL	FX	5	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0.0256	null	null	null	null	null	null	null	null	null	7.79335792	null	155	155	155	
+	ACT_BND	PEXHETP	-	-	-	ANNUAL	FX	5	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	0.2	null	null	null	null	null	null	null	null	null	2.3572744	null	21.333332	null	null	
+	ACT_BND	PEXHFCP	-	-	-	ANNUAL	FX	5	0	null	null	null	null	0	null	null	0	null	null	null	null	0	null	null	null	null	0.0256	null	null	null	null	null	null	null	null	null	7.79335792	null	309.963104	null	null	
 	ACT_BND	PEXNH3	-	-	-	ANNUAL	FX	5	2.7578	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2.75782537067545	null	null	null	null	null	null	null	null	null	null	null	124.155	null	null	
 	ACT_BND	PEXOKG	-	-	-	ANNUAL	FX	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	5.043046192	5.043046192	10.086092384	null	null	
-	ACT_BND	PEXPGM	-	-	-	ANNUAL	FX	5	124.699523921318	130.711316201685	84.0216948708969	133.925466938125	127.711316201685	125.306599289538	132.928963777878	143.568592098683	107.438853848349	null	null	null	null	138.248777938281	null	null	null	null	140.620420400522	null	null	null	null	null	null	null	null	null	140	null	505	null	null	
+	ACT_BND	PEXPGM	-	-	-	ANNUAL	FX	5	124.699523921318	130.711316201685	84.0216948708969	133.925466938125	127.711316201685	125.306599289538	132.928963777878	143.568592098683	107.438853848349	null	null	null	null	138.248777938281	null	null	null	null	140.620420400522	null	null	null	null	null	null	null	null	null	170.136295099327	null	526.830142404452	null	null	
 	ACT_BND	PEXPGMO	-	-	-	ANNUAL	FX	5	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	103.693400710462	null	null	null	null	103.693400710462	null	null	null	null	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	103.693400710462	null	null	
 	ACT_COST	PEXGDRI	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	PEXNH3	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

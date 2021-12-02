@@ -6355,9 +6355,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[RP:MERGERUNS_H]
-1=
-
 [GDXDISP: CTA Set 1]
 PlaneDim=0
 RowDim=1
@@ -6722,10 +6719,6 @@ Order=1,2,3,4,5
 Decim=7
 PlaneRownr=-1
 
-[RP:MERGERUNS]
-1=gdx = merged
-2=
-
 [RP:REFRESH_DEMSTART]
 1=gdx = demstarttest
 2=
@@ -6869,9 +6862,6 @@ SqTrail0=0
 Order=4,1,2,3
 Decim=1
 PlaneRownr=-1
-
-[RP:MERGERUNS_FIXAGRI]
-1=
 
 [GDXDISP: QGX Par 4]
 PlaneDim=0
@@ -7319,85 +7309,282 @@ PlaneRownr=-1
 [RP:2SIMULATION_LOOP]
 1=
 
+[RP:MERGERUNS_FIXAGRI]
+1=
+
+[GDXDISP: ERPRICE Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERR2 Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERREXPOUT Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRHOME Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRLES1 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRLES2 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERROREQ Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERROREQ2 Equ 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRPROD1 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRPROD2 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRQFBASE1 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRQFBASE2 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRSAMBAL Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRSAMFLOW Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ERRTRADE Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ESUMTAB Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ESUPPLY Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ETPRICEGR Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EU Set 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EUP Alias 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EUPP Alias 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EXPRESID2 Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
 [RP:SATIMGE]
-1=r=cge\model, gdx = H2TestWE3
-2=r=cge\model, gdx = H2TestNENh2
-3=r=cge\model, gdx = H2TestNE
-4=r=cge\model, gdx = H2TestWE2
-5=r=cge\model, gdx = H2TestWE
-6=r=cge\model, gdx = H2Test
-7=r=cge\model, gdx = NetZeroLinkedLE
-8=r=cge\model, gdx = NetZeroLinkedHE
-9=r=cge\model, gdx = NetZeroLinked3Iter
-10=r=cge\model, gdx = NetZeroLinkedNewSAM
-11=r=cge\model, gdx = NetZeroLinkedtest
-12=r=cge\model, gdx = NetZeroLinkedtestNew2
-13=r=cge\model, gdx = NetZeroLinkedtestNew
-14=r=cge\model, gdx = NetZeroLinked
-15=r=cge\model, gdx = NetZeroLinkedTest_Elas5
-16=r=cge\model, gdx = NetZeroLinkedTest_Elas4
-17=r=cge\model, gdx = NetZeroLinkedTest_Elas3
-18=r=cge\model, gdx = NetZeroLinkedTest_Elas2
-19=r=cge\model, gdx = NetZeroLinkedTest_Elas
-20=r=cge\model, gdx = NetZeroLinkedTest3
+1=r=cge\model, gdx = CGE_NZ20_8_NoH2
+2=r=cge\model, gdx = CGE_NZ20_8_NoH2
+3=r=cge\model, gdx = CGE_NZ20_8_WE
+4=r=cge\model, gdx = CGE_NZ20_8
+5=r=cge\model, gdx = CGE_NZ20_8L1
+6=r=cge\model, gdx = CGE_NZ20_8_WEL1
+7=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2
+8=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2
+9=r=cge\model, gdx = CGE_NZ20_8_WE
+10=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2L1
+11=r=cge\model, gdx = CGE_SAIIAtestbatch_L1
+12=r=cge\model, gdx = CGE_NZ20_8_WE
+13=r=cge\model, gdx = CGE_NZ20_8_WE
+14=r=cge\model, gdx = CGE_CPL20_U_NE
+15=r=cge\model, gdx = CGE_CPM20_9_NE
+16=r=cge\model, gdx = CGE_NZ20_8
+17=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2
+18=r=cge\model, gdx = CGE_NZ20_8_NoH2
+19=r=cge\model, gdx = CGE_NZ20_8_WE
+20=r=cge\model, gdx = CGE_CPL20_U_NE
+
+[RP:EXECUTCL]
+1=
+
+[RP:MERGERUNS]
+1=gdx = merged
+2=
+
+[RP:MERGERUNS_H]
+1=
 
 [MRUFILES]
-1=C:\Models\SATIMGE\H2TestWE2.GDP_RUN.gch
-2=C:\Models\SATIMGE\batch06.gdx
-3=C:\Models\SATIMGE\CGE\model.gdx
-4=C:\Models\SATIMGE\P4Ccases5.gdx
-5=C:\Models\SATIMGE\P4Ccases.gdx
-6=C:\Models\SATIMGE\NetZeroLinkedtestNew2.gdx
-7=C:\Models\SATIMGE\NetZeroLinkedTest.gdx
-8=C:\Models\SATIMGE\NetZeroLinkedNewSAM.gdx
+1=C:\Models\SATIMGE\MergeRuns.lst
+2=C:\Models\SATIMGE\SATIMGE.lst
+3=C:\Models\SATIMGE\SATIMGE.log
+4=C:\Models\SATIMGE\H2TestWE2.GDP_RUN.gch
+5=C:\Models\SATIMGE\batch06.gdx
+6=C:\Models\SATIMGE\CGE\model.gdx
+7=C:\Models\SATIMGE\P4Ccases5.gdx
+8=C:\Models\SATIMGE\P4Ccases.gdx
+9=C:\Models\SATIMGE\NetZeroLinkedtestNew2.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
-FILE1=C:\Models\SATIMGE\CGE\1model.gms
-FILE2=C:\Models\SATIMGE\CGE\includes\2capital.inc
-FILE3=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
-FILE4=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
-FILE5=C:\Models\SATIMGE\CGE\includes\2projection.inc
-FILE6=C:\Models\SATIMGE\CGE\includes\2results.inc
-FILE7=C:\Models\SATIMGE\CGE\includes\2simulation.inc
-FILE8=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-FILE9=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE10=C:\Models\SATIMGE\dem_start_old.gdx
-FILE11=C:\Models\SATIMGE\H2Test.gdx
+FILE0=C:\GAMS\win64\24.7\docs\userguides\mccarl\executcl.gms
+FILE1=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
+FILE2=C:\Models\SATIMGE\CGE\1model.gms
+FILE3=C:\Models\SATIMGE\CGE\includes\2capital.inc
+FILE4=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
+FILE5=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
+FILE6=C:\Models\SATIMGE\CGE\includes\2projection.inc
+FILE7=C:\Models\SATIMGE\CGE\includes\2results.inc
+FILE8=C:\Models\SATIMGE\CGE\includes\2simulation.inc
+FILE9=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+FILE10=C:\Models\SATIMGE\CGE\includes\2varinit.inc
+FILE11=C:\Models\SATIMGE\CGE_NZ20_8_WE.gdx
 FILE12=C:\Models\SATIMGE\KLEM\KLEM_Report.inc
 FILE13=C:\Models\SATIMGE\merged.gdx
 FILE14=C:\Models\SATIMGE\MergeRuns.gms
-FILE15=C:\Models\SATIMGE\MergeRuns.lst
-FILE16=C:\Models\SATIMGE\MergeRuns_H.gms
-FILE17=C:\Models\SATIMGE\MergeRuns_H.lst
-FILE18=C:\Models\SATIMGE\NetZeroGDXs\1HG_NZ45_REF_WE.gdx
-FILE19=C:\Models\SATIMGE\NetZeroLinkedHE.gdx
-FILE20=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
-FILE21=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
-FILE22=C:\Models\SATIMGE\SATIMGE.gms
-FILE23=C:\Models\SATIMGE\SATIMGE.lst
-FILE24=C:\Models\SATIMGE\SATIMGE.lst
+FILE15=C:\Models\SATIMGE\MergeRuns_H.gms
+FILE16=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE17=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE18=C:\Models\SATIMGE\SATIMGE.gms
+FILE19=C:\Models\SATIMGE\MergeRuns_H.gms
 MAXIM=0
-TOP=-4
-LEFT=1278
+TOP=2
+LEFT=1060
 HEIGHT=1100
-WIDTH=1278
+WIDTH=1500
 
 [OPENWINDOW_2]
-FILE0=C:\Models\SATIMGE\H2Test.gdx
-FILE1=C:\Models\SATIMGE\H2TestNE.gdx
-FILE2=C:\Models\SATIMGE\H2TestNENh2.gdx
-FILE3=C:\Models\SATIMGE\H2TestWE.gdx
-FILE4=C:\Models\SATIMGE\H2TestWE2.gdx
-FILE5=C:\Models\SATIMGE\H2TestWE3.gdx
-FILE6=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
-FILE7=C:\Models\SATIMGE\NetZeroLinked3Iter.gdx
-FILE8=C:\Models\SATIMGE\NetZeroLinkedHE.gdx
-FILE9=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NOPAMSREF.gdx
-FILE10=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NZ-20WE-08.gdx
-FILE11=C:\Models\SATIMGE\H2TestWE3.gdx
+FILE0=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
+FILE1=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
 MAXIM=0
 TOP=3
 LEFT=1
 HEIGHT=1100
-WIDTH=1277
+WIDTH=1046

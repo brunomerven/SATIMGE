@@ -1,0 +1,62 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/11/28	23:01:38
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_GRNEXPNH	H2FC stacks, ELT stacks and PGM exports only	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	HETP_EX	Electrolyser H2 PEM  Capacity (GW) Export	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	HFCP_EX	Fuel Cell H2 PEM  Capacity (GW)	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IDUM	Dummy commodity	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IPGM	Industry - PGMs - Platinum	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IPGMOP	Industry - PGMs - Other PGMs	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	PEXHETP	H2 PEM Electrolyser Stack Exports (GW)	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXHFCP	H2 PEM Fuel Cell Exports (GW)	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXPGM	Export PGMs - Pt	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXPGMO	Export PGMs - Others	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_BND	PEXHETP	-	-	-	ANNUAL	FX	5	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	0.2	null	null	null	null	null	null	null	null	null	2.3572744	null	21.333332	null	null	
+	ACT_BND	PEXHFCP	-	-	-	ANNUAL	FX	5	0	null	null	null	null	0	null	null	0	null	null	null	null	0	null	null	null	null	0.0256	null	null	null	null	null	null	null	null	null	7.79335792	null	309.963104	null	null	
+	ACT_BND	PEXPGM	-	-	-	ANNUAL	FX	5	124.699523921318	130.711316201685	84.0216948708969	133.925466938125	127.711316201685	125.306599289538	132.928963777878	143.568592098683	107.438853848349	null	null	null	null	138.248777938281	null	null	null	null	140.620420400522	null	null	null	null	null	null	null	null	null	170.136295099327	null	526.830142404452	null	null	
+	ACT_BND	PEXPGMO	-	-	-	ANNUAL	FX	5	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	103.693400710462	null	null	null	null	103.693400710462	null	null	null	null	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	103.693400710462	null	null	
+	ACT_COST	PEXPGM	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	PEXPGMO	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXHETP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXHFCP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXPGM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXPGMO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	PEXHETP	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXHFCP	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXPGM	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXPGMO	-	IDUM	-	-	-	1	
+	PRC_CAPACT	PEXHETP	-	-	-	-	-	1	
+	PRC_CAPACT	PEXHFCP	-	-	-	-	-	1	
+	PRC_CAPACT	PEXPGM	-	-	-	-	-	1	
+	PRC_CAPACT	PEXPGMO	-	-	-	-	-	1	
+	TOP-IN	PEXHETP	HETP_EX	-	-	-	-	1	
+	TOP-IN	PEXHFCP	HFCP_EX	-	-	-	-	1	
+	TOP-IN	PEXPGM	IPGM	-	-	-	-	1	
+	TOP-IN	PEXPGMO	IPGMOP	-	-	-	-	1	
+	TOP-OUT	PEXHETP	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXHFCP	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXPGM	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXPGMO	IDUM	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

@@ -1,0 +1,73 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+/;
+SET UC_N_UCRT /
+/;
+SET PRC /
+  'TFHCV6GAS-N'              'Transport Freight - HCV6 Gas-N                    '
+  'TFHCV6HGN-N'              'Transport Freight - HCV6 Hydrogen-N               '
+  'TFHCV6ODS-N'              'Transport Freight - HCV6 Oil Diesel-N             '
+  'TFHCV7GAS-N'              'Transport Freight - HCV7 Gas-N                    '
+  'TFHCV7HGN-N'              'Transport Freight - HCV7 Hydrogen-N               '
+  'TFHCV7ODS-N'              'Transport Freight - HCV7 Oil Diesel-N             '
+  'TFHCV8GAS-N'              'Transport Freight - HCV8 Gas-N                    '
+  'TFHCV8ODS-N'              'Transport Freight - HCV8 Oil Diesel-N             '
+  'TFHCV9GAS-N'              'Transport Freight - HCV9 Gas-N                    '
+  'TFHCV9ODS-N'              'Transport Freight - HCV9 Oil Diesel-N             '
+/;
+SET PRC_DMD /
+  'REGION1'   .'TFHCV6GAS-N'
+  'REGION1'   .'TFHCV6HGN-N'
+  'REGION1'   .'TFHCV6ODS-N'
+  'REGION1'   .'TFHCV7GAS-N'
+  'REGION1'   .'TFHCV7HGN-N'
+  'REGION1'   .'TFHCV7ODS-N'
+  'REGION1'   .'TFHCV8GAS-N'
+  'REGION1'   .'TFHCV8ODS-N'
+  'REGION1'   .'TFHCV9GAS-N'
+  'REGION1'   .'TFHCV9ODS-N'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'TFHCV6GAS-N'
+  'REGION1'   .'TFHCV6HGN-N'
+  'REGION1'   .'TFHCV6ODS-N'
+  'REGION1'   .'TFHCV7GAS-N'
+  'REGION1'   .'TFHCV7HGN-N'
+  'REGION1'   .'TFHCV7ODS-N'
+  'REGION1'   .'TFHCV8GAS-N'
+  'REGION1'   .'TFHCV8ODS-N'
+  'REGION1'   .'TFHCV9GAS-N'
+  'REGION1'   .'TFHCV9ODS-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'TFHCV6GAS-N'.'PJ'
+  'REGION1'.'TFHCV6HGN-N'.'PJ'
+  'REGION1'.'TFHCV6ODS-N'.'PJ'
+  'REGION1'.'TFHCV7GAS-N'.'PJ'
+  'REGION1'.'TFHCV7HGN-N'.'PJ'
+  'REGION1'.'TFHCV7ODS-N'.'PJ'
+  'REGION1'.'TFHCV8GAS-N'.'PJ'
+  'REGION1'.'TFHCV8ODS-N'.'PJ'
+  'REGION1'.'TFHCV9GAS-N'.'PJ'
+  'REGION1'.'TFHCV9ODS-N'.'PJ'
+/;
+       TABLE ANCAP_AF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'TFHCV6GAS-N'             .'ANNUAL'                  .'LO'                         3     .3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TFHCV6HGN-N'             .'ANNUAL'                  .'LO'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'TFHCV6ODS-N'             .'ANNUAL'                  .'LO'                         3     .3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TFHCV7GAS-N'             .'ANNUAL'                  .'LO'                         3     .3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TFHCV7HGN-N'             .'ANNUAL'                  .'LO'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  'REGION1'                 .'TFHCV7ODS-N'             .'ANNUAL'                  .'LO'                         3     .3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'TFHCV6GAS-N'             .'UP'                         3                                                                                                                                                                                                                     10                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TFHCV6ODS-N'             .'UP'                         3                                                                                                                                                                                                                     12                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'TFHCV7GAS-N'             .'UP'                         3                                                                                                                                                                                                                     4                                                                                                                                                                                                                                                                                                               
+;
