@@ -1,0 +1,55 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/11/28	15:56:09
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+ANSWER Version:	6.9.27
+Scenario:	UCNZTFHCV69X	UC net zero transport: no new sales of diesel & gas techs for HCV6-9  after year X	Quick fix to avoid stranding of diesel and Ngas HCV6-9 in NZ cases from 2045 onwards{/n}{/n}Added min utilisation for hcv6&7  for ods, hgn, and gas: this needs to be implemented for all road freight techs in a separate scenario.
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	TFHCV6_9GAS_X	No gas vehicle sales in HCV6-9 after year X	uconstraint	UC_N,UCRT,UCRULE	
+	C	TFHCV6_9ODS_X	No diesel vehicle sales in HCV6-9 after year X	uconstraint	UC_N,UCRT,UCRULE	
+	T	TFHCV6GAS-N	Transport Freight - HCV6 Gas-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV6HGN-N	Transport Freight - HCV6 Hydrogen-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV6ODS-N	Transport Freight - HCV6 Oil Diesel-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV7GAS-N	Transport Freight - HCV7 Gas-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV7HGN-N	Transport Freight - HCV7 Hydrogen-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV7ODS-N	Transport Freight - HCV7 Oil Diesel-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV8GAS-N	Transport Freight - HCV8 Gas-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV8ODS-N	Transport Freight - HCV8 Oil Diesel-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV9GAS-N	Transport Freight - HCV9 Gas-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TFHCV9ODS-N	Transport Freight - HCV9 Oil Diesel-N	PJ,PJa	PRC,DMD,ANNUAL	
+
+TS DATA	REGION1
+	NCAP_AF	TFHCV6GAS-N	-	-	-	ANNUAL	LO	3	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	TFHCV6HGN-N	-	-	-	ANNUAL	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	TFHCV6ODS-N	-	-	-	ANNUAL	LO	3	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	TFHCV7GAS-N	-	-	-	ANNUAL	LO	3	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	TFHCV7HGN-N	-	-	-	ANNUAL	LO	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	TFHCV7ODS-N	-	-	-	ANNUAL	LO	3	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TFHCV6GAS-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TFHCV6ODS-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	12	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TFHCV7GAS-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TFHCV7ODS-N	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	TFHCV6_9GAS_X	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	
+	UC__RHSRT	TFHCV6_9ODS_X	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UCRULE_NCAP	TFHCV6_9GAS_X	LHS	S_TFHCV6_9GAS	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_NCAP	TFHCV6_9ODS_X	LHS	S_TFHCV6_9ODS	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+
+TID DATA	REGION1
+	UC_R_EACH	TFHCV6_9GAS_X	-	-	-	-	-	1	
+	UC_R_EACH	TFHCV6_9ODS_X	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

@@ -1,0 +1,80 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2021/11/17	11:18:12 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+ANSWER Version:	6.9.27
+Scenario:	SUP_HFCP	Supply: H2 Fuel Cells - PEM v2	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	C	HFCPDOM_CAP	Fuel Cell - Domestic Capacity	uconstraint	UC_N,UCRT,UCRULE	
+	E	DMDEXPHELTP	Export Demand - Electrolyser PEM (GW)	PJ	COM,DEM,ANNUAL,OTH	
+	E	DMDEXPHFCP	Export Demand - Fuel Cell (GW)	PJ	COM,DEM,ANNUAL,OTH	
+	E	HELTP-U	Fuel Cell -  H2 PEM - Volume (Units)	PJ	COM,FIN	
+	E	HFCP_CAP	Fuel Cell H2 PEM  Capacity (GW)	PJ	COM,DEM,ANNUAL,OTH	
+	E	HFCP_EX	Fuel Cell H2 PEM  Capacity (GW)	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	HFCP_TRA	Fuel Cell H2 PEM  Capacity (GW) transport	PJ	COM,DEM,ANNUAL,OTH	
+	E	IPGM	Industry - PGMs - Platinum	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	EXPHFCP	Export - Fuel Cells (GW)	PJ,PJa	PRC,PRE,ANNUAL	
+	T	HFCP-N	Fuel Cell H2 PEM generic export	PJ,PJa	PRC,PRE,ANNUAL	
+	T	HFCP-TRAHCV-N	Fuel Cell H2 PEM Transport HCV	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXHFCP	H2 PEM Fuel Cell Exports (GW)	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UELEP1HGN	Production Plant Hydrogen Electrolysis PEM	PJ,PJa	PRC,PRE,DAYNITE	
+	T	ZZZPHFCPTRA	Export - Fuel Cells (GW) transport process dummy for NCAP_ICOM use	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_BND	PEXHFCP	-	-	-	ANNUAL	FX	3	0	null	null	null	null	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	EXPHFCP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	HFCP-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	HFCP-TRAHCV-N	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXHFCP	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	ZZZPHFCPTRA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	DMDEXPHELTP	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	DMDEXPHFCP	-	-	-	-	0	0	null	null	null	null	0	null	null	0	null	null	null	null	0	0	0	0	0	0.1	null	null	null	null	null	null	null	null	null	19	null	310	310	310	
+	COM_PROJ	-	HFCP_CAP	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	HFCP_EX	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	HFCP_TRA	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	HFCP-N	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	HFCP-TRAHCV-N	-	-	-	-	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ICOM	HFCP-N	IPGM	-	-	-	-	3	0.188	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.15	null	null	null	null	null	null	null	null	null	0.11	null	0.11	0.11	0.11	
+	NCAP_ICOM	HFCP-TRAHCV-N	IPGM	-	-	-	-	3	0.188	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.15	null	null	null	null	null	null	null	null	null	0.11	null	0.11	null	null	
+	NCAP_ILED	HFCP-N	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	HFCP-TRAHCV-N	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	HFCP-N	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	HFCP-TRAHCV-N	-	-	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	HFCPDOM_CAP	-	-	-	-	FX	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UC_CAP	HFCPDOM_CAP	LHS	HFCP-TRAHCV-N	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_NCAP	HFCPDOM_CAP	LHS	S_TFHCV67HGN	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	-0.35	
+
+TID DATA	REGION1
+	PRC_ACTUNT	EXPHFCP	-	DMDEXPHFCP	-	-	-	1	
+	PRC_ACTUNT	HFCP-N	-	HFCP_EX	-	-	-	1	
+	PRC_ACTUNT	HFCP-TRAHCV-N	-	HFCP_TRA	-	-	-	1	
+	PRC_ACTUNT	PEXHFCP	-	HFCP_EX	-	-	-	1	
+	PRC_ACTUNT	ZZZPHFCPTRA	-	HFCP_TRA	-	-	-	1	
+	PRC_CAPACT	EXPHFCP	-	-	-	-	-	1	
+	PRC_CAPACT	HFCP-N	-	-	-	-	-	1	
+	PRC_CAPACT	HFCP-TRAHCV-N	-	-	-	-	-	1	
+	PRC_CAPACT	PEXHFCP	-	-	-	-	-	1	
+	PRC_CAPACT	ZZZPHFCPTRA	-	-	-	-	-	1	
+	TOP-IN	EXPHFCP	HFCP_EX	-	-	-	-	1	
+	TOP-IN	PEXHFCP	HFCP_EX	-	-	-	-	1	
+	TOP-IN	ZZZPHFCPTRA	HFCP_TRA	-	-	-	-	1	
+	TOP-OUT	EXPHFCP	DMDEXPHFCP	-	-	-	-	1	
+	TOP-OUT	HFCP-N	HFCP_EX	-	-	-	-	1	
+	TOP-OUT	HFCP-TRAHCV-N	HFCP_TRA	-	-	-	-	1	
+	UC_R_EACH	HFCPDOM_CAP	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

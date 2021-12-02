@@ -47,7 +47,7 @@ SETS
   PRC_SEASON(REG,PRC)            Seasonal Processes
   PRC_WEEKLY(REG,PRC)            Weekly Processes
   PRC_DAYNIT(REG,PRC)           Daynite Processes
-
+  PRC_RCAP(REG,PRC)             Process with early retirement
 
   PRCH(PRC)                      Households groupings in eSAGE
 
@@ -343,6 +343,10 @@ PARAMETERS
 * domestic demand to drive energy model (i.e. excluding exports)
   QD_FS(FS,AY)            domestic demand to drive energy model
 
+* Electrolysers and Fuel Cells
+  ELCTCAP(AY,RUN)            Electrolyser capacity in SATIM
+  FCELLCAP(AY,RUN)            Fuelcell capacity in SATIM
+
 * SubAnnual Analysis parameters
   TS_Duration(TS_DAYNITE)                  duration in hours of each daynite timeslice
   P_IN_H(PRC,COM,AY,TS_WEEKLY,TS_HOURLY)       power flow-ins (hourly)
@@ -407,6 +411,9 @@ FSATIMNOELEC(FSATIM) = yes;
 FSATIMNOELEC('elec') = no;
 
 PRCPower(PRC)$MPRCSector(PRC,'Power') = yes;
+PRCPower(PRC)$MPRCSubsector(PRC,'CO2Capture&Storage','DAC') = yes;
+PRCPower(PRC)$MPRCSubsector(PRC,'CO2Capture&Storage','CO2Capture&Storage-Power') = yes;
+
 PRCBulkPower(PRC)$PRCPower(PRC) = yes;
 PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','EDist') = no;
 PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','ETrans') = no;
@@ -414,8 +421,6 @@ PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','AutoGen-Chemical') = no;
 PRCBulkPower(PRC)$MPRCSubSector(PRC,'Power','AutoGen-EnergySupply') = no;
 PRCBulkPower(PRC)$MPRCSubSubSector(PRC,'Power','EBattery','Ebattery_Dist') = no;
 PRCBulkPower(PRC)$MPRCSubSubSector(PRC,'Power','EPV','EPV_Dist') = no;
-
-
 
 FSGDP(FS) = yes;
 FSGDP('fa') = no;

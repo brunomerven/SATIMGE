@@ -1,0 +1,15 @@
+SET ALL_TS /
+  'ANNUAL'
+  'S1'
+  'S2'
+  'S1D1'
+  'S2D1'
+  'S1D1B1'
+  'S1D1B2'
+  'S1D1B3'
+  'S2D1B1'
+  'S2D1B2'
+  'S2D1B3'
+  'S2D1B4'
+  'S2D1B5'
+/;

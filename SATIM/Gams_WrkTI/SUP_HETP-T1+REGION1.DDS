@@ -1,0 +1,92 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+/;
+SET COM /
+  'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+/;
+SET COM_NRG /
+  'REGION1'   .'HETP_EX'
+  'REGION1'   .'IPGM'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'HETP_EX'
+  'REGION1'   .'IPGM'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'HETP_EX'
+  'REGION1'   .'IPGM'
+/;
+SET PRC /
+  'HETP-N'                   'Electrolyser H2 PEM generic export                '
+  'PEXHETP'                  'H2 PEM Electrolyser Stack Exports (GW)            '
+  'UELEP1HGN'                'Production Plant Hydrogen Electrolysis PEM        '
+/;
+SET PRC_PRE /
+  'REGION1'   .'HETP-N'
+  'REGION1'   .'PEXHETP'
+  'REGION1'   .'UELEP1HGN'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'HETP-N'
+  'REGION1'   .'PEXHETP'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'UELEP1HGN'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'HETP_EX'.'PJ'
+  'REGION1'.'IPGM'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'HETP-N'.'PJ'
+  'REGION1'.'PEXHETP'.'PJ'
+  'REGION1'.'UELEP1HGN'.'PJ'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'HETP-N'                  .'HETP_EX'                    1
+  'REGION1'                 .'PEXHETP'                 .'HETP_EX'                    1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'HETP-N'                     1
+  'REGION1'                 .'PEXHETP'                    1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'PEXHETP'                 .'HETP_EX'                    1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'HETP-N'                  .'HETP_EX'                    1
+/;
+       TABLE AACT_BND
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'PEXHETP'                 .'ANNUAL'                  .'FX'                         3    EPS                                                                             EPS                                             EPS                                                                                                                                                              1                                                                                                                                                               6                               21              21              21
+;
+       TABLE AACT_EFF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HETP-N'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXHETP'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ANCAP_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HETP-N'                           .0001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+;
+       TABLE ANCAP_ICOM
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HETP-N'                  .'IPGM'                       3     .5                                                                                                                                                                                                                                                                                              .3                                                                                                                                                              .1                              .1              .1              .1
+  'REGION1'                 .'UELEP1HGN'               .'IPGM'                       3     .5                                                                                                                              .5                                                                                                                                                              .3                                                                                                                                                              .1                              .1              .1              .1
+;
+       TABLE ANCAP_ILED
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HETP-N'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ANCAPTLIFE
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HETP-N'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;

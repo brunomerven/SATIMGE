@@ -5,7 +5,7 @@
 loop(MRUNCASE(RUN,SATIMCASES),
 
  put_utilities SATIM_Scen 'gdxin' / "%GDXfolder%",SATIMCASES.TL:50;
- execute_load MILESTONYR ELE RTP B E V TS_MAP COM_NRGELC PRC_ANNUAL PRC_WEEKLY PRC_SEASON PRC_DAYNIT
+ execute_load MILESTONYR ELE RTP B E V TS_MAP COM_NRGELC PRC_ANNUAL PRC_WEEKLY PRC_SEASON PRC_DAYNIT PRC_RCAP
  execute_load COM_PROJ REG_OBJ PAR_NCAPL PRC_RESID PRC_CAPACT PAR_CAPL VARACT F_IN F_OUT NCAP_ILED OB_ICOST OB_ACT PAR_COMBALEM CST_FIXC CST_ACTC CST_INVC VAR_CAP UC_CAP G_YRFR COM_CSTNET;
 * VAR_RCAP;
 );
@@ -88,7 +88,7 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 * TVCAP(TC,PRC)     = RESID('REGION1',TC,PRC)+PAR_CAPL('REGION1',TC,PRC);
  TVCAP(TC,PRC)     = PAR_VCAPL('REGION1',TC,PRC);
- TVCAP(TC,PRC)$(not PAR_VCAPL('REGION1',TC,PRC)) = RESID('REGION1',TC,PRC)+PAR_CAPL('REGION1',TC,PRC);
+ TVCAP(TC,PRC)$(not PRC_RCAP('REGION1',PRC)) = RESID('REGION1',TC,PRC)+PAR_CAPL('REGION1',TC,PRC);
 
  TVACT(TC,PRC)     = VARACT('REGION1',TC,PRC);
 * TVCAP(TC,PRC)     = PAR_CAPL('REGION1',TC,PRC);
@@ -120,9 +120,9 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 *bm calc oil flow
  OIL_FLOW(RUN,TC) = SUM(PRC$MPRCFS(PRC,'petr'), TVACT(TC,PRC));
 
-*bm calc coal flow
- COAL_FLOW(RUN,TC,'ccoal-low') = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC));
- COAL_FLOW(RUN,TC,'ccoal-hgh') = sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC));
+*bm calc coal flow - putting in a minimum value to avoid problems with theta calcs in CGE
+ COAL_FLOW(RUN,TC,'ccoal-low') = max(30,sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC)));
+ COAL_FLOW(RUN,TC,'ccoal-hgh') = max(30,sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-hgh',TC)));
 
 * EIntensityQA_FS(FS,C,TC)$(QA_FS(FS,TC) GT 0.1) = FLOW_IN_FSFuels(FS,C,TC)/QA_FS(FS,TC);
 
@@ -269,7 +269,11 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  IFAFSGR(F,FS,TC)$FIntensity_FS(FS,F,TC-1) = FIntensity_FS(FS,F,TC)/FIntensity_FS(FS,F,TC-1);
 
 
+* Electrolyser sector - supply of electrolysers is linked to electrolyser exports and PEM electrolyser capacity in SATIM
+ ELCTCAP(TC,RUN) = TVNCAP(TC,'UELEP1HGN')+TVACT(TC,'PEXHETP');
 
+* fuelcell sector - supply of fuel cells is linked to fuel cell export and fuel cell capacity in trucks - !!! still need to add fcell to mining 5%?
+ FCELLCAP(TC,RUN) = TVCAP(TC,'HFCP-TRAHCV-N')+TVACT(TC,'PEXHFCP');
 
 
 * Energy Model Indicators

@@ -1,0 +1,166 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'DMDEXPHELTP'              'Export Demand - Electrolyser PEM (GW)             '
+  'DMDEXPHFCP'               'Export Demand - Fuel Cell (GW)                    '
+  'HELTP-U'                  'Fuel Cell -  H2 PEM - Volume (Units)              '
+  'HFCP_CAP'                 'Fuel Cell H2 PEM  Capacity (GW)                   '
+  'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
+  'HFCP_TRA'                 'Fuel Cell H2 PEM  Capacity (GW) transport         '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+/;
+SET UC_N /
+/;
+SET UC_N_UCRT /
+/;
+SET COM /
+  'DMDEXPHELTP'              'Export Demand - Electrolyser PEM (GW)             '
+  'DMDEXPHFCP'               'Export Demand - Fuel Cell (GW)                    '
+  'HELTP-U'                  'Fuel Cell -  H2 PEM - Volume (Units)              '
+  'HFCP_CAP'                 'Fuel Cell H2 PEM  Capacity (GW)                   '
+  'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
+  'HFCP_TRA'                 'Fuel Cell H2 PEM  Capacity (GW) transport         '
+  'IPGM'                     'Industry - PGMs - Platinum                        '
+/;
+SET COM_DEM /
+  'REGION1'   .'DMDEXPHELTP'
+  'REGION1'   .'DMDEXPHFCP'
+  'REGION1'   .'HFCP_CAP'
+  'REGION1'   .'HFCP_TRA'
+/;
+SET COM_NRG /
+  'REGION1'   .'HFCP_EX'
+  'REGION1'   .'IPGM'
+/;
+SET COM_FIN /
+  'REGION1'   .'HELTP-U'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'DMDEXPHELTP'
+  'REGION1'   .'DMDEXPHFCP'
+  'REGION1'   .'HFCP_CAP'
+  'REGION1'   .'HFCP_EX'
+  'REGION1'   .'HFCP_TRA'
+  'REGION1'   .'IPGM'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'HFCP_EX'
+  'REGION1'   .'IPGM'
+/;
+SET COM_DEMOTH /
+  'REGION1'   .'DMDEXPHELTP'
+  'REGION1'   .'DMDEXPHFCP'
+  'REGION1'   .'HFCP_CAP'
+  'REGION1'   .'HFCP_TRA'
+/;
+SET PRC /
+  'EXPHFCP'                  'Export - Fuel Cells (GW)                          '
+  'HFCP-N'                   'Fuel Cell H2 PEM generic export                   '
+  'HFCP-TRAHCV-N'            'Fuel Cell H2 PEM Transport HCV                    '
+  'PEXHFCP'                  'H2 PEM Fuel Cell Exports (GW)                     '
+  'UELEP1HGN'                'Production Plant Hydrogen Electrolysis PEM        '
+  'ZZZPHFCPTRA'              'Export - Fuel Cells (GW) transport process dummy f'
+/;
+SET PRC_PRE /
+  'REGION1'   .'EXPHFCP'
+  'REGION1'   .'HFCP-N'
+  'REGION1'   .'HFCP-TRAHCV-N'
+  'REGION1'   .'PEXHFCP'
+  'REGION1'   .'UELEP1HGN'
+  'REGION1'   .'ZZZPHFCPTRA'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'EXPHFCP'
+  'REGION1'   .'HFCP-N'
+  'REGION1'   .'HFCP-TRAHCV-N'
+  'REGION1'   .'PEXHFCP'
+  'REGION1'   .'ZZZPHFCPTRA'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'UELEP1HGN'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'DMDEXPHELTP'.'PJ'
+  'REGION1'.'DMDEXPHFCP'.'PJ'
+  'REGION1'.'HELTP-U'.'PJ'
+  'REGION1'.'HFCP_CAP'.'PJ'
+  'REGION1'.'HFCP_EX'.'PJ'
+  'REGION1'.'HFCP_TRA'.'PJ'
+  'REGION1'.'IPGM'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'EXPHFCP'.'PJ'
+  'REGION1'.'HFCP-N'.'PJ'
+  'REGION1'.'HFCP-TRAHCV-N'.'PJ'
+  'REGION1'.'PEXHFCP'.'PJ'
+  'REGION1'.'UELEP1HGN'.'PJ'
+  'REGION1'.'ZZZPHFCPTRA'.'PJ'
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'EXPHFCP'                 .'DMDEXPHFCP'                 1
+  'REGION1'                 .'HFCP-N'                  .'HFCP_EX'                    1
+  'REGION1'                 .'HFCP-TRAHCV-N'           .'HFCP_TRA'                   1
+  'REGION1'                 .'PEXHFCP'                 .'HFCP_EX'                    1
+  'REGION1'                 .'ZZZPHFCPTRA'             .'HFCP_TRA'                   1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'EXPHFCP'                    1
+  'REGION1'                 .'HFCP-N'                     1
+  'REGION1'                 .'HFCP-TRAHCV-N'              1
+  'REGION1'                 .'PEXHFCP'                    1
+  'REGION1'                 .'ZZZPHFCPTRA'                1
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'EXPHFCP'                 .'HFCP_EX'                    1
+  'REGION1'                 .'PEXHFCP'                 .'HFCP_EX'                    1
+  'REGION1'                 .'ZZZPHFCPTRA'             .'HFCP_TRA'                   1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'EXPHFCP'                 .'DMDEXPHFCP'                 1
+  'REGION1'                 .'HFCP-N'                  .'HFCP_EX'                    1
+  'REGION1'                 .'HFCP-TRAHCV-N'           .'HFCP_TRA'                   1
+/;
+       TABLE AACT_BND
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'PEXHFCP'                 .'ANNUAL'                  .'FX'                         3    EPS                                                                             EPS                                             EPS                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE AACT_EFF
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'EXPHFCP'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'HFCP-N'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'HFCP-TRAHCV-N'           .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXHFCP'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'ZZZPHFCPTRA'             .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ACOM_PROJ
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'DMDEXPHELTP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  'REGION1'                 .'DMDEXPHFCP'                      EPS                                                                             EPS                                             EPS                                                                             EPS             EPS             EPS             EPS             EPS              .1                                                                                                                                                              19                              310             310             310
+  'REGION1'                 .'HFCP_CAP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+  'REGION1'                 .'HFCP_EX'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'HFCP_TRA'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+;
+       TABLE ANCAP_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HFCP-N'                           .0001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  'REGION1'                 .'HFCP-TRAHCV-N'                    .0001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+;
+       TABLE ANCAP_ICOM
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HFCP-N'                  .'IPGM'                       3     .188                                                                                                                                                                                                                                                                                            .15                                                                                                                                                             .11                             .11             .11             .11
+  'REGION1'                 .'HFCP-TRAHCV-N'           .'IPGM'                       3     .188                                                                                                                                                                                                                                                                                            .15                                                                                                                                                             .11                             .11                             
+;
+       TABLE ANCAP_ILED
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HFCP-N'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'HFCP-TRAHCV-N'                    1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ANCAPTLIFE
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'HFCP-N'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'HFCP-TRAHCV-N'                    1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
