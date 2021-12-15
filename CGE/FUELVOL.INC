@@ -5,20 +5,23 @@ Parameter
 
 Set
  anfrm(a)       /anfrm/
- aaff(a)        /aagri, afore, afish/
- acom(a)        /atrad, ahotl, acomm, afsrv, absrv, agsrv, aosrv, atrps/
+ aaff(a)        /aawhe, aamai, aaoce, aaveg, aaofr, aagra, aaoil, aatub,
+                 aapul, aasug, aaoth, alani, afore, afish/
+ acom(a)        /awatr,atrad,ahotl,aprtr,atrps,acomm,afsrv,absrv,agsrv,aosrv/
  achm(a)        /abchm, aochm, arubb, aplas/
- afab(a)        /afood, abevt/
- aoin(a)        /ahydr, atext, aclth, aleat, afoot, awood, aprnt, amach, aemch, asequ, avehi, atequ, afurn, aoman, awatr, acons/
- airo(a)        /airon, ametp/
+ afab(a)        /ameat,apfis,avege,afats,adair,agrai,astar,afeed,abake,
+                 asuga,aconf,apast,aofoo,abevt/
+ aoin(a)        /atext,aclth,aleat,afoot,awood,aprnt,ametp,amach,aemch,
+                 asequ,avehi,atequ,afurn,aoman,acons,apapr/
+ airo(a)        /airon/
  amin(a)        /acoal, agold, amore, amine, acoil, angas/
- anmm(a)        /aglas,anmet/
+ anmm(a)        /anmet/
  apap(a)        /apapr/
  aelc(a)        /aelec/
- aref(a)        /apetr/
+ aref(a)        /apetr, ahydr/
  atrl_f(a)      /altrp-f/
  atrl_p(a)      /altrp-p/
- atra(a)        /awtrp, aatrp/
+ atra(a)        /aotrp-p, aotrp-f/
  h1(h)          /hhd-0, hhd-1, hhd-2, hhd-3, hhd-4/
  h2(h)          /hhd-5, hhd-6, hhd-7/
  h3(h)          /hhd-8, hhd-9/

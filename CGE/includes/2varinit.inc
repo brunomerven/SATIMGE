@@ -106,6 +106,8 @@
 * QM.FX('CPETR_T','REST') = QM0('CPETR_T','REST') ;
 * CEFIX('ccoal-hgh')=YES;
 * CERES('ccoal-hgh')=YES;
+ CERES('ccoal-low')=YES;
+
 * QE.FX('ccoal-hgh','REST') = QE0('ccoal-hgh','REST') ;
 
 
@@ -127,8 +129,8 @@
 * QM.FX('cngas','REST') = QM0('CNGAS','REST');
 
  CERES('chydr')=YES;
- CERES('cfcel')=YES;
- CERES('celct')=YES;
+*# CERES('cfcel')=YES;
+*# CERES('celct')=YES;
 * QE.FX('celct','REST') = QE0('celct','REST') ;
 
  CERES('cbchm') = YES;
@@ -143,16 +145,16 @@
  QM.FX('ciron','REST') = QM0('ciron','REST') ;
 
 
- CERES('cammo') = YES;
- CEFIX('cammo') = YES;
- QE.FX('cammo','REST') = QE0('cammo','REST') ;
- CMRES('cammo')= YES;
- QM.FX('cammo','REST') = QM0('cammo','REST') ;
+*# CERES('cammo') = YES;
+*# CEFIX('cammo') = YES;
+*# QE.FX('cammo','REST') = QE0('cammo','REST') ;
+*# CMRES('cammo')= YES;
+*# QM.FX('cammo','REST') = QM0('cammo','REST') ;
 
 
- CERES('cpgm') = YES;
- CEFIX('cpgm') = YES;
- QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
+*# CERES('cpgm') = YES;
+*# CEFIX('cpgm') = YES;
+*# QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
 
 
  CERES('cmore') = YES;

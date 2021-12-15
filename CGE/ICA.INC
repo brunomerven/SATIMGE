@@ -10,7 +10,8 @@ Set
  NTECH(TECH)     ELECTRICITY AND REFINERY TECHNOLOGIES
  /aelc_win, aelc_pv, aelc_csp, aelc_geo/
  CTECH(C)        COMMODITIES SPECIFIC TO TECHNOLOGY TYPES
- /cagri, ccoal-low, cbchm, cngas, cpetr_d/
+ /cawhe,camai,caoce,caveg,caofr,cagra,caoil,catub,capul,casug,caoth,clani,
+ ccoal-low, cbchm, cngas, cpetr_d/
 ;
 
 ALIAS (TECH,TECH0);
@@ -98,7 +99,7 @@ aelc_geo           0.0171          0.0184          0.0945          0.8700
  ICA_0('CNGAS','AELC_GAS')      = SAM('CNGAS','AELEC')    /QETECHTAB('AELC_GAS' ,'VAL');
  ICA_0('CBCHM','AELC_NUC')      = SAM('CBCHM','AELEC')    /QETECHTAB('AELC_NUC' ,'VAL');
  ICA_0('CPETR_D','AELC_OIL')    = SAM('CPETR_D','AELEC')  /QETECHTAB('AELC_OIL' ,'VAL');
- ICA_0('CAGRI','AELC_BIO')      = SAM('CAGRI','AELEC')     /QETECHTAB('AELC_BIO' ,'VAL');
+ ICA_0('CASUG','AELC_BIO')      = SAM('CASUG','AELEC')    /QETECHTAB('AELC_BIO' ,'VAL');
 
 *check
  ICA_0_CHECK(C)=SUM(TECH $(NOT NTECH(TECH)),ICA_0(C,TECH)*QETECHTAB(TECH,'VAL'))-SAM(C,'AELEC');

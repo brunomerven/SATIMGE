@@ -200,7 +200,7 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 
  EIntensity_FS('petr','ccoal-low',TC) = max(0.01,EIntensity_FS('petr','ccoal-low',TC));
 
- EIntensity_FS('am',C,TC)$FLOW_OUT_FSFuels('am','cammo',TC) = FLOW_IN_FSFuels('am',C,TC)/FLOW_OUT_FSFuels('am','cammo',TC);
+*# EIntensity_FS('am',C,TC)$FLOW_OUT_FSFuels('am','cammo',TC) = FLOW_IN_FSFuels('am',C,TC)/FLOW_OUT_FSFuels('am','cammo',TC);
  EIntensity_FS('is',C,TC) = FLOW_IN_FSFuels('is',C,TC)/(FLOW_OUT_FS('is','IISCRS',TC)+VARACT('REGION1',TC,'PEXGDRI'));
 
 * BM!!! need to create QA_FSStart

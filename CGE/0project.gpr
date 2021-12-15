@@ -1,12 +1,12 @@
 [PROJECT]
 
 [GDXDISP: QF Var 3]
-PlaneDim=0
-RowDim=3
+PlaneDim=1
+RowDim=2
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,4
-Decim=7
+Order=4,2,3,1
+Decim=0
 PlaneRownr=-1
 
 [GDXDISP: A Set 1]
@@ -122,6 +122,15 @@ PlaneFilter1=rest
 19=r=cge\model, gdx = NetZero
 20=r=cge\model, gdx = LOP
 
+[GDXDISP: QFS Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=0
+PlaneRownr=-1
+
 [RP:1MODEL]
 1=gdx=model s=model
 2=gdx = model s = model
@@ -132,7 +141,8 @@ FILE0=C:\Models\SATIMGE\CGE\1model.dat
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\1model.lst
 FILE3=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE4=C:\Models\SATIMGE\CGE\1model.lst
+FILE4=C:\Models\SATIMGE\CGE\model.gdx
+FILE5=C:\Models\SATIMGE\CGE\model.gdx
 MAXIM=0
 TOP=4
 LEFT=2
