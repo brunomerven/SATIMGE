@@ -105,15 +105,16 @@ $include SATIM\includes\2TIMESReport.inc
 *# ICAGR(C,'aelct',TC) = 0.957;
 
  IFAGR(F,A,TC) = SUM(FS$MFSA(FS,A),IFAFSGR(F,FS,TC));
-*IFAGR(F,A,TC) = 1;
 
 *BM correction on power sector from freight demand for moving coal
  ICAGR('cftrp-l','aelec',TC) = ICAGR('ccoal-low','aelec',TC);
 
 *tmp fix until EB is improved
 *# ica('celec','apgm','NAT') = 0.5*ica0('celec','apgm','NAT');
- ica('celec','altrp-f','NAT') = 0.72*ica0('celec','altrp-f','NAT');
- ica('ccoal-hgh','amore','NAT') = 0.3*ica0('ccoal-hgh','amore','NAT');
+
+
+*@ ica('celec','altrp-f','NAT') = 0.72*ica0('celec','altrp-f','NAT');
+*@ ica('ccoal-hgh','amore','NAT') = 0.3*ica0('ccoal-hgh','amore','NAT');
 
 
 *   Loop over CGE model solve periods
@@ -200,12 +201,12 @@ $offtext
     trnsfr(INS,ACNT) = trnsfr(INS,ACNT) * (1+TRNSFRGR(INS,ACNT,XC,TC));
 
 *bm make ratio of coal outputs exogenous and control from SATIM outputs
-    theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
-    theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
+*@    theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
+*@    theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
 
 * shrinking production of cmore and cmine out of coal
-    theta('acoal','cmore') = theta('acoal','cmore')*0.95;
-    theta('acoal','cmine') = theta('acoal','cmine')*0.95;
+*@    theta('acoal','cmore') = theta('acoal','cmore')*0.95;
+*@    theta('acoal','cmine') = theta('acoal','cmine')*0.95;
 
 * adjust ica and ifa for acoal based on previous pacoal and new theta
     pacoalx(TC,RUN) = sum(CCOAL,theta('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta('acoal',CCOAL));
@@ -215,7 +216,8 @@ $offtext
 
 
 * make adjustments to ica
-
+$ontext
+*@
     ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
                      = EIntensity_FS('elec','chydr',TC);
     ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
@@ -233,8 +235,9 @@ $offtext
 
     icagr(C,'aprtr',TC)$(EHIntensity(C,'aprtr',TC-1) gt 0.0001) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
 
-*!!!!
+
 *ICAGR(C,A,TC)=1;
+
 
 *@    ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
 
@@ -292,12 +295,17 @@ $offtext
 *#                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
 
 
+
 *bm/sr/fh added this to save model from crashing from demand for ccoal-low disapearing completely.
     ica('ccoal-low',A,'NAT')$ica0('ccoal-low',A,'NAT') = max(ica('ccoal-low',A,'NAT'),0.0004);
     ica('ccoal-low','ahydr','NAT') = 0.00000001;
 
 
     QA.L('ahydr')$(HCAP(XC,TC,TT) gt 0.00001) = FLOW_OUT_FSFuels('hydr','chydr',TC);
+
+$offtext
+*@
+
 
 *fh 12/11/19: changing from LES to CD
 $ontext
@@ -313,7 +321,7 @@ $offtext
 
 *  change to IFA
 
-    ifa(F,A,'nat') = ifa(F,A,'nat')*IFAGR(F,A,TC);
+*@    ifa(F,A,'nat') = ifa(F,A,'nat')*IFAGR(F,A,TC);
 
 *       ENERGY: Set electricity sector capital growth rate equal to TIMES results
 *       CA: 2capital.inc modified to use EINVCOST
@@ -354,7 +362,7 @@ $offtext
 * coal sector
 *@    AFX('acoal',RD)$EFX(TT,TC) = YES;
     CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
-    AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
+*@    AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
 *pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
 *@    AFLEO('ACOAL')$(NOT T1(TC)) = YES;
 * setting starting position to avoid -ve values on qe
@@ -365,7 +373,9 @@ $offtext
     AFX('APETR',RD) = NO;
 *@    AFX('APETR',RD)$EFX(TT,TC) = YES;
 
-    AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
+*@    AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
+$ontext
+*@
     theta('apetr','cpetr_o') = FLOW_OUT_FSFuels('petr','cpetr_o',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
     theta('apetr','cpetr_d') = FLOW_OUT_FSFuels('petr','cpetr_d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
     theta('apetr','cpetr_p') = FLOW_OUT_FSFuels('petr','cpetr_p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
@@ -375,43 +385,55 @@ $offtext
     QINT.L(c,'apetr')$AFXGR('APETR','NAT',XC,TC) = QINT.L(c,'apetr')*(1+AFXGR('APETR','NAT',XC,TC));
     QVA.L('apetr','nat')$AFXGR('APETR','NAT',XC,TC) = QVA.L('apetr','nat')*(1+AFXGR('APETR','NAT',XC,TC));
     QF.L(FLAB,'APETR',RD)$AFXGR('APETR','NAT',XC,TC) = QF.L(FLAB,'APETR',RD)*(1+AFXGR('APETR','NAT',XC,TC));
+$offtext
 
 * Oil Sector
 *@    AFX('ACOIL',RD)$EFX(TT,TC) = YES;
 *@    AFLEO('ACOIL') = YES;
-    AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 0.5)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
+*@    AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 0.5)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
 
 * Hydrogen Sector
 *@    AFX('AHYDR',RD) = YES;
 *@    AFLEO('AHYDR') = YES;
-    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.1 and HCAP(XC,TC-1,TT) le 0.1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
-    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.1) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
+
+*@
+    AFLEO('AHYDR') = no;
+    AFLEO('APETR') = no;
+    AFLEO('AELEC') = no;
+
+*@
+
+*@    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.1 and HCAP(XC,TC-1,TT) le 0.1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+*@    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.1) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
 * set reasonable starting value for QVA otherwise wfdist goes -ve.
-    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = sum(F,QF.L(F,'AHYDR','NAT'));
-    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = 1;
+*@    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = sum(F,QF.L(F,'AHYDR','NAT'));
+*@    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.00001) = 1;
 
 *CA fix imports in accordance with TIMES for all periods
 *!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);
 
 * other exogenous sectors
 * gold - set to slow decline
-    AFX('AGOLD',RD)=YES;
-    AFLEO('AGOLD') = YES;
-    AFXGR('AGOLD','NAT',XC,TC) = -0.001;
+*@    AFX('AGOLD',RD)=YES;
+*@    AFLEO('AGOLD') = YES;
+*@    AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
 * ngas
-    AFX('ANGAS',RD) = YES;
+*@    AFX('ANGAS',RD) = YES;
 *    AFLEO('ANGAS') = YES;
-    AFXGR('ANGAS','NAT',XC,TC) = -.05;
+*@    AFXGR('ANGAS','NAT',XC,TC) = -.05;
 
 * chemicals set to partially track Secunda and jet fuel production
     CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2012','UCTLCLEIN-E');
 
-    AFX('ABCHM',RD) = YES;
-    AFLEO('ABCHM') = YES;
-    AFX('AOCHM',RD) = YES;
-    AFLEO('AOCHM') = YES;
+*@    AFX('ABCHM',RD) = YES;
+*@    AFLEO('ABCHM') = YES;
+*@    AFX('AOCHM',RD) = YES;
+*@    AFLEO('AOCHM') = YES;
 
+*@
+$ontext
+*@
     AFXGR('ABCHM','NAT',XC,TC)$QINTCBCHM(TC-2,RUN) =
                          (1 - CTL_Weight(TC,RUN)) * (QINTCBCHM(TC-1,RUN)/QINTCBCHM(TC-2,RUN)) +
                          CTL_Weight(TC,RUN) * VARACT('REGION1',TC,'UCTLCLEIN-E')/(VARACT('REGION1',TC-1,'UCTLCLEIN-E')+0.00001) - 1;
@@ -419,10 +441,11 @@ $offtext
     AFXGR('AOCHM','NAT',XC,TC)$QINTCOCHM(TC-2,RUN) =
                          (1 - CTL_Weight(TC,RUN)) * (QINTCOCHM(TC-1,RUN)/QINTCOCHM(TC-2,RUN)) +
                          CTL_Weight(TC,RUN) * VARACT('REGION1',TC,'UCTLCLEIN-E')/(VARACT('REGION1',TC-1,'UCTLCLEIN-E')+0.00001) - 1;
+$offtext
 
 * Exogenous Exports can only be used in sectors that exist and active in the base year
 * the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
-    QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
+*@    QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
 
 * ammonia
 *#    QE.FX('cammo','REST')$VARACT('REGION1',TC-1,'PEXNH3') = QE.L('cammo','REST')*VARACT('REGION1',TC,'PEXNH3')/VARACT('REGION1',TC-1,'PEXNH3');
@@ -433,8 +456,8 @@ $offtext
 
 
 * set ANFX
-    ANFX(A,RD)=NO;
-    ANFX(A,RD)$(NOT AFX(A,RD))=YES;
+*@    ANFX(A,RD)=NO;
+*@    ANFX(A,RD)$(NOT AFX(A,RD))=YES;
 
 
 
@@ -443,8 +466,8 @@ $include cge\includes\2capital.inc
 
 *       ENERGY: Tech change in energy use via input output matrix
 *       Share of new capital in total
-    ishr(A,RD)$SUM(FCAP, QF.L(FCAP,A,RD)) = SUM(FCAP, DKAP(FCAP,A,RD))/SUM(FCAP, QF.L(FCAP,A,RD));
-    ishr(A,RD)$(ishr(A,RD) GT 1) = 1;
+*@    ishr(A,RD)$SUM(FCAP, QF.L(FCAP,A,RD)) = SUM(FCAP, DKAP(FCAP,A,RD))/SUM(FCAP, QF.L(FCAP,A,RD));
+*@    ishr(A,RD)$(ishr(A,RD) GT 1) = 1;
 *       Evolve IO coefficient
 *bm        ica(CEGY,A,RD)$ica(CEGY,A,RD) = (1-ishr(A,RD))*ica(CEGY,A,RD) + ishr(A,RD)*ica(CEGY,A,RD)*(PQ.L(CEGY)/PQ0(CEGY)/(DPI.L/DPI0))**rhoegyint(CEGY,XC,TC);
 *       Tech change in energy use for households
@@ -484,7 +507,9 @@ $include cge\includes\EnergyGoodsBudgetAllocation.inc
 
 
 *bm to recalc household budget shares
-$include cge\includes\BudgetShare_Recalc.inc
+IF(ord(TC)>5,
+*@ $include cge\includes\BudgetShare_Recalc.inc
+);
 
 
 );

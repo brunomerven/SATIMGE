@@ -90,15 +90,23 @@
 
 *CA rest of world price equations and trade quantities
 *Fix electricity imports and exports
+
+
+
+
+$ontext
  CEFIX(C)=NO;
  CEFIX('CELEC')=YES;
  CERES('CELEC')=YES;
  QE.FX('CELEC','REST') = QE0('CELEC','REST') ;
+$offtext
 
  CMFIX(C)=NO;
  CMFIX('CELEC')=YES;
  CMRES('CELEC')= YES;
  QM.FX('CELEC','REST') = QM0('CELEC','REST') ;
+
+$ontext
 
 *bm+fh_20190207
 * CMFIX('CPETR_T')=YES;
@@ -129,8 +137,8 @@
 * QM.FX('cngas','REST') = QM0('CNGAS','REST');
 
  CERES('chydr')=YES;
-*# CERES('cfcel')=YES;
-*# CERES('celct')=YES;
+ CERES('cfcel')=YES;
+ CERES('celct')=YES;
 * QE.FX('celct','REST') = QE0('celct','REST') ;
 
  CERES('cbchm') = YES;
@@ -145,16 +153,16 @@
  QM.FX('ciron','REST') = QM0('ciron','REST') ;
 
 
-*# CERES('cammo') = YES;
-*# CEFIX('cammo') = YES;
-*# QE.FX('cammo','REST') = QE0('cammo','REST') ;
-*# CMRES('cammo')= YES;
-*# QM.FX('cammo','REST') = QM0('cammo','REST') ;
+ CERES('cammo') = YES;
+ CEFIX('cammo') = YES;
+ QE.FX('cammo','REST') = QE0('cammo','REST') ;
+ CMRES('cammo')= YES;
+ QM.FX('cammo','REST') = QM0('cammo','REST') ;
 
 
-*# CERES('cpgm') = YES;
-*# CEFIX('cpgm') = YES;
-*# QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
+ CERES('cpgm') = YES;
+ CEFIX('cpgm') = YES;
+ QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
 
 
  CERES('cmore') = YES;
@@ -181,6 +189,8 @@
 * CEFIX('cpetr_o')=YES;
  CERES('cpetr_o')=YES;
 * QE.FX('cpetr_o','REST') = QE0('cpetr_o','REST') ;
+
+$offtext
 
 *bm setting acoal coal aggregate price
  pacoalx(T1,RUN) =  sum(CCOAL,theta0('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta0('acoal',CCOAL));

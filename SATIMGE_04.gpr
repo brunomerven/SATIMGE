@@ -3526,9 +3526,6 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[RP:ENERGYGOODSBUDGETALLOCATION]
-1=
-
 [RP:2ENERGYCHECKSINIT]
 1=
 
@@ -5033,7 +5030,7 @@ Squeeze=1
 SqTrail0=0
 Order=2,1,3
 Decim=3
-PlaneRownr=36
+PlaneRownr=40
 PlaneFilter1=aelec
 
 [GDXDISP: QG Var 1]
@@ -5781,9 +5778,6 @@ SqTrail0=0
 Order=1,3,2
 Decim=1
 PlaneRownr=-1
-
-[RP:2SIMULATION]
-1=
 
 [GDXDISP: FSXEP Set 1]
 PlaneDim=0
@@ -7109,9 +7103,6 @@ Order=1,2,3
 Decim=7
 PlaneRownr=-1
 
-[RP:2TIMESREPORT]
-1=
-
 [GDXDISP: ice Par 2]
 PlaneDim=0
 RowDim=1
@@ -7253,19 +7244,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[GDXDISP: ICAX Par 6]
-PlaneDim=1
-RowDim=4
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,4,6,5
-Decim=7
-PlaneRownr=34
-PlaneFilter1=celct
-
-[RP:2VARINIT]
-1=
 
 [GDXDISP: TVACT Par 2]
 PlaneDim=0
@@ -7493,9 +7471,6 @@ PlaneRownr=-1
 [RP:MERGERUNS_FIXAGRI]
 1=
 
-[RP:2SIMULATION_LOOP]
-1=
-
 [RP:EXECUTCL]
 1=
 
@@ -7516,6 +7491,219 @@ SqTrail0=0
 Order=4,1,2,3
 Decim=0
 PlaneRownr=-1
+
+[RP:GHGAFOLUREPORT]
+1=
+
+[GDXDISP: mCOMF Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FLO_OUT_S Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[RP:2TIMESREPORT]
+1=
+
+[RP:2SIMULATION]
+1=
+
+[GDXDISP: ICAX Par 6]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,6,5
+Decim=4
+PlaneRownr=-1
+
+[GDXDISP: ACES2 Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACET2 Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDIFF]
+FILE1=C:\Models\SATIMGE\testClean2.gdx
+FILE2=C:\Models\SATIMGE_Tsitica\test.gdx
+OUTFL=
+EPS=0.0
+RELEPS=0.0
+SETIGN=0
+FIELD=All fields
+FIELDONLY=0
+DIFFONLY=0
+
+[GDXDISP: ADIFF Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AFXGR Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: alphava0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ARMINGTON Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CET Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CET2 Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:ENERGYGOODSBUDGETALLOCATION]
+1=
+
+[GDXDISP: betam Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: BudShareNonEnergy Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BudShare0 Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=3,1,2
+Decim=4
+PlaneRownr=-1
+
+[GDXDISP: BUDSHR Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=4
+PlaneRownr=-1
+
+[GDXDISP: BUDSHR2 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BUDSHRCHK Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BudShare Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: DistanceMatrix Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=7
+PlaneRownr=-1
+PlaneFilter1=2014
+
+[RP:BUDGETSHARE_RECALC]
+1=
+
+[GDXDISP: YI0 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:2SIMULATION_LOOP]
+1=
+
+[RP:2VARINIT]
+1=
 
 [RP:SATIMGE]
 1=r=cge\model, gdx = testClean2
@@ -7539,31 +7727,48 @@ PlaneRownr=-1
 19=r=cge\model, gdx = CGE_CPM20_9_NE
 20=r=cge\model, gdx = CGE_NZ20_8
 
-[RP:GHGAFOLUREPORT]
-1=
-
 [MRUFILES]
-1=C:\Models\SATIMGE_coalIPP\NewCoalIPP.gdx
-2=C:\Models\SATIMGE_Tsitica\CGE\model.gdx
-3=C:\Models\SATIMGE_coalIPP\NewCoalIPP-L.gdx
-4=C:\SATIMGE_02_Dec2018\CGE\model.gdx
-5=C:\Models\SATIMGE_coalIPP\CoalIPP420.gdx
-6=C:\Models\SATIMGE_coalIPP\CoalIPPPams420.gdx
-7=C:\GAMS\win64\24.7\docs\userguides\mccarl\executcl.gms
-8=C:\Models\SATIMGE\MergeRuns.lst
+1=C:\Models\SATIMGE\diffile.log
+2=C:\Models\SATIMGE\diffile.gdx
+3=C:\Models\SATIMGE_coalIPP\NewCoalIPP.gdx
+4=C:\Models\SATIMGE_Tsitica\CGE\model.gdx
+5=C:\Models\SATIMGE_coalIPP\NewCoalIPP-L.gdx
+6=C:\SATIMGE_02_Dec2018\CGE\model.gdx
+7=C:\Models\SATIMGE_coalIPP\CoalIPP420.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
-FILE1=C:\Models\SATIMGE\testREF.gdx
-FILE2=C:\Models\SATIMGE_coalIPP\Reference-L.gdx
+FILE0=C:\Models\SATIMGE_Tsitica\test.gdx
+FILE1=C:\Models\SATIMGE_Tsitica\test.gdx
+MAXIM=0
+TOP=133
+LEFT=1046
+HEIGHT=1273
+WIDTH=1485
+
+[OPENWINDOW_2]
+FILE0=C:\Models\SATIMGE_Tsitica\CGE\includes\2varinit.inc
+FILE1=C:\Models\SATIMGE_Tsitica\CGE\includes\2varinit.inc
+MAXIM=0
+TOP=147
+LEFT=2
+HEIGHT=1271
+WIDTH=1053
+
+[OPENWINDOW_3]
+FILE0=C:\Models\SATIMGE\H2_8_NENH.gdx
+FILE1=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
+FILE2=C:\Models\SATIMGE\testClean2.gdx
 FILE3=C:\Models\SATIMGE\testREF.gdx
+FILE4=C:\Models\SATIMGE_coalIPP\Reference-L.gdx
+FILE5=C:\Models\SATIMGE_Tsitica\test.gdx
+FILE6=C:\Models\SATIMGE\testClean2.gdx
 MAXIM=0
 TOP=3
 LEFT=1
 HEIGHT=1100
 WIDTH=1046
 
-[OPENWINDOW_2]
+[OPENWINDOW_4]
 FILE0=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\includes\2capital.inc
@@ -7574,16 +7779,21 @@ FILE6=C:\Models\SATIMGE\CGE\includes\2results.inc
 FILE7=C:\Models\SATIMGE\CGE\includes\2simulation.inc
 FILE8=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
 FILE9=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE10=C:\Models\SATIMGE\KLEM\KLEM_Report.inc
-FILE11=C:\Models\SATIMGE\merged.gdx
-FILE12=C:\Models\SATIMGE\MergeRuns.gms
-FILE13=C:\Models\SATIMGE\MergeRuns_H.gms
-FILE14=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
-FILE15=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
-FILE16=C:\Models\SATIMGE\SATIMGE.gms
-FILE17=C:\Models\SATIMGE\testClean.gdx
-FILE18=C:\Models\SATIMGE\testClean2.gdx
-FILE19=C:\Models\SATIMGE\testClean2.gdx
+FILE10=C:\Models\SATIMGE\CGE\includes\BudgetShare_Recalc.inc
+FILE11=C:\Models\SATIMGE\CGE\includes\EnergyGoodsBudgetAllocation.inc
+FILE12=C:\Models\SATIMGE\KLEM\KLEM_Report.inc
+FILE13=C:\Models\SATIMGE\merged.gdx
+FILE14=C:\Models\SATIMGE\MergeRuns.gms
+FILE15=C:\Models\SATIMGE\MergeRuns_H.gms
+FILE16=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE17=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE18=C:\Models\SATIMGE\SATIMGE.gms
+FILE19=C:\Models\SATIMGE\SATIMGE.lst
+FILE20=C:\Models\SATIMGE\testClean.gdx
+FILE21=C:\Models\SATIMGE\testClean2.gdx
+FILE22=C:\Models\SATIMGE_Tsitica\CGE\includes\2simulation_loop.inc
+FILE23=C:\Models\SATIMGE_Tsitica\CGE\includes\2varinit.inc
+FILE24=C:\Models\SATIMGE\SATIMGE.lst
 MAXIM=0
 TOP=2
 LEFT=1060
