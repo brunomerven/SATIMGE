@@ -135,7 +135,14 @@ $include SATIM\includes\2TIMESReport.inc
     rtco2e = RTCO2ESIM(XC,TC);
 
 *       ENERGY: Carbon content cofficient
+
+
+*If(ord(TC) gt 5,
 $include cge\includes\2carbon.inc
+*);
+
+
+
 * 2carbon.inc needs to be updated to reflect non combustion emissions
 *        co2c(C)    = CO2CSIM(C,XC,TC);
 *        co2e(C,RW) = CO2ESIM(C,RW,XC,TC);
@@ -424,7 +431,7 @@ $offtext
 *@    AFXGR('ANGAS','NAT',XC,TC) = -.05;
 
 * chemicals set to partially track Secunda and jet fuel production
-    CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2012','UCTLCLEIN-E');
+    CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2019','UCTLCLEIN-E');
 
 *@    AFX('ABCHM',RD) = YES;
 *@    AFLEO('ABCHM') = YES;
@@ -456,8 +463,8 @@ $offtext
 
 
 * set ANFX
-*@    ANFX(A,RD)=NO;
-*@    ANFX(A,RD)$(NOT AFX(A,RD))=YES;
+    ANFX(A,RD)=NO;
+    ANFX(A,RD)$(NOT AFX(A,RD))=YES;
 
 
 

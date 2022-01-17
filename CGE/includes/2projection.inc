@@ -226,7 +226,8 @@ LOOP(TC$(NOT TPAST(TC)),
 
 
 *Total factor productivity changes
- TFPGR(A,RD,XC,TC)       = TFPPROJ(A,RD,XC,TC)/100;
+TFPGR(A,RD,XC,TC)       = TFPPROJ(A,RD,XC,TC)/100;
+* TFPGR(A,RD,XC,TC)       = 0.0015;
 
 *Embodied factor productivity growth rate
  FPRDGR(F,XC,TC)         = FPRDPROJ(F,XC,TC)/100;
