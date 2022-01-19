@@ -97,9 +97,6 @@ PlaneFilter1=rest
 [RP:2SIMULATION_LOOP]
 1=
 
-[RP:2VARINIT]
-1=
-
 [RP:SATIMGE]
 1=r=cge\model, gdx = NetZeroLinkedLE
 2=r=cge\model, gdx = NetZeroLinkedHE
@@ -131,18 +128,23 @@ Order=1,2
 Decim=0
 PlaneRownr=-1
 
+[RP:2VARINIT]
+1=
+
 [RP:1MODEL]
 1=gdx=model s=model
 2=gdx = model s = model
 3=
+
+[MRUFILES]
+1=C:\Models\SATIMGE\CGE\model.gdx
 
 [OPENWINDOW_1]
 FILE0=C:\Models\SATIMGE\CGE\1model.dat
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\1model.lst
 FILE3=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE4=C:\Models\SATIMGE\CGE\model.gdx
-FILE5=C:\Models\SATIMGE\CGE\1model.lst
+FILE4=C:\Models\SATIMGE\CGE\1model.lst
 MAXIM=0
 TOP=4
 LEFT=2
