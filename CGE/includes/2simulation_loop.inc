@@ -391,6 +391,9 @@ $offtext
 *@    AFX('ACOIL',RD)$EFX(TT,TC) = YES;
 *@    AFLEO('ACOIL') = YES;
 *@    AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 0.5)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
+    ACES2('ACOIL') = no;
+
+
 
 * Hydrogen Sector
 *@    AFX('AHYDR',RD) = YES;
@@ -398,7 +401,7 @@ $offtext
 
 *@
     AFLEO('AHYDR') = no;
-    AFLEO('APETR') = no;
+    AFLEO('APETR') = yes;
     AFLEO('AELEC') = no;
 
 *@
@@ -456,8 +459,8 @@ $offtext
 
 
 * set ANFX
-*@    ANFX(A,RD)=NO;
-*@    ANFX(A,RD)$(NOT AFX(A,RD))=YES;
+    ANFX(A,RD)=NO;
+    ANFX(A,RD)$(NOT AFX(A,RD))=YES;
 
 
 
