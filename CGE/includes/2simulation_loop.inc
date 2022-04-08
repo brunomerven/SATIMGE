@@ -111,7 +111,7 @@ $include SATIM\includes\2TIMESReport.inc
 
 *tmp fix until EB is improved
 *# ica('celec','apgm','NAT') = 0.5*ica0('celec','apgm','NAT');
-
+ica('celec','aelec','NAT') = 0.00001;
 
 *@ ica('celec','altrp-f','NAT') = 0.72*ica0('celec','altrp-f','NAT');
 *@ ica('ccoal-hgh','amore','NAT') = 0.3*ica0('ccoal-hgh','amore','NAT');

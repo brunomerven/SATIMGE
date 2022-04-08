@@ -1,4 +1,5 @@
 * code to recalculate budget share based on income
+* Bruno Merven with help from Faaiqa Hartley and Sherman Robinson, 2019
 LOOP(HP,
     DistanceMatrix(H,HP,TC) = round(YI.L(H) - YI0(HP),2)+0.00001;
 );
