@@ -377,8 +377,8 @@ $offtext
 $ontext
 *@
     theta('apetr','cpetr_o') = FLOW_OUT_FSFuels('petr','cpetr_o',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr_d') = FLOW_OUT_FSFuels('petr','cpetr_d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr_p') = FLOW_OUT_FSFuels('petr','cpetr_p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-d') = FLOW_OUT_FSFuels('petr','cpetr_d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-p') = FLOW_OUT_FSFuels('petr','cpetr_p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
 * helping the solver
     QXAC.L('apetr',c)$AFXGR('APETR','NAT',XC,TC) = QXAC.L('apetr',c)*(1+AFXGR('APETR','NAT',XC,TC));
     QA.L('apetr')$AFXGR('APETR','NAT',XC,TC) = QA.L('apetr')*(1+AFXGR('APETR','NAT',XC,TC));
@@ -391,7 +391,7 @@ $offtext
 *@    AFX('ACOIL',RD)$EFX(TT,TC) = YES;
 *@    AFLEO('ACOIL') = YES;
 *@    AFXGR('ACOIL','NAT',XC,TC)$(Flow_in_FSFuels('petr','ccoil',TC-1) > 0.5)  = max(-0.9,Flow_in_FSFuels('petr','ccoil',TC)/Flow_in_FSFuels('petr','ccoil',TC-1)-1);
-    ACES2('ACOIL') = no;
+*    ACES2('ACOIL') = no;
 
 
 

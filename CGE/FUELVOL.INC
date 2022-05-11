@@ -14,7 +14,7 @@ Set
  aoin(a)        /atext,aclth,aleat,afoot,awood,aprnt,ametp,amach,aemch,
                  asequ,avehi,atequ,afurn,aoman,acons,apapr/
  airo(a)        /airon/
- amin(a)        /acoal, agold, amore, amine, acoil, angas/
+ amin(a)        /acoal, agold, amore, amine, angas/
  anmm(a)        /anmet/
  apap(a)        /apapr/
  aelc(a)        /aelec/
@@ -26,7 +26,7 @@ Set
  h2(h)          /hhd-5, hhd-6, hhd-7/
  h3(h)          /hhd-8, hhd-9/
 
- fuel(c)       /ccoal-low, ccoal-hgh, ccoil, cngas, chydr, cpetr_p, cpetr_d, cpetr_o, celec/
+ fuel(c)       /ccoal-low, ccoal-hgh, ccoil, cngas, chydr, cpetr-p, cpetr-d, cpetr-h, cpetr-k, cpetr-l,celec/
 ;
 
  ENETABLE('EXPORTS',FUEL)=QE.L(FUEL,'REST');

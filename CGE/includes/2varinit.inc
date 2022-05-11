@@ -177,17 +177,19 @@ $offtext
 *@* CMRES('cpetr_o')= YES;
 *@
 *@* CEFIX('cpetr_p')=YES;
- CERES('cpetr_p')=YES;
+ CERES('cpetr-p')=YES;
 *@* QE.FX('cpetr_p','REST') = QE0('cpetr_p','REST') ;
 *@
 *@* CEFIX('cpetr_d')=YES;
- CERES('cpetr_d')=YES;
+ CERES('cpetr-d')=YES;
 *@* QE.FX('cpetr_d','REST') = QE0('cpetr_d','REST') ;
 *@
 *@
 *@
 *@* CEFIX('cpetr_o')=YES;
- CERES('cpetr_o')=YES;
+ CERES('cpetr-h')=YES;
+ CERES('cpetr-k')=YES;
+ CERES('cpetr-l')=YES;
 *@* QE.FX('cpetr_o','REST') = QE0('cpetr_o','REST') ;
 *@
 *@*$offtext

@@ -131,6 +131,15 @@ PlaneRownr=-1
 [RP:2VARINIT]
 1=
 
+[RP:GHGENERGYREPORT]
+1=
+
+[RP:FUELVOL]
+1=
+
+[RP:ICA]
+1=
+
 [RP:1MODEL]
 1=gdx=model s=model
 2=gdx = model s = model
@@ -143,8 +152,10 @@ PlaneRownr=-1
 FILE0=C:\Models\SATIMGE\CGE\1model.dat
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\1model.lst
-FILE3=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE4=C:\Models\SATIMGE\CGE\1model.lst
+FILE3=C:\Models\SATIMGE\CGE\FUELVOL.INC
+FILE4=C:\Models\SATIMGE\CGE\ICA.INC
+FILE5=C:\Models\SATIMGE\CGE\includes\2varinit.inc
+FILE6=C:\Models\SATIMGE\CGE\1model.lst
 MAXIM=0
 TOP=4
 LEFT=2

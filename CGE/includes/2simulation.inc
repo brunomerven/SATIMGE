@@ -45,7 +45,7 @@ SETS
  TDIR                    SATIM directory-folder list
  TIMESDIR(T,TDIR)        SATIM directory-folder specified for run
  CTA(A)                  Sectors taxed with carbon tax
-                         /acoal, agold, amore, acoil, angas,
+                         /acoal, agold, amore, angas,
                           ahydr, amine, ameat, apfis, avege,
                           afats, adair, agrai, astar, afeed,
                           abake, asuga, aconf, apast, aofoo,
@@ -57,7 +57,7 @@ SETS
                           atequ, afurn, aoman, acons, atrps,
                           altrp-p, altrp-f, aotrp-p, aotrp-f/
 
-  energy(c)       energy commodities     / ccoal-low, ccoal-hgh, ccoil, cngas, cpetr_p, cpetr_d, cpetr_o, celec, chydr /
+  energy(c)       energy commodities     / ccoal-low, ccoal-hgh, ccoil, cngas, cpetr-p, cpetr-d, cpetr-h, cpetr-k, cpetr-l, celec, chydr /
 ;
 
 PARAMETERS
@@ -176,7 +176,7 @@ Parameter
 * LABGRSHK('FLAB-M','SIM1',TCF)=1.002;
 
 SETS
- CEGY(C)                 energy commodities   / ccoal-low, ccoal-hgh, ccoil, cngas, celec, cpetr_p, cpetr_d, cpetr_o /
+ CEGY(C)                 energy commodities   / ccoal-low, ccoal-hgh, ccoil, cngas, celec, cpetr-p, cpetr-d, cpetr-h, cpetr-k, cpetr-l /
 *ccoal, ccoal-dis,
 ;
 
