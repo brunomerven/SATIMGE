@@ -9,7 +9,7 @@ $onempty
 $SETGLOBAL countrydata "1model.dat"
 
 *Section 1: Excel data file in XXX.dat include file
-$SETGLOBAL modeldata    "1model_RSA.xlsx"
+$SETGLOBAL modeldata    "1model.xlsx"
 
 *Section 2: Base dynamic calibration file
 $SETGLOBAL basedata  "2simulation.xlsx"

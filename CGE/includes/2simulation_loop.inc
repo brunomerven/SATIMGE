@@ -91,11 +91,10 @@ $include SATIM\includes\2TIMESReport.inc
 
 
 * make acoal output leontief - controlled by SATIM - see theta calcs below
-*@ ACET2('acoal') = NO;
- ACET2('acoal') = YES;
+*@ ACET2('acoal') = YES;
 
 * can't get apetr leontief to work yet.
- ACET2('apetr') = YES;
+*@ ACET2('apetr') = YES;
 
 * do reverse mapping for industry sectors (excludes power and petroleum)
  ICAGR(CXEP,A,TC) = SUM(FSXEP$MFSA(FSXEP,A),ICAFSGR(CXEP,FSXEP,TC));
@@ -111,7 +110,6 @@ $include SATIM\includes\2TIMESReport.inc
 
 *tmp fix until EB is improved
 *# ica('celec','apgm','NAT') = 0.5*ica0('celec','apgm','NAT');
-ica('celec','aelec','NAT') = 0.00001;
 
 *@ ica('celec','altrp-f','NAT') = 0.72*ica0('celec','altrp-f','NAT');
 *@ ica('ccoal-hgh','amore','NAT') = 0.3*ica0('ccoal-hgh','amore','NAT');
@@ -201,12 +199,12 @@ $offtext
     trnsfr(INS,ACNT) = trnsfr(INS,ACNT) * (1+TRNSFRGR(INS,ACNT,XC,TC));
 
 *bm make ratio of coal outputs exogenous and control from SATIM outputs
-*@    theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
-*@    theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
+    theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
+    theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
 
 * shrinking production of cmore and cmine out of coal
-*@    theta('acoal','cmore') = theta('acoal','cmore')*0.95;
-*@    theta('acoal','cmine') = theta('acoal','cmine')*0.95;
+    theta('acoal','cmore') = theta('acoal','cmore')*0.95;
+    theta('acoal','cmine') = theta('acoal','cmine')*0.95;
 
 * adjust ica and ifa for acoal based on previous pacoal and new theta
     pacoalx(TC,RUN) = sum(CCOAL,theta('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta('acoal',CCOAL));
@@ -216,7 +214,6 @@ $offtext
 
 
 * make adjustments to ica
-$ontext
 *@
     ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
                      = EIntensity_FS('elec','chydr',TC);
@@ -231,7 +228,7 @@ $ontext
 
 *BM 190320: SETTING STARTING POINT FOR ICA private transport
     ica('celec','aprtr','NAT')$(EHIntensity('celec','aprtr',TC-1) LT 0.0001 and EHIntensity('celec','aprtr',TC) GT 0.00001)
-                         = EHIntensity('celec','aprtr',TC)/EHIntensity('cpetr_p','aprtr',TC)*ica('cpetr_p','aprtr','NAT');
+                         = EHIntensity('celec','aprtr',TC)/EHIntensity('cpetr-p','aprtr',TC)*ica('cpetr-p','aprtr','NAT');
 
     icagr(C,'aprtr',TC)$(EHIntensity(C,'aprtr',TC-1) gt 0.0001) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
 
@@ -239,13 +236,12 @@ $ontext
 *ICAGR(C,A,TC)=1;
 
 
-*@    ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
-
+    ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
 * Other fixes to ica
 
 * acoal
 * fade coal own use to match Energy model
-    ica('ccoal-low','acoal','NAT') = ica('ccoal-low','acoal','NAT')*0.5;
+*@    ica('ccoal-low','acoal','NAT') = ica('ccoal-low','acoal','NAT')*0.5;
 * apetr
     ica('ccoil','apetr','NAT') = max(0.07,ica('ccoil','apetr','NAT'));
 
@@ -254,13 +250,19 @@ $ontext
 * tmp fix on pp until fixed on SATIM side
     ica('celec','apapr','NAT') = ica0('celec','apapr','NAT');
 
+
 * Hydrogen was calibrated on cbchm but does not need those inputs so taking them out
 *#    ica('cammo','ahydr','NAT') = 0.000001;
-    ica('cbchm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
-    ica('cochm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
+*#    ica('cbchm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
+*#    ica('cochm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
 
-    Ica('celec','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001) = EIntensity_FS('hydr','celec',TC);
+
+    Ica('celec','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001 and EIntensity_FS('hydr','celec',TC)) = EIntensity_FS('hydr','celec',TC);
     Ica('cngas','AHYDR','nat')$(SUM(A,ICA('CHYDR',A,'nat')) GT 0.001 and EIntensity_FS('hydr','cngas',TC)) = EIntensity_FS('hydr','cngas',TC);
+
+*$ontext
+
+
 
 * adjustments to hydrogen (set empirically)
     ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.034;
@@ -303,7 +305,7 @@ $ontext
 
     QA.L('ahydr')$(HCAP(XC,TC,TT) gt 0.00001) = FLOW_OUT_FSFuels('hydr','chydr',TC);
 
-$offtext
+*$offtext
 *@
 
 
@@ -360,32 +362,34 @@ $offtext
     AFXGR('aelec','NAT',XC,TC)$EFX(TT,TC) = QFEGY_GR(RUN,TC)- 1;
 
 * coal sector
-*@    AFX('acoal',RD)$EFX(TT,TC) = YES;
+    AFX('acoal',RD)$EFX(TT,TC) = YES;
     CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
-*@    AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
+    AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
 *pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
-*@    AFLEO('ACOAL')$(NOT T1(TC)) = YES;
+    AFLEO('ACOAL')$(NOT T1(TC)) = YES;
 * setting starting position to avoid -ve values on qe
-*@    QE.L('ccoal-hgh','REST')$(NOT T1(TC)) = TVACT(TC,'PEXCOA');
-*@    QE.L('ccoal-low','REST')$(NOT T1(TC)) = 0;
+    QE.L('ccoal-hgh','REST')$(NOT T1(TC)) = TVACT(TC,'PEXCOA');
+    QE.L('ccoal-low','REST')$(NOT T1(TC)) = 0;
 
 * petroleum sector
     AFX('APETR',RD) = NO;
-*@    AFX('APETR',RD)$EFX(TT,TC) = YES;
+    AFX('APETR',RD)$EFX(TT,TC) = YES;
 
-*@    AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
-$ontext
+    AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
+
 *@
-    theta('apetr','cpetr_o') = FLOW_OUT_FSFuels('petr','cpetr_o',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr-d') = FLOW_OUT_FSFuels('petr','cpetr_d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr-p') = FLOW_OUT_FSFuels('petr','cpetr_p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-h') = FLOW_OUT_FSFuels('petr','cpetr-h',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-k') = FLOW_OUT_FSFuels('petr','cpetr-k',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-l') = FLOW_OUT_FSFuels('petr','cpetr-l',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-d') = FLOW_OUT_FSFuels('petr','cpetr-d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-p') = FLOW_OUT_FSFuels('petr','cpetr-p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
 * helping the solver
     QXAC.L('apetr',c)$AFXGR('APETR','NAT',XC,TC) = QXAC.L('apetr',c)*(1+AFXGR('APETR','NAT',XC,TC));
     QA.L('apetr')$AFXGR('APETR','NAT',XC,TC) = QA.L('apetr')*(1+AFXGR('APETR','NAT',XC,TC));
     QINT.L(c,'apetr')$AFXGR('APETR','NAT',XC,TC) = QINT.L(c,'apetr')*(1+AFXGR('APETR','NAT',XC,TC));
     QVA.L('apetr','nat')$AFXGR('APETR','NAT',XC,TC) = QVA.L('apetr','nat')*(1+AFXGR('APETR','NAT',XC,TC));
     QF.L(FLAB,'APETR',RD)$AFXGR('APETR','NAT',XC,TC) = QF.L(FLAB,'APETR',RD)*(1+AFXGR('APETR','NAT',XC,TC));
-$offtext
+
 
 * Oil Sector
 *@    AFX('ACOIL',RD)$EFX(TT,TC) = YES;
@@ -396,13 +400,13 @@ $offtext
 
 
 * Hydrogen Sector
-*@    AFX('AHYDR',RD) = YES;
-*@    AFLEO('AHYDR') = YES;
+    AFX('AHYDR',RD) = YES;
+    AFLEO('AHYDR') = YES;
 
 *@
-    AFLEO('AHYDR') = no;
+*    AFLEO('AHYDR') = no;
     AFLEO('APETR') = yes;
-    AFLEO('AELEC') = no;
+    AFLEO('AELEC') = yes;
 
 *@
 
@@ -417,14 +421,14 @@ $offtext
 
 * other exogenous sectors
 * gold - set to slow decline
-*@    AFX('AGOLD',RD)=YES;
-*@    AFLEO('AGOLD') = YES;
-*@    AFXGR('AGOLD','NAT',XC,TC) = -0.001;
+    AFX('AGOLD',RD)=YES;
+    AFLEO('AGOLD') = YES;
+    AFXGR('AGOLD','NAT',XC,TC) = -0.001;
 
 * ngas
-*@    AFX('ANGAS',RD) = YES;
+    AFX('ANGAS',RD) = YES;
 *    AFLEO('ANGAS') = YES;
-*@    AFXGR('ANGAS','NAT',XC,TC) = -.05;
+    AFXGR('ANGAS','NAT',XC,TC) = -.05;
 
 * chemicals set to partially track Secunda and jet fuel production
     CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2012','UCTLCLEIN-E');
@@ -469,8 +473,8 @@ $include cge\includes\2capital.inc
 
 *       ENERGY: Tech change in energy use via input output matrix
 *       Share of new capital in total
-*@    ishr(A,RD)$SUM(FCAP, QF.L(FCAP,A,RD)) = SUM(FCAP, DKAP(FCAP,A,RD))/SUM(FCAP, QF.L(FCAP,A,RD));
-*@    ishr(A,RD)$(ishr(A,RD) GT 1) = 1;
+    ishr(A,RD)$SUM(FCAP, QF.L(FCAP,A,RD)) = SUM(FCAP, DKAP(FCAP,A,RD))/SUM(FCAP, QF.L(FCAP,A,RD));
+    ishr(A,RD)$(ishr(A,RD) GT 1) = 1;
 *       Evolve IO coefficient
 *bm        ica(CEGY,A,RD)$ica(CEGY,A,RD) = (1-ishr(A,RD))*ica(CEGY,A,RD) + ishr(A,RD)*ica(CEGY,A,RD)*(PQ.L(CEGY)/PQ0(CEGY)/(DPI.L/DPI0))**rhoegyint(CEGY,XC,TC);
 *       Tech change in energy use for households

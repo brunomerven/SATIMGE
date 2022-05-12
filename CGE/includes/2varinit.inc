@@ -101,10 +101,10 @@
  QE.FX('CELEC','REST') = QE0('CELEC','REST') ;
 
 
- CMFIX(C)=NO;
- CMFIX('CELEC')=YES;
- CMRES('CELEC')= YES;
- QM.FX('CELEC','REST') = QM0('CELEC','REST') ;
+* CMFIX(C)=NO;
+* CMFIX('CELEC')=YES;
+* CMRES('CELEC')= YES;
+* QM.FX('CELEC','REST') = QM0('CELEC','REST') ;
 
 *$ontext
 
@@ -128,46 +128,46 @@
 *@ QE.FX('cptrp-o','REST') = QE0('cptrp-o','REST') ;
 *@
 *@
-*@ CERES('ccoal-low')=YES;
-*@ CERES('ccoal-hgh')=YES;
+ CERES('ccoal-low')=YES;
+ CERES('ccoal-hgh')=YES;
 *@
 *@ CERES('ccoil') = YES;
 *@
 *@ CERES('cngas') = YES;
 *@* QM.FX('cngas','REST') = QM0('CNGAS','REST');
 *@
-*@ CERES('chydr')=YES;
-*@ CERES('cfcel')=YES;
-*@ CERES('celct')=YES;
+ CERES('chydr')=YES;
+ CERES('cfcel')=YES;
+ CERES('celct')=YES;
 *@* QE.FX('celct','REST') = QE0('celct','REST') ;
 *@
-*@ CERES('cbchm') = YES;
-*@ CERES('cochm') = YES;
+ CERES('cbchm') = YES;
+ CERES('cochm') = YES;
 *@
 *@
-*@ CERES('ciron') = YES;
-*@ CEFIX('ciron') = YES;
-*@ QE.FX('ciron','REST') = QE0('ciron','REST') ;
+ CERES('ciron') = YES;
+ CEFIX('ciron') = YES;
+ QE.FX('ciron','REST') = QE0('ciron','REST') ;
 *@*bm reason for fixing imports: without fixing it we seem to see an explosion in imports caused by an increase in PQ?
-*@ CMRES('ciron')= YES;
-*@ QM.FX('ciron','REST') = QM0('ciron','REST') ;
+ CMRES('ciron')= YES;
+ QM.FX('ciron','REST') = QM0('ciron','REST') ;
 *@
 *@
-*@ CERES('cammo') = YES;
-*@ CEFIX('cammo') = YES;
-*@ QE.FX('cammo','REST') = QE0('cammo','REST') ;
+ CERES('cammo') = YES;
+ CEFIX('cammo') = YES;
+ QE.FX('cammo','REST') = QE0('cammo','REST') ;
 *@ CMRES('cammo')= YES;
 *@ QM.FX('cammo','REST') = QM0('cammo','REST') ;
 *@
 *@
-*@ CERES('cpgm') = YES;
-*@ CEFIX('cpgm') = YES;
-*@ QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
+ CERES('cpgm') = YES;
+ CEFIX('cpgm') = YES;
+ QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
 *@
 *@
-*@ CERES('cmore') = YES;
-*@ CMRES('cmore')= YES;
-*@ QM.FX('cmore','REST') = QM0('cmore','REST') ;
+ CERES('cmore') = YES;
+ CMRES('cmore')= YES;
+ QM.FX('cmore','REST') = QM0('cmore','REST') ;
 *@
 *@
 *@
@@ -177,16 +177,17 @@
 *@* CMRES('cpetr_o')= YES;
 *@
 *@* CEFIX('cpetr_p')=YES;
- CERES('cpetr-p')=YES;
 *@* QE.FX('cpetr_p','REST') = QE0('cpetr_p','REST') ;
 *@
 *@* CEFIX('cpetr_d')=YES;
- CERES('cpetr-d')=YES;
+
 *@* QE.FX('cpetr_d','REST') = QE0('cpetr_d','REST') ;
 *@
 *@
 *@
 *@* CEFIX('cpetr_o')=YES;
+ CERES('cpetr-d')=YES;
+ CERES('cpetr-p')=YES;
  CERES('cpetr-h')=YES;
  CERES('cpetr-k')=YES;
  CERES('cpetr-l')=YES;
