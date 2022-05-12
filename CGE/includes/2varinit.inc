@@ -94,12 +94,12 @@
 
 
 
-$ontext
+
  CEFIX(C)=NO;
  CEFIX('CELEC')=YES;
  CERES('CELEC')=YES;
  QE.FX('CELEC','REST') = QE0('CELEC','REST') ;
-$offtext
+
 
  CMFIX(C)=NO;
  CMFIX('CELEC')=YES;

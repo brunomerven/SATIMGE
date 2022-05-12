@@ -321,7 +321,7 @@ $offtext
 
 *  change to IFA
 
-*@    ifa(F,A,'nat') = ifa(F,A,'nat')*IFAGR(F,A,TC);
+    ifa(F,A,'nat') = ifa(F,A,'nat')*IFAGR(F,A,TC);
 
 *       ENERGY: Set electricity sector capital growth rate equal to TIMES results
 *       CA: 2capital.inc modified to use EINVCOST
