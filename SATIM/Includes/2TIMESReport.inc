@@ -154,7 +154,7 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 $ontext
  Investment costs are based on year of build decision (TVNCAP) and the number
- of years needed to build the plant (lead time NCAP_LEAD).
+ of years needed to build the plant (lead time NCAP_ILED).
  Annual cost = build capacity (TVNCAP) x unit cost (OBJ_ICOST) / years to build (NCAP_ILED)
  Calculation: Keep track of vintages (TP)
 $offtext
@@ -167,7 +167,7 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) GT 0),
   BPINV(RUN,TC,TCP,PRC)$NCAP_ILED('REGION1','2012',PRC) = TVNCAP(TC,PRC)/NCAP_ILED('REGION1','2012',PRC) * OBICOST('REGION1',TC,PRC);
  );
 );
-* investment cost with negative NCAL_ILED
+* investment cost with negative NCAP_ILED
 LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  LOOP(TCP$((ORD(TCP) LT ORD(TC)) AND (ORD(TCP) GE (ORD(TC)+NCAP_ILED('REGION1','2012',PRC)))),
   BPINV(RUN,TC,TCP,PRC)$NCAP_ILED('REGION1','2012',PRC) = TVNCAP(TC,PRC)/(-1*NCAP_ILED('REGION1','2012',PRC)) * OBICOST('REGION1',TC,PRC);
@@ -177,9 +177,10 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * expenditure schedule in billions (2007 from 2010)
  INVCOST(RUN,TC,PRC) = SUM(TCP, BPINV(RUN,TCP,TC,PRC))/1000;
 
-*Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2012 Rands for CGE
+*Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2019 Rands for CGE
 * EINVCOST(XC,T,TT) = SUM((SUPELE AND SUPOIL), INVCOST(XC,T,TT,ELE));
- EINVCOST(RUN,TC) = SUM(PRCPower, INVCOST(RUN,TC,PRCPower)) * 0.852;
+ EINVCOST(RUN,TC) = SUM(PRCPower, INVCOST(RUN,TC,PRCPower))*1.22;
+* 0.852;
 
 * fixing end effect until we run past 2050
  EINVCOST(RUN,'2050') = EINVCOST(RUN,'2049');
@@ -315,8 +316,11 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * Exception for biofuels in transport
 * Note that this is not perfect in that it doesn't take into account possible upstream emissions from production
 * it would be better in future iterations to have a sink linked to the supply of bioenergy
-EmisFactorCor('TRAODS','CO2',TC,RUN)$(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut')) = EmisFactor('TRAODS','CO2')*REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')/(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut'))+eps;
-EmisFactorCor('TRAOGS','CO2',TC,RUN)$(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut')) = EmisFactor('TRAOGS','CO2')*REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')/(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut'))+eps;
+EmisFactorCor('TRAODS','CO2',TC,RUN)$(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut')) =
+         EmisFactor('TRAODS','CO2')*REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')/(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut'))+eps;
+
+EmisFactorCor('TRAOGS','CO2',TC,RUN)$(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut')) =
+         EmisFactor('TRAOGS','CO2')*REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')/(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut'))+eps;
 
 
 

@@ -11,8 +11,8 @@ $loaddc A ARD C CA F FA FLAB FCAP FLND INS INSD INSDNG EN H CTD CTE CTM ATAX DTA
 *-----------------------------------------------------------------------------
 
 PARAMETER
-* scale           scaling parameter for SAM (multiplier)            / 1 /
- scale           scaling parameter for SAM (multiplier)            / 0.001 /
+ scale           scaling parameter for SAM (multiplier)            / 1 /
+* scale           scaling parameter for SAM (multiplier)            / 0.001 /
  natdrate        national annual capital depreciation rate         / 0.050 /
  accrate         annual capital accumulation rate                  / 0.040 /
  capoutrat       capital output ratio                              / 2.000 /

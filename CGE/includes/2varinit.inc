@@ -131,9 +131,9 @@
  CERES('ccoal-low')=YES;
  CERES('ccoal-hgh')=YES;
 *@
-*@ CERES('ccoil') = YES;
+ CERES('ccoil') = YES;
 *@
-*@ CERES('cngas') = YES;
+ CERES('cngas') = YES;
 *@* QM.FX('cngas','REST') = QM0('CNGAS','REST');
 *@
  CERES('chydr')=YES;
@@ -156,8 +156,8 @@
  CERES('cammo') = YES;
  CEFIX('cammo') = YES;
  QE.FX('cammo','REST') = QE0('cammo','REST') ;
-*@ CMRES('cammo')= YES;
-*@ QM.FX('cammo','REST') = QM0('cammo','REST') ;
+ CMRES('cammo')= YES;
+ QM.FX('cammo','REST') = QM0('cammo','REST') ;
 *@
 *@
  CERES('cpgm') = YES;
