@@ -120,7 +120,8 @@ $include SATIM\includes\2TIMESReport.inc
 
 *fh 71218
 *bm+fh 201118 removed - already in 2runtimes.inc
-  PAFXCAP(XC,TC,TT)$(EFX(TT,TC) AND ifa('FCAP','APETR','nat')) = ifa('FCAP','APETR','nat')*iva('APETR','nat')*sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+*  PAFXCAP(XC,TC,TT)$(EFX(TT,TC) AND ifa('FCAP','APETR','nat')) = ifa('FCAP','APETR','nat')*iva('APETR','nat')*sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+  PAFXCAP(XC,TC,TT)$(EFX(TT,TC) AND ifa('FCAP','APETR','nat')) = ifa('FCAP','APETR','nat')*iva('APETR','nat')*OIL_FLOW(RUN,TC);
 
   IF(NOT T1(TC),
 
@@ -217,11 +218,11 @@ $offtext
 *@
     ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
                      = EIntensity_FS('elec','chydr',TC);
-    ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
-                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
+*@    ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica0('chydr',A,'NAT'))
+*@                         = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
 * tmp fix until QA approach is done properly
-    ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica('chydr',A,'NAT'))
-                         = ica('chydr',A,'NAT') * QVA.L(A,'nat')/QA.L(A);
+*@    ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica0('chydr',A,'NAT'))
+*@                         = ica('chydr',A,'NAT') * QVA.L(A,'nat')/QA.L(A);
 
 * calculate ica change for private passenger. This needs to be generalised to other household end-uses
     EHIntensity(C,'aprtr',TC) = FLOW_IN_FSFuels('tppr',C,TC)/sum(TPPR,COM_PROJ('REGION1',TC,TPPR));
@@ -235,7 +236,7 @@ $offtext
 
 *ICAGR(C,A,TC)=1;
 
-    ica(C,A,'NAT')$ICAGR(C,A,TC) = ica(C,A,'NAT')*ICAGR(C,A,TC);
+    ica(C,A,'NAT')$(ICAGR(C,A,TC) and ica0(C,A,'NAT')) = ica(C,A,'NAT')*ICAGR(C,A,TC);
 * Other fixes to ica
 
 * apetr
@@ -248,7 +249,7 @@ $offtext
 
 
 * Hydrogen was calibrated on cbchm but does not need those inputs so taking them out
-*#    ica('cammo','ahydr','NAT') = 0.000001;
+*@    ica('cammo','ahydr','NAT') = 0.000001;
     ica('cbchm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
     ica('cochm','ahydr','NAT')$(ORD(TC) gt 20) = 0.001;
 
@@ -283,8 +284,8 @@ $offtext
     ica('celec','aammo','NAT') = 0.005;
 
 * tweaks to iron and steel sector
-    ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + ica0('cpgm','airon','NAT')* 0.9 * VARACT('REGION1',TC,'PEXGDRI'))
-                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
+*    ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + ica0('cpgm','airon','NAT')* 0.9 * VARACT('REGION1',TC,'PEXGDRI'))
+*                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
 
     ica('cnfrm','airon','NAT') = (ica0('cnfrm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
                               /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
@@ -361,6 +362,8 @@ $offtext
     AFX('acoal',RD)$EFX(TT,TC) = YES;
     CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
     AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
+
+
 *pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
     AFLEO('ACOAL')$(NOT T1(TC)) = YES;
 * setting starting position to avoid -ve values on qe
@@ -429,10 +432,10 @@ $offtext
 * chemicals set to partially track Secunda and jet fuel production
     CTL_Weight(TC,RUN) = 0.7 * VARACT('REGION1',TC-1,'UCTLCLEIN-E')/VARACT('REGION1','2012','UCTLCLEIN-E');
 
-*@    AFX('ABCHM',RD) = YES;
-*@    AFLEO('ABCHM') = YES;
-*@    AFX('AOCHM',RD) = YES;
-*@    AFLEO('AOCHM') = YES;
+    AFX('ABCHM',RD) = YES;
+    AFLEO('ABCHM') = YES;
+    AFX('AOCHM',RD) = YES;
+    AFLEO('AOCHM') = YES;
 
 *@
 $ontext

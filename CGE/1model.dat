@@ -25,7 +25,8 @@ SET
  REMEXP(C)       remove exports with small shares  /
 *fh 25062019 cut off of 0.1% used. some kept due to importance
 *fh 25062019         CWATR, CCONS, CTRAD, CGSRV
- cngas, cftrp-o, cfore, cwatr, cgsrv, ccons, ctrps, cfoot, cafee
+* cngas,
+cftrp-o, cfore, cwatr, cgsrv, ccons, ctrps, cfoot, cafee
          /
  REMIMP(C)       remove imports with small shares  /
 *fh 25062019 cut off of 0.1% used. some kept due to importance

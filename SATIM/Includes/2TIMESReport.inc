@@ -117,8 +117,9 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 *UCONV_C_T2C(C);
 
-*bm calc oil flow
- OIL_FLOW(RUN,TC) = SUM(PRC$MPRCFS(PRC,'petr'), TVACT(TC,PRC));
+*bm calc oil flow   !!! note that TVACT includes some non-energy commodities that are currently not part of the output of apetr in the CGE. These should ideally also be included there.
+* OIL_FLOW(RUN,TC) = SUM(PRC$MPRCFS(PRC,'petr'), TVACT(TC,PRC));
+ OIL_FLOW(RUN,TC) = sum(C,FLOW_OUT_FSFuels('petr',C,TC));
 
 *bm calc coal flow - putting in a minimum value to avoid problems with theta calcs in CGE
  COAL_FLOW(RUN,TC,'ccoal-low') = max(30,sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC)));
