@@ -114,8 +114,6 @@ $INCLUDE %countrydata%
  SAMBALCHK(AC)   = SAM('TOTAL',AC) - SAM(AC,'TOTAL');
  SAMBALCHK(AC)$(abs( SAMBALCHK(AC)) lt 1e-6) = 0;
 
-*bm/sr/fh calling 1sambal to cleanout small errors
-*$INCLUDE includes\1sambal.inc
 *Additional set definitions based on country SAM======================
 
  CD(C)  = YES$(SUM(ARD, SAM(ARD,C)) GT (SAM(C,'ROW') - TAXPAR('EXPTAX',C) - SUM(CTE, SAM(CTE,C))) );

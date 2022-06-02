@@ -3472,15 +3472,6 @@ Order=1,4,5,6,2,3
 Decim=1
 PlaneRownr=-1
 
-[GDXDISP: F_OUT Par 6]
-PlaneDim=0
-RowDim=6
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,4,5,6
-Decim=7
-PlaneRownr=-1
-
 [GDXDISP: TVA Var 2]
 PlaneDim=0
 RowDim=2
@@ -3645,9 +3636,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[RP:2ENERGYCHECKS]
-1=
 
 [GDXDISP: energy Set 1]
 PlaneDim=0
@@ -3985,7 +3973,7 @@ RowDim=1
 Squeeze=1
 SqTrail0=0
 Order=1,2
-Decim=7
+Decim=0
 PlaneRownr=-1
 
 [RP:ESAGE_REPORT_SHORT]
@@ -4045,7 +4033,7 @@ RowDim=2
 Squeeze=1
 SqTrail0=0
 Order=1,2,3
-Decim=4
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: UNCD7 Set 7]
@@ -4351,16 +4339,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[GDXDISP: EmisFactor Par 2]
-PlaneDim=1
-RowDim=1
-Squeeze=1
-SqTrail0=0
-Order=1,2
-Decim=7
-PlaneRownr=-1
-PlaneFilter1=IISCOA
-
 [GDXDISP: LandEmissions Par 3]
 PlaneDim=0
 RowDim=3
@@ -4395,8 +4373,8 @@ Squeeze=1
 SqTrail0=0
 Order=5,1,2,4,3
 Decim=3
-PlaneRownr=29
-PlaneFilter1=Employment-p
+PlaneRownr=-1
+PlaneFilter1=CO2
 
 [GDXDISP: TX Set 1]
 PlaneDim=0
@@ -4442,9 +4420,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[RP:UNTITLED_1]
-1=
 
 [GDXDISP: POP Par 1]
 PlaneDim=0
@@ -4524,7 +4499,7 @@ RowDim=2
 Squeeze=1
 SqTrail0=0
 Order=1,2
-Decim=7
+Decim=1
 PlaneRownr=-1
 
 [GDXDISP: AY Set 1]
@@ -4560,7 +4535,7 @@ RowDim=1
 Squeeze=1
 SqTrail0=0
 Order=1,2
-Decim=7
+Decim=1
 PlaneRownr=-1
 
 [GDXDISP: QVA Var 2]
@@ -4628,7 +4603,7 @@ Squeeze=1
 SqTrail0=0
 Order=5,1,2,3,4
 Decim=4
-PlaneRownr=2
+PlaneRownr=-1
 PlaneFilter1=2050
 
 [GDXDISP: QETECHTAB Par 2]
@@ -4665,7 +4640,7 @@ Squeeze=1
 SqTrail0=0
 Order=1,2,3,5,4
 Decim=2
-PlaneRownr=14
+PlaneRownr=-1
 PlaneFilter1=cpetr_o
 
 [GDXDISP: PQ Var 1]
@@ -4730,7 +4705,7 @@ Squeeze=1
 SqTrail0=0
 Order=1,2,3,4,6,5
 Decim=4
-PlaneRownr=4
+PlaneRownr=-1
 PlaneFilter1=fcap
 
 [GDXDISP: QF Var 3]
@@ -5015,11 +4990,11 @@ Decim=4
 PlaneRownr=-1
 
 [GDXDISP: ifa Par 3]
-PlaneDim=1
+PlaneDim=0
 RowDim=2
 Squeeze=1
 SqTrail0=0
-Order=1,2,3
+Order=2,3,1
 Decim=7
 PlaneRownr=-1
 
@@ -5030,7 +5005,7 @@ Squeeze=1
 SqTrail0=0
 Order=2,1,3
 Decim=3
-PlaneRownr=40
+PlaneRownr=-1
 PlaneFilter1=aelec
 
 [GDXDISP: QG Var 1]
@@ -5377,11 +5352,11 @@ PlaneRownr=-1
 
 [GDXDISP: PAFXCAP Par 3]
 PlaneDim=0
-RowDim=3
+RowDim=2
 Squeeze=1
 SqTrail0=0
-Order=1,2,3
-Decim=7
+Order=1,3,2
+Decim=1
 PlaneRownr=-1
 
 [GDXDISP: PAR_RCAPL Par 3]
@@ -5462,7 +5437,7 @@ RowDim=1
 Squeeze=1
 SqTrail0=0
 Order=2,1
-Decim=4
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: VAR_CAP Var 3]
@@ -5561,7 +5536,7 @@ RowDim=1
 Squeeze=1
 SqTrail0=0
 Order=1,2
-Decim=7
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: INVDEM Equ 2]
@@ -5590,15 +5565,6 @@ Squeeze=1
 SqTrail0=0
 Order=1,2,3
 Decim=3
-PlaneRownr=-1
-
-[GDXDISP: QINVX Par 5]
-PlaneDim=0
-RowDim=5
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,4,5
-Decim=7
 PlaneRownr=-1
 
 [GDXDISP: VAR_RCAP Var 4]
@@ -5748,7 +5714,7 @@ RowDim=3
 Squeeze=1
 SqTrail0=0
 Order=5,1,2,3,4
-Decim=1
+Decim=7
 PlaneRownr=-1
 PlaneFilter1=2049
 
@@ -5905,11 +5871,11 @@ PlaneRownr=-1
 
 [GDXDISP: PRC_RESID Par 3]
 PlaneDim=0
-RowDim=3
+RowDim=2
 Squeeze=1
 SqTrail0=0
-Order=1,2,3
-Decim=7
+Order=1,3,2
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: MPRCSector Set 2]
@@ -6080,9 +6046,9 @@ RowDim=3
 Squeeze=1
 SqTrail0=0
 Order=5,1,2,4,3
-Decim=0
-PlaneRownr=-1
-PlaneFilter1=FuelCosts
+Decim=1
+PlaneRownr=2
+PlaneFilter1=NewCapacity
 
 [GDXDISP: COMEXT Set 1]
 PlaneDim=0
@@ -6180,19 +6146,8 @@ RowDim=3
 Squeeze=1
 SqTrail0=0
 Order=1,2,4,3
-Decim=7
+Decim=1
 PlaneRownr=-1
-
-[GDXDISP: EBCHECK Par 7]
-PlaneDim=2
-RowDim=4
-Squeeze=1
-SqTrail0=0
-Order=4,3,2,6,1,7,5
-Decim=4
-PlaneRownr=16
-PlaneFilter1=chydr
-PlaneFilter2=IN
 
 [GDXDISP: FLOW_OUT_FSFactors Par 3]
 PlaneDim=0
@@ -6433,11 +6388,11 @@ PlaneRownr=-1
 
 [GDXDISP: QINV0 Par 2]
 PlaneDim=0
-RowDim=2
+RowDim=1
 Squeeze=1
 SqTrail0=0
 Order=1,2
-Decim=7
+Decim=2
 PlaneRownr=-1
 
 [RP:2ENERGYINIT]
@@ -6445,11 +6400,11 @@ PlaneRownr=-1
 
 [GDXDISP: QARX Par 5]
 PlaneDim=0
-RowDim=5
+RowDim=4
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,4,5
-Decim=7
+Order=1,2,3,5,4
+Decim=0
 PlaneRownr=-1
 
 [GDXDISP: QPROD Par 2]
@@ -6641,9 +6596,6 @@ Order=1,2,3,4
 Decim=7
 PlaneRownr=-1
 
-[RP:2CLOSURES]
-1=
-
 [GDXDISP: QA_FS Par 2]
 PlaneDim=0
 RowDim=1
@@ -6714,16 +6666,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[GDXDISP: EIntensity_FS Par 3]
-PlaneDim=1
-RowDim=1
-Squeeze=1
-SqTrail0=0
-Order=2,1,3
-Decim=4
-PlaneRownr=4
-PlaneFilter1=chydr
-
 [GDXDISP: E_DEM Par 4]
 PlaneDim=0
 RowDim=4
@@ -6741,22 +6683,6 @@ SqTrail0=0
 Order=1,2,3,4
 Decim=7
 PlaneRownr=-1
-
-[GDXDISP: ICAGR Par 3]
-PlaneDim=1
-RowDim=1
-Squeeze=1
-SqTrail0=0
-Order=2,1,3
-Decim=2
-PlaneRownr=33
-PlaneFilter1=afcel
-
-[RP:GHGENERGYREPORT]
-1=
-
-[RP:GHGPROCESSREPORT]
-1=
 
 [GDXDISP: COIL Set 1]
 PlaneDim=0
@@ -6778,11 +6704,11 @@ PlaneRownr=-1
 
 [GDXDISP: QQX Par 4]
 PlaneDim=0
-RowDim=4
+RowDim=3
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,4
-Decim=7
+Order=1,2,4,3
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: QT Var 1]
@@ -6793,16 +6719,6 @@ SqTrail0=0
 Order=1,2
 Decim=7
 PlaneRownr=-1
-
-[GDXDISP: ICAFSGR Par 3]
-PlaneDim=1
-RowDim=1
-Squeeze=1
-SqTrail0=0
-Order=1,2,3
-Decim=3
-PlaneRownr=-1
-PlaneFilter1=hydr
 
 [GDXDISP: mCOMC Set 2]
 PlaneDim=0
@@ -6830,11 +6746,6 @@ SqTrail0=0
 Order=1,2,3
 Decim=7
 PlaneRownr=-1
-
-[RP:1MODEL]
-1=gdx=model s=model
-2=gdx = model s = model
-3=
 
 [GDXDISP: QGX Par 4]
 PlaneDim=0
@@ -6926,16 +6837,6 @@ Order=1,2,3,4
 Decim=7
 PlaneRownr=-1
 
-[GDXDISP: ifax Par 6]
-PlaneDim=1
-RowDim=4
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,4,6,5
-Decim=2
-PlaneRownr=4
-PlaneFilter1=fcap
-
 [GDXDISP: agriprod Par 0]
 PlaneDim=0
 RowDim=0
@@ -6969,7 +6870,7 @@ RowDim=4
 Squeeze=1
 SqTrail0=0
 Order=1,2,3,5,4
-Decim=7
+Decim=0
 PlaneRownr=-1
 
 [GDXDISP: QM0 Par 2]
@@ -6999,17 +6900,6 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[GDXDISP: QINTX Par 5]
-PlaneDim=2
-RowDim=2
-Squeeze=1
-SqTrail0=0
-Order=1,5,2,3,4
-Decim=4
-PlaneRownr=35
-PlaneFilter1=cfcel
-PlaneFilter2=2050
-
 [GDXDISP: ica Par 3]
 PlaneDim=0
 RowDim=2
@@ -7034,7 +6924,7 @@ RowDim=4
 Squeeze=1
 SqTrail0=0
 Order=1,2,3,5,4
-Decim=2
+Decim=3
 PlaneRownr=-1
 
 [GDXDISP: rhoa2 Par 1]
@@ -7124,7 +7014,7 @@ RowDim=4
 Squeeze=1
 SqTrail0=0
 Order=1,2,3,5,4
-Decim=1
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: PWEGR Par 3]
@@ -7190,16 +7080,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[GDXDISP: ica0 Par 3]
-PlaneDim=1
-RowDim=2
-Squeeze=1
-SqTrail0=0
-Order=2,1,3
-Decim=7
-PlaneRownr=10
-PlaneFilter1=ahydr
-
 [GDXDISP: PVAX Par 5]
 PlaneDim=0
 RowDim=4
@@ -7211,11 +7091,11 @@ PlaneRownr=-1
 
 [GDXDISP: PAX Par 4]
 PlaneDim=0
-RowDim=4
+RowDim=3
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,4
-Decim=7
+Order=1,2,4,3
+Decim=2
 PlaneRownr=-1
 
 [GDXDISP: CET Equ 1]
@@ -7452,10 +7332,6 @@ Order=1,2,3
 Decim=7
 PlaneRownr=-1
 
-[RP:MERGERUNS]
-1=gdx = merged
-2=
-
 [RP:MERGERUNS_H]
 1=
 
@@ -7464,15 +7340,6 @@ PlaneRownr=-1
 
 [RP:EXECUTCL]
 1=
-
-[GDXDISP: REPORT_RUN Par 4]
-PlaneDim=0
-RowDim=3
-Squeeze=1
-SqTrail0=0
-Order=4,1,2,3
-Decim=0
-PlaneRownr=-1
 
 [RP:GHGAFOLUREPORT]
 1=
@@ -7493,18 +7360,6 @@ Squeeze=1
 SqTrail0=0
 Order=1,2,3,4,5
 Decim=7
-PlaneRownr=-1
-
-[RP:2TIMESREPORT]
-1=
-
-[GDXDISP: ICAX Par 6]
-PlaneDim=0
-RowDim=5
-Squeeze=1
-SqTrail0=0
-Order=1,2,3,4,6,5
-Decim=4
 PlaneRownr=-1
 
 [GDXDISP: ACES2 Set 1]
@@ -7590,9 +7445,6 @@ Order=1,2,3
 Decim=7
 PlaneRownr=-1
 
-[RP:ENERGYGOODSBUDGETALLOCATION]
-1=
-
 [GDXDISP: betam Par 2]
 PlaneDim=0
 RowDim=1
@@ -7666,9 +7518,6 @@ Decim=7
 PlaneRownr=-1
 PlaneFilter1=2014
 
-[RP:BUDGETSHARE_RECALC]
-1=
-
 [GDXDISP: YI0 Par 1]
 PlaneDim=0
 RowDim=1
@@ -7677,9 +7526,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[RP:2SIMULATION]
-1=
 
 [GDXDISP: TFX Par 4]
 PlaneDim=0
@@ -7702,13 +7548,432 @@ Order=2,3,1
 Decim=7
 PlaneRownr=-1
 
-[RP:2CAPITAL]
+[RP:KLEM_REPORT]
 1=
 
-[RP:2VARINIT]
+[GDXDISP: PM Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: thetax Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: DELAS Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: delta Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: deltaca Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PXAC Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PXACX Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QHA Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QHAX Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PARX Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,5,4
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: aaff Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AAG Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QAR Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QAR0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:ENERGYGOODSBUDGETALLOCATION]
 1=
 
-[GDXDISP: REPORTH_RUN Par 6]
+[RP:BUDGETSHARE_RECALC]
+1=
+
+[GDXDISP: ica0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=5
+PlaneRownr=-1
+
+[GDXDISP: QINVX Par 5]
+PlaneDim=2
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=5,2,1,3,4
+Decim=3
+PlaneRownr=5
+PlaneFilter1=2050
+PlaneFilter2=s-e
+
+[GDXDISP: K_AggInd Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: koption Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVBAL Equ 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVSHR Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVSHR0 Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: INVSHR0 Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: qdst Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: qdst0 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TA Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tabar Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TABS Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TIMESDIR Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TINS Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TINSADJ Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TINSADJX Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: GSAV Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GSAVGR Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GADJX Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVGR Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EmisFactor Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EmisFactorCor Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:GHGPROCESSREPORT]
+1=
+
+[RP:ESAGE_REPORT]
+1=
+
+[RP:UNTITLED_1]
+1=
+
+[GDXDISP: ACOMCUMNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AACT_COST Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACOM_AGG Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACOMCSTNET Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACOMCUMPRD Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACOMBNDNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACOMSUBNET Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACOMTAXNET Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AUC_COMNET Par 6]
 PlaneDim=0
 RowDim=6
 Squeeze=1
@@ -7717,11 +7982,721 @@ Order=1,2,3,4,5,6
 Decim=7
 PlaneRownr=-1
 
-[RP:KLEM_REPORT]
+[GDXDISP: AUC_CUMCOMNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_BNDNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_CSTNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_CUMNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_SUBNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_TAXNET Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQ_CUMNET Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQE_BNDNET Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQG_BNDNET Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQL_BNDNET Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_COMNETL Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_COMNETM Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RTC_NET Set 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: UC_COMNET Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: VAR_COMNET Var 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AACT_CUM Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACT_CUM Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AFLO_CUM Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AREGCUMCST Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AUC_CUMACT Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AUC_CUMCOMPRD Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AUC_CUMFLO Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_CUM Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_CUMPRD Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQ_CUMFLO Equ 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQ_CUMPRD Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EQ_CUMRET Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FLO_CUM Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_CUMCOML Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_CUMCOMM Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_CUMCST Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_CUMFLOL Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PAR_CUMFLOM Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RC_CUMCOM Set 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: REG_CUMCST Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RPC_CUMFLO Set 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: UC_CUMACT Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: UC_CUMCOM Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: UC_CUMFLO Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: VAR_CUMCOM Var 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: VAR_CUMCST Var 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: VAR_CUMFLO Var 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COM_CSTBAL Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[RP:UPDATE_DEMAND AND PROFILES]
 1=
 
-[RP:2SIMULATION_LOOP]
+[GDXDISP: VAR_NCAP Var 3]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=4,1,3,2
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: FLO_ASHAR Par 7]
+PlaneDim=0
+RowDim=7
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6,7
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: REPORTH_RUN Par 6]
+PlaneDim=1
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=6,1,2,4,5,3
+Decim=2
+PlaneRownr=1
+PlaneFilter1=FlowOut
+
+[GDXDISP: F_OUT Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IE Alias 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IFQ Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: WAD Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ISHR Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:FLEXTOOLREPORT]
 1=
+
+[GDXDISP: pacoalx Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CMRW Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:MERGERUNS]
+1=gdx = merged
+2=
+
+[GDXDISP: REPORT_RUN Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=4,1,2,3
+Decim=0
+PlaneRownr=-1
+PlaneFilter1=Capacity
+
+[RP:MERGERUNS_NETZERO]
+1=
+
+[GDXDISP: AFXPROJ Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QINTX Par 5]
+PlaneDim=2
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=5,2,1,3,4
+Decim=0
+PlaneRownr=20
+PlaneFilter1=2048
+PlaneFilter2=apetr
+
+[GDXDISP: FSATIMNOELEC Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:2ENERGYCHECKS]
+1=
+
+[RP:GHGENERGYREPORT]
+1=
+
+[GDXDISP: EPRICE Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=4
+PlaneRownr=-1
+
+[GDXDISP: ifa0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,3,1
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: TAX Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TAXPAR Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ARD Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MARD Set 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MFAGG Set 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QF2BASE Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: CALIB Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: QFBASE Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: HH_EI Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: HHDTAB2 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: HH_Energy Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=2,3,1,5,4
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: EBCHECK Par 7]
+PlaneDim=1
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=3,4,2,6,1,7,5
+Decim=0
+PlaneRownr=1
+PlaneFilter1=IN
+
+[RP:1MODEL]
+1=gdx=model s=model
+2=gdx = model s = model
+3=
+
+[GDXDISP: LABGRSHK Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: MFA2 Set 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: deltaa2 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: deltava Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:2CLOSURES]
+1=
+
+[GDXDISP: PVA Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
 
 [GDXDISP: QFX Par 6]
 PlaneDim=1
@@ -7731,105 +8706,214 @@ SqTrail0=0
 Order=5,2,3,4,6,1
 Decim=0
 PlaneRownr=-1
-PlaneFilter1=2050
-PlaneFilter2=afcel
+
+[RP:2SIMULATION]
+1=
+
+[GDXDISP: ifax Par 6]
+PlaneDim=1
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,6,5
+Decim=1
+PlaneRownr=4
+PlaneFilter1=fcap
+
+[GDXDISP: ivax Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,5,4
+Decim=3
+PlaneRownr=-1
+
+[RP:2TIMESREPORT]
+1=
+
+[RP:2VARINIT]
+1=
+
+[GDXDISP: ICAGR Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=3,1,2
+Decim=2
+PlaneRownr=23
+PlaneFilter1=2042
+
+[GDXDISP: ICAFSGR Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=3,1,2
+Decim=1
+PlaneRownr=23
+PlaneFilter1=2042
+
+[GDXDISP: icd Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ICAX Par 6]
+PlaneDim=1
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,6,5
+Decim=3
+PlaneRownr=47
+PlaneFilter1=chydr
+
+[GDXDISP: EIntensity_FS Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=2
+PlaneRownr=9
+PlaneFilter1=chydr
+
+[GDXDISP: IFA_0_CHECK Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:2CAPITAL]
+1=
+
+[RP:SIM101]
+1=r = 0model, gdx = sim
+2=
+3=r= 0model, gdx = test
+
+[RP:2SIMULATION_LOOP]
+1=
+
+[GDXDISP: QH0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=2
+PlaneRownr=-1
 
 [RP:SATIMGE]
-1=r=cge\model, gdx = test_wH2
-2=r=cge\model, gdx = test_preH2
-3=r=cge\model, gdx = testClean2
-4=r=cge\model, gdx = testClean
-5=r=cge\model, gdx = testClean\
-6=r=cge\model, gdx = testRef
-7=r=cge\model, gdx = CGE_NZ20_8_NoH2
-8=r=cge\model, gdx = CGE_NZ20_8_NoH2
-9=r=cge\model, gdx = CGE_NZ20_8_WE
-10=r=cge\model, gdx = CGE_NZ20_8
-11=r=cge\model, gdx = CGE_NZ20_8L1
-12=r=cge\model, gdx = CGE_NZ20_8_WEL1
-13=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2
-14=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2
-15=r=cge\model, gdx = CGE_NZ20_8_WE
-16=r=cge\model, gdx = CGE_NZ20_8_WE_NoH2L1
-17=r=cge\model, gdx = CGE_SAIIAtestbatch_L1
-18=r=cge\model, gdx = CGE_NZ20_8_WE
-19=r=cge\model, gdx = CGE_NZ20_8_WE
-20=r=cge\model, gdx = CGE_CPL20_U_NE
+1=r=cge\model, gdx = EBFix4
+2=r=cge\model, gdx = EBFix4, FW = 1
+3=r=cge\model, gdx = EBFix3
+4=r=cge\model, gdx = EBFix2
+5=r=cge\model, gdx = EBFix
+6=r=cge\model, gdx = test_wH2_v4
+7=r=cge\model, gdx = test_wH2_v3
+8=r=cge\model, gdx = test_wH2_v2
+9=r=cge\model, gdx = test_wH2
+10=r=cge\model, gdx = test_preH2
+11=r=cge\model, gdx = testClean2
+12=r=cge\model, gdx = testClean
+13=r=cge\model, gdx = testClean\
+14=r=cge\model, gdx = testRef
+15=r=cge\model, gdx = CGE_NZ20_8_NoH2
+16=r=cge\model, gdx = CGE_NZ20_8_NoH2
+17=r=cge\model, gdx = CGE_NZ20_8_WE
+18=r=cge\model, gdx = CGE_NZ20_8
+19=r=cge\model, gdx = CGE_NZ20_8L1
+20=r=cge\model, gdx = CGE_NZ20_8_WEL1
 
 [MRUFILES]
-1=C:\Models\SATIMGE\H_0RG_NZ20_8_WE.gdx
-2=C:\Models\SATIMGE\diffile.log
-3=C:\Models\SATIMGE\diffile.gdx
-4=C:\Models\SATIMGE_coalIPP\NewCoalIPP.gdx
-5=C:\Models\SATIMGE_Tsitica\CGE\model.gdx
-6=C:\Models\SATIMGE_coalIPP\NewCoalIPP-L.gdx
-7=C:\SATIMGE_02_Dec2018\CGE\model.gdx
-8=C:\Models\SATIMGE_coalIPP\CoalIPP420.gdx
+1=C:\Models\SATIMGE_Tsitica\test.gdx
+2=C:\Models\SATIMGE_coalIPP\Reference-L.gdx
+3=C:\Models\SATIMGE\H2_8_WE.gdx
+4=C:\Models\SATIMGE\SATIMGE.log
+5=C:\Models\SATIMGE\SATIM\Gams_WrkTI\CPAMSCAPIRP_TS.DDS
+6=C:\Models\SATIMGE\P4Ccases5.gdx
+7=C:\Models\SATIMGE\NoPAMS-CAP0700-L.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE_Tsitica\test.gdx
-FILE1=C:\Models\SATIMGE_Tsitica\test.gdx
+FILE0=C:\Models\SATIMGE\EBFix.gdx
+FILE1=C:\Models\SATIMGE\FlexTool\FlextoolReport.inc
+FILE2=C:\Models\SATIMGE\H_NoPamsLOP.gdx
+FILE3=C:\Models\SATIMGE\H2_8_WE2.gdx
+FILE4=C:\Models\SATIMGE\NetZeroGDXs\1HG_NZ20_7.gdx
+FILE5=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NZ-20WE-T.gdx
+FILE6=C:\Models\SATIMGE\test_wH2_v4.gdx
+FILE7=C:\Models\SATIMGE\test_wH2_v4.gdx
 MAXIM=0
-TOP=133
-LEFT=1046
-HEIGHT=1273
-WIDTH=1485
+TOP=15
+LEFT=13
+HEIGHT=1100
+WIDTH=1324
 
 [OPENWINDOW_2]
-FILE0=C:\Models\SATIMGE_Tsitica\CGE\includes\2varinit.inc
-FILE1=C:\Models\SATIMGE_Tsitica\CGE\includes\2varinit.inc
+FILE0=C:\Models\SATIMGE\CGE\1model.dat
+FILE1=C:\Models\SATIMGE\CGE\includes\2closures.inc
+FILE2=C:\Models\SATIMGE\EBFix.gdx
+FILE3=C:\Models\SATIMGE\EBFix2.gdx
+FILE4=C:\Models\SATIMGE\EBFix3.gdx
+FILE5=C:\Models\SATIMGE\H2_8_NENH.gdx
+FILE6=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
+FILE7=C:\Models\SATIMGE\test_preH2.gdx
+FILE8=C:\Models\SATIMGE\test_wH2_v2.gdx
+FILE9=C:\Models\SATIMGE\test_wH2_v3.gdx
+FILE10=C:\Models\SATIMGE\testREF.gdx
+FILE11=C:\Models\SATIMGE\EBFix3.gdx
 MAXIM=0
-TOP=147
-LEFT=2
-HEIGHT=1271
-WIDTH=1053
+TOP=10
+LEFT=8
+HEIGHT=1100
+WIDTH=1318
 
 [OPENWINDOW_3]
-FILE0=C:\Models\SATIMGE\H2_8_NENH.gdx
-FILE1=C:\Models\SATIMGE\MergeRuns_FixAgri.gms
-FILE2=C:\Models\SATIMGE\testClean2.gdx
-FILE3=C:\Models\SATIMGE\testREF.gdx
-FILE4=C:\Models\SATIMGE_coalIPP\Reference-L.gdx
-FILE5=C:\Models\SATIMGE_Tsitica\test.gdx
-FILE6=C:\Models\SATIMGE\testClean2.gdx
-MAXIM=0
-TOP=3
-LEFT=1
-HEIGHT=1100
-WIDTH=1046
-
-[OPENWINDOW_4]
 FILE0=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\includes\2capital.inc
-FILE3=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
-FILE4=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
-FILE5=C:\Models\SATIMGE\CGE\includes\2projection.inc
-FILE6=C:\Models\SATIMGE\CGE\includes\2results.inc
-FILE7=C:\Models\SATIMGE\CGE\includes\2simulation.inc
-FILE8=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-FILE9=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE10=C:\Models\SATIMGE\CGE\includes\BudgetShare_Recalc.inc
-FILE11=C:\Models\SATIMGE\CGE\includes\EnergyGoodsBudgetAllocation.inc
-FILE12=C:\Models\SATIMGE\H2_8_All.gdx
-FILE13=C:\Models\SATIMGE\H2_8_WE.gdx
-FILE14=C:\Models\SATIMGE\H2_8_WE2.gdx
-FILE15=C:\Models\SATIMGE\KLEM\KLEM_Report.inc
-FILE16=C:\Models\SATIMGE\merged.gdx
-FILE17=C:\Models\SATIMGE\MergeRuns.gms
-FILE18=C:\Models\SATIMGE\MergeRuns_H.gms
-FILE19=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
-FILE20=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
-FILE21=C:\Models\SATIMGE\SATIMGE.gms
-FILE22=C:\Models\SATIMGE\SATIMGE.lst
-FILE23=C:\Models\SATIMGE\test_preH2.gdx
-FILE24=C:\Models\SATIMGE\testClean.gdx
-FILE25=C:\Models\SATIMGE\testClean2.gdx
-FILE26=C:\Models\SATIMGE_Tsitica\CGE\includes\2simulation_loop.inc
-FILE27=C:\Models\SATIMGE_Tsitica\CGE\includes\2varinit.inc
-FILE28=C:\Models\SATIMGE\SATIMGE.lst
+FILE3=C:\Models\SATIMGE\CGE\includes\2energychecks.inc
+FILE4=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
+FILE5=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
+FILE6=C:\Models\SATIMGE\CGE\includes\2projection.inc
+FILE7=C:\Models\SATIMGE\CGE\includes\2results.inc
+FILE8=C:\Models\SATIMGE\CGE\includes\2simulation.inc
+FILE9=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+FILE10=C:\Models\SATIMGE\CGE\includes\2varinit.inc
+FILE11=C:\Models\SATIMGE\CGE\includes\BudgetShare_Recalc.inc
+FILE12=C:\Models\SATIMGE\CGE\includes\EnergyGoodsBudgetAllocation.inc
+FILE13=C:\Models\SATIMGE\CGE\includes\eSAGE_Report.inc
+FILE14=C:\Models\SATIMGE\CGE\model.gdx
+FILE15=C:\Models\SATIMGE\EBFix.gdx
+FILE16=C:\Models\SATIMGE\EBFix2.gdx
+FILE17=C:\Models\SATIMGE\EBFix4.gdx
+FILE18=C:\Models\SATIMGE\H2_8_All.gdx
+FILE19=C:\Models\SATIMGE\H2_8_WE2.gdx
+FILE20=C:\Models\SATIMGE\merged.gdx
+FILE21=C:\Models\SATIMGE\MergeRuns.lst
+FILE22=C:\Models\SATIMGE\MergeRuns_H.gms
+FILE23=C:\Models\SATIMGE\NetZeroGDXs\0RG_NOPAMS_REF.gdx
+FILE24=C:\Models\SATIMGE\NetZeroGDXs\0RG_NZ20_REF.gdx
+FILE25=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NZ-20WE-T.gdx
+FILE26=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE27=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE28=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE29=C:\Models\SATIMGE\SATIMGE.gms
+FILE30=C:\Models\SATIMGE\SATIMGE.lst
+FILE31=C:\Models\SATIMGE\test_wH2.gdx
+FILE32=C:\Models\SATIMGE\NetZeroGDXs\0RG_NZ20_REF.gdx
 MAXIM=0
-TOP=9
-LEFT=939
-HEIGHT=1100
-WIDTH=1500
+TOP=-15
+LEFT=254
+HEIGHT=1099
+WIDTH=786

@@ -22,26 +22,21 @@ PARAMETER
 ;
 
 SET
- REMEXP(C)       remove exports with small shares  /
-*fh 25062019 cut off of 0.1% used. some kept due to importance
-*fh 25062019         CWATR, CCONS, CTRAD, CGSRV
-* cngas,
-cftrp-o, cfore, cwatr, cgsrv, ccons, ctrps, cfoot, cafee
-         /
- REMIMP(C)       remove imports with small shares  /
-*fh 25062019 cut off of 0.1% used. some kept due to importance
-*fh 25062019         CWATR, CCONS, CTRAD, CGSRV
-cfish, cfore, cwatr, cgsrv, ccomm, ccons, ccoal-low, chydr, cpetr-h, cpetr-k, cpetr-l
-        /
- REEXPORT(C)     remove imports with re-export problem  /
+ REMEXP(C)       remove exports with small shares
+ / cafee, casug, cgsrv /
 
-         /
- CERES(C)        Commodities with perfect substitution for exports  /
-          CELEC
-         /
- CMRES(C)        Commodities with perfect substitution for imports  /
+ REMIMP(C)       remove imports with small shares
+ / ccoal-low, catub, casug, cgsrv /
 
-         /
+ REEXPORT(C)     remove imports with re-export problem
+ /          /
+
+ CERES(C)        Commodities with perfect substitution for exports
+ / celec, ccoal-low, chydr/
+
+ CMRES(C)        Commodities with perfect substitution for imports
+ / /
+
  CEFIX(C)    Commodities with fixed exports (should be subset of CERES)
  CMFIX(C)    Commodities with fixed imports (should be subset of CMRES)
 
