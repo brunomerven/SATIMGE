@@ -42,12 +42,12 @@ $include cge\includes\2varinit.inc
 
          PUT 'PARAMETER ACOM_PROJ /' /;
 
-         LOOP((DEM1,TC),
-                 EFVAL = SIM_DEMX(DEM1,TC);
+         LOOP((DEM1,TTIMES),
+                 EFVAL = SIM_DEMX(DEM1,TTIMES);
                  if(EFVAL,
-                         PUT "REGION1.", DEM1.TL, ".", TC.TL, EFVAL /;
+                         PUT "REGION1.", DEM1.TL, ".", TTIMES.TL, EFVAL /;
                  else
-                         PUT "REGION1.", DEM1.TL, ".", TC.TL, "eps" /;
+                         PUT "REGION1.", DEM1.TL, ".", TTIMES.TL, "eps" /;
 
                  );
          );
