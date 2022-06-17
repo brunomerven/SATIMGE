@@ -216,7 +216,9 @@ $offtext
 
 * make adjustments to ica
 *@
-    ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
+*  ica('chydr',A,'NAT')$(HCAP(XC,TC-1,TT) LT 0.1) = ica('chydr',A,'NAT')*0.5;
+
+  ica('chydr','aelec','NAT')$(EIntensity_FS('elec','chydr',TC-1) LT 0.0001 and EIntensity_FS('elec','chydr',TC) GT 0.0001)
                      = EIntensity_FS('elec','chydr',TC);
     ica('chydr',A,'NAT')$(SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC-1)) LT 0.0001 and SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC)) GT 0.0001 AND ica0('chydr',A,'NAT'))
                          = SUM(FSXEP$MFSA(FSXEP,A),EIntensity_FS(FSXEP,'chydr',TC));
@@ -277,9 +279,9 @@ $offtext
 
 
 * setting electrolyser input (empirically) - this could be made more elegant later
-    ica('celct','ahydr','NAT')$(ord(TC) gt 5) = max(0.04,ica('celct','ahydr','NAT') *0.1);
+*@    ica('celct','ahydr','NAT')$(ord(TC) gt 5) = max(0.04,ica('celct','ahydr','NAT') *0.1);
 * 19 is the base year price of electrolysers
-    ica('celct','ahydr','NAT')$(TVNCAP(TC,'UELEP1HGN') gt 0.15) = max(0.04,TVNCAP(TC,'UELEP1HGN')*19/FLOW_OUT_FSFuels('hydr','chydr',TC));
+*@    ica('celct','ahydr','NAT')$(TVNCAP(TC,'UELEP1HGN') gt 0.15) = max(0.04,TVNCAP(TC,'UELEP1HGN')*19/FLOW_OUT_FSFuels('hydr','chydr',TC));
 
 
 
@@ -412,8 +414,13 @@ $offtext
 
 
 * Hydrogen Sector
-    AFX('AHYDR',RD) = YES;
-    AFLEO('AHYDR') = YES;
+    AFX('AHYDR',RD)$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
+    AFLEO('AHYDR')$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
+
+*    AFX('AHYDR',RD) = YES;
+*    AFLEO('AHYDR') = YES;
+
+
 
 *@
 *    AFLEO('AHYDR') = no;
@@ -526,8 +533,8 @@ $include cge\includes\EnergyGoodsBudgetAllocation.inc
 
 
 *bm to recalc household budget shares
-IF(ord(TC)>5,
-*@ $include cge\includes\BudgetShare_Recalc.inc
+IF(ord(TC)>4,
+$include cge\includes\BudgetShare_Recalc.inc
 );
 
 
@@ -559,7 +566,8 @@ IF(ord(TC)>5,
   SOLVE standcge USING MCP ;
 
   fail$(standcge.modelstat ne 1)=1;
-  abort$(abs(walras.l) gt .001 AND NOT fail) "Walras' law lost", walras.l;
+* @bm was 0.001
+  abort$(abs(walras.l) gt .01 AND NOT fail) "Walras' law lost", walras.l;
 
 *CATemp make GAMS stop at or near error for debugging
 *      fail$(ord(tt) eq 1 AND ord(tc) eq 1)=1;
