@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	03 Oct 2021	16:40:14
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+Creation Date:	23 Jun 2022	13:20:13
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND_PAMH	Industry shortened ts - PAM high ambition	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -25,6 +25,22 @@ ITEMS	REGION1
 	C	UC-INM-KSPP-T2	Act. constraint for Industry - NMM Sector - Kiln SP Precalciner - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KSP-T1	Act. constraint for Industry - NMM Sector - Kiln Suspension Preheater - EE Tech Level 1	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-INM-KSP-T2	Act. constraint for Industry - NMM Sector - Kiln Suspension Preheater - EE Tech Level 2	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-CEM	Act. constraint for industry - IPP sector - Chemical pulping	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-CEM-T1	Act. constraint for industry - IPP sector - Chemical pulping - Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-CEM-T2	Act. constraint for industry - IPP sector - Chemical pulping - Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-DIS	Act. constraint for industry - IPP sector - Dissolving pulp	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-DIS-T1	Act. constraint for industry - IPP sector - Dissolving pulp - Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-DIS-T2	Act. constraint for industry - IPP sector - Dissolving pulp - Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-MCH	Act. constraint for industry - IPP sector - Mechanical pulping	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-MCH-T1	Act. constraint for industry - IPP sector - Mechanical pulping - Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-MCH-T2	Act. constraint for industry - IPP sector - Mechanical pulping - Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-PAP	Act. constraint for industry - IPP sector - All Paper Mills	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-PAP-T1	Act. constraint for industry - IPP sector - Paper Mills - Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-PAP-T2	Act. constraint for industry - IPP sector - Paper Mills - Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-REC	Act. constraint for industry - IPP sector - Recovere paper pulp	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPPREC-MAX	Act. constraint for industry - IPP sector - Max share of recovered paper	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-RECT1	Act. constraint for industry - IPP sector - Recovered paper pulp - Tech level 1	uconstraint	UC_N,UCRT,UCRULE	
+	C	UC-IPP-REC-T2	Act. constraint for industry - IPP sector - Recovered paper pulp - Tech level 2	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF	Act. constraint for Industry - Iron&Steel - SCREAF	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF-MAX	Act. constraint for Industry - Iron&Seel - SCREAF - Max Share	uconstraint	UC_N,UCRT,UCRULE	
 	C	UC-SCREAF-MIN	Act. constraint for Industry - Iron&Seel - SCREAF - Minimum Share	uconstraint	UC_N,UCRT,UCRULE	
@@ -97,7 +113,7 @@ ITEMS	REGION1
 	E	ICPO	Industry-Chemicals-Other motive - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPP	Industry-Chemicals-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	ICPS	Industry-Chemicals-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
-	E	ICPT	Industry-Chemicals-Ancillary - Gas - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPT	Industry-Chemicals-Ancillary - Gas Material Use - Existing	PJ	COM,DEM,ANNUAL,RES	
 	E	IDUM	Dummy commodity	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IFACR	Industry - Ferro Alloy Metals production	PJ	COM,DEM,ANNUAL,RES	
 	E	IFAELC	Industry-FA-Electricity	PJ	COM,NRG,DAYNITE,ELC	
@@ -160,7 +176,7 @@ ITEMS	REGION1
 	E	INDN2O	Industry - Nitrous Oxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMV	Industry - NMVOCs	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOX	Industry - Nitrogen Gases	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry - Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry - Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDPM10	Industry - PM10	KT	COM,ENV,ANNUAL,GHG	
@@ -169,7 +185,7 @@ ITEMS	REGION1
 	E	INFA	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFC	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFE	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
-	E	INFELC	Industry - NonFerrous - Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	INFELC	Industry-NF-Electricity	PJ	COM,NRG,DAYNITE,ELC	
 	E	INFF	Industry-Precious & Non-Ferrous metals-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
 	E	INFGAS	Industry-NF-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INFH	Industry-Precious & Non-Ferrous metals-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
@@ -243,7 +259,7 @@ ITEMS	REGION1
 	T	ICPSOHF-E	Industry-Chemicals-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	ICPSOLP-E	Industry-Chemicals-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	ICPSWAS-E	Industry-Chemicals-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
-	T	ICPTGAS-E	Industry-Chemicals-Ancillary - Gas - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPTGMU-E	Industry-Chemicals-Ancillary - Gas Material Use - Existing	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IFBAELC-E	Industry-Food, Beverage & Tabacco-Compressed air - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IFBCELC-E	Industry-Food, Beverage & Tabacco-Cooling - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IFBEELC-E	Industry-Food, Beverage & Tabacco-Electrochemical - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
@@ -416,41 +432,42 @@ ITEMS	REGION1
 	T	PEXGDRI	Export of Green DR Iron	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXPGM	Export PGMs - Pt	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXPGMO	Export PGMs - Others	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XICPGMU	Industrial CP-Material use Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIFAGAS	Industrial FA-Gas	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIFBGAS	Industrial FB-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISBIO	Industry - Iron and Steel - Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCKC	Industry - Iron and Steel - Coking Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISCOA	Industry - Iron and Steel - Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIISELCHY	Industry electricity to HDRI facility	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XIISGAS	Industry - Iron and Steel - Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOIL	Industry - Iron and Steel - Oil	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISOLP	Industry - Iron and Steel - Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIISSSC	Industry - Iron and Steel - Steel Scrap	mt,mt/a	PRC,PRE,ANNUAL	
 	T	XIISWAS	Industry - Iron and Steel - Waste (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIMIGAS	Industrial MI-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDBIO	Industry Biochar	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XINFGAS	Industrial NF-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMBIO	Industry - NMM- Biomass (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLCOA	Industry - NMM- Cement and lime Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLGAS	Industry - NMM- Cement and lime Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCLOIL	Industry - NMM- Cement and lime Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMCOA	Industry - NMM- Coal (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XINMGAS	Industry - NMM- Gas (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINMOIL	Industry - NMM- Oil (dummy)	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPGM	To local demand	PJ,PJa	PRC,DMD,ANNUAL	
 	T	XIPPBIO	Industry - IPP - Biomass	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPCOA	Industry - IPP - Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	XIPPGAS	Industry - IPP - Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPOTH	Industry - IPP - HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XIPPREC	Industry - PP - Source of recovery paper	PJ,PJa	PRC,PRE,ANNUAL	
@@ -467,11 +484,11 @@ TS DATA	REGION1
 	ACT_BND	IPPMCH-E	-	-	-	ANNUAL	FX	-1	null	null	null	null	null	0.208389487468815	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPPAP-E	-	-	-	ANNUAL	FX	-1	null	null	null	null	null	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IPPREC-E	-	-	-	ANNUAL	FX	-1	null	null	null	null	null	1.218	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	IPPSTMBIO-E	-	-	-	ANNUAL	LO	0	2.41867930368711	null	null	null	null	2.41867930368711	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	IPPSTMBLQ-E	-	-	-	ANNUAL	LO	0	23.3132658120751	null	null	null	null	23.3132658120751	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	IPPSTMCOA-E	-	-	-	ANNUAL	LO	0	40.878	null	null	null	null	40.878	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	IPPSTMCOAOIL	-	-	-	ANNUAL	LO	0	8.66858287657997	null	null	null	null	8.66858287657997	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	IPPSTMGAS-E	-	-	-	ANNUAL	LO	0	0.639715022044026	null	null	null	null	0.639715022044026	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IPPSTMBIO-E	-	-	-	ANNUAL	LO	0	2.2	null	null	null	null	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IPPSTMBLQ-E	-	-	-	ANNUAL	LO	0	25	null	null	null	null	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IPPSTMCOA-E	-	-	-	ANNUAL	LO	0	15	null	null	null	null	15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IPPSTMCOAOIL	-	-	-	ANNUAL	LO	0	6	null	null	null	null	6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	IPPSTMGAS-E	-	-	-	ANNUAL	LO	0	2.40773814204403	null	null	null	null	2.40773814204403	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXPGM	-	-	-	ANNUAL	FX	3	124.699523921318	130.711316201685	84.0216948708969	133.925466938125	127.711316201685	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXPGM	-	-	-	ANNUAL	LO	0	null	null	null	null	null	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	null	125.306599289538	null	null	null	null	null	null	null	null	null	null	null	125.306599289538	null	null	
 	ACT_BND	PEXPGMO	-	-	-	ANNUAL	FX	3	101.300476078682	105.288683798315	74.9783051291031	110.074533061875	105.288683798315	103.693400710462	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -531,7 +548,7 @@ TS DATA	REGION1
 	ACT_EFF	ICPSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
 	ACT_EFF	ICPSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
 	ACT_EFF	ICPSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
-	ACT_EFF	ICPTGAS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	ICPTGMU-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	IFBAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	6.06060606060606E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	null	null	null	7.69230769230769E-02	null	7.69230769230769E-02	null	null	
 	ACT_EFF	IFBCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2.42424242424242	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	null	null	null	3.07692307692308	null	3.07692307692308	null	null	
 	ACT_EFF	IFBEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.921212121212121	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	null	null	null	1.16923076923077	null	1.16923076923077	null	null	
@@ -612,20 +629,21 @@ TS DATA	REGION1
 	ACT_EFF	IOTSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
 	ACT_EFF	IOTSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
 	ACT_EFF	IPPELCSTM-E	-	ACTGRP	-	ANNUAL	-	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMBIO-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMBIO-N	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMBLQ-E	-	ACTGRP	-	ANNUAL	-	0	0.563258437428926	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMBLQ-N	-	ACTGRP	-	ANNUAL	-	0	0.563258437428926	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMCOA-N	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMCOAOIL	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	IPPSTMGAS-N	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBIO-E	-	ACTGRP	-	ANNUAL	-	0	0.655163420572744	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBIO-N	-	ACTGRP	-	ANNUAL	-	0	0.655163420572744	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBLQ-E	-	ACTGRP	-	ANNUAL	-	0	0.604010654244318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMBLQ-N	-	ACTGRP	-	ANNUAL	-	0	0.604010654244318	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.330250990752972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMCOA-N	-	ACTGRP	-	ANNUAL	-	0	0.330250990752972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMCOAOIL	-	ACTGRP	-	ANNUAL	-	0	0.481962226270197	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.55391979116996	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IPPSTMGAS-N	-	ACTGRP	-	ANNUAL	-	0	0.55391979116996	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	PEXGDRI	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	PEXPGM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	PEXPGMO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XICPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPGMU	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIFAGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XIFBELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -646,6 +664,8 @@ TS DATA	REGION1
 	ACT_EFF	XINFGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINMBIO	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINMCLCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMCLGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMCLOIL	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINMCOA	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINMELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINMGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -660,7 +680,7 @@ TS DATA	REGION1
 	ACT_EFF	XIPPOTH	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IFCEAF-E	-	-	-	-	UP	0	4.857	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IFMEAF-E	-	-	-	-	UP	0	0.6849	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	CAP_BND	IPGMME-E	-	-	-	-	UP	3	288.888888888889	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	CAP_BND	IPGMME-E	-	-	-	-	UP	3	305.882352941176	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IPPCHE-E	-	-	-	-	UP	3	1.0643442529852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IPPCHE-E-T1	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	IPPCHE-E-T2	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -687,7 +707,7 @@ TS DATA	REGION1
 	COM_PROJ	-	ICPO	-	-	-	-	0	4.45181305559694	null	null	null	null	6.47344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	11.32852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	19.3071684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	ICPT	-	-	-	-	0	39.0040000305176	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPT	-	-	-	-	0	26.6	null	null	null	null	26.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFACR	-	-	-	-	0	3.484	3.484	3.484	3.484	3.484	3.484	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFAMN	-	-	-	-	0	0.4587	null	null	null	null	0.4587	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBA	-	-	-	-	0	3.19316332629067E-02	null	null	null	null	0.029904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -699,7 +719,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IFBL	-	-	-	-	0	0.2394872494718	null	null	null	null	0.22428	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBO	-	-	-	-	0	2.68225719408416	null	null	null	null	2.511936	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IFBP	-	-	-	-	0	3.57634292544555	null	null	null	null	3.349248	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IFBS	-	-	-	-	0	20.4218620324183	null	null	null	null	13.3946304	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBS	-	-	-	-	0	20.4218620324183	null	null	null	null	40.5447471773438	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IISCRS	-	-	-	-	0	6.94	7.1	6.5	6.4	6.091	6.23	6.3	6.12679748375827	5.0030232389252	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIA	-	-	-	-	0	0.993180581182697	null	null	null	null	0.719395700197653	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIC	-	-	-	-	0	17.3532402590831	null	null	null	null	12.5695635450455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -711,7 +731,7 @@ TS DATA	REGION1
 	COM_PROJ	-	IMIO	-	-	-	-	0	28.8949768078483	null	null	null	null	20.9296501227637	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIP	-	-	-	-	0	15.2945172722485	null	null	null	null	11.0783579247511	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	25.4063510252505	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	24.5131771912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	25.2331771912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFA	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFC	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	6.88305244224678	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -721,7 +741,7 @@ TS DATA	REGION1
 	COM_PROJ	-	INFL	-	-	-	-	0	0.200368764631049	null	null	null	null	3.01888265010824E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFO	-	-	-	-	0	3.74021693977959	null	null	null	null	0.563524761353538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INFP	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	INFS	-	-	-	-	0	2.487856608	null	null	null	null	0.65368	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFS	-	-	-	-	0	2.487856608	null	null	null	null	1.91152	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INMBRI	-	-	-	-	0	3.296	4.559	5.8221	7.0851	8.3482	9.611178437	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INMCEM	-	-	-	-	0	14.27	14.368	14.466	14.564	14.662	14.7599608803003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	INMGLA	-	-	-	-	0	1.27	1.24848712	1.22697424	1.20546136	1.18394848	1.1624356	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -736,8 +756,8 @@ TS DATA	REGION1
 	COM_PROJ	-	IOTO	-	-	-	-	0	12.3044909233109	null	null	null	null	6.670806912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTP	-	-	-	-	0	4.33691353748451	null	null	null	null	2.351232	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	68.3095008	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	IPGMD	-	-	-	-	0	28	28	29	32	31	31	null	null	null	null	null	null	null	null	null	null	null	null	31	null	null	null	null	null	null	null	null	null	null	null	31	null	null	
+	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	68.5334208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IPGMD	-	-	-	-	0	28	28	29	32	31	31	30.8220386641652	30.4259491706145	null	null	null	null	null	null	null	null	null	null	31	null	null	null	null	null	null	null	null	null	null	null	31	null	null	
 	COM_PROJ	-	IPPPAP	-	-	-	-	0	2.18006	2.18006	2.18006	2.18006	2.18006	2.18006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	IPPPULPD	-	-	-	-	0	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	0.659107198066639	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	IALPOT	CF4	IALM	-	ANNUAL	-	0	0.410167605050004	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -795,26 +815,14 @@ TS DATA	REGION1
 	FLO_EMIS	XINMCLCOA	INDNMVS	INMCLCOA	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XINMCLCOA	INDNOXS	INMCLCOA	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	XINMCLCOA	INDSOXS	INMCLCOA	-	ANNUAL	-	0	0.6262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLGAS	CH4SF	INMCLGAS	-	ANNUAL	-	0	0.07	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLGAS	INDCH4S	INMCLGAS	-	ANNUAL	-	0	0.001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLGAS	INDCMOX	INMCLGAS	-	ANNUAL	-	0	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLGAS	INDN2OS	INMCLGAS	-	ANNUAL	-	0	0.0001	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLGAS	INDNMVS	INMCLGAS	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLGAS	INDNOXS	INMCLGAS	-	ANNUAL	-	0	0.15	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLOIL	INDCH4S	INMCLOIL	-	ANNUAL	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLOIL	INDCMOX	INMCLOIL	-	ANNUAL	-	0	0.01	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLOIL	INDN2OS	INMCLOIL	-	ANNUAL	-	0	0.0006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLOIL	INDNMVS	INMCLOIL	-	ANNUAL	-	0	0.005	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLOIL	INDNOXS	INMCLOIL	-	ANNUAL	-	0	0.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	XINMCLOIL	INDSOXS	INMCLOIL	-	ANNUAL	-	0	1.5291	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISBFBOF-E	-	CGBFBOF-E-O	CGBFBOF-E-I	ANNUAL	-	0	21.4006916923111	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	15.6052419019832	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	3	19.7	null	null	null	null	16.4265704231402	null	null	null	null	null	null	null	null	null	null	null	null	15.6052419019832	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISBFBOF-E	-	CGBFBOF-E-O	CGBFBOF-E-I	ANNUAL	-	0	21.4006916923111	null	null	null	null	19.7314649935525	null	null	null	null	null	null	null	null	null	null	null	null	18.7448917438749	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISBFBOF-N	-	CGBFBOF-N-O	CGBFBOF-N-I	ANNUAL	-	3	19.7	null	null	null	null	19.7314649935525	null	null	null	null	null	null	null	null	null	null	null	null	18.7448917438749	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOREAF-E	-	CGCOREAF-E-O	CGCOREAF-E-I	ANNUAL	-	0	21.5145885271352	null	null	null	null	22.1516761723534	null	null	null	null	null	null	null	null	null	null	null	null	21.0440923637357	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOV	-	IISCKE	IISCKC	ANNUAL	-	0	1.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISCOV	-	IISCOG	IISCKE	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-E	-	CGDRIEAF-E-O	CGDRIEAF-E-I	ANNUAL	-	0	31.2479501991702	null	null	null	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	26.3566328723283	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-NC	-	CGDRIEAF-N-O	CGDRIEAF-N-I	ANNUAL	-	3	20.3	null	null	20.3	null	27.7438240761351	null	null	null	null	null	null	null	null	null	null	null	null	26.3566328723283	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_FUNC	IISDRIEAF-NG	-	CGDRIEAF-NG-O	CGDRIEAF-NG-I	ANNUAL	-	3	14.6	null	null	14.6	null	22.1950592609081	null	null	null	null	null	null	null	null	null	null	null	null	21.0853062978627	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-E	-	CGDRIEAF-E-O	CGDRIEAF-E-I	ANNUAL	-	0	31.2479501991702	null	null	null	null	29.2855290330727	null	null	null	null	null	null	null	null	null	null	null	null	27.8212525814191	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-NC	-	CGDRIEAF-N-O	CGDRIEAF-N-I	ANNUAL	-	3	20.3	null	null	20.3	null	29.2855290330727	null	null	null	null	null	null	null	null	null	null	null	null	27.8212525814191	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_FUNC	IISDRIEAF-NG	-	CGDRIEAF-NG-O	CGDRIEAF-NG-I	ANNUAL	-	3	14.6	null	null	14.6	null	23.4284232264582	null	null	null	null	null	null	null	null	null	null	null	null	22.2570020651353	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISHDRIEAF-N	-	CGIISHHDRIEAF-N-O	CGIISHHDRIEAF-N-I	ANNUAL	-	0	3.71	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISHHGNSTOR-N	-	IISHHGN	IISHHELC	ANNUAL	-	0	0.03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_FUNC	IISOTHEAF-E	-	CGOTHEAF-E-O	CGOTHEAF-E-I	ANNUAL	-	0	37.0743751747228	null	null	null	null	44.655	null	null	null	null	null	null	null	null	null	null	null	null	42.42225	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -853,18 +861,18 @@ TS DATA	REGION1
 	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	ICPSWAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	ICPSWAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	FLO_MARK	ICPTGAS-E	ICPT	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	ICPTGAS-E	ICPT	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	LO	0	0.813009069087021	null	null	null	null	0.769706881945768	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	UP	0	0.813009069087021	null	null	null	null	0.77748169893512	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IFBSELC-E	IFBS	-	-	-	LO	0	1.18833636429848E-02	null	null	null	null	1.67976039114898E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSELC-E	IFBS	-	-	-	UP	0	1.18833636429848E-02	null	null	null	null	1.69672766782725E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.511883363642985	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	ICPTGMU-E	ICPT	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPTGMU-E	ICPT	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0.600669672287633	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0.606737042714781	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	LO	0	0.813009069087021	null	null	null	null	0.254285447999073	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	UP	0	0.813009069087021	null	null	null	null	0.256853987877851	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSELC-E	IFBS	-	-	-	LO	0	1.18833636429848E-02	null	null	null	null	5.54936734506826E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSELC-E	IFBS	-	-	-	UP	0	1.18833636429848E-02	null	null	null	null	5.60542156067501E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.511883363642985	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IFBSELC-N	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IFBSELC-N	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	0.6	null	0.6	null	null	
-	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	LO	0	0.106538120595772	null	null	null	null	0.203495514142742	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	UP	0	0.106538120595772	null	null	null	null	0.205551024386608	null	null	null	null	null	null	null	null	null	null	null	null	0.606538120595772	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	LO	0	0.106538120595772	null	null	null	null	0.129495512368226	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	UP	0	0.106538120595772	null	null	null	null	0.130803547846693	null	null	null	null	null	null	null	null	null	null	null	null	0.606538120595772	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IFBSHGN-N	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IFBSHGN-N	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IFBSOHF-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -877,28 +885,28 @@ TS DATA	REGION1
 	FLO_MARK	IMIRELC-E	IMIR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMIRODS-E	IMIR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.986049511716385	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMISCOA-E	IMIS	-	-	-	UP	0	0.991272516553951	null	null	null	null	0.996009607794329	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.957913710859592	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISCOA-E	IMIS	-	-	-	UP	0	0.991272516553951	null	null	null	null	0.967589606928881	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISELC-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISELC-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.84	null	0.84	null	null	
 	FLO_MARK	IMISELC-N	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISELC-N	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0.06	null	0.06	null	null	
-	FLO_MARK	IMISGAS-E	IMIS	-	-	-	LO	0	8.7274834460486E-03	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMISGAS-E	IMIS	-	-	-	UP	0	8.7274834460486E-03	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.508727483446049	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISGAS-E	IMIS	-	-	-	LO	0	8.7274834460486E-03	null	null	null	null	2.82485235449695E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISGAS-E	IMIS	-	-	-	UP	0	8.7274834460486E-03	null	null	null	null	2.85338621666358E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.508727483446049	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISHGN-N	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISHGN-N	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISOHF-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISOHF-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IMISOLP-E	IMIS	-	-	-	LO	0	0	null	null	null	null	3.95048828361443E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IMISOLP-E	IMIS	-	-	-	UP	0	0	null	null	null	null	3.99039220567114E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISOLP-E	IMIS	-	-	-	LO	0	0	null	null	null	null	3.83776559543886E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISOLP-E	IMIS	-	-	-	UP	0	0	null	null	null	null	3.8765309044837E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IMISWAS-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IMISWAS-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	FLO_MARK	INFSCOA-E	INFS	-	-	-	LO	0	0.304867654173098	null	null	null	null	0.437146004161057	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	INFSCOA-E	INFS	-	-	-	UP	0	0.304867654173098	null	null	null	null	0.441561620364704	null	null	null	null	null	null	null	null	null	null	null	null	0.804867654173098	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSCOA-E	INFS	-	-	-	LO	0	0.304867654173098	null	null	null	null	0.149490248597974	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSCOA-E	INFS	-	-	-	UP	0	0.304867654173098	null	null	null	null	0.151000251109065	null	null	null	null	null	null	null	null	null	null	null	null	0.804867654173098	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	INFSELC-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	INFSELC-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	INFSGAS-E	INFS	-	-	-	LO	0	0.695132345826902	null	null	null	null	0.552853995838943	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	INFSGAS-E	INFS	-	-	-	UP	0	0.695132345826902	null	null	null	null	0.558438379635296	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSGAS-E	INFS	-	-	-	LO	0	0.695132345826902	null	null	null	null	0.840509751402026	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSGAS-E	INFS	-	-	-	UP	0	0.695132345826902	null	null	null	null	0.848999748890935	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	INFSOHF-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	INFSOHF-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	INFSOLP-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -921,14 +929,14 @@ TS DATA	REGION1
 	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
-	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.942754715607583	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	UP	0	0.683020215882088	null	null	null	null	0.95227749051271	null	null	null	null	null	null	null	null	null	null	null	null	0.95227749051271	null	null	null	null	null	null	null	null	null	0.95227749051271	null	0.95227749051271	null	null	
-	FLO_MARK	IOTSELC-E	IOTS	-	-	-	LO	0	4.30080338432179E-03	null	null	null	null	2.4901747195904E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	2.51532799958626E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.1	null	null	null	null	null	null	null	null	null	0.3	null	0.3	null	null	
+	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.939674442750127	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	UP	0	0.683020215882088	null	null	null	null	0.949166103788008	null	null	null	null	null	null	null	null	null	null	null	null	0.949166103788008	null	null	null	null	null	null	null	null	null	0.949166103788008	null	0.949166103788008	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	LO	0	4.30080338432179E-03	null	null	null	null	2.48203854432435E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	2.50710964073166E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.1	null	null	null	null	null	null	null	null	null	0.3	null	0.3	null	null	
 	FLO_MARK	IOTSELC-N	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSELC-N	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	0.6	null	0.6	null	null	
-	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	LO	0	0.124175827045132	null	null	null	null	4.47551096728261E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	UP	0	0.124175827045132	null	null	null	null	4.52071814877031E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.624175827045132	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	LO	0	0.124175827045132	null	null	null	null	4.78435187055481E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	UP	0	0.124175827045132	null	null	null	null	4.83267865712607E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.624175827045132	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSHGN-E	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSHGN-E	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSOHF-E	IOTS	-	-	-	LO	0	0.114264904866746	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -937,22 +945,22 @@ TS DATA	REGION1
 	FLO_MARK	IOTSOLP-E	IOTS	-	-	-	UP	0	7.42382488217117E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.574238248821712	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	FLO_SHAR	IISBFBOF-E	IISCKE	CGBFBOF-E-I	-	ANNUAL	LO	3	0.42194897855775	null	null	null	null	0.540330901941921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.32194897855775	null	null	
-	FLO_SHAR	IISBFBOF-E	IISCKE	CGBFBOF-E-I	-	ANNUAL	UP	3	0.42194897855775	null	null	null	null	0.54573421096134	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-E	IISCOA	CGBFBOF-E-I	-	ANNUAL	LO	3	0.20494664672805	null	null	null	null	0.263610538748244	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-E	IISCOA	CGBFBOF-E-I	-	ANNUAL	UP	3	0.20494664672805	null	null	null	null	0.266246644135727	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.30494664672805	null	null	
-	FLO_SHAR	IISBFBOF-E	IISELC	CGBFBOF-E-I	-	ANNUAL	FX	3	0.138018515232024	null	null	null	null	0.127822068804234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-E	IISGAS	CGBFBOF-E-I	-	ANNUAL	LO	3	0.235085859482175	null	null	null	null	3.20551672155322E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-E	IISGAS	CGBFBOF-E-I	-	ANNUAL	UP	3	0.235085859482175	null	null	null	null	3.23757188876875E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.335085859482175	null	null	
+	FLO_SHAR	IISBFBOF-E	IISCKE	CGBFBOF-E-I	-	ANNUAL	LO	3	0.42194897855775	null	null	null	null	0.449828921240673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISCKE	CGBFBOF-E-I	-	ANNUAL	UP	3	0.42194897855775	null	null	null	null	0.45432721045308	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISCOA	CGBFBOF-E-I	-	ANNUAL	LO	3	0.20494664672805	null	null	null	null	0.219457454398085	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISCOA	CGBFBOF-E-I	-	ANNUAL	UP	3	0.20494664672805	null	null	null	null	0.221652028942066	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISELC	CGBFBOF-E-I	-	ANNUAL	FX	3	0.138018515232024	null	null	null	null	0.106412687326071	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISGAS	CGBFBOF-E-I	-	ANNUAL	LO	3	0.235085859482175	null	null	null	null	0.194179754689058	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISGAS	CGBFBOF-E-I	-	ANNUAL	UP	3	0.235085859482175	null	null	null	null	0.196121552235949	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISBFBOF-E	IISOIL	CGBFBOF-E-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-E	IISOIL	CGBFBOF-E-I	-	ANNUAL	UP	3	0.005	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.105	null	null	
-	FLO_SHAR	IISBFBOF-N	IISCKE	CGBFBOF-N-I	-	ANNUAL	LO	3	0.25	null	null	null	null	0.540330901941921	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-N	IISCKE	CGBFBOF-N-I	-	ANNUAL	UP	3	0.35	null	null	null	null	0.54573421096134	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-N	IISCOA	CGBFBOF-N-I	-	ANNUAL	LO	3	0.15	null	null	null	null	0.263610538748244	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-N	IISCOA	CGBFBOF-N-I	-	ANNUAL	UP	3	0.171	null	null	null	null	0.266246644135727	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-N	IISELC	CGBFBOF-N-I	-	ANNUAL	FX	3	0.23	null	null	null	null	0.127822068804234	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-N	IISGAS	CGBFBOF-N-I	-	ANNUAL	LO	3	0.075	null	null	null	null	3.20551672155322E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISBFBOF-N	IISGAS	CGBFBOF-N-I	-	ANNUAL	UP	3	0.245	null	null	null	null	3.23757188876875E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-E	IISOIL	CGBFBOF-E-I	-	ANNUAL	UP	3	0.005	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISCKE	CGBFBOF-N-I	-	ANNUAL	LO	3	0.25	null	null	null	null	0.449828921240673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISCKE	CGBFBOF-N-I	-	ANNUAL	UP	3	0.35	null	null	null	null	0.45432721045308	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISCOA	CGBFBOF-N-I	-	ANNUAL	LO	3	0.15	null	null	null	null	0.219457454398085	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISCOA	CGBFBOF-N-I	-	ANNUAL	UP	3	0.171	null	null	null	null	0.221652028942066	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISELC	CGBFBOF-N-I	-	ANNUAL	FX	3	0.23	null	null	null	null	0.106412687326071	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISGAS	CGBFBOF-N-I	-	ANNUAL	LO	3	0.075	null	null	null	null	0.194179754689058	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISBFBOF-N	IISGAS	CGBFBOF-N-I	-	ANNUAL	UP	3	0.245	null	null	null	null	0.196121552235949	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISBFBOF-N	IISOIL	CGBFBOF-N-I	-	ANNUAL	LO	3	0.005	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISBFBOF-N	IISOIL	CGBFBOF-N-I	-	ANNUAL	UP	3	0.15	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISCOREAF-E	IISCKE	CGCOREAF-E-I	-	ANNUAL	FX	3	0.205441995529001	null	null	null	null	0.118546333901242	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -960,18 +968,18 @@ TS DATA	REGION1
 	FLO_SHAR	IISCOREAF-E	IISELC	CGCOREAF-E-I	-	ANNUAL	FX	3	0.26282578074888	null	null	null	null	7.87877173005179E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISCOREAF-E	IISGAS	CGCOREAF-E-I	-	ANNUAL	FX	3	0	null	null	null	null	1.85434127962975E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISCOREAF-E	IISOLP	CGCOREAF-E-I	-	ANNUAL	FX	3	0.057	null	null	null	null	9.89294250141639E-03	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-E	IISCOA	CGDRIEAF-E-I	-	ANNUAL	LO	3	0.667083756442801	null	null	null	null	0.742384470122675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.567083756442801	null	null	
-	FLO_SHAR	IISDRIEAF-E	IISCOA	CGDRIEAF-E-I	-	ANNUAL	UP	3	0.667083756442801	null	null	null	null	0.749808314823901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-E	IISELC	CGDRIEAF-E-I	-	ANNUAL	FX	3	0.320787447985512	null	null	null	null	0.176834627779417	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-E	IISGAS	CGDRIEAF-E-I	-	ANNUAL	LO	3	1.21287955716873E-02	null	null	null	null	8.25317399967143E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-E	IISGAS	CGDRIEAF-E-I	-	ANNUAL	UP	3	1.21287955716873E-02	null	null	null	null	8.33570573966814E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.112128795571687	null	null	
+	FLO_SHAR	IISDRIEAF-E	IISCOA	CGDRIEAF-E-I	-	ANNUAL	LO	3	0.667083756442801	null	null	null	null	0.703302443765934	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-E	IISCOA	CGDRIEAF-E-I	-	ANNUAL	UP	3	0.667083756442801	null	null	null	null	0.710335468203594	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-E	IISELC	CGDRIEAF-E-I	-	ANNUAL	FX	3	0.320787447985512	null	null	null	null	0.167525360328661	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-E	IISGAS	CGDRIEAF-E-I	-	ANNUAL	LO	3	1.21287955716873E-02	null	null	null	null	0.130830862839351	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-E	IISGAS	CGDRIEAF-E-I	-	ANNUAL	UP	3	1.21287955716873E-02	null	null	null	null	0.132139171467745	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISDRIEAF-E	IISOIL	CGDRIEAF-E-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-E	IISOIL	CGDRIEAF-E-I	-	ANNUAL	UP	3	0.01	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.11	null	null	
-	FLO_SHAR	IISDRIEAF-NC	IISCOA	CGDRIEAF-N-I	-	ANNUAL	LO	3	0.45	null	null	null	null	0.742384470122675	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-NC	IISCOA	CGDRIEAF-N-I	-	ANNUAL	UP	3	0.55	null	null	null	null	0.749808314823901	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-NC	IISELC	CGDRIEAF-N-I	-	ANNUAL	FX	3	0.38	null	null	null	null	0.176834627779417	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-NC	IISGAS	CGDRIEAF-N-I	-	ANNUAL	LO	3	0.06	null	null	null	null	8.25317399967143E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISDRIEAF-NC	IISGAS	CGDRIEAF-N-I	-	ANNUAL	UP	3	0.2	null	null	null	null	8.33570573966814E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-E	IISOIL	CGDRIEAF-E-I	-	ANNUAL	UP	3	0.01	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-NC	IISCOA	CGDRIEAF-N-I	-	ANNUAL	LO	3	0.45	null	null	null	null	0.703302443765934	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-NC	IISCOA	CGDRIEAF-N-I	-	ANNUAL	UP	3	0.55	null	null	null	null	0.710335468203594	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-NC	IISELC	CGDRIEAF-N-I	-	ANNUAL	FX	3	0.38	null	null	null	null	0.167525360328661	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-NC	IISGAS	CGDRIEAF-N-I	-	ANNUAL	LO	3	0.06	null	null	null	null	0.130830862839351	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	IISDRIEAF-NC	IISGAS	CGDRIEAF-N-I	-	ANNUAL	UP	3	0.2	null	null	null	null	0.132139171467745	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISDRIEAF-NC	IISOIL	CGDRIEAF-N-I	-	ANNUAL	LO	3	0.01	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISDRIEAF-NC	IISOIL	CGDRIEAF-N-I	-	ANNUAL	UP	3	0.15	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISDRIEAF-NG	IISELC	CGDRIEAF-NG-I	-	ANNUAL	FX	3	0.38	null	null	null	null	0.38	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -984,13 +992,13 @@ TS DATA	REGION1
 	FLO_SHAR	IISOTHEAF-E	IISELC	CGOTHEAF-E-I	-	ANNUAL	FX	3	0.413206563900974	null	null	null	null	0.466153846153846	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISOTHEAF-E	IISGAS	CGOTHEAF-E-I	-	ANNUAL	FX	3	3.08838650578434E-02	null	null	null	null	7.76923076923077E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISOTHEAF-E	IISOIL	CGOTHEAF-E-I	-	ANNUAL	FX	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISSCREAF-E	IISCOA	CGSCREAF-E-I	-	ANNUAL	LO	3	0.25	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.15	null	null	
+	FLO_SHAR	IISSCREAF-E	IISCOA	CGSCREAF-E-I	-	ANNUAL	LO	3	0.25	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-E	IISCOA	CGSCREAF-E-I	-	ANNUAL	UP	3	0.25	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-E	IISELC	CGSCREAF-E-I	-	ANNUAL	FX	3	0.75	null	null	null	null	0.752326459192265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-E	IISGAS	CGSCREAF-E-I	-	ANNUAL	LO	3	0	null	null	null	null	0.126491418020679	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISSCREAF-E	IISGAS	CGSCREAF-E-I	-	ANNUAL	UP	3	0	null	null	null	null	0.127756332200886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.1	null	null	
+	FLO_SHAR	IISSCREAF-E	IISGAS	CGSCREAF-E-I	-	ANNUAL	UP	3	0	null	null	null	null	0.127756332200886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-E	IISOIL	CGSCREAF-E-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_SHAR	IISSCREAF-E	IISOIL	CGSCREAF-E-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.1	null	null	
+	FLO_SHAR	IISSCREAF-E	IISOIL	CGSCREAF-E-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-N	IISCOA	CGSCREAF-N-I	-	ANNUAL	LO	3	0.05	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-N	IISCOA	CGSCREAF-N-I	-	ANNUAL	UP	3	0.25	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	IISSCREAF-N	IISELC	CGSCREAF-N-I	-	ANNUAL	FX	3	0.75	null	null	null	null	0.752326459192265	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1000,6 +1008,8 @@ TS DATA	REGION1
 	FLO_SHAR	IISSCREAF-N	IISOIL	CGSCREAF-N-I	-	ANNUAL	UP	3	0.2	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMBRIADV	INMBRITHF	CG-INMBRIADV-I	-	ANNUAL	FX	3	0.95	null	null	null	null	0.98	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMBRIADV	INMELC	CG-INMBRIADV-I	-	ANNUAL	FX	3	0.05	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	INMBRIF2TF	BIG	CG-INMBRIF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_SHAR	INMBRIF2TF	BIG	CG-INMBRIF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	0.8	null	null	
 	FLO_SHAR	INMBRIF2TF	INMBIO	CG-INMBRIF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMBRIF2TF	INMBIO	CG-INMBRIF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMBRIF2TF	INMCOA	CG-INMBRIF2THF-I	-	ANNUAL	LO	3	0.601810052086378	null	null	null	null	0.951688401702593	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0.05	null	null	
@@ -1083,7 +1093,7 @@ TS DATA	REGION1
 	NCAP_AFA	ICPSOHF-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ICPSOLP-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	ICPSWAS-E	-	-	-	-	UP	0	0.15427	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AFA	ICPTGAS-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPTGMU-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IFBAELC-E	-	-	-	-	UP	0	0.11585	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IFBCELC-E	-	-	-	-	UP	0	0.12956	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IFBEELC-E	-	-	-	-	UP	0	0.13233	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1226,6 +1236,7 @@ TS DATA	REGION1
 	NCAP_AFA	IPPSTMBIO-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IPPSTMBLQ-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IPPSTMCOA-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IPPSTMGAS-E	-	-	-	-	LO	5	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	IPPSTMGAS-N	-	-	-	-	UP	0	0.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	XICPELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AFA	XIFAELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1259,7 +1270,7 @@ TS DATA	REGION1
 	NCAP_BND	ICPSOHF-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ICPSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	ICPSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_BND	ICPTGAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPTGMU-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IFBAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IFBCELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	IFBEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1429,6 +1440,7 @@ TS DATA	REGION1
 	NCAP_COST	IPPSTMGAS-N	-	-	-	-	-	0	261.882061622747	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XICPELC	-	-	-	-	-	0	7336.75198816163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XICPGAS	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XICPGMU	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XIFAGAS	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XIFBELC	-	-	-	-	-	0	11787.4425346706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1491,7 +1503,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	ICPSOHF-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ICPSOLP-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ICPSWAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	ICPTGAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPTGMU-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IFBAELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IFBCELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	IFBEELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1620,6 +1632,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	IPPSTMGAS-N	-	-	-	-	-	0	40	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XICPELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XICPGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XICPGMU	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XIFAELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XIFAGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	XIFBELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1646,7 +1659,7 @@ TS DATA	REGION1
 	NCAP_TLIFE	XIPPREC	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IALPOT	-	INDGAS	-	-	-	0	null	null	null	null	null	null	null	null	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IALPOT	-	INDOLP	-	-	-	0	null	null	null	null	null	null	null	null	3.26	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_ACTFLO	IALPOT	-	INFELC	-	-	-	0	null	null	null	null	null	null	null	null	46.37	null	null	null	null	null	null	null	null	null	45.21075	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_ACTFLO	IALPOT	-	INFELC	-	-	-	0	null	null	null	null	null	null	null	null	46.37	null	null	null	null	null	null	null	null	null	44.0515	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IALPOTINERT	-	INDGAS	-	-	-	0	2.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IALPOTINERT	-	INDOLP	-	-	-	0	3.26	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IALPOTINERT	-	INFELC	-	-	-	0	56.57	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1713,7 +1726,6 @@ TS DATA	REGION1
 	PRC_ACTFLO	INMCEMKSP-N	-	INMRWM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	INMCEMPGBM	-	INMRWM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	INMCEMPGRP	-	INMRWM	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_ACTFLO	INMCLISUBSLAG	-	IISBFSLG	-	-	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPGMME-E	-	INDCOA	-	-	-	0	0.015184024154039	null	null	null	null	0.015184024154039	null	null	null	null	null	null	null	null	null	null	null	null	0.015184024154039	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPGMME-E	-	INDODS	-	-	-	0	1.74024960567288E-02	null	null	null	null	1.74024960567288E-02	null	null	null	null	null	null	null	null	null	null	null	null	1.74024960567288E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	IPGMME-E	-	INFELC	-	-	-	0	0.15114499937673	null	null	null	null	0.15114499937673	null	null	null	null	null	null	null	null	null	null	null	null	0.144416877848261	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1786,7 +1798,7 @@ TS DATA	REGION1
 	PRC_RESID	ICPSOHF-E	-	-	-	-	-	0	0	null	null	null	null	4.84864199131393	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ICPSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	ICPTGAS-E	-	-	-	-	-	0	39.0040000305176	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPTGMU-E	-	-	-	-	-	0	26.6	null	null	null	null	26.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBAELC-E	-	-	-	-	-	0	0.27562911750459	null	null	null	null	0.258126888217523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBCELC-E	-	-	-	-	-	0	56.6862893676177	null	null	null	null	53.0867551713492	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBEELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1800,7 +1812,7 @@ TS DATA	REGION1
 	PRC_RESID	IFBSCOA-E	-	-	-	-	-	0	107.624029558566	null	null	null	null	67.5055422311532	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSELC-E	-	-	-	-	-	0	1.57308882347891	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSELC-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IFBSGAS-E	-	-	-	-	-	0	14.1032397744215	null	null	null	null	17.847151098723	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSGAS-E	-	-	-	-	-	0	14.1032397744215	null	null	null	null	34.3773694000373	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSHGN-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSOHF-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IFBSOLP-E	-	-	-	-	-	0	9.07704530770882	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1826,7 +1838,7 @@ TS DATA	REGION1
 	PRC_RESID	IMISCOA-E	-	-	-	-	-	0	130.279199844429	null	null	null	null	158.263823167174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISELC-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IMISGAS-E	-	-	-	-	-	0	1.14702015946069	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISGAS-E	-	-	-	-	-	0	1.14702015946069	null	null	null	null	4.66714202372464	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISHGN-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IMISOLP-E	-	-	-	-	-	0	0	null	null	null	null	0.634064894016983	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1842,7 +1854,7 @@ TS DATA	REGION1
 	PRC_RESID	INFPELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSCOA-E	-	-	-	-	-	0	4.91649062034096	null	null	null	null	1.87100538017761	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	INFSGAS-E	-	-	-	-	-	0	11.2101484410449	null	null	null	null	2.36624100602839	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSGAS-E	-	-	-	-	-	0	11.2101484410449	null	null	null	null	10.5197381214753	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	INFSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1875,7 +1887,7 @@ TS DATA	REGION1
 	PRC_RESID	IOTSOHF-E	-	-	-	-	-	0	54.5811662380771	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTSOLP-E	-	-	-	-	-	0	35.4615461754155	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IOTSWAS-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IPGMME-E	-	-	-	-	-	0	288.888888888889	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	288.888888888889	null	null	null	null	null	null	null	null	null	null	null	288.888888888889	null	null	
+	PRC_RESID	IPGMME-E	-	-	-	-	-	0	305.882352941176	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	305.882352941176	null	null	null	null	null	null	null	null	null	null	null	305.882352941176	null	null	
 	PRC_RESID	IPGMME-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPCHE-E	-	-	-	-	-	0	1.0643442529852	null	null	null	null	1.0643442529852	null	null	null	null	null	null	null	null	null	null	null	null	1.0643442529852	null	null	null	null	0	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	IPPCHE-E-T1	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1898,17 +1910,18 @@ TS DATA	REGION1
 	PRC_RESID	IPPREC-E-T1	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPREC-E-T2	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	IPPREC-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IPPSTMBIO-E	-	-	-	-	-	0	3.22490573824948	null	null	null	null	3.22490573824948	null	null	null	null	null	null	null	null	null	null	null	null	3.22490573824948	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	PRC_RESID	IPPSTMBIO-E	-	-	-	-	-	0	3.35794082959754	null	null	null	null	3.35794082959754	null	null	null	null	null	null	null	null	null	null	null	null	3.35794082959754	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	PRC_RESID	IPPSTMBIO-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IPPSTMBLQ-E	-	-	-	-	-	0	49.6679980546588	null	null	null	null	49.6679980546588	null	null	null	null	null	null	null	null	null	null	null	null	49.6679980546588	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	PRC_RESID	IPPSTMBLQ-E	-	-	-	-	-	0	41.3899983788824	null	null	null	null	41.3899983788824	null	null	null	null	null	null	null	null	null	null	null	null	41.3899983788824	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	PRC_RESID	IPPSTMBLQ-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IPPSTMCOA-E	-	-	-	-	-	0	54.504	null	null	null	null	54.504	null	null	null	null	null	null	null	null	null	null	null	null	54.504	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	PRC_RESID	IPPSTMCOA-E	-	-	-	-	-	0	45.42	null	null	null	null	45.42	null	null	null	null	null	null	null	null	null	null	null	null	45.42	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	PRC_RESID	IPPSTMCOA-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	PRC_RESID	IPPSTMCOAOIL	-	-	-	-	-	0	11.5581105021066	null	null	null	null	11.5581105021066	null	null	null	null	null	null	null	null	null	null	null	null	11.5581105021066	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
-	PRC_RESID	IPPSTMGAS-E	-	-	-	-	-	0	0.852953362725368	null	null	null	null	0.852953362725368	null	null	null	null	null	null	null	null	null	null	null	null	0.852953362725368	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	PRC_RESID	IPPSTMCOAOIL	-	-	-	-	-	0	12.4491084009482	null	null	null	null	12.4491084009482	null	null	null	null	null	null	null	null	null	null	null	null	12.4491084009482	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	PRC_RESID	IPPSTMGAS-E	-	-	-	-	-	0	4.34672705403526	null	null	null	null	4.34672705403526	null	null	null	null	null	null	null	null	null	null	null	null	4.34672705403526	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	PRC_RESID	IPPSTMGAS-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XICPELC	-	-	-	-	-	0	1.26670002937317	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XICPGAS	-	-	-	-	-	0	39.0040000305176	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XICPGMU	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XIFAGAS	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	XIFBELC	-	-	-	-	-	0	0.543299973011017	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1931,15 +1944,59 @@ TS DATA	REGION1
 	PRC_RESID	XIPPGAS	-	-	-	-	-	0	4.836	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHBATTERY	-	-	-	-	-	0	0.89	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	STG_EFF	IISHHGNSTOR-N	-	-	-	-	-	0	0.99	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UC-IPP-CEM	-	-	-	-	UP	0	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	1.0643442529852	null	
+	UC__RHSRT	UC-IPP-CEM-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-CEM-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-DIS	-	-	-	-	UP	0	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	0.930504279623491	null	
+	UC__RHSRT	UC-IPP-DIS-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-DIS-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-MCH	-	-	-	-	UP	0	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	0.294196923485386	null	
+	UC__RHSRT	UC-IPP-MCH-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-MCH-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-PAP	-	-	-	-	UP	0	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	3.07773176470588	null	
+	UC__RHSRT	UC-IPP-PAP-T1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-PAP-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-REC	-	-	-	-	UP	0	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	1.71952941176471	null	
+	UC__RHSRT	UC-IPPREC-MAX	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-RECT1	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UC__RHSRT	UC-IPP-REC-T2	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF	-	-	-	-	UP	0	1.72	1.72	1.72	1.72	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	1.32	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MAX	-	-	-	-	UP	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
 	UC__RHSRT	UC-SCREAF-MIN	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	null	
+	UCRULE_ACT	UC-IPP-CEM-T1	LHS	S-IPP-CHE-E	-	ANNUAL	-	0	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
+	UCRULE_ACT	UC-IPP-CEM-T1	LHS	S-IPP-CHE-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-CEM-T2	LHS	S-IPP-CHE-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UCRULE_ACT	UC-IPP-CEM-T2	LHS	S-IPP-CHE-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-DIS-T1	LHS	S-IPP-DIS-E	-	ANNUAL	-	0	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
+	UCRULE_ACT	UC-IPP-DIS-T1	LHS	S-IPP-DIS-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-DIS-T2	LHS	S-IPP-DIS-E	-	ANNUAL	-	0	0	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UCRULE_ACT	UC-IPP-DIS-T2	LHS	S-IPP-DIS-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-MCH-T1	LHS	S-IPP-MCH-E	-	ANNUAL	-	0	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
+	UCRULE_ACT	UC-IPP-MCH-T1	LHS	S-IPP-MCH-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-MCH-T2	LHS	S-IPP-MCH-E	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UCRULE_ACT	UC-IPP-MCH-T2	LHS	S-IPP-MCH-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-PAP-T1	LHS	S-IPP-PAP-E	-	ANNUAL	-	0	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
+	UCRULE_ACT	UC-IPP-PAP-T1	LHS	S-IPP-PAP-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-PAP-T2	LHS	S-IPP-PAP-E	-	ANNUAL	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UCRULE_ACT	UC-IPP-PAP-T2	LHS	S-IPP-PAP-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPPREC-MAX	LHS	S-IPP	-	ANNUAL	-	0	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	-0.5	null	
+	UCRULE_ACT	UC-IPPREC-MAX	LHS	S-IPPREC	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-RECT1	LHS	S-IPP-REC-E	-	ANNUAL	-	0	0	null	null	0	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	0	null	null	null	null	0	null	0	0	null	
+	UCRULE_ACT	UC-IPP-RECT1	LHS	S-IPP-REC-E-T1	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_ACT	UC-IPP-REC-T2	LHS	S-IPP-REC-E	-	ANNUAL	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UCRULE_ACT	UC-IPP-REC-T2	LHS	S-IPP-REC-E-T2	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS	-	ANNUAL	-	0	-0.126	-0.126	-0.126	-0.217	-0.221	-0.216	-0.196	-0.201	-0.246	-0.25275	-0.2595	-0.26625	-0.273	-0.273	-0.27975	-0.2865	-0.29325	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	-0.3	null	null	
 	UCRULE_ACT	UC-SCREAF-MAX	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
-	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	-0.2	
+	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS	-	ANNUAL	-	0	-0.121	-0.121	-0.121	-0.209	-0.212	-0.208	-0.188	-0.193	-0.237	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	-0.22	null	null	
 	UCRULE_ACT	UC-SCREAF-MIN	LHS	S-IIS-SCREAF	-	ANNUAL	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	null	
+	UCRULE_CAP	UC-IPP-CEM	LHS	S-IPP-CHE-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_CAP	UC-IPP-DIS	LHS	S-IPP-DIS-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_CAP	UC-IPP-MCH	LHS	S-IPP-MCH-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_CAP	UC-IPP-PAP	LHS	S-IPP-PAP-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
+	UCRULE_CAP	UC-IPP-REC	LHS	S-IPP-REC-E	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	null	
 
 TID DATA	REGION1
+	COM_GMAP	-	BIG	CG-INMBRIF2THF-I	-	-	-	1	
 	COM_GMAP	-	IISCKE	CGBFBOF-E-I	-	-	-	1	
 	COM_GMAP	-	IISCKE	CGBFBOF-N-I	-	-	-	1	
 	COM_GMAP	-	IISCKE	CGCOREAF-E-I	-	-	-	1	
@@ -2074,7 +2131,7 @@ TID DATA	REGION1
 	NCAP_START	INMGLAADV	-	-	-	-	-	2018	
 	NCAP_START	INMLIMADV	-	-	-	-	-	2018	
 	NCAP_START	IPGMME-N	-	-	-	-	-	2025	
-	NCAP_START	IPPCHE-N	-	-	-	-	-	2025	
+	NCAP_START	IPPCHE-N	-	-	-	-	-	2012	
 	NCAP_START	IPPDIS-N	-	-	-	-	-	2025	
 	NCAP_START	IPPMCH-N	-	-	-	-	-	2025	
 	NCAP_START	IPPPAP-N	-	-	-	-	-	2025	
@@ -2103,7 +2160,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	ICPSOHF-E	-	ICPS	-	-	-	1	
 	PRC_ACTUNT	ICPSOLP-E	-	ICPS	-	-	-	1	
 	PRC_ACTUNT	ICPSWAS-E	-	ICPS	-	-	-	1	
-	PRC_ACTUNT	ICPTGAS-E	-	ICPT	-	-	-	1	
+	PRC_ACTUNT	ICPTGMU-E	-	ICPT	-	-	-	1	
 	PRC_ACTUNT	IFBAELC-E	-	IFBA	-	-	-	1	
 	PRC_ACTUNT	IFBCELC-E	-	IFBC	-	-	-	1	
 	PRC_ACTUNT	IFBEELC-E	-	IFBE	-	-	-	1	
@@ -2276,6 +2333,7 @@ TID DATA	REGION1
 	PRC_ACTUNT	PEXPGMO	-	IDUM	-	-	-	1	
 	PRC_ACTUNT	XICPELC	-	ICPELC	-	-	-	1	
 	PRC_ACTUNT	XICPGAS	-	ICPGAS	-	-	-	1	
+	PRC_ACTUNT	XICPGMU	-	ICPGMU	-	-	-	1	
 	PRC_ACTUNT	XIFAELC	-	IFAELC	-	-	-	1	
 	PRC_ACTUNT	XIFAGAS	-	IFAGAS	-	-	-	1	
 	PRC_ACTUNT	XIFBELC	-	IFBELC	-	-	-	1	
@@ -2331,7 +2389,7 @@ TID DATA	REGION1
 	PRC_CAPACT	ICPSOHF-E	-	-	-	-	-	1	
 	PRC_CAPACT	ICPSOLP-E	-	-	-	-	-	1	
 	PRC_CAPACT	ICPSWAS-E	-	-	-	-	-	1	
-	PRC_CAPACT	ICPTGAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPTGMU-E	-	-	-	-	-	1	
 	PRC_CAPACT	IFBAELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IFBCELC-E	-	-	-	-	-	1	
 	PRC_CAPACT	IFBEELC-E	-	-	-	-	-	1	
@@ -2499,6 +2557,7 @@ TID DATA	REGION1
 	PRC_CAPACT	PEXPGMO	-	-	-	-	-	1	
 	PRC_CAPACT	XICPELC	-	-	-	-	-	31.536	
 	PRC_CAPACT	XICPGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XICPGMU	-	-	-	-	-	1	
 	PRC_CAPACT	XIFAELC	-	-	-	-	-	31.536	
 	PRC_CAPACT	XIFAGAS	-	-	-	-	-	1	
 	PRC_CAPACT	XIFBELC	-	-	-	-	-	31.536	
@@ -2559,7 +2618,7 @@ TID DATA	REGION1
 	TOP-IN	ICPSOHF-E	INDOHF	-	-	-	-	1	
 	TOP-IN	ICPSOLP-E	INDOLP	-	-	-	-	1	
 	TOP-IN	ICPSWAS-E	INDWAS	-	-	-	-	1	
-	TOP-IN	ICPTGAS-E	ICPGAS	-	-	-	-	1	
+	TOP-IN	ICPTGMU-E	ICPGMU	-	-	-	-	1	
 	TOP-IN	IFBAELC-E	IFBELC	-	-	-	-	1	
 	TOP-IN	IFBCELC-E	IFBELC	-	-	-	-	1	
 	TOP-IN	IFBEELC-E	IFBELC	-	-	-	-	1	
@@ -2706,6 +2765,7 @@ TID DATA	REGION1
 	TOP-IN	INFSWAS-E	INDWAS	-	-	-	-	1	
 	TOP-IN	INMBRIADV	INMBRITHF	-	-	-	-	1	
 	TOP-IN	INMBRIADV	INMELC	-	-	-	-	1	
+	TOP-IN	INMBRIF2TF	BIG	-	-	-	-	1	
 	TOP-IN	INMBRIF2TF	INMBIO	-	-	-	-	1	
 	TOP-IN	INMBRIF2TF	INMCOA	-	-	-	-	1	
 	TOP-IN	INMBRIF2TF	INMGAS	-	-	-	-	1	
@@ -2745,7 +2805,6 @@ TID DATA	REGION1
 	TOP-IN	INMCEMKSP-N	INMRWM	-	-	-	-	1	
 	TOP-IN	INMCEMPGBM	INMELC	-	-	-	-	1	
 	TOP-IN	INMCEMPGRP	INMELC	-	-	-	-	1	
-	TOP-IN	INMCLISUBSLAG	IISBFSLG	-	-	-	-	1	
 	TOP-IN	INMGLAADV	INMELC	-	-	-	-	1	
 	TOP-IN	INMGLAADV	INMGLATHF	-	-	-	-	1	
 	TOP-IN	INMGLAF2TF	INMBIO	-	-	-	-	1	
@@ -2835,6 +2894,7 @@ TID DATA	REGION1
 	TOP-IN	PEXPGMO	IPGMOP	-	-	-	-	1	
 	TOP-IN	XICPELC	INDELC	-	-	-	-	1	
 	TOP-IN	XICPGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XICPGMU	GAS	-	-	-	-	1	
 	TOP-IN	XIFAELC	INDELC	-	-	-	-	1	
 	TOP-IN	XIFAGAS	INDGAS	-	-	-	-	1	
 	TOP-IN	XIFBELC	INDELC	-	-	-	-	1	
@@ -2859,7 +2919,7 @@ TID DATA	REGION1
 	TOP-IN	XINMBIO	INDBIW	-	-	-	-	1	
 	TOP-IN	XINMBIO	INDWAS	-	-	-	-	1	
 	TOP-IN	XINMCLCOA	COA	-	-	-	-	1	
-	TOP-IN	XINMCLGAS	GAS	-	-	-	-	1	
+	TOP-IN	XINMCLGAS	INDGAS	-	-	-	-	1	
 	TOP-IN	XINMCLOIL	ODS	-	-	-	-	1	
 	TOP-IN	XINMCLOIL	OHF	-	-	-	-	1	
 	TOP-IN	XINMCOA	INDCOA	-	-	-	-	1	
@@ -2900,7 +2960,7 @@ TID DATA	REGION1
 	TOP-OUT	ICPSOHF-E	ICPS	-	-	-	-	1	
 	TOP-OUT	ICPSOLP-E	ICPS	-	-	-	-	1	
 	TOP-OUT	ICPSWAS-E	ICPS	-	-	-	-	1	
-	TOP-OUT	ICPTGAS-E	ICPT	-	-	-	-	1	
+	TOP-OUT	ICPTGMU-E	ICPT	-	-	-	-	1	
 	TOP-OUT	IFBAELC-E	IFBA	-	-	-	-	1	
 	TOP-OUT	IFBCELC-E	IFBC	-	-	-	-	1	
 	TOP-OUT	IFBEELC-E	IFBE	-	-	-	-	1	
@@ -3116,6 +3176,7 @@ TID DATA	REGION1
 	TOP-OUT	PEXPGMO	IDUM	-	-	-	-	1	
 	TOP-OUT	XICPELC	ICPELC	-	-	-	-	1	
 	TOP-OUT	XICPGAS	ICPGAS	-	-	-	-	1	
+	TOP-OUT	XICPGMU	ICPGMU	-	-	-	-	1	
 	TOP-OUT	XIFAELC	IFAELC	-	-	-	-	1	
 	TOP-OUT	XIFAGAS	IFAGAS	-	-	-	-	1	
 	TOP-OUT	XIFBELC	IFBELC	-	-	-	-	1	
@@ -3179,6 +3240,22 @@ TID DATA	REGION1
 	UC_R_EACH	UC-INM-KSPP-T2	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KSP-T1	-	-	-	-	-	1	
 	UC_R_EACH	UC-INM-KSP-T2	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-CEM	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-CEM-T1	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-CEM-T2	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-DIS	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-DIS-T1	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-DIS-T2	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-MCH	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-MCH-T1	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-MCH-T2	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-PAP	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-PAP-T1	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-PAP-T2	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-REC	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPPREC-MAX	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-RECT1	-	-	-	-	-	1	
+	UC_R_EACH	UC-IPP-REC-T2	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF-MAX	-	-	-	-	-	1	
 	UC_R_EACH	UC-SCREAF-MIN	-	-	-	-	-	1	

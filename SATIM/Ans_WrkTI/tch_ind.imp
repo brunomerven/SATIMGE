@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	23 Jun 2022	11:39:19
+Creation Date:	23 Jun 2022	15:43:03
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_IND	Industry shortened ts	
@@ -906,15 +906,15 @@ TS DATA	REGION1
 	FLO_MARK	INMCEMFGBM	INMCEM	-	-	-	LO	0	0.62	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_MARK	INMCEMPGBM	INMRWM	-	-	-	LO	0	0.61913564202135	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_MARK	INMCLISUBASH	INMCLISUB	-	-	-	LO	0	0.19594055452329	null	null	null	null	null	null	null	0.19594055452329	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
-	FLO_MARK	INMCLISUBASH	INMCLISUB	-	-	-	UP	0	0.197919752043727	null	null	null	null	null	null	null	0.197919752043727	null	null	null	null	null	null	null	null	null	0.146207381780664	null	null	null	null	null	null	null	null	null	null	null	0.125158653363333	null	null	
+	FLO_MARK	INMCLISUBASH	INMCLISUB	-	-	-	UP	0	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	null	
 	FLO_MARK	INMCLISUBCLY	INMCLISUB	-	-	-	LO	0	0.362098935023281	null	null	null	null	null	null	null	0.362098935023281	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
-	FLO_MARK	INMCLISUBCLY	INMCLISUB	-	-	-	UP	0	0.365756500023516	null	null	null	null	null	null	null	0.365756500023516	null	null	null	null	null	null	null	null	null	0.370631136217992	null	null	null	null	null	null	null	null	null	null	null	0.375537759696223	null	null	
+	FLO_MARK	INMCLISUBCLY	INMCLISUB	-	-	-	UP	0	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	null	
 	FLO_MARK	INMCLISUBGYL	INMCLISUB	-	-	-	LO	0	0.373156364570668	null	null	null	null	null	null	null	0.373156364570668	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
-	FLO_MARK	INMCLISUBGYL	INMCLISUB	-	-	-	UP	0	0.376925620778452	null	null	null	null	null	null	null	0.376925620778452	null	null	null	null	null	null	null	null	null	0.386156740597338	null	null	null	null	null	null	null	null	null	null	null	0.386495436279492	null	null	
+	FLO_MARK	INMCLISUBGYL	INMCLISUB	-	-	-	UP	0	0.376925620778452	null	null	null	null	null	null	null	0.376925620778452	null	null	null	null	null	null	null	null	null	0.376925620778452	null	null	null	null	null	null	null	null	null	null	null	0.376925620778452	null	null	
 	FLO_MARK	INMCLISUBSLAG	INMCLISUB	-	-	-	LO	0	0.036583977773194	null	null	null	null	null	null	null	0.036583977773194	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
-	FLO_MARK	INMCLISUBSLAG	INMCLISUB	-	-	-	UP	0	3.69535129022162E-02	null	null	null	null	null	null	null	3.69535129022162E-02	null	null	null	null	null	null	null	null	null	4.63462589144065E-02	null	null	null	null	null	null	null	null	null	null	null	5.04579624764494E-02	null	null	
+	FLO_MARK	INMCLISUBSLAG	INMCLISUB	-	-	-	UP	0	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	1	null	null	
 	FLO_MARK	INMCLISUBSPOZ	INMCLISUB	-	-	-	LO	0	2.22201681095674E-02	null	null	null	null	null	null	null	2.22201681095674E-02	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
-	FLO_MARK	INMCLISUBSPOZ	INMCLISUB	-	-	-	UP	0	2.24446142520883E-02	null	null	null	null	null	null	null	2.24446142520883E-02	null	null	null	null	null	null	null	null	null	5.06584824895996E-02	null	null	null	null	null	null	null	null	null	null	null	6.23501881845019E-02	null	null	
+	FLO_MARK	INMCLISUBSPOZ	INMCLISUB	-	-	-	UP	0	2.24446142520883E-02	null	null	null	null	null	null	null	2.24446142520883E-02	null	null	null	null	null	null	null	null	null	2.24446142520883E-02	null	null	null	null	null	null	null	null	null	null	null	2.24446142520883E-02	null	null	
 	FLO_MARK	IOTRELC-E	IOTR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
 	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	FLO_MARK	IOTRODS-E	IOTR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
@@ -1021,9 +1021,9 @@ TS DATA	REGION1
 	FLO_SHAR	INMCEMF2TF	INMCLOIL	CG-INMCEMF2THF-I	-	ANNUAL	LO	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMF2TF	INMCLOIL	CG-INMCEMF2THF-I	-	ANNUAL	UP	3	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMFGBM	INMCLISUB	CG-INMCEMCLISUB	-	ANNUAL	LO	5	0.3168	null	null	null	null	0.3168	null	null	0.3168	null	null	null	null	null	null	null	null	null	0.3168	null	null	null	null	null	null	null	null	null	null	null	0.3168	null	null	
-	FLO_SHAR	INMCEMFGBM	INMCLISUB	CG-INMCEMCLISUB	-	ANNUAL	UP	5	0.32	null	null	null	null	0.32	null	null	0.32	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	0.6	null	null	
+	FLO_SHAR	INMCEMFGBM	INMCLISUB	CG-INMCEMCLISUB	-	ANNUAL	UP	5	0.32	null	null	null	null	0.32	null	null	0.32	null	null	null	null	null	null	null	null	null	0.32	null	null	null	null	null	null	null	null	null	null	null	0.32	null	null	
 	FLO_SHAR	INMCEMFGRP	INMCLISUB	CG-INMCEMCLISUBM	-	ANNUAL	LO	5	0.3168	null	null	null	null	0.3168	null	null	0.3168	null	null	null	null	null	null	null	null	null	0.3168	null	null	null	null	null	null	null	null	null	null	null	0.3168	null	null	
-	FLO_SHAR	INMCEMFGRP	INMCLISUB	CG-INMCEMCLISUBM	-	ANNUAL	UP	5	0.32	null	null	null	null	0.32	null	null	0.32	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	0.6	null	null	
+	FLO_SHAR	INMCEMFGRP	INMCLISUB	CG-INMCEMCLISUBM	-	ANNUAL	UP	5	0.32	null	null	null	null	0.32	null	null	0.32	null	null	null	null	null	null	null	null	null	0.32	null	null	null	null	null	null	null	null	null	null	null	0.32	null	null	
 	FLO_SHAR	INMCEMKLD-E	INMCEMTHF	CG-INMCEMLDK-E-I	-	ANNUAL	FX	3	0.98	null	null	null	null	0.98	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMKLD-E	INMELC	CG-INMCEMLDK-E-I	-	ANNUAL	FX	3	0.02	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_SHAR	INMCEMKPP-E	INMCEMTHF	CG-INMCEMNPP-E-I	-	ANNUAL	FX	3	0.97	null	null	null	null	0.97	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -2132,7 +2132,7 @@ TID DATA	REGION1
 	NCAP_START	IISBFBOF-N	-	-	-	-	-	2025	
 	NCAP_START	IISDRIEAF-NC	-	-	-	-	-	2025	
 	NCAP_START	IISDRIEAF-NG	-	-	-	-	-	2025	
-	NCAP_START	IISHALKHGNO	-	-	-	-	-	2032	
+	NCAP_START	IISHALKHGNO	-	-	-	-	-	2028	
 	NCAP_START	IISHBATTERY	-	-	-	-	-	2020	
 	NCAP_START	IISHDRIEAF-N	-	-	-	-	-	2020	
 	NCAP_START	IISHHDRI-N	-	-	-	-	-	2020	
