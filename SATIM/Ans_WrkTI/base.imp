@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/11/02	12:46:30 PM
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+Creation Date:	23 Jun 2022	11:44:21
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	BASE	SA BASE shortened TS	import TIMESLICES and TCH_SUP
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -105,7 +105,7 @@ ITEMS	REGION1
 	E	CO2S	CO2S South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SF	Fugitive Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SP	Process Emissions South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	CO2SPCEM	Process Emissions Cement South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	CO2SPCEM	Process Emissions CEM South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFC	Process Emissions FerroChrome South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CO2SPIFM	Process Emissions FerroManganese South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COA	Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -113,17 +113,17 @@ ITEMS	REGION1
 	E	COMCH4S	Commercial Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMCMOX	Commercial Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMCO2S	Commercial Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	COMCOA	Commercial Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	COMELC	Commercial Electricity	PJ	COM,NRG,DAYNITE,ELC	
-	E	COMGAS	Commercial Gas South Africa	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	COMCOA	Commercial - Coal	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	COMELC	Commercial - Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	COMGAS	Commercial - Gas	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	COMN2OS	Commercial Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMNMVS	Commercial NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMNOXS	Commercial Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	COMODS	Commercial Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	COMOGS	Commercial Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	COMOHF	Commercial Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	COMOKE	Commercial Oil Kerosene	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	COMOLP	Commercial Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	COMODS	Commercial - Oil Diesel	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	COMOGS	Commercial - Oil Gasoline	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	COMOHF	Commercial - Oil HFO	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	COMOKE	Commercial - Oil Paraffin	PJ	COM,NRG,DAYNITE,FOSSIL	
+	E	COMOLP	Commercial - Oil LPG	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	COMP10S	Commercial PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	COMSOXS	Commercial Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	CRB	Coal for plants in Botswana	PJ	COM,NRG,ANNUAL,FOSSIL	
@@ -146,26 +146,26 @@ ITEMS	REGION1
 	E	HGN	Hydrogen	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	HYD	Hydro	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	IDUM	Dummy commodity	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIB	Industry Biomass bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDBIW	Industry Biomass Wood	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIB	Industry - Biomass Bagasse	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDBIW	Industry - Biomass wood	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDCH4S	Industry Methane South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCLE	Industry Coal low grade	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCMOX	Industry Carbon monoxide South Africa	KT	COM,ENV,ANNUAL,GHG	
+	E	INDCMOX	Industry - Carbon Monoxide	KT	COM,ENV,ANNUAL,GHG	
 	E	INDCO2S	Industry Carbon dioxide South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDCOA	Industry Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDCOK	Industry Coal Coking	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOA	Industry - Coal	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDCOK	Industry - Coking coal	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDELC	Industry Electricity	PJ	COM,NRG,DAYNITE,ELC	
-	E	INDGAS	Industry Gas South Africa	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDGAS	Industry - South Africa gas	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDN2OS	Industry Nitrous Oxide South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNMVS	Industry NMVOCs South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDNOXS	Industry Nitrogen gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDODS	Industry Oil Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDODS	Industry - Diesel	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDOGS	Industry Oil Gasoline	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOHF	Industry Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
-	E	INDOLP	Industry Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOHF	Industry - Oil HFO	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDOLP	Industry - Oil LPG	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	INDP10S	Industry PM10 South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	INDSOXS	Industry Sulphur gases South Africa	KT	COM,ENV,ANNUAL,GHG	
-	E	INDWAS	Industry Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INDWAS	Industry - Waste	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	N2OS	N2OS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	NMVS	NMVS South Africa	KT	COM,ENV,ANNUAL,GHG	
 	E	NOXS	NOXS South Africa	KT	COM,ENV,ANNUAL,GHG	
@@ -308,14 +308,14 @@ ITEMS	REGION1
 	T	MNZZZ	Backstop for whole system	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOA	Exports of Coal	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXCOK	Exports of Coal Coking	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXELC	Exports of Electricity	PJ,PJa	PRC,ELE,ANNUAL,IRE	
 	T	PEXOAG	Exports of Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOCR	Exports of Oil Crude	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXODS	Exports of Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOGS	Exports of Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOHF	Exports of Oil HFO	PJ,PJa	PRC,PRE,ANNUAL,IRE	
 	T	PEXOKE	Exports of Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL,IRE	
-	T	PEXOKG	Exports of Green JetFuel	PJ,PJa	PRC,PRE,ANNUAL,IRE	
+	T	PEXOKG	Exports of Green JetFuel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UCOGCLEHGN	Production Plant Hydrogen - Large Coal Gasification	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UCTLCLEIN-E	Refinery CTL Existing	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UCTLCLEIN-N	Refinery CTL New	PJ,PJa	PRC,PRE,ANNUAL	
@@ -340,15 +340,15 @@ ITEMS	REGION1
 	T	USMRGASHGN	Production Plant Hydrogen - Large SMR - Inland	PJ,PJa	PRC,PRE,ANNUAL	
 	T	USMRGICHGN	Production Plant Hydrogen - Large SMR - Coastal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UTRNGIMGAS	Conversion Methane Rich Gas Natural Gas for use in industry and refineries	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGRCOA	Agriculture Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGRELC	Agriculture Electricity	PJ,GW	PRC,PRE,DAYNITE	
-	T	XAGRODS	Agriculture Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGROGS	Agriculture Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGROHF	Agriculture Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGROKE	Agriculture Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XAGROLP	Agriculture Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XAGRCOA	Agricultural Coal	PJ,PJa	PRC,DMD,DAYNITE	
+	T	XAGRELC	Agriculatural Electricity	PJ,GW	PRC,ELE,DAYNITE	
+	T	XAGRODS	Agricultural Oil Diesel	PJ,PJa	PRC,DMD,DAYNITE	
+	T	XAGROGS	Agricultural Oil Gasoline	PJ,PJa	PRC,DMD,DAYNITE	
+	T	XAGROHF	Agricultural Oil HFO	PJ,PJa	PRC,DMD,DAYNITE	
+	T	XAGROKE	Agricultural Oil Paraffin	PJ,PJa	PRC,DMD,DAYNITE	
+	T	XAGROLP	Agricultural Oil LPG	PJ,PJa	PRC,DMD,DAYNITE	
 	T	XCOMCOA	Commercial Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XCOMELC	Commercial Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XCOMGAS	Commercial Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMODS	Commercial Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCOMOGS	Commercial Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -360,7 +360,7 @@ ITEMS	REGION1
 	T	XINDCLE	Industry Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOA	Industry Coal	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDCOK	Industry Coal Coking	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XINDELC	Industry Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINDELC	Industry Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XINDGAS	Industry Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDODS	Industry Oil Diesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDOGS	Industry Oil Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -389,11 +389,11 @@ ITEMS	REGION1
 	T	XPWRWND	Power Sector Wind	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESBIW	Residential Biomass Wood	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESCOA	Residential Coal	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XRESELC	Residential Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XRESELC	Residential Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XRESGAS	Residential Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOKE	Residential Oil Kerosene	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XRESOLP	Residential Oil LPG	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XTRAELC	Transport Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XTRAELC	Transport Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XTRAGAS	Transport Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XTRAHGN	Transport Hydrogen	PJ,PJa	PRC,PRE,DAYNITE	
 	T	XTRAOAG	Transport Oil Av Gasoline	PJ,PJa	PRC,PRE,ANNUAL	
@@ -404,7 +404,7 @@ ITEMS	REGION1
 	T	XUPSBID	Supply Sector Biodiesel	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSBIE	Supply Sector Bioethanol	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSCLE	Supply Sector Coal low grade	PJ,PJa	PRC,PRE,ANNUAL	
-	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XUPSELC	Supply Sector Electricity	PJ,GW	PRC,ELE,DAYNITE	
 	T	XUPSGAS	Supply Sector Gas South Africa	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSGIC	Supply Sector Coastal Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XUPSHEE	Supply Sector Heat-Steam Existing	PJ,PJa	PRC,PRE,ANNUAL	
@@ -414,7 +414,7 @@ ITEMS	REGION1
 	T	XUPSOHF	Supply Sector Oil HFO	PJ,PJa	PRC,PRE,ANNUAL	
 	T	ZZBKELCC	Backstop for Electricity	PJ,GW	PRC,PRE,DAYNITE	
 	T	ZZBKNRG	Backstop for all energy except elc	PJ,PJa	PRC,PRE,ANNUAL	
-	W	ANNUAL	ANNUAL		ALL_TS,ANNUAL	
+	W	ANNUAL	Annual		ALL_TS,ANNUAL	
 	W	S1	s1		ALL_TS,SEASON	
 	W	S1D1	s1d1		ALL_TS,WEEKLY	
 	W	S1D1B1	s1d1b1		ALL_TS,DAYNITE	
@@ -445,7 +445,7 @@ TS DATA	REGION1
 	ACT_BND	IMPOKE	-	-	-	ANNUAL	UP	0	9.3231960462963	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	IMPOLP	-	-	-	ANNUAL	UP	0	3.64122687439143	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINBIB	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	MINBIG	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MINBIG	-	-	-	ANNUAL	UP	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINBIO	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINBIW	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MINCLD	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -463,7 +463,7 @@ TS DATA	REGION1
 	ACT_BND	MIRCRB	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRM	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	MIRGRN	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	154	null	null	116	null	null	null	null	156	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	MIRGRS	-	-	-	ANNUAL	UP	3	154	null	null	116	null	151.29	null	null	156	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOA	-	-	-	ANNUAL	FX	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1000	null	null	null	null	null	null	null	null	null	1000	null	500	null	null	
 	ACT_BND	PEXCOA	-	-	-	ANNUAL	UP	3	2129.99625	null	null	1727	null	null	null	null	1727	null	null	null	null	null	null	null	null	null	1000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_BND	PEXCOK	-	-	-	ANNUAL	FX	0	20.834015	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -498,7 +498,7 @@ TS DATA	REGION1
 	ACT_COST	IMPOKE	-	-	-	-	-	0	177.620678793203	null	null	130.765192986319	null	null	null	null	146.955685431304	null	null	null	null	null	null	null	null	null	141.558854616309	null	null	null	null	null	null	null	null	null	null	null	129.223241324892	null	null	
 	ACT_COST	IMPOLP	-	-	-	-	-	0	319.655031075523	null	null	279.110333860047	null	null	null	null	293.120189966477	null	null	null	null	null	null	null	null	null	288.450237931001	null	null	null	null	null	null	null	null	null	null	null	277.77606184991	null	null	
 	ACT_COST	MINBIB	-	-	-	-	-	0	19.5	null	null	19.5	null	null	null	null	19.5	null	null	null	null	null	null	null	null	null	19.5	null	null	null	null	null	null	null	null	null	null	null	19.5	null	null	
-	ACT_COST	MINBIG	-	-	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_COST	MINBIG	-	-	-	-	-	5	48	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	MINBIO	-	-	-	-	-	0	47.2628333333333	null	null	47.5714166666667	null	null	null	null	47.88	null	null	null	null	null	null	null	null	null	47.88	null	null	null	null	null	null	null	null	null	null	null	47.88	null	null	
 	ACT_COST	MINBIW	-	-	-	-	-	0	19.5	null	null	19.5	null	null	null	null	19.5	null	null	null	null	null	null	null	null	null	19.5	null	null	null	null	null	null	null	null	null	null	null	19.5	null	null	
 	ACT_COST	MINCLD	-	-	-	-	-	0	7.5	null	null	8.35742437856921	null	null	null	null	9.21484875713842	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1176,6 +1176,7 @@ TS DATA	REGION1
 	NCAP_BND	USMRGASHGN	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_BND	USMRGICHGN	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	HGNSTSUTL	-	-	-	-	-	0	null	null	null	null	null	null	null	null	46896.1251742805	null	null	null	null	null	null	null	null	null	43674.4796003331	null	null	null	null	32512.0195535978	null	null	null	null	28141.935483871	null	28141.935483871	28141.935483871	28141.935483871	
+	NCAP_COST	MINBIG	-	-	-	-	-	0	115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UCOGCLEHGN	-	-	-	-	-	0	443.238	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UCTLCLEIN-N	-	-	-	-	-	0	576.20825372119	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UELEA1HGN	-	-	-	-	-	0	12868.9075630252	null	null	null	null	null	null	null	12868.9075630252	null	null	null	null	null	null	null	null	null	9482.35294117647	null	null	null	null	6095.79831932773	null	null	null	null	4856.95611577965	null	3618.11391223156	null	null	
@@ -1247,7 +1248,7 @@ TS DATA	REGION1
 	NCAP_COST	XRESOLP	-	-	-	-	-	0	58.923463865118	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAELC	-	-	-	-	-	0	15434.598761196	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAGAS	-	-	-	-	-	0	346.338519639923	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	XTRAHGN	-	-	-	-	-	0	3500.81010741019	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1870.72945289115	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XTRAHGN	-	-	-	-	-	0	3500.8101	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1870.7295	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAOAG	-	-	-	-	-	0	1.30941030811373E-04	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAODS	-	-	-	-	-	0	33.819366834856	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	XTRAOGS	-	-	-	-	-	0	33.3422961784646	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1619,7 +1620,7 @@ TID DATA	REGION1
 	NCAP_START	IMPOKE	-	-	-	-	-	2012	
 	NCAP_START	IMPOLP	-	-	-	-	-	2012	
 	NCAP_START	MINBIB	-	-	-	-	-	2012	
-	NCAP_START	MINBIG	-	-	-	-	-	2012	
+	NCAP_START	MINBIG	-	-	-	-	-	2020	
 	NCAP_START	MINBIO	-	-	-	-	-	2012	
 	NCAP_START	MINBIW	-	-	-	-	-	2012	
 	NCAP_START	MINCLD	-	-	-	-	-	2012	
