@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2022/02/23	11:59:53 AM
+Creation Date:	2022/06/24	5:13:44 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_NH3	Ammonia Production	
@@ -27,34 +27,40 @@ ITEMS	REGION1
 	E	INDHGN	Industry Hydrogen	PJ	COM,NRG,DAYNITE,FOSSIL	
 	E	MTH	Methanol	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	NH3	Ammonia	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	NH3G	Green Ammonia	PJ	COM,NRG,ANNUAL,FOSSIL	
 	E	TRANH3	Transport Ammonia	PJ	COM,NRG,ANNUAL,FOSSIL	
 	T	ICPGASNH3-E	Existing Ammonia Plant - Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	ICPHGNNH3-N	New Ammonia Plant - H2	PJ,PJa	PRC,PRE,DAYNITE	
 	T	ICPNH3DEM	Ammonia to Local Market	PJ,PJa	PRC,DMD,ANNUAL	
 	T	IMPNH3	Ammonia Imports	PJ,PJa	PRC,PRE,ANNUAL	
 	T	PEXNH3	Ammonia to Export Market	PJ,PJa	PRC,PRE,ANNUAL	
+	T	PEXNH3G	Green Ammonia to Export Market	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UCTLNH3-E	Ammonia production linked to CTL production	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XINDHGN	Industry Sector Hydrogen	PJ,PJa	PRC,PRE,DAYNITE	
+	T	XNH3G	Green Ammonia to Local Ammonia	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XTRANH3	Ammonia to Transport	PJ,PJa	PRC,PRE,ANNUAL	
 
 TS DATA	REGION1
-	ACT_BND	PEXNH3	-	-	-	ANNUAL	LO	3	2.75782537067545	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	ICPGASNH3-E	-	-	-	-	-	0	176.541751102659	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_BND	PEXNH3	-	-	-	ANNUAL	LO	3	2.75782537067545	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	2.7578	null	null	null	null	null	null	null	null	null	null	null	0	null	null	
+	ACT_COST	ICPGASNH3-E	-	-	-	-	-	0	882.708755513296	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	ICPHGNNH3-N	-	-	-	-	-	0	176.541751102659	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	IMPNH3	-	-	-	-	-	0	5000	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	ICPNH3DEM	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	IMPNH3	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	PEXNH3	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	PEXNH3G	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XINDHGN	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XNH3G	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XTRANH3	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	CAP_BND	ICPGASNH3-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	ICPNH3	-	-	-	-	0	null	null	null	null	null	8.40217462932455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ICPGASNH3-E	CH4S	NH3	-	ANNUAL	-	0	1.29716520039101	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	ICPGASNH3-E	CO2SP	NH3	-	ANNUAL	-	0	39.3312153796025	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPGASNH3-E	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ICPGASNH3-E	-	-	-	-	-	0	20689.1776756815	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	ICPHGNNH3-N	-	-	-	-	-	0	20689.1776756815	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ICPGASNH3-E	-	-	-	-	-	0	388.427559408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_FOM	ICPHGNNH3-N	-	-	-	-	-	0	388.427559408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ICPGASNH3-E	-	-	-	-	-	0	37.98947311614	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_FOM	ICPHGNNH3-N	-	-	-	-	-	0	37.98947311614	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	ICPGASNH3-E	-	-	-	-	-	0	-3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_ILED	ICPHGNNH3-N	-	-	-	-	-	0	-3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_TLIFE	ICPGASNH3-E	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -70,17 +76,21 @@ TID DATA	REGION1
 	NCAP_START	ICPHGNNH3-N	-	-	-	-	-	2030	
 	NCAP_START	IMPNH3	-	-	-	-	-	2025	
 	PRC_ACTUNT	ICPGASNH3-E	-	NH3	-	-	-	1	
-	PRC_ACTUNT	ICPHGNNH3-N	-	NH3	-	-	-	1	
+	PRC_ACTUNT	ICPHGNNH3-N	-	NH3G	-	-	-	1	
 	PRC_ACTUNT	ICPNH3DEM	-	ICPNH3	-	-	-	1	
 	PRC_ACTUNT	IMPNH3	-	NH3	-	-	-	1	
 	PRC_ACTUNT	PEXNH3	-	IDUM	-	-	-	1	
+	PRC_ACTUNT	PEXNH3G	-	IDUM	-	-	-	1	
 	PRC_ACTUNT	XINDHGN	-	INDHGN	-	-	-	1	
+	PRC_ACTUNT	XNH3G	-	NH3	-	-	-	1	
 	PRC_ACTUNT	XTRANH3	-	TRANH3	-	-	-	1	
 	PRC_CAPACT	ICPGASNH3-E	-	-	-	-	-	1	
 	PRC_CAPACT	ICPHGNNH3-N	-	-	-	-	-	1	
 	PRC_CAPACT	IMPNH3	-	-	-	-	-	1	
 	PRC_CAPACT	PEXNH3	-	-	-	-	-	1	
+	PRC_CAPACT	PEXNH3G	-	-	-	-	-	1	
 	PRC_CAPACT	XINDHGN	-	-	-	-	-	1	
+	PRC_CAPACT	XNH3G	-	-	-	-	-	1	
 	PRC_CAPACT	XTRANH3	-	-	-	-	-	1	
 	TOP-IN	ICPGASNH3-E	ICPELC	-	-	-	-	1	
 	TOP-IN	ICPGASNH3-E	ICPGMU	-	-	-	-	1	
@@ -89,16 +99,20 @@ TID DATA	REGION1
 	TOP-IN	ICPHGNNH3-N	INDHGN	-	-	-	-	1	
 	TOP-IN	ICPNH3DEM	NH3	-	-	-	-	1	
 	TOP-IN	PEXNH3	NH3	-	-	-	-	1	
+	TOP-IN	PEXNH3G	NH3G	-	-	-	-	1	
 	TOP-IN	XINDHGN	HGN	-	-	-	-	1	
+	TOP-IN	XNH3G	NH3G	-	-	-	-	1	
 	TOP-IN	XTRANH3	NH3	-	-	-	-	1	
 	TOP-OUT	ICPGASNH3-E	CH4S	-	-	-	-	1	
 	TOP-OUT	ICPGASNH3-E	CO2SP	-	-	-	-	1	
 	TOP-OUT	ICPGASNH3-E	NH3	-	-	-	-	1	
-	TOP-OUT	ICPHGNNH3-N	NH3	-	-	-	-	1	
+	TOP-OUT	ICPHGNNH3-N	NH3G	-	-	-	-	1	
 	TOP-OUT	ICPNH3DEM	ICPNH3	-	-	-	-	1	
 	TOP-OUT	IMPNH3	NH3	-	-	-	-	1	
 	TOP-OUT	PEXNH3	IDUM	-	-	-	-	1	
+	TOP-OUT	PEXNH3G	IDUM	-	-	-	-	1	
 	TOP-OUT	XINDHGN	INDHGN	-	-	-	-	1	
+	TOP-OUT	XNH3G	NH3	-	-	-	-	1	
 	TOP-OUT	XTRANH3	TRANH3	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1

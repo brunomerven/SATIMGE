@@ -244,6 +244,7 @@ $offtext
 * apetr
     ica('ccoil','apetr','NAT') = max(0.07,ica('ccoil','apetr','NAT'));
 
+    ica('cpetr-h',A,'NAT') = ica('cpetr-h',A,'NAT')*0.67;
 
 
 * tmp fix on pp until fixed on SATIM side
@@ -268,11 +269,13 @@ $offtext
 
     ica('chydr','apetr','NAT')$(EIntensity_FS('petr','chydr',TC) gt 0.001) = EIntensity_FS('petr','chydr',TC);
 
-    ica('chydr','aammo','NAT')$(EIntensity_FS('am','chydr',TC) gt 0.001) = EIntensity_FS('am','chydr',TC)*0.92;
+    ica('chydr','aammo','NAT')$(EIntensity_FS('am','chydr',TC) gt 0.001) = EIntensity_FS('am','chydr',TC)*0.67;
+    ica('cngas','aammo','NAT')$(EIntensity_FS('am','cngas',TC) gt 0.001) = EIntensity_FS('am','cngas',TC)*0.67;
+
     ica('ccoal-low','aammo','NAT')$(EIntensity_FS('am','ccoal-low',TC) gt 0.001) = EIntensity_FS('am','ccoal-low',TC)*1/60;
     ica('ccoal-low','aelec','NAT')$(EIntensity_FS('elec','ccoal-low',TC) gt 0.001) = EIntensity_FS('elec','ccoal-low',TC)*1;
 
-    ica('chydr','altrp-f','NAT')$(EIntensity_FS('tranlf','chydr',TC) gt 0.001) = EIntensity_FS('tranlf','chydr',TC)*0.18;
+    ica('chydr','altrp-f','NAT')$(EIntensity_FS('tranlf','chydr',TC) gt 0.001) = EIntensity_FS('tranlf','chydr',TC)*0.36;
 
 
 *$offtext
@@ -281,7 +284,7 @@ $offtext
 * setting electrolyser input (empirically) - this could be made more elegant later
 *@    ica('celct','ahydr','NAT')$(ord(TC) gt 5) = max(0.04,ica('celct','ahydr','NAT') *0.1);
 * 19 is the base year price of electrolysers
-*@    ica('celct','ahydr','NAT')$(TVNCAP(TC,'UELEP1HGN') gt 0.15) = max(0.04,TVNCAP(TC,'UELEP1HGN')*19/FLOW_OUT_FSFuels('hydr','chydr',TC));
+    ica('celct','ahydr','NAT') = ica0('celct','ahydr','NAT')*0.4;
 
 
 
@@ -290,7 +293,7 @@ $offtext
     ica('cfcel','avehi','NAT')$(TVCAP(TC,'HFCP-TRAHCV-N') gt 0.15) = TVCAP(TC,'HFCP-TRAHCV-N')*3.3/QA.L('avehi');
 
 * Ammonia sector calibrated on cbchm
-    ica('cammo','aammo','NAT') = 0.28;
+    ica('cammo','aammo','NAT') = 0.01;
     ica('cbchm','aammo','NAT') = 0.01;
     ica('cochm','aammo','NAT') = 0.01;
     ica('celec','aammo','NAT') = 0.005;
@@ -298,8 +301,6 @@ $offtext
 
 
 * tweaks to iron and steel sector
-*    ica('cpgm','airon','NAT') = (ica0('cpgm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + ica0('cpgm','airon','NAT')* 0.9 * VARACT('REGION1',TC,'PEXGDRI'))
-*                              /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
 
     ica('cnfrm','airon','NAT') = (ica0('cnfrm','airon','NAT') * COM_PROJ('REGION1',TC,'IISCRS') + 0.0001 * VARACT('REGION1',TC,'PEXGDRI'))
                               /(COM_PROJ('REGION1',TC,'IISCRS') + VARACT('REGION1',TC,'PEXGDRI'));
@@ -414,11 +415,11 @@ $offtext
 
 
 * Hydrogen Sector
-    AFX('AHYDR',RD)$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
-    AFLEO('AHYDR')$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
+*#    AFX('AHYDR',RD)$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
+*#    AFLEO('AHYDR')$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
 
-*    AFX('AHYDR',RD) = YES;
-*    AFLEO('AHYDR') = YES;
+    AFX('AHYDR',RD)$(ORD(TC) gt 4) = YES;
+    AFLEO('AHYDR')$(ORD(TC) gt 4) = YES;
 
 
 
@@ -471,10 +472,10 @@ $offtext
 
 * Exogenous Exports can only be used in sectors that exist and active in the base year
 * the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
-    QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
+*    QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
 
 * ammonia
-    QE.FX('cammo','REST')$VARACT('REGION1',TC-1,'PEXNH3') = QE.L('cammo','REST')*VARACT('REGION1',TC,'PEXNH3')/VARACT('REGION1',TC-1,'PEXNH3');
+    QE.FX('cammo','REST')$(FLOW_IN_FSFuels('exp','cammo',TC-1)) = QE.L('cammo','REST')*FLOW_IN_FSFuels('exp','cammo',TC)/FLOW_IN_FSFuels('exp','cammo',TC-1);
 
 * PGM
     QE.FX('cpgm','REST') = QE.L('cpgm','REST')*VARACT('REGION1',TC,'PEXPGM')/VARACT('REGION1',TC-1,'PEXPGM');

@@ -23,7 +23,7 @@ Parameters
 
 FILE Scen;
 
-$call   "gdxxrw i=SARB_prelimruns\SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
+$call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
 $gdxin  SATIMGE.gdx
 $load RUN INCLRUN TC
 
@@ -34,8 +34,8 @@ $load CoalCV
 
 LOOP(RUN$INCLRUN(RUN),
 
-put_utilities Scen 'gdxin' / "SARB_prelimruns\",RUN.TL:50;
-*put_utilities Scen 'gdxin' / RUN.TL:50;
+*put_utilities Scen 'gdxin' / "SARB_prelimruns\",RUN.TL:50;
+put_utilities Scen 'gdxin' / RUN.TL:50;
 execute_load REPORT_RUN;
 
 REPORTM(PRC,COM,TC,RUN,Indicators) = REPORT_RUN(PRC,COM,TC,Indicators);
