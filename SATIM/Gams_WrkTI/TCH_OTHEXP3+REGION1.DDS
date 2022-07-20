@@ -7,7 +7,7 @@ SET REG /
 SET COM_GRP /
   'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
   'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
-  'IDUM'                     'Dummy commodity                                   '
+  'IDUM'                     'Dummy Commodity                                   '
   'IISHBI'                   'Industry - Hot Bricketted Iron - HDRI route       '
   'IPGM'                     'Industry - PGMs - Platinum                        '
   'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
@@ -17,7 +17,7 @@ SET COM_GRP /
 SET COM /
   'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
   'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
-  'IDUM'                     'Dummy commodity                                   '
+  'IDUM'                     'Dummy Commodity                                   '
   'IISHBI'                   'Industry - Hot Bricketted Iron - HDRI route       '
   'IPGM'                     'Industry - PGMs - Platinum                        '
   'IPGMOP'                   'Industry - PGMs - Other PGMs                      '

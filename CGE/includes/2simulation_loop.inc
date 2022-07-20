@@ -91,10 +91,10 @@ $include SATIM\includes\2TIMESReport.inc
 
 
 * make acoal output leontief - controlled by SATIM - see theta calcs below
- ACET2('acoal') = YES;
+ ACET2('acoal') = NO;
 
 * can't get apetr leontief to work yet.
- ACET2('apetr') = YES;
+ ACET2('apetr') = NO;
 
 * do reverse mapping for industry sectors (excludes power and petroleum)
  ICAGR(CXEP,A,TC) = SUM(FSXEP$MFSA(FSXEP,A),ICAFSGR(CXEP,FSXEP,TC));
@@ -201,16 +201,18 @@ $offtext
 
 *bm make ratio of coal outputs exogenous and control from SATIM outputs
     theta('acoal','ccoal-low') = COAL_FLOW(RUN,TC,'ccoal-low')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
-    theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
+*    theta('acoal','ccoal-hgh') = COAL_FLOW(RUN,TC,'ccoal-hgh')/sum(C,COAL_FLOW(RUN,TC,C))*(1-(theta('acoal','cmore')+theta('acoal','cmine')));
 
 * shrinking production of cmore and cmine out of coal
-    theta('acoal','cmore') = theta('acoal','cmore')*0.95;
-    theta('acoal','cmine') = theta('acoal','cmine')*0.95;
+*    theta('acoal','cmore') = theta('acoal','cmore')*0.95;
+*    theta('acoal','cmine') = theta('acoal','cmine')*0.95;
+
+    theta('acoal','ccoal-hgh') = 1-theta('acoal','ccoal-low')-theta('acoal','cmore')-theta('acoal','cmine');
 
 * adjust ica and ifa for acoal based on previous pacoal and new theta
     pacoalx(TC,RUN) = sum(CCOAL,theta('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta('acoal',CCOAL));
-*  ICAGR(C,'acoal',TC)$pacoalx(TC-1,RUN) = pacoalx(TC,RUN)/pacoalx(TC-1,RUN);
-*  IFAGR(F,'acoal',TC)$pacoalx(TC-1,RUN) = pacoalx(TC,RUN)/pacoalx(TC-1,RUN);
+  ICAGR(C,'acoal',TC)$pacoalx(TC-1,RUN) = pacoalx(TC,RUN)/pacoalx(TC-1,RUN);
+  IFAGR(F,'acoal',TC)$pacoalx(TC-1,RUN) = pacoalx(TC,RUN)/pacoalx(TC-1,RUN);
 
 
 
@@ -377,7 +379,7 @@ $offtext
 * coal sector
     AFX('acoal',RD)$EFX(TT,TC) = YES;
     CCAP(TC,TT) = sum(C,FLOW_OUT_FSFUELS('coal',C,TC));
-    AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1))-1;
+    AFXGR('ACOAL','NAT',XC,TC)$(COALMINCAP(TC-1) and pacoalx(TC-1,RUN)) = (COALMINCAP(TC)/COALMINCAP(TC-1)*pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
 
 
 *pacoalx(TC,RUN)/pacoalx(TC-1,RUN))-1;
@@ -472,7 +474,7 @@ $offtext
 
 * Exogenous Exports can only be used in sectors that exist and active in the base year
 * the export level specification assumes a 1mton export in 2012 and that PEXGDRI is the green iron export in mtons
-*    QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
+    QE.FX('ciron','REST') = QE0('ciron','REST')*(1+VARACT('REGION1',TC,'PEXGDRI'));
 
 * ammonia
     QE.FX('cammo','REST')$(FLOW_IN_FSFuels('exp','cammo',TC-1)) = QE.L('cammo','REST')*FLOW_IN_FSFuels('exp','cammo',TC)/FLOW_IN_FSFuels('exp','cammo',TC-1);
@@ -480,6 +482,7 @@ $offtext
 * PGM
     QE.FX('cpgm','REST') = QE.L('cpgm','REST')*VARACT('REGION1',TC,'PEXPGM')/VARACT('REGION1',TC-1,'PEXPGM');
 
+* Coal
 
 
 * set ANFX

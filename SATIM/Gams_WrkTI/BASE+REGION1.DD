@@ -81,7 +81,7 @@ SET COM_GRP /
   'HET'                      'Heat-Steam                                        '
   'HGN'                      'Hydrogen                                          '
   'HYD'                      'Hydro                                             '
-  'IDUM'                     'Dummy commodity                                   '
+  'IDUM'                     'Dummy Commodity                                   '
   'INDBIB'                   'Industry - Biomass Bagasse                        '
   'INDBIW'                   'Industry - Biomass wood                           '
   'INDCH4S'                  'Industry Methane South Africa                     '
@@ -95,7 +95,7 @@ SET COM_GRP /
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
   'INDNOXS'                  'Industry Nitrogen gases South Africa              '
-  'INDODS'                   'Industry - Diesel                                 '
+  'INDODS'                   'Industry - Oil Diesel                             '
   'INDOGS'                   'Industry Oil Gasoline                             '
   'INDOHF'                   'Industry - Oil HFO                                '
   'INDOLP'                   'Industry - Oil LPG                                '
@@ -317,7 +317,7 @@ SET COM /
   'HET'                      'Heat-Steam                                        '
   'HGN'                      'Hydrogen                                          '
   'HYD'                      'Hydro                                             '
-  'IDUM'                     'Dummy commodity                                   '
+  'IDUM'                     'Dummy Commodity                                   '
   'INDBIB'                   'Industry - Biomass Bagasse                        '
   'INDBIW'                   'Industry - Biomass wood                           '
   'INDCH4S'                  'Industry Methane South Africa                     '
@@ -331,7 +331,7 @@ SET COM /
   'INDN2OS'                  'Industry Nitrous Oxide South Africa               '
   'INDNMVS'                  'Industry NMVOCs South Africa                      '
   'INDNOXS'                  'Industry Nitrogen gases South Africa              '
-  'INDODS'                   'Industry - Diesel                                 '
+  'INDODS'                   'Industry - Oil Diesel                             '
   'INDOGS'                   'Industry Oil Gasoline                             '
   'INDOHF'                   'Industry - Oil HFO                                '
   'INDOLP'                   'Industry - Oil LPG                                '
@@ -3965,7 +3965,7 @@ PARAMETER AUC_R_EACH /
   'REGION1'                 .'UGASGRS-N'               .'UP'                         3     .9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGTLGASIN-N'             .'LO'                         3     .4393191596462                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UGTLGASIN-N'             .'UP'                         3     .4624412206802                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  'REGION1'                 .'UGTLGICCO-E'             .'LO'                         3     .4393191596462                                                                                                                  .4393191596462  .4393191596462  .4393191596462  .4393191596462  .4393191596462 EPS                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UGTLGICCO-E'             .'LO'                         3     .4393191596462                                                                                                                  .4393191596462 EPS             EPS             EPS             EPS             EPS                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'UGTLGICCO-E'             .'UP'                         3     .4624412206802                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UGTLGICCO-N'             .'LO'                         3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
   'REGION1'                 .'UGTLGICCO-N'             .'UP'                         3     .4624412206802                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

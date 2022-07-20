@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2022/06/08	8:49:54 AM
+Creation Date:	2022/07/20	1:43:27 PM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_CCS	Carbon Capture And Storage Techs	
@@ -58,6 +58,8 @@ TS DATA	REGION1
 	FLO_EMIS	UDACCO2S2	CO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UPWRCO2SCRC	PWRCO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UPWRCO2SCRG	PWRCO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UPWRCO2SCRC	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UPWRCO2SCRG	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UDACCO2S2	-	-	-	-	-	0	79.7359515678342	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UPWRCO2SCRC	-	-	-	-	-	0	14.8389445818207	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_COST	UPWRCO2SCRG	-	-	-	-	-	0	4.94631486060691	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

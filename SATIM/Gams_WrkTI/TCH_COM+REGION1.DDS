@@ -6,7 +6,7 @@ SET REG /
 /;
 SET COM_GRP /
   'CEC'                      'Commercial - Cooling                              '
-  'CEG'                      'Commercial - Public Lights                        '
+  'CEG'                      'Commercial - Public lights                        '
   'CEH'                      'Commercial - Space Heating                        '
   'CEK'                      'Commercial - Cooking                              '
   'CEL'                      'Commercial - Lighting                             '
@@ -15,7 +15,7 @@ SET COM_GRP /
   'CET'                      'Commercial - Public Water                         '
   'CEW'                      'Commercial - Water Heating                        '
   'CNC'                      'Commercial - Cooling                              '
-  'CNG'                      'Commercial - Public Lights                        '
+  'CNG'                      'Commercial - Public lights                        '
   'CNH'                      'Commercial - Space Heating                        '
   'CNK'                      'Commercial - Cooking                              '
   'CNL'                      'Commercial - Lighting                             '
@@ -49,7 +49,7 @@ SET COM_GRP /
 /;
 SET COM /
   'CEC'                      'Commercial - Cooling                              '
-  'CEG'                      'Commercial - Public Lights                        '
+  'CEG'                      'Commercial - Public lights                        '
   'CEH'                      'Commercial - Space Heating                        '
   'CEK'                      'Commercial - Cooking                              '
   'CEL'                      'Commercial - Lighting                             '
@@ -58,7 +58,7 @@ SET COM /
   'CET'                      'Commercial - Public Water                         '
   'CEW'                      'Commercial - Water Heating                        '
   'CNC'                      'Commercial - Cooling                              '
-  'CNG'                      'Commercial - Public Lights                        '
+  'CNG'                      'Commercial - Public lights                        '
   'CNH'                      'Commercial - Space Heating                        '
   'CNK'                      'Commercial - Cooking                              '
   'CNL'                      'Commercial - Lighting                             '
