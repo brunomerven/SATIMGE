@@ -106,6 +106,10 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 *bm methane rich gas is currently a product of sasol which is accounted for in SATIM, but not in eSAGE so making this zero
  FLOW_OUT_FSFuels('petr','cngas',TC) = 0;
+*bm correcting for elc autogeneration which should be excluded from elc demand
+ FLOW_IN_FSFuels('petr','celec',TC) = max(0,FLOW_IN_FSFuels('petr','celec',TC)-FLOW_OUT_FSFuels('petr','celec',TC));
+ FLOW_OUT_FSFuels('petr','celec',TC) = 0;
+
 
 *Correction made for Pulp and paper own gen, this may have to be done to more sectors as own gen becomes more prevalent
  FLOW_IN_FSFuels('pp','celec',TC) = FLOW_IN_FSFuels('pp','celec',TC) - FLOW_OUT_FSFuels('pp','celec',TC);
@@ -325,6 +329,8 @@ EmisFactorCor('TRAODS','CO2',TC,RUN)$(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut'
 
 EmisFactorCor('TRAOGS','CO2',TC,RUN)$(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut')) =
          EmisFactor('TRAOGS','CO2')*REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')/(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut'))+eps;
+
+
 
 
 

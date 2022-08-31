@@ -154,6 +154,10 @@ $include cge\includes\2projection.inc
 *----------------------------------------------------------------------
 *FH 270820: Foreign savings shock for high growth scenario
 
+Sets
+TFSAV(T) /2024*2040/;
+
+
 Parameter
  FSAVGRSHK(X,T)
  LABGRSHK(F,X,T);
@@ -161,8 +165,10 @@ Parameter
  FSAVGRSHK(X,T)=0;
  LABGRSHK(F,X,T)=0;
 
- FSAVGRSHK('SIM1','2022')=0.5/100;
- FSAVGRSHK('SIM1','2023')=0.5/100;
+*BM_Scen increasing FSAV to 3.4% or by 2 times base value - to make up for GVA losses by 2040.
+*!! FSAVGRSHK('base',TFSAV)=0.034;
+
+
  FSAVGRSHK('SIM1','2024')=0.5/100;
  FSAVGRSHK('SIM1','2025')=2.5/100;
  FSAVGRSHK('SIM1','2026')=2.5/100;
@@ -178,6 +184,7 @@ Parameter
 SETS
  CEGY(C)                 energy commodities   / ccoal-low, ccoal-hgh, ccoil, cngas, celec, cpetr-p, cpetr-d, cpetr-h, cpetr-k, cpetr-l /
 *ccoal, ccoal-dis,
+ RTTaxYears(T)           retaliatory tax years / 2027*2050/
 ;
 
 PARAMETER
@@ -200,6 +207,9 @@ PARAMETER
  IADJSESIM(X,T)          total electricity investment cost growth
 *bm+fh 201118
  PAFXCAP(X,T,TT)      refinery capital from TIMES in units inconsistent with CGE
+
+
+ GOVTAB(*,X,T,TT)              detailed reporting of government revenue
 ;
 
 *Carbon tax ------

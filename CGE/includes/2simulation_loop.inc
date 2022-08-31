@@ -76,6 +76,26 @@ $include SATIM\includes\2runTIMES.inc
 
 $include SATIM\includes\2TIMESReport.inc
 
+* SIM_CO2Price assumed to be in the same units as SATIM: mR/ktonCO2
+* CGE requires bR and tracks ktonCO2 so dividing by 1000
+* setting it equal to marginal of CO2SF, which doesn't explode in the last 5 years
+ SIM_CO2PRICE(TC,RUN) = REPORT('SATIMMarginals','CO2SF',TC,RUN,'Marginals')/1000 *(-1);
+
+* Set Retaliatory Tax according to https://www.tips.org.za/news/item/4399-eu-carbon-tax-move-cranks-up-heat-on-sa-exporters
+$ontext
+ RTCO2ESIM(XC,RTTaxYears) = 85/5*17/1000000;
+ RTCO2ESIM(XC,'2027') = 85/8*17/1000000;
+ RTCO2ESIM(XC,'2028') = 85/7*17/1000000;
+ RTCO2ESIM(XC,'2029') = 85/6*17/1000000;
+* RTCO2ESIM(XC,'2030') = 85/2*17/1000000;
+$offtext
+ RTCO2ESIM(XC,RTTaxYears) = 85*17/1000000;
+ RTCO2ESIM(XC,'2027') = 85/4*17/1000000;
+ RTCO2ESIM(XC,'2028') = 85/2*17/1000000;
+ RTCO2ESIM(XC,'2029') = 85*3/4*17/1000000;
+* RTCO2ESIM(XC,'2030') = 85/2*17/1000000;
+
+
 
 
  EPRICE(T1,TT)=PQ0('CELEC');
@@ -126,12 +146,10 @@ $include SATIM\includes\2TIMESReport.inc
   IF(NOT T1(TC),
 
 *       ENERGY: Carbon tax rate
-*        tco2d = SIM_CO2PRICE(RUN,TC)/1000;
-*        tco2e = SIM_CO2PRICE(RUN,TC)/1000;
-*        tco2m = SIM_CO2PRICE(RUN,TC)/1000;
+*##        tco2d = SIM_CO2PRICE(TC,RUN);
 
 *       ENERGY: Retaliatory carbon tax on RSA exports
-    rtco2e = RTCO2ESIM(XC,TC);
+*rt    rtco2e = RTCO2ESIM(XC,TC);
 
 *       ENERGY: Carbon content cofficient
 $include cge\includes\2carbon.inc
@@ -143,7 +161,7 @@ $include cge\includes\2carbon.inc
 *        co2m(C,RW) = 0;
 
 *FH
-    tabar(CTA,'NAT')=tabar(CTA,'NAT')+CTA_EMRR(CTA);
+*    tabar(CTA,'NAT')=tabar(CTA,'NAT')+CTA_EMRR(CTA);
 
 *       Long term TFP growth
     alphava(A,RD) = alphava(A,RD) * (1+TFPGR(A,RD,XC,TC));
@@ -161,9 +179,10 @@ $include cge\includes\2carbon.inc
 *       World price changes - standard CGE input
 * setting international prices for hydrogen, celct and cfcel to track projected learning - this should be linked to a central template
 * we should be doing the same for coal, oil, gas, and other commodities such as ciron, cement, etc...
-    PWGR('celct',RUN,TC)$(ord(TC) gt 9) = -0.0326;
-    PWGR('cfcel',RUN,TC)$(ord(TC) gt 9) = -0.0191;
-    PWGR('chydr',RUN,TC)$(ord(TC) gt 9) = -0.015;
+*Q for Channing: how best to set changing global commodity prices?
+*#    PWGR('celct',RUN,TC)$(ord(TC) gt 9) = -0.0326;
+*#    PWGR('cfcel',RUN,TC)$(ord(TC) gt 9) = -0.0191;
+*#    PWGR('chydr',RUN,TC)$(ord(TC) gt 9) = -0.015;
 
 
     pwebar(C,RW) = pwebar(C,RW) * (1+PWGR(C,RUN,TC));
@@ -267,7 +286,8 @@ $offtext
 *$ontext
 
 * adjustments to hydrogen (set empirically)
-    ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.018;
+    ica('chydr','airon','NAT')$(EIntensity_FS('is','chydr',TC) gt 0.001) = EIntensity_FS('is','chydr',TC)*.028;
+*.018;
 
     ica('chydr','apetr','NAT')$(EIntensity_FS('petr','chydr',TC) gt 0.001) = EIntensity_FS('petr','chydr',TC);
 
@@ -432,11 +452,11 @@ $offtext
 
 *@
 
-    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1 and HCAP(XC,TC-1,TT) le 1) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
-    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 1) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
+    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2 and HCAP(XC,TC-1,TT) le 0.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.04) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
 * set reasonable starting value for QVA otherwise wfdist goes -ve.
-    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1) = sum(F,QF.L(F,'AHYDR','NAT'));
-    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1) = 1;
+    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = sum(F,QF.L(F,'AHYDR','NAT'));
+    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = 1;
 
 *CA fix imports in accordance with TIMES for all periods
 *!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);

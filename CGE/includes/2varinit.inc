@@ -88,12 +88,18 @@
  co2e(C,RW) = co2e0(C,RW);
  co2m(C,RW) = co2m0(C,RW);
 
+ RTC(CE) = yes;
+ RTC('cptrp-l') = no;
+ RTC('cptrp-o') = no;
+ RTC('cftrp-l') = no;
+ RTC('cftrp-o') = no;
+ RTC('ctrps') = no;
+
+
+
+
 *CA rest of world price equations and trade quantities
 *Fix electricity imports and exports
-
-
-
-
 
  CEFIX(C)=NO;
  CEFIX('CELEC')=YES;
