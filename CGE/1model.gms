@@ -1475,6 +1475,11 @@ EQUATIONS
  co2c0('CCOAL-HGH') = CALIB('CCOAL-HGH','EMc');
  co2c0('CCOIL')     = CALIB('CCOIL','EMc');
  co2c0('CNGAS')     = CALIB('CNGAS','EMc');
+
+ co2c0(C) = CALIB(C,'EMc');
+
+
+
 *Initialize
  tco2d   = tco2d0;
  tco2e   = tco2e0;
@@ -1529,7 +1534,8 @@ $include includes\1carbon.inc
 
  PMDEF(C,RW)$CMRW(C,RW)..        PM(C,RW) =E= PWM(C,RW)*(1 + tm(C,RW))*EXR + SUM(CT, PQ(CT)*icm(CT,C)) + tco2m*co2m(C,RW);
 
- PWEDEF(C,RW)$CERW(C,RW)..       PWE(C,RW) =E= pwebar(C,RW) - rtco2e*(co2e(C,RW)+co2c(C));
+*bm PWEDEF(C,RW)$CERW(C,RW)..       PWE(C,RW) =E= pwebar(C,RW) - rtco2e*(co2e(C,RW)+co2c(C));
+ PWEDEF(C,RW)$CERW(C,RW)..       PWE(C,RW) =E= pwebar(C,RW) - rtco2e*(co2e(C,RW));
 
  PEDEF(C,RW)$CERW(C,RW)..        PE(C,RW) =E= (PWE(C,RW)*(1 - te(C,RW)))*EXR - SUM(CT, PQ(CT)*ice(CT,C)) + tco2e*co2e(C,RW);
 

@@ -1,0 +1,10 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+/;
+SET UC_N_UCRT /
+/;
