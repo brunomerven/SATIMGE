@@ -452,11 +452,11 @@ $offtext
 
 *@
 
-    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2 and HCAP(XC,TC-1,TT) le 0.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
-    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.04) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
+    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2 and HCAP(XC,TC-1,TT) le 1.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 1.2) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
 * set reasonable starting value for QVA otherwise wfdist goes -ve.
-    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = sum(F,QF.L(F,'AHYDR','NAT'));
-    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = 1;
+    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2) = sum(F,QF.L(F,'AHYDR','NAT'));
+    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2) = 1;
 
 *CA fix imports in accordance with TIMES for all periods
 *!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);
