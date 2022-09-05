@@ -1,3 +1,3 @@
 @echo off
-CALL C:\Models\SATIMGE\SATIM\Gams_SrcTI\ANS_RUN.CMD C:\Models\SATIMGE\SATIM\Gams_SrcTI START NZIP C:\Models\SATIMGE\SATIM\Gams_WrkTI\Gamssave c:\models\satimge\satim\gams_wrkti\gamssave\nzip.gdx '' ''
+CALL C:\Models\SATIMGE\SATIM\Gams_SrcTI\ANS_RUN.CMD C:\Models\SATIMGE\SATIM\Gams_SrcTI START NZ-10NE_8 C:\Models\SATIMGE\SATIM\Gams_WrkTI\Gamssave c:\models\satimge\satim\gams_wrkti\gamssave\nz-10ne_8.gdx '' ''
 @exit
