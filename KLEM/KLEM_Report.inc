@@ -53,6 +53,9 @@ K_Input('elec','celec',TC) = 0;
  K_AggInd('Households','E_Price',TC,RUN) = K_AggInd('Households','E_Bill',TC,RUN)/K_AggInd('Households','E_Input',TC,RUN);
  K_AggInd('Trade','E_Price',TC,RUN) = K_AggInd('Trade','E_Bill',TC,RUN)/K_AggInd('Trade','E_Output',TC,RUN);
 
+*bryce: weighted price for import energy, and export
+*sum of bill divide by sum of flows (line 6) by 
+
 
 * get rid of values pre-2017
 K_AggInd(K_Sectors,K_Indicators,'2012',RUN) = 0;

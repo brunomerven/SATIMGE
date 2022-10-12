@@ -1,7 +1,10 @@
 * Initalization of sets and parameters used for KLEM linked model
 * Bruno Merven November 2020
+* Bryce Aug 2022: making modifications for the new KLEM model (in excel) for IMAGINE
+
 
 SETS
+
    K_Energy(FSATIM)      KLEM Energy Sectors
    K_EnergyNoElc(FSATIM) KLEM Energy Sectors except Electricity
    K_NonEnergy(FSATIM)   KLEM Non-Energy Sectors
