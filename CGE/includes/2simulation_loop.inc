@@ -533,7 +533,7 @@ $include cge\includes\2capital.inc
 *       Total factor supply
     QFS.L(F) = SUM((RD,A), QF.L(F,A,RD));
 
-      );
+);
 *     end NOT T1(TC) loop
 
 $include cge\includes\2closures.inc
@@ -563,7 +563,7 @@ $include cge\includes\BudgetShare_Recalc.inc
 
 
 );
-*     end of IF ord(tt) gt 1 condition
+*     end of IF (NOT T1(TC) condition
 
 
 *CA set complementarity conditions on energy factor returns
@@ -622,12 +622,12 @@ $include cge\includes\2energychecks.inc
   );
 
   CTA_EMRR(CTA)=CTA_EMRRX(CTA,RUN,XC,TC,TT-1);
+
  );
 *   end TC loop
 
 * generate demand projection, fuel price projection and investment schedules for the next TIMES run
 $include cge\includes\2energyfcast.inc
-*!$include cge\includes\2energychecks.inc
 
 
 
