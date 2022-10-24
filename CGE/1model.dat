@@ -11,7 +11,8 @@ $loaddc A ARD C CA F FA FLAB FCAP FLND INS INSD INSDNG EN H CTD CTE CTM ATAX DTA
 *-----------------------------------------------------------------------------
 
 PARAMETER
- scale           scaling parameter for SAM (multiplier)            / 0.001 /
+ scale           scaling parameter for SAM (multiplier)            / 1 /
+* scale           scaling parameter for SAM (multiplier)            / 0.001 /
  natdrate        national annual capital depreciation rate         / 0.050 /
  accrate         annual capital accumulation rate                  / 0.040 /
  capoutrat       capital output ratio                              / 2.000 /
@@ -21,25 +22,21 @@ PARAMETER
 ;
 
 SET
- REMEXP(C)       remove exports with small shares  /
-*fh 25062019 cut off of 0.1% used. some kept due to importance
-*fh 25062019         CWATR, CCONS, CTRAD, CGSRV
-  cftrp-o, cfore, cwatr, cgsrv, ccons, cglas, ctrps, cfoot
-         /
- REMIMP(C)       remove imports with small shares  /
-*fh 25062019 cut off of 0.1% used. some kept due to importance
-*fh 25062019         CWATR, CCONS, CTRAD, CGSRV
-cfish, cfore, cwatr, cgsrv, ccomm, ccons
-        /
- REEXPORT(C)     remove imports with re-export problem  /
+ REMEXP(C)       remove exports with small shares
+ / cafee, casug, cgsrv /
 
-         /
- CERES(C)        Commodities with perfect substitution for exports  /
-          CELEC
-         /
- CMRES(C)        Commodities with perfect substitution for imports  /
+ REMIMP(C)       remove imports with small shares
+ / ccoal-low, catub, casug, cgsrv /
 
-         /
+ REEXPORT(C)     remove imports with re-export problem
+ /          /
+
+ CERES(C)        Commodities with perfect substitution for exports
+ / celec, ccoal-low, chydr/
+
+ CMRES(C)        Commodities with perfect substitution for imports
+ / /
+
  CEFIX(C)    Commodities with fixed exports (should be subset of CERES)
  CMFIX(C)    Commodities with fixed imports (should be subset of CMRES)
 
@@ -188,7 +185,7 @@ $load NEST FDATATYPE
  SAMBALCHK(AC)   = SAM('TOTAL',AC) - SAM(AC,'TOTAL');
 
 *bm/sr/fh calling 1sambal to cleanout small errors
-$INCLUDE includes\1sambal.inc
+*$INCLUDE includes\1sambal.inc
 
 *Define mapping set MAC
  MAC(A,C)        = NO;
@@ -390,7 +387,7 @@ PARAMETER
 
 SET
  ECAL / PRODUCT, IMPORT, EXPORT /
- COIL(A)         crude oil activity     / acoil /
+* COIL(A)         crude oil activity     / acoil /
  COAL(A)         raw coal activity      / acoal /
 ;
 
@@ -415,15 +412,17 @@ $gdxin
 * QPROD('ACOAL','NAT')     = QPROD('CCOAL-LOW','NAT') + QPROD('CCOAL-HGH','NAT');
  QPROD('ACOAL','NAT')     = QPROD('CCOAL-LOW','NAT') + QPROD('CCOAL-HGH','NAT')+SAM('ACOAL','CMORE')+SAM('ACOAL','CMINE');
  QPROD('ANGAS','NAT')     = CALIB('CNGAS','QA');
- QPROD('ACOIL','NAT')     = CALIB('CCOIL','QA');
+* QPROD('ACOIL','NAT')     = CALIB('CCOIL','QA');
 *FH 19032019
  QPROD('AHYDR','NAT')     = CALIB('CHYDR','QA');
 
 *Petroleum production quantities (PJ)
- QPROD('CPETR_P','NAT') = CALIB('CPETR_P','QA');
- QPROD('CPETR_D','NAT') = CALIB('CPETR_D','QA');
- QPROD('CPETR_O','NAT') = CALIB('CPETR_O','QA');
- QPROD('APETR','NAT') = QPROD('CPETR_P','NAT') + QPROD('CPETR_D','NAT') + QPROD('CPETR_O','NAT');
+ QPROD('CPETR-P','NAT') = CALIB('CPETR-P','QA');
+ QPROD('CPETR-D','NAT') = CALIB('CPETR-D','QA');
+ QPROD('CPETR-H','NAT') = CALIB('CPETR-H','QA');
+ QPROD('CPETR-L','NAT') = CALIB('CPETR-L','QA');
+ QPROD('CPETR-K','NAT') = CALIB('CPETR-K','QA');
+ QPROD('APETR','NAT') = QPROD('CPETR-P','NAT') + QPROD('CPETR-D','NAT') + QPROD('CPETR-H','NAT')+ QPROD('CPETR-L','NAT')+ QPROD('CPETR-K','NAT');
 
 *Electricity generation quantities (PJ)
  QPROD('AELEC','NAT') = CALIB('AELEC','QA');

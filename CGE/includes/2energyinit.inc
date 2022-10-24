@@ -15,7 +15,7 @@ SETS
 
 * bm sets for adjusting budget share weightings of energy goods
  CHouseholds(C) Commodities consumed by households
- CHEnergy(C) Energy Commodities consumed by households / ccoal-hgh, celec, cpetr_o, cptrp-l , cprtr /
+ CHEnergy(C) Energy Commodities consumed by households / ccoal-hgh, celec, cpetr-l, cpetr-k, cptrp-l , cprtr /
 
 * Transport Demands
  TPPR(COM) Private Passenger Demand Commodities /TPPRCAR, TPPRMOT, TPPRSUV/
@@ -74,9 +74,9 @@ CHNonEnergy(CHEnergy) = NO;
 
 *initialise rebound parameter (should be made a scenario parameter later)
 Rebound(T) = 0;
-PQX('celec',XC,'2012',TT) = PQ0('celec');
-YIX(H,XC,'2012',TT) = YI0(H);
-QHX('cprtr',H,XC,'2012',TT) = QH0('cprtr',H);
+PQX('celec',XC,'2019',TT) = PQ0('celec');
+YIX(H,XC,'2019',TT) = YI0(H);
+QHX('cprtr',H,XC,'2019',TT) = QH0('cprtr',H);
 * mapping of households
 *FH*----------------------------------------------------------------------------
  popvalfact(H,X,TC)=1;

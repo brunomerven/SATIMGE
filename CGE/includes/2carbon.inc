@@ -40,10 +40,14 @@ execute_load 'gdxfrominverse.gdx' , LMAT;
 
 *Carbon content
  CCON(ACM) = SUM(ACMP, CPRC(ACMP) * LMAT(ACMP,ACM));
-
+ CCONX(ACM,TC) = CCON(ACM);
 
 *Map activities to commodities and multiply by activity price for exports
- co2e(C,RW) = CCON(C)*PE0(C,RW);
+
+* only keep commodities that will attract retaliatory tax
+* co2e(C,RW) = CCON(C)*PE0(C,RW);
+ co2e(RTC,RW) = CCON(RTC)*PE0(RTC,RW);
+
 * co2e(C,RW)$QE0(C,RW) = CCON(C);
 *Find appropriate import coefficient
  co2m(C,RW) = CCON(C)*PWM0(C,RW)*EXR0;

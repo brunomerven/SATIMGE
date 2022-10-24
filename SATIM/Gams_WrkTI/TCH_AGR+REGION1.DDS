@@ -25,14 +25,12 @@ SET COM_DEM /
   'REGION1'   .'AP'
   'REGION1'   .'AT'
 /;
-SET COM_ANNUAL /
-  'REGION1'   .'AT'
-/;
 SET COM_DAYNIT /
   'REGION1'   .'AH'
   'REGION1'   .'AI'
   'REGION1'   .'AO'
   'REGION1'   .'AP'
+  'REGION1'   .'AT'
 /;
 SET COM_DEMRES /
   'REGION1'   .'AH'
@@ -42,7 +40,7 @@ SET COM_DEMRES /
   'REGION1'   .'AT'
 /;
 SET PRC /
-  'AHCOA-E'                  'Agriculture - Heating-Coal - Existing             '
+  'AHCOA-E'                  'Agriculture - Heating - Coal - Existing           '
   'AHELC-E'                  'Agriculture - Heating - Electricity - Room - Exist'
   'AHOHF-E'                  'Agriculture - Heating - Oil HFO- Existing         '
   'AHOKE-E'                  'Agriculture - Heating - Oil Paraffin- Existing    '
@@ -55,21 +53,13 @@ SET PRC /
   'ATELC-E'                  'Agriculture - Traction - Electricity - Existing   '
   'ATODS-E'                  'Agriculture - Traction - Oil Diesel - Existing    '
   'ATOGS-E'                  'Agriculture - Traction - Oil Gasoline - Existing  '
-  'XAGRCOA'                  'Agriculture Coal                                  '
-  'XAGRELC'                  'Agriculture Electricity                           '
-  'XAGRODS'                  'Agriculture Oil Diesel                            '
-  'XAGROGS'                  'Agriculture Oil Gasoline                          '
-  'XAGROHF'                  'Agriculture Oil HFO                               '
-  'XAGROKE'                  'Agriculture Oil Kerosene                          '
-  'XAGROLP'                  'Agriculture Oil LPG                               '
-/;
-SET PRC_PRE /
-  'REGION1'   .'XAGRCOA'
-  'REGION1'   .'XAGRODS'
-  'REGION1'   .'XAGROGS'
-  'REGION1'   .'XAGROHF'
-  'REGION1'   .'XAGROKE'
-  'REGION1'   .'XAGROLP'
+  'XAGRCOA'                  'Agricultural Coal                                 '
+  'XAGRELC'                  'Agriculatural Electricity                         '
+  'XAGRODS'                  'Agricultural Oil Diesel                           '
+  'XAGROGS'                  'Agricultural Oil Gasoline                         '
+  'XAGROHF'                  'Agricultural Oil HFO                              '
+  'XAGROKE'                  'Agricultural Oil Paraffin                         '
+  'XAGROLP'                  'Agricultural Oil LPG                              '
 /;
 SET PRC_ELE /
   'REGION1'   .'XAGRELC'
@@ -88,16 +78,6 @@ SET PRC_DMD /
   'REGION1'   .'ATELC-E'
   'REGION1'   .'ATODS-E'
   'REGION1'   .'ATOGS-E'
-/;
-SET PRC_ANNUAL /
-  'REGION1'   .'AHCOA-E'
-  'REGION1'   .'AHOHF-E'
-  'REGION1'   .'AHOKE-E'
-  'REGION1'   .'AHOLP-E'
-  'REGION1'   .'AIODS-E'
-  'REGION1'   .'AIOGS-E'
-  'REGION1'   .'ATODS-E'
-  'REGION1'   .'ATOGS-E'
   'REGION1'   .'XAGRCOA'
   'REGION1'   .'XAGRODS'
   'REGION1'   .'XAGROGS'
@@ -106,12 +86,26 @@ SET PRC_ANNUAL /
   'REGION1'   .'XAGROLP'
 /;
 SET PRC_DAYNIT /
+  'REGION1'   .'AHCOA-E'
   'REGION1'   .'AHELC-E'
+  'REGION1'   .'AHOHF-E'
+  'REGION1'   .'AHOKE-E'
+  'REGION1'   .'AHOLP-E'
   'REGION1'   .'AIELC-E'
+  'REGION1'   .'AIODS-E'
+  'REGION1'   .'AIOGS-E'
   'REGION1'   .'AOELC-E'
   'REGION1'   .'APELC-E'
   'REGION1'   .'ATELC-E'
+  'REGION1'   .'ATODS-E'
+  'REGION1'   .'ATOGS-E'
+  'REGION1'   .'XAGRCOA'
   'REGION1'   .'XAGRELC'
+  'REGION1'   .'XAGRODS'
+  'REGION1'   .'XAGROGS'
+  'REGION1'   .'XAGROHF'
+  'REGION1'   .'XAGROKE'
+  'REGION1'   .'XAGROLP'
 /;
 SET ACOM_UNIT /
   'REGION1'.'AH'.'PJ'

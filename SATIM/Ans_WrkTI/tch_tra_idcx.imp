@@ -1,0 +1,39 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2022/09/11	11:14:59 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_TRA_IDCX	Min levels of EVs for IDC Max case (T3)	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	T	TFLCVELC-N	Transport Freight - LCV Electricity-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TPPRCARELC-N	Transport Passenger Car Priv.Veh. Electricity-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TPPRMOTELC-N	Transport Passenger Moto Priv.Veh. Electricity-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TPPRSUVELC-N	Transport Passenger SUV Priv.Veh. Electricity-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TPPUBUSELC-N	Transport Passenger Bus Electricity-N	PJ,PJa	PRC,DMD,ANNUAL	
+	T	TPPUMBTELC-N	Transport Passenger Minibus Electricity-N	PJ,PJa	PRC,DMD,ANNUAL	
+
+TS DATA	REGION1
+	NCAP_BND	TFLCVELC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	0.38	0.75	1.13	1.5	1.88	1.88	1.88	1.88	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TPPRCARELC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	32.17	64.34	96.51	128.68	160.85	160.85	160.85	160.85	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TPPRMOTELC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	6.55	13.1	19.65	26.2	32.75	39.3	45.85	52.4	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TPPRSUVELC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	8.04	16.09	24.13	32.17	40.21	40.21	40.21	40.21	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TPPUBUSELC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	0.07	0.14	0.21	0.28	0.28	0.28	0.28	0.28	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	TPPUMBTELC-N	-	-	-	-	FX	0	null	null	null	null	null	null	null	null	null	null	null	0.37	0.74	1.11	1.48	1.48	1.48	1.48	1.48	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

@@ -34,7 +34,7 @@ $load CoalCV
 
 LOOP(RUN$INCLRUN(RUN),
 
-*put_utilities Scen 'gdxin' / "NetZeroGDXs\",RUN.TL:50;
+*put_utilities Scen 'gdxin' / "SARB_prelimruns\",RUN.TL:50;
 put_utilities Scen 'gdxin' / RUN.TL:50;
 execute_load REPORT_RUN;
 

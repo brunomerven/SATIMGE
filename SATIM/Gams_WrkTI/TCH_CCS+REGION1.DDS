@@ -65,7 +65,8 @@ SET PRC /
   'UCO2STOR'                 'CO2 Storage - Durban Basin                        '
   'UDACCO2S2'                'Direct Air Capture for CO2S (cheaper option)      '
   'UPWRCO2SCD'               'PWRCO2S Power Sector Capture - Gas with CCS dummy '
-  'UPWRCO2SCR'               'PWRCO2S Power Sector Capture - Retrofit           '
+  'UPWRCO2SCRC'              'PWRCO2S Power Sector Capture - Retrofit Coal      '
+  'UPWRCO2SCRG'              'PWRCO2S Power Sector Capture - Retrofit Gas       '
   'XCO2TRANSPORT'            'CO2 Transport - Durban Basin                      '
 /;
 SET PRC_PRE /
@@ -76,7 +77,8 @@ SET PRC_PRE /
   'REGION1'   .'UCO2STOR'
   'REGION1'   .'UDACCO2S2'
   'REGION1'   .'UPWRCO2SCD'
-  'REGION1'   .'UPWRCO2SCR'
+  'REGION1'   .'UPWRCO2SCRC'
+  'REGION1'   .'UPWRCO2SCRG'
   'REGION1'   .'XCO2TRANSPORT'
 /;
 SET PRC_ANNUAL /
@@ -87,7 +89,8 @@ SET PRC_ANNUAL /
   'REGION1'   .'UCO2STOR'
   'REGION1'   .'UDACCO2S2'
   'REGION1'   .'UPWRCO2SCD'
-  'REGION1'   .'UPWRCO2SCR'
+  'REGION1'   .'UPWRCO2SCRC'
+  'REGION1'   .'UPWRCO2SCRG'
   'REGION1'   .'XCO2TRANSPORT'
 /;
 SET ACOM_UNIT /
@@ -107,7 +110,8 @@ SET PRCTACTUNT /
   'REGION1'.'UCO2STOR'.'PJ'
   'REGION1'.'UDACCO2S2'.'PJ'
   'REGION1'.'UPWRCO2SCD'.'PJ'
-  'REGION1'.'UPWRCO2SCR'.'PJ'
+  'REGION1'.'UPWRCO2SCRC'.'PJ'
+  'REGION1'.'UPWRCO2SCRG'.'PJ'
   'REGION1'.'XCO2TRANSPORT'.'PJ'
 /;
 PARAMETER APRCACTUNT /
@@ -118,7 +122,8 @@ PARAMETER APRCACTUNT /
   'REGION1'                 .'UCO2STOR'                .'ZDUMETRANS'                 1
   'REGION1'                 .'UDACCO2S2'               .'CO2CAPT'                    1
   'REGION1'                 .'UPWRCO2SCD'              .'CO2CAPT'                    1
-  'REGION1'                 .'UPWRCO2SCR'              .'CO2CAPT'                    1
+  'REGION1'                 .'UPWRCO2SCRC'             .'CO2CAPT'                    1
+  'REGION1'                 .'UPWRCO2SCRG'             .'CO2CAPT'                    1
   'REGION1'                 .'XCO2Transport'           .'CO2STOR'                    1
 /;
 PARAMETER APRCCAPACT /
@@ -128,7 +133,8 @@ PARAMETER APRCCAPACT /
   'REGION1'                 .'UCO2STOR'                   1
   'REGION1'                 .'UDACCO2S2'                  1
   'REGION1'                 .'UPWRCO2SCD'                 1
-  'REGION1'                 .'UPWRCO2SCR'                 1
+  'REGION1'                 .'UPWRCO2SCRC'                1
+  'REGION1'                 .'UPWRCO2SCRG'                1
   'REGION1'                 .'XCO2TRANSPORT'              1
 /;
 PARAMETER ATOP_IN /
@@ -139,7 +145,8 @@ PARAMETER ATOP_IN /
   'REGION1'                 .'UCO2SPLIM'               .'INMELC'                     1
   'REGION1'                 .'UCO2SPLIM'               .'INMLIMTHF'                  1
   'REGION1'                 .'UCO2STOR'                .'CO2STOR'                    1
-  'REGION1'                 .'UPWRCO2SCR'              .'ELCC'                       1
+  'REGION1'                 .'UPWRCO2SCRC'             .'ELCC'                       1
+  'REGION1'                 .'UPWRCO2SCRG'             .'ELCC'                       1
   'REGION1'                 .'XCO2Transport'           .'CO2CAPT'                    1
 /;
 PARAMETER ATOP_OUT /
@@ -157,8 +164,10 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'UDACCO2S2'               .'CO2CAPT'                    1
   'REGION1'                 .'UDACCO2S2'               .'CO2S'                       1
   'REGION1'                 .'UPWRCO2SCD'              .'CO2CAPT'                    1
-  'REGION1'                 .'UPWRCO2SCR'              .'CO2CAPT'                    1
-  'REGION1'                 .'UPWRCO2SCR'              .'PWRCO2S'                    1
+  'REGION1'                 .'UPWRCO2SCRC'             .'CO2CAPT'                    1
+  'REGION1'                 .'UPWRCO2SCRC'             .'PWRCO2S'                    1
+  'REGION1'                 .'UPWRCO2SCRG'             .'CO2CAPT'                    1
+  'REGION1'                 .'UPWRCO2SCRG'             .'PWRCO2S'                    1
   'REGION1'                 .'XCO2Transport'           .'CO2STOR'                    1
 /;
        TABLE AACT_COST
@@ -168,7 +177,6 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'UCO2SPIFM'                        .3394372183098                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'UCO2SPLIM'                        .429866                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
   'REGION1'                 .'UCO2STOR'                         6.40867298E-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  'REGION1'                 .'UDACCO2S2'                       EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   'REGION1'                 .'XCO2TRANSPORT'                    .2481951146560                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ;
        TABLE AACT_EFF
@@ -178,7 +186,8 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'UCO2STOR'                .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'UDACCO2S2'               .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'UPWRCO2SCD'              .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-  'REGION1'                 .'UPWRCO2SCR'              .'ACTGRP'                  .'ANNUAL'                           810.3095238095                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UPWRCO2SCRC'             .'ACTGRP'                  .'ANNUAL'                           810.3095238095                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UPWRCO2SCRG'             .'ACTGRP'                  .'ANNUAL'                           810.3095238095                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'XCO2TRANSPORT'           .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 ;
        TABLE AFLO_EMIS
@@ -190,21 +199,31 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'UCO2SPLIM'               .'CO2SCLIM'                .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'UCO2SPLIM'               .'CO2SPLIM'                .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'UDACCO2S2'               .'CO2S'                    .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-  'REGION1'                 .'UPWRCO2SCR'              .'PWRCO2S'                 .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UPWRCO2SCRC'             .'PWRCO2S'                 .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UPWRCO2SCRG'             .'PWRCO2S'                 .'CO2CAPT'                 .'ANNUAL'                          -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UPWRCO2SCRC'             .'UP'                         5    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UPWRCO2SCRG'             .'UP'                         5    EPS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 ;
        TABLE ANCAP_COST
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'UDACCO2S2'                        79.73                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-  'REGION1'                 .'UPWRCO2SCR'                       4.946314860606                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UDACCO2S2'                        79.73595156783                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UPWRCO2SCRC'                      14.83894458182                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'UPWRCO2SCRG'                      4.946314860606                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ;
        TABLE ANCAP_ILED
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'UDACCO2S2'                       -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UPWRCO2SCRC'                     -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'UPWRCO2SCRG'                     -1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 ;
        TABLE ANCAPTLIFE
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'UDACCO2S2'                        25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-  'REGION1'                 .'UPWRCO2SCR'                       25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UPWRCO2SCRC'                      25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'UPWRCO2SCRG'                      25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 ;
        TABLE APRCACTFLO
                                                                                      0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            

@@ -9,13 +9,14 @@ SET COM_GRP /
   'CO2SP'                    'Process Emissions South Africa                    '
   'HGN'                      'Hydrogen                                          '
   'ICPELC'                   'Industry-CP-Electricity                           '
-  'ICPGAS'                   'Industry-CP-Gas                                   '
+  'ICPGMU'                   'Industry-CP-Material use Gas                      '
   'ICPNH3'                   'Ammonia Demand Domestic Market                    '
-  'IDUM'                     'Dummy commodity                                   '
+  'IDUM'                     'Dummy Commodity                                   '
   'INDCLE'                   'Industry Coal low grade                           '
   'INDHGN'                   'Industry Hydrogen                                 '
   'MTH'                      'Methanol                                          '
   'NH3'                      'Ammonia                                           '
+  'NH3G'                     'Green Ammonia                                     '
   'TRANH3'                   'Transport Ammonia                                 '
 /;
 SET COM /
@@ -23,13 +24,14 @@ SET COM /
   'CO2SP'                    'Process Emissions South Africa                    '
   'HGN'                      'Hydrogen                                          '
   'ICPELC'                   'Industry-CP-Electricity                           '
-  'ICPGAS'                   'Industry-CP-Gas                                   '
+  'ICPGMU'                   'Industry-CP-Material use Gas                      '
   'ICPNH3'                   'Ammonia Demand Domestic Market                    '
-  'IDUM'                     'Dummy commodity                                   '
+  'IDUM'                     'Dummy Commodity                                   '
   'INDCLE'                   'Industry Coal low grade                           '
   'INDHGN'                   'Industry Hydrogen                                 '
   'MTH'                      'Methanol                                          '
   'NH3'                      'Ammonia                                           '
+  'NH3G'                     'Green Ammonia                                     '
   'TRANH3'                   'Transport Ammonia                                 '
 /;
 SET COM_DEM /
@@ -38,12 +40,13 @@ SET COM_DEM /
 SET COM_NRG /
   'REGION1'   .'HGN'
   'REGION1'   .'ICPELC'
-  'REGION1'   .'ICPGAS'
+  'REGION1'   .'ICPGMU'
   'REGION1'   .'IDUM'
   'REGION1'   .'INDCLE'
   'REGION1'   .'INDHGN'
   'REGION1'   .'MTH'
   'REGION1'   .'NH3'
+  'REGION1'   .'NH3G'
   'REGION1'   .'TRANH3'
 /;
 SET COM_ENV /
@@ -53,30 +56,32 @@ SET COM_ENV /
 SET COM_ANNUAL /
   'REGION1'   .'CH4S'
   'REGION1'   .'CO2SP'
-  'REGION1'   .'ICPGAS'
+  'REGION1'   .'ICPGMU'
   'REGION1'   .'ICPNH3'
   'REGION1'   .'IDUM'
   'REGION1'   .'INDCLE'
-  'REGION1'   .'INDHGN'
   'REGION1'   .'MTH'
   'REGION1'   .'NH3'
+  'REGION1'   .'NH3G'
   'REGION1'   .'TRANH3'
 /;
 SET COM_DAYNIT /
   'REGION1'   .'HGN'
   'REGION1'   .'ICPELC'
+  'REGION1'   .'INDHGN'
 /;
 SET COM_NRGELC /
   'REGION1'   .'ICPELC'
 /;
 SET COM_NRGFOS /
   'REGION1'   .'HGN'
-  'REGION1'   .'ICPGAS'
+  'REGION1'   .'ICPGMU'
   'REGION1'   .'IDUM'
   'REGION1'   .'INDCLE'
   'REGION1'   .'INDHGN'
   'REGION1'   .'MTH'
   'REGION1'   .'NH3'
+  'REGION1'   .'NH3G'
   'REGION1'   .'TRANH3'
 /;
 SET COM_DEMRES /
@@ -92,9 +97,10 @@ SET PRC /
   'ICPNH3DEM'                'Ammonia to Local Market                           '
   'IMPNH3'                   'Ammonia Imports                                   '
   'PEXNH3'                   'Ammonia to Export Market                          '
-  'UCTLCLEIN-E'              'Refinery CTL Existing                             '
-  'UCTLNH3-E'                'Ammonia Production linked to CTL production       '
+  'PEXNH3G'                  'Green Ammonia to Export Market                    '
+  'UCTLNH3-E'                'Ammonia production linked to CTL production       '
   'XINDHGN'                  'Industry Sector Hydrogen                          '
+  'XNH3G'                    'Green Ammonia to Local Ammonia                    '
   'XTRANH3'                  'Ammonia to Transport                              '
 /;
 SET PRC_PRE /
@@ -102,9 +108,10 @@ SET PRC_PRE /
   'REGION1'   .'ICPHGNNH3-N'
   'REGION1'   .'IMPNH3'
   'REGION1'   .'PEXNH3'
-  'REGION1'   .'UCTLCLEIN-E'
+  'REGION1'   .'PEXNH3G'
   'REGION1'   .'UCTLNH3-E'
   'REGION1'   .'XINDHGN'
+  'REGION1'   .'XNH3G'
   'REGION1'   .'XTRANH3'
 /;
 SET PRC_DMD /
@@ -115,8 +122,9 @@ SET PRC_ANNUAL /
   'REGION1'   .'ICPNH3DEM'
   'REGION1'   .'IMPNH3'
   'REGION1'   .'PEXNH3'
-  'REGION1'   .'UCTLCLEIN-E'
+  'REGION1'   .'PEXNH3G'
   'REGION1'   .'UCTLNH3-E'
+  'REGION1'   .'XNH3G'
   'REGION1'   .'XTRANH3'
 /;
 SET PRC_DAYNIT /
@@ -128,13 +136,14 @@ SET ACOM_UNIT /
   'REGION1'.'CO2SP'.'KT'
   'REGION1'.'HGN'.'PJ'
   'REGION1'.'ICPELC'.'PJ'
-  'REGION1'.'ICPGAS'.'PJ'
+  'REGION1'.'ICPGMU'.'PJ'
   'REGION1'.'ICPNH3'.'PJ'
   'REGION1'.'IDUM'.'PJ'
   'REGION1'.'INDCLE'.'PJ'
   'REGION1'.'INDHGN'.'PJ'
   'REGION1'.'MTH'.'PJ'
   'REGION1'.'NH3'.'PJ'
+  'REGION1'.'NH3G'.'PJ'
   'REGION1'.'TRANH3'.'PJ'
 /;
 SET PRCTACTUNT /
@@ -143,21 +152,25 @@ SET PRCTACTUNT /
   'REGION1'.'ICPNH3DEM'.'PJ'
   'REGION1'.'IMPNH3'.'PJ'
   'REGION1'.'PEXNH3'.'PJ'
-  'REGION1'.'UCTLCLEIN-E'.'PJ'
+  'REGION1'.'PEXNH3G'.'PJ'
   'REGION1'.'UCTLNH3-E'.'PJ'
   'REGION1'.'XINDHGN'.'PJ'
+  'REGION1'.'XNH3G'.'PJ'
   'REGION1'.'XTRANH3'.'PJ'
 /;
 PARAMETER ANCAP_START /
   'REGION1'                 .'ICPHGNNH3-N'                2030
+  'REGION1'                 .'IMPNH3'                     2025
 /;
 PARAMETER APRCACTUNT /
   'REGION1'                 .'ICPGASNH3-E'             .'NH3'                        1
-  'REGION1'                 .'ICPHGNNH3-N'             .'NH3'                        1
+  'REGION1'                 .'ICPHGNNH3-N'             .'NH3G'                       1
   'REGION1'                 .'ICPNH3DEM'               .'ICPNH3'                     1
   'REGION1'                 .'IMPNH3'                  .'NH3'                        1
   'REGION1'                 .'PEXNH3'                  .'IDUM'                       1
+  'REGION1'                 .'PEXNH3G'                 .'IDUM'                       1
   'REGION1'                 .'XINDHGN'                 .'INDHGN'                     1
+  'REGION1'                 .'XNH3G'                   .'NH3'                        1
   'REGION1'                 .'XTRANH3'                 .'TRANH3'                     1
 /;
 PARAMETER APRCCAPACT /
@@ -165,51 +178,55 @@ PARAMETER APRCCAPACT /
   'REGION1'                 .'ICPHGNNH3-N'                1
   'REGION1'                 .'IMPNH3'                     1
   'REGION1'                 .'PEXNH3'                     1
-  'REGION1'                 .'UCTLNH3-E'                  1
+  'REGION1'                 .'PEXNH3G'                    1
   'REGION1'                 .'XINDHGN'                    1
+  'REGION1'                 .'XNH3G'                      1
   'REGION1'                 .'XTRANH3'                    1
 /;
 PARAMETER ATOP_IN /
   'REGION1'                 .'ICPGASNH3-E'             .'ICPELC'                     1
-  'REGION1'                 .'ICPGASNH3-E'             .'ICPGAS'                     1
+  'REGION1'                 .'ICPGASNH3-E'             .'ICPGMU'                     1
   'REGION1'                 .'ICPGASNH3-E'             .'INDCLE'                     1
   'REGION1'                 .'ICPHGNNH3-N'             .'ICPELC'                     1
   'REGION1'                 .'ICPHGNNH3-N'             .'INDHGN'                     1
   'REGION1'                 .'ICPNH3DEM'               .'NH3'                        1
   'REGION1'                 .'PEXNH3'                  .'NH3'                        1
+  'REGION1'                 .'PEXNH3G'                 .'NH3G'                       1
   'REGION1'                 .'XINDHGN'                 .'HGN'                        1
+  'REGION1'                 .'XNH3G'                   .'NH3G'                       1
   'REGION1'                 .'XTRANH3'                 .'NH3'                        1
 /;
 PARAMETER ATOP_OUT /
   'REGION1'                 .'ICPGASNH3-E'             .'CH4S'                       1
   'REGION1'                 .'ICPGASNH3-E'             .'CO2SP'                      1
   'REGION1'                 .'ICPGASNH3-E'             .'NH3'                        1
-  'REGION1'                 .'ICPHGNNH3-N'             .'NH3'                        1
+  'REGION1'                 .'ICPHGNNH3-N'             .'NH3G'                       1
   'REGION1'                 .'ICPNH3DEM'               .'ICPNH3'                     1
   'REGION1'                 .'IMPNH3'                  .'NH3'                        1
   'REGION1'                 .'PEXNH3'                  .'IDUM'                       1
-  'REGION1'                 .'UCTLNH3-E'               .'NH3'                        1
+  'REGION1'                 .'PEXNH3G'                 .'IDUM'                       1
   'REGION1'                 .'XINDHGN'                 .'INDHGN'                     1
+  'REGION1'                 .'XNH3G'                   .'NH3'                        1
   'REGION1'                 .'XTRANH3'                 .'TRANH3'                     1
 /;
        TABLE AACT_BND
                                                                                                                 0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'IMPNH3'                  .'ANNUAL'                  .'UP'                         3    EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS              5.05                                                                                                                                                                                                                                                                                                                                                                                            
-  'REGION1'                 .'PEXNH3'                  .'ANNUAL'                  .'LO'                         3     2.7578                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  'REGION1'                 .'PEXNH3'                  .'ANNUAL'                  .'LO'                         3     2.757825370675                                                                                                                                                                                                                                                                                  2.7578                                                                                                                                                                                         EPS                              
 ;
        TABLE AACT_COST
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'ICPGASNH3-E'                      880                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'ICPHGNNH3-N'                      500                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-  'REGION1'                 .'IMPNH3'                           1000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-  'REGION1'                 .'PEXNH3'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-  'REGION1'                 .'UCTLNH3-E'                        880                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+  'REGION1'                 .'ICPGASNH3-E'                      882.7087555132                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'ICPHGNNH3-N'                      176.5417511026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'IMPNH3'                           5000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 ;
        TABLE AACT_EFF
                                                                                                                 0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'ICPNH3DEM'               .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'IMPNH3'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'PEXNH3'                  .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'PEXNH3G'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'XINDHGN'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'XNH3G'                   .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   'REGION1'                 .'XTRANH3'                 .'ACTGRP'                  .'ANNUAL'                           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 ;
        TABLE ACAP_BND
@@ -225,6 +242,10 @@ PARAMETER ATOP_OUT /
   'REGION1'                 .'ICPGASNH3-E'             .'CH4S'                    .'NH3'                     .'ANNUAL'                           1.297165200391                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'ICPGASNH3-E'             .'CO2SP'                   .'NH3'                     .'ANNUAL'                           39.33121537960                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ICPGASNH3-E'             .'UP'                                                                                                                                                                                                                                                                                                                                              EPS                                                                                                                                                                                                              
+;
        TABLE ANCAP_COST
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'ICPGASNH3-E'                      20689.17767568                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -232,8 +253,8 @@ PARAMETER ATOP_OUT /
 ;
        TABLE ANCAP_FOM
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
-  'REGION1'                 .'ICPGASNH3-E'                      388.427559408                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-  'REGION1'                 .'ICPHGNNH3-N'                      388.427559408                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  'REGION1'                 .'ICPGASNH3-E'                      37.98947311614                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'ICPHGNNH3-N'                      37.98947311614                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 ;
        TABLE ANCAP_ILED
                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
@@ -252,7 +273,7 @@ PARAMETER ATOP_OUT /
        TABLE APRCACTFLO
                                                                                      0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
   'REGION1'                 .'ICPGASNH3-E'             .'ICPELC'                           5.76241134E-03                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  'REGION1'                 .'ICPGASNH3-E'             .'ICPGAS'                           1.505376344086                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'ICPGASNH3-E'             .'ICPGMU'                           1.505376344086                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'ICPGASNH3-E'             .'INDCLE'                           1.50537634E-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'ICPHGNNH3-N'             .'ICPELC'                           5.76241134E-03                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   'REGION1'                 .'ICPHGNNH3-N'             .'INDHGN'                           1.163464163517                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

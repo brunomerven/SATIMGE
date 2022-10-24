@@ -88,17 +88,31 @@
  co2e(C,RW) = co2e0(C,RW);
  co2m(C,RW) = co2m0(C,RW);
 
+ RTC(CE) = yes;
+ RTC('cptrp-l') = no;
+ RTC('cptrp-o') = no;
+ RTC('cftrp-l') = no;
+ RTC('cftrp-o') = no;
+ RTC('ctrps') = no;
+
+
+
+
 *CA rest of world price equations and trade quantities
 *Fix electricity imports and exports
+
  CEFIX(C)=NO;
  CEFIX('CELEC')=YES;
  CERES('CELEC')=YES;
  QE.FX('CELEC','REST') = QE0('CELEC','REST') ;
 
- CMFIX(C)=NO;
- CMFIX('CELEC')=YES;
- CMRES('CELEC')= YES;
- QM.FX('CELEC','REST') = QM0('CELEC','REST') ;
+
+* CMFIX(C)=NO;
+* CMFIX('CELEC')=YES;
+* CMRES('CELEC')= YES;
+* QM.FX('CELEC','REST') = QM0('CELEC','REST') ;
+
+*$ontext
 
 *bm+fh_20190207
 * CMFIX('CPETR_T')=YES;
@@ -106,79 +120,86 @@
 * QM.FX('CPETR_T','REST') = QM0('CPETR_T','REST') ;
 * CEFIX('ccoal-hgh')=YES;
 * CERES('ccoal-hgh')=YES;
+* CERES('ccoal-low')=YES;
+
 * QE.FX('ccoal-hgh','REST') = QE0('ccoal-hgh','REST') ;
 
 
- CEFIX('cftrp-o')=YES;
- CERES('cftrp-o')=YES;
- QE.FX('cftrp-o','REST') = QE0('cftrp-o','REST') ;
-
- CEFIX('cptrp-o')=YES;
- CERES('cptrp-o')=YES;
- QE.FX('cptrp-o','REST') = QE0('cptrp-o','REST') ;
-
-
+*@ CEFIX('cftrp-o')=YES;
+*@ CERES('cftrp-o')=YES;
+*@ QE.FX('cftrp-o','REST') = QE0('cftrp-o','REST') ;
+*@
+*@ CEFIX('cptrp-o')=YES;
+*@ CERES('cptrp-o')=YES;
+*@ QE.FX('cptrp-o','REST') = QE0('cptrp-o','REST') ;
+*@
+*@
  CERES('ccoal-low')=YES;
  CERES('ccoal-hgh')=YES;
-
+*@
  CERES('ccoil') = YES;
-
+*@
  CERES('cngas') = YES;
-* QM.FX('cngas','REST') = QM0('CNGAS','REST');
-
+*@* QM.FX('cngas','REST') = QM0('CNGAS','REST');
+*@
  CERES('chydr')=YES;
  CERES('cfcel')=YES;
  CERES('celct')=YES;
-* QE.FX('celct','REST') = QE0('celct','REST') ;
-
+*@* QE.FX('celct','REST') = QE0('celct','REST') ;
+*@
  CERES('cbchm') = YES;
  CERES('cochm') = YES;
-
-
+*@
+*@
  CERES('ciron') = YES;
  CEFIX('ciron') = YES;
  QE.FX('ciron','REST') = QE0('ciron','REST') ;
-*bm reason for fixing imports: without fixing it we seem to see an explosion in imports caused by an increase in PQ?
+*@*bm reason for fixing imports: without fixing it we seem to see an explosion in imports caused by an increase in PQ?
  CMRES('ciron')= YES;
  QM.FX('ciron','REST') = QM0('ciron','REST') ;
-
-
+*@
+*@
  CERES('cammo') = YES;
  CEFIX('cammo') = YES;
  QE.FX('cammo','REST') = QE0('cammo','REST') ;
  CMRES('cammo')= YES;
  QM.FX('cammo','REST') = QM0('cammo','REST') ;
-
-
+*@
+*@
  CERES('cpgm') = YES;
  CEFIX('cpgm') = YES;
  QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
-
-
+*@
+*@
  CERES('cmore') = YES;
  CMRES('cmore')= YES;
  QM.FX('cmore','REST') = QM0('cmore','REST') ;
+*@
+*@
+*@
+*@
+*@* CMRES('cpetr_p')= YES;
+*@* CMRES('cpetr_d')= YES;
+*@* CMRES('cpetr_o')= YES;
+*@
+*@* CEFIX('cpetr_p')=YES;
+*@* QE.FX('cpetr_p','REST') = QE0('cpetr_p','REST') ;
+*@
+*@* CEFIX('cpetr_d')=YES;
 
-
-
-
-* CMRES('cpetr_p')= YES;
-* CMRES('cpetr_d')= YES;
-* CMRES('cpetr_o')= YES;
-
-* CEFIX('cpetr_p')=YES;
- CERES('cpetr_p')=YES;
-* QE.FX('cpetr_p','REST') = QE0('cpetr_p','REST') ;
-
-* CEFIX('cpetr_d')=YES;
- CERES('cpetr_d')=YES;
-* QE.FX('cpetr_d','REST') = QE0('cpetr_d','REST') ;
-
-
-
-* CEFIX('cpetr_o')=YES;
- CERES('cpetr_o')=YES;
-* QE.FX('cpetr_o','REST') = QE0('cpetr_o','REST') ;
+*@* QE.FX('cpetr_d','REST') = QE0('cpetr_d','REST') ;
+*@
+*@
+*@
+*@* CEFIX('cpetr_o')=YES;
+ CERES('cpetr-d')=YES;
+ CERES('cpetr-p')=YES;
+ CERES('cpetr-h')=YES;
+ CERES('cpetr-k')=YES;
+ CERES('cpetr-l')=YES;
+*@* QE.FX('cpetr_o','REST') = QE0('cpetr_o','REST') ;
+*@
+*@*$offtext
 
 *bm setting acoal coal aggregate price
  pacoalx(T1,RUN) =  sum(CCOAL,theta0('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta0('acoal',CCOAL));

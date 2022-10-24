@@ -30,7 +30,10 @@ parameters
  CO2OUT('ccoal-low') = 96.25;
  CO2OUT('ccoal-hgh') = 96.25;
  CO2OUT('cngas') = 56.1;
- CO2OUT('cpetr_p') = 69.3;
- CO2OUT('cpetr_d') = 74.0667;
+ CO2OUT('cpetr-p') = 69.3;
+ CO2OUT('cpetr-d') = 74.0667;
 * bm average for HFO, LPG and Kerosene
- CO2OUT('cpetr_o') = 71.133;
+ CO2OUT('cpetr-h') = 77.4;
+ CO2OUT('cpetr-k') = 72.9;
+ CO2OUT('cpetr-l') = 63.1;
+

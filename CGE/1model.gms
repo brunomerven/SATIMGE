@@ -114,8 +114,6 @@ $INCLUDE %countrydata%
  SAMBALCHK(AC)   = SAM('TOTAL',AC) - SAM(AC,'TOTAL');
  SAMBALCHK(AC)$(abs( SAMBALCHK(AC)) lt 1e-6) = 0;
 
-*bm/sr/fh calling 1sambal to cleanout small errors
-*$INCLUDE includes\1sambal.inc
 *Additional set definitions based on country SAM======================
 
  CD(C)  = YES$(SUM(ARD, SAM(ARD,C)) GT (SAM(C,'ROW') - TAXPAR('EXPTAX',C) - SUM(CTE, SAM(CTE,C))) );
@@ -422,6 +420,9 @@ PARAMETERS
 beta2(fcap)=2;
 *beta2('fegy')=0.2;
 
+SET
+CFUEL(C) /CPETR-P, CPETR-D, CPETR-H, CPETR-K, CPETR-L/;
+
 *Price block --------------------------------------------------
 IF(AGRIPROD EQ 0,
  PSUP(C)              = 1;
@@ -483,22 +484,11 @@ ELSE
 * PE0('CCOAL-HGH','REST')           = (SAM('CCOAL-HGH','ROW'))/QE0('CCOAL-HGH','REST');
 
 *FH: Petroleum
- QXAC0('APETR','CPETR_D') = CALIB('CPETR_D','QA');
- QXAC0('APETR','CPETR_O') = CALIB('CPETR_O','QA');
- QXAC0('APETR','CPETR_P') = CALIB('CPETR_P','QA');
- PXAC0('APETR','CPETR_P') = SAM('APETR','CPETR_P')/QXAC0('APETR','CPETR_P');
- PXAC0('APETR','CPETR_D') = SAM('APETR','CPETR_D')/QXAC0('APETR','CPETR_D');
- PXAC0('APETR','CPETR_O') = SAM('APETR','CPETR_O')/QXAC0('APETR','CPETR_O');
- PX0('CPETR_P')           = PXAC0('APETR','CPETR_P');
- PX0('CPETR_O')           = PXAC0('APETR','CPETR_O');
- PX0('CPETR_D')           = PXAC0('APETR','CPETR_D');
- PDS0('CPETR_P')          = PXAC0('APETR','CPETR_P');
- PDS0('CPETR_O')          = PXAC0('APETR','CPETR_O');
- PDS0('CPETR_D')          = PXAC0('APETR','CPETR_D');
-*fh 25062019
- PE0('CPETR_P','REST')    = PXAC0('APETR','CPETR_P');
- PE0('CPETR_D','REST')    = PXAC0('APETR','CPETR_D');
- PE0('CPETR_O','REST')    = PXAC0('APETR','CPETR_O');
+ QXAC0('APETR',CFUEL) = CALIB(CFUEL,'QA');
+ PXAC0('APETR',CFUEL) = SAM('APETR',CFUEL)/QXAC0('APETR',CFUEL);
+ PX0(CFUEL)           = PXAC0('APETR',CFUEL);
+ PDS0(CFUEL)          = PXAC0('APETR',CFUEL);
+ PE0(CFUEL,'REST')    = PXAC0('APETR',CFUEL);
 
  QHA0(A,H)         = SUM((ARD,RD)$MARD(ARD,A,RD),SAM(ARD,H))/PA0(A);
  QANET0(A)         = QA0(A) - SUM(H, QHA0(A,H));
@@ -550,15 +540,21 @@ PARAMETER TRMSHR(C,RW);
  PM0('CCOIL','REST') = (SAM('ROW','CCOIL')+SAM('MTAX','CCOIL')+SAM('TRM','CCOIL')) / QM0('CCOIL','REST');
 
  QM0('CELEC','REST') = CALIB('AELEC','QM');
- PM0('CELEC','REST') = (SAM('ROW','CELEC')+SAM('MTAX','CELEC')+SAM('TRM','CELEC')) / QM0('CELEC','REST');
+ PM0('CELEC','REST')$QM0('CELEC','REST') = (SAM('ROW','CELEC')+SAM('MTAX','CELEC')+SAM('TRM','CELEC')) / QM0('CELEC','REST');
+
+ QM0('CHYDR','REST') = CALIB('CHYDR','QM');
+ PM0('CHYDR','REST')$QM0('CHYDR','REST') = (SAM('ROW','CHYDR')+SAM('MTAX','CHYDR')+SAM('TRM','CHYDR')) / QM0('CHYDR','REST');
+
+ QM0('CCOAL-LOW','REST') = CALIB('CCOAL-LOW','QM');
+ PM0('CCOAL-LOW','REST')$QM0('CCOAL-LOW','REST') = (SAM('ROW','CCOAL-LOW')+SAM('MTAX','CCOAL-LOW')+SAM('TRM','CCOAL-LOW')) / QM0('CCOAL-LOW','REST');
 
 *fh-----------------------------------------------------------------------------
- QM0('CPETR_P','REST') = CALIB('CPETR_P','QM');
- QM0('CPETR_O','REST') = CALIB('CPETR_O','QM');
- QM0('CPETR_D','REST') = CALIB('CPETR_D','QM');
+ QM0(CFUEL,'REST') = CALIB(CFUEL,'QM');
+* QM0('CPETR_O','REST') = CALIB('CPETR_O','QM');
+* QM0('CPETR_D','REST') = CALIB('CPETR_D','QM');
 
 *fh27062019
-* QM0('CCOAL-HGH','REST') = CALIB('CCOAL-HGH','QM');
+ QM0('CCOAL-HGH','REST') = CALIB('CCOAL-HGH','QM');
 * PM0('CCOAL-HGH','REST') = (SAM('ROW','CCOAL-HGH')+SAM('MTAX','CCOAL-HGH')+SAM('TRM','CCOAL-HGH')) / QM0('CCOAL-HGH','REST');
 
 *World price = import value (in foreign currency / import quantity
@@ -567,9 +563,11 @@ PARAMETER TRMSHR(C,RW);
  tm0(C,RW)$(SAM('ROW',C)*REGIMP(C,RW))  = (TAXPAR('IMPTAX',C)*REGTAR(C,RW)) / (SAM('ROW',C)*REGIMP(C,RW));
  tm(C,RW) = tm0(C,RW);
 
- PM0('CPETR_P','REST')$ QM0('CPETR_P','REST') = (SAM('ROW','CPETR_P') + TAXPAR('IMPTAX','CPETR_P')*REGTAR('CPETR_P','REST') + SUM(CTM, SAM(CTM,'CPETR_P'))*TRMSHR('CPETR_P','REST'))/QM0('CPETR_P','REST');
- PM0('CPETR_O','REST')$ QM0('CPETR_O','REST') = (SAM('ROW','CPETR_O') + TAXPAR('IMPTAX','CPETR_O')*REGTAR('CPETR_O','REST') + SUM(CTM, SAM(CTM,'CPETR_O'))*TRMSHR('CPETR_O','REST'))/QM0('CPETR_O','REST');
- PM0('CPETR_D','REST')$ QM0('CPETR_D','REST') = (SAM('ROW','CPETR_D') + TAXPAR('IMPTAX','CPETR_D')*REGTAR('CPETR_D','REST') + SUM(CTM, SAM(CTM,'CPETR_D'))*TRMSHR('CPETR_D','REST'))/QM0('CPETR_D','REST');
+ PM0(CFUEL,'REST')$ QM0(CFUEL,'REST') = (SAM('ROW',CFUEL) + TAXPAR('IMPTAX',CFUEL)*REGTAR(CFUEL,'REST') + SUM(CTM, SAM(CTM,CFUEL))*TRMSHR(CFUEL,'REST'))/QM0(CFUEL,'REST');
+* PM0('CPETR_O','REST')$ QM0('CPETR_O','REST') = (SAM('ROW','CPETR_O') + TAXPAR('IMPTAX','CPETR_O')*REGTAR('CPETR_O','REST') + SUM(CTM, SAM(CTM,'CPETR_O'))*TRMSHR('CPETR_O','REST'))/QM0('CPETR_O','REST');
+* PM0('CPETR_D','REST')$ QM0('CPETR_D','REST') = (SAM('ROW','CPETR_D') + TAXPAR('IMPTAX','CPETR_D')*REGTAR('CPETR_D','REST') + SUM(CTM, SAM(CTM,'CPETR_D'))*TRMSHR('CPETR_D','REST'))/QM0('CPETR_D','REST');
+*fffh
+ PM0('CCOAL-HGH','REST')$ QM0('CCOAL-HGH','REST') = (SAM('ROW','CCOAL-HGH') + TAXPAR('IMPTAX','CCOAL-HGH')*REGTAR('CCOAL-HGH','REST') + SUM(CTM, SAM(CTM,'CCOAL-HGH'))*TRMSHR('CCOAL-HGH','REST'))/QM0('CCOAL-HGH','REST');
 
 *Composite supply is the sum of domestic market sales and imports
 *(since they are initialized at the same price).
@@ -624,6 +622,8 @@ PARAMETER TRMSHR(C,RW);
  theta0(A,C) = theta(A,C);
 *Intermediate input coefficient = input use / output quantity
 *bm QINTA0(A,RD) = SUM(C$PQ0(C), SUM(ARD$MARD(ARD,A,RD), SAM(C,ARD))  / PQ0(C)) ;
+*bm this is commented out to keep units of input in their raw format, given that energy is now in physical units
+*bm we cannot add them or scale them relative to other inputs - it also makes linking to energy model more intuitive
  QINTA0(A,RD) = QAR0(A,RD);
 
 *utax code
@@ -1477,6 +1477,11 @@ EQUATIONS
  co2c0('CCOAL-HGH') = CALIB('CCOAL-HGH','EMc');
  co2c0('CCOIL')     = CALIB('CCOIL','EMc');
  co2c0('CNGAS')     = CALIB('CNGAS','EMc');
+
+ co2c0(C) = CALIB(C,'EMc');
+
+
+
 *Initialize
  tco2d   = tco2d0;
  tco2e   = tco2e0;
@@ -1531,7 +1536,8 @@ $include includes\1carbon.inc
 
  PMDEF(C,RW)$CMRW(C,RW)..        PM(C,RW) =E= PWM(C,RW)*(1 + tm(C,RW))*EXR + SUM(CT, PQ(CT)*icm(CT,C)) + tco2m*co2m(C,RW);
 
- PWEDEF(C,RW)$CERW(C,RW)..       PWE(C,RW) =E= pwebar(C,RW) - rtco2e*(co2e(C,RW)+co2c(C));
+*bm PWEDEF(C,RW)$CERW(C,RW)..       PWE(C,RW) =E= pwebar(C,RW) - rtco2e*(co2e(C,RW)+co2c(C));
+ PWEDEF(C,RW)$CERW(C,RW)..       PWE(C,RW) =E= pwebar(C,RW) - rtco2e*(co2e(C,RW));
 
  PEDEF(C,RW)$CERW(C,RW)..        PE(C,RW) =E= (PWE(C,RW)*(1 - te(C,RW)))*EXR - SUM(CT, PQ(CT)*ice(CT,C)) + tco2e*co2e(C,RW);
 

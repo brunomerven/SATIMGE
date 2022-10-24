@@ -5,7 +5,7 @@ SET
  FRA(FR)                 aggregate factor reporting accounts
  HR                      all household reporting accounts
  HRA(HR)                 aggregate household reporting accounts
- TR1(T)                  first year for reporting   / 2012 /
+ TR1(T)                  first year for reporting   / 2019 /
  TRN(T)                  final year for reporting   / 2050 /
  TTRN(TT)                final TIMES solve sequence for reporting
 ;
@@ -188,7 +188,7 @@ SETS
 SET
  CASE(RUN)
  Sub_case(X)
- YEAR(T)        Reporting time periods /2012, 2020, 2025, 2030, 2035, 2040, 2045, 2050/
+ YEAR(T)        Reporting time periods /2019, 2020, 2025, 2030, 2035, 2040, 2045, 2050/
 ;
 
  CASE(RUN)$INCLRUN(RUN)=YES;

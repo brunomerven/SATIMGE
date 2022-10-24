@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2021/09/30	6:02:53 PM
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+Creation Date:	2022/06/24	10:38:40 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR_RELL	Reliability constraint LEAF (low availability) scenario	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -54,7 +54,7 @@ TS DATA	REGION1
 	UC__RHSRT	UCCAP_DUMETR	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_ERMELC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	UC__RHSRT	UCCAP_RMELCC	-	-	-	-	LO	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	2.3	2.6	2.9	3.2	5	5.2	5.4	5.6	5.8	6	null	null	null	null	null	null	12.8	null	null	null	null	null	null	null	
+	UC__RHSRT	UCNCAP_GAS	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	10	null	null	null	null	null	null	100	null	null	null	null	null	null	null	
 	UC__RHSRT	UCNCAP_PV	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	2	null	null	null	null	null	null	null	null	null	5	null	null	null	null	null	null	100	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-M	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC__RHSRT	UCPWR_FLAB-P	-	-	-	-	FX	3	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -169,7 +169,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ERBIG-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERBIO-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-E	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ERHYDGIW-I	-	-	-	3	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ERHYDGIW-I	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-I	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERHYD-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLPCF-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -179,7 +179,7 @@ TS DATA	REGION1
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLPRR-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERSOLTC09-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ERWNDH-N	-	-	-	3	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	UC_CAP	UCCAP_RMELCC	LHS	ESTSUTL	-	-	-	3	null	null	null	null	null	null	null	null	0.7	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_CAP	UCCAP_RMELCC	LHS	ESTSUTL	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.75	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLDFB-N	-	-	-	3	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLEARNO-E	-	-	-	3	null	null	null	null	null	null	null	null	0.583333333333333	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	UC_CAP	UCCAP_RMELCC	LHS	ETCLECAMD-E	-	-	-	3	null	null	null	null	null	null	null	null	0.5	null	null	null	null	0.5625	null	null	null	null	0.5625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

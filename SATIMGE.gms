@@ -64,7 +64,7 @@ SETS
 * eSAGE sets
   TC(T)                   eSAGE active time periods
   TT(T)                   SATIM-eSAGE Iterations
-
+  TTIMES(T)               SATIM years (for demand)
 ;
 
 ALIAS (ALLYEAR,AY), (ALLYEAR,AYP), (DATAYEAR,DM_YEAR);
@@ -85,13 +85,16 @@ PARAMETERS
   PAMS_RUN(PamsSector)       activated pams for run in loop
 
 *  GDP_SIMPLE(FS,AY,RUN)          GDP for shorter runs
+
+  CCONX(AC,T)                  carbon content of final demand historical
+
 ;
 
 
 * Import sets and parameters and data from control spreadsheet-------------------------------
 $call   "gdxxrw i=SATIMGE.xlsm o=SATIMGE index=index!a6 checkdate"
 $gdxin  SATIMGE.gdx
-$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE SIM_WASTE SIM_AFOLU MRUNCASE MRUNX TC TT PAMS SIM_CO2CUMUL
+$load RUN SATIMCASES X XC INCLRUN SIM_SATIM SIM_ESAGE SIM_WASTE SIM_AFOLU MRUNCASE MRUNX TC TT TTIMES PAMS SIM_CO2CUMUL
 
 
 XNB(XC) = YES;
@@ -168,6 +171,7 @@ SETS
  COALSUP(PRC) detailed coal supply techs for power sector
 
  CCOAL(C)              coal commodities in eSAGE / ccoal-low, ccoal-hgh /
+ RTC(C)                commodities attracting retaliatory taxes
 
 * sets used for reverse mapping of households
 *FH*----------------------------------------------------------------------------
@@ -332,6 +336,9 @@ PARAMETERS
   GasShareFinal(ALLYEAR,RUN)
   FossilShareFinal(ALLYEAR,RUN)
   ERPRICE(AY,RUN)                regulated electricity price
+
+* CO2 Price
+  SIM_CO2PRICE(AY,RUN)           CO2 Price either specified manually or from marginals
 
 * CTL links
   CTL_Weight(AY,RUN)             Weighting of CTL changes in chemicals AFXGR calc
@@ -523,12 +530,12 @@ ELSE
 
          PUT 'PARAMETER ACOM_PROJ /' /;
 
-         LOOP((DEM1,TC),
-                 EFVAL = SIM_DEMX(DEM1,TC);
+         LOOP((DEM1,TTIMES),
+                 EFVAL = SIM_DEMX(DEM1,TTIMES);
                  if(EFVAL,
-                         PUT "REGION1.", DEM1.TL, ".", TC.TL, EFVAL /;
+                         PUT "REGION1.", DEM1.TL, ".", TTIMES.TL, EFVAL /;
                  else
-                         PUT "REGION1.", DEM1.TL, ".", TC.TL, "eps" /;
+                         PUT "REGION1.", DEM1.TL, ".", TTIMES.TL, "eps" /;
                  );
          );
 

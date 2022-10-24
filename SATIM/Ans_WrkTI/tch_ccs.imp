@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	26 Sep 2021	12:10:50
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_NDC_NZ.mdb
+Creation Date:	2022/07/21	5:51:46 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_CCS	Carbon Capture And Storage Techs	
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -30,7 +30,8 @@ ITEMS	REGION1
 	T	UCO2STOR	CO2 Storage - Durban Basin	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UDACCO2S2	Direct Air Capture for CO2S (cheaper option)	PJ,PJa	PRC,PRE,ANNUAL	
 	T	UPWRCO2SCD	PWRCO2S Power Sector Capture - Gas with CCS dummy	PJ,PJa	PRC,PRE,ANNUAL	
-	T	UPWRCO2SCR	PWRCO2S Power Sector Capture - Retrofit	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UPWRCO2SCRC	PWRCO2S Power Sector Capture - Retrofit Coal	PJ,PJa	PRC,PRE,ANNUAL	
+	T	UPWRCO2SCRG	PWRCO2S Power Sector Capture - Retrofit Gas	PJ,PJa	PRC,PRE,ANNUAL	
 	T	XCO2TRANSPORT	CO2 Transport - Durban Basin	PJ,PJa	PRC,PRE,ANNUAL	
 
 TS DATA	REGION1
@@ -39,23 +40,35 @@ TS DATA	REGION1
 	ACT_COST	UCO2SPIFM	-	-	-	-	-	0	0.339437218309859	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UCO2SPLIM	-	-	-	-	-	0	0.429866	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	UCO2STOR	-	-	-	-	-	0	6.40867298105683E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_COST	UDACCO2S2	-	-	-	-	-	0	7021.8	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_COST	XCO2TRANSPORT	-	-	-	-	-	0	0.248195114656032	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	UCO2SPIFC	-	ACTGRP	-	ANNUAL	-	0	833.333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	UCO2SPIFM	-	ACTGRP	-	ANNUAL	-	0	833.333333333333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	UCO2STOR	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	UDACCO2S2	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	UPWRCO2SCD	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	ACT_EFF	UPWRCO2SCR	-	ACTGRP	-	ANNUAL	-	0	810.309523809524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UPWRCO2SCRC	-	ACTGRP	-	ANNUAL	-	0	810.309523809524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	UPWRCO2SCRG	-	ACTGRP	-	ANNUAL	-	0	810.309523809524	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	ACT_EFF	XCO2TRANSPORT	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCO2SPCEM	CO2SCCEM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCO2SPCEM	CO2SPCEM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCO2SPIFC	CO2SPIFC	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCO2SPIFM	CO2SPIFM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UCO2SPLIM	CO2SCLIM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UCO2SPLIM	CO2SPLIM	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	FLO_EMIS	UDACCO2S2	CO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	FLO_EMIS	UPWRCO2SCR	PWRCO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_COST	UPWRCO2SCR	-	-	-	-	-	0	4.94631486060691	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_TLIFE	UPWRCO2SCR	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UPWRCO2SCRC	PWRCO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_EMIS	UPWRCO2SCRG	PWRCO2S	CO2CAPT	-	ANNUAL	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UPWRCO2SCRC	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	UPWRCO2SCRG	-	-	-	-	UP	5	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UDACCO2S2	-	-	-	-	-	0	79.7359515678342	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UPWRCO2SCRC	-	-	-	-	-	0	14.8389445818207	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	UPWRCO2SCRG	-	-	-	-	-	0	4.94631486060691	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UDACCO2S2	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UPWRCO2SCRC	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_ILED	UPWRCO2SCRG	-	-	-	-	-	0	-1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UDACCO2S2	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UPWRCO2SCRC	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	UPWRCO2SCRG	-	-	-	-	-	0	25	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	UCO2SPCEM	-	INMCEMTHF	-	-	-	0	0.003	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	UCO2SPCEM	-	INMELC	-	-	-	0	0.000216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_ACTFLO	UCO2SPLIM	-	INMELC	-	-	-	0	0.000216	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -69,7 +82,8 @@ TID DATA	REGION1
 	PRC_ACTUNT	UCO2STOR	-	ZDUMETRANS	-	-	-	1	
 	PRC_ACTUNT	UDACCO2S2	-	CO2CAPT	-	-	-	1	
 	PRC_ACTUNT	UPWRCO2SCD	-	CO2CAPT	-	-	-	1	
-	PRC_ACTUNT	UPWRCO2SCR	-	CO2CAPT	-	-	-	1	
+	PRC_ACTUNT	UPWRCO2SCRC	-	CO2CAPT	-	-	-	1	
+	PRC_ACTUNT	UPWRCO2SCRG	-	CO2CAPT	-	-	-	1	
 	PRC_ACTUNT	XCO2Transport	-	CO2STOR	-	-	-	1	
 	PRC_CAPACT	UCO2SPCEM	-	-	-	-	-	1	
 	PRC_CAPACT	UCO2SPIFC	-	-	-	-	-	1	
@@ -77,7 +91,8 @@ TID DATA	REGION1
 	PRC_CAPACT	UCO2STOR	-	-	-	-	-	1	
 	PRC_CAPACT	UDACCO2S2	-	-	-	-	-	1	
 	PRC_CAPACT	UPWRCO2SCD	-	-	-	-	-	1	
-	PRC_CAPACT	UPWRCO2SCR	-	-	-	-	-	1	
+	PRC_CAPACT	UPWRCO2SCRC	-	-	-	-	-	1	
+	PRC_CAPACT	UPWRCO2SCRG	-	-	-	-	-	1	
 	PRC_CAPACT	XCO2TRANSPORT	-	-	-	-	-	1	
 	TOP-IN	UCO2SPCEM	INMCEMTHF	-	-	-	-	1	
 	TOP-IN	UCO2SPCEM	INMELC	-	-	-	-	1	
@@ -86,7 +101,8 @@ TID DATA	REGION1
 	TOP-IN	UCO2SPLIM	INMELC	-	-	-	-	1	
 	TOP-IN	UCO2SPLIM	INMLIMTHF	-	-	-	-	1	
 	TOP-IN	UCO2STOR	CO2STOR	-	-	-	-	1	
-	TOP-IN	UPWRCO2SCR	ELCC	-	-	-	-	1	
+	TOP-IN	UPWRCO2SCRC	ELCC	-	-	-	-	1	
+	TOP-IN	UPWRCO2SCRG	ELCC	-	-	-	-	1	
 	TOP-IN	XCO2Transport	CO2CAPT	-	-	-	-	1	
 	TOP-OUT	UCO2SPCEM	CO2CAPT	-	-	-	-	1	
 	TOP-OUT	UCO2SPCEM	CO2SCCEM	-	-	-	-	1	
@@ -102,8 +118,10 @@ TID DATA	REGION1
 	TOP-OUT	UDACCO2S2	CO2CAPT	-	-	-	-	1	
 	TOP-OUT	UDACCO2S2	CO2S	-	-	-	-	1	
 	TOP-OUT	UPWRCO2SCD	CO2CAPT	-	-	-	-	1	
-	TOP-OUT	UPWRCO2SCR	CO2CAPT	-	-	-	-	1	
-	TOP-OUT	UPWRCO2SCR	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	UPWRCO2SCRC	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UPWRCO2SCRC	PWRCO2S	-	-	-	-	1	
+	TOP-OUT	UPWRCO2SCRG	CO2CAPT	-	-	-	-	1	
+	TOP-OUT	UPWRCO2SCRG	PWRCO2S	-	-	-	-	1	
 	TOP-OUT	XCO2Transport	CO2STOR	-	-	-	-	1	
 
 TS TRADE	_GLOBAL,REGION1

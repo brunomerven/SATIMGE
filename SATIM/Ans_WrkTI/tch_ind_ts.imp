@@ -1,0 +1,1311 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2022/06/24	11:48:25 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_IND_TS	Timeslices	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	E	ICPA	Industry-Chemicals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPC	Industry-Chemicals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPE	Industry-Chemicals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPELC	Industry-CP-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	ICPF	Industry-Chemicals-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPGAS	Industry-CP-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	ICPGMU	Industry-CP-Material use Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	ICPH	Industry-Chemicals-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPK	Industry-Chemicals-Elec Heating - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPL	Industry-Chemicals-Lighting - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPO	Industry-Chemicals-Other motive - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPP	Industry-Chemicals-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPS	Industry-Chemicals-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	ICPT	Industry-Chemicals-Ancillary - Gas Material Use - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	IFAELC	Industry-FA-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IFAGAS	Industry-FA-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IFBA	Industry-Food, Beverage & Tabacco-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBC	Industry-Food, Beverage & Tabacco-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBE	Industry-Food, Beverage & Tabacco-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBELC	Industry-FB-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IFBF	Industry-Food, Beverage & Tabacco-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBGAS	Industry-FB-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IFBH	Industry-Food, Beverage & Tabacco-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBK	Industry-Food, Beverage & Tabacco-Elec Heating - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBL	Industry-Food, Beverage & Tabacco-Lighting - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBO	Industry-Food, Beverage & Tabacco-Other motive - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBP	Industry-Food, Beverage & Tabacco-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IFBS	Industry-Food, Beverage & Tabacco-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	IISELC	Industry-IS-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IISGAS	Industry-IS-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IMIA	Industry-Mining-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIC	Industry-Mining-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIE	Industry-Mining-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIELC	Industry-MI-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IMIF	Industry-Mining-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIGAS	Industry-MI-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IMIH	Industry-Mining-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIK	Industry-Mining-Elec Heating - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIL	Industry-Mining-Lighting - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIO	Industry-Mining-Other motive - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIP	Industry-Mining-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIR	Industry-Mining-Transport - Oil Diesel - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	IMIS	Industry-Mining-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	INDHGN	Industry Hydrogen	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INFA	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFC	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFE	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFELC	Industry-NF-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	INFF	Industry-Precious & Non-Ferrous metals-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFGAS	Industry-NF-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	INFH	Industry-Precious & Non-Ferrous metals-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFK	Industry-Precious & Non-Ferrous metals-Elec Heating - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFL	Industry-Precious & Non-Ferrous metals-Lighting - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFO	Industry-Precious & Non-Ferrous metals-Other motive - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFP	Industry-Precious & Non-Ferrous metals-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	INFS	Industry-Precious & Non-Ferrous metals-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	INMELC	Industry-NM-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	INMGAS	Industry-NM-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IOTA	Industry-Other-Compressed air - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTC	Industry-Other-Cooling - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTE	Industry-Other-Electrochemical - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTELC	Industry-OT-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IOTF	Industry-Other-Fans - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTGAS	Industry-OT-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	E	IOTH	Industry-Other-HVAC - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTK	Industry-Other-Elec Heating - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTL	Industry-Other-Lighting - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTO	Industry-Other-Other motive - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTP	Industry-Other-Pumping - Electricity	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTR	Industry-Other-Transport - Oil Diesel - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	IOTS	Industry-Other-boiler/process heating - Waste - Existing	PJ	COM,DEM,ANNUAL,RES	
+	E	IPPELC	Industry-PP-Electricity	PJ	COM,NRG,DAYNITE,ELC	
+	E	IPPGAS	Industry-PP-Gas	PJ	COM,NRG,ANNUAL,FOSSIL	
+	T	ICPAELC-E	Industry-Chemicals-Compressed air - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPCELC-E	Industry-Chemicals-Cooling - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPEELC-E	Industry-Chemicals-Electrochemical - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPFELC-E	Industry-Chemicals-Fans - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPHELC-E	Industry-Chemicals-HVAC - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPKELC-E	Industry-Chemicals-Elec Heating - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPLELC-E	Industry-Chemicals-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPOELC-E	Industry-Chemicals-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPPELC-E	Industry-Chemicals-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSCLE-E	Industry-Chemicals-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSELC-E	Industry-Chemicals-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSELC-N	Industry-Chemicals-boiler/process heating - Electricity - Heat Pump New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSGAS-E	Industry-Chemicals-boiler/process heating - Gas - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSHGN-N	Industry-Chemicals-boiler/process heating - Hydrogen - New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSOHF-E	Industry-Chemicals-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSOLP-E	Industry-Chemicals-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPSWAS-E	Industry-Chemicals-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	ICPTGMU-E	Industry-Chemicals-Ancillary - Gas Material Use - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBAELC-E	Industry-Food, Beverage & Tabacco-Compressed air - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBCELC-E	Industry-Food, Beverage & Tabacco-Cooling - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBEELC-E	Industry-Food, Beverage & Tabacco-Electrochemical - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBFELC-E	Industry-Food, Beverage & Tabacco-Fans - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBHELC-E	Industry-Food, Beverage & Tabacco-HVAC - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBKELC-E	Industry-Food, Beverage & Tabacco-Elec Heating - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBLELC-E	Industry-Food, Beverage & Tabacco-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBOELC-E	Industry-Food, Beverage & Tabacco-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBPELC-E	Industry-Food, Beverage & Tabacco-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSBIB-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Biomass bagasse - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSCOA-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSELC-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSELC-N	Industry-Food, Beverage & Tabacco-boiler/process heating - Electricity - Heat Pump New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSGAS-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Gas - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSHGN-N	Industry-Food, Beverage & Tabacco-boiler/process heating - Electricity - Hydrogen New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSOHF-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSOLP-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IFBSWAS-E	Industry-Food, Beverage & Tabacco-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIAELC-E	Industry-Mining-Compressed air - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMICELC-E	Industry-Mining-Cooling - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIEELC-E	Industry-Mining-Electrochemical - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIFELC-E	Industry-Mining-Fans - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIHELC-E	Industry-Mining-HVAC - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIKELC-E	Industry-Mining-Elec Heating - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMILELC-E	Industry-Mining-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIOELC-E	Industry-Mining-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIPELC-E	Industry-Mining-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIRELC-E	Industry-Mining-Transport - Electricity - New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMIRODS-E	Industry-Mining-Transport - Oil Diesel - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISCOA-E	Industry-Mining-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISELC-E	Industry-Mining-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISELC-N	Industry-Mining-boiler/process heating - Electricity - Heat Pump New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISGAS-E	Industry-Mining-boiler/process heating - Gas - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISHGN-N	Industry-Mining-boiler/process heating - Hydrogen - New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISOHF-E	Industry-Mining-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISOLP-E	Industry-Mining-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IMISWAS-E	Industry-Mining-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFAELC-E	Industry-Precious & Non-Ferrous metals-Compressed air - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFCELC-E	Industry-Precious & Non-Ferrous metals-Cooling - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFEELC-E	Industry-Precious & Non-Ferrous metals-Electrochemical - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFFELC-E	Industry-Precious & Non-Ferrous metals-Fans - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFHELC-E	Industry-Precious & Non-Ferrous metals-HVAC - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFKELC-E	Industry-Precious & Non-Ferrous metals-Elec Heating - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFLELC-E	Industry-Precious & Non-Ferrous metals-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFOELC-E	Industry-Precious & Non-Ferrous metals-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFPELC-E	Industry-Precious & Non-Ferrous metals-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFSCOA-E	Industry-Precious & Non-Ferrous metals-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFSELC-E	Industry-Precious & Non-Ferrous metals-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFSGAS-E	Industry-Precious & Non-Ferrous metals-boiler/process heating - Gas - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFSOHF-E	Industry-Precious & Non-Ferrous metals-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFSOLP-E	Industry-Precious & Non-Ferrous metals-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	INFSWAS-E	Industry-Precious & Non-Ferrous metals-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTAELC-E	Industry-Other-Compressed air - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTCELC-E	Industry-Other-Cooling - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTEELC-E	Industry-Other-Electrochemical - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTFELC-E	Industry-Other-Fans - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTHELC-E	Industry-Other-HVAC - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTKELC-E	Industry-Other-Elec Heating - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTLELC-E	Industry-Other-Lighting - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTOELC-E	Industry-Other-Other motive - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTPELC-E	Industry-Other-Pumping - Electricity	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTRELC-E	Industry-Other-Transport - Electricity - New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTRODS-E	Industry-Other-Transport - Oil Diesel - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSCOA-E	Industry-Other-boiler/process heating - Coal - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSELC-E	Industry-Other-boiler/process heating - Electricity - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSELC-N	Industry-Other-boiler/process heating - Electricity - Heat Pump New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSGAS-E	Industry-Other-boiler/process heating - Gas - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSHGN-E	Industry-Other-boiler/process heating - Hydrogen - New	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSOHF-E	Industry-Other-boiler/process heating - Oil HFO - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSOLP-E	Industry-Other-boiler/process heating - Oil LPG - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	IOTSWAS-E	Industry-Other-boiler/process heating - Waste - Existing	PJ,PJa	PRC,DMD,ANNUAL	
+	T	XICPELC	Industrial CP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XICPGAS	Industrial CP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XICPGMU	Industrial CP-Material use Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIFAELC	Industrial FA-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFAGAS	Industrial FA-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIFBELC	Industrial FB-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIFBGAS	Industrial FB-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIISELC	Industrial IS-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIISGAS	Industrial IS-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIMIELC	Industrial MI-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIMIGAS	Industrial MI-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XINFELC	Industrial NF-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINFGAS	Industrial NF-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XINMELC	Industrial NM-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XINMGAS	Industrial NM-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIOTELC	Industrial OT-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIOTGAS	Industrial OT-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+	T	XIPPELC	Industrial PP-Electricity	PJ,GW	PRC,PRE,DAYNITE	
+	T	XIPPGAS	Industrial PP-Gas	PJ,PJa	PRC,PRE,ANNUAL	
+
+TS DATA	REGION1
+	ACT_EFF	ICPAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	ICPCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	ICPEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	ICPFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	ICPHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	ICPKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	ICPLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	ICPOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	ICPPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	ICPSCLE-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
+	ACT_EFF	ICPSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	ICPSELC-N	-	ACTGRP	-	ANNUAL	-	0	3.34	null	null	null	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	3.34	null	null	
+	ACT_EFF	ICPSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	ICPSHGN-N	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	ICPSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
+	ACT_EFF	ICPSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	ICPSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
+	ACT_EFF	ICPTGMU-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IFBAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	IFBCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	IFBEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IFBFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IFBHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	IFBKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IFBLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	IFBOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IFBPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IFBSBIB-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	IFBSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
+	ACT_EFF	IFBSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IFBSELC-N	-	ACTGRP	-	ANNUAL	-	0	3.34	null	null	null	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	3.34	null	null	
+	ACT_EFF	IFBSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	IFBSHGN-N	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IFBSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
+	ACT_EFF	IFBSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	IFBSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
+	ACT_EFF	IMIAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	IMICELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	IMIEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IMIFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IMIHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	IMIKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IMILELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	IMIOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IMIPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IMIRELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IMIRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IMISCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
+	ACT_EFF	IMISELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IMISELC-N	-	ACTGRP	-	ANNUAL	-	0	3.34	null	null	null	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	3.34	null	null	
+	ACT_EFF	IMISGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	IMISHGN-N	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IMISOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
+	ACT_EFF	IMISOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	IMISWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
+	ACT_EFF	INFAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	INFCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	INFEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	INFFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	INFHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	INFKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	INFLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	INFOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	INFPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	INFSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
+	ACT_EFF	INFSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	INFSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	INFSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
+	ACT_EFF	INFSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	INFSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
+	ACT_EFF	IOTAELC-E	-	ACTGRP	-	ANNUAL	-	0	0.05	null	null	null	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	null	null	null	0.05	null	0.05	null	null	
+	ACT_EFF	IOTCELC-E	-	ACTGRP	-	ANNUAL	-	0	2	null	null	null	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	null	null	null	2	null	2	null	null	
+	ACT_EFF	IOTEELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IOTFELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IOTHELC-E	-	ACTGRP	-	ANNUAL	-	0	0.9	null	null	null	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	null	null	null	0.9	null	0.9	null	null	
+	ACT_EFF	IOTKELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IOTLELC-E	-	ACTGRP	-	ANNUAL	-	0	0.3	null	null	null	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	null	null	null	0.3	null	0.3	null	null	
+	ACT_EFF	IOTOELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IOTPELC-E	-	ACTGRP	-	ANNUAL	-	0	0.8	null	null	null	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	null	null	null	0.8	null	0.8	null	null	
+	ACT_EFF	IOTRELC-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IOTRODS-E	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	null	null	null	1	null	1	null	null	
+	ACT_EFF	IOTSCOA-E	-	ACTGRP	-	ANNUAL	-	0	0.64	null	null	null	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	null	null	null	0.64	null	0.64	null	null	
+	ACT_EFF	IOTSELC-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IOTSELC-N	-	ACTGRP	-	ANNUAL	-	0	3.34	null	null	null	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	null	null	null	3.34	null	3.34	null	null	
+	ACT_EFF	IOTSGAS-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	IOTSHGN-E	-	ACTGRP	-	ANNUAL	-	0	0.76	null	null	null	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	null	null	null	0.76	null	0.76	null	null	
+	ACT_EFF	IOTSOHF-E	-	ACTGRP	-	ANNUAL	-	0	0.68	null	null	null	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	null	null	null	0.68	null	0.68	null	null	
+	ACT_EFF	IOTSOLP-E	-	ACTGRP	-	ANNUAL	-	0	0.72	null	null	null	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	null	null	null	0.72	null	0.72	null	null	
+	ACT_EFF	IOTSWAS-E	-	ACTGRP	-	ANNUAL	-	0	0.6	null	null	null	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	null	null	null	0.6	null	0.6	null	null	
+	ACT_EFF	XICPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XICPGMU	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFAELC	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFAGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFBELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIFBGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIISGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIMIELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIMIGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINFELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINFGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XINMGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIOTELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIOTGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPELC	-	ACTGRP	-	ANNUAL	-	0	0.972	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	ACT_EFF	XIPPGAS	-	ACTGRP	-	ANNUAL	-	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPA	-	-	-	-	0	0.208678736981107	null	null	null	null	0.3034425	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPC	-	-	-	-	0	2.78238315974809	null	null	null	null	4.0459	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPE	-	-	-	-	0	1.69168896112684	null	null	null	null	2.4599072	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPF	-	-	-	-	0	1.78072522223878	null	null	null	null	2.589376	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPH	-	-	-	-	0	0.500828968754656	null	null	null	null	0.728262	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPK	-	-	-	-	0	0.556476631949618	null	null	null	null	0.80918	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPL	-	-	-	-	0	0.333885979169771	null	null	null	null	0.485508	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPO	-	-	-	-	0	4.45181305559694	null	null	null	null	6.47344	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPP	-	-	-	-	0	7.79067284729465	null	null	null	null	11.32852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPS	-	-	-	-	0	27.2881971201409	null	null	null	null	19.3071684	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	ICPT	-	-	-	-	0	26.6	null	null	null	null	26.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBA	-	-	-	-	0	3.19316332629067E-02	null	null	null	null	0.029904	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBC	-	-	-	-	0	7.34427565046855	null	null	null	null	6.87792	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBE	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBF	-	-	-	-	0	0.510906132206507	null	null	null	null	0.478464	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBH	-	-	-	-	0	0.862154098098481	null	null	null	null	0.807408	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBK	-	-	-	-	0	1.11760716420174	null	null	null	null	1.04664	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBL	-	-	-	-	0	0.2394872494718	null	null	null	null	0.22428	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBO	-	-	-	-	0	2.68225719408416	null	null	null	null	2.511936	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBP	-	-	-	-	0	3.57634292544555	null	null	null	null	3.349248	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IFBS	-	-	-	-	0	20.4218620324183	null	null	null	null	40.5447471773438	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIA	-	-	-	-	0	0.993180581182697	null	null	null	null	0.719395700197653	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIC	-	-	-	-	0	17.3532402590831	null	null	null	null	12.5695635450455	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIE	-	-	-	-	0	0.186829635306388	null	null	null	null	0.1353272897753	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIF	-	-	-	-	0	5.88890634149207	null	null	null	null	4.26554242118914	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIH	-	-	-	-	0	7.69549985243705	null	null	null	null	5.57412177564163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIK	-	-	-	-	0	2.13763884789918	null	null	null	null	1.54836715990045	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIL	-	-	-	-	0	1.44290622233195	null	null	null	null	1.04514783293281	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIO	-	-	-	-	0	28.8949768078483	null	null	null	null	20.9296501227637	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIP	-	-	-	-	0	15.2945172722485	null	null	null	null	11.0783579247511	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIR	-	-	-	-	0	51.4885232177635	null	null	null	null	25.4063510252505	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IMIS	-	-	-	-	0	20.27512296	null	null	null	null	25.2331771912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFA	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFC	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFE	-	-	-	-	0	45.6840783358792	null	null	null	null	6.88305244224678	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFF	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFH	-	-	-	-	0	0.601106293893148	null	null	null	null	9.05664795032471E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFK	-	-	-	-	0	0.667895882103497	null	null	null	null	0.100629421670275	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFL	-	-	-	-	0	0.200368764631049	null	null	null	null	3.01888265010824E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFO	-	-	-	-	0	3.74021693977959	null	null	null	null	0.563524761353538	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFP	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	INFS	-	-	-	-	0	2.487856608	null	null	null	null	1.91152	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTA	-	-	-	-	0	0.22789646617647	null	null	null	null	0.12355272	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTC	-	-	-	-	0	4.28687222743662	null	null	null	null	2.3241024	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTE	-	-	-	-	0	0.412640642654969	null	null	null	null	0.2237106816	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTF	-	-	-	-	0	1.84652434076745	null	null	null	null	1.00108224	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTH	-	-	-	-	0	3.18638041729992	null	null	null	null	1.72747728	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTK	-	-	-	-	0	4.02415534968515	null	null	null	null	2.181672	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTL	-	-	-	-	0	1.00958343021635	null	null	null	null	0.54733968	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTO	-	-	-	-	0	12.3044909233109	null	null	null	null	6.670806912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTP	-	-	-	-	0	4.33691353748451	null	null	null	null	2.351232	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTR	-	-	-	-	0	9.46856592467852	null	null	null	null	4.2	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	IOTS	-	-	-	-	0	73.6904872529995	null	null	null	null	68.5334208	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	LO	0	0.992250821144033	null	null	null	null	0.799647616892387	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSCLE-E	ICPS	-	-	-	UP	0	0.992250821144033	null	null	null	null	0.807724865547866	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	LO	0	7.74917885596699E-03	null	null	null	null	1.57668649122054E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSELC-E	ICPS	-	-	-	UP	0	7.74917885596699E-03	null	null	null	null	1.59261261739448E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.507749178855967	null	null	null	null	null	null	null	null	null	0.69	null	0.69	null	null	
+	FLO_MARK	ICPSELC-N	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSELC-N	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	0.21	null	0.21	null	null	
+	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0.13623085195652	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSGAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0.137606921168202	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	ICPSHGN-N	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSHGN-N	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	LO	0	0	null	null	null	null	3.83546662388877E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSOHF-E	ICPS	-	-	-	UP	0	0	null	null	null	null	3.87420871099876E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSOLP-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	ICPSWAS-E	ICPS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPSWAS-E	ICPS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	FLO_MARK	ICPTGMU-E	ICPT	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	ICPTGMU-E	ICPT	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0.600669672287633	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSBIB-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0.606737042714781	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	LO	0	0.813009069087021	null	null	null	null	0.254285447999073	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSCOA-E	IFBS	-	-	-	UP	0	0.813009069087021	null	null	null	null	0.256853987877851	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSELC-E	IFBS	-	-	-	LO	0	1.18833636429848E-02	null	null	null	null	5.54936734506826E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSELC-E	IFBS	-	-	-	UP	0	1.18833636429848E-02	null	null	null	null	5.60542156067501E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.511883363642985	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSELC-N	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSELC-N	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	0.6	null	0.6	null	null	
+	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	LO	0	0.106538120595772	null	null	null	null	0.129495512368226	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSGAS-E	IFBS	-	-	-	UP	0	0.106538120595772	null	null	null	null	0.130803547846693	null	null	null	null	null	null	null	null	null	null	null	null	0.606538120595772	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSHGN-N	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSHGN-N	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSOHF-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSOHF-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSOLP-E	IFBS	-	-	-	LO	0	6.85694466742226E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSOLP-E	IFBS	-	-	-	UP	0	6.85694466742226E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.568569446674223	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IFBSWAS-E	IFBS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IFBSWAS-E	IFBS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	FLO_MARK	IMIRELC-E	IMIR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMIRELC-E	IMIR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMIRODS-E	IMIR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMIRODS-E	IMIR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISCOA-E	IMIS	-	-	-	LO	0	0.991272516553951	null	null	null	null	0.957913710859592	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISCOA-E	IMIS	-	-	-	UP	0	0.991272516553951	null	null	null	null	0.967589606928881	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISELC-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISELC-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	0.84	null	0.84	null	null	
+	FLO_MARK	IMISELC-N	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISELC-N	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0.06	null	0.06	null	null	
+	FLO_MARK	IMISGAS-E	IMIS	-	-	-	LO	0	8.7274834460486E-03	null	null	null	null	2.82485235449695E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISGAS-E	IMIS	-	-	-	UP	0	8.7274834460486E-03	null	null	null	null	2.85338621666358E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.508727483446049	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISHGN-N	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISHGN-N	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.25	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISOHF-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISOHF-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISOLP-E	IMIS	-	-	-	LO	0	0	null	null	null	null	3.83776559543886E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISOLP-E	IMIS	-	-	-	UP	0	0	null	null	null	null	3.8765309044837E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IMISWAS-E	IMIS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IMISWAS-E	IMIS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	FLO_MARK	INFSCOA-E	INFS	-	-	-	LO	0	0.304867654173098	null	null	null	null	0.149490248597974	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSCOA-E	INFS	-	-	-	UP	0	0.304867654173098	null	null	null	null	0.151000251109065	null	null	null	null	null	null	null	null	null	null	null	null	0.804867654173098	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSELC-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSELC-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSGAS-E	INFS	-	-	-	LO	0	0.695132345826902	null	null	null	null	0.840509751402026	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSGAS-E	INFS	-	-	-	UP	0	0.695132345826902	null	null	null	null	0.848999748890935	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSOHF-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSOHF-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSOLP-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSOLP-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	INFSWAS-E	INFS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	INFSWAS-E	INFS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	FLO_MARK	IOTRELC-E	IOTR	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTRELC-E	IOTR	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTRODS-E	IOTR	-	-	-	LO	0	1	null	null	null	null	0.99	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTRODS-E	IOTR	-	-	-	UP	0	1	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	LO	0	0.683020215882088	null	null	null	null	0.939674442750127	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSCOA-E	IOTS	-	-	-	UP	0	0.683020215882088	null	null	null	null	0.949166103788008	null	null	null	null	null	null	null	null	null	null	null	null	0.949166103788008	null	null	null	null	null	null	null	null	null	0.949166103788008	null	0.949166103788008	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	LO	0	4.30080338432179E-03	null	null	null	null	2.48203854432435E-03	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSELC-E	IOTS	-	-	-	UP	0	4.30080338432179E-03	null	null	null	null	2.50710964073166E-03	null	null	null	null	null	null	null	null	null	null	null	null	0.1	null	null	null	null	null	null	null	null	null	0.3	null	0.3	null	null	
+	FLO_MARK	IOTSELC-N	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSELC-N	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.02	null	null	null	null	null	null	null	null	null	0.6	null	0.6	null	null	
+	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	LO	0	0.124175827045132	null	null	null	null	4.78435187055481E-02	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSGAS-E	IOTS	-	-	-	UP	0	0.124175827045132	null	null	null	null	4.83267865712607E-02	null	null	null	null	null	null	null	null	null	null	null	null	0.624175827045132	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSHGN-E	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSHGN-E	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSOHF-E	IOTS	-	-	-	LO	0	0.114264904866746	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSOHF-E	IOTS	-	-	-	UP	0	0.114264904866746	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.614264904866746	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSOLP-E	IOTS	-	-	-	LO	0	7.42382488217117E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSOLP-E	IOTS	-	-	-	UP	0	7.42382488217117E-02	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0.574238248821712	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
+	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	LO	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	null	null	null	
+	FLO_MARK	IOTSWAS-E	IOTS	-	-	-	UP	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	0	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	NCAP_AFA	ICPAELC-E	-	-	-	-	UP	0	0.32224	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPCELC-E	-	-	-	-	UP	0	0.36038	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPEELC-E	-	-	-	-	UP	0	0.3681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPFELC-E	-	-	-	-	UP	0	0.30423	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPHELC-E	-	-	-	-	UP	0	0.36609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPKELC-E	-	-	-	-	UP	0	0.31803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPLELC-E	-	-	-	-	UP	0	0.34644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPOELC-E	-	-	-	-	UP	0	0.36388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPPELC-E	-	-	-	-	UP	0	0.33701	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSCLE-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSELC-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSELC-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSGAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSHGN-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSOHF-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSOLP-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPSWAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	ICPTGMU-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBAELC-E	-	-	-	-	UP	0	0.32224	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBCELC-E	-	-	-	-	UP	0	0.36038	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBEELC-E	-	-	-	-	UP	0	0.3681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBFELC-E	-	-	-	-	UP	0	0.30423	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBHELC-E	-	-	-	-	UP	0	0.36609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBKELC-E	-	-	-	-	UP	0	0.31803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBLELC-E	-	-	-	-	UP	0	0.34644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBOELC-E	-	-	-	-	UP	0	0.36388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBPELC-E	-	-	-	-	UP	0	0.33701	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSBIB-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSCOA-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSELC-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSELC-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSGAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSHGN-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSOHF-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSOLP-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IFBSWAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIAELC-E	-	-	-	-	UP	0	0.32224	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMICELC-E	-	-	-	-	UP	0	0.36038	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIEELC-E	-	-	-	-	UP	0	0.3681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIFELC-E	-	-	-	-	UP	0	0.30423	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIHELC-E	-	-	-	-	UP	0	0.36609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIKELC-E	-	-	-	-	UP	0	0.31803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMILELC-E	-	-	-	-	UP	0	0.34644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIOELC-E	-	-	-	-	UP	0	0.36388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIPELC-E	-	-	-	-	UP	0	0.33701	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIRELC-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMIRODS-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISCOA-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISELC-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISELC-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISGAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISHGN-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISOHF-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISOLP-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IMISWAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFAELC-E	-	-	-	-	UP	0	0.32224	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFCELC-E	-	-	-	-	UP	0	0.36038	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFEELC-E	-	-	-	-	UP	0	0.3681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFFELC-E	-	-	-	-	UP	0	0.30423	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFHELC-E	-	-	-	-	UP	0	0.36609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFKELC-E	-	-	-	-	UP	0	0.31803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFLELC-E	-	-	-	-	UP	0	0.34644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFOELC-E	-	-	-	-	UP	0	0.36388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFPELC-E	-	-	-	-	UP	0	0.33701	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFSCOA-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFSELC-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFSGAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFSOHF-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFSOLP-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	INFSWAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTAELC-E	-	-	-	-	UP	0	0.32224	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTCELC-E	-	-	-	-	UP	0	0.36038	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTEELC-E	-	-	-	-	UP	0	0.3681	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTFELC-E	-	-	-	-	UP	0	0.30423	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTHELC-E	-	-	-	-	UP	0	0.36609	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTKELC-E	-	-	-	-	UP	0	0.31803	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTLELC-E	-	-	-	-	UP	0	0.34644	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTOELC-E	-	-	-	-	UP	0	0.36388	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTPELC-E	-	-	-	-	UP	0	0.33701	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTRELC-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTRODS-E	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSCOA-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSELC-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSELC-N	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSGAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSHGN-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSOHF-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSOLP-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	IOTSWAS-E	-	-	-	-	UP	0	0.42912	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XICPELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XIFAELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XIFBELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XIISELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XIMIELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XINFELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XINMELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XIOTELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AFA	XIPPELC	-	-	-	-	UP	0	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPCELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPFELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPHELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPKELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPLELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSCLE-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSELC-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSGAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSHGN-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSOHF-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	ICPTGMU-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBCELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBFELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBHELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBKELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBLELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSBIB-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSCOA-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSELC-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSGAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSHGN-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSOHF-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IFBSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMICELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIFELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIHELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIKELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMILELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIRELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMIRODS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISCOA-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISELC-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISGAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISHGN-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISOHF-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IMISWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFCELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFFELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFHELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFKELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFLELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFSCOA-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFSELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFSGAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFSOHF-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	INFSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTAELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTCELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTEELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTFELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTHELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTKELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTLELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTOELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTPELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTRELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTRODS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSCOA-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSELC-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSELC-N	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSGAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSHGN-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSOHF-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSOLP-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_BND	IOTSWAS-E	-	-	-	-	UP	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XICPELC	-	-	-	-	-	0	7336.75198816163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XICPGAS	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XICPGMU	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIFAGAS	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIFBELC	-	-	-	-	-	0	11787.4425346706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIFBGAS	-	-	-	-	-	0	264.503820484722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIISELC	-	-	-	-	-	0	7336.75198816163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIISGAS	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIMIELC	-	-	-	-	-	0	7336.75198816163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIMIGAS	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINFELC	-	-	-	-	-	0	7336.75198816163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINFGAS	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINMELC	-	-	-	-	-	0	7336.75198816163	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XINMGAS	-	-	-	-	-	0	164.632737348217	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIOTELC	-	-	-	-	-	0	11787.4425346706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIOTGAS	-	-	-	-	-	0	264.503820484722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIPPELC	-	-	-	-	-	0	11787.4425346706	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_COST	XIPPGAS	-	-	-	-	-	0	264.503820484722	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPAELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPCELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPEELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPFELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPHELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPKELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPLELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPOELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPPELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSCLE-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSELC-N	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSGAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSHGN-N	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSOHF-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSOLP-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPSWAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	ICPTGMU-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBAELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBCELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBEELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBFELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBHELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBKELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBLELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBOELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBPELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSBIB-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSCOA-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSELC-N	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSGAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSHGN-N	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSOHF-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSOLP-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IFBSWAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIAELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMICELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIEELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIFELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIHELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIKELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMILELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIOELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIPELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIRELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMIRODS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISCOA-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISELC-N	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISGAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISHGN-N	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISOHF-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISOLP-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IMISWAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFAELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFCELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFEELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFFELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFHELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFKELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFLELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFOELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFPELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFSCOA-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFSELC-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFSGAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFSOHF-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFSOLP-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	INFSWAS-E	-	-	-	-	-	0	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTAELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTCELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTEELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTFELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTHELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTKELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTLELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTOELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTPELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTRELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTRODS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSCOA-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSELC-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSELC-N	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSGAS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSHGN-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSOHF-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSOLP-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	IOTSWAS-E	-	-	-	-	-	0	100	null	null	null	null	100	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XICPELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XICPGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XICPGMU	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIFAELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIFAGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIFBELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIFBGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIISELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIISGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIMIELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIMIGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINFELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINFGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINMELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XINMGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIOTELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIOTGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIPPELC	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_TLIFE	XIPPGAS	-	-	-	-	-	0	60	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPAELC-E	-	-	-	-	-	0	0.647587937503434	null	null	null	null	0.941666149453823	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPCELC-E	-	-	-	-	-	0	7.72069249056021	null	null	null	null	11.226760641545	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPEELC-E	-	-	-	-	-	0	4.59573203240108	null	null	null	null	6.68271447976094	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPFELC-E	-	-	-	-	-	0	5.85322033408532	null	null	null	null	8.51124478190843	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPHELC-E	-	-	-	-	-	0	1.36804875510027	null	null	null	null	1.98929771367696	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPKELC-E	-	-	-	-	-	0	1.74976144373052	null	null	null	null	2.54435116184008	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPLELC-E	-	-	-	-	-	0	0.963762784810561	null	null	null	null	1.40142015933495	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPOELC-E	-	-	-	-	-	0	12.234288929309	null	null	null	null	17.7900406727493	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPPELC-E	-	-	-	-	-	0	23.1170376169688	null	null	null	null	33.6147888786683	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSCLE-E	-	-	-	-	-	0	63.0982848620433	null	null	null	null	36.3415361670395	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSELC-E	-	-	-	-	-	0	0.492778523818174	null	null	null	null	0.716555741983594	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSELC-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSGAS-E	-	-	-	-	-	0	0	null	null	null	null	6.19127516778523	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSHGN-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSOHF-E	-	-	-	-	-	0	0	null	null	null	null	1.74310216256525	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	ICPTGMU-E	-	-	-	-	-	0	26.6	null	null	null	null	26.6	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBAELC-E	-	-	-	-	-	0	0.099092705011503	null	null	null	null	9.28003972194638E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBCELC-E	-	-	-	-	-	0	20.379254260693	null	null	null	null	19.0851878572618	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBEELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBFELC-E	-	-	-	-	-	0	1.67934172240248	null	null	null	null	1.57270486145351	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBHELC-E	-	-	-	-	-	0	2.35503318336606	null	null	null	null	2.20549045316725	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBKELC-E	-	-	-	-	-	0	3.51415641355135	null	null	null	null	3.29101028204886	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBLELC-E	-	-	-	-	-	0	0.691280595404111	null	null	null	null	0.647384828541739	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBOELC-E	-	-	-	-	-	0	7.3712685338138	null	null	null	null	6.90319885676597	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBPELC-E	-	-	-	-	-	0	10.6119786518072	null	null	null	null	9.93812646509006	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSBIB-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSCOA-E	-	-	-	-	-	0	38.6911797166294	null	null	null	null	24.2684563758389	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSELC-E	-	-	-	-	-	0	0.565530417594358	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSELC-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSGAS-E	-	-	-	-	-	0	5.07015939597315	null	null	null	null	12.3587732507078	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSHGN-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSOHF-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSOLP-E	-	-	-	-	-	0	3.26322655578915	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IFBSWAS-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIAELC-E	-	-	-	-	-	0	3.08211451459377	null	null	null	null	2.23248417390036	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMICELC-E	-	-	-	-	-	0	48.1526174013072	null	null	null	null	34.878637951733	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIEELC-E	-	-	-	-	-	0	0.507551304825831	null	null	null	null	0.367637299036402	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIFELC-E	-	-	-	-	-	0	19.3567575238868	null	null	null	null	14.020781715114	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIHELC-E	-	-	-	-	-	0	21.0207868350325	null	null	null	null	15.226096794891	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIKELC-E	-	-	-	-	-	0	6.72150063798755	null	null	null	null	4.86861981542764	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMILELC-E	-	-	-	-	-	0	4.16495272581673	null	null	null	null	3.01682205557328	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIOELC-E	-	-	-	-	-	0	79.4079828730579	null	null	null	null	57.5180007770796	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIPELC-E	-	-	-	-	-	0	45.382977574103	null	null	null	null	32.8724902072673	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIRELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMIRODS-E	-	-	-	-	-	0	51.4885232177635	null	null	null	null	25.4063510252505	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISCOA-E	-	-	-	-	-	0	46.8357852348993	null	null	null	null	56.89634601044	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISELC-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISGAS-E	-	-	-	-	-	0	0.412357382550336	null	null	null	null	1.67785234899329	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISHGN-N	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISOLP-E	-	-	-	-	-	0	0	null	null	null	null	0.227948338926174	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IMISWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFAELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFCELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFEELC-E	-	-	-	-	-	0	124.107792273511	null	null	null	null	18.6988656404422	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFFELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFHELC-E	-	-	-	-	-	0	1.6419631617721	null	null	null	null	0.24738856429634	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFKELC-E	-	-	-	-	-	0	2.10010339308712	null	null	null	null	0.316414871773967	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFLELC-E	-	-	-	-	-	0	0.578364982770607	null	null	null	null	8.71401296070961E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFOELC-E	-	-	-	-	-	0	10.2787098487952	null	null	null	null	1.54865549454089	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFPELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSCOA-E	-	-	-	-	-	0	1.76749395973154	null	null	null	null	0.672632363907532	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSELC-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSGAS-E	-	-	-	-	-	0	4.03008389261745	null	null	null	null	3.78187919463087	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSOHF-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSOLP-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	INFSWAS-E	-	-	-	-	-	0	0	null	null	null	null	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTAELC-E	-	-	-	-	-	0	0.707225875671766	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTCELC-E	-	-	-	-	-	0	11.8954221306305	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTEELC-E	-	-	-	-	-	0	1.12100147420529	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTFELC-E	-	-	-	-	-	0	6.0695011694029	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTHELC-E	-	-	-	-	-	0	8.7038171414131	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTKELC-E	-	-	-	-	-	0	12.6533828559732	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTLELC-E	-	-	-	-	-	0	2.91416531063488	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTOELC-E	-	-	-	-	-	0	33.8146941939949	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTPELC-E	-	-	-	-	-	0	12.8687977730172	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTRELC-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTRODS-E	-	-	-	-	-	0	9.46856592467852	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSCOA-E	-	-	-	-	-	0	117.291416181954	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSELC-E	-	-	-	-	-	0	0.738554010463325	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSELC-N	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSGAS-E	-	-	-	-	-	0	21.3240520134228	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSHGN-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSOHF-E	-	-	-	-	-	0	19.6221022454049	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSOLP-E	-	-	-	-	-	0	12.7485382375125	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	IOTSWAS-E	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XICPELC	-	-	-	-	-	0	1.26670002937317	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XICPGAS	-	-	-	-	-	0	39.0040000305176	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XICPGMU	-	-	-	-	-	0	10	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIFAELC	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIFAGAS	-	-	-	-	-	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIFBELC	-	-	-	-	-	0	0.543299973011017	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIFBGAS	-	-	-	-	-	0	3.037	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIISELC	-	-	-	-	-	0	3.50149989128113	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIISGAS	-	-	-	-	-	0	17.888	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIMIELC	-	-	-	-	-	0	4.19479990005493	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIMIGAS	-	-	-	-	-	0	0.247	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINFELC	-	-	-	-	-	0	2.8782000541687	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINFGAS	-	-	-	-	-	0	2.414	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINMELC	-	-	-	-	-	0	0.842700004577637	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XINMGAS	-	-	-	-	-	0	15.0009999694824	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIOTELC	-	-	-	-	-	0	0.903999984264374	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIOTGAS	-	-	-	-	-	0	12.773	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIPPELC	-	-	-	-	-	0	1.35409998893738	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	PRC_RESID	XIPPGAS	-	-	-	-	-	0	4.836	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	PRC_ACTUNT	ICPAELC-E	-	ICPA	-	-	-	1	
+	PRC_ACTUNT	ICPCELC-E	-	ICPC	-	-	-	1	
+	PRC_ACTUNT	ICPEELC-E	-	ICPE	-	-	-	1	
+	PRC_ACTUNT	ICPFELC-E	-	ICPF	-	-	-	1	
+	PRC_ACTUNT	ICPHELC-E	-	ICPH	-	-	-	1	
+	PRC_ACTUNT	ICPKELC-E	-	ICPK	-	-	-	1	
+	PRC_ACTUNT	ICPLELC-E	-	ICPL	-	-	-	1	
+	PRC_ACTUNT	ICPOELC-E	-	ICPO	-	-	-	1	
+	PRC_ACTUNT	ICPPELC-E	-	ICPP	-	-	-	1	
+	PRC_ACTUNT	ICPSCLE-E	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSELC-E	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSELC-N	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSGAS-E	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSHGN-N	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSOHF-E	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSOLP-E	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPSWAS-E	-	ICPS	-	-	-	1	
+	PRC_ACTUNT	ICPTGMU-E	-	ICPT	-	-	-	1	
+	PRC_ACTUNT	IFBAELC-E	-	IFBA	-	-	-	1	
+	PRC_ACTUNT	IFBCELC-E	-	IFBC	-	-	-	1	
+	PRC_ACTUNT	IFBEELC-E	-	IFBE	-	-	-	1	
+	PRC_ACTUNT	IFBFELC-E	-	IFBF	-	-	-	1	
+	PRC_ACTUNT	IFBHELC-E	-	IFBH	-	-	-	1	
+	PRC_ACTUNT	IFBKELC-E	-	IFBK	-	-	-	1	
+	PRC_ACTUNT	IFBLELC-E	-	IFBL	-	-	-	1	
+	PRC_ACTUNT	IFBOELC-E	-	IFBO	-	-	-	1	
+	PRC_ACTUNT	IFBPELC-E	-	IFBP	-	-	-	1	
+	PRC_ACTUNT	IFBSBIB-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSCOA-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSELC-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSELC-N	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSGAS-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSHGN-N	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSOHF-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSOLP-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IFBSWAS-E	-	IFBS	-	-	-	1	
+	PRC_ACTUNT	IMIAELC-E	-	IMIA	-	-	-	1	
+	PRC_ACTUNT	IMICELC-E	-	IMIC	-	-	-	1	
+	PRC_ACTUNT	IMIEELC-E	-	IMIE	-	-	-	1	
+	PRC_ACTUNT	IMIFELC-E	-	IMIF	-	-	-	1	
+	PRC_ACTUNT	IMIHELC-E	-	IMIH	-	-	-	1	
+	PRC_ACTUNT	IMIKELC-E	-	IMIK	-	-	-	1	
+	PRC_ACTUNT	IMILELC-E	-	IMIL	-	-	-	1	
+	PRC_ACTUNT	IMIOELC-E	-	IMIO	-	-	-	1	
+	PRC_ACTUNT	IMIPELC-E	-	IMIP	-	-	-	1	
+	PRC_ACTUNT	IMIRELC-E	-	IMIR	-	-	-	1	
+	PRC_ACTUNT	IMIRODS-E	-	IMIR	-	-	-	1	
+	PRC_ACTUNT	IMISCOA-E	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISELC-E	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISELC-N	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISGAS-E	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISHGN-N	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISOHF-E	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISOLP-E	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	IMISWAS-E	-	IMIS	-	-	-	1	
+	PRC_ACTUNT	INFAELC-E	-	INFA	-	-	-	1	
+	PRC_ACTUNT	INFCELC-E	-	INFC	-	-	-	1	
+	PRC_ACTUNT	INFEELC-E	-	INFE	-	-	-	1	
+	PRC_ACTUNT	INFFELC-E	-	INFF	-	-	-	1	
+	PRC_ACTUNT	INFHELC-E	-	INFH	-	-	-	1	
+	PRC_ACTUNT	INFKELC-E	-	INFK	-	-	-	1	
+	PRC_ACTUNT	INFLELC-E	-	INFL	-	-	-	1	
+	PRC_ACTUNT	INFOELC-E	-	INFO	-	-	-	1	
+	PRC_ACTUNT	INFPELC-E	-	INFP	-	-	-	1	
+	PRC_ACTUNT	INFSCOA-E	-	INFS	-	-	-	1	
+	PRC_ACTUNT	INFSELC-E	-	INFS	-	-	-	1	
+	PRC_ACTUNT	INFSGAS-E	-	INFS	-	-	-	1	
+	PRC_ACTUNT	INFSOHF-E	-	INFS	-	-	-	1	
+	PRC_ACTUNT	INFSOLP-E	-	INFS	-	-	-	1	
+	PRC_ACTUNT	INFSWAS-E	-	INFS	-	-	-	1	
+	PRC_ACTUNT	IOTAELC-E	-	IOTA	-	-	-	1	
+	PRC_ACTUNT	IOTCELC-E	-	IOTC	-	-	-	1	
+	PRC_ACTUNT	IOTEELC-E	-	IOTE	-	-	-	1	
+	PRC_ACTUNT	IOTFELC-E	-	IOTF	-	-	-	1	
+	PRC_ACTUNT	IOTHELC-E	-	IOTH	-	-	-	1	
+	PRC_ACTUNT	IOTKELC-E	-	IOTK	-	-	-	1	
+	PRC_ACTUNT	IOTLELC-E	-	IOTL	-	-	-	1	
+	PRC_ACTUNT	IOTOELC-E	-	IOTO	-	-	-	1	
+	PRC_ACTUNT	IOTPELC-E	-	IOTP	-	-	-	1	
+	PRC_ACTUNT	IOTRELC-E	-	IOTR	-	-	-	1	
+	PRC_ACTUNT	IOTRODS-E	-	IOTR	-	-	-	1	
+	PRC_ACTUNT	IOTSCOA-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSELC-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSELC-N	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSGAS-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSHGN-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSOHF-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSOLP-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	IOTSWAS-E	-	IOTS	-	-	-	1	
+	PRC_ACTUNT	XICPELC	-	ICPELC	-	-	-	1	
+	PRC_ACTUNT	XICPGAS	-	ICPGAS	-	-	-	1	
+	PRC_ACTUNT	XICPGMU	-	ICPGMU	-	-	-	1	
+	PRC_ACTUNT	XIFAELC	-	IFAELC	-	-	-	1	
+	PRC_ACTUNT	XIFAGAS	-	IFAGAS	-	-	-	1	
+	PRC_ACTUNT	XIFBELC	-	IFBELC	-	-	-	1	
+	PRC_ACTUNT	XIFBGAS	-	IFBGAS	-	-	-	1	
+	PRC_ACTUNT	XIISELC	-	IISELC	-	-	-	1	
+	PRC_ACTUNT	XIISGAS	-	IISGAS	-	-	-	1	
+	PRC_ACTUNT	XIMIELC	-	IMIELC	-	-	-	1	
+	PRC_ACTUNT	XIMIGAS	-	IMIGAS	-	-	-	1	
+	PRC_ACTUNT	XINFELC	-	INFELC	-	-	-	1	
+	PRC_ACTUNT	XINFGAS	-	INFGAS	-	-	-	1	
+	PRC_ACTUNT	XINMELC	-	INMELC	-	-	-	1	
+	PRC_ACTUNT	XINMGAS	-	INMGAS	-	-	-	1	
+	PRC_ACTUNT	XIOTELC	-	IOTELC	-	-	-	1	
+	PRC_ACTUNT	XIOTGAS	-	IOTGAS	-	-	-	1	
+	PRC_ACTUNT	XIPPELC	-	IPPELC	-	-	-	1	
+	PRC_ACTUNT	XIPPGAS	-	IPPGAS	-	-	-	1	
+	PRC_CAPACT	ICPAELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPCELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPEELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPFELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPHELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPKELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPLELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPOELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSCLE-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSELC-N	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSGAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSHGN-N	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSOHF-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSOLP-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPSWAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	ICPTGMU-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBAELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBCELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBEELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBFELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBHELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBKELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBLELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBOELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSBIB-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSCOA-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSELC-N	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSGAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSHGN-N	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSOHF-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSOLP-E	-	-	-	-	-	1	
+	PRC_CAPACT	IFBSWAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIAELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMICELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIEELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIFELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIHELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIKELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMILELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIOELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIRELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMIRODS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMISCOA-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMISELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMISELC-N	-	-	-	-	-	1	
+	PRC_CAPACT	IMISGAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMISHGN-N	-	-	-	-	-	1	
+	PRC_CAPACT	IMISOHF-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMISOLP-E	-	-	-	-	-	1	
+	PRC_CAPACT	IMISWAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFAELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFCELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFEELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFFELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFHELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFKELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFLELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFOELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFSCOA-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFSELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFSGAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFSOHF-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFSOLP-E	-	-	-	-	-	1	
+	PRC_CAPACT	INFSWAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTAELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTCELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTEELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTFELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTHELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTKELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTLELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTOELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTPELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTRELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTRODS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSCOA-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSELC-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSELC-N	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSGAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSHGN-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSOHF-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSOLP-E	-	-	-	-	-	1	
+	PRC_CAPACT	IOTSWAS-E	-	-	-	-	-	1	
+	PRC_CAPACT	XICPELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XICPGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XICPGMU	-	-	-	-	-	1	
+	PRC_CAPACT	XIFAELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIFAGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIFBELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIFBGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIISELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIISGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIMIELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIMIGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XINFELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XINFGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XINMELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XINMGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIOTELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIOTGAS	-	-	-	-	-	1	
+	PRC_CAPACT	XIPPELC	-	-	-	-	-	31.536	
+	PRC_CAPACT	XIPPGAS	-	-	-	-	-	1	
+	TOP-IN	ICPAELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPCELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPEELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPFELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPHELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPKELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPLELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPOELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPPELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPSCLE-E	INDCLE	-	-	-	-	1	
+	TOP-IN	ICPSELC-E	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPSELC-N	ICPELC	-	-	-	-	1	
+	TOP-IN	ICPSGAS-E	ICPGAS	-	-	-	-	1	
+	TOP-IN	ICPSHGN-N	INDHGN	-	-	-	-	1	
+	TOP-IN	ICPSOHF-E	INDOHF	-	-	-	-	1	
+	TOP-IN	ICPSOLP-E	INDOLP	-	-	-	-	1	
+	TOP-IN	ICPSWAS-E	INDWAS	-	-	-	-	1	
+	TOP-IN	ICPTGMU-E	ICPGMU	-	-	-	-	1	
+	TOP-IN	IFBAELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBCELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBEELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBFELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBHELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBKELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBLELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBOELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBPELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBSBIB-E	INDBIB	-	-	-	-	1	
+	TOP-IN	IFBSCOA-E	INDCOA	-	-	-	-	1	
+	TOP-IN	IFBSELC-E	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBSELC-N	IFBELC	-	-	-	-	1	
+	TOP-IN	IFBSGAS-E	IFBGAS	-	-	-	-	1	
+	TOP-IN	IFBSHGN-N	INDHGN	-	-	-	-	1	
+	TOP-IN	IFBSOHF-E	INDOHF	-	-	-	-	1	
+	TOP-IN	IFBSOLP-E	INDOLP	-	-	-	-	1	
+	TOP-IN	IFBSWAS-E	INDWAS	-	-	-	-	1	
+	TOP-IN	IMIAELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMICELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIEELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIFELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIHELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIKELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMILELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIOELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIPELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIRELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMIRODS-E	INDODS	-	-	-	-	1	
+	TOP-IN	IMISCOA-E	INDCOA	-	-	-	-	1	
+	TOP-IN	IMISELC-E	IMIELC	-	-	-	-	1	
+	TOP-IN	IMISELC-N	IMIELC	-	-	-	-	1	
+	TOP-IN	IMISGAS-E	IMIGAS	-	-	-	-	1	
+	TOP-IN	IMISHGN-N	INDHGN	-	-	-	-	1	
+	TOP-IN	IMISOHF-E	INDOHF	-	-	-	-	1	
+	TOP-IN	IMISOLP-E	INDOLP	-	-	-	-	1	
+	TOP-IN	IMISWAS-E	INDWAS	-	-	-	-	1	
+	TOP-IN	INFAELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFCELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFEELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFFELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFHELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFKELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFLELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFOELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFPELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFSCOA-E	INDCOA	-	-	-	-	1	
+	TOP-IN	INFSELC-E	INFELC	-	-	-	-	1	
+	TOP-IN	INFSGAS-E	INFGAS	-	-	-	-	1	
+	TOP-IN	INFSOHF-E	INDOHF	-	-	-	-	1	
+	TOP-IN	INFSOLP-E	INDOLP	-	-	-	-	1	
+	TOP-IN	INFSWAS-E	INDWAS	-	-	-	-	1	
+	TOP-IN	IOTAELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTCELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTEELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTFELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTHELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTKELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTLELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTOELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTPELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTRELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTRODS-E	INDODS	-	-	-	-	1	
+	TOP-IN	IOTSCOA-E	INDCOA	-	-	-	-	1	
+	TOP-IN	IOTSELC-E	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTSELC-N	IOTELC	-	-	-	-	1	
+	TOP-IN	IOTSGAS-E	IOTGAS	-	-	-	-	1	
+	TOP-IN	IOTSHGN-E	INDHGN	-	-	-	-	1	
+	TOP-IN	IOTSOHF-E	INDOHF	-	-	-	-	1	
+	TOP-IN	IOTSOLP-E	INDOLP	-	-	-	-	1	
+	TOP-IN	IOTSWAS-E	INDWAS	-	-	-	-	1	
+	TOP-IN	XICPELC	INDELC	-	-	-	-	1	
+	TOP-IN	XICPGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XICPGMU	GAS	-	-	-	-	1	
+	TOP-IN	XIFAELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIFAGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIFBELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIFBGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIISELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIISGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIMIELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIMIGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XINFELC	INDELC	-	-	-	-	1	
+	TOP-IN	XINFGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XINMELC	INDELC	-	-	-	-	1	
+	TOP-IN	XINMGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIOTELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIOTGAS	INDGAS	-	-	-	-	1	
+	TOP-IN	XIPPELC	INDELC	-	-	-	-	1	
+	TOP-IN	XIPPGAS	INDGAS	-	-	-	-	1	
+	TOP-OUT	ICPAELC-E	ICPA	-	-	-	-	1	
+	TOP-OUT	ICPCELC-E	ICPC	-	-	-	-	1	
+	TOP-OUT	ICPEELC-E	ICPE	-	-	-	-	1	
+	TOP-OUT	ICPFELC-E	ICPF	-	-	-	-	1	
+	TOP-OUT	ICPHELC-E	ICPH	-	-	-	-	1	
+	TOP-OUT	ICPKELC-E	ICPK	-	-	-	-	1	
+	TOP-OUT	ICPLELC-E	ICPL	-	-	-	-	1	
+	TOP-OUT	ICPOELC-E	ICPO	-	-	-	-	1	
+	TOP-OUT	ICPPELC-E	ICPP	-	-	-	-	1	
+	TOP-OUT	ICPSCLE-E	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSELC-E	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSELC-N	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSGAS-E	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSHGN-N	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSOHF-E	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSOLP-E	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPSWAS-E	ICPS	-	-	-	-	1	
+	TOP-OUT	ICPTGMU-E	ICPT	-	-	-	-	1	
+	TOP-OUT	IFBAELC-E	IFBA	-	-	-	-	1	
+	TOP-OUT	IFBCELC-E	IFBC	-	-	-	-	1	
+	TOP-OUT	IFBEELC-E	IFBE	-	-	-	-	1	
+	TOP-OUT	IFBFELC-E	IFBF	-	-	-	-	1	
+	TOP-OUT	IFBHELC-E	IFBH	-	-	-	-	1	
+	TOP-OUT	IFBKELC-E	IFBK	-	-	-	-	1	
+	TOP-OUT	IFBLELC-E	IFBL	-	-	-	-	1	
+	TOP-OUT	IFBOELC-E	IFBO	-	-	-	-	1	
+	TOP-OUT	IFBPELC-E	IFBP	-	-	-	-	1	
+	TOP-OUT	IFBSBIB-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSCOA-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSELC-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSELC-N	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSGAS-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSHGN-N	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSOHF-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSOLP-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IFBSWAS-E	IFBS	-	-	-	-	1	
+	TOP-OUT	IMIAELC-E	IMIA	-	-	-	-	1	
+	TOP-OUT	IMICELC-E	IMIC	-	-	-	-	1	
+	TOP-OUT	IMIEELC-E	IMIE	-	-	-	-	1	
+	TOP-OUT	IMIFELC-E	IMIF	-	-	-	-	1	
+	TOP-OUT	IMIHELC-E	IMIH	-	-	-	-	1	
+	TOP-OUT	IMIKELC-E	IMIK	-	-	-	-	1	
+	TOP-OUT	IMILELC-E	IMIL	-	-	-	-	1	
+	TOP-OUT	IMIOELC-E	IMIO	-	-	-	-	1	
+	TOP-OUT	IMIPELC-E	IMIP	-	-	-	-	1	
+	TOP-OUT	IMIRELC-E	IMIR	-	-	-	-	1	
+	TOP-OUT	IMIRODS-E	IMIR	-	-	-	-	1	
+	TOP-OUT	IMISCOA-E	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISELC-E	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISELC-N	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISGAS-E	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISHGN-N	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISOHF-E	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISOLP-E	IMIS	-	-	-	-	1	
+	TOP-OUT	IMISWAS-E	IMIS	-	-	-	-	1	
+	TOP-OUT	INFAELC-E	INFA	-	-	-	-	1	
+	TOP-OUT	INFCELC-E	INFC	-	-	-	-	1	
+	TOP-OUT	INFEELC-E	INFE	-	-	-	-	1	
+	TOP-OUT	INFFELC-E	INFF	-	-	-	-	1	
+	TOP-OUT	INFHELC-E	INFH	-	-	-	-	1	
+	TOP-OUT	INFKELC-E	INFK	-	-	-	-	1	
+	TOP-OUT	INFLELC-E	INFL	-	-	-	-	1	
+	TOP-OUT	INFOELC-E	INFO	-	-	-	-	1	
+	TOP-OUT	INFPELC-E	INFP	-	-	-	-	1	
+	TOP-OUT	INFSCOA-E	INFS	-	-	-	-	1	
+	TOP-OUT	INFSELC-E	INFS	-	-	-	-	1	
+	TOP-OUT	INFSGAS-E	INFS	-	-	-	-	1	
+	TOP-OUT	INFSOHF-E	INFS	-	-	-	-	1	
+	TOP-OUT	INFSOLP-E	INFS	-	-	-	-	1	
+	TOP-OUT	INFSWAS-E	INFS	-	-	-	-	1	
+	TOP-OUT	IOTAELC-E	IOTA	-	-	-	-	1	
+	TOP-OUT	IOTCELC-E	IOTC	-	-	-	-	1	
+	TOP-OUT	IOTEELC-E	IOTE	-	-	-	-	1	
+	TOP-OUT	IOTFELC-E	IOTF	-	-	-	-	1	
+	TOP-OUT	IOTHELC-E	IOTH	-	-	-	-	1	
+	TOP-OUT	IOTKELC-E	IOTK	-	-	-	-	1	
+	TOP-OUT	IOTLELC-E	IOTL	-	-	-	-	1	
+	TOP-OUT	IOTOELC-E	IOTO	-	-	-	-	1	
+	TOP-OUT	IOTPELC-E	IOTP	-	-	-	-	1	
+	TOP-OUT	IOTRELC-E	IOTR	-	-	-	-	1	
+	TOP-OUT	IOTRODS-E	IOTR	-	-	-	-	1	
+	TOP-OUT	IOTSCOA-E	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSELC-E	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSELC-N	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSGAS-E	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSHGN-E	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSOHF-E	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSOLP-E	IOTS	-	-	-	-	1	
+	TOP-OUT	IOTSWAS-E	IOTS	-	-	-	-	1	
+	TOP-OUT	XICPELC	ICPELC	-	-	-	-	1	
+	TOP-OUT	XICPGAS	ICPGAS	-	-	-	-	1	
+	TOP-OUT	XICPGMU	ICPGMU	-	-	-	-	1	
+	TOP-OUT	XIFAELC	IFAELC	-	-	-	-	1	
+	TOP-OUT	XIFAGAS	IFAGAS	-	-	-	-	1	
+	TOP-OUT	XIFBELC	IFBELC	-	-	-	-	1	
+	TOP-OUT	XIFBGAS	IFBGAS	-	-	-	-	1	
+	TOP-OUT	XIISELC	IISELC	-	-	-	-	1	
+	TOP-OUT	XIISGAS	IISGAS	-	-	-	-	1	
+	TOP-OUT	XIMIELC	IMIELC	-	-	-	-	1	
+	TOP-OUT	XIMIGAS	IMIGAS	-	-	-	-	1	
+	TOP-OUT	XINFELC	INFELC	-	-	-	-	1	
+	TOP-OUT	XINFGAS	INFGAS	-	-	-	-	1	
+	TOP-OUT	XINMELC	INMELC	-	-	-	-	1	
+	TOP-OUT	XINMGAS	INMGAS	-	-	-	-	1	
+	TOP-OUT	XIOTELC	IOTELC	-	-	-	-	1	
+	TOP-OUT	XIOTGAS	IOTGAS	-	-	-	-	1	
+	TOP-OUT	XIPPELC	IPPELC	-	-	-	-	1	
+	TOP-OUT	XIPPGAS	IPPGAS	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

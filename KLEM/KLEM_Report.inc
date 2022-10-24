@@ -3,7 +3,7 @@
 
 * Energy Bills for non-electricity commodities
 K_EnergyBill(FSATIM,COM,TC) = T_COMBALEM('REGION1',TC,COM) * FLOW_IN_FS(FSATIM,COM,TC);
-K_EnergyBill('IMP',COM,TC) = T_COMBALEM('REGION1',TC,COM) * FLOW_OUT_FS('IMP',COM,TC);
+K_EnergyBill('IMP',COM,TC)$(T_COMBALEM('REGION1',TC,COM) gt 0) = T_COMBALEM('REGION1',TC,COM) * FLOW_OUT_FS('IMP',COM,TC);
 
 * Using average electricity price across all sectors - this could be improved once we have sector specific prices (WIP)
 K_EnergyBill(FSATIMNOELEC,'ELC',TC) = ETPRICE(TC) * FLOW_IN_FSFuels(FSATIMNOELEC,'celec',TC);

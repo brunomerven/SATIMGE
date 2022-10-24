@@ -7,8 +7,8 @@ SET REG /
 SET COM_GRP /
   'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
   'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
-  'IDUM'                     'Dummy commodity                                   '
-  'IISHBI'                   'Green Iron                                        '
+  'IDUM'                     'Dummy Commodity                                   '
+  'IISHBI'                   'Industry - Hot Bricketted Iron - HDRI route       '
   'IPGM'                     'Industry - PGMs - Platinum                        '
   'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
   'NH3'                      'Ammonia                                           '
@@ -17,8 +17,8 @@ SET COM_GRP /
 SET COM /
   'HETP_EX'                  'Electrolyser H2 PEM  Capacity (GW) Export         '
   'HFCP_EX'                  'Fuel Cell H2 PEM  Capacity (GW)                   '
-  'IDUM'                     'Dummy commodity                                   '
-  'IISHBI'                   'Green Iron                                        '
+  'IDUM'                     'Dummy Commodity                                   '
+  'IISHBI'                   'Industry - Hot Bricketted Iron - HDRI route       '
   'IPGM'                     'Industry - PGMs - Platinum                        '
   'IPGMOP'                   'Industry - PGMs - Other PGMs                      '
   'NH3'                      'Ammonia                                           '
@@ -38,11 +38,13 @@ SET COM_ANNUAL /
   'REGION1'   .'HETP_EX'
   'REGION1'   .'HFCP_EX'
   'REGION1'   .'IDUM'
-  'REGION1'   .'IISHBI'
   'REGION1'   .'IPGM'
   'REGION1'   .'IPGMOP'
   'REGION1'   .'NH3'
   'REGION1'   .'OKG'
+/;
+SET COM_DAYNIT /
+  'REGION1'   .'IISHBI'
 /;
 SET COM_NRGFOS /
   'REGION1'   .'HETP_EX'
@@ -57,7 +59,7 @@ SET COM_NRGFOS /
 SET PRC /
   'MINHETP'                  'H2 PEM Electrolyser Stack Exports (GW) -Dummy     '
   'MINHFCP'                  'H2 PEM Fuel Cell Exports (GW) - Dummy             '
-  'PEXGDRI'                  'Exports of Green Iron                             '
+  'PEXGDRI'                  'Export of Green DR Iron                           '
   'PEXHETP'                  'H2 PEM Electrolyser Stack Exports (GW)            '
   'PEXHFCP'                  'H2 PEM Fuel Cell Exports (GW)                     '
   'PEXNH3'                   'Ammonia to Export Market                          '

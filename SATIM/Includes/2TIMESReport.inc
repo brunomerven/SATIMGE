@@ -106,6 +106,10 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 *bm methane rich gas is currently a product of sasol which is accounted for in SATIM, but not in eSAGE so making this zero
  FLOW_OUT_FSFuels('petr','cngas',TC) = 0;
+*bm correcting for elc autogeneration which should be excluded from elc demand
+ FLOW_IN_FSFuels('petr','celec',TC) = max(0,FLOW_IN_FSFuels('petr','celec',TC)-FLOW_OUT_FSFuels('petr','celec',TC));
+ FLOW_OUT_FSFuels('petr','celec',TC) = 0;
+
 
 *Correction made for Pulp and paper own gen, this may have to be done to more sectors as own gen becomes more prevalent
  FLOW_IN_FSFuels('pp','celec',TC) = FLOW_IN_FSFuels('pp','celec',TC) - FLOW_OUT_FSFuels('pp','celec',TC);
@@ -117,8 +121,9 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 *UCONV_C_T2C(C);
 
-*bm calc oil flow
- OIL_FLOW(RUN,TC) = SUM(PRC$MPRCFS(PRC,'petr'), TVACT(TC,PRC));
+*bm calc oil flow   !!! note that TVACT includes some non-energy commodities that are currently not part of the output of apetr in the CGE. These should ideally also be included there.
+* OIL_FLOW(RUN,TC) = SUM(PRC$MPRCFS(PRC,'petr'), TVACT(TC,PRC));
+ OIL_FLOW(RUN,TC) = sum(C,FLOW_OUT_FSFuels('petr',C,TC));
 
 *bm calc coal flow - putting in a minimum value to avoid problems with theta calcs in CGE
  COAL_FLOW(RUN,TC,'ccoal-low') = max(30,sum(FSATIM,FLOW_IN_FSFuels(FSATIM,'ccoal-low',TC)));
@@ -154,7 +159,7 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 $ontext
  Investment costs are based on year of build decision (TVNCAP) and the number
- of years needed to build the plant (lead time NCAP_LEAD).
+ of years needed to build the plant (lead time NCAP_ILED).
  Annual cost = build capacity (TVNCAP) x unit cost (OBJ_ICOST) / years to build (NCAP_ILED)
  Calculation: Keep track of vintages (TP)
 $offtext
@@ -167,7 +172,7 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) GT 0),
   BPINV(RUN,TC,TCP,PRC)$NCAP_ILED('REGION1','2012',PRC) = TVNCAP(TC,PRC)/NCAP_ILED('REGION1','2012',PRC) * OBICOST('REGION1',TC,PRC);
  );
 );
-* investment cost with negative NCAL_ILED
+* investment cost with negative NCAP_ILED
 LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
  LOOP(TCP$((ORD(TCP) LT ORD(TC)) AND (ORD(TCP) GE (ORD(TC)+NCAP_ILED('REGION1','2012',PRC)))),
   BPINV(RUN,TC,TCP,PRC)$NCAP_ILED('REGION1','2012',PRC) = TVNCAP(TC,PRC)/(-1*NCAP_ILED('REGION1','2012',PRC)) * OBICOST('REGION1',TC,PRC);
@@ -177,9 +182,10 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * expenditure schedule in billions (2007 from 2010)
  INVCOST(RUN,TC,PRC) = SUM(TCP, BPINV(RUN,TCP,TC,PRC))/1000;
 
-*Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2012 Rands for CGE
+*Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2019 Rands for CGE
 * EINVCOST(XC,T,TT) = SUM((SUPELE AND SUPOIL), INVCOST(XC,T,TT,ELE));
- EINVCOST(RUN,TC) = SUM(PRCPower, INVCOST(RUN,TC,PRCPower)) * 0.852;
+ EINVCOST(RUN,TC) = SUM(PRCPower, INVCOST(RUN,TC,PRCPower))*1.22;
+* 0.852;
 
 * fixing end effect until we run past 2050
  EINVCOST(RUN,'2050') = EINVCOST(RUN,'2049');
@@ -270,10 +276,13 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 
 
 * Electrolyser sector - supply of electrolysers is linked to electrolyser exports and PEM electrolyser capacity in SATIM
- ELCTCAP(TC,RUN) = TVNCAP(TC,'UELEP1HGN')+TVACT(TC,'PEXHETP');
+ ELCTCAP(TC,RUN) = TVNCAP(TC,'UELEP1HGN')+TVNCAP(TC,'IISHALKHGNO')+TVNCAP(TC,'UELEA1HGN')+TVACT(TC,'PEXHETP')*0.4;
+*0.5;
 
 * fuelcell sector - supply of fuel cells is linked to fuel cell export and fuel cell capacity in trucks - !!! still need to add fcell to mining 5%?
- FCELLCAP(TC,RUN) = TVCAP(TC,'HFCP-TRAHCV-N')+TVACT(TC,'PEXHFCP');
+* it works out in the CGE that with 0.24, 3 times value of trucks goes to export, which is what is intented in SATIM
+ FCELLCAP(TC,RUN) = TVCAP(TC,'HFCP-TRAHCV-N')+TVACT(TC,'PEXHFCP')*0.2;
+*0.24;
 
 
 * Energy Model Indicators
@@ -315,8 +324,13 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * Exception for biofuels in transport
 * Note that this is not perfect in that it doesn't take into account possible upstream emissions from production
 * it would be better in future iterations to have a sink linked to the supply of bioenergy
-EmisFactorCor('TRAODS','CO2',TC,RUN)$(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut')) = EmisFactor('TRAODS','CO2')*REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')/(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut'))+eps;
-EmisFactorCor('TRAOGS','CO2',TC,RUN)$(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut')) = EmisFactor('TRAOGS','CO2')*REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')/(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut'))+eps;
+EmisFactorCor('TRAODS','CO2',TC,RUN)$(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut')) =
+         EmisFactor('TRAODS','CO2')*REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')/(REPORT('XTRAODS','TRAODS',TC,RUN,'FlowOut')+REPORT('XTRABID','TRAODS',TC,RUN,'FlowOut'))+eps;
+
+EmisFactorCor('TRAOGS','CO2',TC,RUN)$(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut')) =
+         EmisFactor('TRAOGS','CO2')*REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')/(REPORT('XTRAOGS','TRAOGS',TC,RUN,'FlowOut')+REPORT('XTRABIE','TRAOGS',TC,RUN,'FlowOut'))+eps;
+
+
 
 
 
