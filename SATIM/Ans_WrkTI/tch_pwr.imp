@@ -1,5 +1,5 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2022/09/11	12:30:44 PM
+Creation Date:	2022/11/04	8:54:14 AM
 Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_PWR	Power sector shortened ts - constrained	
@@ -679,7 +679,7 @@ TS DATA	REGION1
 	NCAP_AF	ESTSUTL	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLDFB-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLEARNO-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.583333333333333	null	null	null	null	0.625	null	null	null	null	0.625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	NCAP_AF	ETCLECAMD-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.67	null	null	0.5	null	null	null	null	0.5625	null	null	null	null	0.5625	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	NCAP_AF	ETCLECAMD-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.67	null	null	0.428571428571429	null	null	null	null	0.5	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLE-CCS-N	-	-	-	ANNUAL	UP	0	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLEDUVH-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.8	null	null	0.5	null	null	null	null	0.55	null	null	null	null	0.55	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	NCAP_AF	ETCLEGROO-E	-	-	-	ANNUAL	UP	0	null	null	null	null	null	0.6	null	null	0.5	null	null	null	null	0.5	null	null	null	null	0.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1181,9 +1181,9 @@ TS DATA	REGION1
 	PRC_RESID	ERHYD-E	-	-	-	-	-	0	0.665	null	null	null	null	0.665	null	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	0.665	null	null	
 	PRC_RESID	ERHYD-I	-	-	-	-	-	0	1.5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.5	null	null	
 	PRC_RESID	ETCLEARNO-E	-	-	-	-	-	0	2.232	null	null	null	null	2.232	null	2.232	2.232	2.232	2.232	2.232	2.232	2.232	1.488	0.744	0.744	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
-	PRC_RESID	ETCLECAMD-E	-	-	-	-	-	0	1.45	null	null	null	null	1.481	null	1.481	1.481	1.481	1.481	1.11075	0.555375	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLECAMD-E	-	-	-	-	-	0	1.45	null	null	null	null	1.481	null	1.295	1.295	1.295	1.295	1.295	0.925	0.555	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	PRC_RESID	ETCLEDUVH-E	-	-	-	-	-	0	3.45	null	null	null	null	2.875	null	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	2.875	1.725	1.725	0.575	0	0	0	0	0	0	0	0	0	0	0	
-	PRC_RESID	ETCLEGROO-E	-	-	-	-	-	0	1.09	null	null	null	null	1.12	null	0.57	0.57	0.57	0.57	0.57	0.57	0.57	0.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	PRC_RESID	ETCLEGROO-E	-	-	-	-	-	0	1.09	null	null	null	null	1.12	null	0.57	0.57	0.57	0.57	0.57	0.57	0.57	0.38	0.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	PRC_RESID	ETCLEHEND-E	-	-	-	-	-	0	1.865	null	null	null	null	1.638	null	1.293	1.293	1.10828571428571	1.10828571428571	0.923571428571429	0.738857142857143	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
 	PRC_RESID	ETCLEKELB-E	-	-	-	-	-	0	0.6	null	null	null	null	0.6	null	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0.6	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	PRC_RESID	ETCLEKEND-E	-	-	-	-	-	0	3.84	null	null	null	null	3.84	null	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.84	3.2	3.2	0	0	0	0	
@@ -1217,7 +1217,7 @@ TS DATA	REGION1
 	PRC_RESID	XTRAELC	-	-	-	-	-	0	9.9385	null	null	null	null	null	null	null	9.9385	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	4.96925	null	null	
 	PRC_RESID	XUPSELC	-	-	-	-	-	0	0.7735	null	null	null	null	null	null	null	0.7735	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	0.38675	null	null	
 	RCAP_BND	ETCLEARNO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0.743999999876	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	RCAP_BND	ETCLECAMD-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	RCAP_BND	ETCLECAMD-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0.369999999876667	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	RCAP_BND	ETCLEDUVH-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	1.14999999977	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	RCAP_BND	ETCLEGROO-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0.379999999873333	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	RCAP_BND	ETCLEHEND-E	-	-	-	-	UP	3	null	null	null	null	null	null	null	null	null	null	null	null	null	0	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	

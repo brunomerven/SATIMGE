@@ -1,0 +1,459 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET COM_GRP /
+  'PWRFGDARNO'               'FGD DummyComm for ARNOT Power Plant               '
+  'PWRFGDCAMD'               'FGD DummyComm for CAMDEN Power Plant              '
+  'PWRFGDDUVH'               'FGD DummyComm for DUVHA Power Plant               '
+  'PWRFGDGROO'               'FGD DummyComm for GROOTVLEI Power Plant           '
+  'PWRFGDHEND'               'FGD DummyComm for HENDRINA Power Plant            '
+  'PWRFGDKEND'               'FGD DummyComm for KENDAL Power Plant              '
+  'PWRFGDKOMA'               'FGD DummyComm for KOMATI Power Plant              '
+  'PWRFGDKRIE'               'FGD DummyComm for KRIEL Power Plant               '
+  'PWRFGDLETH'               'FGD DummyComm for LETHABO Power Plant             '
+  'PWRFGDMAJD'               'FGD DummyComm for MAJUBA DRY Power Plant          '
+  'PWRFGDMAJW'               'FGD DummyComm for MAJUBA WET Power Plant          '
+  'PWRFGDMATI'               'FGD DummyComm for MATIMBA Power Plant             '
+  'PWRFGDMATL'               'FGD DummyComm for MATLA Power Plant               '
+  'PWRFGDMEDU'               'FGD DummyComm for MEDUPI Power Plant              '
+  'PWRFGDTUTU'               'FGD DummyComm for TUTUKA Power Plant              '
+/;
+SET COM /
+  'PWRFGDARNO'               'FGD DummyComm for ARNOT Power Plant               '
+  'PWRFGDCAMD'               'FGD DummyComm for CAMDEN Power Plant              '
+  'PWRFGDDUVH'               'FGD DummyComm for DUVHA Power Plant               '
+  'PWRFGDGROO'               'FGD DummyComm for GROOTVLEI Power Plant           '
+  'PWRFGDHEND'               'FGD DummyComm for HENDRINA Power Plant            '
+  'PWRFGDKEND'               'FGD DummyComm for KENDAL Power Plant              '
+  'PWRFGDKOMA'               'FGD DummyComm for KOMATI Power Plant              '
+  'PWRFGDKRIE'               'FGD DummyComm for KRIEL Power Plant               '
+  'PWRFGDLETH'               'FGD DummyComm for LETHABO Power Plant             '
+  'PWRFGDMAJD'               'FGD DummyComm for MAJUBA DRY Power Plant          '
+  'PWRFGDMAJW'               'FGD DummyComm for MAJUBA WET Power Plant          '
+  'PWRFGDMATI'               'FGD DummyComm for MATIMBA Power Plant             '
+  'PWRFGDMATL'               'FGD DummyComm for MATLA Power Plant               '
+  'PWRFGDMEDU'               'FGD DummyComm for MEDUPI Power Plant              '
+  'PWRFGDTUTU'               'FGD DummyComm for TUTUKA Power Plant              '
+/;
+SET COM_NRG /
+  'REGION1'   .'PWRFGDARNO'
+  'REGION1'   .'PWRFGDCAMD'
+  'REGION1'   .'PWRFGDDUVH'
+  'REGION1'   .'PWRFGDGROO'
+  'REGION1'   .'PWRFGDHEND'
+  'REGION1'   .'PWRFGDKEND'
+  'REGION1'   .'PWRFGDKOMA'
+  'REGION1'   .'PWRFGDKRIE'
+  'REGION1'   .'PWRFGDLETH'
+  'REGION1'   .'PWRFGDMAJD'
+  'REGION1'   .'PWRFGDMAJW'
+  'REGION1'   .'PWRFGDMATI'
+  'REGION1'   .'PWRFGDMATL'
+  'REGION1'   .'PWRFGDMEDU'
+  'REGION1'   .'PWRFGDTUTU'
+/;
+SET COM_ANNUAL /
+  'REGION1'   .'PWRFGDARNO'
+  'REGION1'   .'PWRFGDCAMD'
+  'REGION1'   .'PWRFGDDUVH'
+  'REGION1'   .'PWRFGDGROO'
+  'REGION1'   .'PWRFGDHEND'
+  'REGION1'   .'PWRFGDKEND'
+  'REGION1'   .'PWRFGDKOMA'
+  'REGION1'   .'PWRFGDKRIE'
+  'REGION1'   .'PWRFGDLETH'
+  'REGION1'   .'PWRFGDMAJD'
+  'REGION1'   .'PWRFGDMAJW'
+  'REGION1'   .'PWRFGDMATI'
+  'REGION1'   .'PWRFGDMATL'
+  'REGION1'   .'PWRFGDMEDU'
+  'REGION1'   .'PWRFGDTUTU'
+/;
+SET COM_NRGFOS /
+  'REGION1'   .'PWRFGDARNO'
+  'REGION1'   .'PWRFGDCAMD'
+  'REGION1'   .'PWRFGDDUVH'
+  'REGION1'   .'PWRFGDGROO'
+  'REGION1'   .'PWRFGDHEND'
+  'REGION1'   .'PWRFGDKEND'
+  'REGION1'   .'PWRFGDKOMA'
+  'REGION1'   .'PWRFGDKRIE'
+  'REGION1'   .'PWRFGDLETH'
+  'REGION1'   .'PWRFGDMAJD'
+  'REGION1'   .'PWRFGDMAJW'
+  'REGION1'   .'PWRFGDMATI'
+  'REGION1'   .'PWRFGDMATL'
+  'REGION1'   .'PWRFGDMEDU'
+  'REGION1'   .'PWRFGDTUTU'
+/;
+SET PRC /
+  'ETCLEARNO-E'              'ARNOT                                             '
+  'ETCLECAMD-E'              'CAMDEN                                            '
+  'ETCLEDUVH-E'              'DUVHA                                             '
+  'ETCLEGROO-E'              'GROOTVLEI                                         '
+  'ETCLEHEND-E'              'HENDRINA                                          '
+  'ETCLEKEND-E'              'KENDAL                                            '
+  'ETCLEKOMA-E'              'KOMATI                                            '
+  'ETCLEKRIE-E'              'KRIEL                                             '
+  'ETCLEKUSI-N'              'KUSILE                                            '
+  'ETCLELETH-E'              'LETHABO                                           '
+  'ETCLEMAJD-E'              'MAJUBA DRY                                        '
+  'ETCLEMAJW-E'              'MAJUBA WET                                        '
+  'ETCLEMATI-E'              'MATIMBA                                           '
+  'ETCLEMATL-E'              'MATLA                                             '
+  'ETCLEMEDU-N'              'MEDUPI                                            '
+  'ETCLETUTU-E'              'TUTUKA                                            '
+  'FGDARNO-E'                'FGD for ARNOT                                     '
+  'FGDCAMD-E'                'FGD for CAMDEN                                    '
+  'FGDDUVH-E'                'FGD for DUVHA                                     '
+  'FGDGROO-E'                'FGD for GROOTVLEI                                 '
+  'FGDHEND-E'                'FGD for HENDRINA                                  '
+  'FGDKEND-E'                'FGD for KENDAL                                    '
+  'FGDKOMA-E'                'FGD for KOMATI                                    '
+  'FGDKRIE-E'                'FGD for KRIEL                                     '
+  'FGDLETH-E'                'FGD for LETHABO                                   '
+  'FGDMAJD-E'                'FGD for MAJUBA DRY                                '
+  'FGDMAJW-E'                'FGD for MAJUBA WET                                '
+  'FGDMATI-E'                'FGD for MATIMBA                                   '
+  'FGDMATL-E'                'FGD for MATLA                                     '
+  'FGDMEDU-N'                'FGD for MEDUPI                                    '
+  'FGDTUTU-E'                'FGD for TUTUKA                                    '
+/;
+SET PRC_XTRACT /
+  'REGION1'   .'FGDARNO-E'
+  'REGION1'   .'FGDCAMD-E'
+  'REGION1'   .'FGDDUVH-E'
+  'REGION1'   .'FGDGROO-E'
+  'REGION1'   .'FGDHEND-E'
+  'REGION1'   .'FGDKEND-E'
+  'REGION1'   .'FGDKOMA-E'
+  'REGION1'   .'FGDKRIE-E'
+  'REGION1'   .'FGDLETH-E'
+  'REGION1'   .'FGDMAJD-E'
+  'REGION1'   .'FGDMAJW-E'
+  'REGION1'   .'FGDMATI-E'
+  'REGION1'   .'FGDMATL-E'
+  'REGION1'   .'FGDMEDU-N'
+  'REGION1'   .'FGDTUTU-E'
+/;
+SET PRC_PRE /
+  'REGION1'   .'FGDARNO-E'
+  'REGION1'   .'FGDCAMD-E'
+  'REGION1'   .'FGDDUVH-E'
+  'REGION1'   .'FGDGROO-E'
+  'REGION1'   .'FGDHEND-E'
+  'REGION1'   .'FGDKEND-E'
+  'REGION1'   .'FGDKOMA-E'
+  'REGION1'   .'FGDKRIE-E'
+  'REGION1'   .'FGDLETH-E'
+  'REGION1'   .'FGDMAJD-E'
+  'REGION1'   .'FGDMAJW-E'
+  'REGION1'   .'FGDMATI-E'
+  'REGION1'   .'FGDMATL-E'
+  'REGION1'   .'FGDMEDU-N'
+  'REGION1'   .'FGDTUTU-E'
+/;
+SET PRC_ELE /
+  'REGION1'   .'ETCLEARNO-E'
+  'REGION1'   .'ETCLECAMD-E'
+  'REGION1'   .'ETCLEDUVH-E'
+  'REGION1'   .'ETCLEGROO-E'
+  'REGION1'   .'ETCLEHEND-E'
+  'REGION1'   .'ETCLEKEND-E'
+  'REGION1'   .'ETCLEKOMA-E'
+  'REGION1'   .'ETCLEKRIE-E'
+  'REGION1'   .'ETCLEKUSI-N'
+  'REGION1'   .'ETCLELETH-E'
+  'REGION1'   .'ETCLEMAJD-E'
+  'REGION1'   .'ETCLEMAJW-E'
+  'REGION1'   .'ETCLEMATI-E'
+  'REGION1'   .'ETCLEMATL-E'
+  'REGION1'   .'ETCLEMEDU-N'
+  'REGION1'   .'ETCLETUTU-E'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'FGDARNO-E'
+  'REGION1'   .'FGDCAMD-E'
+  'REGION1'   .'FGDDUVH-E'
+  'REGION1'   .'FGDGROO-E'
+  'REGION1'   .'FGDHEND-E'
+  'REGION1'   .'FGDKEND-E'
+  'REGION1'   .'FGDKOMA-E'
+  'REGION1'   .'FGDKRIE-E'
+  'REGION1'   .'FGDLETH-E'
+  'REGION1'   .'FGDMAJD-E'
+  'REGION1'   .'FGDMAJW-E'
+  'REGION1'   .'FGDMATI-E'
+  'REGION1'   .'FGDMATL-E'
+  'REGION1'   .'FGDMEDU-N'
+  'REGION1'   .'FGDTUTU-E'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'ETCLEARNO-E'
+  'REGION1'   .'ETCLECAMD-E'
+  'REGION1'   .'ETCLEDUVH-E'
+  'REGION1'   .'ETCLEGROO-E'
+  'REGION1'   .'ETCLEHEND-E'
+  'REGION1'   .'ETCLEKEND-E'
+  'REGION1'   .'ETCLEKOMA-E'
+  'REGION1'   .'ETCLEKRIE-E'
+  'REGION1'   .'ETCLEKUSI-N'
+  'REGION1'   .'ETCLELETH-E'
+  'REGION1'   .'ETCLEMAJD-E'
+  'REGION1'   .'ETCLEMAJW-E'
+  'REGION1'   .'ETCLEMATI-E'
+  'REGION1'   .'ETCLEMATL-E'
+  'REGION1'   .'ETCLEMEDU-N'
+  'REGION1'   .'ETCLETUTU-E'
+/;
+SET ACOM_UNIT /
+  'REGION1'.'PWRFGDARNO'.'PJ'
+  'REGION1'.'PWRFGDCAMD'.'PJ'
+  'REGION1'.'PWRFGDDUVH'.'PJ'
+  'REGION1'.'PWRFGDGROO'.'PJ'
+  'REGION1'.'PWRFGDHEND'.'PJ'
+  'REGION1'.'PWRFGDKEND'.'PJ'
+  'REGION1'.'PWRFGDKOMA'.'PJ'
+  'REGION1'.'PWRFGDKRIE'.'PJ'
+  'REGION1'.'PWRFGDLETH'.'PJ'
+  'REGION1'.'PWRFGDMAJD'.'PJ'
+  'REGION1'.'PWRFGDMAJW'.'PJ'
+  'REGION1'.'PWRFGDMATI'.'PJ'
+  'REGION1'.'PWRFGDMATL'.'PJ'
+  'REGION1'.'PWRFGDMEDU'.'PJ'
+  'REGION1'.'PWRFGDTUTU'.'PJ'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ETCLEARNO-E'.'PJ'
+  'REGION1'.'ETCLECAMD-E'.'PJ'
+  'REGION1'.'ETCLEDUVH-E'.'PJ'
+  'REGION1'.'ETCLEGROO-E'.'PJ'
+  'REGION1'.'ETCLEHEND-E'.'PJ'
+  'REGION1'.'ETCLEKEND-E'.'PJ'
+  'REGION1'.'ETCLEKOMA-E'.'PJ'
+  'REGION1'.'ETCLEKRIE-E'.'PJ'
+  'REGION1'.'ETCLEKUSI-N'.'PJ'
+  'REGION1'.'ETCLELETH-E'.'PJ'
+  'REGION1'.'ETCLEMAJD-E'.'PJ'
+  'REGION1'.'ETCLEMAJW-E'.'PJ'
+  'REGION1'.'ETCLEMATI-E'.'PJ'
+  'REGION1'.'ETCLEMATL-E'.'PJ'
+  'REGION1'.'ETCLEMEDU-N'.'PJ'
+  'REGION1'.'ETCLETUTU-E'.'PJ'
+  'REGION1'.'FGDARNO-E'.'PJ'
+  'REGION1'.'FGDCAMD-E'.'PJ'
+  'REGION1'.'FGDDUVH-E'.'PJ'
+  'REGION1'.'FGDGROO-E'.'PJ'
+  'REGION1'.'FGDHEND-E'.'PJ'
+  'REGION1'.'FGDKEND-E'.'PJ'
+  'REGION1'.'FGDKOMA-E'.'PJ'
+  'REGION1'.'FGDKRIE-E'.'PJ'
+  'REGION1'.'FGDLETH-E'.'PJ'
+  'REGION1'.'FGDMAJD-E'.'PJ'
+  'REGION1'.'FGDMAJW-E'.'PJ'
+  'REGION1'.'FGDMATI-E'.'PJ'
+  'REGION1'.'FGDMATL-E'.'PJ'
+  'REGION1'.'FGDMEDU-N'.'PJ'
+  'REGION1'.'FGDTUTU-E'.'PJ'
+/;
+PARAMETER ANCAP_START /
+  'REGION1'                 .'FGDARNO-E'                  2031
+  'REGION1'                 .'FGDCAMD-E'                  2031
+  'REGION1'                 .'FGDDUVH-E'                  2031
+  'REGION1'                 .'FGDGROO-E'                  2031
+  'REGION1'                 .'FGDHEND-E'                  2031
+  'REGION1'                 .'FGDKEND-E'                  2031
+  'REGION1'                 .'FGDKOMA-E'                  2031
+  'REGION1'                 .'FGDKRIE-E'                  2031
+  'REGION1'                 .'FGDLETH-E'                  2031
+  'REGION1'                 .'FGDMAJD-E'                  2031
+  'REGION1'                 .'FGDMAJW-E'                  2031
+  'REGION1'                 .'FGDMATI-E'                  2031
+  'REGION1'                 .'FGDMATL-E'                  2031
+  'REGION1'                 .'FGDMEDU-N'                  2031
+  'REGION1'                 .'FGDTUTU-E'                  2031
+/;
+PARAMETER APRCACTUNT /
+  'REGION1'                 .'ETCLEARNO-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLECAMD-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEDUVH-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEGROO-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEHEND-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKEND-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKOMA-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKRIE-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLELETH-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMAJD-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMAJW-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMATI-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMATL-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLETUTU-E'             .'ELCC'                       1
+  'REGION1'                 .'FGDARNO-E'               .'PWRFGDARNO'                 1
+  'REGION1'                 .'FGDCAMD-E'               .'PWRFGDCAMD'                 1
+  'REGION1'                 .'FGDDUVH-E'               .'PWRFGDDUVH'                 1
+  'REGION1'                 .'FGDGROO-E'               .'PWRFGDGROO'                 1
+  'REGION1'                 .'FGDHEND-E'               .'PWRFGDHEND'                 1
+  'REGION1'                 .'FGDKEND-E'               .'PWRFGDKEND'                 1
+  'REGION1'                 .'FGDKOMA-E'               .'PWRFGDKOMA'                 1
+  'REGION1'                 .'FGDKRIE-E'               .'PWRFGDKRIE'                 1
+  'REGION1'                 .'FGDLETH-E'               .'PWRFGDLETH'                 1
+  'REGION1'                 .'FGDMAJD-E'               .'PWRFGDMAJD'                 1
+  'REGION1'                 .'FGDMAJW-E'               .'PWRFGDMAJW'                 1
+  'REGION1'                 .'FGDMATI-E'               .'PWRFGDMATI'                 1
+  'REGION1'                 .'FGDMATL-E'               .'PWRFGDMATL'                 1
+  'REGION1'                 .'FGDMEDU-N'               .'PWRFGDMEDU'                 1
+  'REGION1'                 .'FGDTUTU-E'               .'PWRFGDTUTU'                 1
+/;
+PARAMETER APRCCAPACT /
+  'REGION1'                 .'FGDARNO-E'                  31.536
+  'REGION1'                 .'FGDCAMD-E'                  31.536
+  'REGION1'                 .'FGDDUVH-E'                  31.536
+  'REGION1'                 .'FGDGROO-E'                  31.536
+  'REGION1'                 .'FGDHEND-E'                  31.536
+  'REGION1'                 .'FGDKEND-E'                  31.536
+  'REGION1'                 .'FGDKOMA-E'                  31.536
+  'REGION1'                 .'FGDKRIE-E'                  31.536
+  'REGION1'                 .'FGDLETH-E'                  31.536
+  'REGION1'                 .'FGDMAJD-E'                  31.536
+  'REGION1'                 .'FGDMAJW-E'                  31.536
+  'REGION1'                 .'FGDMATI-E'                  31.536
+  'REGION1'                 .'FGDMATL-E'                  31.536
+  'REGION1'                 .'FGDMEDU-N'                  31.536
+  'REGION1'                 .'FGDTUTU-E'                  31.536
+/;
+PARAMETER ATOP_IN /
+  'REGION1'                 .'ETCLEARNO-E'             .'PWRCLEARNO'                 1
+  'REGION1'                 .'ETCLECAMD-E'             .'PWRCLECAMD'                 1
+  'REGION1'                 .'ETCLEDUVH-E'             .'PWRCLEDUVH'                 1
+  'REGION1'                 .'ETCLEGROO-E'             .'PWRCLEGROO'                 1
+  'REGION1'                 .'ETCLEHEND-E'             .'PWRCLEHEND'                 1
+  'REGION1'                 .'ETCLEKEND-E'             .'PWRCLEKEND'                 1
+  'REGION1'                 .'ETCLEKOMA-E'             .'PWRCLEKOMA'                 1
+  'REGION1'                 .'ETCLEKRIE-E'             .'PWRCLEKRIE'                 1
+  'REGION1'                 .'ETCLELETH-E'             .'PWRCLELETH'                 1
+  'REGION1'                 .'ETCLEMAJD-E'             .'PWRCLEMAJU'                 1
+  'REGION1'                 .'ETCLEMAJW-E'             .'PWRCLEMAJU'                 1
+  'REGION1'                 .'ETCLEMATI-E'             .'PWRCLEMATI'                 1
+  'REGION1'                 .'ETCLEMATL-E'             .'PWRCLEMATL'                 1
+  'REGION1'                 .'ETCLETUTU-E'             .'PWRCLETUTU'                 1
+/;
+PARAMETER ATOP_OUT /
+  'REGION1'                 .'ETCLEARNO-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLECAMD-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEDUVH-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEGROO-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEHEND-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKEND-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKOMA-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEKRIE-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLELETH-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMAJD-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMAJW-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMATI-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLEMATL-E'             .'ELCC'                       1
+  'REGION1'                 .'ETCLETUTU-E'             .'ELCC'                       1
+  'REGION1'                 .'FGDARNO-E'               .'PWRFGDARNO'                 1
+  'REGION1'                 .'FGDCAMD-E'               .'PWRFGDCAMD'                 1
+  'REGION1'                 .'FGDDUVH-E'               .'PWRFGDDUVH'                 1
+  'REGION1'                 .'FGDGROO-E'               .'PWRFGDGROO'                 1
+  'REGION1'                 .'FGDHEND-E'               .'PWRFGDHEND'                 1
+  'REGION1'                 .'FGDKEND-E'               .'PWRFGDKEND'                 1
+  'REGION1'                 .'FGDKEND-E'               .'PWRSOXS'                    1
+  'REGION1'                 .'FGDKOMA-E'               .'PWRFGDKOMA'                 1
+  'REGION1'                 .'FGDKRIE-E'               .'PWRFGDKRIE'                 1
+  'REGION1'                 .'FGDLETH-E'               .'PWRFGDLETH'                 1
+  'REGION1'                 .'FGDLETH-E'               .'PWRSOXS'                    1
+  'REGION1'                 .'FGDMAJD-E'               .'PWRFGDMAJD'                 1
+  'REGION1'                 .'FGDMAJD-E'               .'PWRSOXS'                    1
+  'REGION1'                 .'FGDMAJW-E'               .'PWRFGDMAJW'                 1
+  'REGION1'                 .'FGDMAJW-E'               .'PWRSOXS'                    1
+  'REGION1'                 .'FGDMATI-E'               .'PWRFGDMATI'                 1
+  'REGION1'                 .'FGDMATI-E'               .'PWRSOXS'                    1
+  'REGION1'                 .'FGDMATL-E'               .'PWRFGDMATL'                 1
+  'REGION1'                 .'FGDMEDU-N'               .'PWRFGDMEDU'                 1
+  'REGION1'                 .'FGDMEDU-N'               .'PWRSOXS'                    1
+  'REGION1'                 .'FGDTUTU-E'               .'PWRFGDTUTU'                 1
+/;
+       TABLE AACT_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'FGDKEND-E'                        3.027213636486                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDLETH-E'                        3.027213636486                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJD-E'                        3.027213636486                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJW-E'                        3.027213636486                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMATI-E'                        3.027213636486                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMEDU-N'                        3.027213636486                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+;
+       TABLE AFLO_EMIS
+                                                                                                                                           0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'FGDKEND-E'               .'PWRSOXS'                 .'PWRFGDKEND'              .'ANNUAL'                                                                                                                                                                                                                                                                                                                          -2.473861680450                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDLETH-E'               .'PWRSOXS'                 .'PWRFGDLETH'              .'ANNUAL'                                                                                                                                                                                                                                                                                                                          -2.361352941176                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJD-E'               .'PWRSOXS'                 .'PWRFGDMAJD'              .'ANNUAL'                                                                                                                                                                                                                                                                                                                          -2.6762                                                                                                                                                                                                                          
+  'REGION1'                 .'FGDMAJW-E'               .'PWRSOXS'                 .'PWRFGDMAJW'              .'ANNUAL'                                                                                                                                                                                                                                                                                                                          -2.589870967741                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMATI-E'               .'PWRSOXS'                 .'PWRFGDMATI'              .'ANNUAL'                                                                                                                                                                                                                                                                                                                          -2.361334970745                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMEDU-N'               .'PWRSOXS'                 .'PWRFGDMEDU'              .'ANNUAL'                                                                                                                                                                                                                                                                                                                          -2.331159029649                                                                                                                                                                                                                  
+;
+       TABLE ANCAP_COST
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'FGDKEND-E'                        5867.898383371                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDLETH-E'                        5867.898383371                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJD-E'                        5867.898383371                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJW-E'                        5867.898383371                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMATI-E'                        5867.898383371                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMEDU-N'                        5867.898383371                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+;
+       TABLE ANCAP_FOM
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'FGDKEND-E'                        196.5207541063                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDLETH-E'                        196.5207541063                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJD-E'                        196.5207541063                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMAJW-E'                        196.5207541063                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMATI-E'                        196.5207541063                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  'REGION1'                 .'FGDMEDU-N'                        196.5207541063                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+;
+       TABLE ANCAP_ILED
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'FGDARNO-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDCAMD-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDDUVH-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDGROO-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDHEND-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDKEND-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDKOMA-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDKRIE-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDLETH-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDMAJD-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDMAJW-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDMATI-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDMATL-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDMEDU-N'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  'REGION1'                 .'FGDTUTU-E'                       -2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+;
+       TABLE ANCAPTLIFE
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'FGDKEND-E'                        11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'FGDLETH-E'                        11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'FGDMAJD-E'                        16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'FGDMAJW-E'                        16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'FGDMATI-E'                        11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  'REGION1'                 .'FGDMEDU-N'                        30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+;
+       TABLE APRC_RESID
+                                                          0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ETCLEARNO-E'                                                                                                                                      2.232           2.232           2.232           2.232           2.232           2.232           2.232           1.488           .744            .744           EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLECAMD-E'                                                                                                                                      1.481           1.481           1.481           1.481           1.481           1.057857142857  .6347142857142 EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEDUVH-E'                                                                                                                                      2.875           2.875           2.875           2.875           2.875           2.875           2.875           2.875           2.875           2.875           2.875           2.875           1.725           1.725           .575           EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEGROO-E'                                                                                                                                      .57             .57             .57             .57             .57             .57             .57             .38             .19            EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEHEND-E'                                                                                                                                      1.293           1.293           1.108285714285  1.108285714285  .9235714285714  .7388571428571 EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEKEND-E'                                                                                                                                      3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.84            3.2             3.2            EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEKOMA-E'                                                                                                                                      .41             .205            .1025          EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEKRIE-E'                                                                                                                                      2.85            2.85            2.85            2.85            2.85            2.85            2.85            2.375           1.9             1.425           .475           EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLELETH-E'                                                                                                                                      3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           3.558           2.965           1.779           1.186           1.186           .593           EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEMAJD-E'                                                                                                                                      1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833           1.833          EPS             EPS             EPS
+  'REGION1'                 .'ETCLEMAJW-E'                                                                                                                                      2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            2.01            .67            EPS             EPS
+  'REGION1'                 .'ETCLEMATI-E'                                                                                                                                      3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            3.69            2.46            1.845           1.23           EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLEMATL-E'                                                                                                                                      3.45            3.45            3.45            3.45            3.45            3.45            3.45            3.45            3.45            3.45            3.45            2.875           1.725           1.15            .575           EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'ETCLETUTU-E'                                                                                                                                      3.51            3.51            3.51            3.51            3.51            3.51            3.51            3.51            3.51            3.51            3.51           EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+;
