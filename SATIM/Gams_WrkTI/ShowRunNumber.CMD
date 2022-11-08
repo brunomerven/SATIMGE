@@ -1,1 +1,1 @@
-echo 85T3E2S0P1G0
+echo Optimized_NZ
