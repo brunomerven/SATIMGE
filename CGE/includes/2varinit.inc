@@ -167,8 +167,8 @@
 *@
 *@
  CERES('cpgm') = YES;
- CEFIX('cpgm') = YES;
- QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
+*fh 1601 CEFIX('cpgm') = YES;
+*fh 1601 QE.FX('cpgm','REST') = QE0('cpgm','REST') ;
 *@
 *@
  CERES('cmore') = YES;

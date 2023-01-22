@@ -1,0 +1,47 @@
+Prod:Crop [16251] Com:Crop
+Prod:Live [3179] Com:Live
+
+Prod:Coil [9205] Com:Coil
+Prod:Ngas [807] Com:Ngas
+Prod:Omin [20791] Com:Omin
+Prod:Food [7791] Com:Food
+Prod:NFood [10326] Com:NFood
+Prod:Petr [7627] Com:Petr
+Prod:Elec [8248] Com:Elec
+Prod:OInd [32907] Com:OInd
+Prod:Serv [119661] Com:Serv
+
+Agri
+Prod:Crop [16251] Com:Crop
+Prod:Live [3179] Com:Live
+Prod:OAgr [5357] Com:OAgr
+Prod:Food [7791] Com:Food
+Prod:NFood [10326] Com:NFood
+Prod:Serv [119661] Com:Serv
+Com:Crop [7579] Int:Crop
+Com:Crop [14474] Fin:Crop
+Com:Live [686] Int:Live
+Com:Live [2939] Fin:Live
+Com:OAgr [2903] Int:OAgr
+Com:OAgr [3147] Fin:OAgr
+Int:Crop [84] Prod:Crop
+Int:Crop [6125] Prod:Food
+Int:Crop [168] Prod:NFood
+Int:Crop [1202] Prod:Serv
+Int:Live [302] Prod:Crop
+Int:Live [230] Prod:Live
+Int:Live [99] Prod:OMin
+Int:Live [236] Prod:Serv
+Int:OAgr [167] Prod:OAgr
+Int:OAgr [107] Prod:Food
+Int:OAgr [2199] Prod:OMan
+Int:OAgr [429] Prod:Serv
+Fin:Crop [8956] Households
+Fin:Crop [5518] Exports
+Fin:Live [2524] Households
+Fin:Live [1] Exports
+Fin:OAgr [2222] Households
+Fin:Oagr [38] Exports
+Prod:Crop [4815] Households
+Prod:Live [242] Households
+Prod:OAgr [11] Households

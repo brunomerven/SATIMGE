@@ -23,16 +23,20 @@ PARAMETER
 
 SET
  REMEXP(C)       remove exports with small shares
- / cafee, casug, cgsrv /
+ / cafee, casug, cgsrv/
+*, cngas /
 
  REMIMP(C)       remove imports with small shares
- / ccoal-low, catub, casug, cgsrv /
+ / ccoal-low, catub, casug, cgsrv, cpgm /
 
  REEXPORT(C)     remove imports with re-export problem
  /          /
 
  CERES(C)        Commodities with perfect substitution for exports
- / celec, ccoal-low, chydr/
+ / /
+* celec /
+*, ccoal-low/
+*, chydr/
 
  CMRES(C)        Commodities with perfect substitution for imports
  / /
