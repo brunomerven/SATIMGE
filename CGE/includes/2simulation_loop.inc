@@ -79,7 +79,7 @@ $include SATIM\includes\2TIMESReport.inc
 * SIM_CO2Price assumed to be in the same units as SATIM: mR/ktonCO2
 * CGE requires bR and tracks ktonCO2 so dividing by 1000
 * setting it equal to marginal of CO2SF, which doesn't explode in the last 5 years
- SIM_CO2PRICE(TC,RUN) = REPORT('SATIMMarginals','CO2SF',TC,RUN,'Marginals')/1000 *(-1);
+*! SIM_CO2PRICE(TC,RUN) = REPORT('SATIMMarginals','CO2SF',TC,RUN,'Marginals')/1000 *(-1);
 
 * Set Retaliatory Tax according to https://www.tips.org.za/news/item/4399-eu-carbon-tax-move-cranks-up-heat-on-sa-exporters
 $ontext
@@ -89,12 +89,15 @@ $ontext
  RTCO2ESIM(XC,'2029') = 85/6*17/1000000;
 * RTCO2ESIM(XC,'2030') = 85/2*17/1000000;
 $offtext
+
+* comment below to turn on retaliatory tax/CBAM
+$ontext
  RTCO2ESIM(XC,RTTaxYears) = 85*17/1000000;
  RTCO2ESIM(XC,'2027') = 85/4*17/1000000;
  RTCO2ESIM(XC,'2028') = 85/2*17/1000000;
  RTCO2ESIM(XC,'2029') = 85*3/4*17/1000000;
 * RTCO2ESIM(XC,'2030') = 85/2*17/1000000;
-
+$offtext
 
 
 
@@ -415,11 +418,11 @@ $offtext
     AFXGR('APETR','NAT',XC,TC)$EFX(TT,TC) = PAFXCAP(XC,TC,TT)/PAFXCAP(XC,TC-1,TT)- 1;
 
 *@
-    theta('apetr','cpetr-h') = FLOW_OUT_FSFuels('petr','cpetr-h',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr-k') = FLOW_OUT_FSFuels('petr','cpetr-k',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr-l') = FLOW_OUT_FSFuels('petr','cpetr-l',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr-d') = FLOW_OUT_FSFuels('petr','cpetr-d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
-    theta('apetr','cpetr-p') = FLOW_OUT_FSFuels('petr','cpetr-p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC));
+    theta('apetr','cpetr-h') = max(0.001,FLOW_OUT_FSFuels('petr','cpetr-h',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC)));
+    theta('apetr','cpetr-k') = max(0.001,FLOW_OUT_FSFuels('petr','cpetr-k',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC)));
+    theta('apetr','cpetr-l') = max(0.001,FLOW_OUT_FSFuels('petr','cpetr-l',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC)));
+    theta('apetr','cpetr-d') = max(0.001,FLOW_OUT_FSFuels('petr','cpetr-d',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC)));
+    theta('apetr','cpetr-p') = max(0.001,FLOW_OUT_FSFuels('petr','cpetr-p',TC)/sum(C,FLOW_OUT_FSFuels('petr',C,TC)));
 * helping the solver
     QXAC.L('apetr',c)$AFXGR('APETR','NAT',XC,TC) = QXAC.L('apetr',c)*(1+AFXGR('APETR','NAT',XC,TC));
     QA.L('apetr')$AFXGR('APETR','NAT',XC,TC) = QA.L('apetr')*(1+AFXGR('APETR','NAT',XC,TC));
@@ -437,11 +440,9 @@ $offtext
 
 
 * Hydrogen Sector
-*#    AFX('AHYDR',RD)$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
-*#    AFLEO('AHYDR')$(HCAP(XC,TC-1,TT) GT 0.1) = YES;
 
-    AFX('AHYDR',RD)$(ORD(TC) gt 4) = YES;
-    AFLEO('AHYDR')$(ORD(TC) gt 4) = YES;
+    AFX('AHYDR',RD)$(ORD(TC) gt 1) = YES;
+*    AFLEO('AHYDR')$(ORD(TC) gt 4) = YES;
 
 
 
@@ -452,11 +453,11 @@ $offtext
 
 *@
 
-    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2 and HCAP(XC,TC-1,TT) le 1.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
-    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 1.2) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
+    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2 and HCAP(XC,TC-1,TT) le 0.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC)*1.5;
+    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.2) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
 * set reasonable starting value for QVA otherwise wfdist goes -ve.
-    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2) = sum(F,QF.L(F,'AHYDR','NAT'));
-    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2) = 1;
+    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = sum(F,QF.L(F,'AHYDR','NAT'));
+    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = 1;
 
 *CA fix imports in accordance with TIMES for all periods
 *!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);

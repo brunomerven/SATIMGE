@@ -32,7 +32,9 @@ SET
  /          /
 
  CERES(C)        Commodities with perfect substitution for exports
- / celec, ccoal-low, chydr/
+ / /
+
+*celec, ccoal-low, chydr/
 
  CMRES(C)        Commodities with perfect substitution for imports
  / /
