@@ -77,28 +77,6 @@ PlaneFilter1=chydr
 [RP:2SIMULATION_LOOP]
 1=
 
-[RP:SATIMGE]
-1=r=cge\model, gdx = NetZeroLinkedLE
-2=r=cge\model, gdx = NetZeroLinkedHE
-3=r=cge\model, gdx = NetZeroLinked3Iter
-4=r=cge\model, gdx = NetZeroLinkedNewSAM
-5=r=cge\model, gdx = NetZeroLinkedtest
-6=r=cge\model, gdx = NetZeroLinkedtestNew2
-7=r=cge\model, gdx = NetZeroLinkedtestNew
-8=r=cge\model, gdx = NetZeroLinked
-9=r=cge\model, gdx = NetZeroLinkedTest_Elas5
-10=r=cge\model, gdx = NetZeroLinkedTest_Elas4
-11=r=cge\model, gdx = NetZeroLinkedTest_Elas3
-12=r=cge\model, gdx = NetZeroLinkedTest_Elas2
-13=r=cge\model, gdx = NetZeroLinkedTest_Elas
-14=r=cge\model, gdx = NetZeroLinkedTest3
-15=r=cge\model, gdx = NetZeroLinkedTest2
-16=r=cge\model, gdx = NetZeroLinkedTest
-17=r=cge\model, gdx = NetZeroTest
-18=r=cge\model, gdx = hiGr
-19=r=cge\model, gdx = NetZero
-20=r=cge\model, gdx = LOP
-
 [GDXDISP: QFS Var 1]
 PlaneDim=0
 RowDim=1
@@ -798,6 +776,37 @@ PlaneRownr=-1
 [RP:1CARBON]
 1=
 
+[RP:SATIMGE]
+1=r=cge\model, gdx = 75Gton3IterTest
+2=r=cge\model, gdx = 9Gton3IterTest
+3=r=cge\model, gdx = 9GtonTestAfx
+4=r=cge\model, gdx = 9GtonTestTraAdj
+5=r=cge\model, gdx = 9GtonTest
+6=r=cge\model, gdx = EBFix4
+7=r=cge\model, gdx = EBFix4, FW = 1
+8=r=cge\model, gdx = EBFix3
+9=r=cge\model, gdx = EBFix2
+10=r=cge\model, gdx = EBFix
+11=r=cge\model, gdx = test_wH2_v4
+12=r=cge\model, gdx = test_wH2_v3
+13=r=cge\model, gdx = test_wH2_v2
+14=r=cge\model, gdx = test_wH2
+15=r=cge\model, gdx = test_preH2
+16=r=cge\model, gdx = testClean2
+17=r=cge\model, gdx = testClean
+18=r=cge\model, gdx = testClean\
+19=r=cge\model, gdx = testRef
+20=r=cge\model, gdx = CGE_NZ20_8_NoH2
+
+[GDXDISP: H Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
 [RP:1MODEL]
 1=gdx=model s=model
 2=gdx = model s = model
@@ -814,7 +823,7 @@ FILE0=C:\Models\SATIMGE\CGE\1model.dat
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\1model.lst
 FILE3=C:\Models\SATIMGE\CGE\model.gdx
-FILE4=C:\Models\SATIMGE\CGE\model.gdx
+FILE4=C:\Models\SATIMGE\CGE\1model.lst
 MAXIM=0
 TOP=7
 LEFT=140

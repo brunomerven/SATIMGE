@@ -245,7 +245,7 @@
    QF.LO(F,A,RD)$(ANFX(A,RD) AND QF0(F,A,RD)) = -INF;
    QF.UP(F,A,RD)$(ANFX(A,RD) AND QF0(F,A,RD)) = +INF;
 *  Upward-sloping curves (shift QFS0 and leave QFS flexible)
-   QFS0(F)$FLS(F) = SUM((RD,A), QF.L(F,A,RD)*COVID(XC,TC)*LABGRSHK(F,XC,TC));
+   QFS0(F)$FLS(F) = SUM((RD,A), QF.L(F,A,RD)*COVID(F,XC,TC)*LABGRSHK(F,XC,TC));
    QFS.LO(F)$FLS(F) = -INF;
    QFS.UP(F)$FLS(F) = +INF;
   );

@@ -257,14 +257,79 @@ PARAMETER
 * rhova_coal('acoal',RD,'capinten',T)=rhova('acoal',RD)*0.5;
 
 Parameter
- COVID(X,T)
+ COVID(F,X,T)
+ COVIDCAP(A,F,X,T)
  ktest(X,T);
+
+*$ONTEXT
+SET
+ AGRIC(A) /aawhe, aamai, aaoce, aaveg, aaofr, aagra, aaoil, aatub, aapul, aasug, aaoth, alani, afore, afish/
+ MININ(A) /acoal, agold, angas, apgm, amore, amine/
+ MANUF(A) /ameat, apfis, avege, afats, adair, agrai, astar, afeed, abake, asuga, aconf, apast, aofoo, abevt,
+         atext, aclth, aleat, afoot, awood, apapr, aprnt, arubb, aplas,
+         anfrm, ametp, amach, aemch, asequ, avehi, atequ, afurn, aoman/
+ TRADE(A) /atrad, ahotl/
+ TRANS(A) /altrp-p, altrp-f, aotrp-p, aotrp-f, aprtr, atrps, acomm/
+ FBSRV(A) /afsrv, absrv/
+ OTHER(A) /agsrv, aosrv/
+;
+*$OFFTEXT
 
  ktest(X,T)=1;
 * ktest(X,'2020')=12;
 
- COVID(X,T)=1;
- COVID(X,'2020')=0.89;
+ COVID(F,X,T)=1;
+ COVID('FLAB-P',X,'2020')=0.92;
+ COVID('FLAB-M',X,'2020')=0.92;
+ COVID('FLAB-S',X,'2020')=0.92;
+ COVID('FLAB-T',X,'2020')=0.92;
+
+ COVID('FLAB-P',X,'2021')=0.95;
+ COVID('FLAB-M',X,'2021')=0.95;
+ COVID('FLAB-S',X,'2021')=0.95;
+ COVID('FLAB-T',X,'2021')=0.95;
+
+ COVIDCAP(A,'FCAP',X,T)=1;
+ COVIDCAP(AGRIC  ,'FCAP',X,'2020')=1.2;
+ COVIDCAP(MININ  ,'FCAP',X,'2020')=0.85;
+ COVIDCAP(MANUF  ,'FCAP',X,'2020')=0.8;
+ COVIDCAP(TRADE  ,'FCAP',X,'2020')=0.85;
+ COVIDCAP(TRANS  ,'FCAP',X,'2020')=0.75;
+ COVIDCAP(FBSRV  ,'FCAP',X,'2020')=1.1;
+ COVIDCAP(OTHER  ,'FCAP',X,'2020')=1;
+ COVIDCAP('ACONS','FCAP',X,'2020')=0.5;
+
+ COVIDCAP(AGRIC  ,'FCAP',X,'2021')=1.5;
+ COVIDCAP(MININ  ,'FCAP',X,'2021')=1.4;
+ COVIDCAP(MANUF  ,'FCAP',X,'2021')=0.9;
+ COVIDCAP(TRADE  ,'FCAP',X,'2021')=0.95;
+ COVIDCAP(TRANS  ,'FCAP',X,'2021')=0.8;
+ COVIDCAP(FBSRV  ,'FCAP',X,'2021')=1.15;
+ COVIDCAP(OTHER  ,'FCAP',X,'2021')=1.1;
+ COVIDCAP('ACONS','FCAP',X,'2021')=0.5;
+
+ COVIDCAP(AGRIC  ,'FCAP',X,'2022')=1.2;
+ COVIDCAP(MININ  ,'FCAP',X,'2022')=0.95;
+ COVIDCAP(MANUF  ,'FCAP',X,'2022')=0.85;
+ COVIDCAP(TRADE  ,'FCAP',X,'2022')=1.15;
+ COVIDCAP(TRANS  ,'FCAP',X,'2022')=0.95;
+ COVIDCAP(FBSRV  ,'FCAP',X,'2022')=1.1;
+ COVIDCAP(OTHER  ,'FCAP',X,'2022')=1;
+ COVIDCAP('ACONS','FCAP',X,'2022')=0.5;
+
+ COVIDCAP(AGRIC  ,'FCAP',X,'2023')=1.1;
+ COVIDCAP(MININ  ,'FCAP',X,'2023')=1;
+ COVIDCAP(MANUF  ,'FCAP',X,'2023')=0.95;
+ COVIDCAP(TRADE  ,'FCAP',X,'2023')=1;
+ COVIDCAP(TRANS  ,'FCAP',X,'2023')=1;
+ COVIDCAP(FBSRV  ,'FCAP',X,'2023')=1;
+ COVIDCAP(OTHER  ,'FCAP',X,'2023')=1;
+ COVIDCAP('ACONS','FCAP',X,'2023')=0.5;
+
+ COVIDCAP('acons','FCAP',X,'2024')=0.5;
+ COVIDCAP('acons','FCAP',X,'2025')=0.6;
+ COVIDCAP('acons','FCAP',X,'2026')=1;
+ COVIDCAP('acons','FCAP',X,'2029')=1;
 
 *----------------------------------------------------------------------
 *3. Closures

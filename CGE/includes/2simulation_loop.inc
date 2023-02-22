@@ -177,7 +177,9 @@ $include cge\includes\2carbon.inc
 *        leova(A,RD) = leova(A,RD) * (1+SECGR(A,RD,XC,TC)/100);
 
 *       Long term factor-specific productivity growth
-    fprd(F,A,RD)$(NOT AFX(A,RD)) = fprd(F,A,RD) * (1+FPRDGR(F,XC,TC));
+    fprd(F,A,RD)$(NOT AFX(A,RD)) =  fprd(F,A,RD) * (1+FPRDGR(F,XC,TC));
+    fprd(FCAP,A,RD)$(NOT AFX(A,RD)) =  COVIDCAP(A,FCAP,XC,TC);
+*fprd(F,A,RD) * (1+FPRDGR(F,XC,TC));
 
 *       World price changes - standard CGE input
 * setting international prices for hydrogen, celct and cfcel to track projected learning - this should be linked to a central template
