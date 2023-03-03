@@ -1,0 +1,47 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET PRC /
+  'TFLCVELC-N'               'Transport Freight - LCV Electricity-N             '
+  'TPPRCARELC-N'             'Transport Passenger Car Priv.Veh. Electricity-N   '
+  'TPPRMOTELC-N'             'Transport Passenger Moto Priv.Veh. Electricity-N  '
+  'TPPRSUVELC-N'             'Transport Passenger SUV Priv.Veh. Electricity-N   '
+  'TPPUBUSELC-N'             'Transport Passenger Bus Electricity-N             '
+  'TPPUMBTELC-N'             'Transport Passenger Minibus Electricity-N         '
+/;
+SET PRC_DMD /
+  'REGION1'   .'TFLCVELC-N'
+  'REGION1'   .'TPPRCARELC-N'
+  'REGION1'   .'TPPRMOTELC-N'
+  'REGION1'   .'TPPRSUVELC-N'
+  'REGION1'   .'TPPUBUSELC-N'
+  'REGION1'   .'TPPUMBTELC-N'
+/;
+SET PRC_ANNUAL /
+  'REGION1'   .'TFLCVELC-N'
+  'REGION1'   .'TPPRCARELC-N'
+  'REGION1'   .'TPPRMOTELC-N'
+  'REGION1'   .'TPPRSUVELC-N'
+  'REGION1'   .'TPPUBUSELC-N'
+  'REGION1'   .'TPPUMBTELC-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'TFLCVELC-N'.'PJ'
+  'REGION1'.'TPPRCARELC-N'.'PJ'
+  'REGION1'.'TPPRMOTELC-N'.'PJ'
+  'REGION1'.'TPPRSUVELC-N'.'PJ'
+  'REGION1'.'TPPUBUSELC-N'.'PJ'
+  'REGION1'.'TPPUMBTELC-N'.'PJ'
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'TFLCVELC-N'              .'FX'                                                                                                                                                                                                               .38             .75             1.13            1.5             1.88            1.88            1.88            1.88                                                                                                                                                                                                                            
+  'REGION1'                 .'TPPRCARELC-N'            .'FX'                                                                                                                                                                                                               32.17           64.34           96.51           128.68          160.85          160.85          160.85          160.85                                                                                                                                                                                                                          
+  'REGION1'                 .'TPPRMOTELC-N'            .'FX'                                                                                                                                                                                                               6.55            13.1            19.65           26.2            32.75           39.3            45.85           52.4                                                                                                                                                                                                                            
+  'REGION1'                 .'TPPRSUVELC-N'            .'FX'                                                                                                                                                                                                               8.04            16.09           24.13           32.17           40.21           40.21           40.21           40.21                                                                                                                                                                                                                           
+  'REGION1'                 .'TPPUBUSELC-N'            .'FX'                                                                                                                                                                                                               .07             .14             .21             .28             .28             .28             .28             .28                                                                                                                                                                                                                             
+  'REGION1'                 .'TPPUMBTELC-N'            .'FX'                                                                                                                                                                                                               .37             .74             1.11            1.48            1.48            1.48            1.48            1.48                                                                                                                                                                                                                            
+;

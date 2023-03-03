@@ -1,0 +1,35 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2022/09/11	11:15:54 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWR_NGD	delayed natural gas to 2031	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+
+ITEMS	REGION1
+	T	ETGICCC-N	Combined Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICEN-N	Gas Engines - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETGICGT-N	Open Cycle Gas Turbine - LNG	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETODSGT-N	DOE Peakers	PJ,GW	PRC,ELE,DAYNITE	
+
+TS DATA	REGION1
+	CAP_BND	ETODSGT-N	-	-	-	-	UP	0	1.005	null	null	null	null	null	null	null	null	null	null	null	null	1.005	null	null	null	null	5	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+
+TID DATA	REGION1
+	NCAP_START	ETGICCC-N	-	-	-	-	-	2031	
+	NCAP_START	ETGICEN-N	-	-	-	-	-	2031	
+	NCAP_START	ETGICGT-N	-	-	-	-	-	2031	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

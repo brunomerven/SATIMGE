@@ -1,1 +1,1 @@
-echo 0RG_PAM_9
+echo 85T3E2S0P1G0

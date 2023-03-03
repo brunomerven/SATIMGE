@@ -795,6 +795,9 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
+[RP:1CARBON]
+1=
+
 [RP:1MODEL]
 1=gdx=model s=model
 2=gdx = model s = model
@@ -811,9 +814,9 @@ FILE0=C:\Models\SATIMGE\CGE\1model.dat
 FILE1=C:\Models\SATIMGE\CGE\1model.gms
 FILE2=C:\Models\SATIMGE\CGE\1model.lst
 FILE3=C:\Models\SATIMGE\CGE\model.gdx
-FILE4=C:\Models\SATIMGE\CGE\1model.lst
+FILE4=C:\Models\SATIMGE\CGE\model.gdx
 MAXIM=0
 TOP=7
 LEFT=140
-HEIGHT=725
-WIDTH=816
+HEIGHT=1264
+WIDTH=1854

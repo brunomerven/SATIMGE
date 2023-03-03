@@ -85,6 +85,9 @@ PARAMETERS
   PAMS_RUN(PamsSector)       activated pams for run in loop
 
 *  GDP_SIMPLE(FS,AY,RUN)          GDP for shorter runs
+
+  CCONX(AC,T)                  carbon content of final demand historical
+
 ;
 
 
@@ -168,6 +171,7 @@ SETS
  COALSUP(PRC) detailed coal supply techs for power sector
 
  CCOAL(C)              coal commodities in eSAGE / ccoal-low, ccoal-hgh /
+ RTC(C)                commodities attracting retaliatory taxes
 
 * sets used for reverse mapping of households
 *FH*----------------------------------------------------------------------------
@@ -332,6 +336,9 @@ PARAMETERS
   GasShareFinal(ALLYEAR,RUN)
   FossilShareFinal(ALLYEAR,RUN)
   ERPRICE(AY,RUN)                regulated electricity price
+
+* CO2 Price
+  SIM_CO2PRICE(AY,RUN)           CO2 Price either specified manually or from marginals
 
 * CTL links
   CTL_Weight(AY,RUN)             Weighting of CTL changes in chemicals AFXGR calc

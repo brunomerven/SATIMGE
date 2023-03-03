@@ -1,0 +1,39 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET PRC /
+  'ETGICCC-N'                'Combined Cycle Gas Turbine - LNG                  '
+  'ETGICEN-N'                'Gas Engines - LNG                                 '
+  'ETGICGT-N'                'Open Cycle Gas Turbine - LNG                      '
+  'ETODSGT-N'                'DOE Peakers                                       '
+/;
+SET PRC_ELE /
+  'REGION1'   .'ETGICCC-N'
+  'REGION1'   .'ETGICEN-N'
+  'REGION1'   .'ETGICGT-N'
+  'REGION1'   .'ETODSGT-N'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'ETGICCC-N'
+  'REGION1'   .'ETGICEN-N'
+  'REGION1'   .'ETGICGT-N'
+  'REGION1'   .'ETODSGT-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ETGICCC-N'.'PJ'
+  'REGION1'.'ETGICEN-N'.'PJ'
+  'REGION1'.'ETGICGT-N'.'PJ'
+  'REGION1'.'ETODSGT-N'.'PJ'
+/;
+PARAMETER ANCAP_START /
+  'REGION1'                 .'ETGICCC-N'                  2031
+  'REGION1'                 .'ETGICEN-N'                  2031
+  'REGION1'                 .'ETGICGT-N'                  2031
+/;
+       TABLE ACAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ETODSGT-N'               .'UP'                               1.005                                                                                                                                                                                                           1.005                                                                           5                                                                                                                                                                                                                               
+;

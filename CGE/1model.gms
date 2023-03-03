@@ -622,6 +622,8 @@ PARAMETER TRMSHR(C,RW);
  theta0(A,C) = theta(A,C);
 *Intermediate input coefficient = input use / output quantity
 *bm QINTA0(A,RD) = SUM(C$PQ0(C), SUM(ARD$MARD(ARD,A,RD), SAM(C,ARD))  / PQ0(C)) ;
+*bm this is commented out to keep units of input in their raw format, given that energy is now in physical units
+*bm we cannot add them or scale them relative to other inputs - it also makes linking to energy model more intuitive
  QINTA0(A,RD) = QAR0(A,RD);
 
 *utax code

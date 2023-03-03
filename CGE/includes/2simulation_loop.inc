@@ -452,11 +452,11 @@ $offtext
 
 *@
 
-    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2 and HCAP(XC,TC-1,TT) le 0.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
-    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 0.04) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
+    QF.L(F,'AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2 and HCAP(XC,TC-1,TT) le 1.2) = ifa(F,'AHYDR','NAT')*iva('AHYDR','NAT')*FLOW_OUT_FSFuels('hydr','chydr',TC);
+    AFXGR('AHYDR','NAT',XC,TC)$(HCAP(XC,TC-1,TT) GT 1.2) = FLOW_OUT_FSFuels('hydr','chydr',TC)/FLOW_OUT_FSFuels('hydr','chydr',TC-1)-1;
 * set reasonable starting value for QVA otherwise wfdist goes -ve.
-    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = sum(F,QF.L(F,'AHYDR','NAT'));
-    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 0.2) = 1;
+    QVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2) = sum(F,QF.L(F,'AHYDR','NAT'));
+    PVA.L('AHYDR','NAT')$(HCAP(XC,TC,TT) GT 1.2) = 1;
 
 *CA fix imports in accordance with TIMES for all periods
 *!          QM.FX('CELEC','REST') =  FLOW_OUT_FSFuels('imp','celec',TC);
@@ -533,7 +533,7 @@ $include cge\includes\2capital.inc
 *       Total factor supply
     QFS.L(F) = SUM((RD,A), QF.L(F,A,RD));
 
-      );
+);
 *     end NOT T1(TC) loop
 
 $include cge\includes\2closures.inc
@@ -563,7 +563,7 @@ $include cge\includes\BudgetShare_Recalc.inc
 
 
 );
-*     end of IF ord(tt) gt 1 condition
+*     end of IF (NOT T1(TC) condition
 
 
 *CA set complementarity conditions on energy factor returns
@@ -622,12 +622,12 @@ $include cge\includes\2energychecks.inc
   );
 
   CTA_EMRR(CTA)=CTA_EMRRX(CTA,RUN,XC,TC,TT-1);
+
  );
 *   end TC loop
 
 * generate demand projection, fuel price projection and investment schedules for the next TIMES run
 $include cge\includes\2energyfcast.inc
-*!$include cge\includes\2energychecks.inc
 
 
 
