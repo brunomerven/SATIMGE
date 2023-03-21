@@ -8839,28 +8839,6 @@ PlaneRownr=-1
 1=gdx = demstarttest
 2=
 
-[RP:SATIMGE]
-1=r=cge\model, gdx = 75Gton3IterTest
-2=r=cge\model, gdx = 9Gton3IterTest
-3=r=cge\model, gdx = 9GtonTestAfx
-4=r=cge\model, gdx = 9GtonTestTraAdj
-5=r=cge\model, gdx = 9GtonTest
-6=r=cge\model, gdx = EBFix4
-7=r=cge\model, gdx = EBFix4, FW = 1
-8=r=cge\model, gdx = EBFix3
-9=r=cge\model, gdx = EBFix2
-10=r=cge\model, gdx = EBFix
-11=r=cge\model, gdx = test_wH2_v4
-12=r=cge\model, gdx = test_wH2_v3
-13=r=cge\model, gdx = test_wH2_v2
-14=r=cge\model, gdx = test_wH2
-15=r=cge\model, gdx = test_preH2
-16=r=cge\model, gdx = testClean2
-17=r=cge\model, gdx = testClean
-18=r=cge\model, gdx = testClean\
-19=r=cge\model, gdx = testRef
-20=r=cge\model, gdx = CGE_NZ20_8_NoH2
-
 [GDXDISP: GDPERR Par 0]
 PlaneDim=0
 RowDim=0
@@ -9072,6 +9050,28 @@ PlaneFilter1=aosrv
 [RP:2TIMESREPORT]
 1=
 
+[RP:SATIMGE]
+1=r=cge\model, gdx = 75Gton3IterTest
+2=r=cge\model, gdx = 9Gton3IterTest
+3=r=cge\model, gdx = 9GtonTestAfx
+4=r=cge\model, gdx = 9GtonTestTraAdj
+5=r=cge\model, gdx = 9GtonTest
+6=r=cge\model, gdx = EBFix4
+7=r=cge\model, gdx = EBFix4, FW = 1
+8=r=cge\model, gdx = EBFix3
+9=r=cge\model, gdx = EBFix2
+10=r=cge\model, gdx = EBFix
+11=r=cge\model, gdx = test_wH2_v4
+12=r=cge\model, gdx = test_wH2_v3
+13=r=cge\model, gdx = test_wH2_v2
+14=r=cge\model, gdx = test_wH2
+15=r=cge\model, gdx = test_preH2
+16=r=cge\model, gdx = testClean2
+17=r=cge\model, gdx = testClean
+18=r=cge\model, gdx = testClean\
+19=r=cge\model, gdx = testRef
+20=r=cge\model, gdx = CGE_NZ20_8_NoH2
+
 [MRUFILES]
 1=C:\Models\SATIMGE\NetZeroGDXs\0RG_NZ45_7.gdx
 2=C:\Models\SATIMGE\SATIM\Gams_WrkTI\gamssave\NZ-20NE.gdx
@@ -9081,15 +9081,10 @@ PlaneFilter1=aosrv
 6=C:\Models\SATIMGE\dem_start.gdx
 7=C:\Models\SATIMGE\CGE\includes\eSAGE_Report.inc
 8=C:\Models\SATIMGE\CGE\includes\3report_init.inc
-9=C:\Models\SATIMGE\FlexTool\FlextoolReport.inc
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\9Gton3IterTest.gdx
-FILE1=C:\Models\SATIMGE\9GtonTest.gdx
-FILE2=C:\Models\SATIMGE\9GtonTestAfx.gdx
-FILE3=C:\Models\SATIMGE\drivers.gdx
-FILE4=C:\Models\SATIMGE\H2_8_WE2.gdx
-FILE5=C:\Models\SATIMGE\9Gton3IterTest.gdx
+FILE0=C:\Models\SATIMGE\drivers.gdx
+FILE1=C:\Models\SATIMGE\drivers.gdx
 MAXIM=0
 TOP=32
 LEFT=45
@@ -9098,26 +9093,22 @@ WIDTH=1325
 
 [OPENWINDOW_2]
 FILE0=C:\Models\SATIMGE\75Gton3IterTest.gdx
-FILE1=C:\Models\SATIMGE\9Gton3IterTest.gdx
-FILE2=C:\Models\SATIMGE\9GtonTest.gdx
-FILE3=C:\Models\SATIMGE\9GtonTestAfx.gdx
-FILE4=C:\Models\SATIMGE\9GtonTestTraAdj.gdx
-FILE5=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
-FILE6=C:\Models\SATIMGE\CGE\includes\2energychecks.inc
-FILE7=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
-FILE8=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
-FILE9=C:\Models\SATIMGE\CGE\includes\2projection.inc
-FILE10=C:\Models\SATIMGE\CGE\includes\2results.inc
-FILE11=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-FILE12=C:\Models\SATIMGE\CGE\includes\2varinit.inc
-FILE13=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
-FILE14=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
-FILE15=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
-FILE16=C:\Models\SATIMGE\SATIM\Includes-EL\Update_Demand and Profiles.gms
-FILE17=C:\Models\SATIMGE\SATIMGE.gms
-FILE18=C:\Models\SATIMGE\SATIMGE.lst
-FILE19=C:\Models\SATIMGE\SATIMGE.gms
-MAXIM=1
+FILE1=C:\Models\SATIMGE\AFOLU\Includes\GHGAfoluReport.inc
+FILE2=C:\Models\SATIMGE\CGE\includes\2energychecks.inc
+FILE3=C:\Models\SATIMGE\CGE\includes\2energyfcast.inc
+FILE4=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
+FILE5=C:\Models\SATIMGE\CGE\includes\2projection.inc
+FILE6=C:\Models\SATIMGE\CGE\includes\2results.inc
+FILE7=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+FILE8=C:\Models\SATIMGE\CGE\includes\2varinit.inc
+FILE9=C:\Models\SATIMGE\SATIM\Includes\2TIMESReport.inc
+FILE10=C:\Models\SATIMGE\SATIM\Includes\GHGEnergyReport.inc
+FILE11=C:\Models\SATIMGE\SATIM\Includes\GHGProcessReport.inc
+FILE12=C:\Models\SATIMGE\SATIM\Includes-EL\Update_Demand and Profiles.gms
+FILE13=C:\Models\SATIMGE\SATIMGE.gms
+FILE14=C:\Models\SATIMGE\SATIMGE.lst
+FILE15=C:\Models\SATIMGE\SATIMGE.lst
+MAXIM=0
 TOP=-2
 LEFT=677
 HEIGHT=966
