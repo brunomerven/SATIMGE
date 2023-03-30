@@ -1,0 +1,63 @@
+SCENARIO	_GLOBAL,REGION1
+Creation Date:	2023/03/30	5:15:01 PM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2023.mdb
+ANSWER Version:	6.9.27
+Scenario:	TCH_PWR_GCL1	Growth Constraint L1	
+Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
+
+REGIONS	_GLOBAL,REGION1
+_GLOBAL	Special region for data parameters with no REG arg	ALL_REG	
+REGION1	South Africa	ALL_REG,REG	
+
+ITEMS	_GLOBAL
+	C	UCGRNCAP-ERCSP	Growth Constraint on CSP	uconstraint	UC_N,UCRTP	
+	C	UCGRNCAP-ERSOLPC	Growth Constraint on Solar PV Central	uconstraint	UC_N,UCRULE,UCRTP	
+	C	UCGRNCAP-ERWND	Growth Constraint on Wind	uconstraint	UC_N,UCRTP	
+	C	UCGRNCAP-ETNUC	Growth Constraint on Nuclear	uconstraint	UC_N,UCRTP	
+
+TS DATA	_GLOBAL
+
+TID DATA	_GLOBAL
+	UC_DYNBND	UCGRNCAP-ERCSP	-	-	-	-	UP	1	
+	UC_DYNBND	UCGRNCAP-ERSOLPC	-	-	-	-	UP	1	
+	UC_DYNBND	UCGRNCAP-ERWND	-	-	-	-	UP	1	
+	UC_DYNBND	UCGRNCAP-ETNUC	-	-	-	-	UP	1	
+
+ITEMS	REGION1
+	C	UCGRNCAP-ERCSP	Growth Constraint on CSP	uconstraint	UC_N,UCRTP	
+	C	UCGRNCAP-ERSOLPC	Growth Constraint on Solar PV Central	uconstraint	UC_N,UCRULE,UCRTP	
+	C	UCGRNCAP-ERWND	Growth Constraint on Wind	uconstraint	UC_N,UCRTP	
+	C	UCGRNCAP-ETNUC	Growth Constraint on Nuclear	uconstraint	UC_N,UCRTP	
+	C	UCNCAP_PVA	annual constraint on all PV	uconstraint	UC_N,UCRT,UCRULE	
+	C	UCNCAPL-ERSOLPC	Lower New Capacity limit on Solar PV Central	uconstraint	UC_N,UCRT,UCRULE	
+	C	UCNCAPL-ERWND	Lower New Capacity limit on Wind	uconstraint	UC_N,UCRT,UCRULE	
+	T	ERSOLTC09-N	Solar Central Receiver 09 hrs storage	PJ,GW	PRC,ELE,DAYNITE	
+	T	ERWNDH-N	Wind	PJ,GW	PRC,ELE,DAYNITE	
+	T	ETNUC-N	Nuclear Mid	PJ,GW	PRC,ELE,DAYNITE	
+
+TS DATA	REGION1
+	NCAP_BND	ERWNDH-N	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	32	32.7	20	null	null	
+	UC__RHSRT	UCNCAP_PVA	-	-	-	-	UP	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	32	32.7	20	null	null	
+	UC__RHSRT	UCNCAPL-ERSOLPC	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC__RHSRT	UCNCAPL-ERWND	-	-	-	-	LO	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	UC_NCAP	UCGRNCAP-ERCSP	LHS	ERSOLTC09-N	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.02	1.02	1.02	1.02	1.02	
+	UC_NCAP	UCGRNCAP-ERCSP	RHS	ERSOLTC09-N	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5	0	0	0	0	
+	UC_NCAP	UCGRNCAP-ERWND	LHS	ERWNDH-N	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.02	1.02	1.02	1.02	1.02	1.02	1.02	1.02	1.02	1.39	1.39	1.46	1.02	1.02	
+	UC_NCAP	UCGRNCAP-ERWND	RHS	ERWNDH-N	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UC_NCAP	UCGRNCAP-ETNUC	LHS	ERWNDH-N	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.02	1.02	1.02	1.02	1.02	
+	UC_NCAP	UCGRNCAP-ETNUC	RHS	ERWNDH-N	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5	0	0	0	0	
+	UCRULE_NCAP	UCGRNCAP-ERSOLPC	LHS	S_PWRSOLPA	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	1.02	1.02	1.02	1.02	1.02	1.02	1.02	1.02	1.02	1.39	1.39	1.46	1.02	1.02	
+	UCRULE_NCAP	UCGRNCAP-ERSOLPC	RHS	S_PWRSOLPA	-	-	-	0	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	5	0	0	0	0	0	0	0	0	0	0	0	0	0	
+	UCRULE_NCAP	UCNCAP_PVA	LHS	S_PWRSOLPA	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_NCAP	UCNCAPL-ERSOLPC	LHS	S_PWRSOLPC	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+	UCRULE_NCAP	UCNCAPL-ERWND	LHS	S_PWRWND	-	-	-	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	
+
+TID DATA	REGION1
+	UC_R_EACH	UCNCAP_PVA	-	-	-	-	-	1	
+	UC_R_EACH	UCNCAPL-ERSOLPC	-	-	-	-	-	1	
+	UC_R_EACH	UCNCAPL-ERWND	-	-	-	-	-	1	
+
+TS TRADE	_GLOBAL,REGION1
+
+TID TRADE	_GLOBAL,REGION1
+

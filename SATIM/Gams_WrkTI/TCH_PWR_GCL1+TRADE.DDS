@@ -1,0 +1,11 @@
+SET UC_N /
+  'UCGRNCAP-ERCSP'           'Growth Constraint on CSP                          '
+  'UCGRNCAP-ERWND'           'Growth Constraint on Wind                         '
+  'UCGRNCAP-ETNUC'           'Growth Constraint on Nuclear                      '
+/;
+PARAMETER AUC_DYNBND /
+  'UCGRNCAP-ERCSP'          .'UP'                         1
+  'UCGRNCAP-ERSOLPC'        .'UP'                         1
+  'UCGRNCAP-ERWND'          .'UP'                         1
+  'UCGRNCAP-ETNUC'          .'UP'                         1
+/;

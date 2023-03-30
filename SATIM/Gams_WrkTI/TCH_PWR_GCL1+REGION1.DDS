@@ -1,0 +1,46 @@
+SET ALL_REG /
+  'REGION1'
+/;
+SET REG /
+  'REGION1'                  'South Africa                                      '
+/;
+SET UC_N /
+  'UCGRNCAP-ERCSP'           'Growth Constraint on CSP                          '
+  'UCGRNCAP-ERWND'           'Growth Constraint on Wind                         '
+  'UCGRNCAP-ETNUC'           'Growth Constraint on Nuclear                      '
+/;
+SET UC_N_UCRT /
+/;
+SET PRC /
+  'ERSOLTC09-N'              'Solar Central Receiver 09 hrs storage             '
+  'ERWNDH-N'                 'Wind                                              '
+  'ETNUC-N'                  'Nuclear Mid                                       '
+/;
+SET PRC_ELE /
+  'REGION1'   .'ERSOLTC09-N'
+  'REGION1'   .'ERWNDH-N'
+  'REGION1'   .'ETNUC-N'
+/;
+SET PRC_DAYNIT /
+  'REGION1'   .'ERSOLTC09-N'
+  'REGION1'   .'ERWNDH-N'
+  'REGION1'   .'ETNUC-N'
+/;
+SET PRCTACTUNT /
+  'REGION1'.'ERSOLTC09-N'.'PJ'
+  'REGION1'.'ERWNDH-N'.'PJ'
+  'REGION1'.'ETNUC-N'.'PJ'
+/;
+       TABLE ANCAP_BND
+                                                                                     0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'ERWNDH-N'                .'UP'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               32              32.7            20                              
+;
+       TABLE AUC_NCAP
+                                                                                                                0     2012            2013            2014            2015            2016            2017            2018            2019            2020            2021            2022            2023            2024            2025            2026            2027            2028            2029            2030            2031            2032            2033            2034            2035            2036            2037            2038            2039            2040            2045            2050            2060            2070            
+  'REGION1'                 .'UCGRNCAP-ERCSP'          .'LHS'                     .'ERSOLTC09-N'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      1.02            1.02            1.02            1.02            1.02
+  'REGION1'                 .'UCGRNCAP-ERCSP'          .'RHS'                     .'ERSOLTC09-N'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      5              EPS             EPS             EPS             EPS
+  'REGION1'                 .'UCGRNCAP-ERWND'          .'LHS'                     .'ERWNDH-N'                                                                                                                                                                                                                                                                                                                                         1.02            1.02            1.02            1.02            1.02            1.02            1.02            1.02            1.02            1.39            1.39            1.46            1.02            1.02
+  'REGION1'                 .'UCGRNCAP-ERWND'          .'RHS'                     .'ERWNDH-N'                                                                                                                                                                                                                                                                                                                                         5              EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS             EPS
+  'REGION1'                 .'UCGRNCAP-ETNUC'          .'LHS'                     .'ERWNDH-N'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         1.02            1.02            1.02            1.02            1.02
+  'REGION1'                 .'UCGRNCAP-ETNUC'          .'RHS'                     .'ERWNDH-N'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         5              EPS             EPS             EPS             EPS
+;
