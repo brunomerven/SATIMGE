@@ -123,6 +123,8 @@ $BATINCLUDE SATIM\Includes\interpolate.inc PAR_VCAPL 'REG' 'PRC' ",'0','0','0','
 
 *bm calc oil flow   !!! note that TVACT includes some non-energy commodities that are currently not part of the output of apetr in the CGE. These should ideally also be included there.
 * OIL_FLOW(RUN,TC) = SUM(PRC$MPRCFS(PRC,'petr'), TVACT(TC,PRC));
+* to make sure production doesn't reach zero (which causes some problems with theta calc)
+ FLOW_OUT_FSFuels('petr',C,TC)$FLOW_OUT_FSFuels('petr',C,TC-1) = max(0.00001,FLOW_OUT_FSFuels('petr',C,TC));
  OIL_FLOW(RUN,TC) = sum(C,FLOW_OUT_FSFuels('petr',C,TC));
 
 *bm calc coal flow - putting in a minimum value to avoid problems with theta calcs in CGE
