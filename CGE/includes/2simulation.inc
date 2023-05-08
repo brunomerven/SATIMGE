@@ -153,21 +153,37 @@ $include cge\includes\2projection.inc
 *2. Non-excel inputted scenario calibration
 *----------------------------------------------------------------------
 *FH 270820: Foreign savings shock for high growth scenario
+*
+*ciron - iron/steel
+*cnfrm - aluminium
+*cnmet - cement
+*celec - electricity (SA does not export to EU)
+*cbchm - fertiliser
 
 Sets
+EUTAX(C)
+* /ciron, cnfrm, cnmet, cbchm/
 TFSAV(T) /2024*2040/;
 
+EUTAX(C)=yes;
+*EUTAX(C)=no;
+*EUTAX('ciron')=yes;
+*EUTAX('cnfrm')=yes;
+*EUTAX('cnmet')=yes;
+*EUTAX('cbchm')=yes;
 
 Parameter
  FSAVGRSHK(X,T)
- LABGRSHK(F,X,T);
+ LABGRSHK(F,X,T)
+ EUshr(C)
+ co2e2(C,RW)
+;
 
  FSAVGRSHK(X,T)=0;
  LABGRSHK(F,X,T)=0;
 
 *BM_Scen increasing FSAV to 3.4% or by 2 times base value - to make up for GVA losses by 2040.
 *!! FSAVGRSHK('base',TFSAV)=0.034;
-
 
  FSAVGRSHK('SIM1','2024')=0.5/100;
  FSAVGRSHK('SIM1','2025')=2.5/100;
@@ -180,6 +196,14 @@ Parameter
  LABGRSHK(F,X,T)=1;
 * LABGRSHK('FLAB-P','SIM1',TCF)=1.002;
 * LABGRSHK('FLAB-M','SIM1',TCF)=1.002;
+
+ EUshr(C)=0.7;
+** EUshr(C)=0.6;
+* EUshr(C)=1;
+* EUshr('ciron')=0.17;
+* EUshr('cnmet')=0.20;
+* EUshr('cnfrm')=0.23;
+* EUshr('cbchm')=0.01;
 
 SETS
  CEGY(C)                 energy commodities   / ccoal-low, ccoal-hgh, ccoil, cngas, celec, cpetr-p, cpetr-d, cpetr-h, cpetr-k, cpetr-l /
