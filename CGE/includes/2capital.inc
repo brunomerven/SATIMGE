@@ -28,10 +28,13 @@ IF (KOPTION EQ 2,
                  NGFCF = QINVK - SUM((RD,A)$AFX(A,RD), QF.L('fcap',A,RD)*(AFXGR(A,RD,XC,TC) + natdrate));
 * Remove TIMES imposed real energy investment cost (deflator is first term in denominator and price of capital is second)
 * Note that depreciation is implicityly contained in EINVCOST from TIMES
-                 EINVQINV(XC,TC,TT) =  EINVCOST(RUN,TC)/(SUM(C$PQ0(C), iwts(C,'S-I')*PQ.L(C)/PQ0(C))*(alphainv*SUM(C, iwts(C,'S-I')*PQ0(C)))) ;
+                 EINVQINV(XC,TC,TT) =  EINVCOST(RUN,TC)/(SUM(C$PQ0(C), iwts(C,'s-e')*PQ.L(C)/PQ0(C))*(alphainv*SUM(C, iwts(C,'s-e')*PQ0(C)))) ;
+                 IADJSESIM(XC,TC) = max(1,EINVQINV(XC,TC,TT)/(EINVCOST(RUN,'2019')/(SUM(C$PQ0(C), iwts(C,'s-e')*PQ.L(C)/PQ0(C))*(alphainv*SUM(C, iwts(C,'s-e')*PQ0(C))))));;
                  NGFCF = NGFCF -  EINVQINV(XC,TC,TT);
          ELSE
                  NGFCF = QINVK - SUM((RD,A,FCAPP)$AFX(A,RD), QF.L(FCAPP,A,RD)*(AFXGR(A,RD,XC,TC) + natdrate));
+                 IADJSESIM(XC,TC) = EINVQINV(XC,TC-1,TT);
+
          );
 );
 

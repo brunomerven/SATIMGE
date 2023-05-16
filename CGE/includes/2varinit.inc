@@ -316,3 +316,6 @@ BudShareNonEnergy(H,T1) =  1-sum(CHEnergy,BudShare0(CHEnergy,H,T1));
 QINTCBCHM(T1,RUN) = SUM(a,QINT0('CBCHM',a));
 QINTCOCHM(T1,RUN) = SUM(a,QINT0('COCHM',a));
 QINTCIRON(T1,RUN) = SUM(a,QINT0('CIRON',a));
+
+
+ IADJSESIM(XC,TC) = 1;

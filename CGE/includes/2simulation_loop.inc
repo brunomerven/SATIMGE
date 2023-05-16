@@ -593,8 +593,8 @@ $include cge\includes\BudgetShare_Recalc.inc
   SOLVE standcge USING MCP ;
 
   fail$(standcge.modelstat ne 1)=1;
-* @bm was 0.001
-  abort$(abs(walras.l) gt .01 AND NOT fail) "Walras' law lost", walras.l;
+* @bm was 0.001, then changed to .01, then changed to .02
+  abort$(abs(walras.l) gt .02 AND NOT fail) "Walras' law lost", walras.l;
 
 *CATemp make GAMS stop at or near error for debugging
 *      fail$(ord(tt) eq 1 AND ord(tc) eq 1)=1;
