@@ -25,7 +25,8 @@ Sets
                  PrivateCons, GovCons, PrivateInv, GovInv, NetExports,
                  QVAAgri, QVAIndustry, QVAServices, ExchangeRate,
                  FiscalRevenue, FiscalExpenditure, BudgetDeficit, Emissions, EmissionsperGDP, Deficit/
-
+K_Energy(FS)      KLEM Energy Sectors
+K_NonEnergy(FS)   KLEM Non-Energy Sectors
 * RUN /NZ_9, NZ_9_PAM, NZ_9_WE, NZ_9_PAM_WE, NZ_8, NZ_8_PAM_WE, NZ_8_HiFS, NZ_8_CO2Tax/
   RUN /NZ_8/
 * for microsim
@@ -42,6 +43,8 @@ PAX(A,X,T,TT)                    output price of activities
 QAX(A,X,T,TT)                    level of domestic activity
 QINTX(C,A,X,T,TT)                Quantity of intermediate demand for c from activty a
 PQI0(C,A,RD)                     PQ plus subsidy paid on c
+PQ0(C)                           Price of composite goods
+QH0(C,H)                         the quanity consumed of market commodity c by household h
 
 QHX(C,H,X,T,TT)                  qnty consumed of market commodity c by household h
 WFX(F,X,T,TT)                    economy-wide wage (rent) for factor f
@@ -141,7 +144,7 @@ File Scen;
 *execute_load GDP_RUN,POP,QGX,EGX,GSAVX,QVAX,YGX,MPSX,TINSX,YIX,PQHX,PQX,QHX,WFX,WFDISTX,QFSX,QFX,QEX,PEX,QMX,PMX,GVA_FS,EXRX;
 
 * $gdxin  CCDR_Runs\NZ_9.gdx
-$load GDP_RUN,POP,QGX,EGX,GSAVX,QVAX,PVA0,YGX,MPSX,TINSX,YIX,PQHX,PQX,QHX,WFX,WFDISTX,QFSX,QFX,QEX,PEX,QMX,PMX,GVA_FS,EXRX,PM0,PE0,PAX,QAX,YIFX,trnsfrx,PARX,QARX,TAX,TVAX,PVAX,TMX,te,TQX,QQX,TFX,YFX,TVA0,QINTX,PQI0
+$load GDP_RUN,POP,QGX,EGX,GSAVX,QVAX,PVA0,YGX,MPSX,TINSX,YIX,PQHX,PQX,QHX,WFX,WFDISTX,QFSX,QFX,QEX,PEX,QMX,PMX,GVA_FS,EXRX,PM0,PE0,PAX,QAX,YIFX,trnsfrx,PARX,QARX,TAX,TVAX,PVAX,TMX,te,TQX,QQX,TFX,YFX,TVA0,QINTX,PQI0,QH0,PQ0
 
 GDPperCapita(T)$POP(T) = GDP_RUN(T)/POP(T);
 
@@ -207,6 +210,7 @@ Report3('IntDemand',A,C,T,RUN)                  = QINTX(C,A,'base',T,'2050')*PQI
 Report3('Imports',C,'NA',T,RUN)                  = QMX(C,'rest','BASE',T,'2050')*PM0(C,'rest');
 Report3('Exports',C,'NA',T,RUN)                  = QEX(C,'rest','BASE',T,'2050')*PE0(C,'rest');
 
+Report3('Hcons',C,'NA',T,RUN) =          Sum(H,(QHX(C,H,'BASE',T,'2050')*PQHX(C,H,'BASE',T,'2050')));
 
 * QINTX - total quantity of intermediate good  - cant sum across therefore we agregate based on the real value. There are differential prices across sectors. PQI0 accounts for it
 * - possibloy put it in a seperate workbook - QINT,QEX,QMX - quantity and value*PQ for int and final and PE expots and PM imports
@@ -222,7 +226,36 @@ Report3('Exports',C,'NA',T,RUN)                  = QEX(C,'rest','BASE',T,'2050')
 *$include 3report_loop.inc
 *$include 3tables.inc
 
+Parameters
+   K_SAGE(*,*,RUN)       KLEM aggregate indicator values
+;
 
+* Define KLEM Sectors
+
+* NonEnergy Sectors
+K_NonEnergy(FS) = Yes;
+K_NonEnergy('EXP') = No;
+K_NonEnergy('IMP') = No;
+K_NonEnergy('hydr') = No;
+K_NonEnergy('elec') = No;
+K_NonEnergy('petr') = No;
+K_NonEnergy('GAS') = No;
+K_NonEnergy('coal') = No;
+
+* Energy Sectors
+K_Energy(FS) = Yes;
+K_Energy(K_NonEnergy) = No;
+K_Energy('EXP') = No;
+K_Energy('IMP') = No;
+* Gas part of imports
+K_Energy('GAS') = No;
+
+* Coal in or out?
+K_Energy('coal') = No;
+
+
+
+$EXIT
 $ontext
 * Calculate Employment per SATIM sector
 REPORT(PRC,'ACTGRP',TC,RUN,'Employment-p') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),QFX('flab-p',A,'nat',XC,TC,'2050')));
@@ -232,12 +265,13 @@ REPORT(PRC,'ACTGRP',TC,RUN,'Employment-t') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(F
 
 $offtext
 
-$ontext
+
 CPI_SA(T)$Sum((C,H),QHX(C,H,'base',T,'2050')) = Sum((C,H),PQHX(C,H,'base',T,'2050')*QHX(C,H,'base',T,'2050'))/Sum((C,H),QHX(C,H,'base',T,'2050'));
 
 empl_SA(l,A,T) = sum(F$mFl(F,l),QFX(F,A,'nat','base',T,'2050'));
 
 hcons_SA(T) = Sum((C,H),PQHX(C,H,'base',T,'2050')*QHX(C,H,'base',T,'2050'));
+
 
 hconssf_SA(T) = Sum((FOODC,H),PQHX(FOODC,H,'base',T,'2050')*QHX(FOODC,H,'base',T,'2050'));
 
@@ -250,7 +284,7 @@ wagebill2(l,A,T) = sum(F$mFl(F,l),wagebill(F,A,T));
 
 wage_SA(l,T)$sum(A,empl_SA(l,A,T)) = sum(A,wagebill2(l,A,T))/sum(A,empl_SA(l,A,T));
 
-$offtext
+
 
 
 execute_unload "Tableau.gdx" Report2;
