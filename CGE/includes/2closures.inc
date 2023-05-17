@@ -164,7 +164,8 @@
 *Current account
   IF(ROWCLOS(XC) EQ 1,
    FBOR.FX   = FBOR.L;
-   FSAV.FX   = FSAV.L * (1+FSAVGR(XC,TC)+FSAVGRSHK(XC,TC));
+   FSAV.FX   = FSAV.L * (1+FSAVGR(XC,TC));
+*   FSAV.FX   = FSAVGRSHK(XC,TC)+ EINVCOST(RUN,TC)*DUMMY(TC);
    EXR.LO    = -INF;
    EXR.UP    = +INF;
    );
