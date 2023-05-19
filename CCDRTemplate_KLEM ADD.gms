@@ -25,11 +25,14 @@ Sets
                  PrivateCons, GovCons, PrivateInv, GovInv, NetExports,
                  QVAAgri, QVAIndustry, QVAServices, ExchangeRate,
                  FiscalRevenue, FiscalExpenditure, BudgetDeficit, Emissions, EmissionsperGDP, Deficit/
-K_Energy(FS)      KLEM Energy Sectors
-K_NonEnergy(FS)   KLEM Non-Energy Sectors
+K_Energy_c(C)      KLEM Energy Sectors
+K_NonEnergy_c(C)   KLEM Non-Energy Sectors
+K_Energy_a(A)      KLEM Energy Sectors
+K_NonEnergy_a(A)   KLEM Non-Energy Sectors
 K_labour(F)
 K_Capital(F)
 K_Land(F)
+
 * RUN /NZ_9, NZ_9_PAM, NZ_9_WE, NZ_9_PAM_WE, NZ_8, NZ_8_PAM_WE, NZ_8_HiFS, NZ_8_CO2Tax/
   RUN /NZ_8/
 * for microsim
@@ -118,8 +121,8 @@ Report(*,T,RUN)             Indicators for Template
 EXR2019                              2019 Exchange Rate ZAR per USD
 CO2eq(T,RUN)                         CO2 eq from SATIM
 ;
-$gdxin  TestNewSAM2.gdx
-* $gdxin  CCDR_Runs\NZ_9.gdx
+*$gdxin  CCDR8GtonJuly.gdx
+$gdxin  CCDR_Runs\NZ_9.gdx
 $load AC,A,C,F,FLAB,FCAP,INS,INSD,INSDNG,H,RD,X,XC,TT,RW,FS
 
 
@@ -173,7 +176,7 @@ Report2('RealGDP',A,'NA',T,RUN)                  = PVA0(A,'nat')*(1-TVA0(A,'nat'
 
 Report2('NetTrade',C,'NA',T,RUN)                 = QMX(C,'rest','BASE',T,'2050')*PM0(C,'rest')-QEX(C,'rest','BASE',T,'2050')*PE0(C,'rest');
 Report2('ExchangeRate','NA','NA',T,RUN)          = EGX('base',T,'2050');
-Report2('TradeShare',C,'NA',T,RUN)               =(QMX(C,'rest','BASE',T,'2050')*PM0(C,'rest')-QEX(C,'rest','BASE',T,'2050')*PE0(C,'rest'))/sum(A,(QVAX(A,'NAT','BASE',T,'2050')*PVA0(A,'NAT')));
+* Report2('TradeShare',C,'NA',T,RUN)               =(QMX(C,'rest','BASE',T,'2050')*PM0(C,'rest')-QEX(C,'rest','BASE',T,'2050')*PE0(C,'rest'))/sum(A,(QVAX(A,'NAT','BASE',T,'2050')*PVA0(A,'NAT')));
 
 
 * EMPLOYMENT
@@ -227,29 +230,37 @@ SETS
 
 Parameters
 K_SAGE(*,K_Sectors,RUN)       KLEM aggregate indicator values
-K_EnergyFactor(*,*,*,RUN)
 ;
 
 * Define KLEM Sectors
 * NonEnergy Sectors
-K_NonEnergy(FS) = Yes;
-K_NonEnergy('EXP') = No;
-K_NonEnergy('IMP') = No;
-K_NonEnergy('hydr') = No;
-K_NonEnergy('elec') = No;
-K_NonEnergy('petr') = No;
-K_NonEnergy('GAS') = No;
-K_NonEnergy('coal') = No;
+K_NonEnergy_c(C) = Yes;
+K_NonEnergy_c('ccoal-low') = No;
+K_NonEnergy_c('ccoal-hgh') = No;
+K_NonEnergy_c('ccoil') = No;
+K_NonEnergy_c('cngas') = No;
+K_NonEnergy_c('cpetr-d') = No;
+K_NonEnergy_c('cpetr-h') = No;
+K_NonEnergy_c('cpetr-k') = No;
+K_NonEnergy_c('cpetr-l') = No;
+K_NonEnergy_c('chydr') = No;
+K_NonEnergy_c('celec') = No;
+
+K_NonEnergy_a(A)=Yes;
+K_NonEnergy_a('ahydr')=No;
+K_NonEnergy_a('aelec')=No;
+K_NonEnergy_a('apetr')=No;
+K_NonEnergy_a('acoal')=No;
+
+
 
 * Energy Sectors
-K_Energy(FS) = Yes;
-K_Energy(K_NonEnergy) = No;
-K_Energy('EXP') = No;
-K_Energy('IMP') = No;
-* Gas part of imports
-K_Energy('GAS') = No;
-* Coal in or out?
-K_Energy('coal') = Yes;
+K_Energy_c(C) = Yes;
+K_Energy_c(K_NonEnergy_c)=No;
+
+K_Energy_a(A)=Yes ;
+K_Energy_a(K_NonEnergy_a(A))=No;
+
 
 * Define Factors
 K_Labour(F)= YES;
@@ -267,33 +278,35 @@ K_Capital('fpsa')=No;
 K_Capital('fland')=No;
 
 K_Land(F)=Yes;
-K_Capital(K_Labour)=No;
-K_Capital('fegy')=No;
-K_Capital('fsas')=No;
-K_Capital('fpsa')=No;
-K_Capital('fcap')=No;
+K_Land(K_Labour)=No;
+K_Land('fegy')=No;
+K_Land('fsas')=No;
+K_Land('fpsa')=No;
+K_Land('fcap')=No;
 
 
-$exit;
 
-K_SAGE('HHconsumption','NonEnergy',Run)            = sum((K_NonEnergy,H),sum(C,PQ0(C)*QH0(C,H)));
-K_SAGE('HHConsumption','Energy',Run)               = sum((K_Energy,H),sum(C,PQ0(C)*QH0(C,H)));
+
+K_SAGE('HHconsumption','NonEnergy',Run)            = sum((K_NonEnergy_c,H),PQ0(K_NonEnergy_c)*QH0(K_NonEnergy_c,H));
+
+
+K_SAGE('HHConsumption','Energy',Run)               = sum((K_Energy_c,H),PQ0(K_Energy_c)*QH0(K_Energy_c,H));
 K_SAGE('PublicConsumption','NonEnergy',Run)        =EG0                                        ;
 
 
 * Exports and Imports
-K_SAGE('Imports', 'NonEnergy',Run)               = sum((K_NonEnergy,C),sum(RW,QM0(C,RW)*PM0(C,RW))) ;
-K_SAGE('Imports', 'Energy',Run)                  = sum((K_Energy,C),sum(RW,QM0(C,RW)*PM0(C,RW))) ;
-K_SAGE('Exports', 'NonEnergy',Run)               = sum((K_NonEnergy,C),sum(RW,QE0(C,RW)*PE0(C,RW))) ;
-K_SAGE('Exports', 'Energy',Run)                  = sum((K_Energy,C),sum(RW,QE0(C,RW)*PE0(C,RW))) ;
+K_SAGE('Imports', 'NonEnergy',Run)               = sum((K_NonEnergy_c,C),sum(RW,QM0(C,RW)*PM0(C,RW))) ;
+K_SAGE('Imports', 'Energy',Run)                  = sum((K_Energy_c,C),sum(RW,QM0(C,RW)*PM0(C,RW))) ;
+K_SAGE('Exports', 'NonEnergy',Run)               = sum((K_NonEnergy_c,C),sum(RW,QE0(C,RW)*PE0(C,RW))) ;
+K_SAGE('Exports', 'Energy',Run)                  = sum((K_Energy_c,C),sum(RW,QE0(C,RW)*PE0(C,RW))) ;
 
 * Calculating Factor Income
 * Labour Income
-K_SAGE('LabourIncome','NonEnergy',RUN)          = Sum((K_labour,F),WF0(F)*Sum((K_NonEnergy,A),* WFDIST0(F,A,RD)));
+K_SAGE('LabourIncome','NonEnergy',RUN)          = Sum((K_NonEnergy_a,K_labour),WF0(K_labour)*WFDIST0(K_labour,K_NonEnergy_a,'nat'));
 
 
 
-$EXIT
+
 $ontext
 * Calculate Employment per SATIM sector
 REPORT(PRC,'ACTGRP',TC,RUN,'Employment-p') = sum(FS$MPRCFS2(PRC,FS),sum(A$MFSA(FS,A),QFX('flab-p',A,'nat',XC,TC,'2050')));
@@ -323,7 +336,9 @@ wagebill2(l,A,T) = sum(F$mFl(F,l),wagebill(F,A,T));
 wage_SA(l,T)$sum(A,empl_SA(l,A,T)) = sum(A,wagebill2(l,A,T))/sum(A,empl_SA(l,A,T));
 $offtext
 
+execute_unload "Tableau.gdx"
 
+$EXIT
 
 execute_unload "Tableau.gdx" Report2;
 execute 'gdxdump Tableau.gdx output=Tableau_00.csv symb=Report2 format=csv header="Indicator,AC,H,Year,Scenario,SATIMGE"';

@@ -201,6 +201,14 @@
 *@
 *@*$offtext
 
+ CMRES('cmach_e') = yes;
+ CMRES('cemch_e') = yes;
+
+ QM.FX('cmach_e','REST') = QM0('cmach_e','REST');
+ QM.FX('cemch_e','REST') = QM0('cemch_e','REST');
+
+
+
 *bm setting acoal coal aggregate price
  pacoalx(T1,RUN) =  sum(CCOAL,theta0('acoal',CCOAL)*pq0(CCOAL))/sum(CCOAL,theta0('acoal',CCOAL));
 
