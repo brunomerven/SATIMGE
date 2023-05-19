@@ -191,6 +191,11 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 
 * fixing end effect until we run past 2050
  EINVCOST(RUN,'2050') = EINVCOST(RUN,'2049');
+ EINVCOST(RUN,'2051') = EINVCOST(RUN,'2050');
+ EINVQINV(XC,T1,TT) = EINVCOST(RUN,'2020');
+
+* EINVCOST(RUN,'2023') = 100;
+*(EINVCOST(RUN,'2024')+EINVCOST(RUN,'2022'))/2;
 
 * EFLOW('NAT',XC,TC,TT) = SUM(SUPELE, TVACT(TC,SUPELE))/3.6;
 * !!EFLOW now calculated from flow through transmission. When we include distributed generation we also need to include them in the calc

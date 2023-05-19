@@ -1694,7 +1694,8 @@ betaca(A,C)=1;
  HADEM(A,H)$( betah(A,H))..
   PA(A)*QHA(A,H) =E= PA(A)*gammah(A,H) + betah(A,H)*(EH(H) - SUM(CP, PQH(CP,H)*gammam(CP,H)) - SUM(AP, PA(AP)*gammah(AP,H))) ;
 
- INVDEM(C,IT)$(qbarinv(C,IT))..  QINV(C,IT) =E= IADJ(IT)*qbarinv(C,IT);
+*bm INVDEM(C,IT)$(qbarinv(C,IT))..  QINV(C,IT) =E= IADJ(IT)*qbarinv(C,IT);
+  INVDEM(C,'s-i')$(qbarinv(C,'s-i'))..  QINV(C,'s-i') =E= IADJ('s-i')*qbarinv(C,'s-i');
 
  GOVDEM(C)$(qbarg(C))..  QG(C) =E= GADJ*qbarg(C);
 
@@ -1901,6 +1902,7 @@ MODEL STANDCGE  standard CGE model
 *JT: 28-05-2013
  QINTA.FX(A,RD)$(NOT QINTA0(A,RD)) = 0;
  QINV.FX(C,IT)$(NOT QINV0(C,IT)) = 0;
+ QINV.FX(C,'s-e') = qbarinv(C,'s-e');
  QM.FX(C,RW)$(NOT CMRW(C,RW)) = 0;
  QQ.FX(C)$(NOT (CD(C) OR CM(C))) = 0;
  QT.FX(C)$(NOT CT(C)) = 0;

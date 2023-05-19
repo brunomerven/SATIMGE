@@ -226,7 +226,8 @@
    MPSADJ.LO = -INF;
    MPSADJ.UP = +INF;
    DMPS.FX   = DMPS.L + MPSGR(XC,TC);
-   IADJ.FX('S-E') = IADJSESIM(XC,TC);
+*bm this is no longer needed
+*bm   IADJ.FX('S-E') = IADJSESIM(XC,TC);
    IADJ.LO('S-I') = -INF;
    IADJ.UP('S-I') = +INF;
    INVSHR.FX = INVSHR0;

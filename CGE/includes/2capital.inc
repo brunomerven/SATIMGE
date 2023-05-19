@@ -18,6 +18,7 @@ IF (KOPTION EQ 1,
 IF (KOPTION EQ 2,
 *Targeted capital stock growth rate
 *CA deflates GFCF by an investment price index
+*bm note that GFCF only concerns investment in non-energy
          GFCF     = SUM(C, PQ.L(C)*QINV.L(C,'S-I'))/SUM(C$PQ0(C), iwts(C,'S-I')*PQ.L(C)/PQ0(C)) ;
 *        GFCF     = SUM(C, PQ.L(C)*QINV.L(C,'S-I')) ;
          QINVK    = GFCF / (alphainv*ktest(XC,TC)*SUM(C, iwts(C,'S-I')*PQ0(C)));
@@ -28,12 +29,15 @@ IF (KOPTION EQ 2,
                  NGFCF = QINVK - SUM((RD,A)$AFX(A,RD), QF.L('fcap',A,RD)*(AFXGR(A,RD,XC,TC) + natdrate));
 * Remove TIMES imposed real energy investment cost (deflator is first term in denominator and price of capital is second)
 * Note that depreciation is implicityly contained in EINVCOST from TIMES
-                 EINVQINV(XC,TC,TT) =  EINVCOST(RUN,TC)/(SUM(C$PQ0(C), iwts(C,'s-e')*PQ.L(C)/PQ0(C))*(alphainv*SUM(C, iwts(C,'s-e')*PQ0(C)))) ;
-                 IADJSESIM(XC,TC) = max(1,EINVQINV(XC,TC,TT)/(EINVCOST(RUN,'2019')/(SUM(C$PQ0(C), iwts(C,'s-e')*PQ.L(C)/PQ0(C))*(alphainv*SUM(C, iwts(C,'s-e')*PQ0(C))))));;
-                 NGFCF = NGFCF -  EINVQINV(XC,TC,TT);
+*bm filtering is added to smoothen steep shocks coming from EINVCOST
+                 EINVQINV(XC,TC,TT) = (0.5*EINVCOST(RUN,TC+1)+0.5*EINVQINV(XC,TC-1,TT))/SUM(C$PQ0(C), iwts(C,'S-e')*PQ.L(C)/PQ0(C));
+*bm 1.2 seems to be longterm convergence point, using below has some spikes when investment spikes and causes model to break
+*bm SUM(C$PQ0(C), iwts(C,'S-I')*PQ.L(C)/PQ0(C)) ;
+                 QINV.FX(C,'s-e') = iwts(C,'s-e')*EINVQINV(XC,TC,TT);
+*bm with s-e active investment in energy is totally separate from NGFCF
+*bm                 NGFCF = NGFCF -  EINVQINV(XC,TC,TT);
          ELSE
                  NGFCF = QINVK - SUM((RD,A,FCAPP)$AFX(A,RD), QF.L(FCAPP,A,RD)*(AFXGR(A,RD,XC,TC) + natdrate));
-                 IADJSESIM(XC,TC) = EINVQINV(XC,TC-1,TT);
 
          );
 );
