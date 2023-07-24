@@ -201,11 +201,11 @@
 *@
 *@*$offtext
 
- CMRES('cmach_e') = yes;
- CMRES('cemch_e') = yes;
+* CMRES('cmach_e') = yes;
+* CMRES('cemch_e') = yes;
 
- QM.FX('cmach_e','REST') = QM0('cmach_e','REST');
- QM.FX('cemch_e','REST') = QM0('cemch_e','REST');
+* QM.FX('cmach_e','REST') = QM0('cmach_e','REST');
+* QM.FX('cemch_e','REST') = QM0('cemch_e','REST');
 
 
 
@@ -289,6 +289,9 @@ betaca(A,C)=1;
 * AFLOW_INFuels('APETR','CCOIL',TC,TT) = QINT0('CCOIL','APETR');
  EPRICE(TC,TT)=PQ0('CELEC');
  EINVCOST(RUN,TC) = 0;
+ EINVCOSTSubSector(RUN,TC,Sector,SubSector) = 0;
+ NCAPSubSector(RUN,TC,Sector,SubSector) = 0;
+
  INVCOST(RUN,TC,PRC) = 0;
  BPINV(RUN,TC,TCP,PRC) = 0;
 

@@ -192,6 +192,9 @@ PARAMETER
 
  BPINV(RUN,AY,TCP,PRC)       Annual expenditure on construction by PRC for each new Cap year
  EINVCOST(RUN,AY)        Total annual expenditure on construction
+ EINVCOSTSubSector(RUN,AY,Sector,SubSector)        Total annual expenditure on construction by subsector
+ NCAPSubSector(RUN,AY,Sector,SubSector)        New Capacity by subsector
+
  INVCOST(RUN,AY,PRC)     Annual expenditure on construction by PRC
 
 *Electricity price from TIMES

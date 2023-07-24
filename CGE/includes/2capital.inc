@@ -31,8 +31,7 @@ IF (KOPTION EQ 2,
 * Note that depreciation is implicityly contained in EINVCOST from TIMES
 *bm filtering is added to smoothen steep shocks coming from EINVCOST
                  EINVQINV(XC,TC,TT) = (0.5*EINVCOST(RUN,TC+1)+0.5*EINVQINV(XC,TC-1,TT))/SUM(C$PQ0(C), iwts(C,'S-e')*PQ.L(C)/PQ0(C));
-*bm 1.2 seems to be longterm convergence point, using below has some spikes when investment spikes and causes model to break
-*bm SUM(C$PQ0(C), iwts(C,'S-I')*PQ.L(C)/PQ0(C)) ;
+
                  QINV.FX(C,'s-e') = iwts(C,'s-e')*EINVQINV(XC,TC,TT);
 *bm with s-e active investment in energy is totally separate from NGFCF
 *bm                 NGFCF = NGFCF -  EINVQINV(XC,TC,TT);

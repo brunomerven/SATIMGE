@@ -184,9 +184,14 @@ LOOP((PRC,TC)$(TVNCAP(TC,PRC) AND NCAP_ILED('REGION1','2012',PRC) LT 0),
 * expenditure schedule in billions (2007 from 2010)
  INVCOST(RUN,TC,PRC) = SUM(TCP, BPINV(RUN,TCP,TC,PRC))/1000;
 
-*Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2019 Rands for CGE
+*Sum across vintages to get total annual cost (billions of rands) and convert from 2015 to 2019 (1.22) Rands for CGE
 * EINVCOST(XC,T,TT) = SUM((SUPELE AND SUPOIL), INVCOST(XC,T,TT,ELE));
  EINVCOST(RUN,TC) = SUM(PRCPower, INVCOST(RUN,TC,PRCPower))*1.22;
+ EINVCOSTSubSector(RUN,TC,Sector,SubSector) = SUM(PRC$MPRCSubSector(PRC,Sector,SubSector), INVCOST(RUN,TC,PRC))*1.22;
+
+ NCAPSubSector(RUN,TC,Sector,SubSector) = SUM(PRC$MPRCSubSector(PRC,Sector,SubSector), TVNCAP(TC,PRC));
+
+
 * 0.852;
 
 * fixing end effect until we run past 2050
