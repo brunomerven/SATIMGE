@@ -471,7 +471,7 @@ SET PRCTACTUNT /
   'REGION1'.'ZDUMCO2P'.'PJ'
 /;
 PARAMETER ACOMCUMNET /
-  'REGION1'                 .'CO2EQSB'                 .'2021'                    .'2070'                    .'UP'                         6000000
+  'REGION1'                 .'CO2EQSB'                 .'2021'                    .'2070'                    .'UP'                         8000000
 /;
 PARAMETER APRCACTUNT /
   'REGION1'                 .'ZDUMCO2P'                .'ZCO2P'                      1
