@@ -1,6 +1,6 @@
 SCENARIO	_GLOBAL,REGION1
-Creation Date:	2022/09/10	11:35:49 PM
-Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2022.mdb
+Creation Date:	2023/08/10	10:39:13 AM
+Created By:	Export from database C:\Models\SATIMGE\SATIM\SATIM_2023.mdb
 ANSWER Version:	6.9.27
 Scenario:	TCH_TRA	Transport Default: relaxed investment limits with EV cost parity in 2030	IL: investment limit
 Time Periods:	0	2012	2013	2014	2015	2016	2017	2018	2019	2020	2021	2022	2023	2024	2025	2026	2027	2028	2029	2030	2031	2032	2033	2034	2035	2036	2037	2038	2039	2040	2045	2050	2060	2070
@@ -819,8 +819,8 @@ TS DATA	REGION1
 	ACT_EFF	TPPUMBTODS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.240526867425031	null	null	null	null	null	null	null	null	null	0.259333392167983	null	null	null	null	null	null	null	null	null	0.286752025868556	null	0.31706955919683	null	null	
 	ACT_EFF	TPPUMBTOGS-E	-	ACTGRP	-	ANNUAL	-	3	0.192681419377125	null	null	null	null	0.2007607462921	null	null	0.201598535803707	null	null	null	null	null	null	null	null	null	0.203758901219809	null	null	null	null	null	null	null	null	null	0.205400647316764	null	0.206733282045863	null	null	
 	ACT_EFF	TPPUMBTOGS-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	0.203802524444753	null	null	null	null	null	null	null	null	null	0.219737614190355	null	null	null	null	null	null	null	null	null	0.242969891003441	null	0.268658455002081	null	null	
-	ACT_EFF	TPPUMERELC-E	-	ACTGRP	-	ANNUAL	-	3	7.00269802786154	null	null	null	null	0	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	7.00269802786154	null	null	
-	ACT_EFF	TPPUMERELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	null	null	null	null	null	null	null	null	7.00269802786154	null	7.00269802786154	null	null	
+	ACT_EFF	TPPUMERELC-E	-	ACTGRP	-	ANNUAL	-	3	7.00269802786154	null	null	null	null	4.37668626741346	null	null	4.37668626741346	null	null	null	null	null	null	null	null	null	4.37668626741346	null	null	null	null	null	null	null	null	null	4.37668626741346	null	4.37668626741346	null	null	
+	ACT_EFF	TPPUMERELC-N	-	ACTGRP	-	ANNUAL	-	3	null	null	null	null	null	null	null	null	4.37668626741346	null	null	null	null	null	null	null	null	null	4.37668626741346	null	null	null	null	null	null	null	null	null	4.37668626741346	null	4.37668626741346	null	null	
 	ACT_EFF	TSHFOOHF-E	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	1	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	ACT_EFF	TSHFOOHF-N	-	ACTGRP	-	ANNUAL	-	3	1	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	null	null	null	null	null	null	null	null	1	null	1	null	null	
 	COM_PROJ	-	TADJET	-	-	-	-	0	20.123	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -836,7 +836,7 @@ TS DATA	REGION1
 	COM_PROJ	-	TFHCV8	-	-	-	-	0	7.07016243959457E-02	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFHCV9	-	-	-	-	0	0.052818957554105	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFLCV	-	-	-	-	0	43.5108907561023	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
-	COM_PROJ	-	TFPIP	-	-	-	-	0	0.820564128	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
+	COM_PROJ	-	TFPIP	-	-	-	-	0	1.641128256	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFRCO	-	-	-	-	0	22	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFREX	-	-	-	-	0	82	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
 	COM_PROJ	-	TFROT	-	-	-	-	0	25.1	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	null	
@@ -1436,13 +1436,13 @@ TS DATA	REGION1
 	PRC_RESID	TFHCV9ODS-E	-	-	-	-	-	3	0.507861968137043	null	null	null	null	0.423967966873006	null	null	0.443402315511932	null	null	null	null	null	null	null	null	null	0.158316783256986	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFLCVODS-E	-	-	-	-	-	3	845.35637012111	null	null	null	null	1151.53020025537	null	null	1024.61760418971	null	null	null	null	null	null	null	null	null	487.386314939053	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TFLCVOGS-E	-	-	-	-	-	3	1329.80249560937	null	null	null	null	1296.71124133498	null	null	1149.83638939547	null	null	null	null	null	null	null	null	null	577.064838903193	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFPIPELC-E	-	-	-	-	-	3	0.820564128	null	null	null	null	0.820564128	null	null	0.820564128	null	null	null	null	null	null	null	null	null	0.820564128	null	null	null	null	null	null	null	null	null	0.820564128	null	0.820564128	null	null	
-	PRC_RESID	TFRCOELC-E	-	-	-	-	-	3	18.4146367658079	null	null	null	null	18.4146367658079	null	null	18.4146367658079	null	null	null	null	null	null	null	null	null	18.4146367658079	null	null	null	null	null	null	null	null	null	18.4146367658079	null	18.4146367658079	null	null	
+	PRC_RESID	TFPIPELC-E	-	-	-	-	-	3	1.641128256	null	null	null	null	1.641128256	null	null	1.641128256	null	null	null	null	null	null	null	null	null	1.641128256	null	null	null	null	null	null	null	null	null	1.641128256	null	1.641128256	null	null	
+	PRC_RESID	TFRCOELC-E	-	-	-	-	-	3	18.4146367658079	null	null	null	null	22.0975641189695	null	null	22.0975641189695	null	null	null	null	null	null	null	null	null	22.0975641189695	null	null	null	null	null	null	null	null	null	22.0975641189695	null	22.0975641189695	null	null	
 	PRC_RESID	TFRCOODS-E	-	-	-	-	-	3	3.5853632341921	null	null	null	null	4.66033821695309	null	null	4.66033821695309	null	null	null	null	null	null	null	null	null	3.72827057356247	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFREXELCR-E	-	-	-	-	-	3	68.6363733998294	null	null	null	null	68.6363733998294	null	null	68.6363733998294	null	null	null	null	null	null	null	null	null	68.6363733998294	null	null	null	null	null	null	null	null	null	68.6363733998294	null	68.6363733998294	null	null	
-	PRC_RESID	TFREXODSR-E	-	-	-	-	-	3	13.3636266001706	null	null	null	null	17.3703515359161	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	13.8962812287329	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
-	PRC_RESID	TFROTELC-E	-	-	-	-	-	3	21.009426491899	null	null	null	null	21.009426491899	null	null	21.009426491899	null	null	null	null	null	null	null	null	null	21.009426491899	null	null	null	null	null	null	null	null	null	21.009426491899	null	21.009426491899	null	null	
-	PRC_RESID	TFROTODS-E	-	-	-	-	-	3	4.09057350810099	null	null	null	null	5.31702223843285	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	4.25361779074628	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFREXELCR-E	-	-	-	-	-	3	68.6363733998294	null	null	null	null	68.6363733998294	null	null	82.3636480797953	null	null	null	null	null	null	null	null	null	82.3636480797953	null	null	null	null	null	null	null	null	null	82.3636480797953	null	82.3636480797953	null	null	
+	PRC_RESID	TFREXODSR-E	-	-	-	-	-	3	13.3636266001706	null	null	null	null	17.3703515359161	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	17.3703515359161	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
+	PRC_RESID	TFROTELC-E	-	-	-	-	-	3	21.009426491899	null	null	null	null	25.2113117902788	null	null	25.2113117902788	null	null	null	null	null	null	null	null	null	25.2113117902788	null	null	null	null	null	null	null	null	null	25.2113117902788	null	25.2113117902788	null	null	
+	PRC_RESID	TFROTODS-E	-	-	-	-	-	3	4.09057350810099	null	null	null	null	5.31702223843285	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	5.31702223843285	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRCARODS-E	-	-	-	-	-	3	283.266255294215	null	null	null	null	387.586468355653	null	null	369.960101548163	null	null	null	null	null	null	null	null	null	194.505610108408	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRCAROGS-E	-	-	-	-	-	3	5479.09601073015	null	null	null	null	5902.05729724512	null	null	5259.50907455972	null	null	null	null	null	null	null	null	null	2370.90149933811	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
 	PRC_RESID	TPPRCAROGSH-E	-	-	-	-	-	3	2.30873011186192	null	null	null	null	4.1935845862025	null	null	4.11763972020184	null	null	null	null	null	null	null	null	null	2.51095310762135	null	null	null	null	null	null	null	null	null	0	null	0	null	null	
@@ -2151,11 +2151,11 @@ TID DATA	REGION1
 	PRC_NOFF	TFLCVODS-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TFLCVOGSH-N	-	-	-	BOH	2024	1	-
 	PRC_NOFF	TFLCVOGS-N	-	-	-	BOH	2017	1	-
-	PRC_NOFF	TFPIPELC-N	-	-	-	BOH	2012	1	-
-	PRC_NOFF	TFRCOELC-N	-	-	-	BOH	2014	1	-
-	PRC_NOFF	TFRCOGAS-N	-	-	-	BOH	2024	1	-
-	PRC_NOFF	TFREXELC-N	-	-	-	BOH	2014	1	-
-	PRC_NOFF	TFROTELC-N	-	-	-	BOH	2014	1	-
+	PRC_NOFF	TFPIPELC-N	-	-	-	BOH	2029	1	-
+	PRC_NOFF	TFRCOELC-N	-	-	-	BOH	2024	1	-
+	PRC_NOFF	TFRCOGAS-N	-	-	-	BOH	2029	1	-
+	PRC_NOFF	TFREXELC-N	-	-	-	BOH	2022	1	-
+	PRC_NOFF	TFROTELC-N	-	-	-	BOH	2024	1	-
 	PRC_NOFF	TPPRCARBGS-N	-	-	-	BOH	2024	1	-
 	PRC_NOFF	TPPRCARELC-N	-	-	-	BOH	2017	1	-
 	PRC_NOFF	TPPRCARGAS-N	-	-	-	BOH	2024	1	-
