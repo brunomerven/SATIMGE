@@ -1,0 +1,39 @@
+[PROJECT]
+
+[RP:1MODEL]
+1=
+
+[RP:CCDRTEMPLATE_FLAT_V02MAR]
+1=
+
+[RP:CGE_REPORTTEMPLATE]
+1=GDX=test
+2=
+
+[RP:UNTITLED_1]
+1=
+
+[MRUFILES]
+1=C:\Models\SATIMGE\CGE\Julia GAMS\CCDRTemplate_flat_v02mar.gms
+2=C:\Models\SATIMGE\CGE\1model.gms
+
+[OPENWINDOW_1]
+FILE0=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.gms
+FILE1=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.lst
+FILE2=C:\Models\SATIMGE\CGE\Reporting Templates\test.gdx
+FILE3=C:\Models\SATIMGE\CGE\Reporting Templates\Untitled_1.gms
+FILE4=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.gms
+MAXIM=1
+TOP=50
+LEFT=50
+HEIGHT=400
+WIDTH=400
+
+[GDXDISP: A Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
