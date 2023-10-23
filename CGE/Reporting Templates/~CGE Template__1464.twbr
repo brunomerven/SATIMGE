@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Report_00' inline='true' name='federated.19kvaik1koobf51b7214f0zvk3ut' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Report_00' name='textscan.0q09vrw1vk6p7h181orom0grzykr'>
+            <connection class='textscan' directory='C:/Models/SATIMGE/CGE/Reporting Templates' filename='Report_00.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='ReportingMap' name='excel-direct.08l6j371ji6ofi1e4h8fk0l2d09b'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Models/SATIMGE/CGE/Reporting Templates/Maps/ReportingMap.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0q09vrw1vk6p7h181orom0grzykr' name='Report_00.csv' table='[Report_00#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Indicator' ordinal='0' />
+            <column datatype='string' name='AC' ordinal='1' />
+            <column datatype='string' name='AC 1' ordinal='2' />
+            <column datatype='integer' name='Year' ordinal='3' />
+            <column datatype='string' name='Scenario' ordinal='4' />
+            <column datatype='real' name='SATIMGE' ordinal='5' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0q09vrw1vk6p7h181orom0grzykr' name='Report_00.csv' table='[Report_00#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Indicator' ordinal='0' />
+              <column datatype='string' name='AC' ordinal='1' />
+              <column datatype='string' name='AC 1' ordinal='2' />
+              <column datatype='integer' name='Year' ordinal='3' />
+              <column datatype='string' name='Scenario' ordinal='4' />
+              <column datatype='real' name='SATIMGE' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.08l6j371ji6ofi1e4h8fk0l2d09b' name='Sheet1' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:G180:no:A1:G180:0' header='yes' outcome='6'>
+              <column datatype='string' name='AC' ordinal='0' />
+              <column datatype='string' name='CGE' ordinal='1' />
+              <column datatype='string' name='Sector' ordinal='2' />
+              <column datatype='string' name='Subsector' ordinal='3' />
+              <column datatype='string' name='SubSubSector' ordinal='4' />
+              <column datatype='string' name='Energy' ordinal='5' />
+              <column datatype='string' name='Description' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[AC (Sheet1)]' value='[Sheet1].[AC]' />
+          <map key='[AC 1]' value='[Report_00.csv].[AC 1]' />
+          <map key='[AC]' value='[Report_00.csv].[AC]' />
+          <map key='[CGE]' value='[Sheet1].[CGE]' />
+          <map key='[Description]' value='[Sheet1].[Description]' />
+          <map key='[Energy]' value='[Sheet1].[Energy]' />
+          <map key='[Indicator]' value='[Report_00.csv].[Indicator]' />
+          <map key='[SATIMGE]' value='[Report_00.csv].[SATIMGE]' />
+          <map key='[Scenario]' value='[Report_00.csv].[Scenario]' />
+          <map key='[Sector]' value='[Sheet1].[Sector]' />
+          <map key='[SubSubSector]' value='[Sheet1].[SubSubSector]' />
+          <map key='[Subsector]' value='[Sheet1].[Subsector]' />
+          <map key='[Year]' value='[Report_00.csv].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G180:no:A1:G180:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Indicator</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Indicator]</local-name>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias>Indicator</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AC</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AC]</local-name>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias>AC</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AC 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AC 1]</local-name>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias>AC 1</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scenario</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scenario]</local-name>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias>Scenario</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SATIMGE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SATIMGE]</local-name>
+            <parent-name>[Report_00.csv]</parent-name>
+            <remote-alias>SATIMGE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AC (Sheet1)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>AC</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CGE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CGE]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>CGE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subsector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Subsector]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Subsector</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SubSubSector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SubSubSector]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>SubSubSector</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Energy</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Energy]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Energy</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Ac 1' datatype='string' name='[AC 1]' role='dimension' type='nominal' />
+      <column datatype='real' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(SUM([SATIMGE]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Satimge' datatype='real' name='[SATIMGE]' role='measure' type='quantitative' />
+      <column caption='Sub Sub Sector' datatype='string' name='[SubSubSector]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Subsector]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Report_00.csv' datatype='table' name='[__tableau_internal_object_id__].[Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E]' role='measure' type='quantitative' />
+      <column-instance column='[Subsector]' derivation='None' name='[none:Subsector:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Subsector:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;hhd-4&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mining&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;hhd-3&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Manufacturing&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Government&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;hhd-8&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Utilities&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;hhd-6&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PublicAdmin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;hhd-0&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;hhd-9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Construction&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;hhd-2&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;hhd-5&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;OtherServices&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Agriculture&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;hhd-1&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;hhd-7&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;TransportServices&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Enterprise&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Report_00.csv' id='Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE'>
+            <properties context=''>
+              <relation connection='textscan.0q09vrw1vk6p7h181orom0grzykr' name='Report_00.csv' table='[Report_00#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Indicator' ordinal='0' />
+                  <column datatype='string' name='AC' ordinal='1' />
+                  <column datatype='string' name='AC 1' ordinal='2' />
+                  <column datatype='integer' name='Year' ordinal='3' />
+                  <column datatype='string' name='Scenario' ordinal='4' />
+                  <column datatype='real' name='SATIMGE' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Sheet1' id='Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E'>
+            <properties context=''>
+              <relation connection='excel-direct.08l6j371ji6ofi1e4h8fk0l2d09b' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:G180:no:A1:G180:0' header='yes' outcome='6'>
+                  <column datatype='string' name='AC' ordinal='0' />
+                  <column datatype='string' name='CGE' ordinal='1' />
+                  <column datatype='string' name='Sector' ordinal='2' />
+                  <column datatype='string' name='Subsector' ordinal='3' />
+                  <column datatype='string' name='SubSubSector' ordinal='4' />
+                  <column datatype='string' name='Energy' ordinal='5' />
+                  <column datatype='string' name='Description' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[AC]' />
+              <expression op='[AC (Sheet1)]' />
+            </expression>
+            <first-end-point object-id='Report_00.csv_A14D1317886E4E9F85BEF9D4DCD675AE' />
+            <second-end-point object-id='Sheet1_7D9EA52708964C91A2D25BDBAD04FB4E' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Employment (Subsector)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Report_00' name='federated.19kvaik1koobf51b7214f0zvk3ut' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19kvaik1koobf51b7214f0zvk3ut'>
+            <column datatype='string' name='[Indicator]' role='dimension' type='nominal' />
+            <column caption='Satimge' datatype='real' name='[SATIMGE]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Subsector]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Indicator]' derivation='None' name='[none:Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Subsector]' derivation='None' name='[none:Subsector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SATIMGE]' derivation='Sum' name='[sum:SATIMGE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]'>
+            <groupfilter function='member' level='[none:Indicator:nk]' member='&quot;Employment&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Subsector:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;Agriculture&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;Construction&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;Manufacturing&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;Mining&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;OtherServices&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;PublicAdmin&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;TransportServices&quot;' />
+              <groupfilter function='member' level='[none:Subsector:nk]' member='&quot;Utilities&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]</column>
+            <column>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Subsector:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Subsector:nk]' />
+              <lod column='[federated.19kvaik1koobf51b7214f0zvk3ut].[sum:SATIMGE:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.19kvaik1koobf51b7214f0zvk3ut].[sum:SATIMGE:qk]</rows>
+        <cols>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{C7BF9CAF-8838-4559-983D-EA097779FF44}' />
+    </worksheet>
+    <worksheet name='Pop Growth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Report_00' name='federated.19kvaik1koobf51b7214f0zvk3ut' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19kvaik1koobf51b7214f0zvk3ut'>
+            <column datatype='string' name='[Indicator]' role='dimension' type='nominal' />
+            <column caption='Satimge' datatype='real' name='[SATIMGE]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Indicator]' derivation='None' name='[none:Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SATIMGE]' derivation='Sum' name='[sum:SATIMGE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]'>
+            <groupfilter function='member' level='[none:Indicator:nk]' member='&quot;Population&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.19kvaik1koobf51b7214f0zvk3ut].[sum:SATIMGE:qk]</rows>
+        <cols>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{3298D9AC-F00C-42EA-8828-0AA829C10960}' />
+    </worksheet>
+    <worksheet name='Population'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Report_00' name='federated.19kvaik1koobf51b7214f0zvk3ut' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19kvaik1koobf51b7214f0zvk3ut'>
+            <column datatype='string' name='[Indicator]' role='dimension' type='nominal' />
+            <column caption='Satimge' datatype='real' name='[SATIMGE]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Indicator]' derivation='None' name='[none:Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SATIMGE]' derivation='Sum' name='[sum:SATIMGE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]'>
+            <groupfilter function='member' level='[none:Indicator:nk]' member='&quot;Population&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Year:qk]' included-values='in-range'>
+            <min>2019</min>
+            <max>2055</max>
+          </filter>
+          <slices>
+            <column>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]</column>
+            <column>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.19kvaik1koobf51b7214f0zvk3ut].[sum:SATIMGE:qk]</rows>
+        <cols>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{D81E2C9D-8EE5-42AF-83AC-6E04D811C154}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Report_00' name='federated.19kvaik1koobf51b7214f0zvk3ut' />
+          </datasources>
+          <datasource-dependencies datasource='federated.19kvaik1koobf51b7214f0zvk3ut'>
+            <column datatype='string' name='[Indicator]' role='dimension' type='nominal' />
+            <column caption='Satimge' datatype='real' name='[SATIMGE]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Subsector]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Indicator]' derivation='None' name='[none:Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Subsector]' derivation='None' name='[none:Subsector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SATIMGE]' derivation='Sum' name='[sum:SATIMGE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]'>
+            <groupfilter function='member' level='[none:Indicator:nk]' member='&quot;HHIncome&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Indicator:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Subsector:nk]' />
+              <lod column='[federated.19kvaik1koobf51b7214f0zvk3ut].[sum:SATIMGE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.19kvaik1koobf51b7214f0zvk3ut].[sum:SATIMGE:qk]</rows>
+        <cols>[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{84DF58D0-F79E-492A-B6D8-68F2B467476B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Population'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2DAB7F66-D5B6-48AA-A02A-130463887498}' />
+    </window>
+    <window class='worksheet' name='Employment (Subsector)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Subsector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DBD5A7C5-A41E-47B3-84B7-C4C5985B9BB7}' />
+    </window>
+    <window class='worksheet' name='Pop Growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+          <strip size='160'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1EDCBED1-04E5-4D4A-AE99-5D7894750508}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.19kvaik1koobf51b7214f0zvk3ut].[none:Subsector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5E5DC6B4-48F8-4BF9-946F-CD2D59D5B4CE}' />
+    </window>
+  </windows>
+</workbook>
