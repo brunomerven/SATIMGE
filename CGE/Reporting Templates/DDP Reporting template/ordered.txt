@@ -1,0 +1,1 @@
+AGRI  CONS  ENG  ENG_coal  ENG_elect  ENG_gas  ENG_hydro  ENG_oil  ENG_prt  MAN  MAN_Chem  MAN_IS  MAN_nfm  MAN_PP  MIN  OIND  OSERV  PUBADMIN  SERV  TRP  WATER

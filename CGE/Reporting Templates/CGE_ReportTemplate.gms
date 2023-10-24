@@ -205,15 +205,6 @@ $load TCST_INVC, INVCOST
 
 
 
-Sets
-FOODC(C)                Food commodities /cawhe, camai, caoce, caveg, caofr, cagra, caoil, catub, capul, caoth,
-                                          clani, cmeat, cpfis, cvege, cfats, cdair, cgrai, cstar, cafee, cbake,
-                                         csuga, cconf, cpast, cofoo, cbevt/
-
-;
-
-
-
 GDPperCapita(T)$POP(T)   = GDP_RUN(T)/POP(T);
 Expt(C,T)                = QEX(C,'rest','BASE',T,'2055')*PE0(C,'rest');
 Imp(C,T)                 = QMX(C,'rest','BASE',T,'2055')*PM0(C,'rest');
@@ -247,7 +238,7 @@ Report2('GOVSaving','NA','NA',T,RUN)             = GSAVX('BASE',T,'2055');
 Report2('GovDirTax',A,H,T,RUN)                   =  SUM(INSDNG, TINSX(INSDNG,'base',T,'2055')*YIX(INSDNG,'base',T,'2055')) ;
 Report2('GovFacTax','NA',F,T,RUN)                = tfx(F,'base',T,'2055')*YFX(F,'base',T,'2055') ;
 Report2('GovFacInc',H,F,T,RUN)                   =  SUM(INS, YIFX(INS,F,'Base',T,'2055')) ;
-Report2('GovTrnsfr',INS,AC,T,RUN)                =  trnsfrx(INS,AC,'base',T,'2055')*EXRX('base',T,'2055');
+Report2('GovTrnsfr',AC,INS,T,RUN)                =  trnsfrx(INS,AC,'base',T,'2055')*EXRX('base',T,'2055');
 Report2('GovActTax',A,'NA',T,RUN)                = TAX(A,'nat','base',T,'2055')*PAX(A,'base',T,'2055')*QAX(A,'base',T,'2055')  ;
 Report2('GovVatTax',A,'NA',T,RUN)                = TVAX(A,'nat','base',T,'2055')*PVAX(A,'nat','base',T,'2055')*QVAX(A,'nat','base',T,'2055') ;
 Report2('GovImpTax',C,'NA',T,RUN)                = TMX(C,'rest','base',T,'2055')*QMX(C,'rest','base',T,'2055')*PMX(C,'rest','base',T,'2055')*EXRX('base',T,'2055');
@@ -256,9 +247,10 @@ Report2('GovComTax',C,'NA',T,RUN)                = TQX(C,'base',T,'2055')*PQX(C,
 
 
 * TRADE
-Report2('Imports',C,'NA',T,RUN)$(EXPT(C,T)>=0)   = IMP(C,T);
-Report2('Imports',C,'NA',T,RUN)$(EXPT(C,T)<0)    = IMP(C,T)-EXPT(C,T);
+Report2('Imports',C,'NA',T,RUN)$(EXPT(C,T)>=0)   = IMP(C,T)*(-1);
+Report2('Imports',C,'NA',T,RUN)$(EXPT(C,T)<0)    = (IMP(C,T)-EXPT(C,T))*(-1);
 Report2('Exports',C,'NA',T,RUN)$(EXPT(C,T)>=0)   = EXPT(C,T);
+Report2('Exports',C,'NA',T,RUN)$(EXPT(C,T)<0)   = 0;    
 Report2('NetTrade',C,'NA',T,RUN)                 = Report2('Exports',C,'NA',T,RUN)-Report2('Imports',C,'NA',T,RUN);
 Report2('ExchangeRate','NA','NA',T,RUN)          =EXRX('base',T,'2055');
 
@@ -268,6 +260,7 @@ Report2('AverageWage',A,FLAB,T,RUN)              = WFX(FLAB,'base',T,'2055')*WFD
 Report2('WageBill',A,FLAB,T,RUN)                 = WFX(FLAB,'base',T,'2055')*WFDISTX(FLAB,A,'nat','base',T,'2055')*QFX(FLAB,A,'nat','base',T,'2055')  ;
 
 *FACTOR INCOME
+Report2('FactorIncome',INS,F,T,RUN)                    = YIFX(INS,F,'base',T,'2055')    ;
 
 * PRICE, QUANTITY, OUTPUT
 Report3('ComodityPrices',C,'NA',T,RUN)           = PQX(C,'BASE',T,'2055') ;
