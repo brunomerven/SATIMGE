@@ -1639,28 +1639,20 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[MRUFILES]
-1=C:\Models\SATIMGE\CGE\includes\eSAGE_Report.inc
-2=C:\Models\SATIMGE\CGE\includes\3report_init.inc
-3=C:\Models\SATIMGE\CGE\Reporting Templates\DDP Reporting template\test.gdx
-4=C:\Models\SATIMGE\CGE\Reporting Templates\DDP Reporting template\DDP_ReportTemplate.lst
-5=C:\Models\SATIMGE\CGE\Reporting Templates\DDP Reporting template\DDP_ReportTemplate.gms
-6=C:\Models\SATIMGE\CGE\Julia GAMS\KLEM_init.inc
-7=C:\Models\SATIMGE\CGE\Julia GAMS\KLEM\DDP_ReportTemplate2.gms
-8=C:\Models\SATIMGE\CGE\Julia GAMS\eSAGE_Report.inc
-9=C:\Models\SATIMGE\CGE\Julia GAMS\3tables.inc
-
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
-FILE1=C:\Models\SATIMGE\CGE\includes\2results.inc
-FILE2=C:\Models\SATIMGE\CGE\includes\3report_loop.inc
-FILE3=C:\Models\SATIMGE\CGE\includes\3tables.inc
-FILE4=C:\Models\SATIMGE\CGE\includes\gini.inc
-FILE5=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.~gm
-FILE6=C:\Models\SATIMGE\CGE\Reporting Templates\gdxs\IMGrun_99_20Oct.gdx
-FILE7=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.~gm
 MAXIM=1
 TOP=5
 LEFT=-5
 HEIGHT=919
 WIDTH=1239
+
+[MRUFILES]
+1=C:\Models\SATIMGE\CGE\Reporting Templates\gdxs\IMGrun_99_20Oct.gdx
+2=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.~gm
+3=C:\Models\SATIMGE\CGE\includes\gini.inc
+4=C:\Models\SATIMGE\CGE\includes\3tables.inc
+5=C:\Models\SATIMGE\CGE\includes\3report_loop.inc
+6=C:\Models\SATIMGE\CGE\includes\2results.inc
+7=C:\Models\SATIMGE\CGE\includes\2energyinit.inc
+8=C:\Models\SATIMGE\CGE\includes\eSAGE_Report.inc
+9=C:\Models\SATIMGE\CGE\includes\3report_init.inc

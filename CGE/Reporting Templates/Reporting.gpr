@@ -3,13 +3,6 @@
 [RP:1MODEL]
 1=
 
-[OPENWINDOW_1]
-MAXIM=0
-TOP=-6
-LEFT=5
-HEIGHT=919
-WIDTH=1259
-
 [GDXDISP: A Set 1]
 PlaneDim=0
 RowDim=1
@@ -2128,11 +2121,20 @@ PlaneRownr=-1
 
 [MRUFILES]
 1=C:\Models\SATIMGE\CGE\Reporting Templates\Untitled_1.gms
-2=C:\Models\SATIMGE\CGE\Reporting Templates\test.gdx
-3=C:\Models\SATIMGE\CGE\Reporting Templates\Map.gdx
-4=C:\Models\SATIMGE\CGE\Reporting Templates\gdxs\IMGrun_99_20Oct.gdx
-5=C:\Models\SATIMGE\CGE\Reporting Templates\DDP_ReportTemplate2.gms
-6=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.lst
-7=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.gms
-8=C:\Models\SATIMGE\CGE\Julia GAMS\KLEM\KLEMdata.gdx
-9=C:\Models\SATIMGE\CGE\Julia GAMS\KLEM\KLEM data extraction.gms
+2=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.~gm
+3=C:\Models\SATIMGE\CGE\Reporting Templates\Reporting.gpr
+4=C:\Models\SATIMGE\CGE\Reporting Templates\test.gdx
+5=C:\Models\SATIMGE\CGE\Reporting Templates\Map.gdx
+6=C:\Models\SATIMGE\CGE\Reporting Templates\gdxs\IMGrun_99_20Oct.gdx
+7=C:\Models\SATIMGE\CGE\Reporting Templates\DDP_ReportTemplate2.gms
+8=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.lst
+9=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportTemplate.gms
+
+[OPENWINDOW_1]
+FILE0=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportingTemplate.gms
+FILE1=C:\Models\SATIMGE\CGE\Reporting Templates\CGE_ReportingTemplate.gms
+MAXIM=0
+TOP=-6
+LEFT=5
+HEIGHT=919
+WIDTH=1259
