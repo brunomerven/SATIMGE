@@ -229,51 +229,51 @@ Report2('RealGDP',A,'NA',T,RUN)                  = PVA0(A,'nat')*(1-TVA0(A,'nat'
 Report2('GDPperCapita','NA','NA',T,RUN)          = GDPperCapita(T);
 
 * HOUSEHOLDS
-Report2('HHConsumption',C,H,T,RUN)               = QHX(C,H,'BASE',T,'2055')*PQHX(C,H,'BASE',T,'2055');
-Report2('HHIncome',H,F,T,RUN)                    = YIFX(H,F,'base',T,'2055')              ;
+Report2('HHConsumption',C,H,T,RUN)               = QHX(C,H,'BASE',T,'2054')*PQHX(C,H,'BASE',T,'2054');
+Report2('HHIncome',H,F,T,RUN)                    = YIFX(H,F,'base',T,'2054')              ;
 
 *INVESTMENT
-Report2('Investment',C,'NA',T,RUN)               = sum(IT,QINVX(C,IT,'base',T,'2055')*PQ0(C));
-Report2('EnergyInvestment',,                    = TCST_INVC(
+Report2('Investment',C,'NA',T,RUN)               = sum(IT,QINVX(C,IT,'base',T,'2054')*PQ0(C));
+Report2('EngInv',EngSector,EngSubSector,T,RUN)   = SUM(PRC$(ENGSECT(PRC,EngSector,EngSubSector)),TCST_INVC('REGION1',T,PRC))    ;
 
 * GOVERNMENT
-Report2('GovRevenue','NA','NA',T,RUN)            = YGX('BASE',T,'2055') ;
-Report2('GovExp','NA','NA',T,RUN)                = EGX('base',T,'2055');
-Report2('GOVSaving','NA','NA',T,RUN)             = GSAVX('BASE',T,'2055');
-Report2('GovDirTax',A,H,T,RUN)                   =  SUM(INSDNG, TINSX(INSDNG,'base',T,'2055')*YIX(INSDNG,'base',T,'2055')) ;
-Report2('GovFacTax','NA',F,T,RUN)                = tfx(F,'base',T,'2055')*YFX(F,'base',T,'2055') ;
-Report2('GovFacInc',H,F,T,RUN)                   =  SUM(INS, YIFX(INS,F,'Base',T,'2055')) ;
-Report2('GovTrnsfr',AC,INS,T,RUN)                =  trnsfrx(INS,AC,'base',T,'2055')*EXRX('base',T,'2055');
-Report2('GovActTax',A,'NA',T,RUN)                = TAX(A,'nat','base',T,'2055')*PAX(A,'base',T,'2055')*QAX(A,'base',T,'2055')  ;
-Report2('GovVatTax',A,'NA',T,RUN)                = TVAX(A,'nat','base',T,'2055')*PVAX(A,'nat','base',T,'2055')*QVAX(A,'nat','base',T,'2055') ;
-Report2('GovImpTax',C,'NA',T,RUN)                = TMX(C,'rest','base',T,'2055')*QMX(C,'rest','base',T,'2055')*PMX(C,'rest','base',T,'2055')*EXRX('base',T,'2055');
-Report2('GovExpTax',C,'NA',T,RUN)                = te(C,'rest')*QEX(C,'rest','base',T,'2055')*PEX(C,'rest','base',T,'2055')*EXRX('base',T,'2055');
-Report2('GovComTax',C,'NA',T,RUN)                = TQX(C,'base',T,'2055')*PQX(C,'base',T,'2055')*QQX(C,'base',T,'2055')   ;
+Report2('GovRevenue','NA','NA',T,RUN)            = YGX('BASE',T,'2054') ;
+Report2('GovExp','NA','NA',T,RUN)                = EGX('base',T,'2054');
+Report2('GOVSaving','NA','NA',T,RUN)             = GSAVX('BASE',T,'2054');
+Report2('GovDirTax',A,H,T,RUN)                   =  SUM(INSDNG, TINSX(INSDNG,'base',T,'2054')*YIX(INSDNG,'base',T,'2054')) ;
+Report2('GovFacTax','NA',F,T,RUN)                = tfx(F,'base',T,'2054')*YFX(F,'base',T,'2054') ;
+Report2('GovFacInc',H,F,T,RUN)                   =  SUM(INS, YIFX(INS,F,'Base',T,'2054')) ;
+Report2('GovTrnsfr',AC,INS,T,RUN)                =  trnsfrx(INS,AC,'base',T,'2054')*EXRX('base',T,'2054');
+Report2('GovActTax',A,'NA',T,RUN)                = TAX(A,'nat','base',T,'2054')*PAX(A,'base',T,'2054')*QAX(A,'base',T,'2054')  ;
+Report2('GovVatTax',A,'NA',T,RUN)                = TVAX(A,'nat','base',T,'2054')*PVAX(A,'nat','base',T,'2054')*QVAX(A,'nat','base',T,'2054') ;
+Report2('GovImpTax',C,'NA',T,RUN)                = TMX(C,'rest','base',T,'2054')*QMX(C,'rest','base',T,'2054')*PMX(C,'rest','base',T,'2054')*EXRX('base',T,'2054');
+Report2('GovExpTax',C,'NA',T,RUN)                = te(C,'rest')*QEX(C,'rest','base',T,'2054')*PEX(C,'rest','base',T,'2054')*EXRX('base',T,'2054');
+Report2('GovComTax',C,'NA',T,RUN)                = TQX(C,'base',T,'2054')*PQX(C,'base',T,'2054')*QQX(C,'base',T,'2054')   ;
 
 
 * TRADE
 Report2('Imports',C,'NA',T,RUN)$(EXPT(C,T)>=0)   = IMP(C,T)*(-1);
 Report2('Imports',C,'NA',T,RUN)$(EXPT(C,T)<0)    = (IMP(C,T)-EXPT(C,T))*(-1);
 Report2('Exports',C,'NA',T,RUN)$(EXPT(C,T)>=0)   = EXPT(C,T);
-Report2('Exports',C,'NA',T,RUN)$(EXPT(C,T)<0)   = 0;
+Report2('Exports',C,'NA',T,RUN)$(EXPT(C,T)<0)    = 0;
 Report2('NetTrade',C,'NA',T,RUN)                 = Report2('Exports',C,'NA',T,RUN)-Report2('Imports',C,'NA',T,RUN);
-Report2('ExchangeRate','NA','NA',T,RUN)          =EXRX('base',T,'2055');
+Report2('ExchangeRate','NA','NA',T,RUN)          =EXRX('base',T,'2054');
 
 * LABOUR
-Report2('Employment',A,FLAB,T,RUN)               = QFX(FLAB,A,'NAT','BASE',T,'2055')   ;
-Report2('AverageWage',A,FLAB,T,RUN)              = WFX(FLAB,'base',T,'2055')*WFDISTX(FLAB,A,'nat','base',T,'2055')  ;
-Report2('WageBill',A,FLAB,T,RUN)                 = WFX(FLAB,'base',T,'2055')*WFDISTX(FLAB,A,'nat','base',T,'2055')*QFX(FLAB,A,'nat','base',T,'2055')  ;
+Report2('Employment',A,FLAB,T,RUN)               = QFX(FLAB,A,'NAT','BASE',T,'2054')   ;
+Report2('AverageWage',A,FLAB,T,RUN)              = WFX(FLAB,'base',T,'2054')*WFDISTX(FLAB,A,'nat','base',T,'2054')  ;
+Report2('WageBill',A,FLAB,T,RUN)                 = WFX(FLAB,'base',T,'2054')*WFDISTX(FLAB,A,'nat','base',T,'2054')*QFX(FLAB,A,'nat','base',T,'2054')  ;
 
 *FACTOR INCOME
-Report2('FactorIncome',INS,F,T,RUN)                    = YIFX(INS,F,'base',T,'2055')    ;
+Report2('FactorIncome',INS,F,T,RUN)                    = YIFX(INS,F,'base',T,'2054')    ;
 
 * PRICE, QUANTITY, OUTPUT
-Report3('ComodityPrices',C,'NA',T,RUN)           = PQX(C,'BASE',T,'2055') ;
-Report3('ActivityPrices',A,'NA',T,RUN)           = PAX(A,'BASE',T,'2055');
+Report3('ComodityPrices',C,'NA',T,RUN)           = PQX(C,'BASE',T,'2054') ;
+Report3('ActivityPrices',A,'NA',T,RUN)           = PAX(A,'BASE',T,'2054');
 
-Report3('ComodityQuantity',C,'NA',T,RUN)           = PQX(C,'BASE',T,'2055') ;
-Report3('ActivityQuantitiy',A,'NA',T,RUN)           = PAX(A,'BASE',T,'2055');
-Report3('IntDemand',A,C,T,RUN)                  = QINTX(C,A,'base',T,'2055')*PQI0(C,A,'nat') ;
+Report3('ComodityQuantity',C,'NA',T,RUN)         = PQX(C,'BASE',T,'2054') ;
+Report3('ActivityQuantitiy',A,'NA',T,RUN)        = PAX(A,'BASE',T,'2054');
+Report3('IntDemand',A,C,T,RUN)                   = QINTX(C,A,'base',T,'2054')*PQI0(C,A,'nat') ;
 
 );
 
